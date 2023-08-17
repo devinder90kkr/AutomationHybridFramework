@@ -1,13 +1,9 @@
 package cuesz.utils;
 
-import java.time.Duration;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class SeleniumUtils {
     private WebDriver driver;
@@ -28,9 +24,16 @@ public class SeleniumUtils {
             e.printStackTrace();
         }
     }
-
+    // Corrected method for entering text
+    public void enterText(By locator, String text) {
+        WebElement element = driver.findElement(locator);
+        element.sendKeys(text);
+    }
+    
     // Add more utility methods as needed
 
+    
+    // Click on schedule master 
     public void clickScheduleMaster() {
 		By SchduleCalendarLocator = (By.xpath("//a[@href='/schedule-master']//span"));
         WebElement scheduleElement = driver.findElement(SchduleCalendarLocator);
@@ -39,18 +42,40 @@ public class SeleniumUtils {
         clickElement(SchduleCalendarLocator);
     }
     
-    
+    // Click on Add new button *------->> Schdule master
     public void clickaddnewevent() {
         By addneeventLocator = By.xpath("//button[normalize-space()='Add New Event']");
         clickElement(addneeventLocator);
     }
     
-    
+    // Click on member call 
     public void clickMemberCalendar() {
         By memberCalendarLocator = By.xpath("//a[@href='/member-calls']//span");
         clickElement(memberCalendarLocator);
     }
+    
+    
+ // Click on member call 
+    public void clickMembersummary() {
+        By memberSummaryLocator = By.xpath("//img[@alt='Member Summary']");
+        clickElement(memberSummaryLocator);
+    }
+    
+ // Enter text in the search field
+    public void enterSearchText(String searchText) {
+        By searchFieldLocator = By.xpath("//input[@placeholder='Search Members']");
+        enterText(searchFieldLocator, searchText);
+    }
+     
+  // Click on member call 
+        public void clickMembername() {
+            By memberdetail = (By.xpath("//div[@class='member-items']"));
+            clickElement(memberdetail);
+    
+        }
 
    
     }
+    
+
 

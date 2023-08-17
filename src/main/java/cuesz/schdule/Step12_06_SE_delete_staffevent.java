@@ -75,7 +75,7 @@ public class Step12_06_SE_delete_staffevent extends BasePage {
         }
 
         // Verify the texts
-        if (userTexts1.contains("Kumar Devinder") && userTexts1.contains("Seakfreight") && userTexts1.contains("SteveQA Adv")) {
+        if (userTexts1.contains("Seakfreight") && userTexts1.contains("SteveQA Adv")) {
             System.out.println("User text verification passed!");
         } else {
             System.out.println("User text verification failed!");

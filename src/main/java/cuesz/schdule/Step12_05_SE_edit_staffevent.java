@@ -100,11 +100,12 @@ public class Step12_05_SE_edit_staffevent extends BasePage {
         WebElement editTime1 = driver.findElement(edittime1);
         Actions builder11 = new Actions(driver);
      // windows command
-	    editTime1.sendKeys(Keys.CONTROL + "a");
+	   // editTime1.sendKeys(Keys.CONTROL + "a");
 	    // mac command
-        //editTime1.sendKeys(Keys.COMMAND + "a");
+        editTime1.sendKeys(Keys.COMMAND + "a");
         // Windows command
-        editTime1.sendKeys(Keys.CONTROL + "a");
+       // editTime1.sendKeys(Keys.CONTROL + "a");
+        editTime1.sendKeys(Keys.COMMAND + "a");
         editTime1.sendKeys(Keys.DELETE);
 
         // Get the assigned event date from Script 1
@@ -139,10 +140,10 @@ public class Step12_05_SE_edit_staffevent extends BasePage {
      // Find the input field for start time and clear the existing value
         WebElement startTimeInput = driver.findElement(startime);
        // window command
-         startTimeInput.sendKeys(Keys.CONTROL + "a");
+         //startTimeInput.sendKeys(Keys.CONTROL + "a");
         
          //mac command
-         //startTimeInput.sendKeys(Keys.COMMAND + "a");
+         startTimeInput.sendKeys(Keys.COMMAND + "a");
         startTimeInput.sendKeys(Keys.DELETE);
         // Enter the new start time (09:00 AM)
         Actions builder1 = new Actions(driver);

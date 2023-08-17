@@ -2,24 +2,24 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-08-16T17:02:25 IST" name="Default suite" finished-at="2023-08-16T17:03:07 IST" duration-ms="42575">
+  <suite started-at="2023-08-17T19:09:55 IST" name="Default suite" finished-at="2023-08-17T19:10:38 IST" duration-ms="42670">
     <groups>
     </groups>
-    <test started-at="2023-08-16T17:02:25 IST" name="Default test" finished-at="2023-08-16T17:03:07 IST" duration-ms="42575">
-      <class name="cuesz.schduletest.advocate.Case01_createventtest">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:cuesz.schduletest.advocate.Case01_createventtest@46cdf8bd]" started-at="2023-08-16T17:02:25 IST" name="setUp" finished-at="2023-08-16T17:02:29 IST" duration-ms="4269" status="PASS">
+    <test started-at="2023-08-17T19:09:55 IST" name="Default test" finished-at="2023-08-17T19:10:38 IST" duration-ms="42670">
+      <class name="cuesz.membersummarytest.advocate.Case17_MS_profle">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:cuesz.membersummarytest.advocate.Case17_MS_profle@48e1f6c7]" started-at="2023-08-17T19:09:56 IST" name="setUp" finished-at="2023-08-17T19:09:58 IST" duration-ms="2587" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="advocateScheduleEventTest()[pri:0, instance:cuesz.schduletest.advocate.Case01_createventtest@46cdf8bd]" started-at="2023-08-16T17:02:29 IST" name="advocateScheduleEventTest" finished-at="2023-08-16T17:03:07 IST" duration-ms="37915" status="PASS">
+        <test-method signature="advocateScheduleEventTest()[pri:0, instance:cuesz.membersummarytest.advocate.Case17_MS_profle@48e1f6c7]" started-at="2023-08-17T19:09:58 IST" name="advocateScheduleEventTest" finished-at="2023-08-17T19:10:38 IST" duration-ms="39876" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- advocateScheduleEventTest -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:cuesz.schduletest.advocate.Case01_createventtest@46cdf8bd]" started-at="2023-08-16T17:03:07 IST" name="tearDown" finished-at="2023-08-16T17:03:07 IST" duration-ms="345" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:cuesz.membersummarytest.advocate.Case17_MS_profle@48e1f6c7]" started-at="2023-08-17T19:10:38 IST" name="tearDown" finished-at="2023-08-17T19:10:38 IST" duration-ms="164" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- cuesz.schduletest.advocate.Case01_createventtest -->
+      </class> <!-- cuesz.membersummarytest.advocate.Case17_MS_profle -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

@@ -9,7 +9,7 @@ import org.testng.annotations.Test;
 
 import cuesz.pages.BasePage;
 
-public class Step06_SE_withoutdate extends BasePage {
+public class Step06_SE_withouttime extends BasePage {
 		
 	private By scheduleIcon 	=  (By.xpath("//a[@href='/member-calls']//span"));
 	private By Addnewevent 		=  (By.xpath("//button[normalize-space()='Add New Event']"));
@@ -23,13 +23,13 @@ public class Step06_SE_withoutdate extends BasePage {
 	private By submitbuttn		=  (By.xpath("//div[@class='mt-3']/button"));
 	
 	
-	 public Step06_SE_withoutdate(WebDriver driver) {
+	 public Step06_SE_withouttime(WebDriver driver) {
 		super(driver);
 		// TODO Auto-generated constructor stub
 
 	}
 	@Test
-	public void withoutdate() throws InterruptedException {
+	public void withouttime() throws InterruptedException {
 		/* Click on Schedule master */
 		driver.findElement(scheduleIcon).click();
 

@@ -10,19 +10,20 @@ import org.testng.annotations.Test;
 
 import cuesz.pages.BasePage;
 
-public class Step12_01_SE_createvent_withoutdate extends BasePage {
+public class Step12_01_SE_createvent_withouttime extends BasePage {
 	public static String eventDate = "26-08-2023"; // Date to be passed to script two
 	private By Schdulemaste = 	(By.xpath("//*[@id=\"root\"]/div/div[1]/div/div/div/div[2]/div/div[1]/div/div[2]"));
 	private By Addnewbuttn  = 	(By.xpath("//div[@id='root']/div/div/div/div/div[2]/div/div/button"));
 	private By Date 		= 	(By.id("event_date"));	
-	private By labeltxt		=	(By.xpath("//label[text()=\"Topic\"]/following-sibling::div//input[@type=\"text\"]"));
-	private By Member		 = 	(By.xpath("//div[contains(@class,'react-select__value-container css-1hwfws3')]"));
-	private By Staff		 =	(By.xpath("//div[@class='react-select__value-container react-select__value-container--is-multi css-1hwfws3']"));
+	//private By labeltxt		=	(By.xpath("//label[text()=\"Topic\"]/following-sibling::div//input[@type=\"text\"]"));
+	private By labeltxt		=	(By.id("eventTopics"));
+	private By Member		 = 	(By.id("eventMemberlist"));
+		private By Staff		 =	(By.xpath("//div[@class='react-select__value-container react-select__value-container--is-multi css-1hwfws3']"));
 	private By Notes		 =  (By.xpath("//textarea[@placeholder='Enter Notes']"));
 	private By Submitbutton  =	 (By.xpath("//button[normalize-space()='Create Event']"));
 	
 	
-	public Step12_01_SE_createvent_withoutdate(WebDriver driver) {
+	public Step12_01_SE_createvent_withouttime(WebDriver driver) {
 		super(driver);
 		// TODO Auto-generated constructor stub
 	}
@@ -49,7 +50,7 @@ public class Step12_01_SE_createvent_withoutdate extends BasePage {
 	    WebElement eventSelection =driver.findElement(labeltxt);
 	    Actions builder2 = new Actions(driver);
 	    builder2.moveToElement(eventSelection).click().sendKeys("Live perform session").sendKeys(Keys.ENTER).perform();
-	    
+	       
 	    /*Select Event as as member selection perform	*/
 	    Thread.sleep(2000);
 	    WebElement memberSelection =driver.findElement(Member);
@@ -66,9 +67,30 @@ public class Step12_01_SE_createvent_withoutdate extends BasePage {
 	    /*Enter Notes in create event*/
 	    driver.findElement(Notes).sendKeys("We are excited to announce that there will be a live performance event. So please availble");
 	    
-	    /*Click on submit button*/
-	    driver.findElement(Submitbutton).click();
+	 // Locate the button element
+        WebElement buttonElement = driver.findElement(By.xpath("//button[@class='btn btn-lg btn-primary w-100']"));
+
+        // Get the background property
+        String buttonBackground = buttonElement.getCssValue("background");
+
+        // Check if the button is enabled
+        boolean isEnabled = buttonElement.isEnabled();
+
+
+        // Check button color and disabled state
+        if (isEnabled) {
+            if (buttonBackground.contains("linear-gradient")) {
+                System.out.println("The button is enabled and has a gradient background.");
+            } else {
+                System.out.println("The button is enabled and has a solid background color.");
+            }
+        } else {
+            System.out.println("The button is disabled.");
+            
+            Thread.sleep(2500);
+        }
+    }
 	    
-	    Thread.sleep(5000);
+	    
 	 	}
-	}	
+	

@@ -12,51 +12,27 @@ import cuesz.utils.SeleniumUtils;
 
 public class Case01_createvent extends BasePage {
 	
-	 SeleniumUtils utils = new SeleniumUtils(driver);
+	SeleniumUtils utils = new SeleniumUtils(driver);
+	
 	public static String eventDate = "26-08-2023"; // Date to be passed to script two
-	//private By Schdulemaster = 	(By.xpath("//*[@id=\"root\"]/div/div[1]/div/div/div/div[2]/div/div[1]/div/div[2]"));
-	//private By Addnewbutton  = 	(By.xpath("//div[@id='root']/div/div/div/div/div[2]/div/div/button"));
-	//private By Date 		 = 	(By.xpath("//input[@placeholder='DD-MM-YYYY']"));
 	private By Date 		 = (By.id("event_date"));	
-	//private By StartTime 	 =	(By.xpath("//div[contains(text(),'Start Time')]"));
 	private By StartTime 	 =	(By.id("eventStartTime"));	
-	//private By EndTime		 = 	(By.xpath("//div[contains(text(),'End Time')]"));
 	private By EndTime		 = 	(By.id("eventEndTime"));
-	
-	//private By Topic		 =  (By.xpath("//div[@class='react-select__value-container css-1hwfws3']")); 
 	private By Topic		 = (By.id("eventTopics"));
-	
-	// private By Member		 = 	(By.xpath("//div[contains(@class,'react-select__value-container css-1hwfws3')]"));
 	private By Member 		= (By.id("eventMemberlist"));
-	
-	// private By Staff		 =	(By.xpath("//div[@class='react-select__value-container react-select__value-container--is-multi css-1hwfws3']"));
 	private By Staff 		= (By.id("Helsenki"));	
-	//private By Notes		 =  (By.xpath("//textarea[@placeholder='Enter Notes']"));
 	private By Notes		 =  (By.name("note"));
-	
 	private By Submitbutton  =	 (By.xpath("//button[normalize-space()='Create Event']"));
 	
 	public Case01_createvent(WebDriver driver) {
 		super(driver);
-		// TODO Auto-generated constructor stub
+		
 	}
 	@Test
 	 public void Schdulevent() throws InterruptedException {
 		 	/**********************Click on Schedule master*********************************/	
-//			WebElement schdulebutton = driver.findElement(Schdulemaster);
-//			schdulebutton.click();
-//			
-//			Thread.sleep(2500);
 			utils.clickScheduleMaster();
 			utils.clickaddnewevent();
-		
-
-			
-			
-//			Thread.sleep(2000);
-//			/**********************Click add new Event*********************************/	
-//			driver.findElement(Addnewbutton).click();
-
 			
 			/*Enter date values*/
 			Thread.sleep(2000);
