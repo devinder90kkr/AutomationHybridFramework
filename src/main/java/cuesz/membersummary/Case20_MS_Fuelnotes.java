@@ -1,58 +1,67 @@
 package cuesz.membersummary;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
-import cuesz01schdulemaster.Step01_Login;
+import cuesz.pages.BasePage;
+import cuesz.utils.SeleniumUtils;
 
-public class Case20_MS_Fuelnotes extends Step01_Login {
+public class Case20_MS_Fuelnotes extends BasePage {
+	
+	SeleniumUtils utils = new SeleniumUtils(driver);
+	
+	//private By membritms	=  (By.xpath("//div[@class='member-items']"));
+	private By pluicn		=  (By.xpath("//ul[@class='list-unstyled pref_items fuel_notes']//em"));
+	private By prefrnInpt	= (By.xpath("//textarea[@class='form-control']"));
+	private By savbttn	=	(By.cssSelector("button.btn_edit"));
+	private By editbttn	= (By.xpath("//button[@class='btn_edit btn-transparent']"));
+	private By prefTexAre	= (By.xpath("//textarea[@class='form-control']"));
+	private By deltbttn	= (By.xpath("//i[@class='rem_icon']//img[@alt='delete']"));
 
-    @BeforeClass
-    public void setUpChildClass() {
-        setUp();
-    }
+    public Case20_MS_Fuelnotes(WebDriver driver) {
+		super(driver);
+		// TODO Auto-generated constructor stub
+	}
 
-    @Test(dependsOnMethods = "Login")
+    @Test
     public void Fuel_notes() throws InterruptedException {
         Thread.sleep(2000);
 
-        // Click on the Member Summary button or link
-        driver.findElement(By.xpath("//img[@alt='Member Summary']")).click();
-
-        // Enter the name in the search field
-        driver.findElement(By.xpath("//input[@placeholder='Search Members']"))
-                .sendKeys("Kumar Devinder");
+        utils.clickMembersummary();
+        utils.waitForMilliseconds(2000);
+        utils.enterSearchText("Kumar Devinder");
+        utils.clickMembername();
 
         Thread.sleep(2000);
-        driver.findElement(By.xpath("//div[@class='member-items']")).click();
+        //driver.findElement(membritms).click();
         
      // Find the plus icon and click on it
-        WebElement plusIcon = driver.findElement(By.xpath("//ul[@class='list-unstyled pref_items fuel_notes']//em"));
+        WebElement plusIcon = driver.findElement(pluicn);
         plusIcon.click();
 
         // Find the preference input text field and fill in some information
-        WebElement preferenceInput = driver.findElement(By.xpath("//textarea[@class='form-control']"));
+        WebElement preferenceInput = driver.findElement(prefrnInpt);
         preferenceInput.sendKeys("Some preference information");
 
         // Find the save button and click on it
-        WebElement saveButton = driver.findElement(By.cssSelector("button.btn_edit"));
+        WebElement saveButton = driver.findElement(savbttn);
         saveButton.click();
 
         Thread.sleep(3000);
     
             // Text is available, click on the edit button
-            WebElement editButton = driver.findElement(By.xpath("//button[@class='btn_edit btn-transparent']"));
+            WebElement editButton = driver.findElement(editbttn);
             editButton.click();
 
             // Find the textarea and update the information
-            WebElement preferenceTextArea = driver.findElement(By.xpath("//textarea[@class='form-control']"));
+            WebElement preferenceTextArea = driver.findElement(prefTexAre);
             preferenceTextArea.clear();
             preferenceTextArea.sendKeys("Updated preference information");
 
             // Click on the delete icon to remove the preference
-            WebElement deleteIcon = driver.findElement(By.xpath("//i[@class='rem_icon']//img[@alt='delete']"));
+            WebElement deleteIcon = driver.findElement(deltbttn);
             deleteIcon.click();
            }
         

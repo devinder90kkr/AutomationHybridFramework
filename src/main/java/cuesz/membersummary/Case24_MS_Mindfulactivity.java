@@ -6,35 +6,44 @@ import java.time.Duration;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
-import cuesz01schdulemaster.Step01_Login;
+import cuesz.pages.BasePage;
+import cuesz.utils.SeleniumUtils;
 
-public class Case24_MS_Mindfulactivity extends Step01_Login {
+public class Case24_MS_Mindfulactivity extends BasePage {
+	
+	SeleniumUtils utils = new SeleniumUtils(driver);
+	
+	private By mindflHeadng = (By.xpath("//h2[contains(text(), 'Mindful')]"));
+	private By drpdwnThWek = (By.xpath("//div[@id='MindFulData']//div[contains(@class, 'react-select-dropdown-prefix__value-container')]"));
+	private By optnthWek	= (By.xpath("//div[@id='MindFulData']//div[contains(@class, 'react-select-dropdown-prefix__value-container')]"));
+	private By slectOptnThsWek = (By.xpath("//div[@id='MindFulData']//div[contains(@class, 'react-select-dropdown-prefix__value-container')]"));
+	private By drpdon1 = (By.xpath("//div[@class='cstm_row d-flex']//*[normalize-space()='Last Week']"));
+	private By elment2	= (By.xpath("//div[@class='DayPicker']"));
+	private By currtDate 	= (By.xpath("//div[contains(@class, 'DayPicker-Day--today')]"));
+	private By drpdwn3	= (By.xpath("//div[contains(text(),'7 - 13 Aug, 2023')]"));
+	private By lftarrwbttn	= (By.xpath("//button[@class='btn btn-grey pre']//span"));
+	private By rgtarrwbttn= (By.xpath("//button[@class='btn btn-grey next']"));
 
-    @BeforeClass
-    public void setUpChildClass() {
-        setUp();
-    }
+    public Case24_MS_Mindfulactivity(WebDriver driver) {
+		super(driver);
+	}
 
-    @Test(dependsOnMethods = "Login")
+    @Test
     public void mindfulactivity() throws InterruptedException {
         Thread.sleep(2000);
 
-        // Click on the Member Summary button or link
-        driver.findElement(By.xpath("//img[@alt='Member Summary']")).click();
+        utils.clickMembersummary();
+        utils.waitForMilliseconds(2000);
+        utils.enterSearchText("Kumar Devinder");
+        utils.clickMembername();
 
-        // Enter the name in the search field
-        driver.findElement(By.xpath("//input[@placeholder='Search Members']"))
-                .sendKeys("Kumar Devinder");
-
-        Thread.sleep(3000);
-        driver.findElement(By.xpath("//div[@class='member-items']")).click();
         // Scroll to the "Team Leader Coach Notes" heading
        
         Thread.sleep(5000);
@@ -46,10 +55,10 @@ public class Case24_MS_Mindfulactivity extends Step01_Login {
         
         Thread.sleep(2500);
      // Find the element for the perform heading
-        WebElement performHeading = driver.findElement(By.xpath("//h2[contains(text(), 'Mindful')]"));
+        WebElement mindfulHeading = driver.findElement(mindflHeadng);
 
         // Validate the heading for perform
-        if (performHeading.isDisplayed()) {
+        if (mindfulHeading.isDisplayed()) {
             System.out.println("Heading for Mindful is verified.");
         } else {
             System.out.println("Heading for Mindful is not found.");
@@ -57,12 +66,12 @@ public class Case24_MS_Mindfulactivity extends Step01_Login {
 
         Thread.sleep(2000);
      // Find the dropdown element for "This Week"
-        WebElement dropdownThisWeek = driver.findElement(By.xpath("//div[@id='MindFulData']//div[contains(@class, 'react-select-dropdown-prefix__value-container')]"));
+        WebElement dropdownThisWeek = driver.findElement(drpdwnThWek);
         dropdownThisWeek.click();
 
 
         // Validate the selected option for "This Week" dropdown
-        WebElement selectedOptionThisWeek = driver.findElement(By.xpath("//div[@id='MindFulData']//div[contains(@class, 'react-select-dropdown-prefix__value-container')]"));
+        WebElement selectedOptionThisWeek = driver.findElement(optnthWek);
         if (selectedOptionThisWeek.getText().trim().equals("This Week")) {
             System.out.println("Selected option 'This Week' is validated.");
         } else {
@@ -74,7 +83,7 @@ public class Case24_MS_Mindfulactivity extends Step01_Login {
         // Find the dropdown element for "Last Week" 
         Thread.sleep(3000);
 	     // Find the dropdown element
-	        WebElement dropdown1 = driver.findElement(By.xpath("//div[@id='MindFulData']//div[contains(@class, 'react-select-dropdown-prefix__value-container')]"));
+	        WebElement dropdown1 = driver.findElement(slectOptnThsWek);
 		    Actions builder1 = new Actions(driver);
 		    builder1.moveToElement(dropdown1).click().sendKeys("Last Week").perform();
 		    Thread.sleep(2000);
@@ -83,7 +92,7 @@ public class Case24_MS_Mindfulactivity extends Step01_Login {
      
             
   	     // Find the dropdown element
-  	        WebElement dropdown2 = driver.findElement(By.xpath("//div[@class='cstm_row d-flex']//*[normalize-space()='Last Week']"));
+  	        WebElement dropdown2 = driver.findElement(drpdon1);
   		    Actions builder2 = new Actions(driver);
   		    builder2.moveToElement(dropdown2).click().sendKeys("Select week").perform();
   		  Thread.sleep(2000);
@@ -92,10 +101,10 @@ public class Case24_MS_Mindfulactivity extends Step01_Login {
 
   		       // Wait for the date picker to appear (you can use explicit wait here)
   		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-  		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@class='DayPicker']")));
+  		wait.until(ExpectedConditions.visibilityOfElementLocated(elment2));
 
   		// Get the current date
-  		String currentDate = driver.findElement(By.xpath("//div[contains(@class, 'DayPicker-Day--today')]")).getAttribute("aria-label");
+  		String currentDate = driver.findElement(currtDate).getAttribute("aria-label");
 
   		// Assuming currentDate is in the format "Sun Jul 23 2023"
   		// You can parse it and find the previous week's start date
@@ -104,7 +113,7 @@ public class Case24_MS_Mindfulactivity extends Step01_Login {
   		// Let's say the previous week's start date is "Mon Jul 17 2023"
 
   		// Now, locate and click on the previous week's start date
-  		String previousWeekStartDate = "Mon Jul 17 2023";
+  		String previousWeekStartDate = "Mon Aug 07 2023";
   		WebElement previousWeekDateElement = driver.findElement(By.xpath("//div[@aria-label='" + previousWeekStartDate + "']"));
   		previousWeekDateElement.click();
 
@@ -115,7 +124,7 @@ public class Case24_MS_Mindfulactivity extends Step01_Login {
 		    
 		    Thread.sleep(3000);
 		     // Find the dropdown element
-		        WebElement dropdown3 = driver.findElement(By.xpath("//div[contains(text(),'17 - 23 Jul, 2023')]"));
+		        WebElement dropdown3 = driver.findElement(drpdwn3);
 			    Actions builder3 = new Actions(driver);
 			    builder3.moveToElement(dropdown3).click().sendKeys("Monthly View").perform();
 			    Thread.sleep(2000);
@@ -124,7 +133,7 @@ public class Case24_MS_Mindfulactivity extends Step01_Login {
 			    Thread.sleep(3500);
 
 			 // Find the left arrow button element
-			 WebElement leftArrowButton = driver.findElement(By.xpath("//button[@class='btn btn-grey pre']//span"));
+			 WebElement leftArrowButton = driver.findElement(lftarrwbttn);
 			 // Create an Actions object
 			 Actions builder = new Actions(driver);
 			 // First click on the left arrow button
@@ -138,7 +147,7 @@ public class Case24_MS_Mindfulactivity extends Step01_Login {
 
 
 			 // Find the left arrow button element
-			 WebElement rightArrowButton = driver.findElement(By.xpath("//button[@class='btn btn-grey next']"));
+			 WebElement rightArrowButton = driver.findElement(rgtarrwbttn);
 			 // Create an Actions object
 			 Actions builder11 = new Actions(driver);
 			 // First click on the left arrow button

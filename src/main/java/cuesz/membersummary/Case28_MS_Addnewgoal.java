@@ -3,35 +3,41 @@ package cuesz.membersummary;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
-import cuesz01schdulemaster.Step01_Login;
+import cuesz.pages.BasePage;
+import cuesz.utils.SeleniumUtils;
 
-public class Case28_MS_Addnewgoal extends Step01_Login {
+public class Case28_MS_Addnewgoal extends BasePage {
+	
+	SeleniumUtils utils = new SeleniumUtils(driver);
+	private By teamLeadrNotsHadng = (By.xpath("//h2[normalize-space()='Team Leader Coach Notes']"));
+	private By addNwBttn = (By.xpath("//button[normalize-space()='Add New']"));
+	private By shrtTrmGalsTxtaea = (By.xpath("//div[@class='col-md-6']//textarea[@id='editor']"));
+	private By lngTrmGalsTxtaea = (By.xpath("//div[@class='col-md-6']//label[text()='Long Term Goal']/following-sibling::div//textarea"));
+	private By procsThikiTextara1 = (By.xpath("//div[@class='col-md-6']//label[text()='Process Thinking'][1]/following-sibling::div//textarea"));
+	private By prosTikiTextara2 = (By.xpath("(//textarea[contains(@placeholder,'Write here...')])[4]"));
+	private By submtbttn	=	(By.xpath("//button[normalize-space()='Submit']"));
 
-    @BeforeClass
-    public void setUpChildClass() {
-        setUp();
-    }
+	
+    public Case28_MS_Addnewgoal(WebDriver driver) {
+		super(driver);
+		// TODO Auto-generated constructor stub
+	}
 
-    @Test(dependsOnMethods = "Login")
-    public void Avatarclick() throws InterruptedException {
+    @Test
+    public void Addnwgoal() throws InterruptedException {  
         Thread.sleep(2000);
-
-        // Click on the Member Summary button or link
-        driver.findElement(By.xpath("//img[@alt='Member Summary']")).click();
-
-        // Enter the name in the search field
-        driver.findElement(By.xpath("//input[@placeholder='Search Members']"))
-                .sendKeys("Kumar Devinder");
-
-        Thread.sleep(3000);
-        driver.findElement(By.xpath("//div[@class='member-items']")).click();
+        utils.clickMembersummary();
+        utils.waitForMilliseconds(2000);
+        utils.enterSearchText("Kumar Devinder");
+        utils.clickMembername();
+        
         // Scroll to the "Team Leader Coach Notes" heading
         Thread.sleep(3000);
-        WebElement teamLeaderNotesHeading = driver.findElement(By.xpath("//h2[normalize-space()='Team Leader Coach Notes']"));
+        WebElement teamLeaderNotesHeading = driver.findElement(teamLeadrNotsHadng);
         ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", teamLeaderNotesHeading);
 
         Thread.sleep(5000);
@@ -45,12 +51,12 @@ public class Case28_MS_Addnewgoal extends Step01_Login {
         }
         Thread.sleep(3000);
         // Click on the "Add New" button
-        WebElement addNewButton = driver.findElement(By.xpath("//button[normalize-space()='Add New']"));
+        WebElement addNewButton = driver.findElement(addNwBttn);
         addNewButton.click();
         
         Thread.sleep(3000);
      // Find the textarea for Short Term Goals - 3 Months
-        WebElement shortTermGoalsTextarea = driver.findElement(By.xpath("//div[@class='col-md-6']//textarea[@id='editor']"));
+        WebElement shortTermGoalsTextarea = driver.findElement(shrtTrmGalsTxtaea);
         // Clear the textarea (optional, if you want to replace any existing value)
         shortTermGoalsTextarea.clear();
         // Input your desired value in the textarea
@@ -58,7 +64,7 @@ public class Case28_MS_Addnewgoal extends Step01_Login {
         shortTermGoalsTextarea.sendKeys(shortTermGoals);
 
      // Find the textarea for Long Term Goal
-        WebElement longTermGoalTextarea = driver.findElement(By.xpath("//div[@class='col-md-6']//label[text()='Long Term Goal']/following-sibling::div//textarea"));
+        WebElement longTermGoalTextarea = driver.findElement(lngTrmGalsTxtaea);
         // Clear the textarea (optional, if you want to replace any existing value)
         longTermGoalTextarea.clear();
         // Input your desired value in the textarea
@@ -66,7 +72,7 @@ public class Case28_MS_Addnewgoal extends Step01_Login {
         longTermGoalTextarea.sendKeys(longTermGoal);
 
         // Find the textarea for the first Process Thinking
-        WebElement processThinkingTextarea1 = driver.findElement(By.xpath("//div[@class='col-md-6']//label[text()='Process Thinking'][1]/following-sibling::div//textarea"));
+        WebElement processThinkingTextarea1 = driver.findElement(procsThikiTextara1);
         // Clear the textarea (optional, if you want to replace any existing value)
         processThinkingTextarea1.clear();
         // Input your desired value in the textarea
@@ -74,7 +80,7 @@ public class Case28_MS_Addnewgoal extends Step01_Login {
         processThinkingTextarea1.sendKeys(processThinking1);
 
         // Find the textarea for the second Process Thinking
-        WebElement processThinkingTextarea2 = driver.findElement(By.xpath("(//textarea[contains(@placeholder,'Write here...')])[4]"));
+        WebElement processThinkingTextarea2 = driver.findElement(prosTikiTextara2);
         // Clear the textarea (optional, if you want to replace any existing value)
         processThinkingTextarea2.clear();
         // Input your desired value in the textarea
@@ -82,7 +88,7 @@ public class Case28_MS_Addnewgoal extends Step01_Login {
         processThinkingTextarea2.sendKeys(processThinking2);
 
         // Find the Submit button & click
-        WebElement submitbutton =  driver.findElement(By.xpath("//button[normalize-space()='Submit']"));
+        WebElement submitbutton =  driver.findElement(submtbttn);
         submitbutton.click();
         
         Thread.sleep(3000);

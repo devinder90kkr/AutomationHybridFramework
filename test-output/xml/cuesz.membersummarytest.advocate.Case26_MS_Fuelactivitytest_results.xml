@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Default test"
+           tests="1"
+           failures="0"
+           errors="0"
+           skipped="0"
+           time="74.605">
+    <properties></properties>
+
+
+
+            <testcase
+                name="advocateScheduleEventTest"
+                time="74.605"
+                classname="cuesz.membersummarytest.advocate.Case26_MS_Fuelactivitytest">
+            </testcase>
+</testsuite>

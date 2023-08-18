@@ -4,36 +4,44 @@ package cuesz.membersummary;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
-import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
-import cuesz01schdulemaster.Step01_Login;
+import cuesz.pages.BasePage;
+import cuesz.utils.SeleniumUtils;
 
-public class Case22_MS_speheres_Override extends Step01_Login {
+public class Case22_MS_speheres_Override extends BasePage {
 
-    @BeforeClass
-    public void setUpChildClass() {
-        setUp();
-    }
+	SeleniumUtils utils = new SeleniumUtils(driver);
+	private By spheHeadng =	(By.cssSelector(".title_h4 h4"));
+	private By perfmSwch = (By.name("defaultPerformPerEnable"));
+	private By prfrmIput = (By.name("defaultPerformPer"));
+	private By fuelSwch	= (By.name("defaultFuelPerEnable"));
+	private By fuelInpt = (By.name("defaultFuelPer"));
+	private By rsttSwtch	= (By.name("defaultRestorePerEnable"));
+	private By rstorInput	= (By.name("defaultRestorePer"));
+	private By minflSwich	=	(By.name("defaultMindfulPerEnable"));
+	private By mindflinpt	= (By.name("defaultMindfulPer"));
+	
+	
+	public Case22_MS_speheres_Override(WebDriver driver) {
+		super(driver);
+	}
 
-    @Test(dependsOnMethods = "Login")
+    @Test
     public void Overridefeature() throws InterruptedException {
         Thread.sleep(2000);
+    	
+    	utils.clickMembersummary();
+        utils.waitForMilliseconds(2000);
+        utils.enterSearchText("Kumar Devinder");
+        utils.clickMembername();
 
-        // Click on the Member Summary button or link
-        driver.findElement(By.xpath("//img[@alt='Member Summary']")).click();
-
-        // Enter the name in the search field
-        driver.findElement(By.xpath("//input[@placeholder='Search Members']"))
-                .sendKeys("Kumar Devinder");
-
-        Thread.sleep(2000);
-        driver.findElement(By.xpath("//div[@class='member-items']")).click();
-      
+              
         // Find the heading elements for the four spheres
-        WebElement sphereHeading = driver.findElement(By.cssSelector(".title_h4 h4"));
+        WebElement sphereHeading = driver.findElement(spheHeadng);
         
         // Scroll to the "4 Spheres" feature
         Actions actions = new Actions(driver);
@@ -55,45 +63,45 @@ public class Case22_MS_speheres_Override extends Step01_Login {
         
         Thread.sleep(3000);
      // Find and click the switch for the "Perform" element
-        WebElement performSwitch = driver.findElement(By.name("defaultPerformPerEnable"));
+        WebElement performSwitch = driver.findElement(perfmSwch);
         performSwitch.click();
 
         Thread.sleep(3000);
         // Find the input field for the "Perform" element and set its value to 30
-        WebElement performInput = driver.findElement(By.name("defaultPerformPer"));
+        WebElement performInput = driver.findElement(prfrmIput);
         performInput.clear();
         performInput.sendKeys("30");
 
         Thread.sleep(3000);
         // Find and click the switch for the "Fuel" element
-        WebElement fuelSwitch = driver.findElement(By.name("defaultFuelPerEnable"));
+        WebElement fuelSwitch = driver.findElement(fuelSwch);
         fuelSwitch.click();
 
         Thread.sleep(3000);
         // Find the input field for the "Fuel" element and set its value to 50
-        WebElement fuelInput = driver.findElement(By.name("defaultFuelPer"));
+        WebElement fuelInput = driver.findElement(fuelInpt);
         fuelInput.clear();
         fuelInput.sendKeys("50");
 
         Thread.sleep(3000);
         // Find and click the switch for the "Restore" element
-        WebElement restoreSwitch = driver.findElement(By.name("defaultRestorePerEnable"));
+        WebElement restoreSwitch = driver.findElement(rsttSwtch);
         restoreSwitch.click();
 
         Thread.sleep(3000);
         // Find the input field for the "Restore" element and set its value to 60
-        WebElement restoreInput = driver.findElement(By.name("defaultRestorePer"));
+        WebElement restoreInput = driver.findElement(rstorInput);
         restoreInput.clear();
         restoreInput.sendKeys("60");
 
         Thread.sleep(3000);
         // Find and click the switch for the "Mindful" element
-        WebElement mindfulSwitch = driver.findElement(By.name("defaultMindfulPerEnable"));
+        WebElement mindfulSwitch = driver.findElement(minflSwich);
         mindfulSwitch.click();
 
         Thread.sleep(3000);
         // Find the input field for the "Mindful" element and set its value to 100
-        WebElement mindfulInput = driver.findElement(By.name("defaultMindfulPer"));
+        WebElement mindfulInput = driver.findElement(mindflinpt);
         mindfulInput.clear();
         mindfulInput.sendKeys("100");
 

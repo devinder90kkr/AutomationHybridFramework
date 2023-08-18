@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Default test"
+           tests="1"
+           failures="0"
+           errors="0"
+           skipped="0"
+           time="51.108">
+    <properties></properties>
+
+
+
+            <testcase
+                name="advocateScheduleEventTest"
+                time="51.108"
+                classname="cuesz.membersummarytest.advocate.Case21_MS_speherestest">
+            </testcase>
+</testsuite>

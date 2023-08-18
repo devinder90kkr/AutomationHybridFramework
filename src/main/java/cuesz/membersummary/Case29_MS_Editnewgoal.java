@@ -3,93 +3,111 @@ package cuesz.membersummary;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
-import cuesz01schdulemaster.Step01_Login;
+import cuesz.pages.BasePage;
+import cuesz.utils.SeleniumUtils;
 
-public class Case29_MS_Editnewgoal extends Step01_Login {
+public class Case29_MS_Editnewgoal extends BasePage {
 
-    @BeforeClass
-    public void setUpChildClass() {
-        setUp();
-    }
+	SeleniumUtils utils = new SeleniumUtils(driver);
+	private By teamLderNtesHeadng = (By.xpath("//h2[normalize-space()='Team Leader Coach Notes']"));
+	private By edt1bttn	=	(By.className("btn_edit"));
+	private By	inpu1field		= (By.xpath("//textarea[@id='editor']"));
+	private By saevbttn		= 	(By.xpath("(//img[@alt='save'])[1]"));
+	private By checbox		=	(By.xpath("(//input[@name='redFlag'])[1]"));
+	
+	private By edt2bttn	=	(By.xpath("(//img[@alt='save'])[2]"));
+	private By	inpu2field		= (By.xpath("(//textarea[@id='editor'])[1]"));
+	private By saev2bttn		= 	(By.xpath("(//img[@alt='save'])[2]"));
+	private By checbox2		=	(By.xpath("(//input[@name='redFlag'])[4]"));
+	
+	private By edt3bttn	=	(By.xpath("(//img[@alt='save'])[3]"));
+	private By	inpu3field		= (By.xpath("(//textarea[@id='editor'])[1]"));
+	private By saev3bttn		= 	(By.xpath("(//img[@alt='save'])[3]"));
+	private By checbox3		=	(By.xpath("(//input[@name='redFlag'])[5]"));
+	
+	private By edt4bttn	=	(By.xpath("(//img[@alt='save'])[4]"));
+	private By	inpu4field		= (By.xpath("(//textarea[@id='editor'])[1]"));
+	private By saev4bttn		= 	(By.xpath("(//img[@alt='save'])[4]"));
+	private By checbox4		=	(By.xpath("(//input[@name='redFlag'])[6]"));
 
-    @Test(dependsOnMethods = "Login")
-    public void Avatarclick() throws InterruptedException {
-        Thread.sleep(2000);
+    public Case29_MS_Editnewgoal(WebDriver driver) {
+		super(driver);
+		// TODO Auto-generated constructor stub
+	}
 
-        // Click on the Member Summary button or link
-        driver.findElement(By.xpath("//img[@alt='Member Summary']")).click();
-
-        // Enter the name in the search field
-        driver.findElement(By.xpath("//input[@placeholder='Search Members']"))
-                .sendKeys("Kumar Devinder");
-
-        Thread.sleep(3000);
-        driver.findElement(By.xpath("//div[@class='member-items']")).click();
+	@Test
+    public void editgoalclick() throws InterruptedException {
+		Thread.sleep(2000);
+        utils.clickMembersummary();
+        utils.waitForMilliseconds(2000);
+        utils.enterSearchText("Kumar Devinder");
+        utils.clickMembername();
+ 
         // Scroll to the "Team Leader Coach Notes" heading
         Thread.sleep(3000);
-        WebElement teamLeaderNotesHeading = driver.findElement(By.xpath("//h2[normalize-space()='Team Leader Coach Notes']"));
+        WebElement teamLeaderNotesHeading = driver.findElement(teamLderNtesHeadng);
         ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", teamLeaderNotesHeading);
 
         /*Short Term Goals - 3 Months*/
         Thread.sleep(2500);
      // Locate and click the "Edit" button
-        driver.findElement(By.className("btn_edit")).click();
+        driver.findElement(edt1bttn).click();
         Thread.sleep(2000);
      // Locate the input field and send keys (input values)
-        driver.findElement(By.xpath("//textarea[@id='editor']")).sendKeys("Value 1\n update new file to text");  
+        driver.findElement(inpu1field).sendKeys("Value 1\n update new file to text");  
         Thread.sleep(2000);
      // Locate and click the "Save" button
-        driver.findElement(By.xpath("(//img[@alt='save'])[1]")).click();
+        driver.findElement(saevbttn).click();
         Thread.sleep(2000);
         // Locate and click the "CHECKBOXES" button
-        driver.findElement(By.xpath("(//input[@name='redFlag'])[1]")).click();
+        driver.findElement(checbox).click();
            
         /*Long Term Goal*/
         Thread.sleep(2500);
      // Locate and click the "Edit" button
-        driver.findElement(By.xpath("(//img[@alt='save'])[2]")).click();
+        driver.findElement(edt2bttn).click();
         Thread.sleep(2000);
      // Locate the input field and send keys (input values)
-        driver.findElement(By.xpath("(//textarea[@id='editor'])[1]")).sendKeys("Value 1\n update new file to text");  
+        driver.findElement(inpu2field).sendKeys("Value 1\n update new file to text");  
         Thread.sleep(2000);
      // Locate and click the "Save" button
-        driver.findElement(By.xpath("(//img[@alt='save'])[2]")).click();
+        driver.findElement(saev2bttn).click();
          Thread.sleep(2000);
      // Locate and click the "CHECKBOXES" button
-        driver.findElement(By.xpath("(//input[@name='redFlag'])[4]")).click();
+        driver.findElement(checbox2).click();
         
         /*Process Thinking*/
         Thread.sleep(2500);
       // Locate and click the "Edit" button
-        driver.findElement(By.xpath("(//img[@alt='save'])[3]")).click();
+        driver.findElement(edt3bttn).click();
         Thread.sleep(2000);
       // Locate the input field and send keys (input values)
-        driver.findElement(By.xpath("(//textarea[@id='editor'])[1]")).sendKeys("Value 1\n update new file to text");  
+        driver.findElement(inpu3field).sendKeys("Value 1\n update new file to text");  
         Thread.sleep(2000);
      // Locate and click the "Save" button
-        driver.findElement(By.xpath("(//img[@alt='save'])[3]")).click();
+        driver.findElement(saev3bttn).click();
         Thread.sleep(2000);
      // Locate and click the "CHECKBOXES" button
-        driver.findElement(By.xpath("(//input[@name='redFlag'])[5]")).click();
+        driver.findElement(checbox3).click();
         
         
         /*Process Thinking-2*/
         Thread.sleep(2500);
       // Locate and click the "Edit" button
-        driver.findElement(By.xpath("(//img[@alt='save'])[4]")).click();
+        driver.findElement(edt4bttn).click();
         Thread.sleep(2000);
       // Locate the input field and send keys (input values)
-        driver.findElement(By.xpath("(//textarea[@id='editor'])[1]")).sendKeys("Value 1\n update new file to text");  
+        driver.findElement(inpu4field).sendKeys("Value 1\n update new file to text");  
         Thread.sleep(2000);
      // Locate and click the "Save" button
-        driver.findElement(By.xpath("(//img[@alt='save'])[4]")).click();
+        driver.findElement(saev4bttn).click();
         Thread.sleep(2000);
      // Locate and click the "CHECKBOXES" button 
-        driver.findElement(By.xpath("(//input[@name='redFlag'])[6]")).click();
+        driver.findElement(checbox4).click();
     
         
         }    

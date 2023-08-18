@@ -3,42 +3,42 @@
 package cuesz.membersummary;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
-import cuesz01schdulemaster.Step01_Login;
+import cuesz.pages.BasePage;
+import cuesz.utils.SeleniumUtils;
 
-public class Case31_MS_Avtarclick extends Step01_Login {
+public class Case31_MS_Avtarclick extends BasePage {
+	
+	SeleniumUtils utils = new SeleniumUtils(driver);
+	private By avtar = (By.xpath("//img[@alt='human-avatar']"));
+	private By popData = (By.xpath("//div[@class='member_sum_upload']"));
+	
 
-    @BeforeClass
-    public void setUpChildClass() {
-        setUp();
-    }
+    public Case31_MS_Avtarclick(WebDriver driver) {
+		super(driver);
+	}
 
-    @Test(dependsOnMethods = "Login")
+    @Test
     public void Avatarclick() throws InterruptedException {
         Thread.sleep(2000);
 
-        // Click on the Member Summary button or link
-        driver.findElement(By.xpath("//img[@alt='Member Summary']")).click();
-
-        // Enter the name in the search field
-        driver.findElement(By.xpath("//input[@placeholder='Search Members']"))
-                .sendKeys("Kumar Devinder");
-
-        Thread.sleep(2000);
-        driver.findElement(By.xpath("//div[@class='member-items']")).click();
+        utils.clickMembersummary();
+        utils.waitForMilliseconds(2000);
+        utils.enterSearchText("Kumar Devinder");
+        utils.clickMembername();
       
         // Find the avatar element and click on it
-        WebElement avatar = driver.findElement(By.xpath("//img[@alt='human-avatar']"));
+        WebElement avatar = driver.findElement(avtar);
         avatar.click();
 
         // Wait for the popup to appear
         // Add an appropriate wait here if needed
 
         // Verify popup data
-        WebElement popupData = driver.findElement(By.xpath("//div[@class='member_sum_upload']"));
+        WebElement popupData = driver.findElement(popData);
         System.out.println(popupData.getText());
 
                  

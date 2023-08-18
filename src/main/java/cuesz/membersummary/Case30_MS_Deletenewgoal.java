@@ -3,65 +3,72 @@ package cuesz.membersummary;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.devtools.v112.page.model.NavigatedWithinDocument;
-import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
-import cuesz01schdulemaster.Step01_Login;
+import cuesz.pages.BasePage;
+import cuesz.utils.SeleniumUtils;
 
-public class Case30_MS_Deletenewgoal extends Step01_Login {
+public class Case30_MS_Deletenewgoal extends BasePage {
 
-    @BeforeClass
-    public void setUpChildClass() {
-        setUp();
-    }
+	SeleniumUtils utils = new SeleniumUtils(driver);
+	private By teamLderNotesHadng = (By.xpath("//h2[normalize-space()='Team Leader Coach Notes']"));
+	private By goalbttn		=	(By.xpath("//img[@alt='Goal Logo']"));
+	private By editbttn		=	(By.xpath("//div[@class='mid_sec']//button[1]"));
+	private By inptfild1	=	(By.xpath("//div[@class='row']//div[2]//div[1]//textarea[1]"));
+	private By inptfield2	=	(By.xpath("(//textarea[@id='editor'])[2]"));
+	private By savebttn		= 	(By.xpath("//img[@alt='save']"));	
+	private By edtcon		=	(By.xpath("//img[@alt='edit']"));
+	private By confrmbttn 	=	(By.xpath("//span[normalize-space()='Confirm']"));
+	private By teamleaotesheading=	 (By.xpath("//h2[normalize-space()='Team Leader Coach Notes']"));
+	
 
-    @Test(dependsOnMethods = "Login")
-    public void Avatarclick() throws InterruptedException {
+    public Case30_MS_Deletenewgoal(WebDriver driver) {
+		super(driver);
+		// TODO Auto-generated constructor stub
+	}
+
+	@Test
+    public void deletegoal() throws InterruptedException {
         Thread.sleep(2000);
-
-        // Click on the Member Summary button or link
-        driver.findElement(By.xpath("//img[@alt='Member Summary']")).click();
-
-        // Enter the name in the search field
-        driver.findElement(By.xpath("//input[@placeholder='Search Members']"))
-                .sendKeys("Kumar Devinder");
-
-        Thread.sleep(3000);
-        driver.findElement(By.xpath("//div[@class='member-items']")).click();
+        utils.clickMembersummary();
+        utils.waitForMilliseconds(2000);
+        utils.enterSearchText("Kumar Devinder");
+        utils.clickMembername();
+        
         // Scroll to the "Team Leader Coach Notes" heading
         Thread.sleep(3000);
-        WebElement teamLeaderNotesHeading = driver.findElement(By.xpath("//h2[normalize-space()='Team Leader Coach Notes']"));
+        WebElement teamLeaderNotesHeading = driver.findElement(teamLderNotesHadng);
         ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", teamLeaderNotesHeading);
         Thread.sleep(2000);
-        WebElement goalbutton = driver.findElement(By.xpath("//img[@alt='Goal Logo']"));
+        WebElement goalbutton = driver.findElement(goalbttn);
         goalbutton.click();
         
         Thread.sleep(2500);
-        WebElement editbutton = driver.findElement(By.xpath("//div[@class='mid_sec']//button[1]"));
+        WebElement editbutton = driver.findElement(editbttn);
         editbutton.click();
         Thread.sleep(2000);
-        driver.findElement(By.xpath("//div[@class='row']//div[2]//div[1]//textarea[1]")).sendKeys("this is new edited values for text area");
+        driver.findElement(inptfild1).sendKeys("this is new edited values for text area");
    
         Thread.sleep(2500);
-        driver.findElement(By.xpath("(//textarea[@id='editor'])[2]")).sendKeys("hello all this new edit field");
+        driver.findElement(inptfield2).sendKeys("hello all this new edit field");
         
         Thread.sleep(2000);
-        driver.findElement(By.xpath("//img[@alt='save']")).click();
+        driver.findElement(savebttn).click();
         
         Thread.sleep(2500);
-        driver.findElement(By.xpath("//img[@alt='edit']")).click();
+        driver.findElement(edtcon).click();
         
         Thread.sleep(2500);
-        driver.findElement(By.xpath("//span[normalize-space()='Confirm']")).click();
+        driver.findElement(confrmbttn).click();
         
         Thread.sleep(2500);
         
         driver.navigate().back();
         
         Thread.sleep(3000);
-        WebElement teamLeaderNotesHeading1 = driver.findElement(By.xpath("//h2[normalize-space()='Team Leader Coach Notes']"));
+        WebElement teamLeaderNotesHeading1 = driver.findElement(teamleaotesheading);
         ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", teamLeaderNotesHeading1);
         Thread.sleep(2000);
         

@@ -1,43 +1,51 @@
-
 /*https://chat.openai.com/share/c262f25b-bab9-4b0a-ae68-6065478296aa*/
 package cuesz.membersummary;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
-import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
-import cuesz01schdulemaster.Step01_Login;
+import cuesz.pages.BasePage;
+import cuesz.utils.SeleniumUtils;
 
-public class Case33_MS_Uploadposture extends Step01_Login {
+public class Case33_MS_Uploadposture extends BasePage {
+	
+	SeleniumUtils utils = new SeleniumUtils(driver);
+	private By uplodBttn = (By.xpath("//span[text()='Upload Posture']"));
+	private By FrntHedng	=	(By.xpath("//label[normalize-space()='Front']"));
+	private By popTitle = (By.xpath("//div[@class='title_h4']//h4"));
+	private By bodFat = (By.xpath("//div[@class='bmi_block']//div[@class='bmi_col'][1]//h4"));
+	private By viscalFat = (By.xpath("//div[@class='bmi_block']//div[@class='bmi_col'][2]//h4"));
+	private By frntUploadBttn = (By.xpath("//div[@class='file_up_col'][1]//input[@type='file']"));
+	private By sidLftUpladBttn = (By.xpath("(//div[@role='button'])[2]//input[@type='file']"));
+	private By sidrightUpldBttn = (By.xpath("(//div[@role='button'])[3]//input[@type='file']"));
+	private By backUloadBttn = (By.xpath("(//div[@role='button'])[4]//input[@type='file']"));
+	private By Sumitbttn = (By.xpath("//button[normalize-space()='Submit']"));
+  
 
-    @BeforeClass
-    public void setUpChildClass() {
-        setUp();
-    }
+    public Case33_MS_Uploadposture(WebDriver driver) {
+		super(driver);
+		// TODO Auto-generated constructor stub
+	}
 
-    @Test(dependsOnMethods = "Login")
+	@Test
     public void uploadposture() throws InterruptedException {
         Thread.sleep(2000);
 
-        // Click on the Member Summary button or link
-        driver.findElement(By.xpath("//img[@alt='Member Summary']")).click();
-
-        // Enter the name in the search field
-        driver.findElement(By.xpath("//input[@placeholder='Search Members']"))
-                .sendKeys("Kumar Devinder");
-
-        Thread.sleep(2000);
-        driver.findElement(By.xpath("//div[@class='member-items']")).click();
+        utils.clickMembersummary();
+        utils.waitForMilliseconds(2000);
+        utils.enterSearchText("Kumar Devinder");
+        utils.clickMembername();
        
      // Find and click on the "Upload Posture" button
-        WebElement uploadButton = driver.findElement(By.xpath("//span[text()='Upload Posture']"));
+        WebElement uploadButton = driver.findElement(uplodBttn);
         uploadButton.click();
 
         // Find the heading elements for the four spheres
-        WebElement FrontHeading = driver.findElement(By.xpath("//label[normalize-space()='Front']"));
+        WebElement FrontHeading = driver.findElement(FrntHedng);
         
         // Scroll to the "4 Spheres" feature
         Actions actions = new Actions(driver);
@@ -49,9 +57,9 @@ public class Case33_MS_Uploadposture extends Step01_Login {
         
         Thread.sleep(3000);
         // Wait for the popup to appear and get the data from it
-        WebElement popupTitle = driver.findElement(By.xpath("//div[@class='title_h4']//h4"));
-        WebElement bodyFat = driver.findElement(By.xpath("//div[@class='bmi_block']//div[@class='bmi_col'][1]//h4"));
-        WebElement visceralFat = driver.findElement(By.xpath("//div[@class='bmi_block']//div[@class='bmi_col'][2]//h4"));
+        WebElement popupTitle = driver.findElement(popTitle);
+        WebElement bodyFat = driver.findElement(bodFat);
+        WebElement visceralFat = driver.findElement(viscalFat);
         // Add more elements here to retrieve the desired data from the popup
 
         Thread.sleep(2000);
@@ -63,25 +71,26 @@ public class Case33_MS_Uploadposture extends Step01_Login {
 
         Thread.sleep(3000);
         // Find and upload the front posture
-        WebElement frontUploadButton = driver.findElement(By.xpath("//div[@class='file_up_col'][1]//input[@type='file']"));
-        frontUploadButton.sendKeys("/Users/Quality/Desktop/Devinderposture/Front.jpg"); // Replace with the actual file path
+        WebElement frontUploadButton = driver.findElement(frntUploadBttn);
+        frontUploadButton.sendKeys("/Users/chicmicmac/Desktop/Devinderpostures/Front.jpeg"); // Replace with the actual file path
 
      // Upload the side left posture
-        WebElement sideLeftUploadButton = driver.findElement(By.xpath("(//div[@role='button'])[2]//input[@type='file']"));
-        sideLeftUploadButton.sendKeys("/Users/Quality/Desktop/Devinderposture/Left.jpg"); // Replace with the actual file path
+        WebElement sideLeftUploadButton = driver.findElement(sidLftUpladBttn);
+        sideLeftUploadButton.sendKeys("/Users/chicmicmac/Desktop/Devinderpostures/left.jpeg"); // Replace with the actual file path
 
         // Upload the side right posture
-        WebElement sideRightUploadButton = driver.findElement(By.xpath("(//div[@role='button'])[3]//input[@type='file']"));
-        sideRightUploadButton.sendKeys("/Users/Quality/Desktop/Devinderposture/Right.jpg"); // Replace with the actual file path
+        WebElement sideRightUploadButton = driver.findElement(sidrightUpldBttn);
+        sideRightUploadButton.sendKeys("/Users/chicmicmac/Desktop/Devinderpostures/Right.jpeg"); // Replace with the actual file path
 
         // Upload the back posture
-        WebElement backUploadButton = driver.findElement(By.xpath("(//div[@role='button'])[4]//input[@type='file']"));
-        backUploadButton.sendKeys("/Users/Quality/Desktop/Devinderposture/Back.jpg"); // Replace with the actual file path
+        WebElement backUploadButton = driver.findElement(backUloadBttn);
+        backUploadButton.sendKeys("/Users/chicmicmac/Desktop/Devinderpostures/back.jpeg"); // Replace with the actual file path
 
-        Thread.sleep(5000);
-        WebElement Submitbutton = driver.findElement(By.xpath("//button[normalize-space()='Submit']"));
+        Thread.sleep(8000);
+        WebElement Submitbutton = driver.findElement(Sumitbttn);
         Submitbutton.click();
                  
+        Thread.sleep(2500);
         }    
     }
   

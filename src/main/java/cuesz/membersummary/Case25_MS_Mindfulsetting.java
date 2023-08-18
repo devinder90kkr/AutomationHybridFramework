@@ -7,35 +7,48 @@ import java.util.List;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
-import cuesz01schdulemaster.Step01_Login;
+import cuesz.pages.BasePage;
+import cuesz.utils.SeleniumUtils;
 
-public class Case25_MS_Mindfulsetting extends Step01_Login {
+public class Case25_MS_Mindfulsetting extends BasePage {
+	
+	SeleniumUtils utils = new SeleniumUtils(driver);
+	private By prfrmHeadng = (By.xpath("//h2[contains(text(), 'Mindful')]"));
+	private By setingmindfu	= (By.xpath("//div[@id='MindFulData']//div[@class='d-flex justify-content-between align-item-center']//em"));
+	private By modlpup	= (By.xpath("//div[@class='modal-content']"));
+	private By vibratTsogle	= (By.name("Vibration"));
+	private By guidTogle	= (By.name("Sound"));
+	private By guidAudioTogle	= (By.name("Breathe Sounds"));
+	private By durton	= (By.xpath("//div[@id='modal']/div/div/div/div/div/div/div[4]/div/div/div/div"));
+	private By timinput	=	(By.xpath("//div[@class='react-datepicker__input-container']//input"));
+	private By radobttncontir	= (By.xpath("//div[@class='ratio_btns']"));
+	private By heding	= (By.xpath("//h2[@class='mb-4']"));
+	private By inptFild	= (By.className("mindful_select"));
+	private By endtme1	= (By.xpath("//input[contains(@placeholder,'DD-MM-YYYY')]"));
+	private By submbttn	=	(By.xpath("//span[normalize-space()='Submit']"));
 
-    @BeforeClass
-    public void setUpChildClass() {
-        setUp();
-    }
 
-    @Test(dependsOnMethods = "Login")
+    public Case25_MS_Mindfulsetting(WebDriver driver) {
+		super(driver);
+		// TODO Auto-generated constructor stub
+	}
+
+    @Test
     public void mindfulactivity() throws InterruptedException {
         Thread.sleep(2000);
-
-        // Click on the Member Summary button or link
-        driver.findElement(By.xpath("//img[@alt='Member Summary']")).click();
-
-        // Enter the name in the search field
-        driver.findElement(By.xpath("//input[@placeholder='Search Members']"))
-                .sendKeys("Kumar Devinder");
-
-        Thread.sleep(3000);
-        driver.findElement(By.xpath("//div[@class='member-items']")).click();
+        
+        utils.clickMembersummary();
+        utils.waitForMilliseconds(2000);
+        utils.enterSearchText("Kumar Devinder");
+        utils.clickMembername();
+        
         // Scroll to the "Team Leader Coach Notes" heading
        
         Thread.sleep(5000);
@@ -47,7 +60,7 @@ public class Case25_MS_Mindfulsetting extends Step01_Login {
         
         Thread.sleep(2500);
      // Find the element for the perform heading
-        WebElement performHeading = driver.findElement(By.xpath("//h2[contains(text(), 'Mindful')]"));
+        WebElement performHeading = driver.findElement(prfrmHeadng);
 
         // Validate the heading for perform
         if (performHeading.isDisplayed()) {
@@ -57,14 +70,14 @@ public class Case25_MS_Mindfulsetting extends Step01_Login {
         }
 
         Thread.sleep(2500);
-        WebElement settingmindful = driver.findElement(By.xpath("//div[@id='MindFulData']//div[@class='d-flex justify-content-between align-item-center']//em"));
+        WebElement settingmindful = driver.findElement(setingmindfu);
         settingmindful.click();
         
         Thread.sleep(1000);
         
      // Wait for the modal popup to be present in the DOM and visible
         WebElement modalElement = new WebDriverWait(driver, Duration.ofSeconds(10))
-                .until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@class='modal-content']")));
+                .until(ExpectedConditions.visibilityOfElementLocated(modlpup));
 
         // Verification: If the modal popup is present and visible, it's considered open
         if (modalElement.isDisplayed()) {
@@ -75,17 +88,17 @@ public class Case25_MS_Mindfulsetting extends Step01_Login {
         
         Thread.sleep(2500);
      // Find and enable the "Vibrations" toggle
-        WebElement vibrationsToggle =   driver.findElement(By.name("Vibration"));
+        WebElement vibrationsToggle =   driver.findElement(vibratTsogle);
         vibrationsToggle.click();
 
         Thread.sleep(2500);
      // Find the "Guided" toggle
-     WebElement guidedToggle = driver.findElement(By.name("Sound"));
+     WebElement guidedToggle = driver.findElement(guidTogle);
 
      // Check if the "Guided" toggle is enabled
      if (guidedToggle.isSelected()) {
          // Find and enable the "Guided Audio" toggle
-         WebElement guidedAudioToggle = driver.findElement(By.name("Breathe Sounds"));
+         WebElement guidedAudioToggle = driver.findElement(guidAudioTogle);
          guidedAudioToggle.click();
          Thread.sleep(2500);
      } else {
@@ -93,7 +106,7 @@ public class Case25_MS_Mindfulsetting extends Step01_Login {
      }
 
      	Thread.sleep(2500);
-      WebElement Duration = driver.findElement(By.xpath("//div[@id='modal']/div/div/div/div/div/div/div[4]/div/div/div/div"));
+      WebElement Duration = driver.findElement(durton);
       Actions builder = new Actions(driver);
       builder.moveToElement(Duration).click().sendKeys("8 Minutes").perform();
       Thread.sleep(2000);
@@ -101,7 +114,7 @@ public class Case25_MS_Mindfulsetting extends Step01_Login {
       
       Thread.sleep(2500);
       // Locate the input field by its XPath
-      WebElement timeInput = driver.findElement(By.xpath("//div[@class='react-datepicker__input-container']//input"));
+      WebElement timeInput = driver.findElement(timinput);
       // Clear the existing value (optional, if needed)
       timeInput.clear();
       // Set the desired time value using sendKeys()
@@ -109,7 +122,7 @@ public class Case25_MS_Mindfulsetting extends Step01_Login {
       Thread.sleep(2000);
       
    // Locate the parent element that contains all the radio buttons by its XPath
-      WebElement radioButtonsContainer = driver.findElement(By.xpath("//div[@class='ratio_btns']"));
+      WebElement radioButtonsContainer = driver.findElement(radobttncontir);
       // Find all the radio buttons within the parent element
       List<WebElement> radioButtons = radioButtonsContainer.findElements(By.tagName("button"));
       // Loop through each radio button and click on it
@@ -125,7 +138,7 @@ public class Case25_MS_Mindfulsetting extends Step01_Login {
       }
 
       // Locate the headings by their XPath
-      	List<WebElement> headings = driver.findElements(By.xpath("//h2[@class='mb-4']"));
+      	List<WebElement> headings = driver.findElements(heding);
       	// Get the text of each heading and verify it
       	for (WebElement heading : headings) {
           String headingText1 = heading.getText();
@@ -137,7 +150,7 @@ public class Case25_MS_Mindfulsetting extends Step01_Login {
       }
             
       	// Locate the input field by its class name
-      	WebElement inputField = driver.findElement(By.className("mindful_select"));
+      	WebElement inputField = driver.findElement(inptFild);
       	// Get the value attribute of the input field
       	String value = inputField.getAttribute("value");
       	// Print the value of the input field
@@ -145,12 +158,12 @@ public class Case25_MS_Mindfulsetting extends Step01_Login {
      
       
 	    Thread.sleep(2000);
-	    WebElement endTime1 =driver.findElement(By.xpath("//input[contains(@placeholder,'DD-MM-YYYY')]"));
+	    WebElement endTime1 =driver.findElement(endtme1);
 	    Actions builder1 = new Actions(driver);
 	    builder1.moveToElement(endTime1).click().sendKeys("10-08-2023").sendKeys(Keys.ENTER).perform();;
 
 
-	    WebElement submitbutton = driver.findElement(By.xpath("//span[normalize-space()='Submit']"));
+	    WebElement submitbutton = driver.findElement(submbttn);
 	    submitbutton.click();
 	   
       

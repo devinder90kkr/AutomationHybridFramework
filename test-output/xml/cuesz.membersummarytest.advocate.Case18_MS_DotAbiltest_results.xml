@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Default test"
+           tests="1"
+           failures="0"
+           errors="0"
+           skipped="0"
+           time="36.958">
+    <properties></properties>
+
+
+
+            <testcase
+                name="advocateScheduleEventTest"
+                time="36.958"
+                classname="cuesz.membersummarytest.advocate.Case18_MS_DotAbiltest">
+            </testcase>
+</testsuite>
