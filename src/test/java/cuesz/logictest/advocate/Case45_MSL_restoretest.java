@@ -1,34 +1,36 @@
-package cuesz.membersummarytest.advocate;
+package cuesz.logictest.advocate;
+
+import java.text.ParseException;
 
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
-import cuesz.logicpage.Case34_MSL_MemberBasicinfo;
+import cuesz.logicpage.Case45_MSL_restore;
 import cuesz.logintest.AdvocateLogin;
 import cuesz.utils.WebDriverManager;
 
-public class Case15_MS_memberhoverdetail {
+public class Case45_MSL_restoretest {
     private WebDriver driver;
     private AdvocateLogin advocateLogin;
-    private Case34_MSL_MemberBasicinfo logicPage;
+    private Case45_MSL_restore memberlogicPage;
 
     @BeforeClass
     public void setUp() {
         driver = WebDriverManager.getDriver();
         driver.manage().window().maximize();
         advocateLogin = new AdvocateLogin(); // Initialise the advocateLogin object
-        logicPage = new Case34_MSL_MemberBasicinfo(driver);
+        memberlogicPage = new Case45_MSL_restore(driver);
     }
 
     @Test
-    public void advocateScheduleEventTest() throws InterruptedException {
+    public void advocatelogicmemberTest() throws InterruptedException, ParseException {
         advocateLogin.setUp(); // Call the setUp method of AdvocateLogin to initialise loginPage
         advocateLogin.testAdvocateLogin();
 
         // Access the Schedule Event page
-        logicPage.Basicinfo();
+        memberlogicPage.restore();
     
         // Add actions to schedule an event (enter event details, date, etc.)
         // Add assertions or verifications for successful event scheduling

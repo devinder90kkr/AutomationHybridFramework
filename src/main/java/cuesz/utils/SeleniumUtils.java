@@ -73,6 +73,11 @@ public class SeleniumUtils {
             clickElement(memberdetail);
     
         }
+        
+     // utility for week navigation   
+       public void navigateToLastAndNextWeek() throws InterruptedException {
+            WeekNavigationUtils.navigateToLastAndNextWeek(driver);
+        }
 
    
     }
