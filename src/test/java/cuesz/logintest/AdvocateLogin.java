@@ -8,12 +8,14 @@ import cuesz.pages.Loginpage;
 import cuesz.utils.Configuration;
 import cuesz.utils.WebDriverManager;
 
-public class AdvocateLogin {
-    private WebDriver driver;
+public class AdvocateLogin {    
+	private WebDriver driver;
     private Loginpage loginPage; 
-
+   
     @BeforeClass
     public void setUp() {
+    	
+   	
         driver = WebDriverManager.getDriver();
         driver.manage().window().maximize();
         driver.get(Configuration.BASE_URL);
@@ -22,7 +24,7 @@ public class AdvocateLogin {
 
     @Test
     public void testAdvocateLogin() {
+    	
         loginPage.login("stevecuesz90@gmail.com", "User!234");
-       
     }
 }
