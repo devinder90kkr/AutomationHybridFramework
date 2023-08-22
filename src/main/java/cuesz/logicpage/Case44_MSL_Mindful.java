@@ -8,6 +8,7 @@ import java.time.format.DateTimeFormatter;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
+import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 	import org.openqa.selenium.interactions.Actions;
@@ -22,15 +23,15 @@ import cuesz.utils.SeleniumUtils;
 		
 		SeleniumUtils utils = new SeleniumUtils(driver);
 		private By Logicbttn =   (By.xpath("//span[normalize-space()='Logic Page']"));
-		private By mindfulhdng = (By.xpath("(//div[normalize-space()='Mindful'])[1]"));
+		private By mindfulhdng = (By.id("Mindfull"));
 		private By mindflnopls = (By.xpath("//div[normalize-space()='Mindful']//button[@type='button']"));
 		private By slctbttn = (By.xpath("//div[@id='Mindfull']//div[@class='d-flex justify-content-end calender_drop']//button[1]"));
 		private By heainelment = (By.xpath("(//h6[contains(text(),'Biofeedback')])[1]"));
 		private By labeelment = (By.xpath("(//label[contains(text(),'Training Day/Non Training Day')])[1]"));
-		private By selectLPInput =	(By.xpath("//*[@id='Mindfull1']/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]"));
-		private By slecttmin =	(By.xpath("//*[@id='Mindfull1']/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]"));
+		private By selectLPInput =	(By.id("MindfulDay"));
+		private By slecttmin =	(By.id("MindfulMin"));
 		private By outsBlcok1 = (By.tagName("body"));
-	    private By selectLPinpt1  =(By.xpath("//*[@id='Mindfull1']/div[1]/div[1]/div[3]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]"));
+	    private By selectLPinpt1  =(By.id("MindfulDay"));
 	    private By Selectmininpt2 =(By.xpath("//*[@id='Mindfull1']/div[1]/div[1]/div[3]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]"));
 	    private By outsideBlck2 = (By.tagName("body"));
 	    private By slctbtt11 = (By.xpath("//body[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[12]/div[1]/div[1]/h2[1]/div[2]/button[1]"));
@@ -71,7 +72,7 @@ import cuesz.utils.SeleniumUtils;
 		        
 		        Thread.sleep(2000);
 		  	        
-		  	
+	   		   
 	        /***************************************Click on mindful and scroll******************************************************************************************/
 		  	   Thread.sleep(5500);
 		  	   WebElement mindfulheading = driver.findElement(mindfulhdng);
@@ -89,6 +90,9 @@ import cuesz.utils.SeleniumUtils;
 			   // Scroll to the "Staff Notes" element using JavaScriptExecutor
 			   ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView();", selectbutton);
 
+		
+    
+		        
 
      /********************************************************************Populate data for monday first activity *************************************************************************************/
 			   Thread.sleep(2500);
@@ -147,7 +151,13 @@ import cuesz.utils.SeleniumUtils;
 			   
 			   
 			   /********************************************************************Populate data for tuesday first activity *************************************************************************************/		      
-			 
+		     // Locate the element using XPath
+		        WebElement element = driver.findElement(By.xpath("//h6[@class='g_title']"));
+		        // Extract the text from the element
+		        String extractedText = element.getText();
+		        // Print the extracted text
+		        System.out.println("Extracted Text: " + extractedText);
+		        
 			   Thread.sleep(2000);
 			   WebElement selectLP1 =driver.findElement(selectLPinpt1);
 			   Actions builder2 = new Actions(driver);
@@ -193,6 +203,17 @@ import cuesz.utils.SeleniumUtils;
 			    // Calculate the date for two weeks ahead (adding 14 days)
 			     int twoWeeksAhead = today + 8;
 
+			  // Calculate the desired date
+			     LocalDate currentDate = LocalDate.now();
+			     LocalDate desiredDate = currentDate.plusDays(twoWeeksAhead);
+
+			     // Check if the desired date is in the next month
+			     if (desiredDate.getMonthValue() != currentDate.getMonthValue()) {
+			         // Click on the "Next Month" arrow button
+			         WebElement nextMonthButton = driver.findElement(By.xpath("//span[@class='DayPicker-NavButton DayPicker-NavButton--next']"));
+			         nextMonthButton.click();
+			     }
+			     	     
 			    // Find the date element for two weeks ahead and click on it
 			    // Note: This assumes that the date picker uses the format "Thu Aug 3 2023"
     		    String desiredDateLocator = String.format("//div[@aria-label='%s']", LocalDate.now().plusDays(twoWeeksAhead).format(DateTimeFormatter.ofPattern("EEE MMM d yyyy")));
@@ -238,49 +259,7 @@ import cuesz.utils.SeleniumUtils;
 		        saveyesbutton.click();
 		        Thread.sleep(2500); 
 		       
-		        /**************************** Scroll to Next week *****************************************************************************************/  
-		        Thread.sleep(5500);
-				// Example usage:
-				WebElement Nextweek34 = driver.findElement(Nxtwk34);
-			    // Scroll to the "Staff Notes" element using JavaScriptExecutor
-				((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView();", Nextweek34);
-     
-				
-		        Thread.sleep(500);
-		        // Click on "Next Week" button four times
-			  	WebElement nextWeekButton = driver.findElement(nxtWkButton);
-			  	nextWeekButton.click();
-			  	Thread.sleep(2000); // Add a small delay between clicks
-		        
-			  	 /***************************************Click on mindful and scroll******************************************************************************************/
-			  	 Thread.sleep(5500);
-			  	 WebElement mindfulheading2 = driver.findElement(mindflhedng2);
-			     // Scroll to the "Staff Notes" element using JavaScriptExecutor
-				 ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);;", mindfulheading2);
-				     		
-				
-				 Thread.sleep(5500);
-				 // Example usage:
-				 WebElement selectbutton2 = driver.findElement(slctbttn2);
-				 // Scroll to the "Staff Notes" element using JavaScriptExecutor
-				 ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView();", selectbutton2);
-			   	
-				  Thread.sleep(2500);
-				  
-				  /*********extarct values***********/
-				// Locate the element using XPath
-			      WebElement element = driver.findElement(elemntinpt);
-			      // Extract and print the value
-			      String value = element.getText();
-			      System.out.println("Extracted Value: " + value);
-			        
-			     // Locate the element using XPath
-			      WebElement element1 = driver.findElement(elemntinp2);
-			      // Extract and print the value
-			      String value1 = element1.getText();
-			      System.out.println("Extracted Value: " + value1); 
-			        
-			       Thread.sleep(2500);	
+
 		
 			        
 			        

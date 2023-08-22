@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="cuesz.logintest.AdvocateLogin">
+      <class name="cuesz.logictest.advocate.Case44_MSL_Mindfultest">
         <methods>
-          <include name="testAdvocateLogin"/>
-          <include name="config"/>
+          <include name="advocatelogicmemberTest"/>
           <include name="setUp"/>
+          <include name="tearDown"/>
         </methods>
-      </class> <!-- cuesz.logintest.AdvocateLogin -->
+      </class> <!-- cuesz.logictest.advocate.Case44_MSL_Mindfultest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

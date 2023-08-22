@@ -164,117 +164,123 @@ import cuesz.utils.SeleniumUtils;
 		        WebElement outsideBlock1 = driver.findElement(outsieBlcok1);
 		        outsideBlock1.click(); 
 			    
-			    /*****************************************************Populate data for monday Second activity ****************************/		    
-
-			    WebElement searchactivity1 =driver.findElement(srchactity1);
-			    Actions builder21 = new Actions(driver);
-			    builder21.moveToElement(searchactivity1).click().sendKeys("Baseball").perform();
-			    Thread.sleep(2000);
-			    builder21.sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.ENTER).perform();
-		        
-			    Thread.sleep(2500);
-			
-			    WebElement min1 =driver.findElement(minutes1);
-			    Actions builder31 = new Actions(driver);
-			    min1.clear();
-			    builder31.moveToElement(min1).click().sendKeys("15").perform();
-			  
-			    Thread.sleep(2000);
-			    WebElement searchIntensity1 =driver.findElement(searhInsity1);
-			    Actions builder411 = new Actions(driver);
-			    builder411.moveToElement(searchIntensity1).click().sendKeys("Low").perform();
-			    Thread.sleep(2000);
-			    builder411.sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.ENTER).perform();
-			    
-			    Thread.sleep(2000);
-			    WebElement cue1 = driver.findElement(cueinpu1);
-			    Actions builder51 = new Actions(driver);
-			    builder51.moveToElement(cue1).click().sendKeys("Please Sync Scosche at Start of Live Perform").sendKeys(Keys.ENTER).perform();
-			    Thread.sleep(2000);
-			    
-			    // Click outside of the block to save data
-		        WebElement outsideBlock11 = driver.findElement(outseBlock11);
-		        outsideBlock11.click();
-	
-		        /*****************************************************Populate data for Tuesday activity ****************************/		    
-
-			    WebElement searchactivity11 =driver.findElement(seacacvity11);
-			    Actions builder211 = new Actions(driver);
-			    builder211.moveToElement(searchactivity11).click().sendKeys("Boxing").perform();
-			    Thread.sleep(2000);
-			    builder211.sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.ENTER).perform();
-		        
-			    Thread.sleep(2500);
-			
-			    WebElement min11 =driver.findElement(minut1);
-			    Actions builder311 = new Actions(driver);
-			    min11.clear();
-			    builder311.moveToElement(min11).click().sendKeys("45").perform();
-			  
-			    Thread.sleep(2000);
-			    WebElement searchIntensity11 =driver.findElement(srchIntensy11);
-			    Actions builder4111 = new Actions(driver);
-			    builder4111.moveToElement(searchIntensity11).click().sendKeys("High").perform();
-			    Thread.sleep(2000);
-			    builder4111.sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.ENTER).perform();
-			    
-			    
-			    Thread.sleep(2000);
-			    WebElement HR2 =driver.findElement(HRinpt2);
-			    Actions builder56 = new Actions(driver);
-			    builder56.moveToElement(HR2).click().sendKeys("High").perform();
-			    Thread.sleep(2000);
-			    builder56.sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.ENTER).perform();
-			    
-			    
-			    
-			    Thread.sleep(2000);
-			    WebElement cue11 = driver.findElement(cue1inpy1);
-			    Actions builder511 = new Actions(driver);
-			    builder511.moveToElement(cue11).click().sendKeys("Sync Scosche. Arms Moving Freely").sendKeys(Keys.ENTER).perform();
-			    Thread.sleep(2000);
-			    
-			    // Click outside of the block to save data
-		        WebElement outsideBlock111 = driver.findElement(ousideBlock3);
-		        outsideBlock111.click();
+//			    /*****************************************************Populate data for monday Second activity ****************************/		    
+//
+//			    WebElement searchactivity1 =driver.findElement(srchactity1);
+//			    Actions builder21 = new Actions(driver);
+//			    builder21.moveToElement(searchactivity1).click().sendKeys("Baseball").perform();
+//			    Thread.sleep(2000);
+//			    builder21.sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.ENTER).perform();
+//		        
+//			    Thread.sleep(2500);
+//			
+//			    WebElement min1 =driver.findElement(minutes1);
+//			    Actions builder31 = new Actions(driver);
+//			    min1.clear();
+//			    builder31.moveToElement(min1).click().sendKeys("15").perform();
+//			  
+//			    Thread.sleep(2000);
+//			    WebElement searchIntensity1 =driver.findElement(searhInsity1);
+//			    Actions builder411 = new Actions(driver);
+//			    builder411.moveToElement(searchIntensity1).click().sendKeys("Low").perform();
+//			    Thread.sleep(2000);
+//			    builder411.sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.ENTER).perform();
+//			    
+//			    Thread.sleep(2000);
+//			    WebElement cue1 = driver.findElement(cueinpu1);
+//			    Actions builder51 = new Actions(driver);
+//			    builder51.moveToElement(cue1).click().sendKeys("Please Sync Scosche at Start of Live Perform").sendKeys(Keys.ENTER).perform();
+//			    Thread.sleep(2000);
+//			    
+//			    // Click outside of the block to save data
+//		        WebElement outsideBlock11 = driver.findElement(outseBlock11);
+//		        outsideBlock11.click();
+//	
+//		        /*****************************************************Populate data for Tuesday activity ****************************/		    
+//
+//			    WebElement searchactivity11 =driver.findElement(seacacvity11);
+//			    Actions builder211 = new Actions(driver);
+//			    builder211.moveToElement(searchactivity11).click().sendKeys("Boxing").perform();
+//			    Thread.sleep(2000);
+//			    builder211.sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.ENTER).perform();
+//		        
+//			    Thread.sleep(2500);
+//			
+//			    WebElement min11 =driver.findElement(minut1);
+//			    Actions builder311 = new Actions(driver);
+//			    min11.clear();
+//			    builder311.moveToElement(min11).click().sendKeys("45").perform();
+//			  
+//			    Thread.sleep(2000);
+//			    WebElement searchIntensity11 =driver.findElement(srchIntensy11);
+//			    Actions builder4111 = new Actions(driver);
+//			    builder4111.moveToElement(searchIntensity11).click().sendKeys("High").perform();
+//			    Thread.sleep(2000);
+//			    builder4111.sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.ENTER).perform();
+//			    
+//			    
+//			    Thread.sleep(2000);
+//			    WebElement HR2 =driver.findElement(HRinpt2);
+//			    Actions builder56 = new Actions(driver);
+//			    builder56.moveToElement(HR2).click().sendKeys("High").perform();
+//			    Thread.sleep(2000);
+//			    builder56.sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.ENTER).perform();
+//			    
+//			    
+//			    
+//			    Thread.sleep(2000);
+//			    WebElement cue11 = driver.findElement(cue1inpy1);
+//			    Actions builder511 = new Actions(driver);
+//			    builder511.moveToElement(cue11).click().sendKeys("Sync Scosche. Arms Moving Freely").sendKeys(Keys.ENTER).perform();
+//			    Thread.sleep(2000);
+//			    
+//			    // Click outside of the block to save data
+//		        WebElement outsideBlock111 = driver.findElement(ousideBlock3);
+//		        outsideBlock111.click();
 
 		     
 		
-		        /**************************** Select week and copy data*****************************************************************************************/    
-		        
-		        Thread.sleep(5500);
-				// Example usage:
-				WebElement selectbutton11 = driver.findElement(slctbttn4);
-			    // Scroll to the "Staff Notes" element using JavaScriptExecutor
-				((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView();", selectbutton11);
-		        
-		        
-		        Thread.sleep(2500);
-		        // Find and click on the "Select" button
-			    WebElement selectButton = driver.findElement(slctBttn4);
-			    selectButton.click();
+		        /**************************** Select week and copy data*****************************************************************************************/    	       		        
 
-			    // Find today's date element
-			    WebElement todayDateElement = driver.findElement(tdydatelement);
+		     Thread.sleep(2500);
 
-			    // Get the text of today's date (e.g., "3")
-			    String todayDateText = todayDateElement.getText();
+		     // Find and click on the "Select" button
+		     WebElement selectButton = driver.findElement(slctBttn4);
+		     selectButton.click();
 
-			    // Extract the day value from today's date
-			    int today = Integer.parseInt(todayDateText);
+		     // Find today's date element
+		     WebElement todayDateElement = driver.findElement(tdydatelement);
 
-			    // Calculate the date for two weeks ahead (adding 14 days)
-			     int twoWeeksAhead = today + 8;
+		     // Get the text of today's date (e.g., "3")
+		     String todayDateText = todayDateElement.getText();
 
-			    // Find the date element for two weeks ahead and click on it
-			    // Note: This assumes that the date picker uses the format "Thu Aug 3 2023"
-     		    String desiredDateLocator = String.format("//div[@aria-label='%s']", LocalDate.now().plusDays(twoWeeksAhead).format(DateTimeFormatter.ofPattern("EEE MMM d yyyy")));
-		        WebElement desiredDateElement = driver.findElement(By.xpath(desiredDateLocator));
-		        desiredDateElement.click();
+		     // Extract the day value from today's date
+		     int today = Integer.parseInt(todayDateText);
 
-		        Thread.sleep(2500);
-		        // Print the value of the clicked date
-		        System.out.println("Clicked on date: " + desiredDateElement.getText());
+		     // Calculate the date for two weeks ahead (adding 14 days)
+		     int twoWeeksAhead = today + 8;
+
+		     // Calculate the desired date
+		     LocalDate currentDate = LocalDate.now();
+		     LocalDate desiredDate = currentDate.plusDays(twoWeeksAhead);
+
+		     // Check if the desired date is in the next month
+		     if (desiredDate.getMonthValue() != currentDate.getMonthValue()) {
+		         // Click on the "Next Month" arrow button
+		         WebElement nextMonthButton = driver.findElement(By.xpath("//span[@class='DayPicker-NavButton DayPicker-NavButton--next']"));
+		         nextMonthButton.click();
+		     }
+
+		     // Find the date element for the desired date and click on it
+		     String desiredDateLocator = String.format("//div[@aria-label='%s']", desiredDate.format(DateTimeFormatter.ofPattern("EEE MMM d yyyy")));
+		     WebElement desiredDateElement = driver.findElement(By.xpath(desiredDateLocator));
+		     desiredDateElement.click();
+
+		     Thread.sleep(2500);
+
+		     // Print the value of the clicked date
+		     System.out.println("Clicked on date: " + desiredDateElement.getText());
+ 
 		        
 		        Thread.sleep(2500);
 			    WebElement Copybutton = driver.findElement(Cpybttn);
@@ -310,68 +316,8 @@ import cuesz.utils.SeleniumUtils;
 		        WebElement saveyesbutton = driver.findElement(sveysbttn);
 		        saveyesbutton.click();
 		        Thread.sleep(2500);
-		  	
-		
-		        /**************************** Scroll to Next week *****************************************************************************************/  
-		        Thread.sleep(5500);
-				// Example usage:
-				WebElement Nextweek34 = driver.findElement(Nxtwk34);
-			    // Scroll to the "Staff Notes" element using JavaScriptExecutor
-				((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView();", Nextweek34);
-     
-				
-		        Thread.sleep(500);
-		        // Click on "Next Week" button four times
-			  	WebElement nextWeekButton = driver.findElement(nxtWkBttn);
-			  	nextWeekButton.click();
-			  	Thread.sleep(2000); // Add a small delay between clicks
-		        
-		        
-		        /***************************************Click on Perfom and scroll******************************************************************************************/
-			    
-			  	Thread.sleep(5500);
-			     WebElement Performheading1 = driver.findElement(Prfrmhding1);
-			      // Scroll to the "Staff Notes" element using JavaScriptExecutor
-			   ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);;", Performheading1);
-				     		
-				   		
-				Thread.sleep(5500);
-				// Example usage:
-				WebElement selectbutton1 = driver.findElement(seltbttn1);
-				// Scroll to the "Staff Notes" element using JavaScriptExecutor
-				((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView();", selectbutton1);
-
-				Thread.sleep(2500);
-			  	
-			  	   
-			  /***************Extarct values for next monday week********************************************/	   
-			  
-				// Element 1: Extract value from <h6> element
-		        By element1Locator = By.xpath("//h6[@class='g_title']");
-		        WebElement element1 = driver.findElement(element1Locator);
-		        String value1 = element1.getText();
-		        System.out.println("Element 1 value: " + value1);
-
-		        // Element 2: Extract values from sub-elements
-		        By element2Locator = By.xpath("//div[@class='perform_box']");
-		        WebElement element2 = driver.findElement(element2Locator);
-
-		        String activityValue = element2.findElement(By.xpath(".//div[@class='react-select__single-value css-1uccc91-singleValue']")).getText();
-		        System.out.println("Activity value: " + activityValue);
-
-		        String minValue = element2.findElement(By.xpath(".//input[@placeholder='Min']")).getAttribute("value");
-		        System.out.println("Min value: " + minValue);
-
-		        String intensityValue = element2.findElement(By.xpath(".//div[contains(@class,'react-select__single-value')]")).getText();
-		        System.out.println("Intensity value: " + intensityValue);
-
-		        String durationValue = element2.findElement(By.xpath(".//div[contains(@class,'react-select__placeholder')]")).getText();
-		        System.out.println("Duration value: " + durationValue);
-
-		        String cueValue = element2.findElement(By.xpath(".//textarea")).getAttribute("value");
-		        System.out.println("Cue value: " + cueValue);
-
-		        Thread.sleep(2500);		        
+		  	  	
+        
 		        
 			    
 		 }
