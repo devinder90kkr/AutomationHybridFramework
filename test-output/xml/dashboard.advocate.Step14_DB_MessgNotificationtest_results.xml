@@ -4,14 +4,14 @@
            failures="0"
            errors="0"
            skipped="0"
-           time="143.427">
+           time="30.973">
     <properties></properties>
 
 
 
             <testcase
-                name="advocatelogicmemberTest"
-                time="143.427"
-                classname="cuesz.logictest.advocate.Case44_MSL_Mindfultest">
+                name="advocateScheduleEventTest"
+                time="30.973"
+                classname="dashboard.advocate.Step14_DB_MessgNotificationtest">
             </testcase>
 </testsuite>

@@ -22,7 +22,7 @@ import cuesz.utils.SeleniumUtils;
 		
 		SeleniumUtils utils = new SeleniumUtils(driver);
 		private By Logibttn =   (By.xpath("//span[normalize-space()='Logic Page']"));
-		private By Prfrmhading = (By.xpath("//div[contains(text(), 'Perform ')]"));
+		private By Prfrmhading = (By.id("LivePerfromCard"));
 		private By Prfrmhadingplsu = (By.xpath("//button[@data-bs-target='#LivePerform']"));
 		private By selctbttn = (By.xpath("//div[@id='LivePerfromCard']//div[@class='d-flex justify-content-end calender_drop']//button[1]"));
 		private By selctLP = (By.xpath("//*[@id='LivePerform']/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]"));
@@ -86,7 +86,7 @@ import cuesz.utils.SeleniumUtils;
 		        Thread.sleep(2000);
 		  	        
 		  	
-	 /***************************************Click on Perfom and scroll******************************************************************************************/
+	  /***************************************Click on Perfom and scroll******************************************************************************************/
 		  	   Thread.sleep(5500);
 		  	   WebElement Performheading = driver.findElement(Prfrmhading);
 		       // Scroll to the "Staff Notes" element using JavaScriptExecutor

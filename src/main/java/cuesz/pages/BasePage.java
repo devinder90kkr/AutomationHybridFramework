@@ -13,6 +13,7 @@ public class BasePage {
 // Common methods that can be used across different page classes
 public void navigateTo(String url) {
     driver.navigate().to(url);
+    
 }
 
 // Add more common methods here...
