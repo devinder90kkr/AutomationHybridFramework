@@ -1,6 +1,5 @@
 package cuesz.com.testcomponents;
 
-import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
 import org.testng.ITestContext;
@@ -10,30 +9,48 @@ import cuesz.utils.ExtentManager;
 
 public class Listeners implements ITestListener {
 
-    private static ExtentReports extent = ExtentManager.getInstance();
-    private static ThreadLocal<ExtentTest> test = new ThreadLocal<>();
+    private ExtentTest test; // Declare an ExtentTest instance
 
     @Override
-    public void onTestStart(ITestResult result) {
-        ExtentTest extentTest = extent.createTest(result.getMethod().getMethodName());
-        test.set(extentTest);
-    }
-
-    @Override
-    public void onTestSuccess(ITestResult result) {
-        test.get().log(Status.PASS, "Test Passed");
-    }
-
-    @Override
-    public void onTestFailure(ITestResult result) {
-        test.get().log(Status.FAIL, "Test Failed");
-        test.get().log(Status.FAIL, result.getThrowable());
-
-        // You can add screenshot capture and attachment to the report here if needed
+    public void onStart(ITestContext context) {
+        // This method runs before the test suite starts
+        System.out.println("Test suite started: " + context.getSuite().getName());
     }
 
     @Override
     public void onFinish(ITestContext context) {
-        extent.flush();
+        // This method runs after the test suite finishes
+        System.out.println("Test suite finished: " + context.getSuite().getName());
     }
+
+    @Override
+    public void onTestStart(ITestResult result) {
+        // This method runs when a test method starts
+        System.out.println("Test method started: " + result.getName());
+
+        // Create a new ExtentTest instance for the current test method
+        test = ExtentManager.getInstance().createTest(result.getMethod().getMethodName());
+    }
+
+    @Override
+    public void onTestSuccess(ITestResult result) {
+        // This method runs when a test method succeeds
+        System.out.println("Test method passed: " + result.getName());
+
+        // Log test status and messages using the ExtentTest instance
+        test.log(Status.PASS, "Test Passed: " + result.getName());
+    }
+
+    @Override
+    public void onTestFailure(ITestResult result) {
+        // This method runs when a test method fails
+        System.out.println("Test method failed: " + result.getName());
+
+        // Log test status and messages using the ExtentTest instance
+        test.log(Status.FAIL, "Test Failed: " + result.getName());
+
+        // Capture and attach a screenshot here if needed
+    }
+
+    // Implement other methods like onTestSkipped, onTestFinish, etc. as needed
 }

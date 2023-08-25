@@ -1,10 +1,12 @@
 package cuesz.logictest.coach;
 
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.Test;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Test;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
-import org.testng.annotations.Test;
-
 import cuesz.logicpage.Case34_MSL_MemberBasicinfo;
 import cuesz.logintest.CoachLogin;
 import cuesz.utils.WebDriverManager;
@@ -14,7 +16,9 @@ public class Case34_MSL_MemberBasicinfotest {
     private CoachLogin CaochLogin;
     private Case34_MSL_MemberBasicinfo memberlogicPage;
 
-    @BeforeClass
+
+	@BeforeMethod
+	@BeforeClass
     public void setUp() {
         driver = WebDriverManager.getDriver();
         driver.manage().window().maximize();
@@ -34,7 +38,8 @@ public class Case34_MSL_MemberBasicinfotest {
         // Add assertions or verifications for successful event scheduling
     }
 
-    @AfterClass
+	@AfterMethod
+	@AfterClass
     public void tearDown() {
         WebDriverManager.quitDriver();
     }
