@@ -33,7 +33,7 @@ public class Case44_MSL_Mindfultest {
         
      // Initialize Extent Reports
         extent = ExtentManager.getInstance();
-        test = extent.createTest("Case43_MSL_Fuel Test");
+        test = extent.createTest("Case44_MSL_Mindful Test");
     }
 
     @Test
@@ -44,9 +44,6 @@ public class Case44_MSL_Mindfultest {
         // Access the Schedule Event page
         memberlogicPage.mindful();
     
-        // Add actions to schedule an event (enter event details, date, etc.)
-        // Add assertions or verifications for successful event scheduling
-   
         // Log test steps and results
         test.log(Status.INFO, "Navigated to mindful page and added mindful data like duration");
         // Add more logs and assertions as needed

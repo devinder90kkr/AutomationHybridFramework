@@ -30,6 +30,26 @@ public class Listeners implements ITestListener {
 
         // Create a new ExtentTest instance for the current test method
         test = ExtentManager.getInstance().createTest(result.getMethod().getMethodName());
+
+        // Log environment information here
+        logEnvironmentInfo();
+    }
+
+    private void logEnvironmentInfo() {
+        // Log environment information with color-coded status
+        test.log(Status.INFO, "<b>Browser:</b> " + getBrowserInfo());
+        test.log(Status.INFO, "<b>Operating System:</b> " + getOperatingSystemInfo());
+        // Add more environment details as needed
+    }
+
+    private String getBrowserInfo() {
+        // Logic to retrieve the browser information (e.g., from WebDriver)
+        return "Chrome 91"; // Example value
+    }
+
+    private String getOperatingSystemInfo() {
+        // Logic to retrieve the operating system information (e.g., from Java properties)
+        return System.getProperty("os.name") + " " + System.getProperty("os.version");
     }
 
     @Override
@@ -37,8 +57,8 @@ public class Listeners implements ITestListener {
         // This method runs when a test method succeeds
         System.out.println("Test method passed: " + result.getName());
 
-        // Log test status and messages using the ExtentTest instance
-        test.log(Status.PASS, "Test Passed: " + result.getName());
+        // Log test status and messages using the ExtentTest instance with color-coded status
+        test.log(Status.PASS, "<font color=\"green\"><b>Test Passed:</b></font> " + result.getName());
     }
 
     @Override
@@ -46,8 +66,8 @@ public class Listeners implements ITestListener {
         // This method runs when a test method fails
         System.out.println("Test method failed: " + result.getName());
 
-        // Log test status and messages using the ExtentTest instance
-        test.log(Status.FAIL, "Test Failed: " + result.getName());
+        // Log test status and messages using the ExtentTest instance with color-coded status
+        test.log(Status.FAIL, "<font color=\"red\"><b>Test Failed:</b></font> " + result.getName());
 
         // Capture and attach a screenshot here if needed
     }

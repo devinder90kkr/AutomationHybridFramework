@@ -43,9 +43,6 @@ public class Case37_MSL_Habbitsnotestest {
 
         // Access the page
         memberlogicPage.habbitsnotes();
-    
-        // Add actions to schedule an event (enter event details, date, etc.)
-        // Add assertions or verifications for successful event scheduling
         
      // Log test steps and results
         test.log(Status.INFO, "Navigated to habbits notes and add notes values ");

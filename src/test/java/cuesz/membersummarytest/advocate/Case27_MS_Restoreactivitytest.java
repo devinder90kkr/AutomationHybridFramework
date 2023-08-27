@@ -5,14 +5,21 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
+import com.aventstack.extentreports.ExtentReports;
+import com.aventstack.extentreports.ExtentTest;
+import com.aventstack.extentreports.Status;
+
 import cuesz.logintest.AdvocateLogin;
 import cuesz.membersummary.Case27_MS_Restoreactivity;
+import cuesz.utils.ExtentManager;
 import cuesz.utils.WebDriverManager;
 
 public class Case27_MS_Restoreactivitytest {
     private WebDriver driver;
     private AdvocateLogin advocateLogin;
     private Case27_MS_Restoreactivity membersummaryPage;
+    private ExtentReports extent;
+    private ExtentTest test;
 
     @BeforeClass
     public void setUp() {
@@ -20,22 +27,27 @@ public class Case27_MS_Restoreactivitytest {
         driver.manage().window().maximize();
         advocateLogin = new AdvocateLogin(); // Initialise the advocateLogin object
         membersummaryPage = new Case27_MS_Restoreactivity(driver);
+        
+        // Initialize Extent Reports
+        extent = ExtentManager.getInstance();
+        test = extent.createTest("Case27_MS_Restoreactivity Test");
     }
 
     @Test
-    public void advocateScheduleEventTest() throws InterruptedException {
+    public void advocaterestoractivityTest() throws InterruptedException {
         advocateLogin.setUp(); // Call the setUp method of AdvocateLogin to initialise loginPage
         advocateLogin.testAdvocateLogin();
 
         // Access the Schedule Event page
         membersummaryPage.restoreactivity();
     
-        // Add actions to schedule an event (enter event details, date, etc.)
-        // Add assertions or verifications for successful event scheduling
+        // Log test steps and results
+        test.log(Status.INFO, "Verify the restore dropdown values");
     }
 
     @AfterClass
     public void tearDown() {
         WebDriverManager.quitDriver();
-    }
-}
+        extent.flush(); // Flush Extent Reports to generate the report
+     }
+ }

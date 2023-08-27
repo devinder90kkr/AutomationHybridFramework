@@ -42,7 +42,6 @@ public class Case35_MSL_MemberWilingnessLimitationScoretest {
         // Access the Schedule Event page
         memberlogicPage.Basicinfo2();
     
-
         // Log test steps and results
         test.log(Status.INFO, "Navigated to member willingness, Limitation, Performance Score");
         // Add more logs and assertions as needed

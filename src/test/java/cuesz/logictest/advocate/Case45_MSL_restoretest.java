@@ -33,7 +33,7 @@ public class Case45_MSL_restoretest {
         
         // Initialize Extent Reports
         extent = ExtentManager.getInstance();
-        test = extent.createTest("Case43_MSL_Fuel Test");
+        test = extent.createTest("Case45_MSL_restore Test");
     }
 
     @Test
@@ -43,9 +43,6 @@ public class Case45_MSL_restoretest {
 
         // Access the Schedule Event page
         memberlogicPage.restore();
-    
-        // Add actions to schedule an event (enter event details, date, etc.)
-        // Add assertions or verifications for successful event scheduling
         
      // Log test steps and results
         test.log(Status.INFO, "Navigated to restore page and added restore data for categories such as Before Sleep Time & sleep time & ");

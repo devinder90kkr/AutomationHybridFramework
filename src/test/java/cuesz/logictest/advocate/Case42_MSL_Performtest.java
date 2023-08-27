@@ -44,12 +44,8 @@ public class Case42_MSL_Performtest {
         // Access the page
         memberlogicPage.Perform();
     
-     // Add actions to schedule an event (enter event details, date, etc.)
-        // Add assertions or verifications for successful event scheduling
-        
      // Log test steps and results
         test.log(Status.INFO, "Navigated to perform and add perform activities for week ");
-        // Add more logs and assertions as needed
         
     }
 

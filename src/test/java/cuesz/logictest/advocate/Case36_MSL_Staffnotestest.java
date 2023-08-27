@@ -44,8 +44,6 @@ public class Case36_MSL_Staffnotestest {
 
         // Access the Schedule Event page
         memberlogicPage.staffnotes();
-    
-    
 
         // Log test steps and results
         test.log(Status.INFO, "Navigated to staff notes and add various stoff notes data such as  Compliance, Travel, Member Feedback");
