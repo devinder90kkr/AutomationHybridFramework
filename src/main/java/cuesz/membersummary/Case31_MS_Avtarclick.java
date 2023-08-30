@@ -13,7 +13,7 @@ import cuesz.utils.SeleniumUtils;
 public class Case31_MS_Avtarclick extends BasePage {
 	
 	SeleniumUtils utils = new SeleniumUtils(driver);
-	private By avtar = (By.xpath("//img[@alt='human-avatar']"));
+	private By avtar = (By.id("MemberSummary-Avatar"));
 	private By popData = (By.xpath("//div[@class='member_sum_upload']"));
 	
 
@@ -40,6 +40,10 @@ public class Case31_MS_Avtarclick extends BasePage {
         // Verify popup data
         WebElement popupData = driver.findElement(popData);
         System.out.println(popupData.getText());
+        
+        WebElement dropdown = driver.findElement(By.id("-Dropdown"));
+        dropdown.click();
+        
 
                  
         }    

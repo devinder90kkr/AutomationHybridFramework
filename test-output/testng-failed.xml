@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="cuesz.logictest.advocate.Case43_MSL_Fueltest">
+      <class name="cuesz.membersummarygraph.advocate.Case61_InsightsDashboardtest">
         <methods>
-          <include name="advocatelogicmemberTest"/>
+          <include name="advocateMemberhoverTest"/>
           <include name="tearDown"/>
           <include name="setUp"/>
         </methods>
-      </class> <!-- cuesz.logictest.advocate.Case43_MSL_Fueltest -->
+      </class> <!-- cuesz.membersummarygraph.advocate.Case61_InsightsDashboardtest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
