@@ -10,14 +10,14 @@ import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
 
 import cuesz.logintest.AdvocateLogin;
-import cuesz.membersummary.graphs.Case61_InsightsDashboard;
+import cuesz.membersummary.graphs.Case62_Mastercorelation3months;
 import cuesz.utils.ExtentManager;
 import cuesz.utils.WebDriverManager;
 
-public class Case61_InsightsDashboardtest {
+public class Case62_Mastercorelation3monthstest {
     private WebDriver driver;
     private AdvocateLogin advocateLogin;
-    private Case61_InsightsDashboard  membersummarygraphPage;
+    private Case62_Mastercorelation3months  membersummarygraphPage;
     
     private ExtentReports extent;
     private ExtentTest test;
@@ -27,11 +27,11 @@ public class Case61_InsightsDashboardtest {
         driver = WebDriverManager.getDriver();
         driver.manage().window().maximize();
         advocateLogin = new AdvocateLogin(); // Initialize the advocateLogin object
-        membersummarygraphPage = new Case61_InsightsDashboard (driver);
+        membersummarygraphPage = new Case62_Mastercorelation3months (driver);
         
      // Initialize Extent Reports
         extent = ExtentManager.getInstance();
-        test = extent.createTest("Case61_InsightsDashboard Test");
+        test = extent.createTest("Case62_Mastercorelation3months Test");
     }
 
     @Test
@@ -40,11 +40,11 @@ public class Case61_InsightsDashboardtest {
         advocateLogin.testAdvocateLogin();
 
         // Access the graphs page
-        membersummarygraphPage.InsightsDashboard();
+        membersummarygraphPage.mastercorelation();
         
      // Log test steps and results
-        test.log(Status.INFO, "Navigated to graphs and click on insight grpahs values and verify graphs appears");
-     
+        test.log(Status.INFO, "Navigated to Master Correlation Analysis and review graphs as per selected options for member");
+        // Add more logs and assertions as needed
     
     }
 

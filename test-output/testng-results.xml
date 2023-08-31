@@ -2,24 +2,24 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-08-30T00:48:21 IST" name="Default suite" finished-at="2023-08-30T00:49:17 IST" duration-ms="55956">
+  <suite started-at="2023-08-31T19:23:36 IST" name="Default suite" finished-at="2023-08-31T19:24:39 IST" duration-ms="63002">
     <groups>
     </groups>
-    <test started-at="2023-08-30T00:48:21 IST" name="Default test" finished-at="2023-08-30T00:49:17 IST" duration-ms="55956">
-      <class name="cuesz.membersummarygraph.advocate.Case61_InsightsDashboardtest">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:cuesz.membersummarygraph.advocate.Case61_InsightsDashboardtest@130d63be]" started-at="2023-08-30T00:48:21 IST" name="setUp" finished-at="2023-08-30T00:48:25 IST" duration-ms="4076" status="PASS">
+    <test started-at="2023-08-31T19:23:36 IST" name="Default test" finished-at="2023-08-31T19:24:39 IST" duration-ms="63002">
+      <class name="cuesz.membersummarygraph.advocate.Case63_CorrelationAnalysistest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:cuesz.membersummarygraph.advocate.Case63_CorrelationAnalysistest@6f204a1a]" started-at="2023-08-31T19:23:36 IST" name="setUp" finished-at="2023-08-31T19:23:39 IST" duration-ms="2976" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="advocateMemberhoverTest()[pri:0, instance:cuesz.membersummarygraph.advocate.Case61_InsightsDashboardtest@130d63be]" started-at="2023-08-30T00:48:25 IST" name="advocateMemberhoverTest" finished-at="2023-08-30T00:49:16 IST" duration-ms="50617" status="PASS">
+        <test-method signature="advocateMemberhoverTest()[pri:0, instance:cuesz.membersummarygraph.advocate.Case63_CorrelationAnalysistest@6f204a1a]" started-at="2023-08-31T19:23:39 IST" name="advocateMemberhoverTest" finished-at="2023-08-31T19:24:38 IST" duration-ms="59600" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- advocateMemberhoverTest -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:cuesz.membersummarygraph.advocate.Case61_InsightsDashboardtest@130d63be]" started-at="2023-08-30T00:49:16 IST" name="tearDown" finished-at="2023-08-30T00:49:17 IST" duration-ms="1194" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:cuesz.membersummarygraph.advocate.Case63_CorrelationAnalysistest@6f204a1a]" started-at="2023-08-31T19:24:38 IST" name="tearDown" finished-at="2023-08-31T19:24:39 IST" duration-ms="388" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- cuesz.membersummarygraph.advocate.Case61_InsightsDashboardtest -->
+      </class> <!-- cuesz.membersummarygraph.advocate.Case63_CorrelationAnalysistest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

@@ -25,6 +25,6 @@ public class AdvocateLogin {
     @Test
     public void testAdvocateLogin() {
     	
-        loginPage.login("stevecuesz90@gmail.com", "User!234");
+        loginPage.login("bella@yopmail.com", "User!234");
     }
 }

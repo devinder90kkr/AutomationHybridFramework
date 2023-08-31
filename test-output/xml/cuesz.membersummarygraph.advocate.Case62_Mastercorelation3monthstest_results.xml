@@ -4,14 +4,14 @@
            failures="0"
            errors="0"
            skipped="0"
-           time="5.650">
+           time="43.676">
     <properties></properties>
 
 
 
             <testcase
-                name="testCoachLogin"
-                time="5.650"
-                classname="cuesz.logintest.CoachLogin">
+                name="advocateMemberhoverTest"
+                time="43.676"
+                classname="cuesz.membersummarygraph.advocate.Case62_Mastercorelation3monthstest">
             </testcase>
 </testsuite>
