@@ -68,6 +68,7 @@ public class Case63_CorrelationAnalysis extends BasePage {
         Thread.sleep(5000);
         
         /*********Select CorrelationAnalysisDuration******/
+        
       // Locate the dropdown element by its ID
       WebElement dropdown2 = wait.until(ExpectedConditions.elementToBeClickable(By.id("CorrelationAnalysisDuration")));
       // Ensure the element is visible before interacting with it
@@ -79,19 +80,7 @@ public class Case63_CorrelationAnalysis extends BasePage {
      // Locate and click the "14 Days" option
       WebElement option14Days = driver.findElement(By.xpath("//div[contains(text(),'7 Days')]"));
       option14Days.click();
-        
-        
-//       // Locate the dropdown element by its ID
-//        WebElement dropdown2 = wait.until(ExpectedConditions.elementToBeClickable(By.id("CorrelationAnalysisDuration")));
-//        // Ensure the element is visible before interacting with it
-//        wait.until(ExpectedConditions.visibilityOf(dropdown2));
-//        // Scroll to the element if necessary
-//        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", dropdown2);
-//        // Click the dropdown to open it
-//        dropdown2.click();        
-//       // Locate and click the "14 Days" option
-//        WebElement option14Days = driver.findElement(By.xpath("//div[contains(text(),'14 Days')]"));
-//        option14Days.click();
+ 
         
         /*********Select CorrelationAnalysisHeartRateOptions******/
         // Locate the dropdown element by its ID
@@ -118,6 +107,9 @@ public class Case63_CorrelationAnalysis extends BasePage {
        // Locate and click the "14 Days" option
         WebElement optionsleepvalues = driver.findElement(By.xpath("//div[contains(text(),'Sleep Time')]"));
         optionsleepvalues.click();
+        
+        
+        
         
         
         
