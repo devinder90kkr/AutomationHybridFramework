@@ -12,7 +12,7 @@ import org.testng.annotations.Test;
 import cuesz.pages.BasePage;
 import cuesz.utils.SeleniumUtils;
 
-public class Case63_CorrelationAnalysis2extende3 extends BasePage {
+public class Case63_CorrelationAnalysis extends BasePage {
 
     SeleniumUtils utils = new SeleniumUtils(driver);
 
@@ -21,7 +21,7 @@ public class Case63_CorrelationAnalysis2extende3 extends BasePage {
     private By opton = (By.xpath("//div[@id='GraphDropdown']//div[contains(text(), 'Correlation Analysis')][2]"));
     private By corelatonheading = By.xpath("//h3[normalize-space()='Correlation Analysis']");
 
-    public Case63_CorrelationAnalysis2extende3(WebDriver driver) {
+    public Case63_CorrelationAnalysis (WebDriver driver) {
         super(driver);
     }
 

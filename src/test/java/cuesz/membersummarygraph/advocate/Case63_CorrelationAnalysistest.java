@@ -10,14 +10,14 @@ import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
 
 import cuesz.logintest.AdvocateLogin;
-import cuesz.membersummary.graphs.Case63_CorrelationAnalysis2extende3;
+import cuesz.membersummary.graphs.Case63_CorrelationAnalysis;
 import cuesz.utils.ExtentManager;
 import cuesz.utils.WebDriverManager;
 
-public class Case63_CorrelationAnalysistest2extendetest {
+public class Case63_CorrelationAnalysistest {
     private WebDriver driver;
     private AdvocateLogin advocateLogin;
-    private Case63_CorrelationAnalysis2extende3  membersummarygraphPage;
+    private Case63_CorrelationAnalysis  membersummarygraphPage;
     
     private ExtentReports extent;
     private ExtentTest test;
@@ -27,7 +27,7 @@ public class Case63_CorrelationAnalysistest2extendetest {
         driver = WebDriverManager.getDriver();
         driver.manage().window().maximize();
         advocateLogin = new AdvocateLogin(); // Initialize the advocateLogin object
-        membersummarygraphPage = new Case63_CorrelationAnalysis2extende3 (driver);
+        membersummarygraphPage = new Case63_CorrelationAnalysis (driver);
         
      // Initialize Extent Reports
         extent = ExtentManager.getInstance();
