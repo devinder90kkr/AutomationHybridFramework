@@ -2,24 +2,24 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-09-04T19:41:47 IST" name="Default suite" finished-at="2023-09-04T19:43:05 IST" duration-ms="78463">
+  <suite started-at="2023-09-04T23:45:12 IST" name="Default suite" finished-at="2023-09-04T23:46:42 IST" duration-ms="90731">
     <groups>
     </groups>
-    <test started-at="2023-09-04T19:41:47 IST" name="Default test" finished-at="2023-09-04T19:43:05 IST" duration-ms="78463">
-      <class name="cuesz.logictest.advocate.Case34_MSL_MemberBasicinfotest">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:cuesz.logictest.advocate.Case34_MSL_MemberBasicinfotest@7e6ef134]" started-at="2023-09-04T19:41:47 IST" name="setUp" finished-at="2023-09-04T19:41:51 IST" duration-ms="3851" status="PASS">
+    <test started-at="2023-09-04T23:45:12 IST" name="Default test" finished-at="2023-09-04T23:46:42 IST" duration-ms="90731">
+      <class name="cuesz.logictest.advocate.Case35_MSL_MemberWilingnessLimitationScoretest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:cuesz.logictest.advocate.Case35_MSL_MemberWilingnessLimitationScoretest@5fb759d6]" started-at="2023-09-04T23:45:12 IST" name="setUp" finished-at="2023-09-04T23:45:17 IST" duration-ms="4965" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="advocatelogicmemberTest()[pri:0, instance:cuesz.logictest.advocate.Case34_MSL_MemberBasicinfotest@7e6ef134]" started-at="2023-09-04T19:41:51 IST" name="advocatelogicmemberTest" finished-at="2023-09-04T19:43:05 IST" duration-ms="74492" status="PASS">
+        <test-method signature="advocatelogicmemberTest()[pri:0, instance:cuesz.logictest.advocate.Case35_MSL_MemberWilingnessLimitationScoretest@5fb759d6]" started-at="2023-09-04T23:45:17 IST" name="advocatelogicmemberTest" finished-at="2023-09-04T23:46:41 IST" duration-ms="84096" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- advocatelogicmemberTest -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:cuesz.logictest.advocate.Case34_MSL_MemberBasicinfotest@7e6ef134]" started-at="2023-09-04T19:43:05 IST" name="tearDown" finished-at="2023-09-04T19:43:05 IST" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:cuesz.logictest.advocate.Case35_MSL_MemberWilingnessLimitationScoretest@5fb759d6]" started-at="2023-09-04T23:46:41 IST" name="tearDown" finished-at="2023-09-04T23:46:42 IST" duration-ms="1255" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- cuesz.logictest.advocate.Case34_MSL_MemberBasicinfotest -->
+      </class> <!-- cuesz.logictest.advocate.Case35_MSL_MemberWilingnessLimitationScoretest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
