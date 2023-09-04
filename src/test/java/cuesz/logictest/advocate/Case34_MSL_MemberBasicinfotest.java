@@ -30,7 +30,7 @@ public class Case34_MSL_MemberBasicinfotest {
 //    private ExtentReports extent;
 //    private ExtentTest test;
 //    
-//    private ByteArrayOutputStream consoleOutput; // To capture console output
+    private ByteArrayOutputStream consoleOutput; // To capture console output
 
     @BeforeClass
     
@@ -44,10 +44,10 @@ public class Case34_MSL_MemberBasicinfotest {
 //        extent = ExtentManager.getInstance();
 //        test = extent.createTest("Case34_MSL_MemberBasicinfo Test");
 //        
-//     // Redirect console output to capture it
-//        consoleOutput = new ByteArrayOutputStream();
-//        PrintStream printStream = new PrintStream(consoleOutput);
-//        System.setOut(printStream);
+     // Redirect console output to capture it
+        consoleOutput = new ByteArrayOutputStream();
+        PrintStream printStream = new PrintStream(consoleOutput);
+        System.setOut(printStream);
     }
 
     @Test
@@ -64,9 +64,12 @@ public class Case34_MSL_MemberBasicinfotest {
 //        test.log(Status.INFO, "Navigated to member Basic Info over Page");
 //        // Add more logs and assertions as needed
 //        
-//     // Capture console logs
-//        String consoleLogs = consoleOutput.toString();
-//        System.out.println(consoleLogs); // Print console logs to console (optional)
+     // Capture console logs
+        String consoleLogs = consoleOutput.toString();
+        System.out.println(consoleLogs); // Print console logs to console (optional)
+        
+        // Log console logs in Allure
+        Allure.addAttachment("Console Output", "text/plain", consoleLogs);
 //
 //        // Log console logs in the Extent Report
 //        test.log(Status.INFO, "Console Logs:\n" + consoleLogs);
