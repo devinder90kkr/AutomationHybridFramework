@@ -1,25 +1,14 @@
 package cuesz.membersummary.fuelreport.advocate;
 
-import java.io.File;
-
-import org.apache.commons.io.FileUtils;
-import org.openqa.selenium.OutputType;
-import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
-
-import com.aventstack.extentreports.ExtentReports;
-import com.aventstack.extentreports.ExtentTest;
-import com.aventstack.extentreports.Status;
-
 import cuesz.logintest.AdvocateLogin;
 import cuesz.membersummary.fuelreport.Case67_Fueldashboard;
-import cuesz.utils.ExtentManager;
+import cuesz.utils.AllureUtils;
 import cuesz.utils.WebDriverManager;
 import io.qameta.allure.*;
-
 
 @Epic ("Fuel report page")
 @Feature ("Update fuel details")
@@ -29,19 +18,13 @@ public class Case67_Fueldashboardtest {
     private AdvocateLogin advocateLogin;
     private Case67_Fueldashboard  membersummarygraphPage;
     
-    private ExtentReports extent;
-    private ExtentTest test;
 
     @BeforeClass
     public void setUp() {
         driver = WebDriverManager.getDriver();
         driver.manage().window().maximize();
         advocateLogin = new AdvocateLogin(); // Initialize the advocateLogin object
-        membersummarygraphPage = new Case67_Fueldashboard (driver);
-        
-     // Initialize Extent Reports
-        extent = ExtentManager.getInstance();
-        test = extent.createTest("Case67_Fueldashboard Test");
+        membersummarygraphPage = new Case67_Fueldashboard (driver); 
     }
 
     @Test
@@ -55,28 +38,16 @@ public class Case67_Fueldashboardtest {
         // Access the graphs page
         membersummarygraphPage.fuelreport();
         
-     // Log test steps and results
-        test.log(Status.INFO, "Navigated to fuel report and click on various cards");
-     
      // Capture a screenshot and attach it to Allure
-        try {
-            TakesScreenshot ts = (TakesScreenshot) driver;
-            File source = ts.getScreenshotAs(OutputType.FILE);
-            File destination = new File("/Users/chicmicmac/Desktop/allurescreenshots.svg"); // Specify the path to save the screenshot
-            FileUtils.copyFile(source, destination);
-            Allure.addAttachment("Screenshot", FileUtils.openInputStream(destination));
-        } catch (Exception e) {
-            System.out.println("Failed to capture screenshot: " + e.getMessage());
-        }
-        
+        AllureUtils.captureScreenshot(driver, "fuel_report_screenshot");
         Allure.step("Step Details");
-        
+    
     
     }
 
     @AfterClass
     public void tearDown() {
         WebDriverManager.quitDriver();
-        extent.flush(); // Flush Extent Reports to generate the report
+       
     }
 }

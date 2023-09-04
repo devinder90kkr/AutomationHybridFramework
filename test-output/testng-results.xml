@@ -2,24 +2,24 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-09-04T18:24:55 IST" name="Default suite" finished-at="2023-09-04T18:25:39 IST" duration-ms="44252">
+  <suite started-at="2023-09-04T19:27:20 IST" name="Default suite" finished-at="2023-09-04T19:28:39 IST" duration-ms="78963">
     <groups>
     </groups>
-    <test started-at="2023-09-04T18:24:55 IST" name="Default test" finished-at="2023-09-04T18:25:39 IST" duration-ms="44252">
-      <class name="cuesz.membersummary.fuelreport.advocate.Case70_Fueldashboardcalculatorstest">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:cuesz.membersummary.fuelreport.advocate.Case70_Fueldashboardcalculatorstest@7e6ef134]" started-at="2023-09-04T18:24:55 IST" name="setUp" finished-at="2023-09-04T18:24:59 IST" duration-ms="3810" status="PASS">
+    <test started-at="2023-09-04T19:27:20 IST" name="Default test" finished-at="2023-09-04T19:28:39 IST" duration-ms="78963">
+      <class name="cuesz.logictest.advocate.Case34_MSL_MemberBasicinfotest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:cuesz.logictest.advocate.Case34_MSL_MemberBasicinfotest@7e6ef134]" started-at="2023-09-04T19:27:20 IST" name="setUp" finished-at="2023-09-04T19:27:23 IST" duration-ms="3257" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="advocateMemberhoverTest()[pri:0, instance:cuesz.membersummary.fuelreport.advocate.Case70_Fueldashboardcalculatorstest@7e6ef134]" started-at="2023-09-04T18:24:59 IST" name="advocateMemberhoverTest" finished-at="2023-09-04T18:25:38 IST" duration-ms="39858" status="PASS">
+        <test-method signature="advocatelogicmemberTest()[pri:0, instance:cuesz.logictest.advocate.Case34_MSL_MemberBasicinfotest@7e6ef134]" started-at="2023-09-04T19:27:23 IST" name="advocatelogicmemberTest" finished-at="2023-09-04T19:28:39 IST" duration-ms="75593" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- advocateMemberhoverTest -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:cuesz.membersummary.fuelreport.advocate.Case70_Fueldashboardcalculatorstest@7e6ef134]" started-at="2023-09-04T18:25:39 IST" name="tearDown" finished-at="2023-09-04T18:25:39 IST" duration-ms="474" status="PASS">
+        </test-method> <!-- advocatelogicmemberTest -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:cuesz.logictest.advocate.Case34_MSL_MemberBasicinfotest@7e6ef134]" started-at="2023-09-04T19:28:39 IST" name="tearDown" finished-at="2023-09-04T19:28:39 IST" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- cuesz.membersummary.fuelreport.advocate.Case70_Fueldashboardcalculatorstest -->
+      </class> <!-- cuesz.logictest.advocate.Case34_MSL_MemberBasicinfotest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

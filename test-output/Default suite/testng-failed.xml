@@ -3,27 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="cuesz.membersummary.fuelreport.advocate.Case67_Fueldashboardtest">
-        <methods>
-          <include name="setUp"/>
-          <include name="advocateMemberhoverTest"/>
-          <include name="tearDown"/>
-        </methods>
-      </class> <!-- cuesz.membersummary.fuelreport.advocate.Case67_Fueldashboardtest -->
-      <class name="cuesz.membersummary.fuelreport.advocate.Case69_FueldashboardGuidelinestest">
+      <class name="cuesz.logictest.advocate.Case34_MSL_MemberBasicinfotest">
         <methods>
           <include name="tearDown"/>
+          <include name="advocatelogicmemberTest"/>
           <include name="setUp"/>
-          <include name="advocateMemberhoverTest"/>
         </methods>
-      </class> <!-- cuesz.membersummary.fuelreport.advocate.Case69_FueldashboardGuidelinestest -->
-      <class name="cuesz.membersummary.fuelreport.advocate.Case68_Fueldashboardconditionnputtest">
-        <methods>
-          <include name="advocateMemberhoverTest"/>
-          <include name="setUp"/>
-          <include name="tearDown"/>
-        </methods>
-      </class> <!-- cuesz.membersummary.fuelreport.advocate.Case68_Fueldashboardconditionnputtest -->
+      </class> <!-- cuesz.logictest.advocate.Case34_MSL_MemberBasicinfotest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
