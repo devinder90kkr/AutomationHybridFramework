@@ -1,5 +1,10 @@
 package cuesz.membersummary.fuelreport.advocate;
 
+import java.io.File;
+
+import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
@@ -13,6 +18,11 @@ import cuesz.logintest.AdvocateLogin;
 import cuesz.membersummary.fuelreport.Case67_Fueldashboard;
 import cuesz.utils.ExtentManager;
 import cuesz.utils.WebDriverManager;
+import io.qameta.allure.*;
+
+
+@Epic ("Fuel report page")
+@Feature ("Update fuel details")
 
 public class Case67_Fueldashboardtest {
     private WebDriver driver;
@@ -35,6 +45,9 @@ public class Case67_Fueldashboardtest {
     }
 
     @Test
+    @Description("navigation to fuel report")
+    @Story("Cards update for member in fuels")
+    
     public void advocateMemberhoverTest() throws InterruptedException {
         advocateLogin.setUp(); // Call the setUp method of AdvocateLogin to initialise loginPage
         advocateLogin.testAdvocateLogin();
@@ -45,6 +58,19 @@ public class Case67_Fueldashboardtest {
      // Log test steps and results
         test.log(Status.INFO, "Navigated to fuel report and click on various cards");
      
+     // Capture a screenshot and attach it to Allure
+        try {
+            TakesScreenshot ts = (TakesScreenshot) driver;
+            File source = ts.getScreenshotAs(OutputType.FILE);
+            File destination = new File("/Users/chicmicmac/Desktop/allurescreenshots.svg"); // Specify the path to save the screenshot
+            FileUtils.copyFile(source, destination);
+            Allure.addAttachment("Screenshot", FileUtils.openInputStream(destination));
+        } catch (Exception e) {
+            System.out.println("Failed to capture screenshot: " + e.getMessage());
+        }
+        
+        Allure.step("Step Details");
+        
     
     }
 

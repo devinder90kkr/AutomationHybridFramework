@@ -42,7 +42,7 @@ public class Case26_MS_Fuelactivity extends BasePage {
 
         utils.clickMembersummary();
         utils.waitForMilliseconds(2000);
-        utils.enterSearchText("Kumar Devinder");
+        utils.enterSearchText();
         utils.clickMembername();
         // Scroll to the "Team Leader Coach Notes" heading
        

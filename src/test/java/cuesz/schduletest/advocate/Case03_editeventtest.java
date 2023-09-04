@@ -13,6 +13,11 @@ import cuesz.logintest.AdvocateLogin;
 import cuesz.schdule.Case03_editevent;
 import cuesz.utils.ExtentManager;
 import cuesz.utils.WebDriverManager;
+import io.qameta.allure.*;
+
+
+@Epic ("Advocate Scheduling")
+@Feature ("Event Creation")
 
 public class Case03_editeventtest {
     private WebDriver driver;
@@ -35,6 +40,8 @@ public class Case03_editeventtest {
     }
 
     @Test
+    @Description("Advocate schdules and edit an event")
+    @Story("Schdule Events")
     public void advocateScheduleeditEventTest() throws InterruptedException {
         advocateLogin.setUp(); // Call the setUp method of AdvocateLogin to initialize loginPage
         advocateLogin.testAdvocateLogin();
@@ -46,6 +53,7 @@ public class Case03_editeventtest {
         test.log(Status.INFO, "Navigate to calendar and edit an created event");
         // Add more logs and assertions as needed
     
+        Allure.step("Step Details");
     }
 
     @AfterClass

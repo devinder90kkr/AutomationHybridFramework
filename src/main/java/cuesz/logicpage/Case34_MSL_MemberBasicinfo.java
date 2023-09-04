@@ -43,7 +43,7 @@ public class Case34_MSL_MemberBasicinfo extends BasePage {
 
 	        utils.clickMembersummary();
 	        utils.waitForMilliseconds(2000);
-	        utils.enterSearchText("Kumar Devinder");
+	        utils.enterSearchText();
 	        utils.clickMembername();
 
    		   /***************************************************************************************************************************************************/

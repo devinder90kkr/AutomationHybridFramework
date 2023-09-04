@@ -42,7 +42,7 @@ public class Case27_MS_Restoreactivity extends BasePage {
 
         utils.clickMembersummary();
         utils.waitForMilliseconds(2000);
-        utils.enterSearchText("Kumar Devinder");
+        utils.enterSearchText();
         utils.clickMembername();
        
        Thread.sleep(8500);

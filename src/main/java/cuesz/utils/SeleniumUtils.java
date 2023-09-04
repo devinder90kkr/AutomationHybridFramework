@@ -62,9 +62,11 @@ public class SeleniumUtils {
     }
     
  // Enter text in the search field
-    public void enterSearchText(String searchText) {
+    public void enterSearchText() {
         By searchFieldLocator = By.xpath("//input[@placeholder='Search Members']");
-        enterText(searchFieldLocator, searchText);
+        String searchmember = "Sanjit QA"; // Define the search text here
+        enterText(searchFieldLocator, searchmember);
+     //   enterSearchText("Sanjit QA");
     }
      
   // Click on member call 

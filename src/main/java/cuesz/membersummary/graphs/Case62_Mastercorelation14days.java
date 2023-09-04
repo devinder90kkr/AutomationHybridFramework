@@ -37,7 +37,7 @@ public class Case62_Mastercorelation14days extends BasePage {
         Thread.sleep(2000);
         utils.clickMembersummary();
         utils.waitForMilliseconds(2000);
-        utils.enterSearchText("Kumar Devinder");
+        utils.enterSearchText();
         utils.clickMembername();
 
         WebElement Graphicon = driver.findElement(grahpicon);

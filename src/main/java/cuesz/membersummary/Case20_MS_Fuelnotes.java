@@ -31,7 +31,7 @@ public class Case20_MS_Fuelnotes extends BasePage {
 
         utils.clickMembersummary();
         utils.waitForMilliseconds(2000);
-        utils.enterSearchText("Kumar Devinder");
+        utils.enterSearchText();
         utils.clickMembername();
 
         Thread.sleep(2000);

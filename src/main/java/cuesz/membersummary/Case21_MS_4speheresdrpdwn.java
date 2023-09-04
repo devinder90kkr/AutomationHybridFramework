@@ -35,7 +35,7 @@ public class Case21_MS_4speheresdrpdwn extends BasePage {
     	
     	utils.clickMembersummary();
         utils.waitForMilliseconds(2000);
-        utils.enterSearchText("Kumar Devinder");
+        utils.enterSearchText();
         utils.clickMembername();
       
         // Find the heading elements for the four spheres

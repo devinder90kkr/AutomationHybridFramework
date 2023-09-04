@@ -64,7 +64,7 @@ public class Case37_MSL_Habbitsnotes extends BasePage {
 
 	        utils.clickMembersummary();
 	        utils.waitForMilliseconds(2000);
-	        utils.enterSearchText("Kumar Devinder");
+	        utils.enterSearchText();
 	        utils.clickMembername();
      /**********************************landed on Logic page ***************************************************************************************************/
 	        Thread.sleep(2000);

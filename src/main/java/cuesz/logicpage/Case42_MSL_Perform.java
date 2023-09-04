@@ -70,7 +70,7 @@ import cuesz.utils.SeleniumUtils;
 	
 		        utils.clickMembersummary();
 		        utils.waitForMilliseconds(2000);
-		        utils.enterSearchText("Kumar Devinder");
+		        utils.enterSearchText();
 		        utils.clickMembername();
 	
 	   		   /***********************************landed on Logic page ***************************************************************************************************/

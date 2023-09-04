@@ -10,6 +10,20 @@
           <include name="tearDown"/>
         </methods>
       </class> <!-- cuesz.membersummary.fuelreport.advocate.Case67_Fueldashboardtest -->
+      <class name="cuesz.membersummary.fuelreport.advocate.Case69_FueldashboardGuidelinestest">
+        <methods>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+          <include name="advocateMemberhoverTest"/>
+        </methods>
+      </class> <!-- cuesz.membersummary.fuelreport.advocate.Case69_FueldashboardGuidelinestest -->
+      <class name="cuesz.membersummary.fuelreport.advocate.Case68_Fueldashboardconditionnputtest">
+        <methods>
+          <include name="advocateMemberhoverTest"/>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- cuesz.membersummary.fuelreport.advocate.Case68_Fueldashboardconditionnputtest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

@@ -32,7 +32,7 @@ public class Case28_MS_Addnewgoal extends BasePage {
         Thread.sleep(2000);
         utils.clickMembersummary();
         utils.waitForMilliseconds(2000);
-        utils.enterSearchText("Kumar Devinder");
+        utils.enterSearchText();
         utils.clickMembername();
         
         // Scroll to the "Team Leader Coach Notes" heading

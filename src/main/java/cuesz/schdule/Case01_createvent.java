@@ -14,7 +14,7 @@ public class Case01_createvent extends BasePage {
 	
 	SeleniumUtils utils = new SeleniumUtils(driver);
 	
-	public static String eventDate = "26-08-2023"; // Date to be passed to script two
+	public static String eventDate = "26-09-2023"; // Date to be passed to script two
 	private By Date 		 = (By.id("event_date"));	
 	private By StartTime 	 =	(By.id("eventStartTime"));	
 	private By EndTime		 = 	(By.id("eventEndTime"));

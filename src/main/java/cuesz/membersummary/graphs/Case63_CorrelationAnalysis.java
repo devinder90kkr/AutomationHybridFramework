@@ -33,7 +33,7 @@ public class Case63_CorrelationAnalysis extends BasePage {
         Thread.sleep(2000);
         utils.clickMembersummary();
         utils.waitForMilliseconds(2000);
-        utils.enterSearchText("Kumar Devinder");
+        utils.enterSearchText();
         utils.clickMembername();
 
         WebElement Graphicon = driver.findElement(grahpicon);

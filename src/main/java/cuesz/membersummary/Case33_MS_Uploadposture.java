@@ -37,7 +37,7 @@ public class Case33_MS_Uploadposture extends BasePage {
 
         utils.clickMembersummary();
         utils.waitForMilliseconds(2000);
-        utils.enterSearchText("Kumar Devinder");
+        utils.enterSearchText();
         utils.clickMembername();
        
      // Find and click on the "Upload Posture" button

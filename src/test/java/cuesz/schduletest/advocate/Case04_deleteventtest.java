@@ -13,7 +13,11 @@ import cuesz.logintest.AdvocateLogin;
 import cuesz.schdule.Case04_deletevent;
 import cuesz.utils.ExtentManager;
 import cuesz.utils.WebDriverManager;
+import io.qameta.allure.*;
 
+
+@Epic ("Advocate Scheduling")
+@Feature ("Event Creation")
 public class Case04_deleteventtest {
     private WebDriver driver;
     private AdvocateLogin advocateLogin;
@@ -35,6 +39,8 @@ public class Case04_deleteventtest {
     }
 
     @Test
+    @Description("Advocate schdules and delete an event")
+    @Story("Schdule Events")
     public void advocateScheduledeleteEventTest() throws InterruptedException {
         advocateLogin.setUp(); // Call the setUp method of AdvocateLogin to initialize loginPage
         advocateLogin.testAdvocateLogin();
@@ -45,6 +51,8 @@ public class Case04_deleteventtest {
         // Log test steps and results
         test.log(Status.INFO, "Navigate to calendar and deleted an created event");
         // Add more logs and assertions as needed
+        
+        Allure.step("Step Details");
     
     }
 

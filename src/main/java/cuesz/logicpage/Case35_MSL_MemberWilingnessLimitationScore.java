@@ -42,7 +42,7 @@ public class Case35_MSL_MemberWilingnessLimitationScore extends BasePage {
 
 	        utils.clickMembersummary();
 	        utils.waitForMilliseconds(2000);
-	        utils.enterSearchText("Kumar Devinder");
+	        utils.enterSearchText();
 	        utils.clickMembername();
 
    		   /***************************************************************************************************************************************************/

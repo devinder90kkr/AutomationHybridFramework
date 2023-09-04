@@ -27,7 +27,7 @@ public class Case31_MS_Avtarclick extends BasePage {
 
         utils.clickMembersummary();
         utils.waitForMilliseconds(2000);
-        utils.enterSearchText("Kumar Devinder");
+        utils.enterSearchText();
         utils.clickMembername();
       
         // Find the avatar element and click on it

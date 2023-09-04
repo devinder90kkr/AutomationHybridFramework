@@ -36,7 +36,7 @@ public class Case22_MS_speheres_Override extends BasePage {
     	
     	utils.clickMembersummary();
         utils.waitForMilliseconds(2000);
-        utils.enterSearchText("Kumar Devinder");
+        utils.enterSearchText();
         utils.clickMembername();
 
               

@@ -38,7 +38,7 @@ public class Case15_MS_Memberhoverdetail extends BasePage {
 
         utils.clickMembersummary();
         utils.waitForMilliseconds(2000);
-        utils.enterSearchText("Kumar Devinder");
+        utils.enterSearchText();
         
         Thread.sleep(5000);
      // Locate the morningscan element to hover over
