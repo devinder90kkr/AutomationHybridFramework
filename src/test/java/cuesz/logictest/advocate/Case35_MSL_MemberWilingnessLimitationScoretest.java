@@ -12,17 +12,19 @@ import cuesz.logicpage.Case35_MSL_MemberWilingnessLimitationScore;
 import cuesz.logintest.AdvocateLogin;
 import cuesz.utils.AllureUtils;
 import cuesz.utils.WebDriverManager;
-import io.qameta.allure.*;
-import io.qameta.allure.Owner;
 
-@Epic ("Logic page member basic detail for willingness, limitations, performance score")
-@Feature ("Member basic detail for willingness, limitations, performance score")
+import io.qameta.allure.*;
+
+@Epic ("Cuesz Staff logic page testing for member basic sections")
+@Feature ("Logic page -Member basic detail for willingness, limitations, performance score")
+
 public class Case35_MSL_MemberWilingnessLimitationScoretest {
     private WebDriver driver;
     private AdvocateLogin advocateLogin;
     private Case35_MSL_MemberWilingnessLimitationScore memberlogicPage;
+  
     private ByteArrayOutputStream consoleOutput; // To capture console output
-
+    
     @BeforeClass
     public void setUp() {
         driver = WebDriverManager.getDriver();
@@ -30,7 +32,7 @@ public class Case35_MSL_MemberWilingnessLimitationScoretest {
         advocateLogin = new AdvocateLogin(); // Initialise the advocateLogin object
         memberlogicPage = new Case35_MSL_MemberWilingnessLimitationScore(driver);
         
-     // Redirect console output to capture it
+        // Redirect console output to capture it
         consoleOutput = new ByteArrayOutputStream();
         PrintStream printStream = new PrintStream(consoleOutput);
         System.setOut(printStream);
@@ -38,14 +40,27 @@ public class Case35_MSL_MemberWilingnessLimitationScoretest {
     }
 
     @Test
-    @Owner("Devinder Kumar") // Add the @Owner annotation to specify the executor
+
+    @Owner("QA") // Add the @Owner annotation to specify the executor
+    @Severity(SeverityLevel.NORMAL)
+    @Description("After logic via staff advocate navigation to logic page for Basic details")
+    @Story("Successfully update popup and dots for member basic detail such as Willingness, Limitations And performance score")
+
     public void advocatelogicmemberTest() throws InterruptedException {
         advocateLogin.setUp(); // Call the setUp method of AdvocateLogin to initialise loginPage
         advocateLogin.testAdvocateLogin();
 
         // Access the Schedule Event page
         memberlogicPage.Basicinfo2();
-     // Capture console logs
+        
+        
+        // Generate a dynamic link based on some runtime conditions or data
+        String dynamicLink = generateDynamicLink();
+
+        // Add the dynamic link to the Allure report
+        Allure.link("Logic page link", dynamicLink);
+    
+        // Capture console logs
         String consoleLogs = consoleOutput.toString();
         System.out.println(consoleLogs); // Print console logs to console (optional)
         
@@ -63,6 +78,11 @@ public class Case35_MSL_MemberWilingnessLimitationScoretest {
         // Include OS information in the test class description
         Allure.description("Operating System: " + osName + " (Version: " + osVersion + ")");
         
+    }
+    
+ private String generateDynamicLink() {
+        
+        return "https://pre-staging.app.cuesz.com/logic-page/627d168e40231fb0ba6a057a"; // Replace with your actual dynamic link
     }
 
     @AfterClass

@@ -14,9 +14,8 @@ import cuesz.utils.AllureUtils;
 import cuesz.utils.WebDriverManager;
 import io.qameta.allure.*;
 
-@Epic ("Member Basic page")
-@Feature ("Update profile info")
-
+@Epic ("Cuesz Staff logic page testing for member basic details")
+@Feature ("Logic page -member basic detail testing like Gym, partner why did they join popups")
 public class Case34_MSL_MemberBasicinfotest {
     private WebDriver driver;
     private AdvocateLogin advocateLogin;
@@ -27,7 +26,7 @@ public class Case34_MSL_MemberBasicinfotest {
     @BeforeClass
     
     public void setUp() {
-        driver = WebDriverManager.getDriver();
+    	driver = WebDriverManager.getDriver();
         driver.manage().window().maximize();
         advocateLogin = new AdvocateLogin(); // Initialise the advocateLogin object
         memberlogicPage = new Case34_MSL_MemberBasicinfo(driver);
@@ -39,16 +38,24 @@ public class Case34_MSL_MemberBasicinfotest {
     }
 
     @Test
-    @Description("navigation to logic page for member summary")
-    @Story("Automate member basic detail such as popup related to gym, partner etc")
+    @Owner("QA") // Add the @Owner annotation to specify the executor
+    @Severity(SeverityLevel.NORMAL)
+    @Description("After logic via staff advocate navigation to logic page for Basic details")
+    @Story("Successfully update popup for member basic detail such as popup related to gym, partner etc")
     public void advocatelogicmemberTest() throws InterruptedException {
         advocateLogin.setUp(); // Call the setUp method of AdvocateLogin to initialise loginPage
         advocateLogin.testAdvocateLogin();	
 
         // Access the Schedule Event page
         memberlogicPage.Basicinfo();
+        
+        // Generate a dynamic link based on some runtime conditions or data
+        String dynamicLink = generateDynamicLink();
+
+        // Add the dynamic link to the Allure report
+        Allure.link("Logic page link", dynamicLink);
     
-     // Capture console logs
+        // Capture console logs
         String consoleLogs = consoleOutput.toString();
         System.out.println(consoleLogs); // Print console logs to console (optional)
         
@@ -58,8 +65,21 @@ public class Case34_MSL_MemberBasicinfotest {
         // Capture a screenshot and attach it to Allure
         AllureUtils.captureScreenshot(driver, "fuel_report_screenshot");
         Allure.step("Step Details");
+        
+        // Retrieve OS information
+        String osName = System.getProperty("os.name");
+        String osVersion = System.getProperty("os.version");
+
+        // Include OS information in the test class description
+        Allure.description("Operating System: " + osName + " (Version: " + osVersion + ")");
     
     }
+    
+    private String generateDynamicLink() {
+        
+        return "https://pre-staging.app.cuesz.com/logic-page/627d168e40231fb0ba6a057a"; // Replace with your actual dynamic link
+    }
+    
 
     @AfterClass
     public void tearDown() {

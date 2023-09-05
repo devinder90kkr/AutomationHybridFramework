@@ -5,10 +5,13 @@ import java.time.Duration;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
+import io.qameta.allure.Step;
+
 public class WebDriverManager {
 	
 	 private static WebDriver driver;
 
+	 @Step("Start the application")
 	    public static WebDriver getDriver() {
 	        if (driver == null) {
 	            System.setProperty("webdriver.chrome.driver", Configuration.CHROME_DRIVER_PATH);
@@ -17,7 +20,8 @@ public class WebDriverManager {
 	        }
 	        return driver;
 	    }
-
+	 
+	 @Step("Stop the application")
 	    public static void quitDriver() {
 	        if (driver != null) {
 	            driver.quit();

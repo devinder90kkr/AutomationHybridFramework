@@ -57,7 +57,7 @@ public class SeleniumUtils {
     
  // Click on member call 
     public void clickMembersummary() {
-        By memberSummaryLocator = By.xpath("//img[@alt='Member Summary']");
+        By memberSummaryLocator = By.id("Dashboard-MemberSummary");
         clickElement(memberSummaryLocator);
     }
     

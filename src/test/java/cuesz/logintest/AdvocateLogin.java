@@ -26,5 +26,8 @@ public class AdvocateLogin {
     public void testAdvocateLogin() {
     	
         loginPage.login("stevecuesz90@gmail.com", "User!234");
+        
+        
+        
     }
 }

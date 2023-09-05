@@ -1,26 +1,29 @@
 package cuesz.logictest.coach;
 
+import java.io.ByteArrayOutputStream;
+import java.io.PrintStream;
+
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
-import com.aventstack.extentreports.ExtentReports;
-import com.aventstack.extentreports.ExtentTest;
-import com.aventstack.extentreports.Status;
-
 import cuesz.logicpage.Case35_MSL_MemberWilingnessLimitationScore;
 import cuesz.logintest.CoachLogin;
-import cuesz.utils.ExtentManager;
+import cuesz.utils.AllureUtils;
 import cuesz.utils.WebDriverManager;
+
+import io.qameta.allure.*;
+
+@Epic ("Cuesz Staff logic page testing for member basic sections")
+@Feature ("Logic page -Member basic detail for willingness, limitations, performance score")
 
 public class Case35_MSL_MemberWilingnessLimitationScoretest {
     private WebDriver driver;
     private CoachLogin CaochLogin;
     private Case35_MSL_MemberWilingnessLimitationScore memberlogicPage;
     
-    private ExtentReports extent;
-    private ExtentTest test;
+    private ByteArrayOutputStream consoleOutput; // To capture console output
 
     @BeforeClass
     public void setUp() {
@@ -29,13 +32,19 @@ public class Case35_MSL_MemberWilingnessLimitationScoretest {
         CaochLogin = new CoachLogin(); // Initialize the CaochLogin object
         memberlogicPage = new Case35_MSL_MemberWilingnessLimitationScore(driver);
         
-        
-        // Initialize Extent Reports
-        extent = ExtentManager.getInstance();
-        test = extent.createTest("Case35_MSL_MemberWilingnessLimitationScore Test");
+        // Redirect console output to capture it
+        consoleOutput = new ByteArrayOutputStream();
+        PrintStream printStream = new PrintStream(consoleOutput);
+        System.setOut(printStream);
     }
 
     @Test
+    
+    @Owner("QA") // Add the @Owner annotation to specify the executor
+    @Severity(SeverityLevel.NORMAL)
+    @Description("After logic via staff COACH navigation to logic page for Basic details")
+    @Story("Successfully update popup and dots for member basic detail such as Willingness, Limitations And performance score")
+
     public void advocatelogicmemberTest() throws InterruptedException {
         CaochLogin.setUp(); // Call the setUp method of CaochLogin to initialize loginPage
         CaochLogin.testCoachLogin();
@@ -43,17 +52,40 @@ public class Case35_MSL_MemberWilingnessLimitationScoretest {
         // Access the Schedule Event page
         memberlogicPage.Basicinfo2();
     
-        // Add actions to schedule an event (enter event details, date, etc.)
-        // Add assertions or verifications for successful event scheduling
+     // Generate a dynamic link based on some runtime conditions or data
+        String dynamicLink = generateDynamicLink();
+
+        // Add the dynamic link to the Allure report
+        Allure.link("Logic page link", dynamicLink);
+    
+        // Capture console logs
+        String consoleLogs = consoleOutput.toString();
+        System.out.println(consoleLogs); // Print console logs to console (optional)
         
-     // Log test steps and results
-        test.log(Status.INFO, "Navigated to member willingness, Limitation, Performance Score");
-        // Add more logs and assertions as needed
+        // Log console logs in Allure
+        Allure.addAttachment("Console Output", "text/plain", consoleLogs);
+        
+        // Capture a screenshot and attach it to Allure
+        AllureUtils.captureScreenshot(driver, "fuel_report_screenshot");
+        Allure.step("Step Details");
+        
+        // Retrieve OS information
+        String osName = System.getProperty("os.name");
+        String osVersion = System.getProperty("os.version");
+
+        // Include OS information in the test class description
+        Allure.description("Operating System: " + osName + " (Version: " + osVersion + ")");
+        
+    }
+    
+ private String generateDynamicLink() {
+        
+        return "https://pre-staging.app.cuesz.com/logic-page/627d168e40231fb0ba6a057a"; // Replace with your actual dynamic link
     }
 
     @AfterClass
     public void tearDown() {
         WebDriverManager.quitDriver();
-        extent.flush(); // Flush Extent Reports to generate the report
+       
     }
 }

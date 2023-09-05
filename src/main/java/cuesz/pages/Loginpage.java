@@ -8,6 +8,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import io.qameta.allure.Step;
+
 public class Loginpage extends BasePage {
 	
 	private By emailInput = By.name("email");
@@ -17,7 +19,7 @@ public class Loginpage extends BasePage {
     public Loginpage(WebDriver driver) {
         super(driver);
     }
-
+    @Step("Enter username and password")
     public void login(String email, String password) {
         driver.findElement(emailInput).sendKeys(email);
         driver.findElement(passwordInput).sendKeys(password);
@@ -31,7 +33,10 @@ public class Loginpage extends BasePage {
         // Capture the text of the notification
         String staffText = verifyrole.getText();
         System.out.println("Staff role is: " + staffText);
-    
+        
+        
+ 
+         
     
     }
 }
