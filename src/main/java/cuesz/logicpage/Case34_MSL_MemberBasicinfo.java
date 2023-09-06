@@ -42,6 +42,9 @@ public class Case34_MSL_MemberBasicinfo extends BasePage {
 	        Thread.sleep(2000);
 
 	        utils.clickMembersummary();
+//	        driver.navigate().refresh();
+//	        utils.clickMembersummary();
+	        
 	        utils.waitForMilliseconds(2000);
 	        utils.enterSearchText();
 	        utils.clickMembername();

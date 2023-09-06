@@ -54,7 +54,7 @@ public class Case45_MSL_restoretest {
         // Access the Schedule Event page
         memberlogicPage.restore();
     
-     // Generate a dynamic link based on some runtime conditions or data
+        // Generate a dynamic link based on some runtime conditions or data
         String dynamicLink = generateDynamicLink();
 
         // Add the dynamic link to the Allure report

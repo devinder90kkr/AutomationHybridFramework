@@ -4,14 +4,14 @@
            failures="0"
            errors="0"
            skipped="0"
-           time="39.858">
+           time="83.850">
     <properties></properties>
 
 
 
             <testcase
                 name="advocateMemberhoverTest"
-                time="39.858"
+                time="83.850"
                 classname="cuesz.membersummary.fuelreport.advocate.Case70_Fueldashboardcalculatorstest">
             </testcase>
 </testsuite>
