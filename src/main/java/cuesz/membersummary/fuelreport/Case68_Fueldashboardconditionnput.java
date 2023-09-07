@@ -16,11 +16,22 @@ import org.openqa.selenium.StaleElementReferenceException;
 
 public class Case68_Fueldashboardconditionnput extends BasePage{
 				
-	SeleniumUtils utils = new SeleniumUtils(driver);
-	WebDriverWait wait = new WebDriverWait(driver, Duration.ofMinutes(10));
-	
-	private By fuelicon = (By.id("MemberSummary-FuelReport"));
-	
+		SeleniumUtils utils = new SeleniumUtils(driver);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofMinutes(10));
+		
+		private By fuelicon = (By.id("MemberSummary-FuelReport"));
+		
+		private By KetoDiet = (By.id("FuelReport-FuelRecommendations-KetoDiet"));
+		private By LowCarb = (By.id("FuelReport-FuelRecommendations-LowCarb"));
+		private By values = (By.id("FuelReport-FuelRecommendations-40/30/30"));
+		private By Fast186 = (By.id("FuelReport-FuelRecommendations-Fast18:6"));
+		
+		private By vegan = (By.id("FuelReport-Preferredfoods-Vegan"));
+		private By MeatEater = (By.id("FuelReport-Preferredfoods-MeatEater"));
+		private By Vegetarian = (By.id("FuelReport-Preferredfoods-Vegetarian"));
+		private By Pescatarian = (By.id("FuelReport-Preferredfoods-Pescatarian"));
+		
+		
 		private By Currentheading = (By.xpath("//h4[normalize-space()='Current Condition']"));
 		private By inptfield1 = (By.id("FuelReport-CurrentCondition-01"));
 		private By inptfield2 = (By.id("FuelReport-CurrentCondition-02"));
@@ -65,97 +76,134 @@ public class Case68_Fueldashboardconditionnput extends BasePage{
 				 Fuelreporticon.click();
 				 
 				 Thread.sleep(3000);
-		 
-			/****************************Current Condition***************************************************************************************/
-			 try {	 
-			 // Find the heading element by its class name
-			WebElement CurrentConditionheading = driver.findElement(Currentheading);
-			// Scroll to the heading element
-			((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView({ behavior: 'smooth' });", CurrentConditionheading);
-
-			// Get the text of the heading element
-			String headingText = CurrentConditionheading.getText();
-			
-			// Verify if the heading text is "Current Condition"
-			if (headingText.equals("Current Condition")) {
-			System.out.println("Heading is 'Current Condition'.");
-			} else {
-			    System.out.println("Heading is not 'Current Condition'.");
-			    }
-			 
-			 // Find and clear the existing values in each input field
-		//	WebElement inputField1 = driver.findElement(inptfield1);
-			WebElement inputField1 = wait.until(ExpectedConditions.elementToBeClickable(driver.findElement(inptfield1)));
-			inputField1.clear();
-			inputField1.sendKeys("Fuel Level: 75%");
-			
-			WebElement inputField2 = driver.findElement(inptfield2);
-			inputField2.clear();
-			inputField2.sendKeys("Tank Capacity: 50 gallons");
-			
-			WebElement inputField3 = driver.findElement(inptfield3);
-			inputField3.clear();
-			inputField3.sendKeys("Fuel Type: Diesel");
-			
-			WebElement inputField4 = driver.findElement(inptfield4);
-			inputField4.clear();
-			inputField4.sendKeys("Mileage: 20 miles per gallon");
-			
-			WebElement CurrentSavebttn = driver.findElement(CurrentConditionSavebttn);
-			CurrentSavebttn.click();
-			 } catch (StaleElementReferenceException e) {
+				 try {
+					 WebElement KetoDietcard = driver.findElement(KetoDiet);
+					 KetoDietcard.click();
+					 
+					 WebElement LowCarbcard = driver.findElement(LowCarb);
+					 LowCarbcard.click();
+					 
+					 WebElement valuescard  = driver.findElement(values);
+					 valuescard.click();
+					 
+					 WebElement Fast186card = driver.findElement(Fast186);
+					 Fast186card.click();
+					 } catch (StaleElementReferenceException e) {
+						    
+						}
+					
+					 Thread.sleep(2500);
+					   /************************Member Preferred foods details**************************************************************************/
+				try {	 
+					 WebElement vegancard = driver.findElement(vegan);
+					 vegancard.click();
+					 
+					 WebElement MeatEatercard = driver.findElement(MeatEater);
+					 MeatEatercard.click();
+					 
+					 WebElement Vegetariancard  = driver.findElement(Vegetarian);
+					 Vegetariancard.click();
+					 
+					 WebElement Pescatariancard = driver.findElement(Pescatarian);
+					 Pescatariancard.click();	
+					 
+				} catch (StaleElementReferenceException e) {
 				    
 				}
-					
-			Thread.sleep(5500);
+					 
+					 Thread.sleep(5500);
+						        
+		 /****************************Current Condition***************************************************************************************/
+				 try {	
+					 Thread.sleep(2500);
+				 // Find the heading element by its class name
+				WebElement CurrentConditionheading = driver.findElement(Currentheading);
+				// Scroll to the heading element
+				((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView({ behavior: 'smooth' });", CurrentConditionheading);
+				 Thread.sleep(2500);
+				// Get the text of the heading element
+				String headingText = CurrentConditionheading.getText();
+				
+				// Verify if the heading text is "Current Condition"
+				if (headingText.equals("Current Condition")) {
+				System.out.println("Heading is 'Current Condition'.");
+				} else {
+				    System.out.println("Heading is not 'Current Condition'.");
+				    }
+				 Thread.sleep(2500);
+				 // Find and clear the existing values in each input field
+			//	WebElement inputField1 = driver.findElement(inptfield1);
+				WebElement inputField1 = wait.until(ExpectedConditions.elementToBeClickable(driver.findElement(inptfield1)));
+				inputField1.clear();
+				inputField1.sendKeys("Fuel Level: 75%");
+				
+				WebElement inputField2 = driver.findElement(inptfield2);
+				inputField2.clear();
+				inputField2.sendKeys("Tank Capacity: 50 gallons");
+				
+				WebElement inputField3 = driver.findElement(inptfield3);
+				inputField3.clear();
+				inputField3.sendKeys("Fuel Type: Diesel");
+				
+				WebElement inputField4 = driver.findElement(inptfield4);
+				inputField4.clear();
+				inputField4.sendKeys("Mileage: 20 miles per gallon");
+				
+				WebElement CurrentSavebttn = driver.findElement(CurrentConditionSavebttn);
+				CurrentSavebttn.click();
+				 } catch (StaleElementReferenceException e) {
+					    
+					}
+						
+				Thread.sleep(5500);
 			
 			/*******************************Medication fields************************************************************************************/
-			 try {	 		 // Find the heading element by its class name
-			 
-			 // Input values into all four input fields
-			//WebElement mediacationField1 = driver.findElement(medicationfield1);
-			WebElement mediacationField1 = wait.until(ExpectedConditions.elementToBeClickable(driver.findElement(medicationfield1)));
-			// Scroll to the heading element
-			//((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView({ behavior: 'smooth' });", mediacationField1);
-			System.out.println("Is element displayed: " + mediacationField1.isDisplayed());
-			System.out.println("Is element enabled: " + mediacationField1.isEnabled());
-			Thread.sleep(2500);
-			mediacationField1.clear();
-			mediacationField1.sendKeys("Aspirin 100mg");
-			
-			WebElement mediacationField2 = wait.until(ExpectedConditions.elementToBeClickable(driver.findElement(medicationfield2)));
-			// Scroll to the heading element
-						((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView({ behavior: 'smooth' });", mediacationField2);
-			mediacationField2.clear();
-			mediacationField2.sendKeys("Ibuprofen 200mg");
-			
-			WebElement mediacationField3 = driver.findElement(medicationfield3);
-			mediacationField3.clear();
-			mediacationField3.sendKeys("Lisinopril 10mg");
-			
-			WebElement mediacationField4 = driver.findElement(medicationfield4);
-			mediacationField4.clear();
-			mediacationField4.sendKeys("Metformin 500mg");
-			
-			WebElement Medicationdsavebttn = driver.findElement(medicationsavebttn);
-			Medicationdsavebttn.click();
-			
-			 } catch (StaleElementReferenceException e) {
-				    
-				}
+				 try {	 		 // Find the heading element by its class name
+					 Thread.sleep(2500);
+				 // Input values into all four input fields
+				//WebElement mediacationField1 = driver.findElement(medicationfield1);
+				WebElement mediacationField1 = wait.until(ExpectedConditions.elementToBeClickable(driver.findElement(medicationfield1)));
+					// Scroll to the heading element
+					//((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView({ behavior: 'smooth' });", mediacationField1);
+					System.out.println("Is element displayed: " + mediacationField1.isDisplayed());
+					System.out.println("Is element enabled: " + mediacationField1.isEnabled());
+					Thread.sleep(2500);
+					mediacationField1.clear();
+					mediacationField1.sendKeys("Aspirin 100mg");
+					 Thread.sleep(2500);
+				WebElement mediacationField2 = wait.until(ExpectedConditions.elementToBeClickable(driver.findElement(medicationfield2)));
+				// Scroll to the heading element
+							((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView({ behavior: 'smooth' });", mediacationField2);
+					mediacationField2.clear();
+					mediacationField2.sendKeys("Ibuprofen 200mg");
+					
+					WebElement mediacationField3 = driver.findElement(medicationfield3);
+					mediacationField3.clear();
+					mediacationField3.sendKeys("Lisinopril 10mg");
+					
+					WebElement mediacationField4 = driver.findElement(medicationfield4);
+					mediacationField4.clear();
+					mediacationField4.sendKeys("Metformin 500mg");
+					
+					WebElement Medicationdsavebttn = driver.findElement(medicationsavebttn);
+					Medicationdsavebttn.click();
 				
-			
-			Thread.sleep(5500);
+				 } catch (StaleElementReferenceException e) {
+					    
+					}
+					
+				
+				Thread.sleep(5500);
 			
 			/************************************************************************************/
-		try {	    
+		try {	   
+			 Thread.sleep(2500);
 			 // Find the heading element by its text
 			//WebElement SupplementRecommendationsheading = driver.findElement(By.xpath("//h4[text()='Supplement Recommendations']"));
 			WebElement SupplementRecommendationsheading = wait.until(ExpectedConditions.elementToBeClickable(driver.findElement(By.xpath("//h4[text()='Supplement Recommendations']"))));
 			// Scroll to the heading element
 			((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView({ behavior: 'smooth' });", SupplementRecommendationsheading);
-	
-		
+			Thread.sleep(3500);	
 			// Verify if the heading text is "Supplement Recommendations"
 			if (SupplementRecommendationsheading.getText().equals("Supplement Recommendations")) {
 			System.out.println("Heading is 'Supplement Recommendations'.");
@@ -196,11 +244,11 @@ public class Case68_Fueldashboardconditionnput extends BasePage{
 		try {	    
 			 // Verify the heading "DNA Recommendations"
 			WebElement headingElement = driver.findElement(By.xpath("//h4[text()='DNA Recommendations']"));
-			
+			Thread.sleep(3500);	
 			// Scroll to the heading element
 			((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", headingElement);
 			
-			
+			Thread.sleep(3500);	
 			if (headingElement.getText().equals("DNA Recommendations")) {
 			System.out.println("Heading is 'DNA Recommendations'.");
 			} else {

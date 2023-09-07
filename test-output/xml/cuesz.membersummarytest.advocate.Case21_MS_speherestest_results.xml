@@ -4,14 +4,14 @@
            failures="0"
            errors="0"
            skipped="0"
-           time="51.108">
+           time="50.344">
     <properties></properties>
 
 
 
             <testcase
-                name="advocateScheduleEventTest"
-                time="51.108"
+                name="advocatespheredataTest"
+                time="50.344"
                 classname="cuesz.membersummarytest.advocate.Case21_MS_speherestest">
             </testcase>
 </testsuite>

@@ -21,15 +21,18 @@ public class Case34_MSL_MemberBasicinfo extends BasePage {
 	private By membrInfElmnt = (By.xpath("//div[@class='user_inf']/h6"));
 	private By gympls = (By.xpath("//label[normalize-space()='Gym']"));
 	private By popHeadngelment = (By.xpath("//label[text()='Gym']"));
-	private By txtara = (By.xpath("//div[@class='input-fields']//textarea[@class='form-control'][contains(.,'Hello')]"));
+//	private By txtara = (By.xpath("//div[@class='input-fields']//textarea[@class='form-control'][contains(.,'Hello')]"));
+	private By txtara = (By.xpath("//div[@class='form-group']//textarea[@class='form-control']"));
 	private By Savnote = (By.xpath("//button[normalize-space()='Save Note']"));
 	private By partnrtcusz =(By.xpath("//label[normalize-space()='Partner at Cuesz']"));
 	private By popheadngelmnt1 = (By.xpath("//label[text()='Gym Partner']"));
-	private By partnrtxtara = (By.xpath("//textarea[contains(.,'New test this')]"));
+	//private By partnrtxtara = (By.xpath("//textarea[contains(.,'New test this')]"));
+	private By partnrtxtara = (By.xpath("//div[@class='form-group']//textarea[@class='form-control']"));
 	private By Svaenot2 = (By.xpath("//button[normalize-space()='Save Note']"));
 	private By whjin = (By.xpath("//label[normalize-space()='Why did they join cuesz?']"));
 	private By popHeadngelment2 = (By.xpath("//label[text()='Why join?']"));
-	private By whyjintxtAra = (By.xpath("//textarea[normalize-space()='Lorem Are you test with automation tool']"));
+	//private By whyjintxtAra = (By.xpath("//textarea[normalize-space()='Lorem Are you test with automation tool']"));
+	private By whyjintxtAra = (By.xpath("//div[@class='form-group']//textarea[@class='form-control']"));
 	private By SvaeNte3 = (By.xpath("//button[normalize-space()='Save Note']"));
 	
 	
@@ -131,7 +134,10 @@ public class Case34_MSL_MemberBasicinfo extends BasePage {
 	        WebElement textArea = driver.findElement(txtara);
 
 	        // Clear existing details
-	        textArea.clear();
+	        if (!textArea.getAttribute("value").isEmpty()) {
+				 // Clear existing details
+				 textArea.clear();
+			 }
 
 	        // Fill in new details for Gym
 	        String newDetails = "Hello A modern day gymnasium (as gym used to be called way back in Ancient Greece) is a place for indoor physical workout where various equipment and machines are typically used. For some people, a typical gym is a place where you focus on weight lifting and similar activities.";
@@ -167,7 +173,11 @@ public class Case34_MSL_MemberBasicinfo extends BasePage {
 		        WebElement PartnertextArea = driver.findElement(partnrtxtara);
 
 		        // Clear existing details
-		        PartnertextArea.clear();
+		     //   PartnertextArea.clear();
+		        if (!PartnertextArea.getAttribute("value").isEmpty()) {
+					 // Clear existing details
+		        	PartnertextArea.clear();
+		        }
 
 		        // Fill in new details for Gym
 		        String newDetails1 = "New test this A modern day gymnasium (as gym used to be called way back in Ancient Greece) is a place for indoor physical workout where various equipment and machines are typically used. For some people, a typical gym is a place where you focus on weight lifting and similar activities.";
@@ -205,7 +215,12 @@ public class Case34_MSL_MemberBasicinfo extends BasePage {
 			        WebElement whyjointextArea = driver.findElement(whyjintxtAra);
 
 			        // Clear existing details
-			        whyjointextArea.clear();
+			      //  whyjointextArea.clear();
+			        if (!whyjointextArea.getAttribute("value").isEmpty()) {
+						 // Clear existing details
+			        	whyjointextArea.clear(); 
+			        	}
+		
 
 			        // Fill in new details for Gym
 			        String newDetails2 = "Lorem Are you test with automation tool";
@@ -221,6 +236,7 @@ public class Case34_MSL_MemberBasicinfo extends BasePage {
 			        
 
 	 }
-}
+
+	 }
  
 

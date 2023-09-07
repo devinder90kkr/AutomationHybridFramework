@@ -4,14 +4,14 @@
            failures="0"
            errors="0"
            skipped="0"
-           time="36.958">
+           time="80.849">
     <properties></properties>
 
 
 
             <testcase
-                name="advocateScheduleEventTest"
-                time="36.958"
+                name="advocatememberdotsTest"
+                time="80.849"
                 classname="cuesz.membersummarytest.advocate.Case18_MS_DotAbiltest">
             </testcase>
 </testsuite>

@@ -13,6 +13,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
 import cuesz.pages.BasePage;
+import cuesz.utils.AllureUtils;
 import cuesz.utils.SeleniumUtils;
 
 public class Case23_MS_performactivity extends BasePage {
@@ -81,6 +82,9 @@ public class Case23_MS_performactivity extends BasePage {
             System.out.println("Selected option 'This Week' is incorrect.");
             
         }
+        
+     // Capture a screenshot and attach it to Allure
+        AllureUtils.captureScreenshot(driver, "fuel_report_screenshot");
    
         Thread.sleep(4000);
         // Find the dropdown element for "Last Week" 
@@ -99,6 +103,9 @@ public class Case23_MS_performactivity extends BasePage {
         } else {
             System.out.println("Selected option 'Last Week' is incorrect.");
         }
+        
+     // Capture a screenshot and attach it to Allure
+        AllureUtils.captureScreenshot(driver, "fuel_report_screenshot");
  
            Thread.sleep(3000);
   	     // Find the dropdown element
@@ -126,6 +133,9 @@ public class Case23_MS_performactivity extends BasePage {
   		String previousWeekStartDate = "Mon Aug 07 2023";
   		WebElement previousWeekDateElement = driver.findElement(By.xpath("//div[@aria-label='" + previousWeekStartDate + "']"));
   		previousWeekDateElement.click();
+  		
+  	// Capture a screenshot and attach it to Allure
+        AllureUtils.captureScreenshot(driver, "fuel_report_screenshot");
       	    
 		Thread.sleep(3000);
 	     // Find the dropdown element
@@ -136,6 +146,9 @@ public class Case23_MS_performactivity extends BasePage {
 		    builder3.sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.ENTER).perform();   
 		    
 		    Thread.sleep(3500);
+		    
+		 // Capture a screenshot and attach it to Allure
+	        AllureUtils.captureScreenshot(driver, "fuel_report_screenshot");
 
 			 // Find the left arrow button element
 			 WebElement leftArrowButton = driver.findElement(lftarrwbttn);
@@ -150,6 +163,8 @@ public class Case23_MS_performactivity extends BasePage {
 			 // Wait for another short time (you may adjust this sleep time if needed)
 			 Thread.sleep(1500);
 
+			// Capture a screenshot and attach it to Allure
+		        AllureUtils.captureScreenshot(driver, "fuel_report_screenshot");
 
 			 // Find the left arrow button element
 			 WebElement rightArrowButton = driver.findElement(rgtarrwbttn);
@@ -162,9 +177,13 @@ public class Case23_MS_performactivity extends BasePage {
 			 // Second click on the left arrow button
 			 builder11.moveToElement(rightArrowButton).click().perform();
 			 // Wait for another short time (you may adjust this sleep time if needed)
+			 
+			// Capture a screenshot and attach it to Allure
+		        AllureUtils.captureScreenshot(driver, "fuel_report_screenshot");
 			 Thread.sleep(1500);
 			 Thread.sleep(1500);
 
+			 
 		   		     
            
     }

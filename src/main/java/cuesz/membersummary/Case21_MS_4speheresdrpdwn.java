@@ -11,6 +11,7 @@ import org.openqa.selenium.interactions.Actions;
 import org.testng.annotations.Test;
 
 import cuesz.pages.BasePage;
+import cuesz.utils.AllureUtils;
 import cuesz.utils.SeleniumUtils;
 
 public class Case21_MS_4speheresdrpdwn extends BasePage {
@@ -57,7 +58,10 @@ public class Case21_MS_4speheresdrpdwn extends BasePage {
         } else {
             System.out.println("Heading verification failed!");
         }
-
+     // Capture a screenshot and attach it to Allure
+        AllureUtils.captureScreenshot(driver, "fuel_report_screenshot");
+        
+        
         // Find the Today's Progress element
         WebElement todayProgress = driver.findElement(todyprgrss);
 
@@ -79,6 +83,8 @@ public class Case21_MS_4speheresdrpdwn extends BasePage {
         } else {
             System.out.println("Overall Progress verification failed!");
         }
+        // Capture a screenshot and attach it to Allure
+        AllureUtils.captureScreenshot(driver, "fuel_report_screenshot"); 
         
         Thread.sleep(3000);
      // Find the dropdown element
@@ -88,6 +94,8 @@ public class Case21_MS_4speheresdrpdwn extends BasePage {
 	    Thread.sleep(2000);
 	    builder.sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.ENTER).perform();
 	   
+	    // Capture a screenshot and attach it to Allure
+        AllureUtils.captureScreenshot(driver, "fuel_report_screenshot");
 	    
 	    Thread.sleep(3000);
 	     // Find the dropdown element
@@ -96,6 +104,9 @@ public class Case21_MS_4speheresdrpdwn extends BasePage {
 		    builder1.moveToElement(dropdown1).click().sendKeys("Last Week").perform();
 		    Thread.sleep(2000);
 		    builder1.sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.ENTER).perform();
+		    
+		    // Capture a screenshot and attach it to Allure
+	        AllureUtils.captureScreenshot(driver, "fuel_report_screenshot");
 	    
 		    Thread.sleep(3000);
 		     // Find the dropdown element
@@ -105,6 +116,9 @@ public class Case21_MS_4speheresdrpdwn extends BasePage {
 			    Thread.sleep(2000);
 			    builder11.sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.ENTER).perform();
 			    
+			    // Capture a screenshot and attach it to Allure
+		        AllureUtils.captureScreenshot(driver, "fuel_report_screenshot");
+			    
 			    Thread.sleep(3000);
 			     // Find the dropdown element
 			        WebElement dropdown111 = driver.findElement(drpdwn4);
@@ -112,5 +126,10 @@ public class Case21_MS_4speheresdrpdwn extends BasePage {
 				    builder111.moveToElement(dropdown111).click().sendKeys("30 Days").perform();
 				    Thread.sleep(2000);
 				    builder111.sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.ENTER).perform();               
-	    }
+				    // Capture a screenshot and attach it to Allure
+			        AllureUtils.captureScreenshot(driver, "fuel_report_screenshot");
+			 Thread.sleep(2500);       
+			        
+    }
+    
     }  

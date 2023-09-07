@@ -66,14 +66,16 @@ public class SeleniumUtils {
  // Enter text in the search field
     public void enterSearchText() {
         By searchFieldLocator = By.xpath("//input[@placeholder='Search Members']");
+        //String searchmember = "Sanjit QA"; // Define the search text here
         String searchmember = "Kumar Devinder"; // Define the search text here
         enterText(searchFieldLocator, searchmember);
      //   enterSearchText("Sanjit QA");
     }
      
   // Click on member call 
-        public void clickMembername() {
+        public void clickMembername() throws InterruptedException {
             By memberdetail = (By.xpath("//div[@class='member-items']"));
+            Thread.sleep(5500);
             clickElement(memberdetail);
     
         }

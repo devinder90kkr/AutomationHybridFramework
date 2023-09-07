@@ -6,6 +6,7 @@ import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
 
 import cuesz.pages.BasePage;
+import cuesz.utils.AllureUtils;
 import cuesz.utils.SeleniumUtils;
 
 public class Case18_MS_DotAbiltyPM extends BasePage {
@@ -63,6 +64,7 @@ public class Case18_MS_DotAbiltyPM extends BasePage {
         // Add details for Title and Note
         titleInput.sendKeys("new update notes for advocate side ");
         noteTextArea.sendKeys("be chill mode on this side");
+        AllureUtils.captureScreenshot(driver, "fuel_report_screenshot");
         
         // Interact with the dots
         WebElement dotThree = dotsContainer.findElement(dotThre);
@@ -74,6 +76,7 @@ public class Case18_MS_DotAbiltyPM extends BasePage {
         dotTwo.click();
         dotOne.click();
         
+        
         //Verify dots active
         Thread.sleep(3000);
         driver.findElement(actvelemnt).click();
@@ -81,6 +84,7 @@ public class Case18_MS_DotAbiltyPM extends BasePage {
         WebElement activeDot1 = statusDotsElement1.findElement(actiDo1);
         String activeColor1 = activeDot1.getCssValue("background");
         System.out.println("Active color: " + activeColor1);
+        
         
     }
 	    

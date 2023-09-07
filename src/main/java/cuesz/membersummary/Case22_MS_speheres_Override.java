@@ -10,6 +10,7 @@ import org.openqa.selenium.interactions.Actions;
 import org.testng.annotations.Test;
 
 import cuesz.pages.BasePage;
+import cuesz.utils.AllureUtils;
 import cuesz.utils.SeleniumUtils;
 
 public class Case22_MS_speheres_Override extends BasePage {
@@ -61,6 +62,9 @@ public class Case22_MS_speheres_Override extends BasePage {
             System.out.println("Heading verification failed!");
         }
         
+     // Capture a screenshot and attach it to Allure
+        AllureUtils.captureScreenshot(driver, "fuel_report_screenshot");
+        
         Thread.sleep(3000);
      // Find and click the switch for the "Perform" element
         WebElement performSwitch = driver.findElement(perfmSwch);
@@ -71,7 +75,9 @@ public class Case22_MS_speheres_Override extends BasePage {
         WebElement performInput = driver.findElement(prfrmIput);
         performInput.clear();
         performInput.sendKeys("30");
-
+     // Capture a screenshot and attach it to Allure
+        AllureUtils.captureScreenshot(driver, "fuel_report_screenshot"); 
+        
         Thread.sleep(3000);
         // Find and click the switch for the "Fuel" element
         WebElement fuelSwitch = driver.findElement(fuelSwch);
@@ -82,6 +88,9 @@ public class Case22_MS_speheres_Override extends BasePage {
         WebElement fuelInput = driver.findElement(fuelInpt);
         fuelInput.clear();
         fuelInput.sendKeys("50");
+        
+     // Capture a screenshot and attach it to Allure
+        AllureUtils.captureScreenshot(driver, "fuel_report_screenshot");
 
         Thread.sleep(3000);
         // Find and click the switch for the "Restore" element
@@ -93,6 +102,9 @@ public class Case22_MS_speheres_Override extends BasePage {
         WebElement restoreInput = driver.findElement(rstorInput);
         restoreInput.clear();
         restoreInput.sendKeys("60");
+        
+     // Capture a screenshot and attach it to Allure
+        AllureUtils.captureScreenshot(driver, "fuel_report_screenshot");
 
         Thread.sleep(3000);
         // Find and click the switch for the "Mindful" element
@@ -104,6 +116,9 @@ public class Case22_MS_speheres_Override extends BasePage {
         WebElement mindfulInput = driver.findElement(mindflinpt);
         mindfulInput.clear();
         mindfulInput.sendKeys("100");
+        
+     // Capture a screenshot and attach it to Allure
+        AllureUtils.captureScreenshot(driver, "fuel_report_screenshot");
 
         Thread.sleep(3000);
         // Find and click the switch for the "Perform" element to toggle it off
@@ -121,6 +136,11 @@ public class Case22_MS_speheres_Override extends BasePage {
         // Find and click the switch for the "Mindful" element to toggle it off
         mindfulSwitch.click();
 
+     // Capture a screenshot and attach it to Allure
+        AllureUtils.captureScreenshot(driver, "fuel_report_screenshot");
+        
+        Thread.sleep(2500);
+        
         
 	    }
     }  

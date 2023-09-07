@@ -6,6 +6,7 @@ import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
 
 import cuesz.pages.BasePage;
+import cuesz.utils.AllureUtils;
 import cuesz.utils.SeleniumUtils;
 
 public class Case19_MS_Preferences extends BasePage {
@@ -60,6 +61,9 @@ public class Case19_MS_Preferences extends BasePage {
             WebElement preferenceTextArea = driver.findElement(prefrnceTxtArea);
             preferenceTextArea.clear();
             preferenceTextArea.sendKeys("Updated preference information");
+            
+         // Capture a screenshot and attach it to Allure
+            AllureUtils.captureScreenshot(driver, "fuel_report_screenshot");
 
             // Click on the delete icon to remove the preference
             WebElement deleteIcon = driver.findElement(deletbttn);

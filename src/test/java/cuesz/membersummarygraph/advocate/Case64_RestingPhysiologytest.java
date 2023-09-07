@@ -1,26 +1,30 @@
 package cuesz.membersummarygraph.advocate;
 
+import java.io.ByteArrayOutputStream;
+import java.io.PrintStream;
+
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
-import com.aventstack.extentreports.ExtentReports;
-import com.aventstack.extentreports.ExtentTest;
-import com.aventstack.extentreports.Status;
-
 import cuesz.logintest.AdvocateLogin;
 import cuesz.membersummary.graphs.Case64_RestingPhysiology;
-import cuesz.utils.ExtentManager;
+import cuesz.utils.AllureUtils;
 import cuesz.utils.WebDriverManager;
+
+import io.qameta.allure.*;
+
+@Epic ("Cuesz Staff on member graph's page")
+@Feature ("Verify Resting graphs for member as per various options.")
+
 
 public class Case64_RestingPhysiologytest {
     private WebDriver driver;
     private AdvocateLogin advocateLogin;
     private Case64_RestingPhysiology  membersummarygraphPage;
     
-    private ExtentReports extent;
-    private ExtentTest test;
+    private ByteArrayOutputStream consoleOutput; // To capture console output
 
     @BeforeClass
     public void setUp() {
@@ -29,12 +33,19 @@ public class Case64_RestingPhysiologytest {
         advocateLogin = new AdvocateLogin(); // Initialize the advocateLogin object
         membersummarygraphPage = new Case64_RestingPhysiology (driver);
         
-     // Initialize Extent Reports
-        extent = ExtentManager.getInstance();
-        test = extent.createTest("Case64_RestingPhysiology Test");
+     // Redirect console output to capture it
+        consoleOutput = new ByteArrayOutputStream();
+        PrintStream printStream = new PrintStream(consoleOutput);
+        System.setOut(printStream); 
     }
 
     @Test
+    
+    @Owner("QA") // Add the @Owner annotation to specify the executor
+    @Severity(SeverityLevel.NORMAL)    
+    @Description("Verify the functionality that staff able to access insight Resting graphs.")
+    @Story("Successfuly select and access Resting for member in graphs. ")
+    
     public void advocateMemberhoverTest() throws InterruptedException {
         advocateLogin.setUp(); // Call the setUp method of AdvocateLogin to initialise loginPage
         advocateLogin.testAdvocateLogin();
@@ -42,15 +53,39 @@ public class Case64_RestingPhysiologytest {
         // Access the graphs page
         membersummarygraphPage.RestingPhysiology();
         
-     // Log test steps and results
-        test.log(Status.INFO, "Navigated to Resting Physiology and review graphs as per selected options for member");
-        // Add more logs and assertions as needed
-    
-    }
+        // Generate a dynamic link based on some runtime conditions or data
+        String dynamicLink = generateDynamicLink();
 
+        // Add the dynamic link to the Allure report
+        Allure.link("Logic page link", dynamicLink);
+    
+        // Capture console logs
+        String consoleLogs = consoleOutput.toString();
+        System.out.println(consoleLogs); // Print console logs to console (optional)
+        
+        // Log console logs in Allure
+        Allure.addAttachment("Console Output", "text/plain", consoleLogs);
+        
+        // Capture a screenshot and attach it to Allure
+        AllureUtils.captureScreenshot(driver, "fuel_report_screenshot");
+        Allure.step("Step Details");
+        
+        // Retrieve OS information
+        String osName = System.getProperty("os.name");
+        String osVersion = System.getProperty("os.version");
+
+        // Include OS information in the test class description
+        Allure.description("Operating System: " + osName + " (Version: " + osVersion + ")");
+        
+    }
+    
+ private String generateDynamicLink() {
+        
+        return "https://pre-staging.app.cuesz.com/insights/resting-physiology/627d168e40231fb0ba6a057a"; // Replace with your actual dynamic link
+    }
     @AfterClass
     public void tearDown() {
         WebDriverManager.quitDriver();
-        extent.flush(); // Flush Extent Reports to generate the report
+       
     }
 }

@@ -2,38 +2,38 @@
 <testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-09-06T16:37:43 IST" name="Default suite" finished-at="2023-09-06T16:42:13 IST" duration-ms="269879">
+  <suite started-at="2023-09-07T18:45:01 IST" name="Default suite" finished-at="2023-09-07T18:47:40 IST" duration-ms="159577">
     <groups>
     </groups>
-    <test started-at="2023-09-06T16:37:43 IST" name="Default test" finished-at="2023-09-06T16:42:13 IST" duration-ms="269879">
-      <class name="cuesz.membersummary.fuelreport.advocate.Completetest">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:cuesz.membersummary.fuelreport.advocate.Completetest@8ad6665]" started-at="2023-09-06T16:37:43 IST" name="setUp" finished-at="2023-09-06T16:37:46 IST" duration-ms="2811" status="PASS">
+    <test started-at="2023-09-07T18:45:01 IST" name="Default test" finished-at="2023-09-07T18:47:40 IST" duration-ms="159577">
+      <class name="cuesz.membersummarytest.advocate.Case24_MS_Mindfulactivitytest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:cuesz.membersummarytest.advocate.Case24_MS_Mindfulactivitytest@8ad6665]" started-at="2023-09-07T18:45:01 IST" name="setUp" finished-at="2023-09-07T18:45:06 IST" duration-ms="5275" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="advocateMemberhoverTest()[pri:0, instance:cuesz.membersummary.fuelreport.advocate.Completetest@8ad6665]" started-at="2023-09-06T16:37:46 IST" name="advocateMemberhoverTest" finished-at="2023-09-06T16:42:13 IST" duration-ms="266623" status="FAIL">
+        <test-method signature="advocatemindfuldataTest()[pri:0, instance:cuesz.membersummarytest.advocate.Case24_MS_Mindfulactivitytest@8ad6665]" started-at="2023-09-07T18:45:06 IST" name="advocatemindfuldataTest" finished-at="2023-09-07T18:47:40 IST" duration-ms="153775" status="FAIL">
           <exception class="org.openqa.selenium.NoSuchElementException">
             <message>
-              <![CDATA[no such element: Unable to locate element: {"method":"css selector","selector":"#FuelReport\-Detox\-Guidelines"}
+              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//div[@aria-label='Mon Aug 07 2023']"}
   (Session info: chrome=116.0.5845.140)
 For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
 Build info: version: '4.10.0', revision: 'c14d967899'
 System info: os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '14.0', java.version: '17.0.7'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [17978878c39df931ca021f36dcc126ca, findElement {using=id, value=FuelReport-Detox-Guidelines}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 116.0.5845.140, chrome: {chromedriverVersion: 116.0.5845.96 (1a3918166880..., userDataDir: /var/folders/1c/_z4g5fpj1y7...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61535}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:61535/devtoo..., se:cdpVersion: 116.0.5845.140, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 17978878c39df931ca021f36dcc126ca]]>
+Command: [79e41ebc247b2ea4de00183500eaf220, findElement {using=xpath, value=//div[@aria-label='Mon Aug 07 2023']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 116.0.5845.140, chrome: {chromedriverVersion: 116.0.5845.96 (1a3918166880..., userDataDir: /var/folders/1c/_z4g5fpj1y7...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:49744}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:49744/devtoo..., se:cdpVersion: 116.0.5845.140, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 79e41ebc247b2ea4de00183500eaf220]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"#FuelReport\-Detox\-Guidelines"}
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//div[@aria-label='Mon Aug 07 2023']"}
   (Session info: chrome=116.0.5845.140)
 For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
 Build info: version: '4.10.0', revision: 'c14d967899'
 System info: os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '14.0', java.version: '17.0.7'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [17978878c39df931ca021f36dcc126ca, findElement {using=id, value=FuelReport-Detox-Guidelines}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 116.0.5845.140, chrome: {chromedriverVersion: 116.0.5845.96 (1a3918166880..., userDataDir: /var/folders/1c/_z4g5fpj1y7...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61535}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:61535/devtoo..., se:cdpVersion: 116.0.5845.140, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 17978878c39df931ca021f36dcc126ca
+Command: [79e41ebc247b2ea4de00183500eaf220, findElement {using=xpath, value=//div[@aria-label='Mon Aug 07 2023']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 116.0.5845.140, chrome: {chromedriverVersion: 116.0.5845.96 (1a3918166880..., userDataDir: /var/folders/1c/_z4g5fpj1y7...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:49744}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:49744/devtoo..., se:cdpVersion: 116.0.5845.140, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 79e41ebc247b2ea4de00183500eaf220
 at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
 at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -50,8 +50,8 @@ at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(Elemen
 at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
 at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:350)
 at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:344)
-at cuesz.membersummary.fuelreport.Complete.fuelreport(Complete.java:457)
-at cuesz.membersummary.fuelreport.advocate.Completetest.advocateMemberhoverTest(Completetest.java:53)
+at cuesz.membersummary.Case24_MS_Mindfulactivity.mindfulactivity(Case24_MS_Mindfulactivity.java:125)
+at cuesz.membersummarytest.advocate.Case24_MS_Mindfulactivitytest.advocatemindfuldataTest(Case24_MS_Mindfulactivitytest.java:53)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -85,12 +85,12 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           </exception> <!-- org.openqa.selenium.NoSuchElementException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- advocateMemberhoverTest -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:cuesz.membersummary.fuelreport.advocate.Completetest@8ad6665]" started-at="2023-09-06T16:42:13 IST" name="tearDown" finished-at="2023-09-06T16:42:13 IST" duration-ms="316" status="PASS">
+        </test-method> <!-- advocatemindfuldataTest -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:cuesz.membersummarytest.advocate.Case24_MS_Mindfulactivitytest@8ad6665]" started-at="2023-09-07T18:47:40 IST" name="tearDown" finished-at="2023-09-07T18:47:40 IST" duration-ms="370" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- cuesz.membersummary.fuelreport.advocate.Completetest -->
+      </class> <!-- cuesz.membersummarytest.advocate.Case24_MS_Mindfulactivitytest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

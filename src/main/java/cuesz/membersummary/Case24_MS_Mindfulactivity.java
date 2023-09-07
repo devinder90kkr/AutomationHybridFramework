@@ -14,6 +14,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
 
 import cuesz.pages.BasePage;
+import cuesz.utils.AllureUtils;
 import cuesz.utils.SeleniumUtils;
 
 public class Case24_MS_Mindfulactivity extends BasePage {
@@ -79,6 +80,9 @@ public class Case24_MS_Mindfulactivity extends BasePage {
             
         }
    
+     // Capture a screenshot and attach it to Allure
+        AllureUtils.captureScreenshot(driver, "fuel_report_screenshot");
+        
         Thread.sleep(4000);
         // Find the dropdown element for "Last Week" 
         Thread.sleep(3000);
@@ -90,6 +94,8 @@ public class Case24_MS_Mindfulactivity extends BasePage {
 		    builder1.sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.ENTER).perform();
             Thread.sleep(3000);
      
+         // Capture a screenshot and attach it to Allure
+            AllureUtils.captureScreenshot(driver, "fuel_report_screenshot");
             
   	     // Find the dropdown element
   	        WebElement dropdown2 = driver.findElement(drpdon1);
@@ -97,6 +103,8 @@ public class Case24_MS_Mindfulactivity extends BasePage {
   		    builder2.moveToElement(dropdown2).click().sendKeys("Select week").perform();
   		  Thread.sleep(2000);
 		    builder2.sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.ENTER).perform();
+		    
+		    
   		       Thread.sleep(3000);
 
   		       // Wait for the date picker to appear (you can use explicit wait here)
@@ -120,7 +128,8 @@ public class Case24_MS_Mindfulactivity extends BasePage {
   		// Wait for the date picker to close (you can use explicit wait here)
   	//	wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//div[@class='DayPicker']")));
 		//    Thread.sleep(500);
-           
+  	// Capture a screenshot and attach it to Allure
+        AllureUtils.captureScreenshot(driver, "fuel_report_screenshot"); 
 		    
 		    Thread.sleep(3000);
 		     // Find the dropdown element
@@ -131,7 +140,10 @@ public class Case24_MS_Mindfulactivity extends BasePage {
 			    builder3.sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.ENTER).perform();   
 			    
 			    Thread.sleep(3500);
-
+			 // Capture a screenshot and attach it to Allure
+		        AllureUtils.captureScreenshot(driver, "fuel_report_screenshot");
+		        
+		        
 			 // Find the left arrow button element
 			 WebElement leftArrowButton = driver.findElement(lftarrwbttn);
 			 // Create an Actions object
@@ -144,6 +156,9 @@ public class Case24_MS_Mindfulactivity extends BasePage {
 			 builder.moveToElement(leftArrowButton).click().perform();
 			 // Wait for another short time (you may adjust this sleep time if needed)
 			 Thread.sleep(1500);
+			 
+			// Capture a screenshot and attach it to Allure
+		        AllureUtils.captureScreenshot(driver, "fuel_report_screenshot");
 
 
 			 // Find the left arrow button element
@@ -158,6 +173,9 @@ public class Case24_MS_Mindfulactivity extends BasePage {
 			 builder11.moveToElement(rightArrowButton).click().perform();
 			 // Wait for another short time (you may adjust this sleep time if needed)
 			 Thread.sleep(1500);
+			// Capture a screenshot and attach it to Allure
+		        AllureUtils.captureScreenshot(driver, "fuel_report_screenshot");
+			 
 			 Thread.sleep(1500);
 
 		   		     

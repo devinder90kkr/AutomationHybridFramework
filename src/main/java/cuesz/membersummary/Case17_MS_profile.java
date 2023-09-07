@@ -9,6 +9,7 @@ import org.openqa.selenium.interactions.Actions;
 import org.testng.annotations.Test;
 
 import cuesz.pages.BasePage;
+import cuesz.utils.AllureUtils;
 import cuesz.utils.SeleniumUtils;
 
 public class Case17_MS_profile extends BasePage {
@@ -99,7 +100,9 @@ public class Case17_MS_profile extends BasePage {
 	    WebElement selement = driver.findElement(selment);
 	    JavascriptExecutor js = (JavascriptExecutor)driver;
 	    js.executeScript("arguments[0].scrollIntoView();",selement);
-
+	 // Capture a screenshot and attach it to Allure
+        AllureUtils.captureScreenshot(driver, "fuel_report_screenshot");
+	    
 	    Thread.sleep(2000);
 	    WebElement Save= driver.findElement(Savebttn);
 	    Actions builder25 = new Actions(driver);
