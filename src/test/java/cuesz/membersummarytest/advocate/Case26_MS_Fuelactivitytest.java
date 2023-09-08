@@ -53,7 +53,7 @@ public class Case26_MS_Fuelactivitytest {
         // Access the Schedule Event page
         membersummaryPage.fuelactivity();
   
-     // Generate a dynamic link based on some runtime conditions or data
+        // Generate a dynamic link based on some runtime conditions or data
         String dynamicLink = generateDynamicLink();
 
         // Add the dynamic link to the Allure report

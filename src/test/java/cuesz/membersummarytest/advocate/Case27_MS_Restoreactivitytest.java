@@ -53,7 +53,7 @@ public class Case27_MS_Restoreactivitytest {
         // Access the Schedule Event page
         membersummaryPage.restoreactivity();
     
-     // Generate a dynamic link based on some runtime conditions or data
+        // Generate a dynamic link based on some runtime conditions or data
         String dynamicLink = generateDynamicLink();
 
         // Add the dynamic link to the Allure report
