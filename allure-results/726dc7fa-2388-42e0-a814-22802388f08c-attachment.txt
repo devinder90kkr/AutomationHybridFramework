@@ -1,2 +1,0 @@
-email: By.name: email
-Password: By.name: password
