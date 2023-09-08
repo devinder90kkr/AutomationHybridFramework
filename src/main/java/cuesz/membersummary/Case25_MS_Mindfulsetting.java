@@ -15,6 +15,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
 
 import cuesz.pages.BasePage;
+import cuesz.utils.AllureUtils;
 import cuesz.utils.SeleniumUtils;
 
 public class Case25_MS_Mindfulsetting extends BasePage {
@@ -69,6 +70,8 @@ public class Case25_MS_Mindfulsetting extends BasePage {
             System.out.println("Heading for Mindful is not found.");
         }
 
+     
+        
         Thread.sleep(2500);
         WebElement settingmindful = driver.findElement(setingmindfu);
         settingmindful.click();
@@ -85,6 +88,8 @@ public class Case25_MS_Mindfulsetting extends BasePage {
         } else {
             System.out.println("Modal Popup is not open.");
         }
+     // Capture a screenshot and attach it to Allure
+        AllureUtils.captureScreenshot(driver, "fuel_report_screenshot");
         
         Thread.sleep(2500);
      // Find and enable the "Vibrations" toggle
@@ -160,8 +165,11 @@ public class Case25_MS_Mindfulsetting extends BasePage {
 	    Thread.sleep(2000);
 	    WebElement endTime1 =driver.findElement(endtme1);
 	    Actions builder1 = new Actions(driver);
-	    builder1.moveToElement(endTime1).click().sendKeys("10-08-2023").sendKeys(Keys.ENTER).perform();;
+	    builder1.moveToElement(endTime1).click().sendKeys("28-09-2023").sendKeys(Keys.ENTER).perform();;
 
+	    
+	 // Capture a screenshot and attach it to Allure
+        AllureUtils.captureScreenshot(driver, "fuel_report_screenshot");
 
 	    WebElement submitbutton = driver.findElement(submbttn);
 	    submitbutton.click();
