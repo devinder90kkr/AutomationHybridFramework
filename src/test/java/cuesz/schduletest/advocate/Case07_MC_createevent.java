@@ -31,7 +31,7 @@ public class Case07_MC_createevent {
         advocateLogin = new AdvocateLogin(); // Initialize the advocateLogin object
         scheduleEventPage = new Step07_MC_createevent(driver);
         
-     // Redirect console output to capture it
+        // Redirect console output to capture it
         consoleOutput = new ByteArrayOutputStream();
         PrintStream printStream = new PrintStream(consoleOutput);
         System.setOut(printStream);
@@ -51,7 +51,7 @@ public class Case07_MC_createevent {
         // Access the Schedule Event page
         scheduleEventPage.Schdulevent();
 
-     // Generate a dynamic link based on some runtime conditions or data
+        // Generate a dynamic link based on some runtime conditions or data
         String dynamicLink = generateDynamicLink();
 
         // Add the dynamic link to the Allure report

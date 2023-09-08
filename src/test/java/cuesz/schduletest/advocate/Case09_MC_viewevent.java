@@ -32,7 +32,7 @@ public class Case09_MC_viewevent {
         advocateLogin = new AdvocateLogin(); // Initialize the advocateLogin object
         scheduleEventPage = new Step09_MC_viewevent(driver);
         
-     // Redirect console output to capture it
+        // Redirect console output to capture it
         consoleOutput = new ByteArrayOutputStream();
         PrintStream printStream = new PrintStream(consoleOutput);
         System.setOut(printStream);

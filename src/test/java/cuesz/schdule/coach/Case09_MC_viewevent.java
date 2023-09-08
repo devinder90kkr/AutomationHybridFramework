@@ -51,7 +51,7 @@ public class Case09_MC_viewevent {
         // Access the Schedule Event page
         scheduleEventPage.Viewevent();
     
-     // Generate a dynamic link based on some runtime conditions or data
+        // Generate a dynamic link based on some runtime conditions or data
         String dynamicLink = generateDynamicLink();
 
         // Add the dynamic link to the Allure report
