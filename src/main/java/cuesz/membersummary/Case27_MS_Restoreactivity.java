@@ -21,7 +21,8 @@ public class Case27_MS_Restoreactivity extends BasePage {
 	
 	SeleniumUtils utils = new SeleniumUtils(driver);
 	private By restrhadng	= (By.xpath("//h2[contains(text(), 'Restore')]"));
-	private By dropThisWeek = (By.xpath("(//div[contains(text(),'This Week')])[4]"));
+	//private By dropThisWeek = (By.xpath("(//div[contains(text(),'This Week')])[4]"));
+	private By drpdwnThWek = (By.id("MemberSummary-Restore-Activity"));
 	private By slectOptnThWek = (By.xpath("(//div[contains(text(),'This Week')])[4]"));
 	private By drpdwn	= 	(By.xpath("(//div[contains(text(),'This Week')])[4]"));
 	private By drpdwn2	= 	(By.xpath("//div[contains(text(),'Last Week')]"));
@@ -53,7 +54,7 @@ public class Case27_MS_Restoreactivity extends BasePage {
 
         Thread.sleep(5000);
         //  Find the dropdown element for "This Week"
-        WebElement dropdownThisWeek = driver.findElement(dropThisWeek);
+        WebElement dropdownThisWeek = driver.findElement(drpdwnThWek);
         dropdownThisWeek.click();
 
         // Validate the selected option for "This Week" dropdown
@@ -68,7 +69,8 @@ public class Case27_MS_Restoreactivity extends BasePage {
         // Find the dropdown element for "Last Week" 
         Thread.sleep(3000);	     // Find the dropdown element
         
-	        WebElement dropdown1 = driver.findElement(drpdwn);
+	        //WebElement dropdown1 = driver.findElement(drpdwn);
+	        WebElement dropdown1 = driver.findElement(drpdwnThWek);
 		    Actions builder1 = new Actions(driver);
 		    builder1.moveToElement(dropdown1).click().sendKeys("Last Week").perform();
 		    Thread.sleep(2000);
@@ -77,7 +79,8 @@ public class Case27_MS_Restoreactivity extends BasePage {
 		    Thread.sleep(3000);
 
 		    // Find the dropdown element
-  	        WebElement dropdown2 = driver.findElement(drpdwn2);
+  	      //  WebElement dropdown2 = driver.findElement(drpdwn2);
+  	      WebElement dropdown2 = driver.findElement(drpdwnThWek);
   		    Actions builder2 = new Actions(driver);
   		    builder2.moveToElement(dropdown2).click().sendKeys("Select week").perform();
   		  Thread.sleep(2000);
@@ -105,7 +108,8 @@ public class Case27_MS_Restoreactivity extends BasePage {
     
   				    Thread.sleep(3000);
   				     // Find the dropdown element
-  				        WebElement dropdown3 = driver.findElement(drpdwn3);
+  				     //   WebElement dropdown3 = driver.findElement(drpdwn3);
+  				      WebElement dropdown3 = driver.findElement(drpdwnThWek);
   					    Actions builder3 = new Actions(driver);
   					    builder3.moveToElement(dropdown3).click().sendKeys("Monthly View").perform();
   					    Thread.sleep(2000);

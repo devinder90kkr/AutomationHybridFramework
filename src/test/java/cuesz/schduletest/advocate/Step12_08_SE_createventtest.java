@@ -14,7 +14,6 @@ import cuesz.utils.AllureUtils;
 import cuesz.utils.WebDriverManager;
 
 import io.qameta.allure.*;
-
 @Epic ("Advocate Scheduling")
 @Feature ("Create event from calendar")
 

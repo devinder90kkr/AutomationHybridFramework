@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="cuesz.schduletest.advocate.Case06_SE_withouttime">
+      <class name="cuesz.membercommunication.advocate.Case47_Membersearchcommunicatetest">
         <methods>
-          <include name="setUp"/>
-          <include name="advocateSchedulewithoutimeTest"/>
           <include name="tearDown"/>
+          <include name="advocatecmembercommunictaeTest"/>
+          <include name="setUp"/>
         </methods>
-      </class> <!-- cuesz.schduletest.advocate.Case06_SE_withouttime -->
+      </class> <!-- cuesz.membercommunication.advocate.Case47_Membersearchcommunicatetest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

@@ -22,7 +22,8 @@ public class Case24_MS_Mindfulactivity extends BasePage {
 	SeleniumUtils utils = new SeleniumUtils(driver);
 	
 	private By mindflHeadng = (By.xpath("//h2[contains(text(), 'Mindful')]"));
-	private By drpdwnThWek = (By.xpath("//div[@id='MindFulData']//div[contains(@class, 'react-select-dropdown-prefix__value-container')]"));
+	//private By drpdwnThWek = (By.xpath("//div[@id='MindFulData']//div[contains(@class, 'react-select-dropdown-prefix__value-container')]"));
+	private By drpdwnThWek = (By.id("MemberSummary-Mindfull-Activity"));
 	private By optnthWek	= (By.xpath("//div[@id='MindFulData']//div[contains(@class, 'react-select-dropdown-prefix__value-container')]"));
 	private By slectOptnThsWek = (By.xpath("//div[@id='MindFulData']//div[contains(@class, 'react-select-dropdown-prefix__value-container')]"));
 	private By drpdon1 = (By.xpath("//div[@class='cstm_row d-flex']//*[normalize-space()='Last Week']"));
@@ -87,7 +88,8 @@ public class Case24_MS_Mindfulactivity extends BasePage {
         // Find the dropdown element for "Last Week" 
         Thread.sleep(3000);
 	     // Find the dropdown element
-	        WebElement dropdown1 = driver.findElement(slectOptnThsWek);
+//	        WebElement dropdown1 = driver.findElement(slectOptnThsWek);
+	        WebElement dropdown1 = driver.findElement(drpdwnThWek);
 		    Actions builder1 = new Actions(driver);
 		    builder1.moveToElement(dropdown1).click().sendKeys("Last Week").perform();
 		    Thread.sleep(2000);
@@ -98,7 +100,8 @@ public class Case24_MS_Mindfulactivity extends BasePage {
             AllureUtils.captureScreenshot(driver, "fuel_report_screenshot");
             
   	     // Find the dropdown element
-  	        WebElement dropdown2 = driver.findElement(drpdon1);
+  	       // WebElement dropdown2 = driver.findElement(drpdon1);
+	        WebElement dropdown2 = driver.findElement(drpdwnThWek);
   		    Actions builder2 = new Actions(driver);
   		    builder2.moveToElement(dropdown2).click().sendKeys("Select week").perform();
   		  Thread.sleep(2000);
@@ -121,7 +124,7 @@ public class Case24_MS_Mindfulactivity extends BasePage {
   		// Let's say the previous week's start date is "Mon Jul 17 2023"
 
   		// Now, locate and click on the previous week's start date
-  		String previousWeekStartDate = "Mon Aug 07 2023";
+  		String previousWeekStartDate = "Sun Sep 03 2023";
   		WebElement previousWeekDateElement = driver.findElement(By.xpath("//div[@aria-label='" + previousWeekStartDate + "']"));
   		previousWeekDateElement.click();
 
@@ -133,7 +136,8 @@ public class Case24_MS_Mindfulactivity extends BasePage {
 		    
 		    Thread.sleep(3000);
 		     // Find the dropdown element
-		        WebElement dropdown3 = driver.findElement(drpdwn3);
+//		        WebElement dropdown3 = driver.findElement(drpdwn3);
+		        WebElement dropdown3 = driver.findElement(drpdwnThWek);
 			    Actions builder3 = new Actions(driver);
 			    builder3.moveToElement(dropdown3).click().sendKeys("Monthly View").perform();
 			    Thread.sleep(2000);

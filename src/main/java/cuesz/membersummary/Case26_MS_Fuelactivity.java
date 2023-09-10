@@ -20,7 +20,8 @@ public class Case26_MS_Fuelactivity extends BasePage {
 	
 	SeleniumUtils utils = new SeleniumUtils(driver);
 	private By Fuelhadng	= (By.xpath("//div[@class='title_h2']//h2[contains(text(), 'Fuel')]"));
-	private By dropThisWeek = (By.xpath("//div[@id='FuelData']//div[normalize-space()='This Week']"));
+	//private By dropThisWeek = (By.xpath("//div[@id='FuelData']//div[normalize-space()='This Week']"));
+	private By drpdwnThWek = (By.id("MemberSummary-Fuel-Activity"));
 	private By slectOptnThWek = (By.xpath("//div[@id='FuelData']//div[normalize-space()='This Week']"));
 	private By drpdwn	= 	(By.xpath("//div[@id='FuelData']//div[normalize-space()='This Week']"));
 	private By drpdwn2	= 	(By.xpath("//div[@id='FuelData']//div[normalize-space()='Last Week']"));
@@ -56,7 +57,7 @@ public class Case26_MS_Fuelactivity extends BasePage {
 
         Thread.sleep(2000);
      // Find the dropdown element for "This Week"
-        WebElement dropdownThisWeek = driver.findElement(dropThisWeek);
+        WebElement dropdownThisWeek = driver.findElement(drpdwnThWek);
         dropdownThisWeek.click();
 
 
@@ -72,7 +73,8 @@ public class Case26_MS_Fuelactivity extends BasePage {
 //        // Find the dropdown element for "Last Week" 
         Thread.sleep(3000);
 //	     // Find the dropdown element
-	        WebElement dropdown1 = driver.findElement(drpdwn);
+	        //WebElement dropdown1 = driver.findElement(drpdwn);
+	        WebElement dropdown1 = driver.findElement(drpdwnThWek);
 		    Actions builder1 = new Actions(driver);
 		    builder1.moveToElement(dropdown1).click().sendKeys("Last Week").perform();
 		    Thread.sleep(2000);
@@ -82,7 +84,8 @@ public class Case26_MS_Fuelactivity extends BasePage {
             
             
   	     // Find the dropdown element
-  	        WebElement dropdown2 = driver.findElement(drpdwn2);
+  	      //  WebElement dropdown2 = driver.findElement(drpdwn2);
+  	      WebElement dropdown2 = driver.findElement(drpdwnThWek);
   		    Actions builder2 = new Actions(driver);
   		    builder2.moveToElement(dropdown2).click().sendKeys("Select week").perform();
   		  Thread.sleep(2000);
@@ -95,21 +98,14 @@ public class Case26_MS_Fuelactivity extends BasePage {
 
   		// Get the current date
   		String currentDate = driver.findElement(currntime).getAttribute("aria-label");
-
-  		// Assuming currentDate is in the format "Sun Jul 23 2023"
-  		// You can parse it and find the previous week's start date
-
-  		// ... parsing logic to find previous week's start date ...
-  		// Let's say the previous week's start date is "Mon Jul 17 2023"
-
-  		// Now, locate and click on the previous week's start date
-  		String previousWeekStartDate = "Mon Aug 07 2023";
+  		String previousWeekStartDate = "Sun Sep 03 2023";
   		WebElement previousWeekDateElement = driver.findElement(By.xpath("//div[@aria-label='" + previousWeekStartDate + "']"));
   		previousWeekDateElement.click();
 		    
 		    Thread.sleep(3000);
 		     // Find the dropdown element
-		        WebElement dropdown3 = driver.findElement(drpdwn3);
+	//	        WebElement dropdown3 = driver.findElement(drpdwn3);
+		        WebElement dropdown3 = driver.findElement(drpdwnThWek);
 			    Actions builder3 = new Actions(driver);
 			    builder3.moveToElement(dropdown3).click().sendKeys("Monthly View").perform();
 			    Thread.sleep(2000);

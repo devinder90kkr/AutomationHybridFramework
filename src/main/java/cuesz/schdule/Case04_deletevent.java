@@ -12,6 +12,7 @@ import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
 
 import cuesz.pages.BasePage;
+import cuesz.utils.AllureUtils;
 
 public class Case04_deletevent extends BasePage {
 	
@@ -52,6 +53,9 @@ public class Case04_deletevent extends BasePage {
 	 		DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MM-yyyy");
 	 		String nextDayDate = nextDay.format(formatter);
 
+	 		// Capture a screenshot and attach it to Allure
+	        AllureUtils.captureScreenshot(driver, "fuel_report_screenshot"); 
+	 		
 	 		// Find the element to scroll to the next day's date on the calendar (matching only the day)
 	 		WebElement element = driver.findElement(By.xpath("//button[@role='cell'][normalize-space()='" + nextDay.getDayOfMonth() + "']"));
 	 		((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);
@@ -78,6 +82,9 @@ public class Case04_deletevent extends BasePage {
             System.out.println("User text verification failed!");
         }
         
+        // Capture a screenshot and attach it to Allure
+        AllureUtils.captureScreenshot(driver, "fuel_report_screenshot"); 
+        
         Thread.sleep(2000);  
         //find delete button and then delete event
         driver.findElement(deletebutton).click();
@@ -93,7 +100,9 @@ public class Case04_deletevent extends BasePage {
 			System.out.println("Event deletion verification failed!");
 		} else {
 			System.out.println("Event deletion verification passed!");
-        
+			
+			// Capture a screenshot and attach it to Allure
+	        AllureUtils.captureScreenshot(driver, "fuel_report_screenshot"); 
 		}
 	}
 	 }	

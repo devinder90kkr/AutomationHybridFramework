@@ -12,16 +12,21 @@ import org.openqa.selenium.interactions.Actions;
 import org.testng.annotations.Test;
 
 import cuesz.pages.BasePage;
+import cuesz.utils.AllureUtils;
 
 public class Case03_editevent extends BasePage {
 	 public static String eventDate = Case01_createvent.eventDate; // Get event date from the first script
 	 private By scheduleIcon 	= (By.xpath("//a[@href='/schedule-master']//span//img[@alt='icon']"));
 	 private By monthview 		= (By.xpath("//span[normalize-space()='Month']"));
 	 private By userlabel 	 	= (By.xpath("//div[@class='user_title']//label"));
-	 private By editBttn		= (By.xpath("//button[@class='btn btn-sm edit_btn']"));
-	 private By edittime		= (By.xpath("(//input[@placeholder='DD-MM-YYYY'])[1]"));
-	 private By editIcon		= (By.xpath("//body[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/form[1]/div[1]/div[2]/div[1]/button[1]"));
+	 private By editBttn 		= (By.id("editEventButton"));
+	 private By edittime 		= (By.id("event_date"));
+	 private By editIconstarttime 		= (By.xpath("//div[@id='eventStartTime']/following-sibling::button[contains(@class, 'btn-secondary')]"));
 	 private By startime		= (By.xpath("//input[@id='startTime']"));
+	 private By EndTime		= 	  (By.xpath("//input[@id='endTime']"));
+	 
+	 private By Topic		 = (By.id("eventTopics"));
+	 private By Notes		 =  (By.xpath("//textarea[contains(@placeholder,'Enter Notes')]"));
 	 private By updatebutton	= (By.xpath("//button[normalize-space()='Update Event']"));
 	 
 	
@@ -39,7 +44,11 @@ public class Case03_editevent extends BasePage {
 		
 	    Thread.sleep(2000);
 	    driver.findElement(monthview).click();
-	    
+		
+	    // Capture a screenshot and attach it to Allure
+        AllureUtils.captureScreenshot(driver, "fuel_report_screenshot"); 
+
+        
 	 // Pass the event date from script one to script two
         eventDate = Case01_createvent.eventDate;
         // Extract the day portion from the eventDate
@@ -52,7 +61,6 @@ public class Case03_editevent extends BasePage {
         Thread.sleep(3000);
         WebElement dateElement = driver.findElement(By.xpath("//div[@data-date='" + eventDate + "']"));
         dateElement.click();
- 
        
         Thread.sleep(2000); 
      // Find the elements containing the user labels
@@ -69,6 +77,9 @@ public class Case03_editevent extends BasePage {
         } else {
             System.out.println("User text verification failed!");
         }
+
+   	 // Capture a screenshot and attach it to Allure
+        AllureUtils.captureScreenshot(driver, "fuel_report_screenshot"); 
 
         // Click on edit button
         WebElement editButton = driver.findElement(editBttn);
@@ -113,22 +124,71 @@ public class Case03_editevent extends BasePage {
         builder11.moveToElement(editTime1).click().sendKeys(nextDayDate).sendKeys(Keys.ENTER).perform();
 
         Thread.sleep(3500);
-     // Click on the edit icon
-        driver.findElement(editIcon).click();
-    
+     // Click on the start time edit icon
+        driver.findElement(editIconstarttime).click(); 
         // Find the input field for start time and clear the existing value
         WebElement startTimeInput = driver.findElement(startime);
-       // window command
+        
+//        // window command
          startTimeInput.sendKeys(Keys.CONTROL + "a");
-         //mac command
-         //startTimeInput.sendKeys(Keys.COMMAND + "a");
+//         //mac command
+//         //startTimeInput.sendKeys(Keys.COMMAND + "a");
         startTimeInput.sendKeys(Keys.DELETE);
-        // Enter the new start time (09:00 AM)
+//        // Enter the new start time (09:00 AM)
         Actions builder1 = new Actions(driver);
-        builder1.moveToElement(startTimeInput).sendKeys("09:00 AM");
+        builder1.moveToElement(startTimeInput).sendKeys("10:00 AM");
         // Press Enter to confirm the new time
         builder1.sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.ENTER).perform();
         
+        Thread.sleep(5500);
+        
+        
+//        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(1000)); // Wait up to 10 seconds
+//        WebElement editIconEndTime = wait.until(ExpectedConditions.presenceOfElementLocated(editIconendtime));
+//        // Click on the end time edit icon
+//        editIconEndTime.click();
+      
+        // Find the input field for start time and clear the existing value
+        WebElement endTimeInput = driver.findElement(EndTime);
+//       // window command
+        endTimeInput.sendKeys(Keys.CONTROL + "a");
+//         //mac command
+//         //startTimeInput.sendKeys(Keys.COMMAND + "a");
+        endTimeInput.sendKeys(Keys.DELETE);
+        // Enter the new start time (09:00 AM)
+        Actions builder2 = new Actions(driver);
+        builder2.moveToElement(endTimeInput).sendKeys("11:00 AM");
+        // Press Enter to confirm the new time
+        builder2.sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.ENTER).perform();
+
+        
+        /*Select Event as as Live perform	*/
+	    Thread.sleep(2000);
+	    WebElement topicselection =driver.findElement(Topic);
+	    Actions builder3 = new Actions(driver);
+	    builder3.moveToElement(topicselection).click().sendKeys("Motion Evaluation Review").sendKeys(Keys.ENTER).perform();
+        
+        
+//        /*Enter Notes in create event*/
+//	    driver.findElement(Notes).sendKeys("We are excited to announce that there will be a live performance event. So please availble");
+        
+	    // Find the input element
+	    WebElement notesElement = driver.findElement(Notes);
+
+	    // Check if the input field has some text
+	    if (!notesElement.getAttribute("value").isEmpty()) {
+	        // Clear the input field
+	        notesElement.clear();
+	    }
+
+	    // Input the new value
+	    notesElement.sendKeys("this text is update during edit field values.");
+	    
+   
+   	 	// Capture a screenshot and attach it to Allure
+        AllureUtils.captureScreenshot(driver, "fuel_report_screenshot"); 
+
+                
         Thread.sleep(5000);
         driver.findElement(updatebutton).click();
         

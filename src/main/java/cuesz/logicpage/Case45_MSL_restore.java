@@ -216,10 +216,21 @@ import cuesz.utils.SeleniumUtils;
 
 			    // Calculate the date for two weeks ahead (adding 14 days)
 			     int twoWeeksAhead = today + 8;
+			     
+			  // Calculate the desired date
+			     LocalDate currentDate = LocalDate.now();
+			     LocalDate desiredDate = currentDate.plusDays(twoWeeksAhead);
 
+			     // Check if the desired date is in the next month
+			     if (desiredDate.getMonthValue() != currentDate.getMonthValue()) {
+			         // Click on the "Next Month" arrow button
+			         WebElement nextMonthButton = driver.findElement(By.xpath("//span[@class='DayPicker-NavButton DayPicker-NavButton--next']"));
+			         nextMonthButton.click();
+			     }
+			     
 			    // Find the date element for two weeks ahead and click on it
 			    // Note: This assumes that the date picker uses the format "Thu Aug 3 2023"
-   		    String desiredDateLocator = String.format("//div[@aria-label='%s']", LocalDate.now().plusDays(twoWeeksAhead).format(DateTimeFormatter.ofPattern("EEE MMM d yyyy")));
+			    String desiredDateLocator = String.format("//div[@aria-label='%s']", LocalDate.now().plusDays(twoWeeksAhead).format(DateTimeFormatter.ofPattern("EEE MMM d yyyy")));
 		        WebElement desiredDateElement = driver.findElement(By.xpath(desiredDateLocator));
 		        desiredDateElement.click();
 

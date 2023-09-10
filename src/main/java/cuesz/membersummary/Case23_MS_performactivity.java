@@ -20,7 +20,8 @@ public class Case23_MS_performactivity extends BasePage {
 
 	SeleniumUtils utils = new SeleniumUtils(driver);
 	private By prfrmHeadng = (By.xpath("//h2[contains(text(), 'Perform Activity Feedback')]"));
-	private By drpdwnThWek = (By.xpath("//div[contains(text(), 'This Week')]"));
+	//private By drpdwnThWek = (By.xpath("//div[contains(text(), 'This Week')]"));
+	private By drpdwnThWek = (By.id("MemberSummary-Perform-Activity"));
 	private By optnthWek	= (By.xpath("//div[contains(text(), 'This Week')]/parent::div"));
 	private By slectOptnThsWek = (By.xpath("//div[contains(text(), 'This Week')]"));
 	private By drpdon1 = (By.xpath("//div[contains(text(), 'This Week')]/parent::div"));
@@ -90,7 +91,8 @@ public class Case23_MS_performactivity extends BasePage {
         // Find the dropdown element for "Last Week" 
         Thread.sleep(3000);
 	     // Find the dropdown element
-	        WebElement dropdown1 = driver.findElement(drpdon1);
+//	        WebElement dropdown1 = driver.findElement(drpdon1);
+	        WebElement dropdown1 = driver.findElement(drpdwnThWek);
 		    Actions builder1 = new Actions(driver);
 		    builder1.moveToElement(dropdown1).click().sendKeys("Last Week").perform();
 		    Thread.sleep(2000);
@@ -109,37 +111,53 @@ public class Case23_MS_performactivity extends BasePage {
  
            Thread.sleep(3000);
   	     // Find the dropdown element
-  	        WebElement dropdown2 = driver.findElement(drpdwn2);
-  		    Actions builder2 = new Actions(driver);
+  	       // WebElement dropdown2 = driver.findElement(drpdwn2);
+           WebElement dropdown2 = driver.findElement(drpdwnThWek); 
+           Actions builder2 = new Actions(driver);
   		    builder2.moveToElement(dropdown2).click().sendKeys("Select week").perform();
   		  Thread.sleep(2000);
 		    builder2.sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.ENTER).perform();
   		    
-  		    Thread.sleep(3000);
-  		    // Wait for the date picker to appear (you can use explicit wait here)
-  		    WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-  		    wait.until(ExpectedConditions.visibilityOfElementLocated(elment2));
+  		Thread.sleep(3000);
+  		// Wait for the date picker to appear (you can use explicit wait here)
+  		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+  		wait.until(ExpectedConditions.visibilityOfElementLocated(elment2));
 
-  		    // Get the current date
-  		    String currentDate = driver.findElement(currtDate).getAttribute("aria-label");
+//  		// Get the current date
+//  		String currentDate = driver.findElement(currtDate).getAttribute("aria-label");
+//  		// Now, locate and click on the previous week's start date
+//  		String previousWeekStartDate = "Mon Aug 07 2023";
+//  		WebElement previousWeekDateElement = driver.findElement(By.xpath("//div[@aria-label='" + previousWeekStartDate + "']"));
+//  		previousWeekDateElement.click();
+  		
+  		// Define the target date you want to select
+  		String targetDate = "Sun Sep 03 2023"; // Change this to your desired date
 
-  		// Assuming currentDate is in the format "Sun Jul 23 2023"
-  		// You can parse it and find the previous week's start date
-
-  		// ... parsing logic to find previous week's start date ...
-  		// Let's say the previous week's start date is "Mon Jul 17 2023"
-
-  		// Now, locate and click on the previous week's start date
-  		String previousWeekStartDate = "Mon Aug 07 2023";
-  		WebElement previousWeekDateElement = driver.findElement(By.xpath("//div[@aria-label='" + previousWeekStartDate + "']"));
-  		previousWeekDateElement.click();
+  		// Loop until the target date is visible in the calendar
+  		while (true) {
+  		    // Check if the target date is visible in the current month
+  		    WebElement targetDateElement = driver.findElement(By.xpath("//div[@aria-label='" + targetDate + "']"));
+  		    if (targetDateElement.isDisplayed()) {
+  		        // If the target date is visible, click on it
+  		        targetDateElement.click();
+  		        break; // Exit the loop
+  		    } else {
+  		        // If the target date is not visible, click on the previous month button
+  		        WebElement previousMonthButton = driver.findElement(By.xpath("(//span[@aria-label='Previous Month'])[1]"));
+  		        previousMonthButton.click();
+  		        Thread.sleep(1000); // Wait for the calendar to update
+  		    }
+  		}
+  		
+  		
   		
   	// Capture a screenshot and attach it to Allure
         AllureUtils.captureScreenshot(driver, "fuel_report_screenshot");
       	    
 		Thread.sleep(3000);
 	     // Find the dropdown element
-	        WebElement dropdown3 = driver.findElement(drpdwn3);
+	        //WebElement dropdown3 = driver.findElement(drpdwn3);
+		WebElement dropdown3 = driver.findElement(drpdwnThWek);
 		    Actions builder3 = new Actions(driver);
 		    builder3.moveToElement(dropdown3).click().sendKeys("Monthly View").perform();
 		    Thread.sleep(2000);

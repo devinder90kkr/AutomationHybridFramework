@@ -8,6 +8,7 @@ import org.openqa.selenium.interactions.Actions;
 import org.testng.annotations.Test;
 
 import cuesz.pages.BasePage;
+import cuesz.utils.AllureUtils;
 import cuesz.utils.SeleniumUtils;
 
 public class Case01_createvent extends BasePage {
@@ -33,7 +34,7 @@ public class Case01_createvent extends BasePage {
 		 	/**********************Click on Schedule master*********************************/	
 			utils.clickScheduleMaster();
 			utils.clickaddnewevent();
-			
+				        
 			/*Enter date values*/
 			Thread.sleep(2000);
 		    WebElement datefield = driver.findElement(Date);
@@ -53,7 +54,9 @@ public class Case01_createvent extends BasePage {
 		    WebElement endTime =driver.findElement(EndTime);
 		    Actions builder11 = new Actions(driver);
 		    builder11.moveToElement(endTime).click().sendKeys("07:30 PM").sendKeys(Keys.ENTER).perform();
-
+		 // Capture a screenshot and attach it to Allure
+	        AllureUtils.captureScreenshot(driver, "fuel_report_screenshot");
+	        
 		    /*Select Event as as Live perform	*/
 		    Thread.sleep(2000);
 		    WebElement topicselection =driver.findElement(Topic);
@@ -75,6 +78,9 @@ public class Case01_createvent extends BasePage {
 
 		    /*Enter Notes in create event*/
 		    driver.findElement(Notes).sendKeys("We are excited to announce that there will be a live performance event. So please availble");
+		    
+		 // Capture a screenshot and attach it to Allure
+	        AllureUtils.captureScreenshot(driver, "fuel_report_screenshot");
 		    
 		    /*Click on submit button*/
 		    driver.findElement(Submitbutton).click();

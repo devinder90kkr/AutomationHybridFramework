@@ -1,0 +1,28 @@
+Staff role is: Wellness Advocate
+Total Body Fat: 20%
+Visceral Fat: 4.5
+Waist To Hip Ratio: 1.00
+Waist To Height Ratio: 0.70
+Waist Circumference: 96
+Hip Circumference: 97
+Body Scan Risk Indicator: High Risk
+bviNumber: 14
+Weight: 80.0 kg
+Total Body Fat: 20%
+Visceral Fat: 4.5
+Waist To Hip Ratio: 1.00
+Waist To Height Ratio: 0.70
+Waist Circumference: 96
+Hip Circumference: 97
+Body Scan Risk Indicator: High Risk
+bviNumber: 14
+Weight: 80.0 kg
+Total Body Fat: 20%
+Visceral Fat: 4.5
+Waist To Hip Ratio: 1.00
+Waist To Height Ratio: 0.70
+Waist Circumference: 96
+Hip Circumference: 97
+Body Scan Risk Indicator: High Risk
+bviNumber: 14
+Weight: 80.0 kg

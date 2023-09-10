@@ -8,6 +8,7 @@ import org.openqa.selenium.interactions.Actions;
 import org.testng.annotations.Test;
 
 import cuesz.pages.BasePage;
+import cuesz.utils.AllureUtils;
 
 public class Step06_SE_withouttime extends BasePage {
 		
@@ -53,7 +54,9 @@ public class Step06_SE_withouttime extends BasePage {
 	    Actions builder1 = new Actions(driver);
 	    builder1.moveToElement(date).click().sendKeys("30-07-2023").sendKeys(Keys.ENTER).perform();;
 	    
-	    
+	    // Capture a screenshot and attach it to Allure
+        AllureUtils.captureScreenshot(driver, "fuel_report_screenshot");
+        
 //	    /* Skip start time and end time fields */
 //        Thread.sleep(2000);
 //        WebElement startTime = driver.findElement(starttime);
@@ -85,6 +88,8 @@ public class Step06_SE_withouttime extends BasePage {
 	    /*Enter Notes in create event*/
 	    driver.findElement(Notes).sendKeys("We are excited to announce that there will be a live performance event. So please availble");
 
+	    // Capture a screenshot and attach it to Allure
+        AllureUtils.captureScreenshot(driver, "fuel_report_screenshot");
 
 		/* Click on submit button */
 		WebElement submitButton = driver.findElement(Submitbutton);

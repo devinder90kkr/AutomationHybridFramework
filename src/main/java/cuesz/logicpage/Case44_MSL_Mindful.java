@@ -1,21 +1,18 @@
 	package cuesz.logicpage;
 	
-	import java.text.ParseException;
-	import java.time.Duration;
+import java.text.ParseException;
+import java.time.Duration;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
-import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-	import org.openqa.selenium.interactions.Actions;
-	import org.openqa.selenium.support.ui.ExpectedConditions;
-	import org.openqa.selenium.support.ui.WebDriverWait;
-	import org.testng.annotations.Test;
-
+import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.annotations.Test;
 import cuesz.pages.BasePage;
 import cuesz.utils.SeleniumUtils;
 	
@@ -203,7 +200,7 @@ import cuesz.utils.SeleniumUtils;
 			    // Calculate the date for two weeks ahead (adding 14 days)
 			     int twoWeeksAhead = today + 8;
 
-			  // Calculate the desired date
+			    // Calculate the desired date
 			     LocalDate currentDate = LocalDate.now();
 			     LocalDate desiredDate = currentDate.plusDays(twoWeeksAhead);
 

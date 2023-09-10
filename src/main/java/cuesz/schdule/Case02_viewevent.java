@@ -10,6 +10,7 @@ import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
 
 import cuesz.pages.BasePage;
+import cuesz.utils.AllureUtils;
 
 public class Case02_viewevent extends BasePage {
 	
@@ -38,12 +39,17 @@ public class Case02_viewevent extends BasePage {
         WebElement element = driver.findElement(By.xpath("//button[@role='cell'][normalize-space()='" + day + "']"));
         ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);
       
+     // Capture a screenshot and attach it to Allure
+        AllureUtils.captureScreenshot(driver, "fuel_report_screenshot");
+        
         Thread.sleep(3000);
 //        WebElement dateElement = driver.findElement(By.xpath("//div[@data-date='27-07-2023']"));
      //   dateElement.click();
         WebElement dateElement = driver.findElement(By.xpath("//div[@data-date='" + eventDate + "']"));
         dateElement.click();
 
+   
+        
         Thread.sleep(3000);
         //driver.findElement(By.xpath("(//span[contains(text(),'Kumar Devinder,')])[15]")).click();
         //Thread.sleep(2000);
@@ -63,6 +69,8 @@ public class Case02_viewevent extends BasePage {
         } else {
             System.out.println("User text verification failed!");
         }
+  
+        
 Thread.sleep(2000);
         
 	

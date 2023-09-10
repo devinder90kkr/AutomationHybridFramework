@@ -78,6 +78,10 @@ public class Step12_08_SE_createvent extends BasePage {
 		    /*Click on submit button*/
 		    driver.findElement(Submitbutton).click();
 		    
+		    
+		    
+		    
+		    
 		    Thread.sleep(5000);
 		 	}
 		}	

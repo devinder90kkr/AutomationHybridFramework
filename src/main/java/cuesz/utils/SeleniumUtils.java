@@ -59,8 +59,8 @@ public class SeleniumUtils {
     public void clickMembersummary() {
         By memberSummaryLocator = By.xpath("//img[@alt='Member Summary']");
         clickElement(memberSummaryLocator);
-        driver.navigate().refresh();
-        clickElement(memberSummaryLocator);
+//        driver.navigate().refresh();
+//        clickElement(memberSummaryLocator);
     }
     
  // Enter text in the search field
