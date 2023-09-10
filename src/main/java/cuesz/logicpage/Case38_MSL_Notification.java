@@ -97,27 +97,33 @@ public class Case38_MSL_Notification extends BasePage {
 	        Thread.sleep(2000);
 	    /************************************************Input data as per next week selected and populate data in three days***************************************************************************************************/
 	      
-	        WebElement selecttype = driver.findElement(By.xpath("//*[@id='Notification1']/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]"));
+	        WebElement selecttype = driver.findElement(By.id("NotificationType-Monday"));
 	        Actions builder1 = new Actions(driver);
 		    builder1.moveToElement(selecttype).click().sendKeys("Training day").perform();
 		    Thread.sleep(2000);
 		    builder1.sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.ENTER).perform();
 	        
-		    WebElement time = driver.findElement(By.xpath("(//input[@value='Time'])[1]"));    
-		    Actions builder2 = new Actions(driver);
-		    builder2.moveToElement(time).click().perform();
-		    Thread.sleep(3000);
+		    WebElement selecthours = driver.findElement(By.id("NotificationHours-Monday"));
+	        Actions builder2 = new Actions(driver);
+	        builder2.moveToElement(selecthours).click().sendKeys("20").perform();
+		    Thread.sleep(2000);
+		    builder2.sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.ENTER).perform();
+		        
+		    WebElement selectmins = driver.findElement(By.id("NotificationMins-Monday"));
+	        Actions builder3 = new Actions(driver);
+	        builder3.moveToElement(selectmins).click().sendKeys("25").perform();
+		    Thread.sleep(2000);
+		    builder3.sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.ENTER).perform();
 		    
-		    WebElement Firsttime =driver.findElement(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='Stop'])[1]/following::div[13]"));
-		    Actions builder3 = new Actions(driver);
-		    builder3.moveToElement(Firsttime).click().perform();
+		    WebElement notificationtiltle = driver.findElement(By.id("NotificationTitle-Monday"));
+		    notificationtiltle.sendKeys("Exciting Upcoming Event");
 		    
-		    WebElement secondtime =driver.findElement(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='Stop'])[1]/following::div[13]"));
-		    Actions builder4 = new Actions(driver);
-		    builder4.moveToElement(secondtime).click().perform();
+		    WebElement notifimessage = driver.findElement(By.id("NotificationMessage-Monday"));
+		    notifimessage.sendKeys("We're thrilled to announce an exciting event coming up! Mark your calendars and get ready to join us for Activity");
+		    Thread.sleep(2000);
+	        WebElement button = driver.findElement(By.id("NotificationSubmit-Monday"));
+	        button.click();
 		    
-		    driver.findElement(By.xpath("//div[@role='presentation']//button[1]")).click();
-	        
 	        
 	        Thread.sleep(2500);
 	     

@@ -133,12 +133,12 @@ public class Case34_MSL_MemberBasicinfo extends BasePage {
 	        // Find the text area inside the popup
 	        WebElement textArea = driver.findElement(txtara);
 
-	        // Clear existing details
-	        if (!textArea.getAttribute("value").isEmpty()) {
-				 // Clear existing details
-				 textArea.clear();
-			 }
-
+	        // Check if the field already has a value
+	        String existingValue = textArea.getAttribute("value");
+	        if (!existingValue.isEmpty()) {
+	            // The field has a value, so you may choose to clear it
+	        	textArea.clear();
+	        }
 	        // Fill in new details for Gym
 	        String newDetails = "Hello A modern day gymnasium (as gym used to be called way back in Ancient Greece) is a place for indoor physical workout where various equipment and machines are typically used. For some people, a typical gym is a place where you focus on weight lifting and similar activities.";
 	        textArea.sendKeys(newDetails);

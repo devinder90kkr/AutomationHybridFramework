@@ -39,8 +39,11 @@ public class Loginpage extends BasePage {
         String staffText = verifyrole.getText();
         System.out.println("Staff role is: " + staffText);
         
+        
      // Capture a screenshot and attach it to Allure
         AllureUtils.captureScreenshot(driver, "fuel_report_screenshot");
+        
+        
         
  
          
