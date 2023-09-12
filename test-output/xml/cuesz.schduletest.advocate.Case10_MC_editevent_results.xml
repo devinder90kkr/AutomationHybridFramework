@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Default test"
+<testsuite name="Test"
            tests="1"
            failures="0"
            errors="0"
            skipped="0"
-           time="38.380">
+           time="35.738">
     <properties></properties>
 
 
 
             <testcase
-                name="advocateScheduleEventTest"
-                time="38.380"
+                name="advocateMastereditEventTest"
+                time="35.738"
                 classname="cuesz.schduletest.advocate.Case10_MC_editevent">
             </testcase>
 </testsuite>

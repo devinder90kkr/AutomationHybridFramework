@@ -13,10 +13,13 @@ import org.openqa.selenium.interactions.Actions;
 import org.testng.annotations.Test;
 
 import cuesz.pages.BasePage;
+import cuesz.utils.DateGenerator;
 
 public class Step10_MC_editevent extends BasePage {
 
-	public static String eventDate = Step07_MC_createevent.eventDate; // Get event date from the first script
+//	public static String eventDate = Step07_MC_createevent.eventDate; // Get event date from the first script
+	
+	public static String eventDate = DateGenerator.generateFixedDate(); // Use the generated date
 	
 	private By membercalicon 	=  (By.xpath("//a[@href='/member-calls']//span"));
 	private By usrtitle			=  (By.xpath("//div[@class='user_title']//label"));

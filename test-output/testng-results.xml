@@ -2,24 +2,24 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-09-10T23:24:26 IST" name="Default suite" finished-at="2023-09-10T23:26:06 IST" duration-ms="99451">
+  <suite started-at="2023-09-12T13:05:13 IST" name="Default suite" finished-at="2023-09-12T13:06:29 IST" duration-ms="76091">
     <groups>
     </groups>
-    <test started-at="2023-09-10T23:24:26 IST" name="Default test" finished-at="2023-09-10T23:26:06 IST" duration-ms="99451">
-      <class name="cuesz.membersummarytest.advocate.Case71_MS_bodyscancomparetest">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:cuesz.membersummarytest.advocate.Case71_MS_bodyscancomparetest@30f842ca]" started-at="2023-09-10T23:24:26 IST" name="setUp" finished-at="2023-09-10T23:24:31 IST" duration-ms="5115" status="PASS">
+    <test started-at="2023-09-12T13:05:13 IST" name="Default test" finished-at="2023-09-12T13:06:29 IST" duration-ms="76091">
+      <class name="cuesz.membersummarytest.advocate.Case23_MS_performactivitytest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:cuesz.membersummarytest.advocate.Case23_MS_performactivitytest@8ad6665]" started-at="2023-09-12T13:05:13 IST" name="setUp" finished-at="2023-09-12T13:05:16 IST" duration-ms="3182" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="advocatebodyscanresultTest()[pri:0, instance:cuesz.membersummarytest.advocate.Case71_MS_bodyscancomparetest@30f842ca]" started-at="2023-09-10T23:24:31 IST" name="advocatebodyscanresultTest" finished-at="2023-09-10T23:26:04 IST" duration-ms="93067" status="PASS">
+        <test-method signature="advocateperformactivityTest()[pri:0, instance:cuesz.membersummarytest.advocate.Case23_MS_performactivitytest@8ad6665]" started-at="2023-09-12T13:05:16 IST" name="advocateperformactivityTest" finished-at="2023-09-12T13:06:29 IST" duration-ms="72349" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- advocatebodyscanresultTest -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:cuesz.membersummarytest.advocate.Case71_MS_bodyscancomparetest@30f842ca]" started-at="2023-09-10T23:26:05 IST" name="tearDown" finished-at="2023-09-10T23:26:06 IST" duration-ms="997" status="PASS">
+        </test-method> <!-- advocateperformactivityTest -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:cuesz.membersummarytest.advocate.Case23_MS_performactivitytest@8ad6665]" started-at="2023-09-12T13:06:29 IST" name="tearDown" finished-at="2023-09-12T13:06:29 IST" duration-ms="417" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- cuesz.membersummarytest.advocate.Case71_MS_bodyscancomparetest -->
+      </class> <!-- cuesz.membersummarytest.advocate.Case23_MS_performactivitytest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

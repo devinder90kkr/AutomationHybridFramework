@@ -13,14 +13,19 @@ import org.testng.annotations.Test;
 
 import cuesz.pages.BasePage;
 import cuesz.utils.AllureUtils;
+import cuesz.utils.DateGenerator;
 
 public class Case04_deletevent extends BasePage {
 	
+	 public static String eventDate = DateGenerator.generateFixedDate(); // Use the generated date
+	 
 	 private By scheduleIcon 	= (By.xpath("//a[@href='/schedule-master']//span//img[@alt='icon']"));
 	 private By monthview 		= (By.xpath("//span[normalize-space()='Month']"));
 	 private By userlabel		= (By.xpath("//div[@class='user_title']//label"));
 	 private By deletebutton	= (By.xpath("//button[@class='btn btn-sm del_btn']//em"));
 	 private By confirmbutton 	= (By.xpath("//span[normalize-space()='Confirm']"));
+//	 private By NextButton = (By.xpath("//span[normalize-space()='Next']")); // XPath for the "Next Month" button
+
 	 
 	
 	public Case04_deletevent(WebDriver driver) {
@@ -41,12 +46,12 @@ public class Case04_deletevent extends BasePage {
 
 	 		// Split the date to extract day, month, and year
 	 		String[] dateParts = eventDate.split("-");
-	 		int day = Integer.parseInt(dateParts[0]);
-	 		int month = Integer.parseInt(dateParts[1]);
+	 		int day1 = Integer.parseInt(dateParts[0]);
+	 		int month1 = Integer.parseInt(dateParts[1]);
 	 		int year = Integer.parseInt(dateParts[2]);
 
 	 		// Calculate the next day's date
-	 		LocalDate currentDate = LocalDate.of(year, month, day);
+	 		LocalDate currentDate = LocalDate.of(year, month1, day1);
 	 		LocalDate nextDay = currentDate.plusDays(1);
 
 	 		// Format the next day's date
@@ -62,10 +67,50 @@ public class Case04_deletevent extends BasePage {
 
 	 		Thread.sleep(3000);
 	 		driver.findElement(By.xpath("//div[@data-date='" + nextDayDate + "']")).click();
-	    
+//	    
 	    Thread.sleep(3000);
         //driver.findElement(By.xpath("(//span[contains(text(),'Kumar Devinder,')])[15]")).click();
         
+	    
+//	 // Pass the event date from script one to script three
+//        String eventDate = DateGenerator.generateDateSevenDaysAhead();
+//
+//        // Split the date to extract day, month, and year
+//        String[] dateParts = eventDate.split("-");
+//        int day = Integer.parseInt(dateParts[0]);
+//        int month = Integer.parseInt(dateParts[1]);
+//        int year = Integer.parseInt(dateParts[2]);
+//
+//        // Calculate the next day's date
+//        LocalDate currentDate = LocalDate.of(year, month, day);
+//        LocalDate nextDay = currentDate.plusDays(1);
+//
+//        // Format the next day's date
+//        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MM-yyyy");
+//        String nextDayDate = nextDay.format(formatter);
+//
+//     // Check if the current month and year displayed on the calendar match the month and year of the eventDate
+//        String currentMonthAndYear = driver.findElement(By.xpath("//span[normalize-space()='Today']")).getText();
+//        if (!currentMonthAndYear.contains(String.valueOf(month))) {
+//            // Click the "Next Month" button to navigate to the next month
+//            driver.findElement(NextButton).click();
+//        }
+//
+//        // Capture a screenshot and attach it to Allure
+//        AllureUtils.captureScreenshot(driver, "fuel_report_screenshot");
+//
+//        // Find the element to scroll to the next day's date on the calendar (matching only the day)
+//        WebElement element = driver.findElement(By.xpath("//button[@role='cell'][normalize-space()='" + nextDay.getDayOfMonth() + "']"));
+//        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);
+//
+//        Thread.sleep(3000);
+//
+//        // Click the next day's date on the calendar
+//        driver.findElement(By.xpath("//div[@data-date='" + nextDayDate + "']")).click();
+
+        Thread.sleep(3000);
+
+
      // Find the elements containing the user labels
         List<WebElement> userLabels1 = driver.findElements(userlabel);
 

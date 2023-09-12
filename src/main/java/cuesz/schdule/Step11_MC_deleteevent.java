@@ -13,8 +13,11 @@ import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
 
 import cuesz.pages.BasePage;
+import cuesz.utils.DateGenerator;
 
 public class Step11_MC_deleteevent extends BasePage {
+	
+	public static String eventDate = DateGenerator.generateFixedDate(); // Use the generated date 
 	
 	private By Membercalenda = (By.xpath("//a[@href='/member-calls']//span"));
 	private By usrlabl		 = (By.xpath("//div[@class='user_title']//label"));

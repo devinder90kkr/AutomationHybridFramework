@@ -1,4 +1,3 @@
-
 package cuesz.schdule;
 
 import org.openqa.selenium.By;
@@ -9,10 +8,12 @@ import org.openqa.selenium.interactions.Actions;
 import org.testng.annotations.Test;
 
 import cuesz.pages.BasePage;
+import cuesz.utils.DateGenerator;
 
 public class Step07_MC_createevent extends BasePage {
+	public static String eventDate = DateGenerator.generateFixedDate(); // Use the generated date
 	
-	public static String eventDate = "27-08-2023"; // Date to be passed to script two
+//	public static String eventDate = "28-09-2023"; // Date to be passed to script two
 	private By membercalicon 	=  (By.xpath("//a[@href='/member-calls']//span"));
 	private By Addnewevent 		=  (By.xpath("//button[normalize-space()='Add New Event']"));
 	private By startdate 		=  (By.xpath("//input[@placeholder='DD-MM-YYYY']"));
@@ -31,7 +32,15 @@ public class Step07_MC_createevent extends BasePage {
 
 }
 @Test
-	public void Schdulevent() throws InterruptedException {
+	public void Schdulevent() throws InterruptedException {	
+//		// Calculate the eventDate dynamically
+//	    LocalDate currentDate = LocalDate.now();
+//	    LocalDate eventLocalDate = currentDate.plusDays(28);
+//	    DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MM-yyyy");
+//	    String eventDate = eventLocalDate.format(formatter);
+
+	
+	
 		 /*Click on Member calendar*/		
 		WebElement Membercalendar= driver.findElement(membercalicon);
 		Membercalendar.click();

@@ -11,9 +11,13 @@ import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
 
 import cuesz.pages.BasePage;
+import cuesz.utils.DateGenerator;
 
 public class Step12_04_SE_view_staffevent extends BasePage {
-	private String eventDate; // Date parameter from script one
+	
+	public static String eventDate = DateGenerator.generateFixedDate(); // Use the generated date 
+	
+	//private String eventDate; // Date parameter from script one
 	private By scdedulemastr = (By.xpath("//a[@href='/schedule-master']//span//img[@alt='icon']"));
 	private By monthvew		 = (By.xpath("//span[normalize-space()='Month']"));
 	private By usrlabel		 = (By.xpath("//div[@class='user_title']//label"));

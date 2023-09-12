@@ -12,7 +12,7 @@ import cuesz.pages.BasePage;
 
 public class Step12_02_SE_createvent_withpastdate extends BasePage {
 	
-	 public static String eventDate = "01-08-2023"; // Date to be passed to script two
+	 public static String eventDate = "01-09-2023"; // Date to be passed to script two
 	 private By Schdulemaste = 	(By.xpath("//*[@id=\"root\"]/div/div[1]/div/div/div/div[2]/div/div[1]/div/div[2]"));
 	 private By Addnewbuttn  = 	(By.xpath("//div[@id='root']/div/div/div/div/div[2]/div/div/button"));
 	 private By Date 		= 	(By.id("event_date"));	

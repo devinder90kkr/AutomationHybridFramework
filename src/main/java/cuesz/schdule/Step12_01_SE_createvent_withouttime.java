@@ -11,7 +11,7 @@ import org.testng.annotations.Test;
 import cuesz.pages.BasePage;
 
 public class Step12_01_SE_createvent_withouttime extends BasePage {
-	public static String eventDate = "26-08-2023"; // Date to be passed to script two
+	public static String eventDate = "27-09-2023"; // Date to be passed to script two
 	private By Schdulemaste = 	(By.xpath("//*[@id=\"root\"]/div/div[1]/div/div/div/div[2]/div/div[1]/div/div[2]"));
 	private By Addnewbuttn  = 	(By.xpath("//div[@id='root']/div/div/div/div/div[2]/div/div/button"));
 	private By Date 		= 	(By.id("event_date"));	

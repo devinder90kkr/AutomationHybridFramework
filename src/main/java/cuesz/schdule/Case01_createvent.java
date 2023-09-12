@@ -9,13 +9,15 @@ import org.testng.annotations.Test;
 
 import cuesz.pages.BasePage;
 import cuesz.utils.AllureUtils;
+import cuesz.utils.DateGenerator;
 import cuesz.utils.SeleniumUtils;
 
 public class Case01_createvent extends BasePage {
 	
 	SeleniumUtils utils = new SeleniumUtils(driver);
+	public static String eventDate = DateGenerator.generateFixedDate(); // Use the generated date
 	
-	public static String eventDate = "26-09-2023"; // Date to be passed to script two
+	//public static String eventDate = "26-09-2023"; // Date to be passed to script two
 	private By Date 		 = (By.id("event_date"));	
 	private By StartTime 	 =	(By.id("eventStartTime"));	
 	private By EndTime		 = 	(By.id("eventEndTime"));
@@ -24,6 +26,7 @@ public class Case01_createvent extends BasePage {
 	private By Staff 		= (By.id("Helsenki"));	
 	private By Notes		 =  (By.name("note"));
 	private By Submitbutton  =	 (By.xpath("//button[normalize-space()='Create Event']"));
+//	private By NextMonthButton = (By.xpath("//button[@aria-label='Next Month']"));
 	
 	public Case01_createvent(WebDriver driver) {
 		super(driver);
@@ -31,6 +34,14 @@ public class Case01_createvent extends BasePage {
 	}
 	@Test
 	 public void Schdulevent() throws InterruptedException {
+		
+//		// new add on as date is dynamic by using dategnerator if we negelect date generatore then we need to uncomment public static String eventDate above 
+//		// Check if the eventDate is in the next month
+//        if (eventDate.contains("Next Month")) {
+//            // Click on the "Next Month" button
+//            driver.findElement(NextMonthButton).click();
+//        }
+		
 		 	/**********************Click on Schedule master*********************************/	
 			utils.clickScheduleMaster();
 			utils.clickaddnewevent();

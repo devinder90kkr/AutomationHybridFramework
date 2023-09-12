@@ -11,10 +11,13 @@ import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
 
 import cuesz.pages.BasePage;
+import cuesz.utils.DateGenerator;
 
 public class Step09_MC_viewevent extends BasePage {
 	
-	private String eventDate; // Date parameter from script one
+	public static String eventDate = DateGenerator.generateFixedDate(); // Use the generated date 
+	
+	//private String eventDate; // Date parameter from script one
 	private By scheduleIcon 	=  (By.xpath("//a[@href='/member-calls']//span"));
 	private By usertitle=  (By.xpath("//div[@class='user_title']//label"));
 		

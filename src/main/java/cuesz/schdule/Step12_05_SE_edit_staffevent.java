@@ -10,13 +10,14 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
-import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 import cuesz.pages.BasePage;
+import cuesz.utils.DateGenerator;
 
 public class Step12_05_SE_edit_staffevent extends BasePage {
-	public static String eventDate = Step12_03_SE_create_staffevent.eventDate; // Get event date from the first script
+	 public static String eventDate = DateGenerator.generateFixedDate(); // Use the generated date
+	
 	private By Schdulemaster =	(By.xpath("//a[@href='/schedule-master']//span//img[@alt='icon']"));
 	private By monthviw		 =	(By.xpath("//span[normalize-space()='Month']"));
 	private By usrlabl		 =	(By.xpath("//div[@class='user_title']//label"));

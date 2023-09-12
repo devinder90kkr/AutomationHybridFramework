@@ -7,7 +7,6 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.testng.annotations.Test;
 import cuesz.pages.BasePage;
-import cuesz.utils.AllureUtils;
 import cuesz.utils.SeleniumUtils;
 
 public class Step12_09_SE_createeventforpast extends BasePage {

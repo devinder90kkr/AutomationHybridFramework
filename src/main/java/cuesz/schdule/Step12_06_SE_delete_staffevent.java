@@ -13,8 +13,11 @@ import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
 
 import cuesz.pages.BasePage;
+import cuesz.utils.DateGenerator;
 
 public class Step12_06_SE_delete_staffevent extends BasePage {
+	
+	 public static String eventDate = DateGenerator.generateFixedDate(); // Use the generated date 
 	
 	private By schdulmastr = (By.xpath("//a[@href='/schedule-master']//span//img[@alt='icon']"));
 	private By monthviw	   =  (By.xpath("//span[normalize-space()='Month']"));
