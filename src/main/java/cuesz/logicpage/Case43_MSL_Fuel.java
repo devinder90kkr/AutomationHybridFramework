@@ -4,7 +4,8 @@
 	import java.time.Duration;
 	import org.openqa.selenium.By;
 	import org.openqa.selenium.JavascriptExecutor;
-	import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebDriver;
 	import org.openqa.selenium.WebElement;
 	import org.openqa.selenium.interactions.Actions;
 	import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -132,19 +133,25 @@
 			   WebElement inputElement = driver.findElement(By.id(inputElementId));
 			   // Click on the input element to open the dropdown
 			   inputElement.click();
+			   Thread.sleep(2500);
 			   // Replace "Apple" with your search value
-			   String searchValue = "Apple";
-			   // Locate the input field for search and enter the search value
-			   WebElement searchInput = driver.findElement(By.xpath("//input[@aria-autocomplete='list']"));
-			   searchInput.sendKeys(searchValue);
-			   // Wait for the updated options to become visible
-			   WebDriverWait wait3 = new WebDriverWait(driver, Duration.ofSeconds(50));
-			   By optionLocator = By.xpath("//div[@class='react-select__menu-list']//label[contains(text(), '" + searchValue + "')]");
-			   WebElement option1 = wait3.until(ExpectedConditions.visibilityOfElementLocated(optionLocator));
-			   // Click on the specific option you want
-			   option1.click();
+			   String searchValue = "Apple green";
+//			   // Locate the input field for search and enter the search value
+//			   WebElement searchInput = driver.findElement(By.xpath("//input[@aria-autocomplete='list']"));
+//			   searchInput.sendKeys(searchValue);
+//			   // Wait for the updated options to become visible
+//			   WebDriverWait wait3 = new WebDriverWait(driver, Duration.ofSeconds(50));
+//			   By optionLocator = By.xpath("//div[@class='react-select__menu-list']//label[contains(text(), '" + searchValue + "')]");
+//			   WebElement option1 = wait3.until(ExpectedConditions.visibilityOfElementLocated(optionLocator));
+//			   // Click on the specific option you want
+			   Thread.sleep(2500);
+			   inputElement.sendKeys(searchValue);
+			   Thread.sleep(2500);
+			   inputElement.sendKeys(Keys.TAB);
+		   
 
 	   
+			   
 			   
 			   
 			   Thread.sleep(2500);

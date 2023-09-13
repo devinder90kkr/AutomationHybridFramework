@@ -248,21 +248,46 @@ import cuesz.utils.SeleniumUtils;
 		     WebElement selectButton = driver.findElement(slctBttn4);
 		     selectButton.click();
 
-		     // Find today's date element
-		     WebElement todayDateElement = driver.findElement(tdydatelement);
-
-		     // Get the text of today's date (e.g., "3")
-		     String todayDateText = todayDateElement.getText();
-
-		     // Extract the day value from today's date
-		     int today = Integer.parseInt(todayDateText);
-
-		     // Calculate the date for two weeks ahead (adding 14 days)
-		     int twoWeeksAhead = today + 8;
-
-		     // Calculate the desired date
+//		     // Find today's date element
+//		     WebElement todayDateElement = driver.findElement(tdydatelement);
+//
+//		     // Get the text of today's date (e.g., "3")
+//		     String todayDateText = todayDateElement.getText();
+//
+//		     // Extract the day value from today's date
+//		     int today = Integer.parseInt(todayDateText);
+//
+//		     // Calculate the date for two weeks ahead (adding 14 days)
+//		     int twoWeeksAhead = today + 8;
+//
+//		     // Calculate the desired date
+//		     LocalDate currentDate = LocalDate.now();
+//		     LocalDate desiredDate = currentDate.plusDays(twoWeeksAhead);
+//
+//		     // Check if the desired date is in the next month
+//		     if (desiredDate.getMonthValue() != currentDate.getMonthValue()) {
+//		         // Click on the "Next Month" arrow button
+//		         WebElement nextMonthButton = driver.findElement(By.xpath("//span[@class='DayPicker-NavButton DayPicker-NavButton--next']"));
+//		         nextMonthButton.click();
+//		     }
+//
+//		     // Find the date element for the desired date and click on it
+//		     String desiredDateLocator = String.format("//div[@aria-label='%s']", desiredDate.format(DateTimeFormatter.ofPattern("EEE MMM d yyyy")));
+//		     WebElement desiredDateElement = driver.findElement(By.xpath(desiredDateLocator));
+//		     desiredDateElement.click();
+//
+//		     Thread.sleep(2500);
+//
+//		     // Print the value of the clicked date
+//		     System.out.println("Clicked on date: " + desiredDateElement.getText());
+		     
+		     
+		     
+		     
+		     
+		  // Calculate the desired date for two weeks ahead
 		     LocalDate currentDate = LocalDate.now();
-		     LocalDate desiredDate = currentDate.plusDays(twoWeeksAhead);
+		     LocalDate desiredDate = currentDate.plusWeeks(2); // Change 2 to the desired number of weeks ahead
 
 		     // Check if the desired date is in the next month
 		     if (desiredDate.getMonthValue() != currentDate.getMonthValue()) {
@@ -280,6 +305,7 @@ import cuesz.utils.SeleniumUtils;
 
 		     // Print the value of the clicked date
 		     System.out.println("Clicked on date: " + desiredDateElement.getText());
+
  
 		        
 		        Thread.sleep(2500);
