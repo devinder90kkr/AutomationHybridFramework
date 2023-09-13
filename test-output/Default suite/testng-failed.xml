@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="cuesz.schdule.coach.Case07_MC_createevent">
+      <class name="cuesz.membercommunication.advocate.Case48_Memberchattest">
         <methods>
-          <include name="advocateScheduleEventTest"/>
           <include name="setUp"/>
           <include name="tearDown"/>
+          <include name="advocatecmembercommunictaeTest"/>
         </methods>
-      </class> <!-- cuesz.schdule.coach.Case07_MC_createevent -->
+      </class> <!-- cuesz.membercommunication.advocate.Case48_Memberchattest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

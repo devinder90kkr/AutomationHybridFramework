@@ -1,3 +1,0 @@
-Staff role is: Wellness Advocate
-User text verification passed!
-Event deletion verification passed!

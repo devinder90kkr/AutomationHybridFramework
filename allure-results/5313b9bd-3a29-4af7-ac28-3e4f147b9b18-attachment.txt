@@ -1,2 +1,0 @@
-Staff role is: Wellness Advocate
-Snackbar Text: You cannot create meetings for past date.

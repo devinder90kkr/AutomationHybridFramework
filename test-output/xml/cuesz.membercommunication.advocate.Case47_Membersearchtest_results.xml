@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Default test"
+           tests="1"
+           failures="0"
+           errors="0"
+           skipped="0"
+           time="56.175">
+    <properties></properties>
+
+
+
+            <testcase
+                name="advocatecmembercommunictaeTest"
+                time="56.175"
+                classname="cuesz.membercommunication.advocate.Case47_Membersearchtest">
+            </testcase>
+</testsuite>
