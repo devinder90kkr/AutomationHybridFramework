@@ -14,14 +14,7 @@ public class AllureUtils {
         try {
             TakesScreenshot ts = (TakesScreenshot) driver;
             File source = ts.getScreenshotAs(OutputType.FILE);          
-            File destination = new File("screenshots/" + screenshotName + ".png");
-            
-            // for mac 
-           // File destination = new File("/Users/chicmicmac/Desktop/allurescreenshots/" + screenshotName + ".svg"); // Specify the path to save the screenshot
-         
-            //for window
-            //  File destination = new File("C:\\Users\\ASUS\\OneDrive\\Documents\\eclipseallurescreenshot" + screenshotName + ".svg"); // Specify the path to save the screenshot
-            
+            File destination = new File("screenshots/" + screenshotName + ".png");                     
             FileUtils.copyFile(source, destination);
             Allure.addAttachment("Screenshot", FileUtils.openInputStream(destination));
         } catch (IOException e) {

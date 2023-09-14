@@ -128,11 +128,14 @@ import org.openqa.selenium.WebDriver;
 			   option.click();
 
 			  // Replace "FuelOptionFirst_1-Monday" with the actual ID of your input element
-			   String inputElementId = "FuelOptionFirst_1-Monday";
+			   String inputElementId = "//div[@id='FuelOptionFirst_1-Monday']";
 			   // Find the input element by ID
-			   WebElement inputElement = driver.findElement(By.id(inputElementId));
+			   WebElement inputElement = driver.findElement(By.xpath(inputElementId));
 			   // Click on the input element to open the dropdown
 			   inputElement.click();
+			   
+			   JavascriptExecutor executor = (JavascriptExecutor) driver;
+			    executor.executeScript("arguments[0].scrollIntoView(true);", inputElement);
 			   Thread.sleep(2500);
 			   // Replace "Apple" with your search value
 			   String searchValue = "Apple green";

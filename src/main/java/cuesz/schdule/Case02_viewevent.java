@@ -42,7 +42,7 @@ public class Case02_viewevent extends BasePage {
         eventDate = Case01_createvent.eventDate;
         // Extract the day portion from the eventDate
         String day = eventDate.split("-")[0];
-        // Find the element to scroll to the specified date on the calendar (matching only the day)
+        // Find the element to scroll to the sp	ecified date on the calendar (matching only the day)
         WebElement element = driver.findElement(By.xpath("//button[@role='cell'][normalize-space()='" + day + "']"));
         ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);
       

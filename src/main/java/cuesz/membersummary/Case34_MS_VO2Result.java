@@ -61,29 +61,12 @@ public class Case34_MS_VO2Result extends BasePage {
 	    Thread.sleep(2000);
 	    builder1.sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.ENTER).perform();
   
-	 // Find the elements for the specific details
-        String[] details = {
-            "Total Body Fat",
-            "Visceral Fat",
-            "Waist To Hip Ratio",
-            "Waist To Height Ratio",
-            "Waist Circumference",
-            "Hip Circumference",
-            "Body Scan Risk Indicator",
-            "bviNumber",
-            "Weight"
-        };
-
-        for (String detail : details) {
-            WebElement element = driver.findElement(By.xpath("//span[contains(text(), '" + detail + "')]/ancestor::div[contains(@class, 'bmi_col')]//h4"));
-            String value = element.getText();
-
-            System.out.println(detail + ": " + value);
-        }
+	  
         
      // Capture a screenshot and attach it to Allure
         AllureUtils.captureScreenshot(driver, "fuel_report_screenshot");
-        
+	    
+	     
         Thread.sleep(2500);
 //	    WebElement selecttype1 = driver.findElement(selctype2);
 	    WebElement selecttype1 = driver.findElement(selectype);
@@ -92,26 +75,7 @@ public class Case34_MS_VO2Result extends BasePage {
 	    Thread.sleep(2000);
 	    builder2.sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.ENTER).perform();
         
-	 // Find the elements for the specific details
-        String[] details1 = {
-            "Total Body Fat",
-            "Visceral Fat",
-            "Waist To Hip Ratio",
-            "Waist To Height Ratio",
-            "Waist Circumference",
-            "Hip Circumference",
-            "Body Scan Risk Indicator",
-            "bviNumber",
-            "Weight"
-        };
-
-        for (String detail : details1) {
-            WebElement element = driver.findElement(By.xpath("//span[contains(text(), '" + detail + "')]/ancestor::div[contains(@class, 'bmi_col')]//h4"));
-            String value = element.getText();
-
-            System.out.println(detail + ": " + value);
-        }
-        
+	
      // Capture a screenshot and attach it to Allure
         AllureUtils.captureScreenshot(driver, "fuel_report_screenshot");
         
@@ -123,26 +87,7 @@ public class Case34_MS_VO2Result extends BasePage {
 	    Thread.sleep(2000);
 	    builder3.sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.ENTER).perform();
         
-	 // Find the elements for the specific details
-        String[] details11 = {
-            "Total Body Fat",
-            "Visceral Fat",
-            "Waist To Hip Ratio",
-            "Waist To Height Ratio",
-            "Waist Circumference",
-            "Hip Circumference",
-            "Body Scan Risk Indicator",
-            "bviNumber",
-            "Weight"
-        };
-
-        for (String detail : details11) {
-            WebElement element = driver.findElement(By.xpath("//span[contains(text(), '" + detail + "')]/ancestor::div[contains(@class, 'bmi_col')]//h4"));
-            String value = element.getText();
-
-            System.out.println(detail + ": " + value);
-        }
-        
+	
         
      // Capture a screenshot and attach it to Allure
         AllureUtils.captureScreenshot(driver, "fuel_report_screenshot");

@@ -3,13 +3,6 @@
 <suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="cuesz.schduletest.advocate.Step12_08_SE_createventtest">
-        <methods>
-          <include name="tearDown"/>
-          <include name="setUp"/>
-          <include name="advocateSchedulefromcalendarEventTest"/>
-        </methods>
-      </class> <!-- cuesz.schduletest.advocate.Step12_08_SE_createventtest -->
       <class name="cuesz.schduletest.advocate.Case02_vieweventtest">
         <methods>
           <include name="advocateScheduleviewEventTest"/>
@@ -17,6 +10,13 @@
           <include name="tearDown"/>
         </methods>
       </class> <!-- cuesz.schduletest.advocate.Case02_vieweventtest -->
+      <class name="cuesz.schduletest.advocate.Step12_08_SE_createventtest">
+        <methods>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+          <include name="advocateSchedulefromcalendarEventTest"/>
+        </methods>
+      </class> <!-- cuesz.schduletest.advocate.Step12_08_SE_createventtest -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

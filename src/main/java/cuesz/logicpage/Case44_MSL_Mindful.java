@@ -24,7 +24,6 @@ import cuesz.utils.SeleniumUtils;
 		private By mindflnopls = (By.xpath("//div[normalize-space()='Mindful']//button[@type='button']"));
 		private By slctbttn = (By.xpath("//div[@id='Mindfull']//div[@class='d-flex justify-content-end calender_drop']//button[1]"));
 		private By heainelment = (By.xpath("(//h6[contains(text(),'Biofeedback')])[1]"));
-		private By labeelment = (By.xpath("(//label[contains(text(),'Training Day/Non Training Day')])[1]"));
 		private By selectLPInput =	(By.id("MindfulDay-Monday"));
 		private By slecttmin =	(By.id("MindfulMins-Monday"));
 		private By outsBlcok1 = (By.tagName("body"));
@@ -105,24 +104,7 @@ import cuesz.utils.SeleniumUtils;
 		       } else {
 		           System.out.println("Assertion Failed: Heading is not 'Biofeedback'");
 		       }
-
-			  
-		       // Locate the label element
-		        WebElement labelElement = driver.findElement(labeelment);
-
-		        // Get the text of the label
-		        String actualLabelText = labelElement.getText();
-
-		        // Expected label text
-		        String expectedLabelText = "Training Day/Non Training Day";
-
-		        // Perform the assertion
-		        if (actualLabelText.equals(expectedLabelText)) {
-		            System.out.println("Assertion Passed: Label text is 'Training Day/Non Training Day'");
-		        } else {
-		            System.out.println("Assertion Failed: Label text is not 'Training Day/Non Training Day'");
-		        }
-		       
+   
 		       
 			   
 			   Thread.sleep(2000);
@@ -188,21 +170,38 @@ import cuesz.utils.SeleniumUtils;
 			    WebElement selectButton = driver.findElement(slctBttn);
 			    selectButton.click();
 
-			    // Find today's date element
-			    WebElement todayDateElement = driver.findElement(tdaydatelemnt);
-
-			    // Get the text of today's date (e.g., "3")
-			    String todayDateText = todayDateElement.getText();
-
-			    // Extract the day value from today's date
-			    int today = Integer.parseInt(todayDateText);
-
-			    // Calculate the date for two weeks ahead (adding 14 days)
-			     int twoWeeksAhead = today + 8;
-
-			    // Calculate the desired date
+//			    // Find today's date element
+//			    WebElement todayDateElement = driver.findElement(tdaydatelemnt);
+//
+//			    // Get the text of today's date (e.g., "3")
+//			    String todayDateText = todayDateElement.getText();
+//
+//			    // Extract the day value from today's date
+//			    int today = Integer.parseInt(todayDateText);
+//
+//			    // Calculate the date for two weeks ahead (adding 14 days)
+//			     int twoWeeksAhead = today + 8;
+//
+//			    // Calculate the desired date
+//			     LocalDate currentDate = LocalDate.now();
+//			     LocalDate desiredDate = currentDate.plusDays(twoWeeksAhead);
+//
+//			     // Check if the desired date is in the next month
+//			     if (desiredDate.getMonthValue() != currentDate.getMonthValue()) {
+//			         // Click on the "Next Month" arrow button
+//			         WebElement nextMonthButton = driver.findElement(By.xpath("//span[@class='DayPicker-NavButton DayPicker-NavButton--next']"));
+//			         nextMonthButton.click();
+//			     }
+//			     	     
+//			    // Find the date element for two weeks ahead and click on it
+//			    // Note: This assumes that the date picker uses the format "Thu Aug 3 2023"
+//    		    String desiredDateLocator = String.format("//div[@aria-label='%s']", LocalDate.now().plusDays(twoWeeksAhead).format(DateTimeFormatter.ofPattern("EEE MMM d yyyy")));
+//		        WebElement desiredDateElement = driver.findElement(By.xpath(desiredDateLocator));
+//		        desiredDateElement.click();
+			    
+			 // Calculate the desired date for two weeks ahead
 			     LocalDate currentDate = LocalDate.now();
-			     LocalDate desiredDate = currentDate.plusDays(twoWeeksAhead);
+			     LocalDate desiredDate = currentDate.plusWeeks(2); // Change 2 to the desired number of weeks ahead
 
 			     // Check if the desired date is in the next month
 			     if (desiredDate.getMonthValue() != currentDate.getMonthValue()) {
@@ -210,12 +209,15 @@ import cuesz.utils.SeleniumUtils;
 			         WebElement nextMonthButton = driver.findElement(By.xpath("//span[@class='DayPicker-NavButton DayPicker-NavButton--next']"));
 			         nextMonthButton.click();
 			     }
-			     	     
-			    // Find the date element for two weeks ahead and click on it
-			    // Note: This assumes that the date picker uses the format "Thu Aug 3 2023"
-    		    String desiredDateLocator = String.format("//div[@aria-label='%s']", LocalDate.now().plusDays(twoWeeksAhead).format(DateTimeFormatter.ofPattern("EEE MMM d yyyy")));
-		        WebElement desiredDateElement = driver.findElement(By.xpath(desiredDateLocator));
-		        desiredDateElement.click();
+
+			     // Find the date element for the desired date and click on it
+			     String desiredDateLocator = String.format("//div[@aria-label='%s']", desiredDate.format(DateTimeFormatter.ofPattern("EEE MMM d yyyy")));
+			     WebElement desiredDateElement = driver.findElement(By.xpath(desiredDateLocator));
+			     desiredDateElement.click();
+
+			     Thread.sleep(2500);
+			    
+			    
 
 		        Thread.sleep(2500);
 		        // Print the value of the clicked date

@@ -7,7 +7,6 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
 
@@ -18,7 +17,12 @@ public class Case48_Memberchat extends BasePage {
 	 WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(1000)); 	
 	private By membercomunicate = (By.id("Dashboard-MemberCommunication"));
 	private By serchInput =	(By.id("MemberCommunication-SearchMembers"));
-	
+	private By	membclck = (By.id("MemberCommunication-KumarDevinder"));
+	private By serhbox = (By.id("message"));
+	private By stafElment = (By.id("MemberCommunication-StaffList"));
+	private By senbttn = (By.id("MemberCommunication-SendMessage"));
+	private By emozi = (By.id("MemberCommunication-ChatEmoji"));
+
 	
 	public Case48_Memberchat(WebDriver driver) {
 		super(driver);
@@ -44,7 +48,7 @@ public class Case48_Memberchat extends BasePage {
 	            WebElement searchInput1 = driver.findElement(serchInput);
 	            searchInput1.click(); // Click on the search input field
 	            searchInput1.sendKeys(member);
-
+	
 	            // Capture a screenshot and attach it to Allure
 	            AllureUtils.captureScreenshot(driver, "membersearch_screenshot"); 
 	            
@@ -58,17 +62,17 @@ public class Case48_Memberchat extends BasePage {
 	            }
 	            Thread.sleep(2500);
 	            
-	            WebElement memberclick = driver.findElement(By.id("MemberCommunication-KumarDevinder"));
+	            WebElement memberclick = driver.findElement(membclck);
 	            memberclick.click();
 	            Thread.sleep(2500);
-	            WebElement searchbox = driver.findElement(By.id("message"));
+	            WebElement searchbox = driver.findElement(serhbox);
 	            searchbox.sendKeys("Hello this is just for testing purpse");
 	            Thread.sleep(2500);
 	            
 	            // Capture a screenshot and attach it to Allure
 	            AllureUtils.captureScreenshot(driver, "text1"); 
 	            
-	            WebElement staffElement = driver.findElement(By.id("MemberCommunication-StaffList"));
+	            WebElement staffElement = driver.findElement(stafElment);
 		         // Create an instance of the Actions class
 		            Actions actions = new Actions(driver);
 		           // Move to the staff element to open the dropdown
@@ -77,13 +81,13 @@ public class Case48_Memberchat extends BasePage {
 		         // Press Enter to confirm the new time
 		            actions.sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.ENTER).perform();       
 	            
-	            WebElement sendbutton = driver.findElement(By.id("MemberCommunication-SendMessage"));
+	            WebElement sendbutton = driver.findElement(senbttn);
 	            sendbutton.click();
 	            Thread.sleep(2500);	
-	            WebElement searchbox1 = driver.findElement(By.id("message"));
+	            WebElement searchbox1 = driver.findElement(serhbox);
 	            searchbox1.sendKeys("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. ");
 	            Thread.sleep(2500);
-	            WebElement sendbutton1 = driver.findElement(By.id("MemberCommunication-SendMessage"));
+	            WebElement sendbutton1 = driver.findElement(senbttn);
 	            sendbutton1.click();
 	            Thread.sleep(2500);
 	            
@@ -91,7 +95,7 @@ public class Case48_Memberchat extends BasePage {
 	            AllureUtils.captureScreenshot(driver, "text2"); 
 	                      
 	            // Locate the staff element by its ID
-	            WebElement staffElement1 = driver.findElement(By.id("MemberCommunication-StaffList"));
+	            WebElement staffElement1 = driver.findElement(stafElment);
 	         // Create an instance of the Actions class
 	            Actions actions1 = new Actions(driver);
 	           // Move to the staff element to open the dropdown
@@ -101,19 +105,31 @@ public class Case48_Memberchat extends BasePage {
 	            actions1.sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.ENTER).perform();
 	            
 	                
-	            WebElement searchbox2 = driver.findElement(By.id("message"));
+	            WebElement searchbox2 = driver.findElement(serhbox);
 	            searchbox2.sendKeys("You may need to adjust the XPath locator or use explicit waits to ensure the chat list is fully loaded before attempting to click on the chat element.");
 	            Thread.sleep(2500);
-	            WebElement sendbutton2 = driver.findElement(By.id("MemberCommunication-SendMessage"));
+	            WebElement sendbutton2 = driver.findElement(senbttn);
 	            sendbutton2.click();
 	            Thread.sleep(2500);
 	            
+	            WebElement emoji = driver.findElement(emozi);
+	            Thread.sleep(2500);
+	            // Create an instance of the Actions class
+	            Actions actions2 = new Actions(driver);
+	           // Move to the staff element to open the dropdown
+	            actions2.moveToElement(emoji).click().perform();
+	            Thread.sleep(2500);	   
+	         // Press Enter to confirm the new time
+	            actions2.sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.ENTER).perform();
+	            Thread.sleep(2000);
+	            WebElement sendbutton3 = driver.findElement(senbttn);
+	            sendbutton3.click();
+	            Thread.sleep(2500);
+	            
+	       	            
 	            
 	            
-	           // https://chat.openai.com/share/2469cd62-b110-48d3-8d12-a457818fcd1d
-	            
-	            
-	            
+                 
 	            
 	    }
 	
