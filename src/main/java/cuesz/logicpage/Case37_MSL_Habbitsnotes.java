@@ -184,24 +184,44 @@ public class Case37_MSL_Habbitsnotes extends BasePage {
 	        WebElement selectButton = driver.findElement(slctBttn);
 	        selectButton.click();
 
-	     // Find today's date element
-	        WebElement todayDateElement = driver.findElement(tdydtelement);
+//	     // Find today's date element
+//	        WebElement todayDateElement = driver.findElement(tdydtelement);
+//
+//	        // Get the text of today's date (e.g., "3")
+//	        String todayDateText = todayDateElement.getText();
+//
+//	        // Extract the day value from today's date
+//	        int today = Integer.parseInt(todayDateText);
+//
+//	        // Calculate the date for two weeks ahead (adding 14 days)
+//	        int twoWeeksAhead = today + 6;
+//
+//	        // Find the date element for two weeks ahead and click on it
+//	        // Note: This assumes that the date picker uses the format "Thu Aug 3 2023"
+//	        String desiredDateLocator = String.format("//div[@aria-label='%s']", LocalDate.now().plusDays(twoWeeksAhead).format(DateTimeFormatter.ofPattern("EEE MMM d yyyy")));
+//	        WebElement desiredDateElement = driver.findElement(By.xpath(desiredDateLocator));
+//	        desiredDateElement.click();
 
-	        // Get the text of today's date (e.g., "3")
-	        String todayDateText = todayDateElement.getText();
+	     // Calculate the desired date for two weeks ahead
+		     LocalDate currentDate = LocalDate.now();
+		     LocalDate desiredDate = currentDate.plusWeeks(2); // Change 2 to the desired number of weeks ahead
 
-	        // Extract the day value from today's date
-	        int today = Integer.parseInt(todayDateText);
+		     // Check if the desired date is in the next month
+		     if (desiredDate.getMonthValue() != currentDate.getMonthValue()) {
+		         // Click on the "Next Month" arrow button
+		         WebElement nextMonthButton = driver.findElement(By.xpath("//span[@class='DayPicker-NavButton DayPicker-NavButton--next']"));
+		         nextMonthButton.click();
+		     }
 
-	        // Calculate the date for two weeks ahead (adding 14 days)
-	        int twoWeeksAhead = today + 6;
+		     // Find the date element for the desired date and click on it
+		     String desiredDateLocator = String.format("//div[@aria-label='%s']", desiredDate.format(DateTimeFormatter.ofPattern("EEE MMM d yyyy")));
+		     WebElement desiredDateElement = driver.findElement(By.xpath(desiredDateLocator));
+		     desiredDateElement.click();
 
-	        // Find the date element for two weeks ahead and click on it
-	        // Note: This assumes that the date picker uses the format "Thu Aug 3 2023"
-	        String desiredDateLocator = String.format("//div[@aria-label='%s']", LocalDate.now().plusDays(twoWeeksAhead).format(DateTimeFormatter.ofPattern("EEE MMM d yyyy")));
-	        WebElement desiredDateElement = driver.findElement(By.xpath(desiredDateLocator));
-	        desiredDateElement.click();
+		     Thread.sleep(2500);
 
+	        
+	        
 	        Thread.sleep(2500);
 	        // Print the value of the clicked date
 	        System.out.println("Clicked on date: " + desiredDateElement.getText());

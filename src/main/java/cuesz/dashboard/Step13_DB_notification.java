@@ -98,7 +98,5 @@ public class Step13_DB_notification extends BasePage {
 
 		Thread.sleep(2000);
 
-		// Close the browser
-		driver.quit();
 	}
 }

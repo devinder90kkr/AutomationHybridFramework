@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Default test"
+           tests="1"
+           failures="0"
+           errors="0"
+           skipped="0"
+           time="48.869">
+    <properties></properties>
+
+
+
+            <testcase
+                name="advocateSchedulecreateeventTest"
+                time="48.869"
+                classname="cuesz.liveperform.advocate.Case73_viewjoinLiveperformtest">
+            </testcase>
+</testsuite>

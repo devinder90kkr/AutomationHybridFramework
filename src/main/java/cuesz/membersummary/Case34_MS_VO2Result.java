@@ -11,10 +11,12 @@ import org.testng.annotations.Test;
 
 import cuesz.pages.BasePage;
 import cuesz.utils.AllureUtils;
+import cuesz.utils.DateGenerator;
 import cuesz.utils.SeleniumUtils;
 
 public class Case34_MS_VO2Result extends BasePage {
-	 public static String eventDate = "26-10-2023"; // Date to be passed nextscandate below
+	 //public static String eventDate = "26-10-2023"; // Date to be passed nextscandate below
+	 public static String eventDate = DateGenerator.generateFixedDate(); // Use the generated date
 
 	 SeleniumUtils utils = new SeleniumUtils(driver);
 	private By elementScrollTo 	=	(By.xpath("//h4[contains(text(), 'VO2 Result')]"));

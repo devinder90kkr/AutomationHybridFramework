@@ -3,20 +3,20 @@
 <suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="cuesz.schduletest.advocate.Case02_vieweventtest">
+      <class name="cuesz.logictest.advocate.Case37_MSL_Habbitsnotestest">
         <methods>
-          <include name="advocateScheduleviewEventTest"/>
+          <include name="advocatelogicmemberTest"/>
           <include name="setUp"/>
           <include name="tearDown"/>
         </methods>
-      </class> <!-- cuesz.schduletest.advocate.Case02_vieweventtest -->
-      <class name="cuesz.schduletest.advocate.Step12_08_SE_createventtest">
+      </class> <!-- cuesz.logictest.advocate.Case37_MSL_Habbitsnotestest -->
+      <class name="cuesz.logictest.advocate.Case36_MSL_Staffnotestest">
         <methods>
-          <include name="tearDown"/>
+          <include name="advocatelogicmemberTest"/>
           <include name="setUp"/>
-          <include name="advocateSchedulefromcalendarEventTest"/>
+          <include name="tearDown"/>
         </methods>
-      </class> <!-- cuesz.schduletest.advocate.Step12_08_SE_createventtest -->
+      </class> <!-- cuesz.logictest.advocate.Case36_MSL_Staffnotestest -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

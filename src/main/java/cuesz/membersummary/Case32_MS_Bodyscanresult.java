@@ -10,18 +10,22 @@ import org.openqa.selenium.interactions.Actions;
 import org.testng.annotations.Test;
 
 import cuesz.pages.BasePage;
+import cuesz.utils.DateGenerator;
 import cuesz.utils.SeleniumUtils;
 
 public class Case32_MS_Bodyscanresult extends BasePage {
-	 public static String eventDate = "26-09-2023"; // Date to be passed nextscandate below
+	// public static String eventDate = "26-09-2023"; // Date to be passed nextscandate below
+	 public static String eventDate = DateGenerator.generateFixedDate(); // Use the generated date
 
 	 SeleniumUtils utils = new SeleniumUtils(driver);
 	private By elementScrollTo 	=	(By.xpath("//h4[contains(text(), 'Body Scan Result')]"));
-	private By selectype	= 	(By.xpath("//div[text()='11-08-2023']"));
+	//private By selectype	= 	(By.xpath("//div[text()='11-08-2023']"));
+		private By selectype	= 	(By.id("MemberSummary-BodyScanResult-Duration-Dropdown"));
 	private By selctype2	=	(By.xpath("(//div[contains(text(),'01-08-2023 IST')])[1]"));
 	private By selctype3	= (By.xpath("(//div[contains(text(),'24-07-2023 IST')])[1]"));	
 	private By selectype4	= (By.xpath("(//div[contains(text(),'21-07-2023 IST')])[1]"));
 	private By selectype5	=	(By.xpath("(//input[@value='01-09-2023'])[1]"));
+	private By Selectnext = (By.id("MemberSummary-BodyScanResult-NextScan"));
 
 	
 
@@ -76,7 +80,7 @@ public class Case32_MS_Bodyscanresult extends BasePage {
         }
         
         Thread.sleep(2500);
-	    WebElement selecttype1 = driver.findElement(selctype2);
+	    WebElement selecttype1 = driver.findElement(selectype);
         Actions builder2 = new Actions(driver);
 	    builder2.moveToElement(selecttype1).click().sendKeys("24-07-2023").perform();
 	    Thread.sleep(2000);
@@ -102,7 +106,7 @@ public class Case32_MS_Bodyscanresult extends BasePage {
         }
         
         Thread.sleep(2500);
-	    WebElement selecttype3 = driver.findElement(selctype3);
+	    WebElement selecttype3 = driver.findElement(selectype);
         Actions builder3 = new Actions(driver);
 	    builder3.moveToElement(selecttype3).click().sendKeys("21-07-2023").perform();
 	    Thread.sleep(2000);
@@ -129,7 +133,7 @@ public class Case32_MS_Bodyscanresult extends BasePage {
         
         
         Thread.sleep(2500);
-	    WebElement selecttype31 = driver.findElement(selectype4);
+	    WebElement selecttype31 = driver.findElement(selectype);
         Actions builder31 = new Actions(driver);
 	    builder31.moveToElement(selecttype31).click().sendKeys("06-07-2023").perform();
 	    Thread.sleep(2000);
@@ -157,7 +161,7 @@ public class Case32_MS_Bodyscanresult extends BasePage {
         
         /*Enter date and then click*/
 	    Thread.sleep(2000);
-	    WebElement nextscandate =driver.findElement(selectype5);
+	    WebElement nextscandate =driver.findElement(Selectnext);
 	    Actions builder112 = new Actions(driver);
 	    builder112.moveToElement(nextscandate).click().sendKeys(eventDate).sendKeys(Keys.ENTER).perform();;
         

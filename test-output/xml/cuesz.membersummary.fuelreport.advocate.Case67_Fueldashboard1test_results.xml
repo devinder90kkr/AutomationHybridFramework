@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Default test"
+           tests="1"
+           failures="0"
+           errors="0"
+           skipped="0"
+           time="100.886">
+    <properties></properties>
+
+
+
+            <testcase
+                name="advocateMemberhoverTest"
+                time="100.886"
+                classname="cuesz.membersummary.fuelreport.advocate.Case67_Fueldashboard1test">
+            </testcase>
+</testsuite>

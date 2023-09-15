@@ -105,7 +105,6 @@ Thread.sleep(5000);
 
 		Thread.sleep(2000);
 
-		// Close the browser
-		driver.quit();
+		
 	}
 }

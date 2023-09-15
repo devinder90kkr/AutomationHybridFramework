@@ -112,55 +112,18 @@ import org.openqa.selenium.WebDriver;
 		        System.out.println("Calories: " + caloriesValue);
 			      
 			   /*********/
+
 		        
-			   // Replace "FuelMealList-Monday" with the actual ID of your dropdown
-			   String dropdownId1 = "FuelMealList-Monday";
-			   // Find the dropdown element by ID
-			   WebElement dropdown1 = driver.findElement(By.id(dropdownId1));
-			   // Click on the dropdown to open the options
-			   dropdown1.click();
-			   // Wait for the options to become visible
-			   WebDriverWait wait11 = new WebDriverWait(driver, Duration.ofSeconds(50));
-			   // Replace "Breakfast" with the option you want to select
-			   String optionText = "Breakfast";
-			   WebElement option = wait11.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@id='" + dropdownId1 + "']//div[text()='" + optionText + "']")));
-			   // Click on the "Breakfast" option to select it
-			   option.click();
-
-			  // Replace "FuelOptionFirst_1-Monday" with the actual ID of your input element
-			   String inputElementId = "//div[@id='FuelOptionFirst_1-Monday']";
-			   // Find the input element by ID
-			   WebElement inputElement = driver.findElement(By.xpath(inputElementId));
-			   // Click on the input element to open the dropdown
-			   inputElement.click();
-			   
-			   JavascriptExecutor executor = (JavascriptExecutor) driver;
-			    executor.executeScript("arguments[0].scrollIntoView(true);", inputElement);
-			   Thread.sleep(2500);
-			   // Replace "Apple" with your search value
-			   String searchValue = "Apple green";
-//			   // Locate the input field for search and enter the search value
-//			   WebElement searchInput = driver.findElement(By.xpath("//input[@aria-autocomplete='list']"));
-//			   searchInput.sendKeys(searchValue);
-//			   // Wait for the updated options to become visible
-//			   WebDriverWait wait3 = new WebDriverWait(driver, Duration.ofSeconds(50));
-//			   By optionLocator = By.xpath("//div[@class='react-select__menu-list']//label[contains(text(), '" + searchValue + "')]");
-//			   WebElement option1 = wait3.until(ExpectedConditions.visibilityOfElementLocated(optionLocator));
-//			   // Click on the specific option you want
-			   Thread.sleep(2500);
-			   inputElement.sendKeys(searchValue);
-			   Thread.sleep(2500);
-			   inputElement.sendKeys(Keys.TAB);
-		   
-
-	   
-			   
-			   
-			   
-			   Thread.sleep(2500);
-			   
-			   
-
+		        WebElement parentElement = driver.findElement(By.id("FuelOptionFirst_1-Monday"));
+		     // Find the input field by its ID (you may need to adjust the selector)
+		        WebElement inputField = parentElement.findElement(By.id("react-select-381-input"));
+		        
+		        // Send the input text "Green Apple"
+		        inputField.sendKeys("Green Apple");
+		        
+		        // Send the TAB key to select the first matching option (you can also use Keys.ENTER)
+		        inputField.sendKeys(Keys.TAB);
+		        Thread.sleep(5000);
 			   
 			   
 			   
