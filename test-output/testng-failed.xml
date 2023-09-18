@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="cuesz.liveperform.advocate.Case74_viewjoinLiveperfoRadvocatetest">
+      <class name="cuesz.logictest.advocate.Case43_MSL_Fueltest">
         <methods>
-          <include name="setUp"/>
+          <include name="advocatelogicmemberTest"/>
           <include name="tearDown"/>
-          <include name="advocateSchedulecreateeventTest"/>
+          <include name="setUp"/>
         </methods>
-      </class> <!-- cuesz.liveperform.advocate.Case74_viewjoinLiveperfoRadvocatetest -->
+      </class> <!-- cuesz.logictest.advocate.Case43_MSL_Fueltest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
