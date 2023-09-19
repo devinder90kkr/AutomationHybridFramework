@@ -72,25 +72,25 @@ public class Case33_MS_Uploadposture extends BasePage {
         Thread.sleep(3000);
         // Find and upload the front posture
         WebElement frontUploadButton = driver.findElement(frntUploadBttn);
-        frontUploadButton.sendKeys("/Users/chicmicmac/Desktop/Devinderpostures/Front.jpeg"); // Replace with the actual file path
+        frontUploadButton.sendKeys("/Users/chicmicmac/git/Cuesz_AutomationTests/Uploadposture/Front.jpeg"); // Replace with the actual file path
 
      // Upload the side left posture
         WebElement sideLeftUploadButton = driver.findElement(sidLftUpladBttn);
-        sideLeftUploadButton.sendKeys("/Users/chicmicmac/Desktop/Devinderpostures/left.jpeg"); // Replace with the actual file path
+        sideLeftUploadButton.sendKeys("/Users/chicmicmac/git/Cuesz_AutomationTests/Uploadposture/left.jpeg"); // Replace with the actual file path
 
         // Upload the side right posture
         WebElement sideRightUploadButton = driver.findElement(sidrightUpldBttn);
-        sideRightUploadButton.sendKeys("/Users/chicmicmac/Desktop/Devinderpostures/Right.jpeg"); // Replace with the actual file path
+        sideRightUploadButton.sendKeys("/Users/chicmicmac/git/Cuesz_AutomationTests/Uploadposture/Right.jpeg"); // Replace with the actual file path
 
         // Upload the back posture
         WebElement backUploadButton = driver.findElement(backUloadBttn);
-        backUploadButton.sendKeys("/Users/chicmicmac/Desktop/Devinderpostures/back.jpeg"); // Replace with the actual file path
+        backUploadButton.sendKeys("Users/chicmicmac/git/Cuesz_AutomationTests/Uploadposture/back.jpeg "); // Replace with the actual file path
 
         Thread.sleep(8000);
         WebElement Submitbutton = driver.findElement(Sumitbttn);
         Submitbutton.click();
                  
-        Thread.sleep(2500);
+        Thread.sleep(4500);
         }    
     }
   

@@ -41,8 +41,8 @@ public class Case47_Membersearchtest {
     
     @Owner("QA") // Add the @Owner annotation to specify the executor
     @Severity(SeverityLevel.NORMAL)
-    @Description("Verify the functionality of the member chat heading")
-    @Story(" Successfully verifiy heading for communication feature")
+    @Description("Verify the functionality of the member search")
+    @Story(" Successfully verify search feature for chat ")
     
     
     public void advocatecmembercommunictaeTest() throws InterruptedException {
@@ -56,7 +56,7 @@ public class Case47_Membersearchtest {
         String dynamicLink = generateDynamicLink();
 
         // Add the dynamic link to the Allure report
-        Allure.link("Logic page link", dynamicLink);
+        Allure.link("Case47_Membersearchtest", dynamicLink);
     
         // Capture console logs
         String consoleLogs = consoleOutput.toString();
@@ -66,7 +66,7 @@ public class Case47_Membersearchtest {
         Allure.addAttachment("Console Output", "text/plain", consoleLogs);
         
         // Capture a screenshot and attach it to Allure
-        AllureUtils.captureScreenshot(driver, "membersearch_screenshot1");
+        AllureUtils.captureScreenshot(driver, "Case47_Membersearchtest");
         Allure.step("Step Details");
         
         // Retrieve OS information

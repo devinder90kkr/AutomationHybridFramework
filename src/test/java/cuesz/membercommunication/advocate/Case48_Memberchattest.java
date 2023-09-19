@@ -15,7 +15,7 @@ import cuesz.utils.WebDriverManager;
 import io.qameta.allure.*;
 
 @Epic ("Cuesz Staff testing for member coomunication ")
-@Feature ("verify member communication search feature")
+@Feature ("verify member communication chat feature")
 
 public class Case48_Memberchattest {
     private WebDriver driver;
@@ -42,7 +42,7 @@ public class Case48_Memberchattest {
     @Owner("QA") // Add the @Owner annotation to specify the executor
     @Severity(SeverityLevel.NORMAL)
     @Description("Verify the functionality of the member chat heading")
-    @Story(" Successfully verifiy heading for communication feature")
+    @Story(" Successfully verifiy communication chat feature")
     
     
     public void advocatecmembercommunictaeTest() throws InterruptedException {
@@ -56,7 +56,7 @@ public class Case48_Memberchattest {
         String dynamicLink = generateDynamicLink();
 
         // Add the dynamic link to the Allure report
-        Allure.link("Logic page link", dynamicLink);
+        Allure.link("Case48_Memberchattest", dynamicLink);
     
         // Capture console logs
         String consoleLogs = consoleOutput.toString();
@@ -66,7 +66,7 @@ public class Case48_Memberchattest {
         Allure.addAttachment("Console Output", "text/plain", consoleLogs);
         
         // Capture a screenshot and attach it to Allure
-        AllureUtils.captureScreenshot(driver, "membersearch_screenshot1");
+        AllureUtils.captureScreenshot(driver, "Case48_Memberchattest");
         Allure.step("Step Details");
         
         // Retrieve OS information

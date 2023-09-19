@@ -37,6 +37,7 @@ public class Case48_Memberchat extends BasePage {
 	        Thread.sleep(2500);
 	        // Locate the search input field by its locator
 	        WebElement searchInput = driver.findElement(serchInput);
+	       
 	        Thread.sleep(2500);
 	        String[] membersToSearch = {"Kumar Devinder"};
 
