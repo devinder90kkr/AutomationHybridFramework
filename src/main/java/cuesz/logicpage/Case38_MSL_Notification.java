@@ -1,20 +1,12 @@
 	package cuesz.logicpage;
 
 import java.text.ParseException;
-import java.time.Duration;
-import java.time.LocalDate;
-import java.time.format.DateTimeFormatter;
-import java.util.List;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 import cuesz.pages.BasePage;
@@ -124,6 +116,21 @@ public class Case38_MSL_Notification extends BasePage {
 	        WebElement button = driver.findElement(By.id("NotificationSubmit-Monday"));
 	        button.click();
 		    
+	        
+	     // Locate the element you want to scroll to
+	        WebElement element = driver.findElement(By.xpath("//div[@class='post_wrap']"));
+	        
+	        // Create a JavascriptExecutor object
+	        JavascriptExecutor js = (JavascriptExecutor) driver;
+	        
+	        // Use JavaScript to scroll to the element
+	        js.executeScript("arguments[0].scrollIntoView();", element);
+	        
+	        
+	        
+	        
+	        
+	      
 	        
 	        Thread.sleep(2500);
 	     

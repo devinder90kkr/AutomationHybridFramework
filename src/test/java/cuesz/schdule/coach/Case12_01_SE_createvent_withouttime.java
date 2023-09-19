@@ -55,7 +55,7 @@ public class Case12_01_SE_createvent_withouttime {
         String dynamicLink = generateDynamicLink();
 
         // Add the dynamic link to the Allure report
-        Allure.link("Logic page link", dynamicLink);
+        Allure.link("Case12_01_SE_createvent_withouttime", dynamicLink);
     
         // Capture console logs
         String consoleLogs = consoleOutput.toString();
@@ -65,7 +65,7 @@ public class Case12_01_SE_createvent_withouttime {
         Allure.addAttachment("Console Output", "text/plain", consoleLogs);
         
         // Capture a screenshot and attach it to Allure
-        AllureUtils.captureScreenshot(driver, "fuel_report_screenshot");
+        AllureUtils.captureScreenshot(driver, "Case12_01_SE_createvent_withouttime");
         Allure.step("Step Details");
         
         // Retrieve OS information

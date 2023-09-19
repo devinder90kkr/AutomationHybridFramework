@@ -55,7 +55,7 @@ public class Case33_MS_Uploadposturetest {
         String dynamicLink = generateDynamicLink();
 
         // Add the dynamic link to the Allure report
-        Allure.link("Logic page link", dynamicLink);
+        Allure.link("Case33_MS_Uploadposturetest", dynamicLink);
     
         // Capture console logs
         String consoleLogs = consoleOutput.toString();
@@ -65,7 +65,7 @@ public class Case33_MS_Uploadposturetest {
         Allure.addAttachment("Console Output", "text/plain", consoleLogs);
         
         // Capture a screenshot and attach it to Allure
-        AllureUtils.captureScreenshot(driver, "fuel_report_screenshot");
+        AllureUtils.captureScreenshot(driver, "Case33_MS_Uploadposturetest");
         Allure.step("Step Details");
         
         // Retrieve OS information
@@ -79,7 +79,7 @@ public class Case33_MS_Uploadposturetest {
     
  private String generateDynamicLink() {
         
-        return "https://app.cuesz.com/member-specs/627d168e40231fb0ba6a057a"; // Replace with your actual dynamic link
+        return "https://pre-staging.app.cuesz.com/member-specs/627d168e40231fb0ba6a057a"; // Replace with your actual dynamic link
     }
     @AfterClass
     public void tearDown() {

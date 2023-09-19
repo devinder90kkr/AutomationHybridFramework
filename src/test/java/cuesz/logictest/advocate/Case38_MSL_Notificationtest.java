@@ -9,7 +9,6 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
-import cuesz.logicpage.Case37_MSL_Habbitsnotes;
 import cuesz.logicpage.Case38_MSL_Notification;
 import cuesz.logintest.AdvocateLogin;
 import cuesz.utils.AllureUtils;
@@ -59,7 +58,7 @@ public class Case38_MSL_Notificationtest {
         String dynamicLink = generateDynamicLink();
 
         // Add the dynamic link to the Allure report
-        Allure.link("Logic page link", dynamicLink);
+        Allure.link("Notification", dynamicLink);
     
         // Capture console logs
         String consoleLogs = consoleOutput.toString();
@@ -69,7 +68,7 @@ public class Case38_MSL_Notificationtest {
         Allure.addAttachment("Console Output", "text/plain", consoleLogs);
         
         // Capture a screenshot and attach it to Allure
-        AllureUtils.captureScreenshot(driver, "fuel_report_screenshot");
+        AllureUtils.captureScreenshot(driver, "Notification");
         Allure.step("Step Details");
         
         // Retrieve OS information

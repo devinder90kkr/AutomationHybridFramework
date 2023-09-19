@@ -57,7 +57,7 @@ public class Case22_MS_speheres_Overridetest {
         String dynamicLink = generateDynamicLink();
 
         // Add the dynamic link to the Allure report
-        Allure.link("Logic page link", dynamicLink);
+        Allure.link("Case22_MS_speheres_Overridetest", dynamicLink);
     
         // Capture console logs
         String consoleLogs = consoleOutput.toString();
@@ -67,7 +67,7 @@ public class Case22_MS_speheres_Overridetest {
         Allure.addAttachment("Console Output", "text/plain", consoleLogs);
         
         // Capture a screenshot and attach it to Allure
-        AllureUtils.captureScreenshot(driver, "fuel_report_screenshot");
+        AllureUtils.captureScreenshot(driver, "Case22_MS_speheres_Overridetest");
         Allure.step("Step Details");
         
         // Retrieve OS information
@@ -81,7 +81,7 @@ public class Case22_MS_speheres_Overridetest {
     
  private String generateDynamicLink() {
         
-        return "https://app.cuesz.com/member-specs/627d168e40231fb0ba6a057a"; // Replace with your actual dynamic link
+        return "https://pre-staging.app.cuesz.com/member-specs/627d168e40231fb0ba6a057a"; // Replace with your actual dynamic link
     }
     @AfterClass
     public void tearDown() {

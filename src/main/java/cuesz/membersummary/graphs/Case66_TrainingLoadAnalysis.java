@@ -82,6 +82,7 @@ public class Case66_TrainingLoadAnalysis extends BasePage {
                 optionElement1.click();
                 // Close the dropdown after selecting an option
                 dropdownElementDuration.click();
+                
                 Thread.sleep(1000);
             }
 
@@ -101,6 +102,7 @@ public class Case66_TrainingLoadAnalysis extends BasePage {
 
                 // Close the dropdown after selecting an option
                 dropdownElementHeartRate.click();
+                dropdownElementDuration.click();
                 dropdownElementHeartRate.click();
                 Thread.sleep(1000);
             }
@@ -121,6 +123,7 @@ public class Case66_TrainingLoadAnalysis extends BasePage {
 
                 // Close the dropdown after selecting an option
                 dropdownElementCondition.click();
+               
                 Thread.sleep(1000);
             }
         } catch (Exception e) {

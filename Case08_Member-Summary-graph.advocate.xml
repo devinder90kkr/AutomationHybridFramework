@@ -11,7 +11,7 @@
  	  <class name="cuesz.membersummarygraph.advocate.Case64_RestingPhysiologytest"/>
  	  <class name="cuesz.membersummarygraph.advocate.Case65_BiofeedbackAnalysistest"/>
  	  <class name="cuesz.membersummarygraph.advocate.Case66_TrainingLoadAnalysistest"/>
-
+	<class name="cuesz.membersummarygraph.advocate.Case79_WeeklyAndMonthlySummariestest"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">	 
+  <test thread-count="5" name="Test">
+    <classes>
+      <class name="cuesz.dashboard.coach.Step15_DB_navlinkcoachtest"/>
+	  <class name="cuesz.dashboard.coach.Step13_DB_notificationtest"/>
+	  <class name="cuesz.dashboard.coach.Step14_DB_Clocktest"/>
+	  <class name="cuesz.dashboard.coach.Step14_DB_MessgNotificationtest"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

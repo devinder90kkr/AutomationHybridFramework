@@ -41,7 +41,13 @@ public class Case71_MS_bodyscancompare extends BasePage {
         // Find the Compare element and click on it
         WebElement compare = driver.findElement(compre);
         compare.click();
-
+        Thread.sleep(1500);
+        driver.navigate().refresh();
+        Thread.sleep(8500);
+        
+        WebElement compare1 = driver.findElement(compre);
+        compare1.click();
+        
         // Define the XPath for the Comparison popup (you may need to adjust this)
         By comparisonPopupLocator = comparPopup;
         // Wait for the Comparison popup to appear

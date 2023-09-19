@@ -1,0 +1,1 @@
+{"uuid":"4e87cf29-e2db-4aa6-91cd-4493bcd8b7e0","name":"cuesz.logictest.advocate.Case43_MSL_Fueltest","children":["c13ff678-eb8d-4d5a-a0e7-fe66642b827f"],"befores":[{"name":"setUp","status":"passed","stage":"finished","description":"","steps":[],"attachments":[],"parameters":[],"start":1695109415853,"stop":1695109419607}],"afters":[],"start":1695109415804,"stop":1695109475768}

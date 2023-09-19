@@ -63,6 +63,11 @@
     <version>1.2.2</version>
 </dependency>
 
+<dependency>
+    <groupId>com.aventstack</groupId>
+    <artifactId>extentreports</artifactId>
+    <version>5.1.0</version>
+</dependency>
 
 <dependency>
     <groupId>org.testng</groupId>
@@ -70,11 +75,7 @@
     <version>7.8.0</version>
     <scope>test</scope>
 </dependency>
-	<dependency>
-		<groupId>Cuesz</groupId>
-		<artifactId>Cuesz</artifactId>
-		<version>0.0.1-SNAPSHOT</version>
-	</dependency>
+
 </dependencies>
  
   <build>

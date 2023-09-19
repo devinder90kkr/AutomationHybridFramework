@@ -57,7 +57,7 @@ public class Case64_RestingPhysiologytest {
         String dynamicLink = generateDynamicLink();
 
         // Add the dynamic link to the Allure report
-        Allure.link("Logic page link", dynamicLink);
+        Allure.link("Case64_RestingPhysiologytest", dynamicLink);
     
         // Capture console logs
         String consoleLogs = consoleOutput.toString();
@@ -67,7 +67,7 @@ public class Case64_RestingPhysiologytest {
         Allure.addAttachment("Console Output", "text/plain", consoleLogs);
         
         // Capture a screenshot and attach it to Allure
-        AllureUtils.captureScreenshot(driver, "fuel_report_screenshot");
+        AllureUtils.captureScreenshot(driver, "Case64_RestingPhysiologytest");
         Allure.step("Step Details");
         
         // Retrieve OS information

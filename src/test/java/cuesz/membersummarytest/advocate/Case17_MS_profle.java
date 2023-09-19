@@ -57,7 +57,7 @@ public class Case17_MS_profle {
         String dynamicLink = generateDynamicLink();
 
         // Add the dynamic link to the Allure report
-        Allure.link("Logic page link", dynamicLink);
+        Allure.link("Case17_MS_profle", dynamicLink);
     
         // Capture console logs
         String consoleLogs = consoleOutput.toString();
@@ -67,7 +67,7 @@ public class Case17_MS_profle {
         Allure.addAttachment("Console Output", "text/plain", consoleLogs);
         
         // Capture a screenshot and attach it to Allure
-        AllureUtils.captureScreenshot(driver, "fuel_report_screenshot");
+        AllureUtils.captureScreenshot(driver, "Case17_MS_profle");
         Allure.step("Step Details");
         
         // Retrieve OS information

@@ -55,7 +55,7 @@ public class Case07_MC_createevent {
         String dynamicLink = generateDynamicLink();
 
         // Add the dynamic link to the Allure report
-        Allure.link("Logic page link", dynamicLink);
+        Allure.link("Case07_MC_createevent", dynamicLink);
     
         // Capture console logs
         String consoleLogs = consoleOutput.toString();
@@ -65,7 +65,7 @@ public class Case07_MC_createevent {
         Allure.addAttachment("Console Output", "text/plain", consoleLogs);
         
         // Capture a screenshot and attach it to Allure
-        AllureUtils.captureScreenshot(driver, "fuel_report_screenshot");
+        AllureUtils.captureScreenshot(driver, "Case07_MC_createevent");
         Allure.step("Step Details");
         
         // Retrieve OS information

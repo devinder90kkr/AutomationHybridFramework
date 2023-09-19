@@ -56,7 +56,7 @@ public class Case70_Fueldashboardcalculatorstest {
         String dynamicLink = generateDynamicLink();
 
         // Add the dynamic link to the Allure report
-        Allure.link("Logic page link", dynamicLink);
+        Allure.link("Case70_Fueldashboardcalculatorstest", dynamicLink);
     
         // Capture console logs
         String consoleLogs = consoleOutput.toString();
@@ -66,7 +66,7 @@ public class Case70_Fueldashboardcalculatorstest {
         Allure.addAttachment("Console Output", "text/plain", consoleLogs);
         
         // Capture a screenshot and attach it to Allure
-        AllureUtils.captureScreenshot(driver, "fuel_report_screenshot");
+        AllureUtils.captureScreenshot(driver, "Case70_Fueldashboardcalculatorstest");
         Allure.step("Step Details");
         
         // Retrieve OS information

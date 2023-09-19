@@ -9,6 +9,7 @@
        <class name="cuesz.logictest.advocate.Case35_MSL_MemberWilingnessLimitationScoretest" />
        <class name="cuesz.logictest.advocate.Case36_MSL_Staffnotestest" />    
        <class name="cuesz.logictest.advocate.Case37_MSL_Habbitsnotestest" />
+         <class name="cuesz.logictest.advocate.Case38_MSL_Notificationtest" />
        <class name="cuesz.logictest.advocate.Case42_MSL_Performtest" />
            <class name="cuesz.logictest.advocate.Case44_MSL_Mindfultest" />
        <class name="cuesz.logictest.advocate.Case45_MSL_restoretest" />    

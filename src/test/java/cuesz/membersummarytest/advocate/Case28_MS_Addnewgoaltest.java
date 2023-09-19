@@ -56,7 +56,7 @@ public class Case28_MS_Addnewgoaltest {
         String dynamicLink = generateDynamicLink();
 
         // Add the dynamic link to the Allure report
-        Allure.link("Logic page link", dynamicLink);
+        Allure.link("Case28_MS_Addnewgoaltest", dynamicLink);
     
         // Capture console logs
         String consoleLogs = consoleOutput.toString();
@@ -66,7 +66,7 @@ public class Case28_MS_Addnewgoaltest {
         Allure.addAttachment("Console Output", "text/plain", consoleLogs);
         
         // Capture a screenshot and attach it to Allure
-        AllureUtils.captureScreenshot(driver, "fuel_report_screenshot");
+        AllureUtils.captureScreenshot(driver, "Case28_MS_Addnewgoaltest");
         Allure.step("Step Details");
         
         // Retrieve OS information
@@ -80,7 +80,7 @@ public class Case28_MS_Addnewgoaltest {
     
  private String generateDynamicLink() {
         
-        return "https://app.cuesz.com/member-specs/627d168e40231fb0ba6a057a"; // Replace with your actual dynamic link
+        return "https://pre-staging.app.cuesz.com/member-specs/627d168e40231fb0ba6a057a"; // Replace with your actual dynamic link
     }
     @AfterClass
     public void tearDown() {

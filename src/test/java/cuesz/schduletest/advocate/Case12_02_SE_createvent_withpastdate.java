@@ -56,7 +56,7 @@ public class Case12_02_SE_createvent_withpastdate {
         String dynamicLink = generateDynamicLink();
 
         // Add the dynamic link to the Allure report
-        Allure.link("Logic page link", dynamicLink);
+        Allure.link("Case12_02_SE_createvent_withpastdate", dynamicLink);
     
         // Capture console logs
         String consoleLogs = consoleOutput.toString();
@@ -66,7 +66,7 @@ public class Case12_02_SE_createvent_withpastdate {
         Allure.addAttachment("Console Output", "text/plain", consoleLogs);
         
         // Capture a screenshot and attach it to Allure
-        AllureUtils.captureScreenshot(driver, "fuel_report_screenshot");
+        AllureUtils.captureScreenshot(driver, "Case12_02_SE_createvent_withpastdate");
         Allure.step("Step Details");
         
         // Retrieve OS information
