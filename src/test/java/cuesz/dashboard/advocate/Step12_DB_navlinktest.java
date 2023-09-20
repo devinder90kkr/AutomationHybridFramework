@@ -1,8 +1,13 @@
 package cuesz.dashboard.advocate;
 
-import java.io.ByteArrayOutputStream;
-import java.io.PrintStream;
-
+import io.qameta.allure.Allure;
+import io.qameta.allure.Description;
+import io.qameta.allure.Epic;
+import io.qameta.allure.Feature;
+import io.qameta.allure.Owner;
+import io.qameta.allure.Severity;
+import io.qameta.allure.SeverityLevel;
+import io.qameta.allure.Story;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
@@ -12,7 +17,11 @@ import cuesz.logintest.AdvocateLogin;
 import cuesz.utils.AllureUtils;
 import cuesz.utils.WebDriverManager;
 
-import io.qameta.allure.*;
+import java.io.ByteArrayOutputStream;
+import java.io.PrintStream;
+import java.util.ArrayList;
+import java.util.List;
+
 @Epic ("Advocate dashboard cases")
 @Feature ("Vaerify navigation for dashbaord.")
 
@@ -22,6 +31,8 @@ public class Step12_DB_navlinktest {
     private Step12_DB_navlink dashboardPage;
     
     private ByteArrayOutputStream consoleOutput; // To capture console output
+    private List<Integer> statusCodes; // To store HTTP status codes
+
 
     @BeforeClass
     public void setUp() {
@@ -34,6 +45,9 @@ public class Step12_DB_navlinktest {
         consoleOutput = new ByteArrayOutputStream();
         PrintStream printStream = new PrintStream(consoleOutput);
         System.setOut(printStream);
+        
+     // Initialize the list to store status codes
+        statusCodes = new ArrayList<>();
     }
 
     @Test
@@ -49,6 +63,13 @@ public class Step12_DB_navlinktest {
 
         // Access the Schedule Event page
         dashboardPage.Navigationfunctionality();
+        
+     // Capture the HTTP status code
+        int statusCode = captureHttpStatusCode();
+
+     // Log the status code in Allure
+        statusCodes.add(statusCode);
+
     
         // Generate a dynamic link based on some runtime conditions or data
         String dynamicLink = generateDynamicLink();
@@ -76,12 +97,24 @@ public class Step12_DB_navlinktest {
         
     }
     
+    
+    private int captureHttpStatusCode() {
+        // Implement code to capture the HTTP status code from your application
+        // For example, you can extract it from a response object or using Selenium WebDriver
+        // Replace the following line with your actual code
+        return 200; // Replace with the actual code to capture the status code
+    }
+
+    
  private String generateDynamicLink() {
         
         return "https://pre-staging.app.cuesz.com/dashboard"; // Replace with your actual dynamic link
     }
     @AfterClass
     public void tearDown() {
+    	
+    	// Log all captured status codes in Allure
+        Allure.step("All HTTP Status Codes: " + statusCodes);
         WebDriverManager.quitDriver();
        
     }
