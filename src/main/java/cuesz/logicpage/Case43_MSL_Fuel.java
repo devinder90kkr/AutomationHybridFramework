@@ -69,35 +69,57 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 	  	   
      /********************************************************************Populate data for monday first activity *************************************************************************************/
 			   
-			// Locate the element by its class name (replace 'FuelOptionFirst_1-Monday' with the actual class name)
-
-			   // Locate the React Select element by its CSS selector
-		        WebElement reactSelect = driver.findElement(By.cssSelector("div.FuelOptionFirst_1-Monday.react-select__control"));
-
-		        // Click on the React Select to open the dropdown
-		        reactSelect.click();
-
-		        // Wait for the dropdown to appear (you may need to adjust the timeout)
-		        WebDriverWait wait1 = new WebDriverWait(driver, Duration.ofSeconds(5500));
-		        WebElement dropdown = wait1.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("div.FuelOptionFirst_1-Monday.react-select__menu")));
-
-		        //		        WebElement inputField = driver.findElement(By.cssSelector("div.react-select__input-container input[type='text']"));
-		        WebElement inputField = driver.findElement(By.xpath("//div[@class='FuelOptionFirst_1-Monday react-select__indicators css-1wy0on6']"));
-		        //Explicitly wait for the input field to be clickable
-		        WebDriverWait wait11 = new WebDriverWait(driver, Duration.ofSeconds(4500));
-		        wait11.until(ExpectedConditions.elementToBeClickable(inputField));
-		        
-
-
-		        // Clear any existing value and enter your desired value
-//		        inputField.clear();
-		        inputField.sendKeys("Apple Greeb");
-
-		        // Use Actions class to send the Tab key to select the option
-		        Actions actions = new Actions(driver);
-		        actions.sendKeys(inputField, Keys.TAB).perform();
+//			// Locate the element by its class name (replace 'FuelOptionFirst_1-Monday' with the actual class name)
+//
+//			   // Locate the React Select element by its CSS selector
+//		        WebElement reactSelect = driver.findElement(By.cssSelector("div.FuelOptionFirst_1-Monday.react-select__control"));
+//
+//		        // Click on the React Select to open the dropdown
+//		        reactSelect.click();
+//
+//		        // Wait for the dropdown to appear (you may need to adjust the timeout)
+//		        WebDriverWait wait1 = new WebDriverWait(driver, Duration.ofSeconds(5500));
+//		        WebElement dropdown = wait1.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("div.FuelOptionFirst_1-Monday.react-select__menu")));
+//
+//		        //		        WebElement inputField = driver.findElement(By.cssSelector("div.react-select__input-container input[type='text']"));
+//		        WebElement inputField = driver.findElement(By.xpath("//div[@class='FuelOptionFirst_1-Monday react-select__indicators css-1wy0on6']"));
+//		        //Explicitly wait for the input field to be clickable
+//		        WebDriverWait wait11 = new WebDriverWait(driver, Duration.ofSeconds(4500));
+//		        wait11.until(ExpectedConditions.elementToBeClickable(inputField));
+//		       
+//		        inputField.sendKeys("Apple Green");
+//
+		        Thread.sleep(3500);
+//		        // Use Actions class to send the Tab key to select the option
+//		        Actions actions = new Actions(driver);
+//		        actions.sendKeys(inputField, Keys.TAB).perform();
 			   
-Thread.sleep(2500);
+//		        https://chat.openai.com/share/68e7bc08-e866-4816-b311-cdcc35405dea
+		        
+			   try {
+		            // Locate the input field
+		            WebElement inputField = driver.findElement(By.xpath("//div[@class='FuelOptionFirst_1-Monday react-select__input']/input"));
+
+		            // Enter values into the input field
+		            inputField.sendKeys("Apple green");
+
+		            // Wait for a moment (optional)
+		            Thread.sleep(1000);
+
+		            // Simulate pressing the Enter key
+		            inputField.sendKeys(Keys.ENTER);
+
+		            // Wait for a moment (optional)
+		            Thread.sleep(1000);
+
+		    
+		        } catch (InterruptedException e) {
+		            e.printStackTrace();
+		        } finally {
+			   
+			   
+			   
+			   Thread.sleep(2500);
 		        
 			 
 			   
@@ -106,6 +128,7 @@ Thread.sleep(2500);
 			   
 			   
 		 }
+	}
 	}
 	 
 	
