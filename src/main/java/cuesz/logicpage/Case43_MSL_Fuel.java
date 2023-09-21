@@ -44,9 +44,8 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 		  //      utils.navigateToLastAndNextWeek();
 		    
 	   		   driver.findElement(By.xpath("//span[normalize-space()='Next Week']")).click();
-	   		driver.findElement(By.xpath("//span[normalize-space()='Next Week']")).click();
-		        Thread.sleep(2000);		
-		  	        
+	   
+		      
 	 /***************************************Click on Perfom and scroll******************************************************************************************/
 		  	   Thread.sleep(5500);
 		  	   WebElement Fuelheading = driver.findElement(fuelcrad);
@@ -69,49 +68,33 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 	  	   
      /********************************************************************Populate data for monday first activity *************************************************************************************/
 			   
-//			// Locate the element by its class name (replace 'FuelOptionFirst_1-Monday' with the actual class name)
-//
-//			   // Locate the React Select element by its CSS selector
-//		        WebElement reactSelect = driver.findElement(By.cssSelector("div.FuelOptionFirst_1-Monday.react-select__control"));
-//
-//		        // Click on the React Select to open the dropdown
-//		        reactSelect.click();
-//
-//		        // Wait for the dropdown to appear (you may need to adjust the timeout)
-//		        WebDriverWait wait1 = new WebDriverWait(driver, Duration.ofSeconds(5500));
-//		        WebElement dropdown = wait1.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("div.FuelOptionFirst_1-Monday.react-select__menu")));
-//
-//		        //		        WebElement inputField = driver.findElement(By.cssSelector("div.react-select__input-container input[type='text']"));
-//		        WebElement inputField = driver.findElement(By.xpath("//div[@class='FuelOptionFirst_1-Monday react-select__indicators css-1wy0on6']"));
-//		        //Explicitly wait for the input field to be clickable
-//		        WebDriverWait wait11 = new WebDriverWait(driver, Duration.ofSeconds(4500));
-//		        wait11.until(ExpectedConditions.elementToBeClickable(inputField));
-//		       
-//		        inputField.sendKeys("Apple Green");
-//
-		        Thread.sleep(3500);
-//		        // Use Actions class to send the Tab key to select the option
-//		        Actions actions = new Actions(driver);
-//		        actions.sendKeys(inputField, Keys.TAB).perform();
-			   
+		   
 //		        https://chat.openai.com/share/68e7bc08-e866-4816-b311-cdcc35405dea
 		        
 			   try {
 		            // Locate the input field
 		            WebElement inputField = driver.findElement(By.xpath("//div[@class='FuelOptionFirst_1-Monday react-select__input']/input"));
-
 		            // Enter values into the input field
 		            inputField.sendKeys("Apple green");
-
 		            // Wait for a moment (optional)
 		            Thread.sleep(1000);
-
 		            // Simulate pressing the Enter key
 		            inputField.sendKeys(Keys.ENTER);
+		         
+		            // Clear the input field to enter the second value
+		            inputField.clear();
+		            
+		            
+		         // Enter the second value "Curd" into the input field
+		            inputField.sendKeys("bacon");
 
 		            // Wait for a moment (optional)
 		            Thread.sleep(1000);
 
+		            // Simulate pressing the Enter key to select the second value
+		            inputField.sendKeys(Keys.ENTER);
+		            // Wait for a moment (optional)
+		            Thread.sleep(1000);
 		    
 		        } catch (InterruptedException e) {
 		            e.printStackTrace();
