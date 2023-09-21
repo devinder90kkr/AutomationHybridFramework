@@ -29,8 +29,8 @@ public class WebDriverManager {
                 options.setExperimentalOption("prefs", prefs);
                 // Allow camera and microphone access
                 options.addArguments("--use-fake-ui-for-media-stream");
-                // Create a new private browsing session (Incognito mode)
-                options.addArguments("--incognito");
+//                // Create a new private browsing session (Incognito mode)
+//                options.addArguments("--incognito");
 
                 System.setProperty("webdriver.chrome.driver", Configuration.CHROME_DRIVER_PATH);
 

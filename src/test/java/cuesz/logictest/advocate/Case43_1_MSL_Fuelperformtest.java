@@ -9,7 +9,7 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
-import cuesz.logicpage.Case43_MSL_Fuel;
+import cuesz.logicpage.Case43_1_MSL_Fuelperform;
 import cuesz.logintest.AdvocateLogin;
 import cuesz.utils.AllureUtils;
 import cuesz.utils.WebDriverManager;
@@ -19,10 +19,10 @@ import io.qameta.allure.*;
 @Epic ("Cuesz Staff on Logic Page for Fuel Testing")
 @Feature ("Assign recomended Fuel activity to Member")
 
-public class Case43_MSL_Fueltest {
+public class Case43_1_MSL_Fuelperformtest {
     private WebDriver driver;
     private AdvocateLogin advocateLogin;
-    private Case43_MSL_Fuel memberlogicPage;
+    private Case43_1_MSL_Fuelperform memberlogicPage;
     
     private ByteArrayOutputStream consoleOutput; // To capture console output
     
@@ -31,7 +31,7 @@ public class Case43_MSL_Fueltest {
         driver = WebDriverManager.getDriver();
         driver.manage().window().maximize();
         advocateLogin = new AdvocateLogin(); // Initialise the advocateLogin object
-        memberlogicPage = new Case43_MSL_Fuel(driver);
+        memberlogicPage = new Case43_1_MSL_Fuelperform(driver);
         
      // Redirect console output to capture it
         consoleOutput = new ByteArrayOutputStream();
@@ -57,7 +57,7 @@ public class Case43_MSL_Fueltest {
         String dynamicLink = generateDynamicLink();
 
         // Add the dynamic link to the Allure report
-        Allure.link("Logic page link", dynamicLink);
+        Allure.link("Case43_1_MSL_Fuelperform", dynamicLink);
     
         // Capture console logs
         String consoleLogs = consoleOutput.toString();
@@ -67,7 +67,7 @@ public class Case43_MSL_Fueltest {
         Allure.addAttachment("Console Output", "text/plain", consoleLogs);
         
         // Capture a screenshot and attach it to Allure
-        AllureUtils.captureScreenshot(driver, "fuel_report_screenshot");
+        AllureUtils.captureScreenshot(driver, "Case43_1_MSL_Fuelperform");
         Allure.step("Step Details");
         
         // Retrieve OS information

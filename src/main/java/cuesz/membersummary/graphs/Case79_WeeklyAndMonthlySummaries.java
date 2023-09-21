@@ -1,4 +1,4 @@
-package cuesz.membersummary.graphs;
+ package cuesz.membersummary.graphs;
 
 import java.time.Duration;
 import org.openqa.selenium.By;

@@ -9,7 +9,7 @@
        <class name="cuesz.logictest.coach.Case36_MSL_Staffnotestest" />    
        <class name="cuesz.logictest.coach.Case37_MSL_Habbitsnotestest" />
        <class name="cuesz.logictest.coach.Case42_MSL_Performtest" />
-       
+        <class name="cuesz.logictest.coach.Case43_MSL_Fueltest" />
        <class name="cuesz.logictest.coach.Case44_MSL_Mindfultest" />
        <class name="cuesz.logictest.coach.Case45_MSL_restoretest" />    
     </classes>

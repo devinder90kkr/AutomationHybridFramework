@@ -1,63 +1,62 @@
-package cuesz.logictest.advocate;
+package cuesz.membersummary.fuelreport.advocate;
 
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
-import java.text.ParseException;
 
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
-import cuesz.logicpage.Case43_MSL_Fuel;
 import cuesz.logintest.AdvocateLogin;
+import cuesz.membersummary.fuelreport.Case82_FuelRecommendation;
 import cuesz.utils.AllureUtils;
 import cuesz.utils.WebDriverManager;
 
 import io.qameta.allure.*;
 
-@Epic ("Cuesz Staff on Logic Page for Fuel Testing")
-@Feature ("Assign recomended Fuel activity to Member")
+@Epic ("Cuesz Staff on Fuel report page")
+@Feature ("Verify staff able to access Calories Calculator for member")
 
-public class Case43_MSL_Fueltest {
+
+public class Case82_FuelRecommendationtest {
     private WebDriver driver;
     private AdvocateLogin advocateLogin;
-    private Case43_MSL_Fuel memberlogicPage;
+    private Case82_FuelRecommendation  membersummarygraphPage;
     
     private ByteArrayOutputStream consoleOutput; // To capture console output
-    
+
     @BeforeClass
     public void setUp() {
         driver = WebDriverManager.getDriver();
         driver.manage().window().maximize();
-        advocateLogin = new AdvocateLogin(); // Initialise the advocateLogin object
-        memberlogicPage = new Case43_MSL_Fuel(driver);
+        advocateLogin = new AdvocateLogin(); // Initialize the advocateLogin object
+        membersummarygraphPage = new Case82_FuelRecommendation (driver);
         
      // Redirect console output to capture it
         consoleOutput = new ByteArrayOutputStream();
         PrintStream printStream = new PrintStream(consoleOutput);
-        System.setOut(printStream);
-                 
+        System.setOut(printStream); 
     }
 
     @Test
     @Owner("QA") // Add the @Owner annotation to specify the executor
-    @Severity(SeverityLevel.NORMAL)
-    @Description("Verify the functionality of the staff advocate's logic page is displaying assign fuel.")
-    @Story(" Successfully assign fuel for member")
+    @Severity(SeverityLevel.NORMAL)    
+    @Description("Verify the functionality that staff able to access Calories Calculator.")
+    @Story("Successfuly  access Calories Calculator for member in fuels")
     
-    public void advocatelogicmemberTest() throws InterruptedException, ParseException {
+    public void advocateMemberhoverTest() throws InterruptedException {
         advocateLogin.setUp(); // Call the setUp method of AdvocateLogin to initialise loginPage
         advocateLogin.testAdvocateLogin();
 
-        // Access the Schedule Event page
-        memberlogicPage.Fuel();
-    
-     // Generate a dynamic link based on some runtime conditions or data
+        // Access the graphs page
+        membersummarygraphPage.fuelreport();
+        
+        // Generate a dynamic link based on some runtime conditions or data
         String dynamicLink = generateDynamicLink();
 
         // Add the dynamic link to the Allure report
-        Allure.link("Logic page link", dynamicLink);
+        Allure.link("Case70_Fueldashboardcalculatorstest", dynamicLink);
     
         // Capture console logs
         String consoleLogs = consoleOutput.toString();
@@ -67,7 +66,7 @@ public class Case43_MSL_Fueltest {
         Allure.addAttachment("Console Output", "text/plain", consoleLogs);
         
         // Capture a screenshot and attach it to Allure
-        AllureUtils.captureScreenshot(driver, "fuel_report_screenshot");
+        AllureUtils.captureScreenshot(driver, "Case70_Fueldashboardcalculatorstest");
         Allure.step("Step Details");
         
         // Retrieve OS information
@@ -81,11 +80,11 @@ public class Case43_MSL_Fueltest {
     
  private String generateDynamicLink() {
         
-        return "https://pre-staging.app.cuesz.com/logic-page/627d168e40231fb0ba6a057a"; // Replace with your actual dynamic link
+        return "https://pre-staging.app.cuesz.com/member-specs/627d168e40231fb0ba6a057a/fuel"; // Replace with your actual dynamic link
     }
-
     @AfterClass
     public void tearDown() {
         WebDriverManager.quitDriver();
+       
     }
 }
