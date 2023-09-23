@@ -1,15 +1,19 @@
 package cuesz.logicpage;
 
 import java.text.ParseException;
+import java.time.Duration;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
 
 import cuesz.pages.BasePage;
+import cuesz.utils.Currentdategenerator;
 import cuesz.utils.SeleniumUtils;
 
 public class Case36_MSL_Staffnotes extends BasePage {
@@ -282,25 +286,40 @@ public class Case36_MSL_Staffnotes extends BasePage {
 //
 //		        Thread.sleep(2500);
 
-	     // Calculate the desired date for two weeks ahead
-		     LocalDate currentDate = LocalDate.now();
-		     LocalDate desiredDate = currentDate.plusWeeks(2); // Change 2 to the desired number of weeks ahead
+		     // Get the current date using your Currentdategenerator class
+		        String currentDateStr = Currentdategenerator.generateCurrentDate();
+		        DateTimeFormatter dateFormatter = DateTimeFormatter.ofPattern("dd-MM-yyyy");
+		        LocalDate currentDate = LocalDate.parse(currentDateStr, dateFormatter);
 
-		     // Check if the desired date is in the next month
-		     if (desiredDate.getMonthValue() != currentDate.getMonthValue()) {
-		         // Click on the "Next Month" arrow button
-		         WebElement nextMonthButton = driver.findElement(By.xpath("//span[@class='DayPicker-NavButton DayPicker-NavButton--next']"));
-		         nextMonthButton.click();
-		     }
+		        // Find today's date element
+		        WebElement todayDateElement = driver.findElement(By.xpath("//div[contains(@class, 'DayPicker-Day--today')]"));
 
-		     // Find the date element for the desired date and click on it
-		     String desiredDateLocator = String.format("//div[@aria-label='%s']", desiredDate.format(DateTimeFormatter.ofPattern("EEE MMM d yyyy")));
-		     WebElement desiredDateElement = driver.findElement(By.xpath(desiredDateLocator));
-		     desiredDateElement.click();
+		        // Get the text of today's date (e.g., "3")
+		        String todayDateText = todayDateElement.getText();
 
-		     Thread.sleep(2500);
+		        // Extract the day value from today's date
+		        int today = Integer.parseInt(todayDateText);
 
-	        
+		        // Calculate the date for two weeks ahead (adding 14 days)
+		        int twoWeeksAhead = today + 8;
+
+		        // Calculate the desired date
+		        LocalDate desiredDate = currentDate.plusDays(twoWeeksAhead);
+
+		        // Check if the desired date is in the next month
+		        if (desiredDate.getMonthValue() != currentDate.getMonthValue()) {
+		            // Click on the "Next Month" arrow button
+		            WebElement nextMonthButton = driver.findElement(By.xpath("//span[@class='DayPicker-NavButton DayPicker-NavButton--next']"));
+		            nextMonthButton.click();
+		        }
+
+		        // Find the date element for the desired date and click on it
+		        String desiredDateLocator = String.format("//div[@aria-label='%s']", desiredDate.format(DateTimeFormatter.ofPattern("EEE MMM d yyyy")));
+		        
+		        WebDriverWait wait2 = new WebDriverWait(driver,Duration.ofSeconds(1000)); // Adjust the timeout as needed
+		        WebElement desiredDateElement = wait2.until(ExpectedConditions.elementToBeClickable(By.xpath(desiredDateLocator)));
+		        desiredDateElement.click();
+
 		        // Print the value of the clicked date
 		        System.out.println("Clicked on date: " + desiredDateElement.getText());
 

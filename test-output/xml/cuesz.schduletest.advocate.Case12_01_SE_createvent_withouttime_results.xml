@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Test"
+           tests="1"
+           failures="0"
+           errors="0"
+           skipped="0"
+           time="24.396">
+    <properties></properties>
+
+
+
+            <testcase
+                name="advocatecreateEventwithouttimeTest"
+                time="24.396"
+                classname="cuesz.schduletest.advocate.Case12_01_SE_createvent_withouttime">
+            </testcase>
+</testsuite>

@@ -4,14 +4,14 @@
            failures="0"
            errors="0"
            skipped="0"
-           time="71.658">
+           time="65.338">
     <properties></properties>
 
 
 
             <testcase
                 name="advocatelogicmemberTest"
-                time="71.658"
+                time="65.338"
                 classname="cuesz.logictest.advocate.Case36_MSL_Staffnotestest">
             </testcase>
 </testsuite>

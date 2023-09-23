@@ -7,6 +7,7 @@
 	  <class name="cuesz.dashboard.advocate.Step13_DB_notificationtest"/>
 	  <class name="cuesz.dashboard.advocate.Step14_DB_Clocktest"/>
 	  <class name="cuesz.dashboard.advocate.Step14_DB_MessgNotificationtest"/>
+	
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

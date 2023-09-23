@@ -42,11 +42,11 @@ public class Case77_MS_uplaodtonnage_Physiological extends BasePage {
         Thread.sleep(3000);
         // Find and upload the front posture
         WebElement frontUploadButton = driver.findElement(frntUploadBttn);
-        frontUploadButton.sendKeys("/Users/chicmicmac/git/Cuesz_AutomationTests/Uploadtonnage-Physiologicaldata/Tonnage.png"); // Replace with the actual file path
+        frontUploadButton.sendKeys("/Users/chicmic/git/Cuesz_AutomationTests/Uploadtonnage-Physiologicaldata/Tonnage.png"); // Replace with the actual file path
 
      // Upload the side left posture
         WebElement sideLeftUploadButton = driver.findElement(sidLftUpladBttn);
-        sideLeftUploadButton.sendKeys("/Users/chicmicmac/git/Cuesz_AutomationTests/Uploadtonnage-Physiologicaldata/Physiological.png"); // Replace with the actual file path
+        sideLeftUploadButton.sendKeys("/Users/chicmic/git/Cuesz_AutomationTests/Uploadtonnage-Physiologicaldata/Physiological.png"); // Replace with the actual file path
 
         
         Thread.sleep(8000);

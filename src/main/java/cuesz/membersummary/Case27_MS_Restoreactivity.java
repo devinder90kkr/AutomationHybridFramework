@@ -91,17 +91,10 @@ public class Case27_MS_Restoreactivity extends BasePage {
   		  		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
   		  		wait.until(ExpectedConditions.visibilityOfElementLocated(elemnt));
 
+
   		  		// Get the current date
   		  		String currentDate = driver.findElement(currntime).getAttribute("aria-label");
-
-  		  		// Assuming currentDate is in the format "Sun Jul 23 2023"
-  		  		// You can parse it and find the previous week's start date
-
-  		  		// ... parsing logic to find previous week's start date ...
-  		  		// Let's say the previous week's start date is "Mon Jul 17 2023"
-
-  		  		// Now, locate and click on the previous week's start date
-  		  		String previousWeekStartDate = "Mon Aug 07 2023";
+  		  		String previousWeekStartDate = "Sun Sep 03 2023";
   		  		WebElement previousWeekDateElement = driver.findElement(By.xpath("//div[@aria-label='" + previousWeekStartDate + "']"));
   		  		previousWeekDateElement.click();
 

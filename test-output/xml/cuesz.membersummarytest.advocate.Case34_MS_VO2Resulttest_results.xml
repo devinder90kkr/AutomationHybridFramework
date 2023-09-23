@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Test"
+           tests="1"
+           failures="0"
+           errors="0"
+           skipped="0"
+           time="45.619">
+    <properties></properties>
+
+
+
+            <testcase
+                name="advocatebodyscanresultTest"
+                time="45.619"
+                classname="cuesz.membersummarytest.advocate.Case34_MS_VO2Resulttest">
+            </testcase>
+</testsuite>

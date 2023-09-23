@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Test"
+           tests="1"
+           failures="0"
+           errors="0"
+           skipped="0"
+           time="32.700">
+    <properties></properties>
+
+
+
+            <testcase
+                name="advocateMemberhoverTest"
+                time="32.700"
+                classname="cuesz.membersummarytest.advocate.Case15_MS_memberhoverdetail">
+            </testcase>
+</testsuite>
