@@ -2,24 +2,24 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-09-23T03:31:32Z" name="Default suite" finished-at="2023-09-23T03:32:18Z" duration-ms="46250">
+  <suite started-at="2023-09-24T06:58:04 IST" name="Default suite" finished-at="2023-09-24T06:59:52 IST" duration-ms="108166">
     <groups>
     </groups>
-    <test started-at="2023-09-23T03:31:32Z" name="Default test" finished-at="2023-09-23T03:32:18Z" duration-ms="46250">
-      <class name="cuesz.membersummarytest.advocate.Case33_MS_Uploadposturetest">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:cuesz.membersummarytest.advocate.Case33_MS_Uploadposturetest@2ef14fe]" started-at="2023-09-23T09:01:32Z" name="setUp" finished-at="2023-09-23T09:01:34Z" duration-ms="2031" status="PASS">
+    <test started-at="2023-09-24T06:58:04 IST" name="Default test" finished-at="2023-09-24T06:59:52 IST" duration-ms="108166">
+      <class name="cuesz.logictest.advocate.Case36_MSL_Staffnotestest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:cuesz.logictest.advocate.Case36_MSL_Staffnotestest@30f842ca]" started-at="2023-09-24T06:58:04 IST" name="setUp" finished-at="2023-09-24T06:58:12 IST" duration-ms="7804" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="advocateScheduleEventTest()[pri:0, instance:cuesz.membersummarytest.advocate.Case33_MS_Uploadposturetest@2ef14fe]" started-at="2023-09-23T09:01:34Z" name="advocateScheduleEventTest" finished-at="2023-09-23T09:02:18Z" duration-ms="44002" status="PASS">
+        <test-method signature="advocatelogicmemberTest()[pri:0, instance:cuesz.logictest.advocate.Case36_MSL_Staffnotestest@30f842ca]" started-at="2023-09-24T06:58:12 IST" name="advocatelogicmemberTest" finished-at="2023-09-24T06:59:51 IST" duration-ms="98695" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- advocateScheduleEventTest -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:cuesz.membersummarytest.advocate.Case33_MS_Uploadposturetest@2ef14fe]" started-at="2023-09-23T09:02:18Z" name="tearDown" finished-at="2023-09-23T09:02:18Z" duration-ms="160" status="PASS">
+        </test-method> <!-- advocatelogicmemberTest -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:cuesz.logictest.advocate.Case36_MSL_Staffnotestest@30f842ca]" started-at="2023-09-24T06:59:51 IST" name="tearDown" finished-at="2023-09-24T06:59:52 IST" duration-ms="1325" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- cuesz.membersummarytest.advocate.Case33_MS_Uploadposturetest -->
+      </class> <!-- cuesz.logictest.advocate.Case36_MSL_Staffnotestest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

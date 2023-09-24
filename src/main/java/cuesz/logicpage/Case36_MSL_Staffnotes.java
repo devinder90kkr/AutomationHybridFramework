@@ -56,6 +56,13 @@ public class Case36_MSL_Staffnotes extends BasePage {
     private By todayDaElement = (By.xpath("//div[contains(@class, 'DayPicker-Day--today')]"));	        
     private By Copybton = (By.xpath("//div[@id='StaffNotesCard']//div[@class='d-flex justify-content-end calender_drop']//button[1]"));
     
+    
+    private By poplement = (By.cssSelector(".file_upload_modal"));
+	private By dtaFrmlement = (By.cssSelector(".date_field"));
+	private By dtaTolement =	(By.cssSelector(".data_copy_list li span"));
+	private By ysBttn = (By.cssSelector("button.btn-primary"));
+    
+    
     private By netbttn1 = (By.xpath("//span[normalize-space()='Next Week']"));
     private By mndayBlokEment1 = (By.xpath("//h6[contains(text(), 'Monday')]"));
     private By compeTtarea1 = (By.xpath("//h6[contains(text(), 'Monday')]/following-sibling::div//textarea[@name='Compliance']"));
@@ -328,39 +335,66 @@ public class Case36_MSL_Staffnotes extends BasePage {
 		        
 		        WebElement Copybutton = driver.findElement(Copybton);
 		        Copybutton.click();
+		        
+		        
+		        
+		        // Find the popup element
+		        WebElement popupElement = driver.findElement(poplement);
+
+		        // Check if the popup is open
+		        if (popupElement.isDisplayed()) {
+		            // Extract values from the popup
+		            WebElement dataFromElement = popupElement.findElement(dtaFrmlement);
+		            WebElement dataToElement = popupElement.findElement(dtaTolement);
+		            
+		            // Get the text values
+		            String dataFrom = dataFromElement.getText();
+		            String dataTo = dataToElement.getText();
+		            
+		            System.out.println("Data to be copied from: " + dataFrom);
+		            System.out.println("Data will be copied to: " + dataTo);
+		            
+		            // Perform actions as needed (click Yes/No buttons, etc.)
+		        } else {
+		            System.out.println("Popup is not open.");
+		        }
+
+		     // Find the "Yes" button and click on it
+		        WebElement yesButton = popupElement.findElement(ysBttn);
+		        yesButton.click();
 	        
 	        
-		        /**************************** Need to compares again copied data After copy ***********************************************************************************/          
-		        Thread.sleep(2500);
-		        WebElement nextbutton1 = driver.findElement(netbttn1);
-		        nextbutton1.click();
-		  
-		     // Find the <div> element for Monday
-		        WebElement mondayBlockElement1 = driver.findElement(mndayBlokEment1);
-
-		        // Extract the text from the <div> element for Monday
-		        String mondayText1 = mondayBlockElement1.getText();
-		        System.out.println("Monday Date: " + mondayText1);
-
-		        // Find the <textarea> element for Compliance within Monday block
-		        WebElement complianceTextarea1 = driver.findElement(compeTtarea1);
-		        String complianceValue1 = complianceTextarea1.getAttribute("value");
-		        System.out.println("Compliance: " + complianceValue1);
-
-		        // Find the <textarea> element for Travel within Monday block
-		        WebElement travelTextarea1 = driver.findElement(trelTxtaea1);
-		        String travelValue1 = travelTextarea1.getAttribute("value");
-		        System.out.println("Travel: " + travelValue1);
-
-		        // Find the <textarea> element for Member feedback within Monday block
-		        WebElement memberFeedbackTextarea1 = driver.findElement(memdbackTextarea1);
-		        String memberFeedbackValue1 = memberFeedbackTextarea1.getAttribute("value");
-		        System.out.println("Member Feedback: " + memberFeedbackValue1);
-
-		        // Find the <textarea> element for Notes within Monday block
-		        WebElement notesTextarea1 = driver.findElement(no2sxarea1);
-		        String notesValue1 = notesTextarea1.getAttribute("value");
-		        System.out.println("Notes: " + notesValue1);   
+//		        /**************************** Need to compares again copied data After copy ***********************************************************************************/          
+//		        Thread.sleep(2500);
+//		        WebElement nextbutton1 = driver.findElement(netbttn1);
+//		        nextbutton1.click();
+//		  
+//		     // Find the <div> element for Monday
+//		        WebElement mondayBlockElement1 = driver.findElement(mndayBlokEment1);
+//
+//		        // Extract the text from the <div> element for Monday
+//		        String mondayText1 = mondayBlockElement1.getText();
+//		        System.out.println("Monday Date: " + mondayText1);
+//
+//		        // Find the <textarea> element for Compliance within Monday block
+//		        WebElement complianceTextarea1 = driver.findElement(compeTtarea1);
+//		        String complianceValue1 = complianceTextarea1.getAttribute("value");
+//		        System.out.println("Compliance: " + complianceValue1);
+//
+//		        // Find the <textarea> element for Travel within Monday block
+//		        WebElement travelTextarea1 = driver.findElement(trelTxtaea1);
+//		        String travelValue1 = travelTextarea1.getAttribute("value");
+//		        System.out.println("Travel: " + travelValue1);
+//
+//		        // Find the <textarea> element for Member feedback within Monday block
+//		        WebElement memberFeedbackTextarea1 = driver.findElement(memdbackTextarea1);
+//		        String memberFeedbackValue1 = memberFeedbackTextarea1.getAttribute("value");
+//		        System.out.println("Member Feedback: " + memberFeedbackValue1);
+//
+//		        // Find the <textarea> element for Notes within Monday block
+//		        WebElement notesTextarea1 = driver.findElement(no2sxarea1);
+//		        String notesValue1 = notesTextarea1.getAttribute("value");
+//		        System.out.println("Notes: " + notesValue1);   
 		        
 		        
 		        Thread.sleep(2500);

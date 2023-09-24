@@ -233,9 +233,7 @@ public class Case34_MSL_MemberBasicinfo extends BasePage {
 			        SaveNote3.click();
 			        Thread.sleep(1500);
 	        	        
-			        
-
-	 }
+			  	 }
 
 	 }
  

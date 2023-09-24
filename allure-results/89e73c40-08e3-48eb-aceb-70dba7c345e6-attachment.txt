@@ -1,3 +1,0 @@
-Staff role is: Wellness Advocate
-Name verification passed.
-Age verification failed.
