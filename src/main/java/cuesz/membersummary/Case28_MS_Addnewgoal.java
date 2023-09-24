@@ -14,10 +14,15 @@ public class Case28_MS_Addnewgoal extends BasePage {
 	
 	SeleniumUtils utils = new SeleniumUtils(driver);
 	private By teamLeadrNotsHadng = (By.xpath("//h2[normalize-space()='Team Leader Coach Notes']"));
-	private By addNwBttn = (By.xpath("//button[normalize-space()='Add New']"));
-	private By shrtTrmGalsTxtaea = (By.xpath("//div[@class='col-md-6']//textarea[@id='editor']"));
-	private By lngTrmGalsTxtaea = (By.xpath("//div[@class='col-md-6']//label[text()='Long Term Goal']/following-sibling::div//textarea"));
-	private By procsThikiTextara1 = (By.xpath("//div[@class='col-md-6']//label[text()='Process Thinking'][1]/following-sibling::div//textarea"));
+	//private By addNwBttn = (By.xpath("//button[normalize-space()='Add New']"));
+	private By addNwBttn = (By.id("MemberSummary-TeamLeaderCoachNotes-NewGoalAdd"));
+	// private By shrtTrmGalsTxtaea = (By.xpath("//div[@class='col-md-6']//textarea[@id='editor']"));
+	private By shrtTrmGalsTxtaea = (By.id("MemberSummary-TeamLeaderCoachNotes-NewGoalAdd-ShortTermGoals-3Months"));
+	// private By lngTrmGalsTxtaea = (By.xpath("//div[@class='col-md-6']//label[text()='Long Term Goal']/following-sibling::div//textarea"));
+	private By lngTrmGalsTxtaea = (By.id("MemberSummary-TeamLeaderCoachNotes-NewGoalAdd-LongTermGoal"));
+	
+	//private By procsThikiTextara1 = (By.xpath("//div[@class='col-md-6']//label[text()='Process Thinking'][1]/following-sibling::div//textarea"));
+	private By procsThikiTextara1 =  (By.id("MemberSummary-TeamLeaderCoachNotes-NewGoalAdd-ProcessThinking"));
 	private By prosTikiTextara2 = (By.xpath("(//textarea[contains(@placeholder,'Write here...')])[4]"));
 	private By submtbttn	=	(By.xpath("//button[normalize-space()='Submit']"));
 

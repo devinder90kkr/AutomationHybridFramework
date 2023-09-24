@@ -17,7 +17,8 @@ public class Case19_MS_Preferences extends BasePage {
 	private By plsicn		=  (By.xpath("//div[@class='graph_icon active']/em/img"));
 	private By prefnceInpt =(By.cssSelector("textarea.form-control"));
 	private By savbttn	 = (By.cssSelector("button.btn_edit"));
-	private By editbttn	= (By.xpath("//button[@class='btn_edit btn-transparent']"));
+	//private By editbttn	= (By.xpath("//button[@class='btn_edit btn-transparent']"));
+	private By editbttn = (By.id("MemberSummary-Preferences-Edit"));
 	private By prefrnceTxtArea	= (By.cssSelector("textarea.form-control"));
 	private By deletbttn	= (By.cssSelector("img[alt='delete']"));
    
