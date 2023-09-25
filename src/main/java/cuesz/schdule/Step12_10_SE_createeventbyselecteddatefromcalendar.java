@@ -2,6 +2,7 @@ package cuesz.schdule;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -12,6 +13,11 @@ import cuesz.utils.SeleniumUtils;
 public class Step12_10_SE_createeventbyselecteddatefromcalendar extends BasePage {
 	
 	SeleniumUtils utils = new SeleniumUtils(driver);
+	private By Topic		 = (By.id("eventTopics"));
+	private By Member 		= (By.id("eventMemberlist"));
+	private By Staff 		= (By.id("Helsenki"));	
+	private By Notes		 =  (By.name("note"));
+	private By Submitbutton  =	 (By.xpath("//button[normalize-space()='Create Event']"));
 
 	public Step12_10_SE_createeventbyselecteddatefromcalendar(WebDriver driver) {
 		super(driver);
@@ -34,14 +40,6 @@ public class Step12_10_SE_createeventbyselecteddatefromcalendar extends BasePage
 		calendarcontainer.click();
 		
 		
-		// Find the element with the text "1:00 AM IST"
-        WebElement element = driver.findElement(By.xpath("//span[@class='rbc-label' and text()='1:00 AM IST']"));
-        
-        // Scroll to the element using JavascriptExecutor
-        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);
-		
-		
-		Thread.sleep(5500);
 		// Assuming you want to scroll to an element with the class name 'rbc-events-container'
         WebElement dateElement = driver.findElement(By.className("rbc-events-container"));
 
@@ -51,13 +49,31 @@ public class Step12_10_SE_createeventbyselecteddatefromcalendar extends BasePage
         // Move to the element before clicking it (optional)
         Actions actions = new Actions(driver);
         actions.moveToElement(dateElement).click().perform();
-                
-        // Find the snackbar element by its aria-describedby attribute
-        WebElement snackbar = driver.findElement(By.cssSelector("div[aria-describedby='notistack-snackbar']"));
-        // Get the text of the snackbar
-        String snackbarText = snackbar.getText();
-        // Print the snackbar text
-        System.out.println("Snackbar Text: " + snackbarText);
+		
+	    /*Select Event as as Live perform	*/
+	    Thread.sleep(2000);
+	    WebElement topicselection =driver.findElement(Topic);
+	    Actions builder2 = new Actions(driver);
+	    builder2.moveToElement(topicselection).click().sendKeys("Live perform session").sendKeys(Keys.ENTER).perform();
+	    
+	    /*Select Event as as member selection perform	*/
+	    Thread.sleep(2000);
+	    WebElement memberSelection =driver.findElement(Member);
+	    Actions builder3 = new Actions(driver);
+	    builder3.moveToElement(memberSelection).click().sendKeys(" Kumar Devinder").sendKeys(Keys.ENTER).perform();
+
+	    /*Select Coach & advocate from dropdown list*/
+	    Thread.sleep(2000);
+	    WebElement staffSelection =driver.findElement(Staff);
+	    Actions builder4 = new Actions(driver);
+	    builder4.moveToElement(staffSelection).click().sendKeys("seakfreight").sendKeys(Keys.ENTER).perform();
+	    builder4.moveToElement(staffSelection).click().sendKeys("steveQA Adv").sendKeys(Keys.ENTER).perform();
+
+	    /*Enter Notes in create event*/
+	    driver.findElement(Notes).sendKeys("We are excited to announce that there will be a live performance event. So please availble");
+	    
+	    /*Click on submit button*/
+	    driver.findElement(Submitbutton).click();
 	
   
 	
