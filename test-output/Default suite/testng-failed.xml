@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test name="Default test(failed)">
     <classes>
-      <class name="cuesz.schduletest.advocate.Step12_10_SE_createeventbyselecteddatefromcalendartest">
+      <class name="cuesz.membersummarygraph.advocate.Case62_Mastercorelationtest">
         <methods>
-          <include name="advocateSchedulefromcalendarEventTest"/>
-          <include name="tearDown"/>
           <include name="setUp"/>
+          <include name="tearDown"/>
+          <include name="advocateMemberhoverTest"/>
         </methods>
-      </class> <!-- cuesz.schduletest.advocate.Step12_10_SE_createeventbyselecteddatefromcalendartest -->
+      </class> <!-- cuesz.membersummarygraph.advocate.Case62_Mastercorelationtest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

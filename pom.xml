@@ -28,6 +28,15 @@
     </dependency>
 
 
+
+  <!-- https://mvnrepository.com/artifact/io.appium/java-client -->
+<dependency>
+    <groupId>io.appium</groupId>
+    <artifactId>java-client</artifactId>
+    <version>8.5.1</version>
+</dependency>
+
+
 <!-- https://mvnrepository.com/artifact/io.qameta.allure/allure-testng -->
 <dependency>
     <groupId>io.qameta.allure</groupId>

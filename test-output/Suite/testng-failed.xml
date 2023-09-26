@@ -3,13 +3,13 @@
 <suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
   <test name="Test(failed)">
     <classes>
-      <class name="cuesz.membercommunication.advocate.Case47_Membersearchtest">
+      <class name="cuesz.membersummary.fuelreport.advocate.Case67_Fueldashboard1test">
         <methods>
-          <include name="advocatecmembercommunictaeTest"/>
-          <include name="tearDown"/>
           <include name="setUp"/>
+          <include name="tearDown"/>
+          <include name="advocateMemberhoverTest"/>
         </methods>
-      </class> <!-- cuesz.membercommunication.advocate.Case47_Membersearchtest -->
+      </class> <!-- cuesz.membersummary.fuelreport.advocate.Case67_Fueldashboard1test -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

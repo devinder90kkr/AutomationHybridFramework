@@ -4,14 +4,14 @@
            failures="0"
            errors="0"
            skipped="0"
-           time="18.929">
+           time="26.306">
     <properties></properties>
 
 
 
             <testcase
                 name="advocateAvtarclcikTest"
-                time="18.929"
+                time="26.306"
                 classname="cuesz.membersummarytest.advocate.Case31_MS_Avtarclicktest">
             </testcase>
 </testsuite>

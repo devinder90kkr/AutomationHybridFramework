@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>9/0/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>2/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Sun Sep 24 07:05:22 IST 2023</td>
+<td>Started on:</td><td>Mon Sep 25 23:40:56 IST 2023</td>
 </tr>
-<tr><td>Total time:</td><td>1245 seconds (1245084 ms)</td>
+<tr><td>Total time:</td><td>185 seconds (185983 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,6 +67,86 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='cuesz.membersummary.fuelreport.advocate.Case67_Fueldashboard1test.advocateMemberhoverTest()'><b>advocateMemberhoverTest</b><br>Test class: cuesz.membersummary.fuelreport.advocate.Case67_Fueldashboard1test</td>
+<td><div><pre>org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element is not clickable at point (1082, -222)
+  (Session info: chrome=117.0.5938.92)
+Build info: version: &apos;4.12.1&apos;, revision: &apos;8e34639b11&apos;
+System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;13.6&apos;, java.version: &apos;21&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [8e54e375efc4df04591ef5701e16b231, clickElement {id=290A3511C7FD48E7A99120268CD8731D_element_474}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 117.0.5938.92, chrome: {chromedriverVersion: 117.0.5938.92 (67649b10b92b..., userDataDir: /var/folders/10/ksb8skmx6tj...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:65342}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:65342/devtoo..., se:cdpVersion: 117.0.5938.92, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on mac (8e54e375efc4df04591ef5701e16b231)] -&gt; id: FuelReport-Brain-GuidelinesSave]
+Session ID: 8e54e375efc4df04591ef5701e16b231
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:602)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:224)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:77)
+	at cuesz.membersummary.fuelreport.Case67_Fueldashboard1.fuelreport(Case67_Fueldashboard1.java:200)
+	at cuesz.membersummary.fuelreport.advocate.Case67_Fueldashboard1test.advocateMemberhoverTest(Case67_Fueldashboard1test.java:53)
+... Removed 26 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1601800698", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1601800698'><pre>org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element is not clickable at point (1082, -222)
+  (Session info: chrome=117.0.5938.92)
+Build info: version: &apos;4.12.1&apos;, revision: &apos;8e34639b11&apos;
+System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;13.6&apos;, java.version: &apos;21&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [8e54e375efc4df04591ef5701e16b231, clickElement {id=290A3511C7FD48E7A99120268CD8731D_element_474}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 117.0.5938.92, chrome: {chromedriverVersion: 117.0.5938.92 (67649b10b92b..., userDataDir: /var/folders/10/ksb8skmx6tj...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:65342}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:65342/devtoo..., se:cdpVersion: 117.0.5938.92, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on mac (8e54e375efc4df04591ef5701e16b231)] -&gt; id: FuelReport-Brain-GuidelinesSave]
+Session ID: 8e54e375efc4df04591ef5701e16b231
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:602)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:224)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:77)
+	at cuesz.membersummary.fuelreport.Case67_Fueldashboard1.fuelreport(Case67_Fueldashboard1.java:200)
+	at cuesz.membersummary.fuelreport.advocate.Case67_Fueldashboard1test.advocateMemberhoverTest(Case67_Fueldashboard1test.java:53)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:661)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:869)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1193)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:126)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:744)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:380)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:375)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1226)
+	at org.testng.TestNG.runSuites(TestNG.java:1144)
+	at org.testng.TestNG.run(TestNG.java:1115)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>65</td>
+<td>cuesz.membersummary.fuelreport.advocate.Case67_Fueldashboard1test@42b02722</td></tr>
+</table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
@@ -75,50 +155,15 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='cuesz.logictest.advocate.Case36_MSL_Staffnotestest.advocatelogicmemberTest()'><b>advocatelogicmemberTest</b><br>Test class: cuesz.logictest.advocate.Case36_MSL_Staffnotestest</td>
+<td title='cuesz.membersummary.fuelreport.advocate.Case68_Fueldashboardconditionnputtest.advocateMemberhoverTest()'><b>advocateMemberhoverTest</b><br>Test class: cuesz.membersummary.fuelreport.advocate.Case68_Fueldashboardconditionnputtest</td>
 <td></td>
-<td>107</td>
-<td>cuesz.logictest.advocate.Case36_MSL_Staffnotestest@7857fe2</td></tr>
+<td>80</td>
+<td>cuesz.membersummary.fuelreport.advocate.Case68_Fueldashboardconditionnputtest@d62fe5b</td></tr>
 <tr>
-<td title='cuesz.logictest.advocate.Case43_MSL_Fueltest.advocatelogicmemberTest()'><b>advocatelogicmemberTest</b><br>Test class: cuesz.logictest.advocate.Case43_MSL_Fueltest</td>
+<td title='cuesz.membersummary.fuelreport.advocate.Case70_Fueldashboardcalculatorstest.advocateMemberhoverTest()'><b>advocateMemberhoverTest</b><br>Test class: cuesz.membersummary.fuelreport.advocate.Case70_Fueldashboardcalculatorstest</td>
 <td></td>
-<td>414</td>
-<td>cuesz.logictest.advocate.Case43_MSL_Fueltest@58e1d9d</td></tr>
-<tr>
-<td title='cuesz.logictest.advocate.Case38_MSL_Notificationtest.advocatelogicmemberTest()'><b>advocatelogicmemberTest</b><br>Test class: cuesz.logictest.advocate.Case38_MSL_Notificationtest</td>
-<td></td>
-<td>70</td>
-<td>cuesz.logictest.advocate.Case38_MSL_Notificationtest@1be2019a</td></tr>
-<tr>
-<td title='cuesz.logictest.advocate.Case42_MSL_Performtest.advocatelogicmemberTest()'><b>advocatelogicmemberTest</b><br>Test class: cuesz.logictest.advocate.Case42_MSL_Performtest</td>
-<td></td>
-<td>111</td>
-<td>cuesz.logictest.advocate.Case42_MSL_Performtest@29d80d2b</td></tr>
-<tr>
-<td title='cuesz.logictest.advocate.Case35_MSL_MemberWilingnessLimitationScoretest.advocatelogicmemberTest()'><b>advocatelogicmemberTest</b><br>Test class: cuesz.logictest.advocate.Case35_MSL_MemberWilingnessLimitationScoretest</td>
-<td></td>
-<td>48</td>
-<td>cuesz.logictest.advocate.Case35_MSL_MemberWilingnessLimitationScoretest@20b2475a</td></tr>
-<tr>
-<td title='cuesz.logictest.advocate.Case34_MSL_MemberBasicinfotest.advocatelogicmemberTest()'><b>advocatelogicmemberTest</b><br>Test class: cuesz.logictest.advocate.Case34_MSL_MemberBasicinfotest</td>
-<td></td>
-<td>66</td>
-<td>cuesz.logictest.advocate.Case34_MSL_MemberBasicinfotest@3932c79a</td></tr>
-<tr>
-<td title='cuesz.logictest.advocate.Case44_MSL_Mindfultest.advocatelogicmemberTest()'><b>advocatelogicmemberTest</b><br>Test class: cuesz.logictest.advocate.Case44_MSL_Mindfultest</td>
-<td></td>
-<td>116</td>
-<td>cuesz.logictest.advocate.Case44_MSL_Mindfultest@2657d4dd</td></tr>
-<tr>
-<td title='cuesz.logictest.advocate.Case37_MSL_Habbitsnotestest.advocatelogicmemberTest()'><b>advocatelogicmemberTest</b><br>Test class: cuesz.logictest.advocate.Case37_MSL_Habbitsnotestest</td>
-<td></td>
-<td>118</td>
-<td>cuesz.logictest.advocate.Case37_MSL_Habbitsnotestest@6f15d60e</td></tr>
-<tr>
-<td title='cuesz.logictest.advocate.Case45_MSL_restoretest.advocatelogicmemberTest()'><b>advocatelogicmemberTest</b><br>Test class: cuesz.logictest.advocate.Case45_MSL_restoretest</td>
-<td></td>
-<td>168</td>
-<td>cuesz.logictest.advocate.Case45_MSL_restoretest@5340477f</td></tr>
+<td>34</td>
+<td>cuesz.membersummary.fuelreport.advocate.Case70_Fueldashboardcalculatorstest@49964d75</td></tr>
 </table><p>
 </body>
 </html>

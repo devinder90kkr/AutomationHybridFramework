@@ -4,14 +4,14 @@
            failures="0"
            errors="0"
            skipped="0"
-           time="43.357">
+           time="43.476">
     <properties></properties>
 
 
 
             <testcase
                 name="advocatespheredataTest"
-                time="43.357"
+                time="43.476"
                 classname="cuesz.membersummarytest.advocate.Case21_MS_speherestest">
             </testcase>
 </testsuite>

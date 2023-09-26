@@ -23,8 +23,7 @@ public class Case34_MSL_MemberBasicinfotest {
 
     private ByteArrayOutputStream consoleOutput; // To capture console output
 
-    @BeforeClass
-    
+    @BeforeClass    
     public void setUp() {
     	driver = WebDriverManager.getDriver();
         driver.manage().window().maximize();

@@ -52,7 +52,7 @@ public class Case78_MS_uplaodperformancesummary extends BasePage {
         Thread.sleep(3000);
         // Find and upload the front posture
         WebElement frontUploadButton = driver.findElement(frntUploadBttn);
-        frontUploadButton.sendKeys("/Users/chicmicmac/git/Cuesz_AutomationTests/Uploadtonnage-Physiologicaldata/Tonnage.png"); // Replace with the actual file path
+        frontUploadButton.sendKeys("/Users/chicmic/git/Cuesz_AutomationTests/Uploadtonnage-Physiologicaldata/Tonnage.png"); // Replace with the actual file path
 
     
 

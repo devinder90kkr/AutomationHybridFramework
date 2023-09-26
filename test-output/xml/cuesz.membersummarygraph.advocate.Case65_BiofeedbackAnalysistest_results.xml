@@ -4,14 +4,14 @@
            failures="0"
            errors="0"
            skipped="0"
-           time="56.360">
+           time="46.942">
     <properties></properties>
 
 
 
             <testcase
                 name="advocateMemberhoverTest"
-                time="56.360"
+                time="46.942"
                 classname="cuesz.membersummarygraph.advocate.Case65_BiofeedbackAnalysistest">
             </testcase>
 </testsuite>

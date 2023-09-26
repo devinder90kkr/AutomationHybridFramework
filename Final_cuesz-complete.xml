@@ -7,6 +7,7 @@
 	  <class name="cuesz.dashboard.advocate.Step13_DB_notificationtest"/>
 	  <class name="cuesz.dashboard.advocate.Step14_DB_Clocktest"/>
 	  <class name="cuesz.dashboard.advocate.Step14_DB_MessgNotificationtest"/>
+	  
 	    <class name="cuesz.schduletest.advocate.Case01_createventtest"/>
       <class name="cuesz.schduletest.advocate.Case02_vieweventtest"/>
       <class name="cuesz.schduletest.advocate.Case03_editeventtest"/>
@@ -31,6 +32,7 @@
       <class name="cuesz.schduletest.advocate.Case12_07_SE_create_eventwithoutopic"/>
       <class name="cuesz.schduletest.advocate.Step12_08_SE_createventtest"/>
       <class name="cuesz.schduletest.advocate.Step12_09_SE_createeventforpasttest"/>
+      
       <class name="cuesz.logictest.advocate.Case34_MSL_MemberBasicinfotest" />
        <class name="cuesz.logictest.advocate.Case35_MSL_MemberWilingnessLimitationScoretest" />
        <class name="cuesz.logictest.advocate.Case36_MSL_Staffnotestest" />    
@@ -40,6 +42,7 @@
        <class name="cuesz.logictest.advocate.Case43_MSL_Fueltest" />
            <class name="cuesz.logictest.advocate.Case44_MSL_Mindfultest" />
        <class name="cuesz.logictest.advocate.Case45_MSL_restoretest" />    
+       
          <class name="cuesz.membersummarytest.advocate.Case15_MS_memberhoverdetail"/>
 	  <class name="cuesz.membersummarytest.advocate.Case16_MS_searchclik"/>
       <class name="cuesz.membersummarytest.advocate.Case17_MS_profle"/>
@@ -65,6 +68,7 @@
 	  <class name="cuesz.membersummarytest.advocate.Case78_MS_uplaodperformancesummarytest"/>
 	  <class name="cuesz.membersummarytest.advocate.Case80_MS_Sessionoutcometest"/>
 	  <class name="cuesz.membersummarytest.advocate.Case81_MS_Sleeptimetest"/>
+	  
 	   <class name="cuesz.membersummarygraph.advocate.Case61_InsightsDashboardtest"/>
       <class name="cuesz.membersummarygraph.advocate.Case62_Mastercorelationtest"/>
       <class name="cuesz.membersummarygraph.advocate.Case62_Mastercorelationtest14daystest"/>
@@ -80,6 +84,8 @@
 	  <class name="cuesz.membercommunication.advocate.Case48_Memberchattest"/>
       <class name="cuesz.membercommunication.advocate.Case75_Newchattest"/>
       <class name="cuesz.membercommunication.advocate.Case76_chattomemberredirectiontest"/>
+      
+      
        <class name="cuesz.membersummary.fuelreport.advocate.Case67_Fueldashboard1test"/>
  	<class name="cuesz.membersummary.fuelreport.advocate.Case68_Fueldashboardconditionnputtest"/>
 	<class name="cuesz.membersummary.fuelreport.advocate.Case70_Fueldashboardcalculatorstest"/>

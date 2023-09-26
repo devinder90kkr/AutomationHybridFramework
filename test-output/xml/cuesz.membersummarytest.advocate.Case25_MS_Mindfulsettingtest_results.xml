@@ -4,14 +4,14 @@
            failures="0"
            errors="0"
            skipped="0"
-           time="50.531">
+           time="59.396">
     <properties></properties>
 
 
 
             <testcase
                 name="advocatemindfulsettingTest"
-                time="50.531"
+                time="59.396"
                 classname="cuesz.membersummarytest.advocate.Case25_MS_Mindfulsettingtest">
             </testcase>
 </testsuite>
