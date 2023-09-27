@@ -10,6 +10,76 @@
           <include name="advocateMemberhoverTest"/>
         </methods>
       </class> <!-- cuesz.membersummary.fuelreport.advocate.Case67_Fueldashboard1test -->
+      <class name="cuesz.membercommunication.advocate.Case47_Membersearchtest">
+        <methods>
+          <include name="advocatecmembercommunictaeTest"/>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- cuesz.membercommunication.advocate.Case47_Membersearchtest -->
+      <class name="cuesz.membersummarygraph.advocate.Case62_Mastercorelationtest">
+        <methods>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+          <include name="advocateMemberhoverTest"/>
+        </methods>
+      </class> <!-- cuesz.membersummarygraph.advocate.Case62_Mastercorelationtest -->
+      <class name="cuesz.logictest.advocate.Case37_MSL_Habbitsnotestest">
+        <methods>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+          <include name="advocatelogicmemberTest"/>
+        </methods>
+      </class> <!-- cuesz.logictest.advocate.Case37_MSL_Habbitsnotestest -->
+      <class name="cuesz.membersummarygraph.advocate.Case64_RestingPhysiologytest">
+        <methods>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+          <include name="advocateMemberhoverTest"/>
+        </methods>
+      </class> <!-- cuesz.membersummarygraph.advocate.Case64_RestingPhysiologytest -->
+      <class name="cuesz.membersummarygraph.advocate.Case65_BiofeedbackAnalysistest">
+        <methods>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+          <include name="advocateMemberhoverTest"/>
+        </methods>
+      </class> <!-- cuesz.membersummarygraph.advocate.Case65_BiofeedbackAnalysistest -->
+      <class name="cuesz.schduletest.advocate.Case12_07_SE_create_eventwithoutopic">
+        <methods>
+          <include name="advocatecreateEventwithoutpicTest"/>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- cuesz.schduletest.advocate.Case12_07_SE_create_eventwithoutopic -->
+      <class name="cuesz.schduletest.advocate.Case02_vieweventtest">
+        <methods>
+          <include name="advocateScheduleviewEventTest"/>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- cuesz.schduletest.advocate.Case02_vieweventtest -->
+      <class name="cuesz.logictest.advocate.Case36_MSL_Staffnotestest">
+        <methods>
+          <include name="advocatelogicmemberTest"/>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- cuesz.logictest.advocate.Case36_MSL_Staffnotestest -->
+      <class name="cuesz.membersummarygraph.advocate.Case62_Mastercorelationtest14daystest">
+        <methods>
+          <include name="advocateMemberhoverTest"/>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- cuesz.membersummarygraph.advocate.Case62_Mastercorelationtest14daystest -->
+      <class name="cuesz.schduletest.advocate.Case12_06_SE_delete_staffevent">
+        <methods>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+          <include name="advocatedeletestaffEventTest"/>
+        </methods>
+      </class> <!-- cuesz.schduletest.advocate.Case12_06_SE_delete_staffevent -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

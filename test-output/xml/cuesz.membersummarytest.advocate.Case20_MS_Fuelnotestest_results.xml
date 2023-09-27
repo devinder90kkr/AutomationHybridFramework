@@ -4,14 +4,14 @@
            failures="0"
            errors="0"
            skipped="0"
-           time="30.041">
+           time="30.627">
     <properties></properties>
 
 
 
             <testcase
                 name="advocatefuelnotesTest"
-                time="30.041"
+                time="30.627"
                 classname="cuesz.membersummarytest.advocate.Case20_MS_Fuelnotestest">
             </testcase>
 </testsuite>

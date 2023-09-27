@@ -243,7 +243,7 @@ import cuesz.utils.SeleniumUtils;
 		        int today = Integer.parseInt(todayDateText);
 
 		        // Calculate the date for two weeks ahead (adding 14 days)
-		        int twoWeeksAhead = today + 8;
+		        int twoWeeksAhead = today +2;
 
 		        // Calculate the desired date
 		        LocalDate desiredDate = currentDate.plusDays(twoWeeksAhead);

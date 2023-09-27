@@ -4,14 +4,14 @@
            failures="0"
            errors="0"
            skipped="0"
-           time="28.336">
+           time="27.742">
     <properties></properties>
 
 
 
             <testcase
                 name="advocatememberdotsTest"
-                time="28.336"
+                time="27.742"
                 classname="cuesz.membersummarytest.advocate.Case18_MS_DotAbiltest">
             </testcase>
 </testsuite>

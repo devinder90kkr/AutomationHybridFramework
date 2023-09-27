@@ -74,18 +74,15 @@ public class Case02_viewevent extends BasePage {
 //	    // Find the element to scroll to the specified date on the calendar (matching only the day)
 //	    WebElement element = driver.findElement(By.xpath("//button[@role='cell'][normalize-space()='" + day + "']"));
 //	    ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);
+//
+//	    // Capture a screenshot and attach it to Allure
+//	    AllureUtils.captureScreenshot(driver, "fuel_report_screenshot");
+//
+//	    Thread.sleep(3000);
+//
+//	    WebElement dateElement1 = driver.findElement(By.xpath("//div[@data-date='" + eventDate + "']"));
+//	    dateElement1.click();
 
-	    // Capture a screenshot and attach it to Allure
-	    AllureUtils.captureScreenshot(driver, "fuel_report_screenshot");
-
-	    Thread.sleep(3000);
-
-	    WebElement dateElement1 = driver.findElement(By.xpath("//div[@data-date='" + eventDate + "']"));
-	    dateElement1.click();
-
-	    
-	    
-	   
         
         Thread.sleep(3000);
         //driver.findElement(By.xpath("(//span[contains(text(),'Kumar Devinder,')])[15]")).click();

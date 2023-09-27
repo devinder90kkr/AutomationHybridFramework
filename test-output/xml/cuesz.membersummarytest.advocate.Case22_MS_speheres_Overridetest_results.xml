@@ -4,14 +4,14 @@
            failures="0"
            errors="0"
            skipped="0"
-           time="63.682">
+           time="63.706">
     <properties></properties>
 
 
 
             <testcase
                 name="advocateoverridefeatureTest"
-                time="63.682"
+                time="63.706"
                 classname="cuesz.membersummarytest.advocate.Case22_MS_speheres_Overridetest">
             </testcase>
 </testsuite>

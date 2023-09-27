@@ -4,14 +4,14 @@
            failures="0"
            errors="0"
            skipped="0"
-           time="5.306">
+           time="62.523">
     <properties></properties>
 
 
 
             <testcase
                 name="Homescreen_weekdays"
-                time="5.306"
+                time="62.523"
                 classname="cuesz.Iosapp.Case04_Homescreen_weekdays_past">
             </testcase>
 </testsuite>

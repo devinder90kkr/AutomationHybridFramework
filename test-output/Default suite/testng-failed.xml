@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test name="Default test(failed)">
     <classes>
-      <class name="cuesz.membersummarygraph.advocate.Case62_Mastercorelationtest">
+      <class name="cuesz.schduletest.advocate.Case12_07_SE_create_eventwithoutopic">
         <methods>
-          <include name="setUp"/>
+          <include name="advocatecreateEventwithoutpicTest"/>
           <include name="tearDown"/>
-          <include name="advocateMemberhoverTest"/>
+          <include name="setUp"/>
         </methods>
-      </class> <!-- cuesz.membersummarygraph.advocate.Case62_Mastercorelationtest -->
+      </class> <!-- cuesz.schduletest.advocate.Case12_07_SE_create_eventwithoutopic -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

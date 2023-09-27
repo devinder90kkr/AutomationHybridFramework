@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
-  <test name="Test(failed)">
+<suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
+  <test name="Default test(failed)">
     <classes>
-      <class name="cuesz.membersummary.fuelreport.advocate.Case67_Fueldashboard1test">
+      <class name="cuesz.schduletest.advocate.Case12_07_SE_create_eventwithoutopic">
         <methods>
-          <include name="setUp"/>
+          <include name="advocatecreateEventwithoutpicTest"/>
           <include name="tearDown"/>
-          <include name="advocateMemberhoverTest"/>
+          <include name="setUp"/>
         </methods>
-      </class> <!-- cuesz.membersummary.fuelreport.advocate.Case67_Fueldashboard1test -->
+      </class> <!-- cuesz.schduletest.advocate.Case12_07_SE_create_eventwithoutopic -->
     </classes>
-  </test> <!-- Test(failed) -->
-</suite> <!-- Failed suite [Suite] -->
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->

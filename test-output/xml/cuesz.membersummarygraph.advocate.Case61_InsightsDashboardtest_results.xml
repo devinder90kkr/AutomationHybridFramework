@@ -1,31 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuite name="Test"
            tests="1"
-           failures="1"
+           failures="0"
            errors="0"
            skipped="0"
-           time="118.775">
+           time="24.785">
     <properties></properties>
+
+
 
             <testcase
                 name="advocateMemberhoverTest"
-                time="118.775"
+                time="24.785"
                 classname="cuesz.membersummarygraph.advocate.Case61_InsightsDashboardtest">
-
-            <failure type="org.openqa.selenium.NoSuchElementException" message="Unable to find element with locator By.tagName: canvas
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
-Build info: version: &apos;4.12.1&apos;, revision: &apos;8e34639b11&apos;
-System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;13.6&apos;, java.version: &apos;21&apos;
-Driver info: driver.version: RemoteWebDriver">
-                <![CDATA[org.openqa.selenium.NoSuchElementException: Unable to find element with locator By.tagName: canvas
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
-Build info: version: '4.12.1', revision: '8e34639b11'
-System info: os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '13.6', java.version: '21'
-Driver info: driver.version: RemoteWebDriver
-                org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:168)org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:359)org.openqa.selenium.remote.RemoteWebElement.findElement(RemoteWebElement.java:212)cuesz.membersummary.graphs.Case61_InsightsDashboard.InsightsDashboard(Case61_InsightsDashboard.java:106)cuesz.membersummarygraph.advocate.Case61_InsightsDashboardtest.advocateMemberhoverTest(Case61_InsightsDashboardtest.java:53)java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)java.base/java.lang.reflect.Method.invoke(Method.java:580)org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)org.testng.internal.Invoker.invokeMethod(Invoker.java:661)org.testng.internal.Invoker.invokeTestMethod(Invoker.java:869)org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1193)org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:126)org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)org.testng.TestRunner.privateRun(TestRunner.java:744)org.testng.TestRunner.run(TestRunner.java:602)org.testng.SuiteRunner.runTest(SuiteRunner.java:380)org.testng.SuiteRunner.runSequentially(SuiteRunner.java:375)org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)org.testng.SuiteRunner.run(SuiteRunner.java:289)org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)org.testng.TestNG.runSuitesLocally(TestNG.java:1226)org.testng.TestNG.runSuites(TestNG.java:1144)org.testng.TestNG.run(TestNG.java:1115)org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </failure>
-    </testcase>
-
-
+            </testcase>
 </testsuite>

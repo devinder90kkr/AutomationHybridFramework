@@ -16,12 +16,18 @@ public class Case19_MS_Preferences extends BasePage {
 	//private By membritms	=  (By.xpath("//div[@class='member-items']"));
 	private By plsicn		=  (By.xpath("//div[@class='graph_icon active']/em/img"));
 	private By prefnceInpt =(By.cssSelector("textarea.form-control"));
-	private By savbttn	 = (By.cssSelector("button.btn_edit"));
+	//private By savbttn	 = (By.cssSelector("button.btn_edit"));
+  private By savbttn = By.id("MemberSummary-Preferences-Save");
 	//private By editbttn	= (By.xpath("//button[@class='btn_edit btn-transparent']"));
 	private By editbttn = (By.id("MemberSummary-Preferences-Edit"));
 	private By prefrnceTxtArea	= (By.cssSelector("textarea.form-control"));
 	private By deletbttn	= (By.cssSelector("img[alt='delete']"));
    
+//	private By plusIcon = (By.id("MemberSummary-PreferencesAdd"));
+//    private By prefnceInpt = By.id("MemberSummary-Preferences-AddNotes");
+//    private By savbttn = By.id("MemberSummary-Preferences-Save");
+//    private By editbttn = By.id("MemberSummary-Preferences-Edit");
+//    private By deletbttn = By.id("MemberSummary-Preferences-DeleteNote");
 	
 	
 	public Case19_MS_Preferences(WebDriver driver) {

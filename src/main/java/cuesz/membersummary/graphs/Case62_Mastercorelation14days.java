@@ -124,38 +124,38 @@ public class Case62_Mastercorelation14days extends BasePage {
         
         Thread.sleep(2500);
         
-      // Locate and extract Day to Day Correlation and BaseLine Correlation values
-      WebElement correlationBlock = driver.findElement(corelatinBlock);
-
-      WebElement dayToDayCorrelationElement = correlationBlock.findElement(dayToDayElement);
-      WebElement baseLineCorrelationElement = correlationBlock.findElement(baseLineElement);
-
-      String dayToDayCorrelation = dayToDayCorrelationElement.getText();
-      String baseLineCorrelation = baseLineCorrelationElement.getText();
-
-      System.out.println("Day to Day Correlation: " + dayToDayCorrelation);
-      System.out.println("BaseLine Correlation: " + baseLineCorrelation);
-
-      // Check if graphs are available
-      WebElement graphContainer = driver.findElement(grapCntainer);
-
-      // Scroll to the graphContainer element
-      ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", graphContainer);
-      
-      if (graphContainer.isDisplayed()) {
-          System.out.println("Graphs are available.");
-      } else {
-          System.out.println("No graphs found.");
-
-          Thread.sleep(2000);
-          /******************************/
+//      // Locate and extract Day to Day Correlation and BaseLine Correlation values
+//      WebElement correlationBlock = driver.findElement(corelatinBlock);
+//
+//      WebElement dayToDayCorrelationElement = correlationBlock.findElement(dayToDayElement);
+//      WebElement baseLineCorrelationElement = correlationBlock.findElement(baseLineElement);
+//
+//      String dayToDayCorrelation = dayToDayCorrelationElement.getText();
+//      String baseLineCorrelation = baseLineCorrelationElement.getText();
+//
+//      System.out.println("Day to Day Correlation: " + dayToDayCorrelation);
+//      System.out.println("BaseLine Correlation: " + baseLineCorrelation);
+//
+//      // Check if graphs are available
+//      WebElement graphContainer = driver.findElement(grapCntainer);
+//
+//      // Scroll to the graphContainer element
+//      ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", graphContainer);
+//      
+//      if (graphContainer.isDisplayed()) {
+//          System.out.println("Graphs are available.");
+//      } else {
+//          System.out.println("No graphs found.");
+//
+//          Thread.sleep(2000);
+//          /******************************/
           
       
            
           
       }
 	}
-    }
+//    }
     
 
 

@@ -4,14 +4,14 @@
            failures="0"
            errors="0"
            skipped="0"
-           time="25.768">
+           time="26.409">
     <properties></properties>
 
 
 
             <testcase
                 name="advocateScheduleEventTest"
-                time="25.768"
+                time="26.409"
                 classname="cuesz.dashboard.advocate.Step14_DB_MessgNotificationtest">
             </testcase>
 </testsuite>

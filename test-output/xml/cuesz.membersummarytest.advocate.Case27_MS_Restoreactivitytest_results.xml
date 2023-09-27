@@ -4,14 +4,14 @@
            failures="0"
            errors="0"
            skipped="0"
-           time="67.734">
+           time="67.538">
     <properties></properties>
 
 
 
             <testcase
                 name="advocaterestoractivityTest"
-                time="67.734"
+                time="67.538"
                 classname="cuesz.membersummarytest.advocate.Case27_MS_Restoreactivitytest">
             </testcase>
 </testsuite>
