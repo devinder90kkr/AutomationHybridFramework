@@ -2,24 +2,24 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-09-27T16:58:34Z" name="Default suite" finished-at="2023-09-27T16:59:03Z" duration-ms="29376">
+  <suite started-at="2023-09-28T09:21:19Z" name="Default suite" finished-at="2023-09-28T09:22:02Z" duration-ms="42844">
     <groups>
     </groups>
-    <test started-at="2023-09-27T16:58:34Z" name="Default test" finished-at="2023-09-27T16:59:03Z" duration-ms="29376">
-      <class name="cuesz.schduletest.advocate.Case12_06_SE_delete_staffevent">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:cuesz.schduletest.advocate.Case12_06_SE_delete_staffevent@64a40280]" started-at="2023-09-27T22:28:34Z" name="setUp" finished-at="2023-09-27T22:28:36Z" duration-ms="2118" status="PASS">
+    <test started-at="2023-09-28T09:21:19Z" name="Default test" finished-at="2023-09-28T09:22:02Z" duration-ms="42844">
+      <class name="cuesz.dashboard.advocate.Step13_DB_notificationtest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:cuesz.dashboard.advocate.Step13_DB_notificationtest@3f9342d4]" started-at="2023-09-28T14:51:19Z" name="setUp" finished-at="2023-09-28T14:51:28Z" duration-ms="8499" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="advocatedeletestaffEventTest()[pri:0, instance:cuesz.schduletest.advocate.Case12_06_SE_delete_staffevent@64a40280]" started-at="2023-09-27T22:28:36Z" name="advocatedeletestaffEventTest" finished-at="2023-09-27T22:29:03Z" duration-ms="27029" status="PASS">
+        <test-method signature="advocateScheduleEventTest()[pri:0, instance:cuesz.dashboard.advocate.Step13_DB_notificationtest@3f9342d4]" started-at="2023-09-28T14:51:28Z" name="advocateScheduleEventTest" finished-at="2023-09-28T14:52:02Z" duration-ms="34117" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- advocatedeletestaffEventTest -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:cuesz.schduletest.advocate.Case12_06_SE_delete_staffevent@64a40280]" started-at="2023-09-27T22:29:03Z" name="tearDown" finished-at="2023-09-27T22:29:03Z" duration-ms="165" status="PASS">
+        </test-method> <!-- advocateScheduleEventTest -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:cuesz.dashboard.advocate.Step13_DB_notificationtest@3f9342d4]" started-at="2023-09-28T14:52:02Z" name="tearDown" finished-at="2023-09-28T14:52:02Z" duration-ms="154" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- cuesz.schduletest.advocate.Case12_06_SE_delete_staffevent -->
+      </class> <!-- cuesz.dashboard.advocate.Step13_DB_notificationtest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

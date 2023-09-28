@@ -4,14 +4,14 @@
            failures="0"
            errors="0"
            skipped="0"
-           time="43.143">
+           time="43.424">
     <properties></properties>
 
 
 
             <testcase
                 name="advocateSchedulecreateeventTest"
-                time="43.143"
+                time="43.424"
                 classname="cuesz.liveperform.advocate.Case72_creatLiveperformtest">
             </testcase>
 </testsuite>

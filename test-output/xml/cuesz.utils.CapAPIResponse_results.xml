@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Default test"
+           tests="1"
+           failures="0"
+           errors="0"
+           skipped="0"
+           time="14.315">
+    <properties></properties>
+
+
+
+            <testcase
+                name="Apiresponse"
+                time="14.315"
+                classname="cuesz.utils.CapAPIResponse">
+            </testcase>
+</testsuite>
