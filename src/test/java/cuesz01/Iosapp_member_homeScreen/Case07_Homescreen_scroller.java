@@ -70,7 +70,8 @@ public class Case07_Homescreen_scroller extends AppiummobileBase {
 		scrollup.click();
 		
 	
-	
+		Thread.sleep(2500);
+        driver.terminateApp("com.cuesz.mobile");
 	
 	
 	

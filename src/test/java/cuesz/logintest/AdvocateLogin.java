@@ -20,7 +20,7 @@ public class AdvocateLogin {
         driver = WebDriverManager.getDriver();
         driver.manage().window().maximize();
         driver.get(Configuration.BASE_URL);
-        loginPage = new 	Loginpage(driver); // Initialize the loginPage object
+        loginPage = new Loginpage(driver); // Initialize the loginPage object
     }
 
     @Test

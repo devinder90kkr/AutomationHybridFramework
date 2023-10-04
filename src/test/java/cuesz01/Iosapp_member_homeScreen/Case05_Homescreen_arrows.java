@@ -62,7 +62,7 @@ public class Case05_Homescreen_arrows extends AppiummobileBase {
 		WebElement Homeicon = driver.findElement(Homeclick);
 		Homeicon.click();
 
-		scrollDown();
+//		scrollDown();
 		
 		// Click on HomeBackArrow button 4 times
 	    for (int i = 0; i < 4; i++) {
@@ -84,16 +84,18 @@ public class Case05_Homescreen_arrows extends AppiummobileBase {
 	    backarrow.click();
 	    Thread.sleep(1000); // Optional delay to observe the action
 		
+	    Thread.sleep(2500);
+        driver.terminateApp("com.cuesz.mobile");
          	
 	}
 	
 
 //Function to scroll down using the provided scroll method
-private void scrollDown() {
-	// Method to scroll to perform screen
-		HashMap<String,Object>scrollObject =new HashMap<>();
-		scrollObject.put("direction", "down");
-		scrollObject.put("Current 7 days", "Current 7 days");
-		driver.executeScript("mobile:scroll", scrollObject);
-}
+//private void scrollDown() {
+//	// Method to scroll to perform screen
+//		HashMap<String,Object>scrollObject =new HashMap<>();
+//		scrollObject.put("direction", "down");
+//		scrollObject.put("Current 7 days", "Current 7 days");
+//		driver.executeScript("mobile:scroll", scrollObject);
+//}
 }

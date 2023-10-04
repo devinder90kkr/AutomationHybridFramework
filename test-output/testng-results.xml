@@ -1,25 +1,125 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="7" passed="7" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-09-28T09:21:19Z" name="Default suite" finished-at="2023-09-28T09:22:02Z" duration-ms="42844">
+  <suite started-at="2023-10-04T08:08:44Z" name="Suite" finished-at="2023-10-04T08:12:50Z" duration-ms="245799">
     <groups>
     </groups>
-    <test started-at="2023-09-28T09:21:19Z" name="Default test" finished-at="2023-09-28T09:22:02Z" duration-ms="42844">
-      <class name="cuesz.dashboard.advocate.Step13_DB_notificationtest">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:cuesz.dashboard.advocate.Step13_DB_notificationtest@3f9342d4]" started-at="2023-09-28T14:51:19Z" name="setUp" finished-at="2023-09-28T14:51:28Z" duration-ms="8499" status="PASS">
+    <test started-at="2023-10-04T08:08:44Z" name="Test" finished-at="2023-10-04T08:12:50Z" duration-ms="245799">
+      <class name="cuesz01.Iosapp_member_homeScreen.Case05_Homescreen_arrows">
+        <test-method is-config="true" signature="Cueszbase()[pri:0, instance:cuesz01.Iosapp_member_homeScreen.Case05_Homescreen_arrows@1a6c1270]" started-at="2023-10-04T13:41:16Z" name="Cueszbase" finished-at="2023-10-04T13:41:17Z" duration-ms="1032" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Cueszbase -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:cuesz01.Iosapp_member_homeScreen.Case05_Homescreen_arrows@1a6c1270]" started-at="2023-10-04T13:41:17Z" name="setUp" finished-at="2023-10-04T13:41:17Z" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="advocateScheduleEventTest()[pri:0, instance:cuesz.dashboard.advocate.Step13_DB_notificationtest@3f9342d4]" started-at="2023-09-28T14:51:28Z" name="advocateScheduleEventTest" finished-at="2023-09-28T14:52:02Z" duration-ms="34117" status="PASS">
+        <test-method signature="Homescreensperators()[pri:0, instance:cuesz01.Iosapp_member_homeScreen.Case05_Homescreen_arrows@1a6c1270]" started-at="2023-10-04T13:41:17Z" name="Homescreensperators" finished-at="2023-10-04T13:42:02Z" duration-ms="44771" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- advocateScheduleEventTest -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:cuesz.dashboard.advocate.Step13_DB_notificationtest@3f9342d4]" started-at="2023-09-28T14:52:02Z" name="tearDown" finished-at="2023-09-28T14:52:02Z" duration-ms="154" status="PASS">
+        </test-method> <!-- Homescreensperators -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:cuesz01.Iosapp_member_homeScreen.Case05_Homescreen_arrows@1a6c1270]" started-at="2023-10-04T13:42:02Z" name="tearDown" finished-at="2023-10-04T13:42:02Z" duration-ms="10" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- cuesz.dashboard.advocate.Step13_DB_notificationtest -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+      </class> <!-- cuesz01.Iosapp_member_homeScreen.Case05_Homescreen_arrows -->
+      <class name="cuesz01.Iosapp_member_homeScreen.Case03_Homescreen_sphere">
+        <test-method is-config="true" signature="Cueszbase()[pri:0, instance:cuesz01.Iosapp_member_homeScreen.Case03_Homescreen_sphere@4b14918a]" started-at="2023-10-04T13:40:20Z" name="Cueszbase" finished-at="2023-10-04T13:40:21Z" duration-ms="1065" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Cueszbase -->
+        <test-method signature="Homescreensperators()[pri:0, instance:cuesz01.Iosapp_member_homeScreen.Case03_Homescreen_sphere@4b14918a]" started-at="2023-10-04T13:40:21Z" name="Homescreensperators" finished-at="2023-10-04T13:40:47Z" duration-ms="25934" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Homescreensperators -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:cuesz01.Iosapp_member_homeScreen.Case03_Homescreen_sphere@4b14918a]" started-at="2023-10-04T13:40:47Z" name="tearDown" finished-at="2023-10-04T13:40:47Z" duration-ms="12" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- cuesz01.Iosapp_member_homeScreen.Case03_Homescreen_sphere -->
+      <class name="cuesz01.Iosapp_member_homeScreen.Case01_Login">
+        <test-method is-config="true" signature="Cueszbase()[pri:0, instance:cuesz01.Iosapp_member_homeScreen.Case01_Login@34a875b3]" started-at="2023-10-04T13:38:44Z" name="Cueszbase" finished-at="2023-10-04T13:38:46Z" duration-ms="1793" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Cueszbase -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:cuesz01.Iosapp_member_homeScreen.Case01_Login@34a875b3]" started-at="2023-10-04T13:38:46Z" name="setUp" finished-at="2023-10-04T13:38:46Z" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="login()[pri:0, instance:cuesz01.Iosapp_member_homeScreen.Case01_Login@34a875b3]" started-at="2023-10-04T13:38:46Z" name="login" finished-at="2023-10-04T13:39:30Z" duration-ms="44696" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- login -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:cuesz01.Iosapp_member_homeScreen.Case01_Login@34a875b3]" started-at="2023-10-04T13:39:30Z" name="tearDown" finished-at="2023-10-04T13:39:30Z" duration-ms="19" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- cuesz01.Iosapp_member_homeScreen.Case01_Login -->
+      <class name="cuesz01.Iosapp_member_homeScreen.Case07_Homescreen_scroller">
+        <test-method is-config="true" signature="Cueszbase()[pri:0, instance:cuesz01.Iosapp_member_homeScreen.Case07_Homescreen_scroller@77d67cf3]" started-at="2023-10-04T13:42:32Z" name="Cueszbase" finished-at="2023-10-04T13:42:33Z" duration-ms="1009" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Cueszbase -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:cuesz01.Iosapp_member_homeScreen.Case07_Homescreen_scroller@77d67cf3]" started-at="2023-10-04T13:42:33Z" name="setUp" finished-at="2023-10-04T13:42:33Z" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="Homescreensperators()[pri:0, instance:cuesz01.Iosapp_member_homeScreen.Case07_Homescreen_scroller@77d67cf3]" started-at="2023-10-04T13:42:33Z" name="Homescreensperators" finished-at="2023-10-04T13:42:50Z" duration-ms="16239" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Homescreensperators -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:cuesz01.Iosapp_member_homeScreen.Case07_Homescreen_scroller@77d67cf3]" started-at="2023-10-04T13:42:50Z" name="tearDown" finished-at="2023-10-04T13:42:50Z" duration-ms="14" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- cuesz01.Iosapp_member_homeScreen.Case07_Homescreen_scroller -->
+      <class name="cuesz01.Iosapp_member_homeScreen.Case04_Homescreen_weekdays_past">
+        <test-method is-config="true" signature="Cueszbase()[pri:0, instance:cuesz01.Iosapp_member_homeScreen.Case04_Homescreen_weekdays_past@6d1ef78d]" started-at="2023-10-04T13:40:47Z" name="Cueszbase" finished-at="2023-10-04T13:40:48Z" duration-ms="967" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Cueszbase -->
+        <test-method signature="Homescreen_weekdays()[pri:0, instance:cuesz01.Iosapp_member_homeScreen.Case04_Homescreen_weekdays_past@6d1ef78d]" started-at="2023-10-04T13:40:48Z" name="Homescreen_weekdays" finished-at="2023-10-04T13:41:16Z" duration-ms="27976" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Homescreen_weekdays -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:cuesz01.Iosapp_member_homeScreen.Case04_Homescreen_weekdays_past@6d1ef78d]" started-at="2023-10-04T13:41:16Z" name="tearDown" finished-at="2023-10-04T13:41:16Z" duration-ms="10" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- cuesz01.Iosapp_member_homeScreen.Case04_Homescreen_weekdays_past -->
+      <class name="cuesz01.Iosapp_member_homeScreen.Case02_Homescreen_spherespearator">
+        <test-method is-config="true" signature="Cueszbase()[pri:0, instance:cuesz01.Iosapp_member_homeScreen.Case02_Homescreen_spherespearator@4748a0f9]" started-at="2023-10-04T13:39:30Z" name="Cueszbase" finished-at="2023-10-04T13:39:31Z" duration-ms="1093" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Cueszbase -->
+        <test-method signature="Homescreen()[pri:0, instance:cuesz01.Iosapp_member_homeScreen.Case02_Homescreen_spherespearator@4748a0f9]" started-at="2023-10-04T13:39:31Z" name="Homescreen" finished-at="2023-10-04T13:40:20Z" duration-ms="48734" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Homescreen -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:cuesz01.Iosapp_member_homeScreen.Case02_Homescreen_spherespearator@4748a0f9]" started-at="2023-10-04T13:40:20Z" name="tearDown" finished-at="2023-10-04T13:40:20Z" duration-ms="17" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- cuesz01.Iosapp_member_homeScreen.Case02_Homescreen_spherespearator -->
+      <class name="cuesz01.Iosapp_member_homeScreen.Case06_Homescreen">
+        <test-method is-config="true" signature="Cueszbase()[pri:0, instance:cuesz01.Iosapp_member_homeScreen.Case06_Homescreen@18a136ac]" started-at="2023-10-04T13:42:02Z" name="Cueszbase" finished-at="2023-10-04T13:42:03Z" duration-ms="1018" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Cueszbase -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:cuesz01.Iosapp_member_homeScreen.Case06_Homescreen@18a136ac]" started-at="2023-10-04T13:42:03Z" name="setUp" finished-at="2023-10-04T13:42:03Z" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="Homescreen()[pri:0, instance:cuesz01.Iosapp_member_homeScreen.Case06_Homescreen@18a136ac]" started-at="2023-10-04T13:42:03Z" name="Homescreen" finished-at="2023-10-04T13:42:32Z" duration-ms="29259" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Homescreen -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:cuesz01.Iosapp_member_homeScreen.Case06_Homescreen@18a136ac]" started-at="2023-10-04T13:42:32Z" name="tearDown" finished-at="2023-10-04T13:42:32Z" duration-ms="10" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- cuesz01.Iosapp_member_homeScreen.Case06_Homescreen -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
 </testng-results>

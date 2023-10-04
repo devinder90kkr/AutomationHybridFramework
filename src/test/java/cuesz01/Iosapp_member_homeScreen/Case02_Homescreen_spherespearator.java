@@ -34,27 +34,15 @@ public class Case02_Homescreen_spherespearator extends AppiummobileBase {
 	private By fuelable = 		AppiumBy.xpath("//XCUIElementTypeOther[starts-with(@name, 'Fuel ')]");
 	private By mindulable = 	AppiumBy.xpath("//XCUIElementTypeOther[starts-with(@name, 'Mindful ')]");
 	private By Restorlabel = 	AppiumBy.xpath("//XCUIElementTypeOther[starts-with(@name, 'Restore ')]");
-	private By backbttn = 		AppiumBy.iOSNsPredicateString("name == 'backButton'");
-
+	private By backbttn = 		AppiumBy.iOSNsPredicateString("name == 'SeparateSphereBackPress'");
 	
-	
-	 private ByteArrayOutputStream consoleOutput; // To capture console output
-	   
-		@BeforeClass
-		 public void setUp() {
-		      
-		 // Redirect console output to capture it
-		 consoleOutput = new ByteArrayOutputStream();
-		 PrintStream printStream = new PrintStream(consoleOutput);
-		 System.setOut(printStream);
-		        
-		  }
 	
 	@Test
 	@Owner("QA") // Add the @Owner annotation to specify the executor
     @Severity(SeverityLevel.NORMAL)      
-    @Description("Verify home screen spheres card for Member Homescreen detail verification")
+	@Description("Verify home screen spheres card for Member Homescreen detail verification")
     @Story("Scroll to activity card and verify features lable")	
+	
 	
 	public void Homescreen() throws InterruptedException
 	{	
@@ -170,18 +158,20 @@ public class Case02_Homescreen_spherespearator extends AppiummobileBase {
         backicon4.click();
         
         
-        // Capture console logs
-        String consoleLogs = consoleOutput.toString();
-        System.out.println(consoleLogs); // Print console logs to console (optional)
+//        // Capture console logs
+//        String consoleLogs = consoleOutput.toString();
+//        System.out.println(consoleLogs); // Print console logs to console (optional)
         
-        // Log console logs in Allure
-        Allure.addAttachment("Console Output", "text/plain", consoleLogs);
+//        // Log console logs in Allure
+//        Allure.addAttachment("Console Output", "text/plain", consoleLogs);
         
         // Capture a screenshot and attach it to Allure
         AllureUtils.captureScreenshot(driver, "ios_Homescreen_screenshot");
         
 	
 		Thread.sleep(2500);
+		
+		  driver.terminateApp("com.cuesz.mobile");
 	}
 	
 }

@@ -135,8 +135,9 @@ public class Case06_Homescreen extends AppiummobileBase {
         
         // Capture a screenshot and attach it to Allure
         AllureUtils.captureScreenshot(driver, "ios_Homescreen_screenshot");
-		
-		Thread.sleep(5500);
+   
+        Thread.sleep(2500);
+        driver.terminateApp("com.cuesz.mobile");
 	}
 	
 }

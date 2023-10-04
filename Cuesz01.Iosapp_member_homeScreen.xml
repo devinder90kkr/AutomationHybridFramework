@@ -3,12 +3,17 @@
 <suite name="Suite">	 
   <test thread-count="5" name="Test">
     <classes>
-      <class name="cuesz01.Iosapp_member_homeScreen.Case02_Homescreen_spherespearator"/>
-	 <class name="cuesz01.Iosapp_member_homeScreen.Case03_Homescreen_sphere"/>
-	<class name="cuesz01.Iosapp_member_homeScreen.Case04_Homescreen_weekdays_past"/>
-	<class name="cuesz01.Iosapp_member_homeScreen.Case05_Homescreen_arrows"/>
-	<class name="cuesz01.Iosapp_member_homeScreen.Case06_Homescreen"/>
-	<class name="cuesz01.Iosapp_member_homeScreen.Case07_Homescreen_scroller"/>
+	
+	<class name="cuesz01.Iosapp_member_homeScreen.Case01_Login"/>
+     <class name="cuesz01.Iosapp_member_homeScreen.Case02_Homescreen_spherespearator"/>
+     
+       <class name="cuesz01.Iosapp_member_homeScreen.Case03_Homescreen_sphere"/>
+       
+     <class name="cuesz01.Iosapp_member_homeScreen.Case04_Homescreen_weekdays_past"/>
+      <class name="cuesz01.Iosapp_member_homeScreen.Case05_Homescreen_arrows"/>
+       <class name="cuesz01.Iosapp_member_homeScreen.Case06_Homescreen"/>
+       
+  <class name="cuesz01.Iosapp_member_homeScreen.Case07_Homescreen_scroller"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

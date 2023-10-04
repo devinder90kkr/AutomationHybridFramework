@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Default test"
+           tests="1"
+           failures="0"
+           errors="0"
+           skipped="0"
+           time="44.674">
+    <properties></properties>
+
+
+
+            <testcase
+                name="loginAndVerifySpheres"
+                time="44.674"
+                classname="cuesz01.Iosapp_member_homeScreen.Case01_Login1">
+            </testcase>
+</testsuite>

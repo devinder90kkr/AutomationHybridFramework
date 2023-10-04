@@ -1,0 +1,8 @@
+Actual Text: Perform
+Expected Text: Perform
+Actual Text: Fuel
+Expected Text: Fuel
+Actual Text: Mindful
+Expected Text: Mindful
+Actual Text: Restore
+Expected Text: Restore

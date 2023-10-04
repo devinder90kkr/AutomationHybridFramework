@@ -3,6 +3,7 @@ package cuesz.pages;
 import java.io.File;
 import java.time.Duration;
 
+import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import java.net.MalformedURLException;
@@ -26,8 +27,8 @@ public class AppiummobileBase {
 		
 		XCUITestOptions options = new XCUITestOptions();
 		
-		options.setDeviceName("iPhone 13"); 
-	//	options.setApp("/Users/chicmic/Library/Developer/Xcode/DerivedData/Cuesz-bqpwimbqhasqchfcnbjnkdsbevuv/Build/Products/Release-iphonesimulator/Cuesz.app");
+		options.setDeviceName("iPhone 11"); 
+		//options.setApp("/Users/chicmic/Library/Developer/Xcode/DerivedData/Cuesz-hdxdkjshiithbzbsbrpmxverlvva/Build/Products/Release-iphonesimulator/Cuesz.app");
 		options.setPlatformVersion("17.0");
 
 		//Appium- webdriver Agent ---->IOS Apps.

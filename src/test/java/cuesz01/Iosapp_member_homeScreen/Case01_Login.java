@@ -2,8 +2,11 @@ package cuesz01.Iosapp_member_homeScreen;
 
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
+import java.time.Duration;
 
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
@@ -43,7 +46,7 @@ public class Case01_Login extends AppiummobileBase {
 	        // Launch the app using the utility method
 	        appiumUtils.launchAppWithPackageId("com.cuesz.mobile");	
 	
-		WebElement countryvalues = driver.findElement(AppiumBy.xpath("(//XCUIElementTypeOther[@name=\"🇺🇸\"])[2]"));
+		WebElement countryvalues = driver.findElement(AppiumBy.xpath("(//XCUIElementTypeOther[@name=\"🇮🇳\"])[2]"));
 		countryvalues.click();
 		
 		WebElement countryname = driver.findElement(AppiumBy.accessibilityId("text-input-country-filter"));
@@ -52,9 +55,46 @@ public class Case01_Login extends AppiummobileBase {
 		WebElement indiaselection = driver.findElement(AppiumBy.accessibilityId("country-selector-IN"));
 		indiaselection.click();
 		
-		WebElement mobilefield	= driver.findElement(AppiumBy.xpath("//XCUIElementTypeOther[@name=\"Mobile Number\"]/XCUIElementTypeTextField"));
-		mobilefield.sendKeys("9671114235");
 		
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(1000));
+		WebElement mobilefield = wait.until(ExpectedConditions.elementToBeClickable(AppiumBy.iOSNsPredicateString("name == \"SignInTextInput\"")));
+		mobilefield.click();
+		
+//		driver.findElement(AppiumBy.iOSNsPredicateString("name == \"SignInTextInput\"")).sendKeys(" 9671114235");
+		
+		Thread.sleep(5000);
+		WebElement mobfield1 = driver.findElement(AppiumBy.accessibilityId("9"));
+		mobfield1.click();
+		
+		WebElement mobfield2 = driver.findElement(AppiumBy.accessibilityId("6"));
+		mobfield2.click();
+		
+		WebElement mobfield3 = driver.findElement(AppiumBy.xpath("//XCUIElementTypeKey[@name=\"7\"]"));
+		mobfield3.click();	
+		
+		WebElement mobfield4 = driver.findElement(AppiumBy.xpath("//XCUIElementTypeKey[@name=\"1\"]"));
+		mobfield4.click();
+		
+		WebElement mobfield5 = driver.findElement(AppiumBy.xpath("//XCUIElementTypeKey[@name=\"1\"]"));
+		mobfield5.click();
+		
+		WebElement mobfield6 = driver.findElement(AppiumBy.xpath("//XCUIElementTypeKey[@name=\"1\"]"));
+		mobfield6.click();
+		
+		WebElement mobfield7 = driver.findElement(AppiumBy.xpath("//XCUIElementTypeKey[@name=\"4\"]"));
+		mobfield7.click();
+		
+		WebElement mobfield8 = driver.findElement(AppiumBy.xpath("//XCUIElementTypeKey[@name=\"2\"]"));
+		mobfield8.click();
+		
+		WebElement mobfield9 = driver.findElement(AppiumBy.xpath("//XCUIElementTypeKey[@name=\"3\"]"));
+		mobfield9.click();
+		
+		WebElement mobfield10 = driver.findElement(AppiumBy.xpath("//XCUIElementTypeKey[@name=\"5\"]"));
+		mobfield10.click();
+//	
+		
+		Thread.sleep(2000);
 		WebElement Loginbutton	= driver.findElement(AppiumBy.accessibilityId("LoginButton"));
 		Loginbutton.click();
 	
@@ -74,17 +114,20 @@ public class Case01_Login extends AppiummobileBase {
 		WebElement submitnbutton	= driver.findElement(AppiumBy.xpath("(//XCUIElementTypeOther[@name=\"Submit\"])[3]"));
 		submitnbutton.click();
 		
-		
-		Thread.sleep(5500);
-		
+	
+		Thread.sleep(3500);
+		driver.terminateApp("com.cuesz.mobile");
+	
 		
 	}
-	
+}
 
-@AfterClass
-public void tearDown() {
-	// Log all captured status codes in Allure
-    WebDriverManager.quitDriver();
-   
-}
-}
+//@AfterClass
+//public void tearDown() {
+//	// Log all captured status codes in Allure
+//	// Terminate the app
+//    driver.terminateApp("com.cuesz.mobile");
+//   // WebDriverManager.quitDriver();
+//   
+//}
+//}

@@ -1,11 +1,7 @@
 package cuesz01.Iosapp_member_homeScreen;
 
-import java.io.ByteArrayOutputStream;
-import java.io.PrintStream;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 import cuesz.pages.AppiummobileBase;
@@ -31,18 +27,6 @@ public class Case03_Homescreen_sphere extends AppiummobileBase {
 	private By separtorclick =	AppiumBy.iOSNsPredicateString("name == 'CombineSphere'");
 	private By combinesphereclick	= AppiumBy.iOSNsPredicateString("name == 'SeprateSphere'");
 	
-	
-	 private ByteArrayOutputStream consoleOutput; // To capture console output
-	   
-		@BeforeClass
-		 public void setUp() {
-		      
-		 // Redirect console output to capture it
-		 consoleOutput = new ByteArrayOutputStream();
-		 PrintStream printStream = new PrintStream(consoleOutput);
-		 System.setOut(printStream);
-		        
-		  }
 
 	@Test
 
@@ -83,8 +67,8 @@ public class Case03_Homescreen_sphere extends AppiummobileBase {
         AllureUtils.captureScreenshot(driver, "ios_Homescreen_Combineeeparators");
         
         
-        
-	
+        Thread.sleep(2500);
+        driver.terminateApp("com.cuesz.mobile");
 	
 	}
 	

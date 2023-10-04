@@ -47,6 +47,8 @@ public class Case82_FuelRecommendation extends BasePage{
 
 			         WebElement recoveryday = driver.findElement(By.xpath("//button[@id='3']"));
 			         recoveryday.click();
+			         
+			         
 			            
 			            // Optionally, you can wait for the results or perform other actions here
 

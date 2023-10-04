@@ -1,9 +1,0 @@
-Staff role is: Wellness Advocate
-Current week name: Current Week
-Last week name: 11/09/2023 -17/09/2023
-Next week name: Next Week
-Monday value: 
-Clicked on date: 26
-Pop-up is open.
-Data to be copied from: 02-10-2023 - 08-10-2023
-Data will be copied to: 23-10-2023 - 29-10-2023
