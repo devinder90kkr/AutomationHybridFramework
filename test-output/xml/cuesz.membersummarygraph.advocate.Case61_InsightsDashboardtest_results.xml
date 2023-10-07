@@ -4,14 +4,14 @@
            failures="0"
            errors="0"
            skipped="0"
-           time="24.785">
+           time="25.819">
     <properties></properties>
 
 
 
             <testcase
                 name="advocateMemberhoverTest"
-                time="24.785"
+                time="25.819"
                 classname="cuesz.membersummarygraph.advocate.Case61_InsightsDashboardtest">
             </testcase>
 </testsuite>

@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Default test"
+<testsuite name="Test"
            tests="1"
            failures="0"
            errors="0"
            skipped="0"
-           time="62.391">
+           time="64.682">
     <properties></properties>
 
 
 
             <testcase
                 name="advocatelogicmemberTest"
-                time="62.391"
+                time="64.682"
                 classname="cuesz.logictest.advocate.Case36_MSL_Staffnotestest">
             </testcase>
 </testsuite>

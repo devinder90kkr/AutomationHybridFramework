@@ -1,13 +1,10 @@
 package cuesz01.Iosapp_member_homeScreen;
 
-import java.io.ByteArrayOutputStream;
-import java.io.PrintStream;
 import java.util.HashMap;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
-import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 import cuesz.pages.AppiummobileBase;
@@ -34,20 +31,6 @@ public class Case06_Homescreen extends AppiummobileBase {
 	private By Restorelabel = 		AppiumBy.iOSNsPredicateString("name == 'Restore'");
 	
 	
-	
-	
-	 private ByteArrayOutputStream consoleOutput; // To capture console output
-	   
-	@BeforeClass
-	 public void setUp() {
-	      
-	 // Redirect console output to capture it
-	 consoleOutput = new ByteArrayOutputStream();
-	 PrintStream printStream = new PrintStream(consoleOutput);
-	 System.setOut(printStream);
-	        
-	  }
-	      
 	@Test
 	
 	@Owner("QA") // Add the @Owner annotation to specify the executor
@@ -84,6 +67,12 @@ public class Case06_Homescreen extends AppiummobileBase {
         System.out.println("Expected Text: " + expectedText);
         // Compare the actual and expected text
         Assert.assertEquals(actualText, expectedText);
+        
+     // Attach values to Allure report
+        Allure.addAttachment("Actual Text", actualText);
+        Allure.addAttachment("Expected Text", expectedText);
+
+             
 		
         // Locate the element containing the Fuel
         WebElement Fuel = driver.findElement(Fuelable);
@@ -98,6 +87,11 @@ public class Case06_Homescreen extends AppiummobileBase {
         // Compare the actual and expected text
         Assert.assertEquals(actualText1, expectedText1);
         
+     // Attach values to Allure report
+        Allure.addAttachment("Actual Text", actualText1);
+        Allure.addAttachment("Expected Text", expectedText1);
+
+        
         // Locate the element containing the Mindful
         WebElement Mindful = driver.findElement(Mindflable);
         // Extract text from the element
@@ -110,6 +104,11 @@ public class Case06_Homescreen extends AppiummobileBase {
         System.out.println("Expected Text: " + expectedText2);
         // Compare the actual and expected text
         Assert.assertEquals(actualText2, expectedText2);
+        
+        // Attach values to Allure report
+        Allure.addAttachment("Actual Text", actualText2);
+        Allure.addAttachment("Expected Text", expectedText2);
+
         
         
         // Locate the element containing the Mindful
@@ -125,14 +124,11 @@ public class Case06_Homescreen extends AppiummobileBase {
         // Compare the actual and expected text
         Assert.assertEquals(actualText3, expectedText3);
         
+        // Attach values to Allure report
+        Allure.addAttachment("Actual Text", actualText3);
+        Allure.addAttachment("Expected Text", expectedText3);
         
-        // Capture console logs
-        String consoleLogs = consoleOutput.toString();
-        System.out.println(consoleLogs); // Print console logs to console (optional)
-        
-        // Log console logs in Allure
-        Allure.addAttachment("Console Output", "text/plain", consoleLogs);
-        
+    
         // Capture a screenshot and attach it to Allure
         AllureUtils.captureScreenshot(driver, "ios_Homescreen_screenshot");
    

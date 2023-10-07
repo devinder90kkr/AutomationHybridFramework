@@ -5,6 +5,7 @@ import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
 
 import cuesz.pages.AppiummobileBase;
+import cuesz.utils.AllureUtils;
 import cuesz.utils.AppiumappUtils;
 import io.appium.java_client.AppiumBy;
 import io.qameta.allure.Description;
@@ -38,91 +39,27 @@ public class Case04_Homescreen_weekdays_past extends AppiummobileBase {
         // Click on home menu from the bottom
         WebElement Homeicon = driver.findElement(Homeclick);
         Homeicon.click();
-
         
-////        // Define the day labels in an array (assuming Sunday is 0, Saturday is 6)
-////        String[] dayLabels = {"Wed", "Thu", "Fri", "Sat", "Sun", "Mon", "Tue"};
-//        
-//        // Define the day labels in an array (assuming Sunday is 0, Saturday is 6)
-//        String[] dayLabels = { "Thu", "Fri"};
-//
-//        // Loop through the elements and click the ones with the correct label
-//        for (String dayLabel : dayLabels) {
-//            try {               	
-//                // Construct the XPath expression for the specific day
-//                String xpathExpression = String.format("(//XCUIElementTypeOther[@name=\"%s\"])[2]", dayLabel);              
-//                // Find the element
-//                WebElement dayElement = driver.findElement(By.xpath(xpathExpression));
-//
-//                if (dayElement != null) {
-//                    // Click the element
-//                    dayElement.click();
-//                
-//             
-//                    scrollDown();
-//             	
-//                      
-//                } else {
-//                    System.out.println("Day element not found: " + dayLabel);
-//                }
-//                
-//                
-//            
-//                scrollUp();
-//        		
-//            } catch (Exception e) {
-//                // Handle any exceptions
-//                System.out.println("Error: " + e.getMessage());
-//            
-//            
-//            
-//                Thread.sleep(2500);
-//                // Capture a screenshot and attach it to Allure
-//                   AllureUtils.captureScreenshot(driver, "Case04_Homescreen_weekdays_past");
-//                   
-//                   
-//                   
-//                   Thread.sleep(2500);
-//                   driver.terminateApp("com.cuesz.mobile");
-//            
-//            }
-//        }
-//    }
-//    
-//    
-//    
-// // Function to scroll down using the provided scroll method
-//    private void scrollDown() {
-//    	// Method to scroll to perform screen
-// 		HashMap<String,Object>scrollObject =new HashMap<>();
-// 		scrollObject.put("direction", "down");
-// 		scrollObject.put("Fri", "Fri");
-// 		driver.executeScript("mobile:scroll", scrollObject);
-//    }
-//    
-//
-////Function to scroll down using the provided scroll method
-//private void scrollUp() {
-//	// Method to scroll to perform screen
-//		HashMap<String,Object>scrollObject =new HashMap<>();
-//		scrollObject.put("direction", "up");
-//		scrollObject.put("Fri", "Fri");
-//		driver.executeScript("mobile:scroll", scrollObject);
-//}
-//}
-
-/*********************/
-      
-     driver.findElement(AppiumBy.accessibilityId("ThuClicked")).click();
-     driver.findElement(AppiumBy.accessibilityId("FriClicked")).click();
-     driver.findElement(AppiumBy.accessibilityId("SatClicked")).click();
-     driver.findElement(AppiumBy.accessibilityId("SunClicked")).click();
-     driver.findElement(AppiumBy.accessibilityId("MonClicked")).click();
-     driver.findElement(AppiumBy.accessibilityId("TueClicked")).click();
-     driver.findElement(AppiumBy.accessibilityId("WedClicked")).click();
-	
-     Thread.sleep(2500);
-     driver.terminateApp("com.cuesz.mobile");
+	     driver.findElement(AppiumBy.accessibilityId("ThuClicked")).click();
+	     driver.findElement(AppiumBy.accessibilityId("FriClicked")).click();
+	     driver.findElement(AppiumBy.accessibilityId("SatClicked")).click();
+	    
+	     Thread.sleep(1000);
+	     // Capture a screenshot and attach it to Allure
+	     AllureUtils.captureScreenshot(driver, "SatClicked");
+	     
+	     driver.findElement(AppiumBy.accessibilityId("SunClicked")).click();
+	     driver.findElement(AppiumBy.accessibilityId("MonClicked")).click();
+	     driver.findElement(AppiumBy.accessibilityId("TueClicked")).click();
+	     
+	     Thread.sleep(1000);
+	     // Capture a screenshot and attach it to Allure
+	     AllureUtils.captureScreenshot(driver, "TueClicked");
+	     
+	     driver.findElement(AppiumBy.accessibilityId("WedClicked")).click();
+		
+	     Thread.sleep(2500);
+	     driver.terminateApp("com.cuesz.mobile");
 	
 	
 	}

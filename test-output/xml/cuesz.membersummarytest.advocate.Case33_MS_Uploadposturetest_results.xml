@@ -4,14 +4,14 @@
            failures="0"
            errors="0"
            skipped="0"
-           time="43.436">
+           time="44.937">
     <properties></properties>
 
 
 
             <testcase
                 name="advocateScheduleEventTest"
-                time="43.436"
+                time="44.937"
                 classname="cuesz.membersummarytest.advocate.Case33_MS_Uploadposturetest">
             </testcase>
 </testsuite>

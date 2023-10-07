@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Default test"
+           tests="1"
+           failures="0"
+           errors="0"
+           skipped="0"
+           time="27.759">
+    <properties></properties>
+
+
+
+            <testcase
+                name="Homescreensperators"
+                time="27.759"
+                classname="cuesz01.Iosapp_member_homeScreen.Case10_Homescreen_LPwith15min">
+            </testcase>
+</testsuite>

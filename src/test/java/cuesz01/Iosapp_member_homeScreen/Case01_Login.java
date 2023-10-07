@@ -12,6 +12,7 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 import cuesz.pages.AppiummobileBase;
+import cuesz.utils.AllureUtils;
 import cuesz.utils.AppiumappUtils;
 import cuesz.utils.WebDriverManager;
 import io.appium.java_client.AppiumBy;
@@ -23,21 +24,17 @@ import io.qameta.allure.Owner;
 import io.qameta.allure.Severity;
 import io.qameta.allure.SeverityLevel;
 import io.qameta.allure.Story;
-@Epic ("Home screen detail ")
-@Feature ("Verify spheres separtors detail for Perform, Fuel, Mindful & Restore.")
+@Epic ("Login detail Screen")
+@Feature ("Verify functionlaity for Login screen")
 public class Case01_Login extends AppiummobileBase {
-
 	@BeforeClass
 	 public void setUp() {
-	     
 	  }
-
 @Test
-
 @Owner("QA") // Add the @Owner annotation to specify the executor
 @Severity(SeverityLevel.NORMAL)      
-@Description("Verify home screen & check spheres separtors.")
-@Story("Click on spheres and verify bounces spehere activity.")	
+@Description("Verify login functionlaity with OTP verification")
+@Story("Click on mobile field and input values and than redirect to OTp screen & click on login button")	
 
 	public void login() throws InterruptedException
 	{
@@ -55,6 +52,8 @@ public class Case01_Login extends AppiummobileBase {
 		WebElement indiaselection = driver.findElement(AppiumBy.accessibilityId("country-selector-IN"));
 		indiaselection.click();
 		
+		// Capture a screenshot and attach it to Allure
+        AllureUtils.captureScreenshot(driver, "Country selection"); 
 		
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(1000));
 		WebElement mobilefield = wait.until(ExpectedConditions.elementToBeClickable(AppiumBy.iOSNsPredicateString("name == \"SignInTextInput\"")));
@@ -92,7 +91,10 @@ public class Case01_Login extends AppiummobileBase {
 		
 		WebElement mobfield10 = driver.findElement(AppiumBy.xpath("//XCUIElementTypeKey[@name=\"5\"]"));
 		mobfield10.click();
-//	
+
+		
+		// Capture a screenshot and attach it to Allure
+        AllureUtils.captureScreenshot(driver, "Mobile number input before login tap"); 
 		
 		Thread.sleep(2000);
 		WebElement Loginbutton	= driver.findElement(AppiumBy.accessibilityId("LoginButton"));
@@ -114,6 +116,8 @@ public class Case01_Login extends AppiummobileBase {
 		WebElement submitnbutton	= driver.findElement(AppiumBy.xpath("(//XCUIElementTypeOther[@name=\"Submit\"])[3]"));
 		submitnbutton.click();
 		
+		// Capture a screenshot and attach it to Allure
+        AllureUtils.captureScreenshot(driver, "landed on home screen");  
 	
 		Thread.sleep(3500);
 		driver.terminateApp("com.cuesz.mobile");
@@ -122,12 +126,3 @@ public class Case01_Login extends AppiummobileBase {
 	}
 }
 
-//@AfterClass
-//public void tearDown() {
-//	// Log all captured status codes in Allure
-//	// Terminate the app
-//    driver.terminateApp("com.cuesz.mobile");
-//   // WebDriverManager.quitDriver();
-//   
-//}
-//}

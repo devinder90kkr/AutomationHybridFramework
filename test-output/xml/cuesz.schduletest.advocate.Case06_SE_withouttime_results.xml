@@ -4,14 +4,14 @@
            failures="0"
            errors="0"
            skipped="0"
-           time="27.774">
+           time="28.531">
     <properties></properties>
 
 
 
             <testcase
                 name="advocateSchedulewithoutimeTest"
-                time="27.774"
+                time="28.531"
                 classname="cuesz.schduletest.advocate.Case06_SE_withouttime">
             </testcase>
 </testsuite>

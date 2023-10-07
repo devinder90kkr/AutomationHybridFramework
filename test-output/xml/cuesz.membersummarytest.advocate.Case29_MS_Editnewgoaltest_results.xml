@@ -4,14 +4,14 @@
            failures="0"
            errors="0"
            skipped="0"
-           time="56.975">
+           time="59.562">
     <properties></properties>
 
 
 
             <testcase
                 name="advocateeditgoaltTest"
-                time="56.975"
+                time="59.562"
                 classname="cuesz.membersummarytest.advocate.Case29_MS_Editnewgoaltest">
             </testcase>
 </testsuite>

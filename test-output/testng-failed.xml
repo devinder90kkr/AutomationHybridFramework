@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test name="Default test(failed)">
     <classes>
-      <class name="cuesz01.Iosapp_member_homeScreen.Case05_Homescreen_arrows">
+      <class name="cuesz.logictest.advocate.Case42_01_MSL_Perform_currentdaytest">
         <methods>
-          <include name="Cueszbase"/>
+          <include name="setUp"/>
+          <include name="advocatelogicmemberTest"/>
           <include name="tearDown"/>
-          <include name="Homescreensperators"/>
         </methods>
-      </class> <!-- cuesz01.Iosapp_member_homeScreen.Case05_Homescreen_arrows -->
+      </class> <!-- cuesz.logictest.advocate.Case42_01_MSL_Perform_currentdaytest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

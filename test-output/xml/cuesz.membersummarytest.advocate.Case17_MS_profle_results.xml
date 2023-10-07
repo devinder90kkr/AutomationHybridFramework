@@ -4,14 +4,14 @@
            failures="0"
            errors="0"
            skipped="0"
-           time="30.160">
+           time="32.524">
     <properties></properties>
 
 
 
             <testcase
                 name="advocatemembersummaryprofileTest"
-                time="30.160"
+                time="32.524"
                 classname="cuesz.membersummarytest.advocate.Case17_MS_profle">
             </testcase>
 </testsuite>

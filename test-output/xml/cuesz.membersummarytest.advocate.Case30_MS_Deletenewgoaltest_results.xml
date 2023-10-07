@@ -4,14 +4,14 @@
            failures="0"
            errors="0"
            skipped="0"
-           time="45.987">
+           time="47.430">
     <properties></properties>
 
 
 
             <testcase
                 name="advocatdeletegoaltTest"
-                time="45.987"
+                time="47.430"
                 classname="cuesz.membersummarytest.advocate.Case30_MS_Deletenewgoaltest">
             </testcase>
 </testsuite>

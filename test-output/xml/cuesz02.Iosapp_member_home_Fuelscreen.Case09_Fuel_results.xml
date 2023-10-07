@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Default test"
+           tests="1"
+           failures="0"
+           errors="0"
+           skipped="0"
+           time="43.739">
+    <properties></properties>
+
+
+
+            <testcase
+                name="Homescreen"
+                time="43.739"
+                classname="cuesz02.Iosapp_member_home_Fuelscreen.Case09_Fuel">
+            </testcase>
+</testsuite>

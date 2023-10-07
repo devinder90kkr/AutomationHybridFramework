@@ -4,14 +4,14 @@
            failures="0"
            errors="0"
            skipped="0"
-           time="44.755">
+           time="46.361">
     <properties></properties>
 
 
 
             <testcase
                 name="advocatebodyscanresultTest"
-                time="44.755"
+                time="46.361"
                 classname="cuesz.membersummarytest.advocate.Case34_MS_VO2Resulttest">
             </testcase>
 </testsuite>

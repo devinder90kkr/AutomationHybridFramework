@@ -2,6 +2,9 @@
 package cuesz.membersummary;
 
 import java.time.Duration;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+import java.util.Locale;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
@@ -114,23 +117,47 @@ public class Case24_MS_Mindfulactivity extends BasePage {
   		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
   		wait.until(ExpectedConditions.visibilityOfElementLocated(elment2));
 
-  		// Get the current date
-  		String currentDate = driver.findElement(currtDate).getAttribute("aria-label");
-
-  		// Assuming currentDate is in the format "Sun Jul 23 2023"
-  		// You can parse it and find the previous week's start date
-
-  		// ... parsing logic to find previous week's start date ...
-  		// Let's say the previous week's start date is "Mon Jul 17 2023"
-
-  		// Now, locate and click on the previous week's start date
-  		String previousWeekStartDate = "Sun Sep 03 2023";
-  		WebElement previousWeekDateElement = driver.findElement(By.xpath("//div[@aria-label='" + previousWeekStartDate + "']"));
-  		previousWeekDateElement.click();
+//  		// Get the current date
+//  		String currentDate = driver.findElement(currtDate).getAttribute("aria-label");
+//
+//  		// Assuming currentDate is in the format "Sun Jul 23 2023"
+//  		// You can parse it and find the previous week's start date
+//
+//  		// ... parsing logic to find previous week's start date ...
+//  		// Let's say the previous week's start date is "Mon Jul 17 2023"
+//
+//  		// Now, locate and click on the previous week's start date
+//  		String previousWeekStartDate = "Sun Sep 03 2023";
+//  		WebElement previousWeekDateElement = driver.findElement(By.xpath("//div[@aria-label='" + previousWeekStartDate + "']"));
+//  		previousWeekDateElement.click();
 
   		// Wait for the date picker to close (you can use explicit wait here)
   	//	wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//div[@class='DayPicker']")));
 		//    Thread.sleep(500);
+  		
+
+  		/************/
+  		LocalDate currentDate = LocalDate.now();
+  		int daysToSubtract = currentDate.getDayOfWeek().getValue() + 7; // Ensure we go back to the start of the previous week
+  		LocalDate previousWeekStartDate = currentDate.minusDays(daysToSubtract);
+
+  		// Check if previous week's start date is in the previous month
+  		if (previousWeekStartDate.getMonthValue() < currentDate.getMonthValue()) {
+  		    // Click on the 'Previous Month' button
+  		    WebElement previousMonthButton = driver.findElement(By.xpath("//span[@aria-label='Previous Month']"));
+  		    previousMonthButton.click();
+  		}
+
+  		// Format the date to match the format used in the calendar
+  		DateTimeFormatter dateFormatter = DateTimeFormatter.ofPattern("E MMM dd yyyy", Locale.ENGLISH);
+  		String formattedDate = previousWeekStartDate.format(dateFormatter);
+
+  		// Locate and click on the previous week's start date
+  		WebElement previousWeekDateElement = driver.findElement(By.xpath("//div[@aria-label='" + formattedDate + "']"));
+  		previousWeekDateElement.click();
+  		
+  		
+  		
   	// Capture a screenshot and attach it to Allure
         AllureUtils.captureScreenshot(driver, "fuel_report_screenshot"); 
 		    

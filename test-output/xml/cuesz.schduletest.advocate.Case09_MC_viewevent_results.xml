@@ -4,14 +4,14 @@
            failures="0"
            errors="0"
            skipped="0"
-           time="19.390">
+           time="19.552">
     <properties></properties>
 
 
 
             <testcase
                 name="advocateScheduleEventTest"
-                time="19.390"
+                time="19.552"
                 classname="cuesz.schduletest.advocate.Case09_MC_viewevent">
             </testcase>
 </testsuite>

@@ -1,0 +1,6 @@
+Staff role is: Wellness Advocate
+Heading is 'Current Condition'.
+Is element displayed: true
+Is element enabled: true
+Heading is 'Supplement Recommendations'.
+Heading is 'DNA Recommendations'.

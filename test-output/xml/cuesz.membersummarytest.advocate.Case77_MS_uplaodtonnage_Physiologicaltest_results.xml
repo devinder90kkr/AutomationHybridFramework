@@ -4,14 +4,14 @@
            failures="0"
            errors="0"
            skipped="0"
-           time="34.729">
+           time="36.137">
     <properties></properties>
 
 
 
             <testcase
                 name="advocateScheduleEventTest"
-                time="34.729"
+                time="36.137"
                 classname="cuesz.membersummarytest.advocate.Case77_MS_uplaodtonnage_Physiologicaltest">
             </testcase>
 </testsuite>

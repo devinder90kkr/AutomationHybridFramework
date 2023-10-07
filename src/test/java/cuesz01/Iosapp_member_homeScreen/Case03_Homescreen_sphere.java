@@ -29,7 +29,6 @@ public class Case03_Homescreen_sphere extends AppiummobileBase {
 	
 
 	@Test
-
 	@Owner("QA") // Add the @Owner annotation to specify the executor
     @Severity(SeverityLevel.NORMAL)      
     @Description("Verify home screen & check spheres separtors.")
