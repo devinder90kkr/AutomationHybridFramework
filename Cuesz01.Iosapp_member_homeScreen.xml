@@ -12,9 +12,7 @@
 	<class name="cuesz01.Iosapp_member_homeScreen.Case06_Homescreen"/>   
  	<class name="cuesz01.Iosapp_member_homeScreen.Case07_Homescreen_scroller"/>
  	<class name="cuesz01.Iosapp_member_homeScreen.Case08_Homescreen_notification"/>
- 	<class name="cuesz.schduletest.advocate.Step12_11_SE_createventtimelongerthan15minformebercalltest"/>
  	<class name="cuesz01.Iosapp_member_homeScreen.Case09_Homescreen_LPgretherthan15min"/>
- 	<class name="cuesz.liveperform.advocate.Case72_creatLiveperformtest"/>
  	<class name="cuesz01.Iosapp_member_homeScreen.Case10_Homescreen_LPwith15min"/>
     </classes>
   </test> <!-- Test -->

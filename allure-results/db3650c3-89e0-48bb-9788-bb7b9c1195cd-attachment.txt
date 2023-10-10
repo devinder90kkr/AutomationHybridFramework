@@ -1,0 +1,2 @@
+Staff role is: Wellness Advocate
+Yes button not found. Continuing with the script.

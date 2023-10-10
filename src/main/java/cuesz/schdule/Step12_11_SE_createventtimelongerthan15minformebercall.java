@@ -1,14 +1,12 @@
 package cuesz.schdule;
 
-import java.time.Duration;
+import java.util.NoSuchElementException;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
 
 import cuesz.pages.BasePage;
@@ -46,7 +44,7 @@ public class Step12_11_SE_createventtimelongerthan15minformebercall extends Base
 		utils.clickaddnewevent();
 			        
 		/*Enter date values*/
-		Thread.sleep(2000);
+		Thread.sleep(2500);
 	    WebElement datefield = driver.findElement(Date);
 	    Actions builder1 = new Actions(driver);
 	    builder1.moveToElement(datefield).click().sendKeys(eventDate).sendKeys(Keys.ENTER).perform();
@@ -94,25 +92,11 @@ public class Step12_11_SE_createventtimelongerthan15minformebercall extends Base
 		    driver.findElement(Submitbutton).click();
 		    
 		    
-		 // Wait for the popup to appear (maximum wait time 10 seconds)
-	        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5000));
-	        wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//div[contains(text(),'This member already have an LP, Are you sure you want to make a new LP?')]")));
+	}}
+      
 
-	        // Check if the popup is displayed
-	        if (driver.findElements(By.xpath("//div[contains(text(),'This member already have an LP, Are you sure you want to make a new LP?')]")).size() > 0) {
-	            // Click on Yes button in the popup
-	            driver.findElement(By.xpath("(//button[@class='MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary'])[1]")).click();
-	        } else {
-	            // Popup did not appear, continue with event creation
-	            // Add code here to handle event creation without the popup
-	        }
-
-	        Thread.sleep(5000);
+	     
+	    
 		    
 		    
-		    
-		    
-		    
-		    Thread.sleep(5000);
-		 	}
-		}	
+	

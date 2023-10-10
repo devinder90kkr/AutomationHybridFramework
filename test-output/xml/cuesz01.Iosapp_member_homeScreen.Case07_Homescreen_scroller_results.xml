@@ -4,14 +4,14 @@
            failures="0"
            errors="0"
            skipped="0"
-           time="15.617">
+           time="15.080">
     <properties></properties>
 
 
 
             <testcase
                 name="Homescreensperators"
-                time="15.617"
+                time="15.080"
                 classname="cuesz01.Iosapp_member_homeScreen.Case07_Homescreen_scroller">
             </testcase>
 </testsuite>

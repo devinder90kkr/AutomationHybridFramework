@@ -4,14 +4,14 @@
            failures="0"
            errors="0"
            skipped="0"
-           time="57.841">
+           time="61.830">
     <properties></properties>
 
 
 
             <testcase
                 name="Homescreensperators"
-                time="57.841"
+                time="61.830"
                 classname="cuesz01.Iosapp_member_homeScreen.Case05_Homescreen_forward_backwardarrows">
             </testcase>
 </testsuite>

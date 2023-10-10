@@ -1,8 +1,9 @@
 	package cuesz.logicpage;
 	
 	import java.text.ParseException;
-import java.time.DayOfWeek;
-import java.time.LocalDate;
+	import java.time.DayOfWeek;
+	import java.time.LocalDate;
+import java.util.Calendar;
 import java.time.Duration;
 	import org.openqa.selenium.By;
 	import org.openqa.selenium.JavascriptExecutor;
@@ -19,26 +20,14 @@ import java.time.Duration;
 	
 	public class Case42_01_MSL_Perform_currentday extends BasePage {
 		
-		// Get the current day of the week (1=Monday, 7=Sunday)
-        DayOfWeek dayOfWeek = LocalDate.now().getDayOfWeek();
-    // Generate dynamic XPath based on the current day
-        String dynamicXPath = String.format("//*[@id='performActivity-0-%s']", dayOfWeek.toString());
+	
 
-		
 		SeleniumUtils utils = new SeleniumUtils(driver);
 		private By Logibttn =   (By.xpath("//span[normalize-space()='Logic Page']"));
 		private By Prfrmhading = (By.id("LivePerfromCard"));
 		private By Prfrmhadingplsu = (By.xpath("//button[@data-bs-target='#LivePerform']"));
 		private By selctbttn = (By.xpath("//div[@id='LivePerfromCard']//div[@class='d-flex justify-content-end calender_drop']//button[1]"));
-		// private By selctLP = (By.xpath("//*[@id='LivePerform']/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]"));
-	 private By sarchacivity = (By.id(dynamicXPath ));
-		//private By sarchacivity =(By.xpath("//*[@id='LivePerform']/div[1]/div[1]/div[2]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]"));
-		private By minutes =	(By.xpath("(//input[@placeholder='Min'])[1]"));
-		private By sarchIntsity =	(By.xpath("//*[@id='LivePerform']/div[1]/div[1]/div[2]/div[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]"));
-		private By HR1value =(By.xpath("//*[@id='LivePerform']/div[1]/div[1]/div[2]/div[1]/div[2]/div[2]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]"));
-		private By cueinpt = (By.xpath("//*[@id='LivePerform']/div[1]/div[1]/div[2]/div[1]/div[2]/div[3]/div[1]/div[1]/div[1]/div[1]/div[1]"));
-	    private By outsieBlcok1 = (By.tagName("body"));
-	
+		private By outsieBlcok1 = (By.tagName("body"));
 	  	
 		
 		 public Case42_01_MSL_Perform_currentday(WebDriver driver) {
@@ -94,65 +83,159 @@ import java.time.Duration;
 			// Scroll to the "Staff Notes" element using JavaScriptExecutor
 			   ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView();", activeblock);
 			   
-//			   // Locate the element for Monday
-//		        By mondayElementLocator = By.xpath("//h6[contains(@class, 'g_title') and contains(text(), 'Monday')]");
-//		        WebElement mondayElement = driver.findElement(mondayElementLocator);
-//
-//		        // Extract and print the value for Monday
-//		        String mondayValue = mondayElement.getText();
-//		        System.out.println("Monday value: " + mondayValue);
 
 	  	   
      /********************************************************************Populate data for monday first activity *************************************************************************************/
 					
 			
-			   
-//		        Thread.sleep(2000);
-//			    WebElement selectLP =driver.findElement(selctLP);
-//			    Actions builder = new Actions(driver);
-//			    builder.moveToElement(selectLP).click().sendKeys("LP1R1").perform();
-//			    Thread.sleep(2000);
-//			    builder.sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.ENTER).perform();
-		        
+			   		        
+			
 			    Thread.sleep(2500);
 			    
-			    WebElement searchactivity =driver.findElement(sarchacivity);
+			    // Get the current day of the week (Sunday=1, Monday=2, ..., Saturday=7)
+		        int dayOfWeek = Calendar.getInstance().get(Calendar.DAY_OF_WEEK);
+
+		        // Convert the numeric day of the week to a String representation
+		        String dayName;
+		        switch (dayOfWeek) {
+		            case Calendar.MONDAY:
+		                dayName = "Monday";
+		                break;
+		            case Calendar.TUESDAY:
+		                dayName = "Tuesday";
+		                break;
+		                
+		            case Calendar.WEDNESDAY:
+		                dayName = "Wednesday";
+		                break;
+		                
+		            case Calendar.THURSDAY:
+		                dayName = "Thursday";
+		                break;
+		                
+		            case Calendar.FRIDAY:
+		                dayName = "Friday";
+		                break;
+		           
+		            case Calendar.SATURDAY:
+		                dayName = "Saturday";
+		                break;
+		                
+		            case Calendar.SUNDAY:
+		                dayName = "Sunday";
+		                break; 
+		                
+		                
+		            // ... repeat for other days of the week
+		            default:
+		                dayName = "Unknown";
+		                break;
+		        }
+
+		        String partialId = "performActivity-0-" + dayName;
+			    WebElement searchactivity = driver.findElement(By.id(partialId));
 			    Actions builder2 = new Actions(driver);
 			    builder2.moveToElement(searchactivity).click().sendKeys("Walking").perform();
 			    Thread.sleep(2000);
 			    builder2.sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.ENTER).perform();
 		        
-//			    Thread.sleep(2500);
-//			
-//			    WebElement min =driver.findElement(minutes);
-//			    Actions builder3 = new Actions(driver);
-//			    min.clear();
-//			    builder3.moveToElement(min).click().sendKeys("05").perform();
-//			  
-//			    Thread.sleep(2000);
-//			    WebElement searchIntensity =driver.findElement(sarchIntsity);
-//			    Actions builder4 = new Actions(driver);
-//			    builder4.moveToElement(searchIntensity).click().sendKeys("Low").perform();
-//			    Thread.sleep(2000);
-//			    builder4.sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.ENTER).perform();
-//			    
-//			    Thread.sleep(2000);
-//			    WebElement HRvalue =driver.findElement(HR1value);
-//			    Actions builder41 = new Actions(driver);
-//			    builder41.moveToElement(HRvalue).click().sendKeys("60-80").perform();
-//			    Thread.sleep(2000);
-//			    builder41.sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.ENTER).perform();
-//			       
-//			    Thread.sleep(2000);
-//			    WebElement cue = driver.findElement(cueinpt);
-//			    Actions builder5 = new Actions(driver);
-//			    builder5.moveToElement(cue).click().sendKeys("Please Sync Scosche").sendKeys(Keys.ENTER).perform();
-//			   
-//			    Thread.sleep(2000);
-//			    // Click outside of the block to save data
-//		        WebElement outsideBlock1 = driver.findElement(outsieBlcok1);
-//		        outsideBlock1.click(); 
-//			         
+			    Thread.sleep(2500);
+				
+			  
+			    
+			    String partialId1 = "PerformActivityMin-0-" + dayName;
+			    WebElement min =driver.findElement(By.id(partialId1));
+			    Actions builder3 = new Actions(driver);
+			    min.clear();
+			    builder3.moveToElement(min).click().sendKeys("05").perform();
+			  
+			    Thread.sleep(2000);
+			  
+			    
+			    String partialId2 = "PerformActivityIntesity-0-" + dayName;
+			    WebElement searchIntensity =driver.findElement(By.id(partialId2));
+			    Actions builder4 = new Actions(driver);
+			    builder4.moveToElement(searchIntensity).click().sendKeys("Low").perform();
+			    Thread.sleep(2000);
+			    builder4.sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.ENTER).perform();
+			    
+			    Thread.sleep(2000);
+			    
+			    String partialId3 = "PerformActivityHr-0-" + dayName;
+			    WebElement HRvalue =driver.findElement(By.id(partialId3));			
+			    Actions builder41 = new Actions(driver);
+			    builder41.moveToElement(HRvalue).click().sendKeys("60-80").perform();
+			    Thread.sleep(2000);
+			    builder41.sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.ENTER).perform();
+			    Thread.sleep(2000);
+			    
+			    String partialId4 = "PerformActivityCue-0-" + dayName;
+			    WebElement cue =driver.findElement(By.id(partialId4));	
+			    Actions builder5 = new Actions(driver);
+			    builder5.moveToElement(cue).click().sendKeys("Please Sync Scosche").sendKeys(Keys.ENTER).perform();
+			   
+			    Thread.sleep(2000);
+			    // Click outside of the block to save data
+		        WebElement outsideBlock1 = driver.findElement(outsieBlcok1);
+		        outsideBlock1.click(); 
+			    
+		        
+		        Thread.sleep(3500);
+		        
+		        /************************************************************/
+		        String partialId6 = "performActivity-1-" + dayName;
+			    WebElement searchactivity1 = driver.findElement(By.id(partialId6));
+			    Actions builder21 = new Actions(driver);
+			    builder21.moveToElement(searchactivity1).click().sendKeys("Judo").perform();
+			    Thread.sleep(2000);
+			    builder21.sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.ENTER).perform();
+		        
+			    Thread.sleep(2500);
+				
+			  
+			    
+			    String partialId7 = "PerformActivityMin-1-" + dayName;
+			    WebElement min12 =driver.findElement(By.id(partialId7));
+			    Actions builder31 = new Actions(driver);
+			    min12.clear();
+			    builder31.moveToElement(min12).click().sendKeys("15").perform();
+			  
+			    Thread.sleep(2000);
+			  
+			    
+			    String partialId22 = "PerformActivityIntesity-1-" + dayName;
+			    WebElement searchIntensity69 =driver.findElement(By.id(partialId22));
+			    Actions builder44 = new Actions(driver);
+			    builder44.moveToElement(searchIntensity69).click().sendKeys("High").perform();
+			    Thread.sleep(2000);
+			    builder44.sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.ENTER).perform();
+			    
+			    Thread.sleep(2000);
+			    
+			    String partialId39 = "PerformActivityHr-1-" + dayName;
+			    WebElement HRvalue45 =driver.findElement(By.id(partialId39));			
+			    Actions builder46 = new Actions(driver);
+			    builder46.moveToElement(HRvalue45).click().sendKeys("100-120").perform();
+			    Thread.sleep(2000);
+			    builder46.sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.ENTER).perform();
+			    Thread.sleep(2000);
+			    
+			    String partialId47 = "PerformActivityCue-1-" + dayName;
+			    WebElement cue67 =driver.findElement(By.id(partialId47));	
+			    Actions builder54 = new Actions(driver);
+			    builder54.moveToElement(cue67).click().sendKeys("Please Sync Scosche").sendKeys(Keys.ENTER).perform();
+			   
+			    Thread.sleep(2000);
+			    // Click outside of the block to save data
+		        WebElement outsideBlock14 = driver.findElement(outsieBlcok1);
+		        outsideBlock14.click(); 
+		        
+		        
+		        
+		        Thread.sleep(3500);
+			    
+			    
+
 //			    
 //		 }
 	}

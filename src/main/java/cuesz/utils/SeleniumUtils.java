@@ -67,8 +67,8 @@ public class SeleniumUtils {
     public void enterSearchText() {
         By searchFieldLocator = By.xpath("//input[@placeholder='Search Members']");
         // String searchmember = "Shelja"; // Define the search text here
-//        String searchmember = "Kumar Devinder"; // Define the search text here
-        String searchmember = "Richard"; // Define the search text here
+        String searchmember = "Kumar Devinder"; // Define the search text here
+     //   String searchmember = "Richard"; // Define the search text here
         
         enterText(searchFieldLocator, searchmember);
      //   enterSearchText("Sanjit QA");

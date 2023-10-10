@@ -21,7 +21,7 @@ public class DatePickerUtility_logicpage {
         WebElement todayDateElement = driver.findElement(By.xpath("//div[contains(@class, 'DayPicker-Day--today')]"));
         String todayDateText = todayDateElement.getText();
         int today = Integer.parseInt(todayDateText);
-        int twoWeeksAhead = today + 14;
+        int twoWeeksAhead = today + 8;
 
         LocalDate desiredDate = currentDate.plusDays(twoWeeksAhead);
 

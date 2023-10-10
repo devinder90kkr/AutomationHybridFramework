@@ -136,7 +136,7 @@ import cuesz.utils.SeleniumUtils;
 			    builder2.sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.ENTER).perform();
 		        
 			    Thread.sleep(2500);
-			
+		
 			    WebElement min =driver.findElement(minutes);
 			    Actions builder3 = new Actions(driver);
 			    min.clear();

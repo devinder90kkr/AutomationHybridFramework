@@ -3,6 +3,13 @@
 <suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
   <test name="Test(failed)">
     <classes>
+      <class name="cuesz01.Iosapp_member_homeScreen.Case10_Homescreen_LPwith15min">
+        <methods>
+          <include name="Cueszbase"/>
+          <include name="Homescreensperators"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- cuesz01.Iosapp_member_homeScreen.Case10_Homescreen_LPwith15min -->
       <class name="cuesz01.Iosapp_member_homeScreen.Case09_Homescreen_LPgretherthan15min">
         <methods>
           <include name="Cueszbase"/>
@@ -17,13 +24,6 @@
           <include name="setUp"/>
         </methods>
       </class> <!-- cuesz.liveperform.advocate.Case72_creatLiveperformtest -->
-      <class name="cuesz.schduletest.advocate.Step12_11_SE_createventtimelongerthan15minformebercalltest">
-        <methods>
-          <include name="tearDown"/>
-          <include name="setUp"/>
-          <include name="advocateSchedulefromcalendarEventTest"/>
-        </methods>
-      </class> <!-- cuesz.schduletest.advocate.Step12_11_SE_createventtimelongerthan15minformebercalltest -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->
