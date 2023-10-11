@@ -1,2 +1,0 @@
-Staff role is: Wellness Advocate
-Dialog did not appear or 'Yes' button was not found. Continuing with the script.

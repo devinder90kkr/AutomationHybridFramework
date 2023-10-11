@@ -1,8 +1,0 @@
-Staff role is: Wellness Advocate
-Logic page heading is displayed.
-Title 'Basic Information' is displayed.
-The image link is valid.
-Member Name: Kumar Devinder
-Popup with heading 'Gym' is open.
-Popup with heading 'Gym Partner' is open.
-Popup with heading 'Why join?' is open.

@@ -1,101 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="0" failed="0" skipped="1">
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-10-10T06:51:28Z" name="Default suite" finished-at="2023-10-10T06:51:29Z" duration-ms="960">
+  <suite started-at="2023-10-11T12:30:41Z" name="Default suite" finished-at="2023-10-11T12:31:32Z" duration-ms="51444">
     <groups>
     </groups>
-    <test started-at="2023-10-10T06:51:28Z" name="Default test" finished-at="2023-10-10T06:51:29Z" duration-ms="960">
-      <class name="cuesz01.Iosapp_member_homeScreen.Case02_Homescreen_sphereclick">
-        <test-method is-config="true" signature="Cueszbase()[pri:0, instance:cuesz01.Iosapp_member_homeScreen.Case02_Homescreen_sphereclick@2dcd168a]" started-at="2023-10-10T12:21:28Z" name="Cueszbase" finished-at="2023-10-10T12:21:28Z" duration-ms="236" status="FAIL">
-          <exception class="java.lang.NoSuchMethodError">
-            <message>
-              <![CDATA['void org.openqa.selenium.remote.http.ClientConfig.<init>(java.net.URI, java.time.Duration, java.time.Duration, org.openqa.selenium.remote.http.Filter, java.net.Proxy, org.openqa.selenium.Credentials)']]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.NoSuchMethodError: 'void org.openqa.selenium.remote.http.ClientConfig.<init>(java.net.URI, java.time.Duration, java.time.Duration, org.openqa.selenium.remote.http.Filter, java.net.Proxy, org.openqa.selenium.Credentials)'
-	at io.appium.java_client.AppiumClientConfig.<init>(AppiumClientConfig.java:62)
-	at io.appium.java_client.AppiumClientConfig.defaultConfig(AppiumClientConfig.java:79)
-	at io.appium.java_client.remote.AppiumCommandExecutor.<init>(AppiumCommandExecutor.java:109)
-	at io.appium.java_client.AppiumDriver.<init>(AppiumDriver.java:101)
-	at io.appium.java_client.ios.IOSDriver.<init>(IOSDriver.java:104)
-	at cuesz.pages.AppiummobileBase.Cueszbase(AppiummobileBase.java:37)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
-	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:523)
-	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:224)
-	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:146)
-	at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:166)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:105)
-	at org.testng.TestRunner.privateRun(TestRunner.java:744)
-	at org.testng.TestRunner.run(TestRunner.java:602)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:380)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:375)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1226)
-	at org.testng.TestNG.runSuites(TestNG.java:1144)
-	at org.testng.TestNG.run(TestNG.java:1115)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.NoSuchMethodError -->
+    <test started-at="2023-10-11T12:30:41Z" name="Default test" finished-at="2023-10-11T12:31:32Z" duration-ms="51444">
+      <class name="cuesz02.Iosapp_member_home_PerformScreen.Case12_Perform_additionalactivity">
+        <test-method is-config="true" signature="Cueszbase()[pri:0, instance:cuesz02.Iosapp_member_home_PerformScreen.Case12_Perform_additionalactivity@5b1ebf56]" started-at="2023-10-11T18:00:41Z" name="Cueszbase" finished-at="2023-10-11T18:00:46Z" duration-ms="4964" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Cueszbase -->
-        <test-method signature="Homescreen()[pri:0, instance:cuesz01.Iosapp_member_homeScreen.Case02_Homescreen_sphereclick@2dcd168a]" started-at="2023-10-10T12:21:29Z" name="Homescreen" finished-at="2023-10-10T12:21:29Z" duration-ms="0" status="SKIP">
-          <exception class="java.lang.NoSuchMethodError">
-            <message>
-              <![CDATA['void org.openqa.selenium.remote.http.ClientConfig.<init>(java.net.URI, java.time.Duration, java.time.Duration, org.openqa.selenium.remote.http.Filter, java.net.Proxy, org.openqa.selenium.Credentials)']]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.NoSuchMethodError: 'void org.openqa.selenium.remote.http.ClientConfig.<init>(java.net.URI, java.time.Duration, java.time.Duration, org.openqa.selenium.remote.http.Filter, java.net.Proxy, org.openqa.selenium.Credentials)'
-	at io.appium.java_client.AppiumClientConfig.<init>(AppiumClientConfig.java:62)
-	at io.appium.java_client.AppiumClientConfig.defaultConfig(AppiumClientConfig.java:79)
-	at io.appium.java_client.remote.AppiumCommandExecutor.<init>(AppiumCommandExecutor.java:109)
-	at io.appium.java_client.AppiumDriver.<init>(AppiumDriver.java:101)
-	at io.appium.java_client.ios.IOSDriver.<init>(IOSDriver.java:104)
-	at cuesz.pages.AppiummobileBase.Cueszbase(AppiummobileBase.java:37)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
-	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:523)
-	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:224)
-	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:146)
-	at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:166)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:105)
-	at org.testng.TestRunner.privateRun(TestRunner.java:744)
-	at org.testng.TestRunner.run(TestRunner.java:602)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:380)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:375)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1226)
-	at org.testng.TestNG.runSuites(TestNG.java:1144)
-	at org.testng.TestNG.run(TestNG.java:1115)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.NoSuchMethodError -->
+        <test-method signature="perfom_recommendedactivty()[pri:0, instance:cuesz02.Iosapp_member_home_PerformScreen.Case12_Perform_additionalactivity@5b1ebf56]" started-at="2023-10-11T18:00:46Z" name="perfom_recommendedactivty" finished-at="2023-10-11T18:01:32Z" duration-ms="46186" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- Homescreen -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:cuesz01.Iosapp_member_homeScreen.Case02_Homescreen_sphereclick@2dcd168a]" started-at="2023-10-10T12:21:29Z" name="tearDown" finished-at="2023-10-10T12:21:29Z" duration-ms="0" status="SKIP">
+        </test-method> <!-- perfom_recommendedactivty -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:cuesz02.Iosapp_member_home_PerformScreen.Case12_Perform_additionalactivity@5b1ebf56]" started-at="2023-10-11T18:01:32Z" name="tearDown" finished-at="2023-10-11T18:01:32Z" duration-ms="36" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- cuesz01.Iosapp_member_homeScreen.Case02_Homescreen_sphereclick -->
+      </class> <!-- cuesz02.Iosapp_member_home_PerformScreen.Case12_Perform_additionalactivity -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
