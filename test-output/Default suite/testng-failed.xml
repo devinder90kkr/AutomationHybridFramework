@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test name="Default test(failed)">
     <classes>
-      <class name="cuesz02.Iosapp_member_home_PerformScreen.Case11_Perform_recommendedactivity">
+      <class name="cuesz02.Iosapp_member_home_PerformScreen.Case16_Perform_Vo2">
         <methods>
           <include name="Cueszbase"/>
           <include name="perfom_recommendedactivty"/>
           <include name="tearDown"/>
         </methods>
-      </class> <!-- cuesz02.Iosapp_member_home_PerformScreen.Case11_Perform_recommendedactivity -->
+      </class> <!-- cuesz02.Iosapp_member_home_PerformScreen.Case16_Perform_Vo2 -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

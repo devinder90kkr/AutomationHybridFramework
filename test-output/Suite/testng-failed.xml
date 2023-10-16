@@ -3,27 +3,13 @@
 <suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
   <test name="Test(failed)">
     <classes>
-      <class name="cuesz01.Iosapp_member_homeScreen.Case10_Homescreen_LPwith15min">
+      <class name="cuesz.schduletest.advocate.Step12_08_SE_createventtest">
         <methods>
-          <include name="Cueszbase"/>
-          <include name="Homescreensperators"/>
-          <include name="tearDown"/>
-        </methods>
-      </class> <!-- cuesz01.Iosapp_member_homeScreen.Case10_Homescreen_LPwith15min -->
-      <class name="cuesz01.Iosapp_member_homeScreen.Case09_Homescreen_LPgretherthan15min">
-        <methods>
-          <include name="Cueszbase"/>
-          <include name="Homescreensperators"/>
-          <include name="tearDown"/>
-        </methods>
-      </class> <!-- cuesz01.Iosapp_member_homeScreen.Case09_Homescreen_LPgretherthan15min -->
-      <class name="cuesz.liveperform.advocate.Case72_creatLiveperformtest">
-        <methods>
-          <include name="advocateSchedulecreateeventTest"/>
-          <include name="tearDown"/>
           <include name="setUp"/>
+          <include name="tearDown"/>
+          <include name="advocateSchedulefromcalendarEventTest"/>
         </methods>
-      </class> <!-- cuesz.liveperform.advocate.Case72_creatLiveperformtest -->
+      </class> <!-- cuesz.schduletest.advocate.Step12_08_SE_createventtest -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

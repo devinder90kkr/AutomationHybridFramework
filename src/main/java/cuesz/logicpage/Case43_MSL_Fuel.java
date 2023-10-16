@@ -212,36 +212,36 @@ import cuesz.utils.SeleniumUtils;
 			   Thread.sleep(3500);
 	   /***********************************************Input values for option 1 Secondary breakfast field*****************************************/
 			   
-			   try {
-		            // Locate the input field
-		            WebElement inputField = driver.findElement(inputFeld1);
-		            // Enter values into the input field
-		            inputField.sendKeys("Pizza");		
-		            Thread.sleep(3500);
-		            // Simulate pressing the Enter key
-		            inputField.sendKeys(Keys.ENTER);
-		      
-
-		            // Clear the input field to enter the second value
-		            inputField.clear();
-		            Thread.sleep(2500);
-		            
-		          // Enter the second value "Curd" into the input field
-		            inputField.sendKeys("Kiwi");	
-		            Thread.sleep(3500);
-		            // Simulate pressing the Enter key to select the second value
-		            inputField.sendKeys(Keys.ENTER);
-		            // Wait for a moment (optional)
-		            Thread.sleep(3500);
-		    
-			   } catch (Exception e) {
-				    e.printStackTrace();
-				} finally {
-				    // Your finally block code here (optional)
-				}
-		 
-			   Thread.sleep(3500);
-	   /******************************Input values for option 2 primary breakfast field*****************************************/
+//			   try {
+//		            // Locate the input field
+//		            WebElement inputField = driver.findElement(inputFeld1);
+//		            // Enter values into the input field
+//		            inputField.sendKeys("Pizza");		
+//		            Thread.sleep(3500);
+//		            // Simulate pressing the Enter key
+//		            inputField.sendKeys(Keys.ENTER);
+//		      
+//
+//		            // Clear the input field to enter the second value
+//		            inputField.clear();
+//		            Thread.sleep(2500);
+//		            
+//		          // Enter the second value "Curd" into the input field
+//		            inputField.sendKeys("Kiwi");	
+//		            Thread.sleep(3500);
+//		            // Simulate pressing the Enter key to select the second value
+//		            inputField.sendKeys(Keys.ENTER);
+//		            // Wait for a moment (optional)
+//		            Thread.sleep(3500);
+//		    
+//			   } catch (Exception e) {
+//				    e.printStackTrace();
+//				} finally {
+//				    // Your finally block code here (optional)
+//				}
+//		 
+//			   Thread.sleep(3500);
+//	   /******************************Input values for option 2 primary breakfast field*****************************************/
 			   
 			   try {
 		            // Locate the input field
@@ -813,67 +813,67 @@ import cuesz.utils.SeleniumUtils;
 			    Thread.sleep(2000);
 			    builder2.sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.ENTER).perform();
 			    
-			    Thread.sleep(2000);				   
-			    /*Enter values for Tequila*/
-			    Thread.sleep(2000);
-			    WebElement Tequila =driver.findElement(Tequilatarget);
-			    Actions builder3 = new Actions(driver);
-			    builder3.moveToElement(Tequila).click().sendKeys("5").perform();
-			    Thread.sleep(2000);
-			    builder3.sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.ENTER).perform();
+//			    Thread.sleep(2000);				   
+//			    /*Enter values for Tequila*/
+//			    Thread.sleep(2000);
+//			    WebElement Tequila =driver.findElement(Tequilatarget);
+//			    Actions builder3 = new Actions(driver);
+//			    builder3.moveToElement(Tequila).click().sendKeys("5").perform();
+//			    Thread.sleep(2000);
+//			    builder3.sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.ENTER).perform();
 			    
-			    Thread.sleep(2000);				   
-			    /*Enter values for Lager*/
-			    Thread.sleep(2000);
-			    WebElement Lager =driver.findElement(Lagertarget);
-			    Actions builder4 = new Actions(driver);
-			    builder4.moveToElement(Lager).click().sendKeys("3").perform();
-			    Thread.sleep(2000);
-			    builder4.sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.ENTER).perform();
-			    
-			    Thread.sleep(2000);				   
-			    /*Enter values for redwine*/
-			    Thread.sleep(2000);
-			    WebElement redwine =driver.findElement(redwinetarget);
-			    Actions builder5 = new Actions(driver);
-			    builder5.moveToElement(redwine).click().sendKeys("3").perform();
-			    Thread.sleep(2000);
-			    builder5.sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.ENTER).perform();
-			    
-			    Thread.sleep(2000);				   
-			    /*Enter values for Mojito*/
-			    Thread.sleep(2000);
-			    WebElement mjito =driver.findElement(Mojitotarget);
-			    Actions builder6 = new Actions(driver);
-			    builder6.moveToElement(mjito).click().sendKeys("3").perform();
-			    Thread.sleep(2000);
-			    builder6.sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.ENTER).perform();
-			    
-			    Thread.sleep(2000);				   
-			    /*Enter values for Coffee*/
-			    Thread.sleep(2000);
-			    WebElement Coffee =driver.findElement(Coffeetarget);
-			    Actions builder7 = new Actions(driver);
-			    builder7.moveToElement(Coffee).click().sendKeys("2").perform();
-			    Thread.sleep(2000);
-			    builder7.sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.ENTER).perform();
-			    			    
-			    Thread.sleep(2000);				   
-			    /*Enter values for sugar*/
-			    Thread.sleep(2000);
-			    WebElement sugar =driver.findElement(sugarcradio);
-			    Actions builder8 = new Actions(driver);
-			    builder8.moveToElement(sugar).click().perform();
-			    
-			    Thread.sleep(2000);
-			    AllureUtils.captureScreenshot(driver, "Dinnerend");
-
+//			    Thread.sleep(2000);				   
+//			    /*Enter values for Lager*/
+//			    Thread.sleep(2000);
+//			    WebElement Lager =driver.findElement(Lagertarget);
+//			    Actions builder4 = new Actions(driver);
+//			    builder4.moveToElement(Lager).click().sendKeys("3").perform();
+//			    Thread.sleep(2000);
+//			    builder4.sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.ENTER).perform();
+//			    
+//			    Thread.sleep(2000);				   
+//			    /*Enter values for redwine*/
+//			    Thread.sleep(2000);
+//			    WebElement redwine =driver.findElement(redwinetarget);
+//			    Actions builder5 = new Actions(driver);
+//			    builder5.moveToElement(redwine).click().sendKeys("3").perform();
+//			    Thread.sleep(2000);
+//			    builder5.sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.ENTER).perform();
+//			    
+//			    Thread.sleep(2000);				   
+//			    /*Enter values for Mojito*/
+//			    Thread.sleep(2000);
+//			    WebElement mjito =driver.findElement(Mojitotarget);
+//			    Actions builder6 = new Actions(driver);
+//			    builder6.moveToElement(mjito).click().sendKeys("3").perform();
+//			    Thread.sleep(2000);
+//			    builder6.sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.ENTER).perform();
+//			    
+//			    Thread.sleep(2000);				   
+//			    /*Enter values for Coffee*/
+//			    Thread.sleep(2000);
+//			    WebElement Coffee =driver.findElement(Coffeetarget);
+//			    Actions builder7 = new Actions(driver);
+//			    builder7.moveToElement(Coffee).click().sendKeys("2").perform();
+//			    Thread.sleep(2000);
+//			    builder7.sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.ENTER).perform();
+//			    			    
+//			    Thread.sleep(2000);				   
+//			    /*Enter values for sugar*/
+//			    Thread.sleep(2000);
+//			    WebElement sugar =driver.findElement(sugarcradio);
+//			    Actions builder8 = new Actions(driver);
+//			    builder8.moveToElement(sugar).click().perform();
+//			    
+//			    Thread.sleep(2000);
+//			    AllureUtils.captureScreenshot(driver, "Dinnerend");
+//
 			     // Find and click on the "Select" button
 			     WebElement selectButton = driver.findElement(slctBttn4);
 				 ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", selectButton);
 				 Thread.sleep(2000);
 			     selectButton.click();
-			    
+//			    
 			    
 				   /****working fine*******************/
 			     

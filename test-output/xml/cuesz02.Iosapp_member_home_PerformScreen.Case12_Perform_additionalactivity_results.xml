@@ -4,14 +4,14 @@
            failures="0"
            errors="0"
            skipped="0"
-           time="46.186">
+           time="59.861">
     <properties></properties>
 
 
 
             <testcase
                 name="perfom_recommendedactivty"
-                time="46.186"
+                time="59.861"
                 classname="cuesz02.Iosapp_member_home_PerformScreen.Case12_Perform_additionalactivity">
             </testcase>
 </testsuite>

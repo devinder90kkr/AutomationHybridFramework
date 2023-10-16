@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Default test"
+           tests="1"
+           failures="0"
+           errors="0"
+           skipped="0"
+           time="50.220">
+    <properties></properties>
+
+
+
+            <testcase
+                name="perfom_recommendedactivty"
+                time="50.220"
+                classname="cuesz02.Iosapp_member_home_PerformScreen.Case16_Perform_Vo2">
+            </testcase>
+</testsuite>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Default test"
+           tests="1"
+           failures="0"
+           errors="0"
+           skipped="0"
+           time="146.759">
+    <properties></properties>
+
+
+
+            <testcase
+                name="perfom_recommendedactivty"
+                time="146.759"
+                classname="cuesz02.Iosapp_member_home_PerformScreen.Case13_Perform_additionalactivity">
+            </testcase>
+</testsuite>
