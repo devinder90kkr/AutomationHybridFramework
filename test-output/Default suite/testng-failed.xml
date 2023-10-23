@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test name="Default test(failed)">
     <classes>
-      <class name="cuesz02.Iosapp_member_home_PerformScreen.Case16_Perform_Vo2">
+      <class name="cuesz.logictest.advocate.Case42_MSL_Performtest">
         <methods>
-          <include name="Cueszbase"/>
-          <include name="perfom_recommendedactivty"/>
+          <include name="setUp"/>
           <include name="tearDown"/>
+          <include name="advocatelogicmemberTest"/>
         </methods>
-      </class> <!-- cuesz02.Iosapp_member_home_PerformScreen.Case16_Perform_Vo2 -->
+      </class> <!-- cuesz.logictest.advocate.Case42_MSL_Performtest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

@@ -75,7 +75,7 @@ public class Case14_Perform_performalreadycompleted extends AppiummobileBase {
     @Description("Verify perform screen & check Additional activity functionlaity.")
     @Story("here, we need to verify Additional perform activity functionality")	
 	
-	public void perfom_recommendedactivty() throws InterruptedException
+	public void perfom_additonalactivtycompleted() throws InterruptedException
 	{	
 
 		// Create an instance of AppiumUtils and pass the driver

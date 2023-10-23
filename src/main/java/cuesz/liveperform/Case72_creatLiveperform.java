@@ -1,14 +1,11 @@
 package cuesz.liveperform;
 
-import java.time.Duration;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
 
 import cuesz.pages.BasePage;
@@ -29,6 +26,7 @@ public class Case72_creatLiveperform extends BasePage {
 	private By Staff 		= (By.id("Helsenki"));	
 	private By Notes		 =  (By.name("note"));
 	private By Submitbutton  =	 (By.xpath("//button[normalize-space()='Create Event']"));
+	private By crossicon	= (By.id("DecisionPopupRejection"));
 	
 	public Case72_creatLiveperform(WebDriver driver) {
 		super(driver);
@@ -75,8 +73,11 @@ public class Case72_creatLiveperform extends BasePage {
 		    Thread.sleep(2000);
 		    WebElement memberSelection =driver.findElement(Member);
 		    Actions builder3 = new Actions(driver);
-		    builder3.moveToElement(memberSelection).click().sendKeys(" Kumar Devinder").sendKeys(Keys.ENTER).perform();
+		  //  builder3.moveToElement(memberSelection).click().sendKeys(" Kumar Devinder").sendKeys(Keys.ENTER).perform();
+		    builder3.moveToElement(memberSelection).click().sendKeys(" Richard ").sendKeys(Keys.ENTER).perform();
 
+		    
+		    
 		    /*Select Coach & advocate from dropdown list*/
 		    Thread.sleep(2000);
 		    WebElement staffSelection =driver.findElement(Staff);
@@ -95,24 +96,22 @@ public class Case72_creatLiveperform extends BasePage {
 		    // Capture a screenshot and attach it to Allure
 	        AllureUtils.captureScreenshot(driver, "Case72_creatLiveperform");
 		    
-		 // Wait for the popup to appear (maximum wait time of 10 seconds)
-		    WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(1000));
-		    By popupLocator = By.xpath("//button[@class='MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary']");
-		    WebElement popup = wait.until(ExpectedConditions.presenceOfElementLocated(popupLocator));
-
-		    // Check if the popup is displayed
-		    if (popup.isDisplayed()) {
-		        // If the popup is displayed, click on "Yes" button
-		        WebElement yesButton = driver.findElement(By.xpath("//button[@class='MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary']"));
-		        yesButton.click();
-		    } else {
-		        // If the popup is not displayed, you can choose to skip this step or take some other action
-		        // For example, you can add a log statement to indicate that the popup did not appear
-		        System.out.println("Popup not displayed. Continuing without further action.");
-		    }
-		 // Capture a screenshot and attach it to Allure
-	        AllureUtils.captureScreenshot(driver, "Case72_creatLiveperform2");
-		    
+	     // Check if the Crossclick element is displayed before clicking on it
+	     			WebElement Crossclick = null;
+	     			try {
+	     			    Crossclick = driver.findElement(crossicon);
+	     			    if (Crossclick.isDisplayed()) {
+	     			        Crossclick.click();
+	     			    } else {
+	     			        // Handle the case where the element is not displayed
+	     			        System.out.println("Crossclick element is not displayed.");
+	     			        // Perform some other action or throw an exception if needed
+	     			    }
+	     			} catch (NoSuchElementException e) {
+	     			    // Handle the case where the element is not found
+	     			    System.out.println("Crossclick element not found.");
+	     			    // Perform some other action or throw an exception if needed
+	     			}
 		    
 		    
 		    Thread.sleep(8000);

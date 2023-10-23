@@ -2,6 +2,7 @@ package cuesz.schdule;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -27,6 +28,7 @@ public class Case01_createvent extends BasePage {
 	private By Notes		 =  (By.name("note"));
 	private By Submitbutton  =	 (By.xpath("//button[normalize-space()='Create Event']"));
 //	private By NextMonthButton = (By.xpath("//button[@aria-label='Next Month']"));
+	private By crossicon	= (By.id("DecisionPopupRejection"));
 	
 	public Case01_createvent(WebDriver driver) {
 		super(driver);
@@ -95,6 +97,25 @@ public class Case01_createvent extends BasePage {
 		    
 		    /*Click on submit button*/
 		    driver.findElement(Submitbutton).click();
+		    
+		 // Check if the Crossclick element is displayed before clicking on it
+			WebElement Crossclick = null;
+			try {
+			    Crossclick = driver.findElement(crossicon);
+			    if (Crossclick.isDisplayed()) {
+			        Crossclick.click();
+			    } else {
+			        // Handle the case where the element is not displayed
+			        System.out.println("Crossclick element is not displayed.");
+			        // Perform some other action or throw an exception if needed
+			    }
+			} catch (NoSuchElementException e) {
+			    // Handle the case where the element is not found
+			    System.out.println("Crossclick element not found.");
+			    // Perform some other action or throw an exception if needed
+			}
+		    
+		    
 		    
 		    Thread.sleep(5000);
 		 	}

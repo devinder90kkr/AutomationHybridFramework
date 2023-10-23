@@ -67,15 +67,14 @@ public class Case13_Perform_additionalactivity extends AppiummobileBase {
 	private By deviationicon			= AppiumBy.accessibilityId("WalkingDeviationIcon");
 	private By crossicondeviation				= AppiumBy.accessibilityId("CrossClicked");
 	
-	
-	
+
 	@Test
 	@Owner("QA") // Add the @Owner annotation to specify the executor
     @Severity(SeverityLevel.NORMAL)      
     @Description("Verify perform screen & check Additional activity functionlaity.")
     @Story("here, we need to verify Additional perform activity functionality")	
 	
-	public void perfom_recommendedactivty() throws InterruptedException
+	public void perfom_additionalactivty() throws InterruptedException
 	{	
 
 		// Create an instance of AppiumUtils and pass the driver
@@ -99,7 +98,9 @@ public class Case13_Perform_additionalactivity extends AppiummobileBase {
 		// CLick on Perform card
 		WebElement performcard = driver.findElement(performclick);
 		performcard.click();
-
+	
+		// Capture a screenshot and attach it to Allure
+        AllureUtils.captureScreenshot(driver, "perform_additional1");
 		
 		WebElement perfomplusicon 	= driver.findElement(perfomplus);
 		perfomplusicon.click();
@@ -125,140 +126,143 @@ public class Case13_Perform_additionalactivity extends AppiummobileBase {
 		WebElement donekeypad	= driver.findElement(doneclick);
 		donekeypad.click();
 		
+		
+		// Capture a screenshot and attach it to Allure
+        AllureUtils.captureScreenshot(driver, "perform_additional2");
+        
 		// Select perform aditonal activity 
 		WebElement selectbaseball 	= driver.findElement(selectactivity);
 		selectbaseball.click();
-	
-		
+
 		
 		// CLick on Walking  card
-				WebElement syncdevice = driver.findElement(Syncclick);
-				syncdevice.click();	
+		WebElement syncdevice = driver.findElement(Syncclick);
+		syncdevice.click();	
+		
+		
+		WebElement bluetoothtick = driver.findElement(Enabletick);
+		bluetoothtick.click();
+     
+		// Capture a screenshot and attach it to Allure
+        AllureUtils.captureScreenshot(driver, "perform2");
 				
+		// Click on deviation 
+		WebElement adddeviation = driver.findElement(deviation);
+		adddeviation.click();
+		
+		// Click on deviation 
+		WebElement deviationcrossclick = driver.findElement(Crossclick);
+		deviationcrossclick.click();
+		
+		// Click on deviation 
+		WebElement adddeviation2 = driver.findElement(deviation);
+		adddeviation2.click();
+		
+		// Click on deviation option-1
+		WebElement lessprecribed = driver.findElement(lessthanprecribeclick);
+		lessprecribed.click();
 				
-				WebElement bluetoothtick = driver.findElement(Enabletick);
-				bluetoothtick.click();
-		     
-				// Capture a screenshot and attach it to Allure
-		        AllureUtils.captureScreenshot(driver, "perform2");
-						
-				// Click on deviation 
-				WebElement adddeviation = driver.findElement(deviation);
-				adddeviation.click();
-				
-				// Click on deviation 
-				WebElement deviationcrossclick = driver.findElement(Crossclick);
-				deviationcrossclick.click();
-				
-				// Click on deviation 
-				WebElement adddeviation2 = driver.findElement(deviation);
-				adddeviation2.click();
-				
-				// Click on deviation option-1
-				WebElement lessprecribed = driver.findElement(lessthanprecribeclick);
-				lessprecribed.click();
-						
-				// Click on deviation option-2
-				WebElement moreprecribed = driver.findElement(morethanprecribeclick);
-				moreprecribed.click();
-				
-				// Click on deviation option-1
-				WebElement lessprecribed1 = driver.findElement(lessthanprecribeclick);
-				lessprecribed1.click();
-				
-				// Click on deviation option-1
-				WebElement injuryoption = driver.findElement(Injury);
-				injuryoption.click();
-				
+		// Click on deviation option-2
+		WebElement moreprecribed = driver.findElement(morethanprecribeclick);
+		moreprecribed.click();
+		
+		// Click on deviation option-1
+		WebElement lessprecribed1 = driver.findElement(lessthanprecribeclick);
+		lessprecribed1.click();
+		
+		// Click on deviation option-1
+		WebElement injuryoption = driver.findElement(Injury);
+		injuryoption.click();
+		
 
-				WebElement notes = driver.findElement(Noteclick);
-				notes.sendKeys("verify field accept automate values in Notes field");
-				
-				Thread.sleep(3500);
-				// Capture a screenshot and attach it to Allure
-		        AllureUtils.captureScreenshot(driver, "perform3");
-				
-				WebElement Donebutton = driver.findElement(Donetap);
-				Donebutton.click();
-				
+		WebElement notes = driver.findElement(Noteclick);
+		notes.sendKeys("verify field accept automate values in Notes field");
+		
+		Thread.sleep(3500);
+		// Capture a screenshot and attach it to Allure
+        AllureUtils.captureScreenshot(driver, "perform3");
+		
+		WebElement Donebutton = driver.findElement(Donetap);
+		Donebutton.click();
+		
 
-				WebElement tickicon = driver.findElement(tickclick);
-				tickicon.click();
+		WebElement tickicon = driver.findElement(tickclick);
+		tickicon.click();
 
-				
-				WebElement walkingtick = driver.findElement(tickbttn);
-				walkingtick.click();
-				
-				WebElement noption = driver.findElement(nobttn);
-				noption.click();
-				
-				WebElement walkingtick1 = driver.findElement(tickbttn);
-				walkingtick1.click();
-				
-				WebElement yesption = driver.findElement(yesbttn);
-				yesption.click();
-				
-				
-				WebElement submitclick = driver.findElement(submiticon);
-				submitclick.click();
-				
-				// Check if the Crossclick element is displayed before clicking on it
-				WebElement Crossclick = null;
-				try {
-				    Crossclick = driver.findElement(crossicon);
-				    if (Crossclick.isDisplayed()) {
-				        Crossclick.click();
-				    } else {
-				        // Handle the case where the element is not displayed
-				        System.out.println("Crossclick element is not displayed.");
-				        // Perform some other action or throw an exception if needed
-				    }
-				} catch (NoSuchElementException e) {
-				    // Handle the case where the element is not found
-				    System.out.println("Crossclick element not found.");
-				    // Perform some other action or throw an exception if needed
-				}
-				
+		
+		WebElement walkingtick = driver.findElement(tickbttn);
+		walkingtick.click();
+		
+		WebElement noption = driver.findElement(nobttn);
+		noption.click();
+		
+		WebElement walkingtick1 = driver.findElement(tickbttn);
+		walkingtick1.click();
+		
+		WebElement yesption = driver.findElement(yesbttn);
+		yesption.click();
+		
+		
+		WebElement submitclick = driver.findElement(submiticon);
+		submitclick.click();
+		
+		// Check if the Crossclick element is displayed before clicking on it
+		WebElement Crossclick = null;
+		try {
+		    Crossclick = driver.findElement(crossicon);
+		    if (Crossclick.isDisplayed()) {
+		        Crossclick.click();
+		    } else {
+		        // Handle the case where the element is not displayed
+		        System.out.println("Crossclick element is not displayed.");
+		        // Perform some other action or throw an exception if needed
+		    }
+		} catch (NoSuchElementException e) {
+		    // Handle the case where the element is not found
+		    System.out.println("Crossclick element not found.");
+		    // Perform some other action or throw an exception if needed
+		}
+		
+	
+		// Slider handle for score your activity 
+		WebElement Score1 =driver.findElement(Scro1);
+		Score1.click();
+		WebElement Score2 =driver.findElement(Scro2);
+		Score2.click();
+		WebElement Score3 =driver.findElement(Scro3);
+		Score3.click();
+		WebElement Score4 =driver.findElement(Scro4);
+		Score4.click();
+		
+		
+		// Slider handle for enjoy your session
+		WebElement session1 =driver.findElement(sesson1);
+		session1.click();
+		WebElement session2 =driver.findElement(sesson2);
+		session2.click();
+		WebElement session3 =driver.findElement(sesson3);
+		session3.click();
+		
+		
+		WebElement tellusmore = driver.findElement(noteclcik);
+		tellusmore.sendKeys("Are you looking for feedback for a job performance review, a presentation, a project, or something else");
+		
+		
+		Thread.sleep(3500);
+		// Capture a screenshot and attach it to Allure
+        AllureUtils.captureScreenshot(driver, "perform4");
 			
-				// Slider handle for score your activity 
-				WebElement Score1 =driver.findElement(Scro1);
-				Score1.click();
-				WebElement Score2 =driver.findElement(Scro2);
-				Score2.click();
-				WebElement Score3 =driver.findElement(Scro3);
-				Score3.click();
-				WebElement Score4 =driver.findElement(Scro4);
-				Score4.click();
-				
-				
-				// Slider handle for enjoy your session
-				WebElement session1 =driver.findElement(sesson1);
-				session1.click();
-				WebElement session2 =driver.findElement(sesson2);
-				session2.click();
-				WebElement session3 =driver.findElement(sesson3);
-				session3.click();
-				
-				
-				WebElement tellusmore = driver.findElement(noteclcik);
-				tellusmore.sendKeys("Are you looking for feedback for a job performance review, a presentation, a project, or something else");
-				
-				
-				Thread.sleep(3500);
-				// Capture a screenshot and attach it to Allure
-		        AllureUtils.captureScreenshot(driver, "perform4");
-					
-				WebElement telldone = driver.findElement(donebttn);
-				telldone.click();
-				
-				WebElement feedbacktick = driver.findElement(tick);
-				feedbacktick.click();
-				
-					
-				Thread.sleep(3500);
-				// Capture a screenshot and attach it to Allure
-		        AllureUtils.captureScreenshot(driver, "perform5");
-		        
+		WebElement telldone = driver.findElement(donebttn);
+		telldone.click();
+		
+		WebElement feedbacktick = driver.findElement(tick);
+		feedbacktick.click();
+		
+			
+		Thread.sleep(3500);
+		// Capture a screenshot and attach it to Allure
+        AllureUtils.captureScreenshot(driver, "perform5");
+        
 //		        // Click on Import icon
 //		        WebElement importnow	= driver.findElement(importicon);
 //		        importnow.click();
@@ -269,33 +273,33 @@ public class Case13_Perform_additionalactivity extends AppiummobileBase {
 //		        
 //		        WebElement importlater	= driver.findElement(importlatericon);
 //		        importlater.click();
-		        
-		      
-		 
-		        // Click on deviation icon
-		        WebElement deviation	= driver.findElement(deviationicon);
-		        deviation.click();
-		        
-		        Thread.sleep(3500);
-				// Capture a screenshot and attach it to Allure
-		        AllureUtils.captureScreenshot(driver, "perform7");
-		        
-		        WebElement deviationcross 	= driver.findElement(crossicondeviation);
-		        deviationcross.click();  
-		        
-		        
-		        
-		        // Click on graph icon
-		        WebElement graphicon	= driver.findElement(graphclick);
-				graphicon.click();
-				
-				
-				Thread.sleep(3500);
-				// Capture a screenshot and attach it to Allure
-		        AllureUtils.captureScreenshot(driver, "perform8");
-		        
-				WebElement graphclose	= driver.findElement(graphclse);
-				graphclose.click();
+        
+      
+ 
+        // Click on deviation icon
+        WebElement deviation	= driver.findElement(deviationicon);
+        deviation.click();
+        
+        Thread.sleep(3500);
+		// Capture a screenshot and attach it to Allure
+        AllureUtils.captureScreenshot(driver, "perform7");
+        
+        WebElement deviationcross 	= driver.findElement(crossicondeviation);
+        deviationcross.click();  
+        
+        
+        
+        // Click on graph icon
+        WebElement graphicon	= driver.findElement(graphclick);
+		graphicon.click();
+		
+		
+		Thread.sleep(3500);
+		// Capture a screenshot and attach it to Allure
+        AllureUtils.captureScreenshot(driver, "perform8");
+        
+		WebElement graphclose	= driver.findElement(graphclse);
+		graphclose.click();
 				
 				
 		

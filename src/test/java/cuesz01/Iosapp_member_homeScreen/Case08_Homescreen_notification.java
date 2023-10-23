@@ -38,7 +38,7 @@ public class Case08_Homescreen_notification extends AppiummobileBase {
     @Description("Verify home screen & check spheres separtors.")
     @Story("Click on spheres and verify bounces spehere activity.")	
 	
-	public void Homescreensperators() throws InterruptedException
+	public void Homes_notification() throws InterruptedException
 	{	
 
 		// Create an instance of AppiumUtils and pass the driver

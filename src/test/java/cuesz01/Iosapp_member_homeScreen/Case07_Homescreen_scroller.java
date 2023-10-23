@@ -35,7 +35,7 @@ public class Case07_Homescreen_scroller extends AppiummobileBase {
     @Description("Verify scroller functionlaity on home screen.")
     @Story("Here, we need to check scroller move screen up or down.")	
 	
-	public void Homescreensperators() throws InterruptedException
+	public void Homescreenscroller() throws InterruptedException
 	{	
 
 		// Create an instance of AppiumUtils and pass the driver

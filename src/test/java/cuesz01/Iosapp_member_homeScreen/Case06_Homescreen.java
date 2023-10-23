@@ -28,8 +28,7 @@ public class Case06_Homescreen extends AppiummobileBase {
 	private By Performlabel = 	AppiumBy.iOSNsPredicateString("name == 'Perform'");
 	private By Fuelable = 		AppiumBy.iOSNsPredicateString("name == 'Fuel'");
 	private By Mindflable  = 	AppiumBy.iOSNsPredicateString("name == 'Mindful'");
-	private By Restorelabel = 		AppiumBy.iOSNsPredicateString("name == 'Restore'");
-	
+	private By Restorelabel = 		AppiumBy.iOSNsPredicateString("name == 'Restore'");	
 	
 	@Test
 	

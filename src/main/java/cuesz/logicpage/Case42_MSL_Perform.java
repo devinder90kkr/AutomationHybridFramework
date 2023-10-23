@@ -377,8 +377,11 @@ import cuesz.utils.SeleniumUtils;
 //		        System.out.println("Clicked on date: " + desiredDateElement.getText());
 
 
-		  // Call the utility method to select the desired date as per above scripts 
+//		  // Call the utility method to select the desired date as per above scripts 
 		        DatePickerUtility_logicpage.selectDesiredDate(driver);
+	
+		 
+
 		     
 		        
 		        Thread.sleep(2500);

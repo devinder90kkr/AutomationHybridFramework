@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Test"
+<testsuite name="Test15"
            tests="1"
            failures="0"
            errors="0"
            skipped="0"
-           time="61.830">
+           time="69.977">
     <properties></properties>
 
 
 
             <testcase
-                name="Homescreensperators"
-                time="61.830"
+                name="Homescreenarrows"
+                time="69.977"
                 classname="cuesz01.Iosapp_member_homeScreen.Case05_Homescreen_forward_backwardarrows">
             </testcase>
 </testsuite>

@@ -32,7 +32,7 @@ public class Case09_Homescreen_LPgretherthan15min extends AppiummobileBase {
     @Description("Verify home screen & check LP redirection to perform card on homescreen.")
     @Story("here, we need to verify LP icon functionality redirection to perform screen if counter exceed more than 15 min")	
 	
-	public void Homescreensperators() throws InterruptedException
+	public void HomescreenLiveperfrom() throws InterruptedException
 	{	
 
 		// Create an instance of AppiumUtils and pass the driver

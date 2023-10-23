@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Test"
+<testsuite name="Test15"
            tests="1"
            failures="0"
            errors="0"
            skipped="0"
-           time="29.932">
+           time="34.333">
     <properties></properties>
 
 
 
             <testcase
                 name="Homescreen_weekdays"
-                time="29.932"
+                time="34.333"
                 classname="cuesz01.Iosapp_member_homeScreen.Case04_Homescreen_weekdays_past">
             </testcase>
 </testsuite>

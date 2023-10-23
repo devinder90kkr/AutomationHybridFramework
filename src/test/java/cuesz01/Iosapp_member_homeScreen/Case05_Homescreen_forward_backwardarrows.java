@@ -34,7 +34,7 @@ public class Case05_Homescreen_forward_backwardarrows extends AppiummobileBase {
     @Description("Verify the functionlaity for arrow and back. ")
     @Story(" here we check data when click on forward and backward arrorw icon")	
 	
-	public void Homescreensperators() throws InterruptedException
+	public void Homescreenarrows() throws InterruptedException
 	{	
 
 		// Create an instance of AppiumUtils and pass the driver
@@ -83,12 +83,4 @@ public class Case05_Homescreen_forward_backwardarrows extends AppiummobileBase {
 	}
 	
 
-//Function to scroll down using the provided scroll method
-//private void scrollDown() {
-//	// Method to scroll to perform screen
-//		HashMap<String,Object>scrollObject =new HashMap<>();
-//		scrollObject.put("direction", "down");
-//		scrollObject.put("Current 7 days", "Current 7 days");
-//		driver.executeScript("mobile:scroll", scrollObject);
-//}
 }

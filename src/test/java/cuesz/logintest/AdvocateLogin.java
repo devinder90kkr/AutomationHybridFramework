@@ -15,8 +15,7 @@ public class AdvocateLogin {
    
     @BeforeClass
     public void setUp() {
-    	
-   	
+
         driver = WebDriverManager.getDriver();
         driver.manage().window().maximize();
         driver.get(Configuration.BASE_URL);
