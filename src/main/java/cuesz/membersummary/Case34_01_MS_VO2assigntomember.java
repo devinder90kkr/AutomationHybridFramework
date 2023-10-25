@@ -1,12 +1,16 @@
  /*https://chat.openai.com/share/fb99a8d3-9b88-4b49-8555-3f5eab0b24e5 */
 package cuesz.membersummary;
 
+import java.time.Duration;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
 
 import cuesz.pages.BasePage;
@@ -52,14 +56,24 @@ public class Case34_01_MS_VO2assigntomember extends BasePage {
         WebElement multiwsitch = driver.findElement(By.id("MemberSummary-Vo2Result-NextScan-Switch"));
         multiwsitch.click();
         
-        Thread.sleep(3000);       
-        /*Enter date and then click*/
-	    Thread.sleep(2000);
+//        Thread.sleep(3000);       
+//        /*Enter date and then click*/
+//	    Thread.sleep(2000);
 	    WebElement nextscandate =driver.findElement(selectype5);
-	    Actions builder112 = new Actions(driver);
-	    builder112.moveToElement(nextscandate).click().sendKeys(eventDate).sendKeys(Keys.ENTER).perform();;
-         
+	    nextscandate.click();
+	    //	    Actions builder112 = new Actions(driver);
+//	    builder112.moveToElement(nextscandate).click().sendKeys(eventDate).sendKeys(Keys.ENTER).perform();;
+//         
 	    
+        
+        
+     // Explicitly wait for the date element to be clickable based on role and aria-disabled attributes
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(50));
+        WebElement dateElement = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("[role='option'][aria-disabled='false']")));
+        // Click the date element to select it
+        dateElement.click();
+        
+        
 	 // Capture a screenshot and attach it to Allure
         AllureUtils.captureScreenshot(driver, "fuel_report_screenshot");
 	    

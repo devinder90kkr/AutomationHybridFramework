@@ -9,20 +9,20 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 import cuesz.logintest.AdvocateLogin;
-import cuesz.membersummary.fuelreport.Case82_FuelRecommendation;
+import cuesz.membersummary.fuelreport.Case83_FuelRecommendationLP;
 import cuesz.utils.AllureUtils;
 import cuesz.utils.WebDriverManager;
 
 import io.qameta.allure.*;
 
 @Epic ("Cuesz Staff on Fuel report page")
-@Feature ("Verify staff is able to edit Fuel Recommendation in Recovery for member")
+@Feature ("Verify staff is able to edit Fuel Recommendation in LP for member")
 
 
-public class Case82_FuelRecommendationtest {
+public class Case83_FuelRecommendationLPtest {
     private WebDriver driver;
     private AdvocateLogin advocateLogin;
-    private Case82_FuelRecommendation  membersummarygraphPage;
+    private Case83_FuelRecommendationLP  membersummarygraphPage;
     
     private ByteArrayOutputStream consoleOutput; // To capture console output
 
@@ -31,7 +31,7 @@ public class Case82_FuelRecommendationtest {
         driver = WebDriverManager.getDriver();
         driver.manage().window().maximize();
         advocateLogin = new AdvocateLogin(); // Initialize the advocateLogin object
-        membersummarygraphPage = new Case82_FuelRecommendation (driver);
+        membersummarygraphPage = new Case83_FuelRecommendationLP (driver);
         
      // Redirect console output to capture it
         consoleOutput = new ByteArrayOutputStream();
@@ -42,8 +42,8 @@ public class Case82_FuelRecommendationtest {
     @Test
     @Owner("QA") // Add the @Owner annotation to specify the executor
     @Severity(SeverityLevel.NORMAL)    
-    @Description("Verify the functionality that staff able to edit Fuel Recommendation in Recovery for member.")
-    @Story("Successfuly able to edit Fuel Recommendation in Recovery for member in fuels")
+    @Description("Verify the functionality that staff is able to edit Fuel Recommendation in LP for member.")
+    @Story("Successfuly edited Fuel Recommendation in LP for member for member in fuels")
     
     public void advocateMemberhoverTest() throws InterruptedException {
         advocateLogin.setUp(); // Call the setUp method of AdvocateLogin to initialise loginPage

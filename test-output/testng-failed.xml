@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test name="Default test(failed)">
     <classes>
-      <class name="cuesz.logictest.advocate.Case42_MSL_Performtest">
+      <class name="cuesz.membersummarytest.advocate.Case34_01_MS_VO2assigntomembertest">
         <methods>
           <include name="setUp"/>
+          <include name="advocatebodyscanresultTest"/>
           <include name="tearDown"/>
-          <include name="advocatelogicmemberTest"/>
         </methods>
-      </class> <!-- cuesz.logictest.advocate.Case42_MSL_Performtest -->
+      </class> <!-- cuesz.membersummarytest.advocate.Case34_01_MS_VO2assigntomembertest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

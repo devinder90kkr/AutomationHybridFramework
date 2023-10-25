@@ -14,7 +14,7 @@ import org.testng.annotations.Test;
 import cuesz.pages.BasePage;
 import cuesz.utils.SeleniumUtils;
 
-public class Case82_FuelRecommendation extends BasePage{
+public class Case83_FuelRecommendationLP extends BasePage{
 
 	SeleniumUtils utils = new SeleniumUtils(driver);
 	WebDriverWait wait = new WebDriverWait(driver, Duration.ofMinutes(10));
@@ -22,7 +22,7 @@ public class Case82_FuelRecommendation extends BasePage{
 	private By fuelicon = (By.id("MemberSummary-FuelReport"));
 	
 	
-	public Case82_FuelRecommendation(WebDriver driver) {
+	public Case83_FuelRecommendationLP(WebDriver driver) {
 		super(driver);
 	}
 
@@ -62,6 +62,9 @@ public class Case82_FuelRecommendation extends BasePage{
 				     Thread.sleep(3000);
 				   }
 				 }
+				 WebElement FuelLP = driver.findElement(By.xpath("//button[@id='2']"));
+				 FuelLP.click();
+				 
 //				 // Find the button with the id `FuelReport-FuelRecommendations-Calories-Increment`
 //				 WebElement incrementButton = driver.findElement(By.id("FuelReport-FuelRecommendations-Calories-Increment"));
 //
@@ -123,19 +126,9 @@ public class Case82_FuelRecommendation extends BasePage{
 				 
 				 Thread.sleep(3000);
 				 
-				 WebElement Defcal = driver.findElement(By.id("Recovery Days"));
-					// Click the element twice and wait for a different amount of time after each click
-					 for (int b = 0; b < 2; b++) {
-
-					 // Click the element
-						 Defcal.click();
-
-					 // Wait for 4 seconds if it is the first click, or 3 seconds if it is the second click
-					   if (b == 0) {
-					     Thread.sleep(4000);
-					   } else {
-					     Thread.sleep(3000);
-					   }
-					 }
+				 WebElement Defcal = driver.findElement(By.xpath("//div[@class='col-lg-12 col-xl-4']"));
+				
+				 // Click the element
+					 Defcal.click();
 		 }
 }
