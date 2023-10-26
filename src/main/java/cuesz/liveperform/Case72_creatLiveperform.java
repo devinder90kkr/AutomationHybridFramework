@@ -198,14 +198,14 @@ public class Case72_creatLiveperform extends BasePage {
 		    Thread.sleep(2000);
 		    WebElement memberSelection =driver.findElement(Member);
 		    Actions builder3 = new Actions(driver);
-		    builder3.moveToElement(memberSelection).click().sendKeys("Sanjit QA").sendKeys(Keys.ENTER).perform();
+		    builder3.moveToElement(memberSelection).click().sendKeys("Kumar Devinder").sendKeys(Keys.ENTER).perform();
 
 		    /*Select Coach & advocate from dropdown list*/
 		    Thread.sleep(2000);
 		    WebElement staffSelection =driver.findElement(Staff);
 		    Actions builder4 = new Actions(driver);
-		    builder4.moveToElement(staffSelection).click().sendKeys("Bipping").sendKeys(Keys.ENTER).perform();
-		    builder4.moveToElement(staffSelection).click().sendKeys("Chicmic Coach2").sendKeys(Keys.ENTER).perform();
+		    builder4.moveToElement(staffSelection).click().sendKeys("steveQA").sendKeys(Keys.ENTER).perform();
+		    builder4.moveToElement(staffSelection).click().sendKeys("seak").sendKeys(Keys.ENTER).perform();
 
 		    /*Enter Notes in create event*/
 		    driver.findElement(Notes).sendKeys("We are excited to announce that there will be a live performance event. So please be available");
@@ -218,51 +218,39 @@ public class Case72_creatLiveperform extends BasePage {
 		    // Capture a screenshot and attach it to Allure
 	        AllureUtils.captureScreenshot(driver, "Case72_creatLiveperform");
 	        
-	     // Wait for the dialog to appear
-	        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(1000));
-	        WebElement dialog = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@role='dialog']")));
-
-	        // If the dialog is present, click the rejection button
-	        if (dialog != null) {
-	            WebElement rejectionButton = dialog.findElement(By.id("DecisionPopupRejection"));
-	            rejectionButton.click();
-	        
-//		    
-//		 // Wait for the popup to appear (maximum wait time of 10 seconds)
-//		    WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(1000));
-//		    By popupLocator = By.xpath("//button[@class='MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary']");
-//		    WebElement popup = wait.until(ExpectedConditions.presenceOfElementLocated(popupLocator));
+//	     // Wait for the dialog to appear
+//	        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(1000));
+//	        WebElement dialog = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@role='dialog']")));
 //
-//		    // Check if the popup is displayed
-//		    if (popup.isDisplayed()) {
-//		        // If the popup is displayed, click on "Yes" button
-//		        WebElement yesButton = driver.findElement(By.xpath("//button[@class='MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary']"));
-//		        yesButton.click();
-		    } else {
-		        // If the popup is not displayed, you can choose to skip this step or take some other action
-		        // For example, you can add a log statement to indicate that the popup did not appear
-		        System.out.println("Popup not displayed. Continuing without further action.");
-		    }
-		 // Capture a screenshot and attach it to Allure
-	        AllureUtils.captureScreenshot(driver, "Case72_creatLiveperform2");
-		    
-	     // Check if the Crossclick element is displayed before clicking on it
-            WebElement Crossclick = null;
-            try {
-                Crossclick = driver.findElement(crossicon);
-                if (Crossclick.isDisplayed()) {
-                    Crossclick.click();
-                } else {
-                    // Handle the case where the element is not displayed
-                    System.out.println("Crossclick element is not displayed.");
-                    // Perform some other action or throw an exception if needed
-                }
-            } catch (NoSuchElementException e) {
-                // Handle the case where the element is not found
-                System.out.println("Crossclick element not found.");
-                // Perform some other action or throw an exception if needed
-            }
-            
+//	        // If the dialog is present, click the rejection button
+//	        if (dialog != null) {
+//	            WebElement rejectionButton = dialog.findElement(By.id("DecisionPopupRejection"));
+//	            rejectionButton.click();
+//		    } else {
+//		        // If the popup is not displayed, you can choose to skip this step or take some other action
+//		        // For example, you can add a log statement to indicate that the popup did not appear
+//		        System.out.println("Popup not displayed. Continuing without further action.");
+//		    }
+//		 // Capture a screenshot and attach it to Allure
+//	        AllureUtils.captureScreenshot(driver, "Case72_creatLiveperform2");
+//		    
+//	     // Check if the Crossclick element is displayed before clicking on it
+//            WebElement Crossclick = null;
+//            try {
+//                Crossclick = driver.findElement(crossicon);
+//                if (Crossclick.isDisplayed()) {
+//                    Crossclick.click();
+//                } else {
+//                    // Handle the case where the element is not displayed
+//                    System.out.println("Crossclick element is not displayed.");
+//                    // Perform some other action or throw an exception if needed
+//                }
+//            } catch (NoSuchElementException e) {
+//                // Handle the case where the element is not found
+//                System.out.println("Crossclick element not found.");
+//                // Perform some other action or throw an exception if needed
+//            }
+//            
             
 		    Thread.sleep(8000);
 		 	}

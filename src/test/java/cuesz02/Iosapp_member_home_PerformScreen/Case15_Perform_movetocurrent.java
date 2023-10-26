@@ -27,6 +27,7 @@ public class Case15_Perform_movetocurrent extends AppiummobileBase {
 	
 	private By movetoday1	=		AppiumBy.accessibilityId("Move to Today");
 	private By startclick 	= 	AppiumBy.iOSNsPredicateString("label == \"Start\"");
+	private By backbttn		= AppiumBy.accessibilityId("BackPress");
 	
 	
 	@Test
@@ -70,7 +71,10 @@ public class Case15_Perform_movetocurrent extends AppiummobileBase {
 		WebElement movetoday 	= driver.findElement(movetoday1);
 		movetoday.click();
 		
-		
+		WebElement backclick	= driver.findElement(backbttn);
+		backclick.click();
+		WebElement backclick1	= driver.findElement(backbttn);
+		backclick1.click();
 		
 		
 		Thread.sleep(3500);

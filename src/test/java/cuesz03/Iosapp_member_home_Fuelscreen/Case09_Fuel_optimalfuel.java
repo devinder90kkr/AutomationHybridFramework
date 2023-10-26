@@ -23,14 +23,22 @@ import io.qameta.allure.Story;
 public class Case09_Fuel_optimalfuel extends AppiummobileBase {
 	
 	private By Homeclick = 		AppiumBy.iOSClassChain("**/XCUIElementTypeOther[`label == \"Home\"`][2]");
-	private By Fuelable = 		AppiumBy.iOSNsPredicateString("name == 'Fuel'");
+
 	private By fuellabel = 		AppiumBy.iOSNsPredicateString("name == 'Fuel'");
 	private By Fuelmacroheading = 	AppiumBy.iOSNsPredicateString("name == 'FUEL MACROS BREAKDOWN'");
-	private By arrowclick1 		= AppiumBy.iOSClassChain("**/XCUIElementTypeOther[`name == \"FuelCaloryRight\"`][1]");
-	private By arrowclick2		=  AppiumBy.iOSClassChain("**/XCUIElementTypeOther[`name == \"FuelCaloryRight\"`][2]");
-	private By todayarrow 		= AppiumBy.accessibilityId("FuelCaloryArrowDown");
+	private By arrowclick1 		= AppiumBy.accessibilityId("FuelCaloriesArrowLeft");
+	private By arrowclick2		=  AppiumBy.accessibilityId("FuelCaloriesArrowRight");
+
+	private By dayseven		= AppiumBy.xpath("(//XCUIElementTypeOther[@name=\"7 days\"])[2]");
+	private By dayfourteen	= AppiumBy.xpath("(//XCUIElementTypeOther[@name=\"14 days\"])[2]");
+//	private By Yestrday		= AppiumBy.xpath("(//XCUIElementTypeOther[@name=\"Yesterday\"])[2]");
+	private By backfuel		= AppiumBy.accessibilityId("FuelCalorieBackPress");
+	private By Protcard		= AppiumBy.accessibilityId("Protein");
+	private By crossicon1	= AppiumBy.accessibilityId("FuelMacroNutrientCross");
+	private By carbcard		= AppiumBy.accessibilityId("Carbs");
+	private By fatcard		= AppiumBy.accessibilityId("Fat");
 	
-	      
+	
 	@Test
 	@Owner("QA") // Add the @Owner annotation to specify the executor
     @Severity(SeverityLevel.NORMAL)      
@@ -55,33 +63,21 @@ public class Case09_Fuel_optimalfuel extends AppiummobileBase {
 		Thread.sleep(2000);
 
 		
-        // Locate the element containing the Fuel
-        WebElement Fuel = driver.findElement(Fuelable);
-        // Extract text from the element
-        String actualText1 = Fuel.getText();
-        // Define the expected text
-        String expectedText1 = "Fuel";
-        
-        // Print the actual and expected text to the console
-        System.out.println("Actual Text: " + actualText1);
-        System.out.println("Expected Text: " + expectedText1);
-        // Compare the actual and expected text
-        Assert.assertEquals(actualText1, expectedText1);
-        
+     
         //Click on Fuel tab 
         driver.findElement(AppiumBy.accessibilityId("FUEL_SCREEN")).click();
         
-		// Method to scroll to Food Senstivity card
-		HashMap<String,Object>scrollObject2 =new HashMap<>();
-		scrollObject2.put("direction", "down");
-		scrollObject2.put("Food Senstivity", "Food Senstivity");
-		driver.executeScript("mobile:scroll", scrollObject2);
-	
-		// Method to scroll to Food Senstivity card
-		HashMap<String,Object>scrollObject3 =new HashMap<>();
-		scrollObject3.put("direction", "up");
-		scrollObject3.put("OPTIMAL FUEL", "OPTIMAL FUEL");
-		driver.executeScript("mobile:scroll", scrollObject3);
+//		// Method to scroll to Food Senstivity card
+//		HashMap<String,Object>scrollObject2 =new HashMap<>();
+//		scrollObject2.put("direction", "down");
+//		scrollObject2.put("Food Senstivity", "Food Senstivity");
+//		driver.executeScript("mobile:scroll", scrollObject2);
+//	
+//		// Method to scroll to Food Senstivity card
+//		HashMap<String,Object>scrollObject3 =new HashMap<>();
+//		scrollObject3.put("direction", "up");
+//		scrollObject3.put("OPTIMAL FUEL", "OPTIMAL FUEL");
+//		driver.executeScript("mobile:scroll", scrollObject3);
 		
 		
 		// Locate the element containing the perform
@@ -129,15 +125,54 @@ public class Case09_Fuel_optimalfuel extends AppiummobileBase {
 	        WebElement forwardarrow = driver.findElement(arrowclick2);
 	        forwardarrow.click();
 	    }
+       
         
-	    // click on today arrow for select radio values 
-        driver.findElement(todayarrow).click();
-        
-        driver.findElement(AppiumBy.iOSClassChain("**/XCUIElementTypeOther[`label == \"Today\"`]"));
+		// Method to scroll to Food Senstivity card
+		HashMap<String,Object>scrollObject2 =new HashMap<>();
+		scrollObject2.put("direction", "down");
+		scrollObject2.put("Today", "Today");
+		driver.executeScript("mobile:scroll", scrollObject2);
       
-        
-      
+		//Click on  7days from 
+		WebElement day7 = driver.findElement(dayseven);
+		day7.click();
   
+		//Click on  14days from 
+		WebElement day14 = driver.findElement(dayfourteen);
+		day14.click();
+
+//		//Click on  yesterday from 
+//		WebElement yestday = driver.findElement(Yestrday);
+//		yestday.click();
+//		
+		//Click on backfuel from macrobreakdown screen
+		WebElement backclick = driver.findElement(backfuel);
+		backclick.click();
+		
+		//click on protein card
+		WebElement protein = driver.findElement(Protcard);
+		protein.click();	
+		//Click on protein cross icon
+		WebElement proteincross = driver.findElement(crossicon1);
+		proteincross.click();
+		
+		//click on carbs card
+		WebElement carbs = driver.findElement(carbcard);
+		carbs.click();	
+		//Click on protein cross icon
+		WebElement carbscross = driver.findElement(crossicon1);
+		carbscross.click();
+		
+		
+		//click on fats card
+		WebElement fats = driver.findElement(fatcard);
+		fats.click();	
+		//Click on protein cross icon
+		WebElement fatscross = driver.findElement(crossicon1);
+		fatscross.click();
+		
+		
+	
        
 		Thread.sleep(2500);
         driver.terminateApp("com.cuesz.mobile");

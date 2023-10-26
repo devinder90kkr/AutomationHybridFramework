@@ -55,8 +55,7 @@ import java.time.Duration;
 //		        utils.navigateToLastAndNextWeek();
 		        
 		        Thread.sleep(2000);
-		  	        
-		  	
+		  	        		  	
 	  /***************************************Click on Perfom and scroll******************************************************************************************/
 		  	   Thread.sleep(5500);
 		  	   WebElement Performheading = driver.findElement(Prfrmhading);

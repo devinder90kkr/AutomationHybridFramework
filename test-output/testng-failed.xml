@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test name="Default test(failed)">
     <classes>
-      <class name="cuesz.membersummarytest.advocate.Case34_01_MS_VO2assigntomembertest">
+      <class name="cuesz03.Iosapp_member_home_Fuelscreen.Case09_Fuel_optimalfuel">
         <methods>
-          <include name="setUp"/>
-          <include name="advocatebodyscanresultTest"/>
+          <include name="Cueszbase"/>
           <include name="tearDown"/>
+          <include name="Homescreen"/>
         </methods>
-      </class> <!-- cuesz.membersummarytest.advocate.Case34_01_MS_VO2assigntomembertest -->
+      </class> <!-- cuesz03.Iosapp_member_home_Fuelscreen.Case09_Fuel_optimalfuel -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
