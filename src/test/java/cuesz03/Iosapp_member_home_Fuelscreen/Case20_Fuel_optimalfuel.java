@@ -19,8 +19,8 @@ import io.qameta.allure.SeverityLevel;
 import io.qameta.allure.Story;
 
 @Epic ("Fuel screen detail ")
-@Feature ("Verify Fuel detail functionlaity related to hydration, breakfast, early snacks, Lunch, late Snacks & Dinner")
-public class Case09_Fuel_optimalfuel extends AppiummobileBase {
+@Feature ("Verify Fuel detail functionlaity related to optimal fuel")
+public class Case20_Fuel_optimalfuel extends AppiummobileBase {
 	
 	private By Homeclick = 		AppiumBy.iOSClassChain("**/XCUIElementTypeOther[`label == \"Home\"`][2]");
 
@@ -37,13 +37,15 @@ public class Case09_Fuel_optimalfuel extends AppiummobileBase {
 	private By crossicon1	= AppiumBy.accessibilityId("FuelMacroNutrientCross");
 	private By carbcard		= AppiumBy.accessibilityId("Carbs");
 	private By fatcard		= AppiumBy.accessibilityId("Fat");
+//	private By popup1		= AppiumBy.accessibilityId("FuelDrinkInfo");
+	
 	
 	
 	@Test
 	@Owner("QA") // Add the @Owner annotation to specify the executor
     @Severity(SeverityLevel.NORMAL)      
     @Description("Member Fuel screen detail verification")
-    @Story("Scroll to Fuel card and verify features assigned by staff ")	
+    @Story("Scroll to Fuel card and verify optimal fuel assigned by staff ")		
 	public void Homescreen() throws InterruptedException
 	{	
 		// Create an instance of AppiumUtils and pass the driver
@@ -163,7 +165,6 @@ public class Case09_Fuel_optimalfuel extends AppiummobileBase {
 		WebElement carbscross = driver.findElement(crossicon1);
 		carbscross.click();
 		
-		
 		//click on fats card
 		WebElement fats = driver.findElement(fatcard);
 		fats.click();	
@@ -171,8 +172,14 @@ public class Case09_Fuel_optimalfuel extends AppiummobileBase {
 		WebElement fatscross = driver.findElement(crossicon1);
 		fatscross.click();
 		
+//		//	Click on hydration popup 
+//		WebElement drinkpopup = driver.findElement(popup1); 
+//		drinkpopup.click();
 		
-	
+		
+		
+		
+		
        
 		Thread.sleep(2500);
         driver.terminateApp("com.cuesz.mobile");
