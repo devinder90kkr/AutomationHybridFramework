@@ -17,6 +17,7 @@ import java.time.Duration;
 
 	import cuesz.pages.BasePage;
 	import cuesz.utils.SeleniumUtils;
+	import cuesz.utils.DayofWeek;
 	
 	public class Case42_01_MSL_Perform_currentday extends BasePage {
 		
@@ -55,7 +56,8 @@ import java.time.Duration;
 //		        utils.navigateToLastAndNextWeek();
 		        
 		        Thread.sleep(2000);
-		  	        		  	
+		  	        
+		  	
 	  /***************************************Click on Perfom and scroll******************************************************************************************/
 		  	   Thread.sleep(5500);
 		  	   WebElement Performheading = driver.findElement(Prfrmhading);
@@ -91,46 +93,47 @@ import java.time.Duration;
 			
 			    Thread.sleep(2500);
 			    
-			    // Get the current day of the week (Sunday=1, Monday=2, ..., Saturday=7)
-		        int dayOfWeek = Calendar.getInstance().get(Calendar.DAY_OF_WEEK);
-
-		        // Convert the numeric day of the week to a String representation
-		        String dayName;
-		        switch (dayOfWeek) {
-		            case Calendar.MONDAY:
-		                dayName = "Monday";
-		                break;
-		            case Calendar.TUESDAY:
-		                dayName = "Tuesday";
-		                break;
-		                
-		            case Calendar.WEDNESDAY:
-		                dayName = "Wednesday";
-		                break;
-		                
-		            case Calendar.THURSDAY:
-		                dayName = "Thursday";
-		                break;
-		                
-		            case Calendar.FRIDAY:
-		                dayName = "Friday";
-		                break;
-		           
-		            case Calendar.SATURDAY:
-		                dayName = "Saturday";
-		                break;
-		                
-		            case Calendar.SUNDAY:
-		                dayName = "Sunday";
-		                break; 
-		                
-		                
-		            // ... repeat for other days of the week
-		            default:
-		                dayName = "Unknown";
-		                break;
-		        }
-
+//			    // Get the current day of the week (Sunday=1, Monday=2, ..., Saturday=7)
+//		        int dayOfWeek = Calendar.getInstance().get(Calendar.DAY_OF_WEEK);
+//
+//		        // Convert the numeric day of the week to a String representation
+//		        String dayName;
+//		        switch (dayOfWeek) {
+//		            case Calendar.MONDAY:
+//		                dayName = "Monday";
+//		                break;
+//		            case Calendar.TUESDAY:
+//		                dayName = "Tuesday";
+//		                break;
+//		                
+//		            case Calendar.WEDNESDAY:
+//		                dayName = "Wednesday";
+//		                break;
+//		                
+//		            case Calendar.THURSDAY:
+//		                dayName = "Thursday";
+//		                break;
+//		                
+//		            case Calendar.FRIDAY:
+//		                dayName = "Friday";
+//		                break;
+//		           
+//		            case Calendar.SATURDAY:
+//		                dayName = "Saturday";
+//		                break;
+//		                
+//		            case Calendar.SUNDAY:
+//		                dayName = "Sunday";
+//		                break; 
+//		                
+//		                
+//		            // ... repeat for other days of the week
+//		            default:
+//		                dayName = "Unknown";
+//		                break;
+//		        }
+			    int dayOfWeek = Calendar.getInstance().get(Calendar.DAY_OF_WEEK);
+			    String dayName = DayofWeek.getDayName(dayOfWeek);
 		        String partialId = "performActivity-0-" + dayName;
 			    WebElement searchactivity = driver.findElement(By.id(partialId));
 			    Actions builder2 = new Actions(driver);
@@ -141,7 +144,6 @@ import java.time.Duration;
 			    Thread.sleep(2500);
 				
 			  
-			    
 			    String partialId1 = "PerformActivityMin-0-" + dayName;
 			    WebElement min =driver.findElement(By.id(partialId1));
 			    Actions builder3 = new Actions(driver);
