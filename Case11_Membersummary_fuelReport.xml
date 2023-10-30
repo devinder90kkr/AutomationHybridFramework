@@ -6,6 +6,9 @@
       <class name="cuesz.membersummary.fuelreport.advocate.Case67_Fueldashboard1test"/>
  	<class name="cuesz.membersummary.fuelreport.advocate.Case68_Fueldashboardconditionnputtest"/>
 	<class name="cuesz.membersummary.fuelreport.advocate.Case70_Fueldashboardcalculatorstest"/>
+	<class name="cuesz.membersummary.fuelreport.advocate.Case82_FuelRecommendationtest"/>
+	<class name="cuesz.membersummary.fuelreport.advocate.Case83_FuelRecommendationLPtest"/>
+	<class name="cuesz.membersummary.fuelreport.advocate.Case84_FuelRecommendationRecoveryProtocoltest"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

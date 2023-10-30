@@ -22,6 +22,7 @@
 	  <class name="cuesz.membersummarytest.advocate.Case31_MS_Avtarclicktest"/>
 	  <class name="cuesz.membersummarytest.advocate.Case32_MS_Bodyscanresulttest"/>
 	  <class name="cuesz.membersummarytest.advocate.Case33_MS_Uploadposturetest"/>
+	  <class name="cuesz.membersummarytest.advocate.Case34_01_MS_VO2assigntomembertest"/>
 	  <class name="cuesz.membersummarytest.advocate.Case34_MS_VO2Resulttest"/>
 	  <class name="cuesz.membersummarytest.advocate.Case71_MS_bodyscancomparetest"/>
 	  <class name="cuesz.membersummarytest.advocate.Case77_MS_uplaodtonnage_Physiologicaltest"/>

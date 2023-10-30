@@ -3,16 +3,19 @@
 <suite name="Suite7">
 
   <test thread-count="5" name="Test7">
-    <classes>
-      
+    <classes>    
        <class name="cuesz.logictest.advocate.Case34_MSL_MemberBasicinfotest" />
        <class name="cuesz.logictest.advocate.Case35_MSL_MemberWilingnessLimitationScoretest" />
        <class name="cuesz.logictest.advocate.Case36_MSL_Staffnotestest" />    
        <class name="cuesz.logictest.advocate.Case37_MSL_Habbitsnotestest" />
-         <class name="cuesz.logictest.advocate.Case38_MSL_Notificationtest" />
+       <class name="cuesz.logictest.advocate.Case38_MSL_Notificationtest" />
+       <class name="cuesz.logictest.advocate.Case42_01_MSL_Perform_currentdaytest" />
        <class name="cuesz.logictest.advocate.Case42_MSL_Performtest" />
-       <class name="cuesz.logictest.advocate.Case43_MSL_Fueltest" />
-           <class name="cuesz.logictest.advocate.Case44_MSL_Mindfultest" />
+	   <class name="cuesz.logictest.advocate.Case43_02_MSL_Fuel_currentdaytest" />      
+ 	   <class name="cuesz.logictest.advocate.Case43_MSL_Fueltest" />
+ 	   <class name="cuesz.logictest.advocate.Case43_1_MSL_Fuelperformtest" />
+       <class name="cuesz.logictest.advocate.Case44_MSL_Mindfultest" />
+	   <class name="cuesz.logictest.advocate.Case45_MSL_restore_currenttest" />  
        <class name="cuesz.logictest.advocate.Case45_MSL_restoretest" />    
     </classes>
   </test> <!-- Test -->
