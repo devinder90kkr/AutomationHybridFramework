@@ -4,6 +4,10 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.Test;
 
+
+import io.restassured.RestAssured;
+import io.restassured.response.Response;
+
 import cuesz.pages.BasePage;
 
 public class Case16_MS_searchclick extends BasePage {
@@ -22,10 +26,10 @@ public class Case16_MS_searchclick extends BasePage {
         // Enter the name in the search field
         driver.findElement(By.xpath("//input[@placeholder='Search Members']"))
                 .sendKeys("Kumar Devinder");
-
+     
         Thread.sleep(2000);
         driver.findElement(By.xpath("//div[@class='member-items']")).click();
-        
+          
     
 
     }
