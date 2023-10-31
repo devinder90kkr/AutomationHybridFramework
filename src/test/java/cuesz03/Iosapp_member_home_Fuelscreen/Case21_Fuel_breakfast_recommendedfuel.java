@@ -10,6 +10,7 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import cuesz.pages.AppiummobileBase;
+import cuesz.utils.AllureUtils;
 import cuesz.utils.AppiumappUtils;
 import io.appium.java_client.AppiumBy;
 import io.qameta.allure.Description;
@@ -22,7 +23,7 @@ import io.qameta.allure.Story;
 
 @Epic ("Fuel screen detail ")
 @Feature ("Verify Fuel detail functionlaity related to breakfast functionlaity.")
-public class Case21_Fuel_breakfast extends AppiummobileBase {
+public class Case21_Fuel_breakfast_recommendedfuel extends AppiummobileBase {
 	
 	private By Homeclick = 		AppiumBy.iOSClassChain("**/XCUIElementTypeOther[`label == \"Home\"`][2]");
 
@@ -33,6 +34,7 @@ public class Case21_Fuel_breakfast extends AppiummobileBase {
 	private By doneclick		= 		AppiumBy.accessibilityId("Done");
 	private By recommendedclick	= 		AppiumBy.accessibilityId("AddRecommendedFuel");
 	private By backicon1		= 		AppiumBy.accessibilityId("RecommendBackPress");
+	private By rightarrow		= 		AppiumBy.accessibilityId("FuelCaloriesArrowRight");
 	private By Time				= 		AppiumBy.accessibilityId("RecommendedFuelTime");
 	private By pickerelement	= 		AppiumBy.xpath("//XCUIElementTypePickerWheel");
 	private By Doneclick		= 		AppiumBy.accessibilityId("AlcohalTime");
@@ -87,6 +89,9 @@ public class Case21_Fuel_breakfast extends AppiummobileBase {
         WebElement backclick	= driver.findElement(backicon);
         backclick.click();
         
+		// Capture a screenshot and attach it to Allure
+        AllureUtils.captureScreenshot(driver, "Fuel11");
+        
         // Locate the element related to breakfast + icon 
         WebElement breakfastplus 	= driver.findElement(plusadd);
         breakfastplus.click();
@@ -106,6 +111,13 @@ public class Case21_Fuel_breakfast extends AppiummobileBase {
         // Locate and click on recommended Fuel button
         WebElement Recommendedfuel1 	= driver.findElement(recommendedclick);
         Recommendedfuel1.click();
+        
+        WebElement arrowright = driver.findElement(rightarrow);
+        arrowright.click();
+        
+		// Capture a screenshot and attach it to Allure
+        AllureUtils.captureScreenshot(driver, "Fuel12");
+
         
         // Click on timer 
         WebElement Timerclick 	= driver.findElement(Time);
@@ -128,6 +140,11 @@ public class Case21_Fuel_breakfast extends AppiummobileBase {
 		Thread.sleep(3500);
 		values.get(2).sendKeys("AM");
 	
+		// Capture a screenshot and attach it to Allure
+        AllureUtils.captureScreenshot(driver, "Fuel13");
+
+		
+		
 		driver.findElement(Doneclick).click();
         
 		// Click on breakfast-tick 
@@ -143,6 +160,9 @@ public class Case21_Fuel_breakfast extends AppiummobileBase {
         breakfasticon1.click();
         WebElement backclick1	= driver.findElement(backicon);
         backclick1.click();
+        
+		// Capture a screenshot and attach it to Allure
+        AllureUtils.captureScreenshot(driver, "Fuel14");
         
 		Thread.sleep(2500);
         driver.terminateApp("com.cuesz.mobile");
