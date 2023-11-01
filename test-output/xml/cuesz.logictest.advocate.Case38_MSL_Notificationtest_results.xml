@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Test"
+<testsuite name="Test7"
            tests="1"
            failures="0"
            errors="0"
            skipped="0"
-           time="65.467">
+           time="53.871">
     <properties></properties>
 
 
 
             <testcase
                 name="advocatelogicmemberTest"
-                time="65.467"
+                time="53.871"
                 classname="cuesz.logictest.advocate.Case38_MSL_Notificationtest">
             </testcase>
 </testsuite>

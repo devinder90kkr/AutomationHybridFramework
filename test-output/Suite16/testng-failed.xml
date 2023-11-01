@@ -3,48 +3,27 @@
 <suite name="Failed suite [Suite16]" guice-stage="DEVELOPMENT">
   <test name="Test16(failed)">
     <classes>
-      <class name="cuesz02.Iosapp_member_home_PerformScreen.Case12_Perform_additionalactivity_deleteprocess">
+      <class name="cuesz03.Iosapp_member_home_Fuelscreen.Case21_Fuel_breakfast_recommendedfuel">
         <methods>
           <include name="Cueszbase"/>
-          <include name="perfom_additionaldeleteactivty"/>
+          <include name="Homescreen"/>
           <include name="tearDown"/>
         </methods>
-      </class> <!-- cuesz02.Iosapp_member_home_PerformScreen.Case12_Perform_additionalactivity_deleteprocess -->
-      <class name="cuesz02.Iosapp_member_home_PerformScreen.Case16_Perform_Vo2">
-        <methods>
-          <include name="perfom_vo2activity"/>
-          <include name="Cueszbase"/>
-          <include name="tearDown"/>
-        </methods>
-      </class> <!-- cuesz02.Iosapp_member_home_PerformScreen.Case16_Perform_Vo2 -->
-      <class name="cuesz02.Iosapp_member_home_PerformScreen.Case13_Perform_additionalactivity">
-        <methods>
-          <include name="perfom_additionalactivty"/>
-          <include name="Cueszbase"/>
-          <include name="tearDown"/>
-        </methods>
-      </class> <!-- cuesz02.Iosapp_member_home_PerformScreen.Case13_Perform_additionalactivity -->
-      <class name="cuesz02.Iosapp_member_home_PerformScreen.Case11_Perform_recommendedactivity">
+      </class> <!-- cuesz03.Iosapp_member_home_Fuelscreen.Case21_Fuel_breakfast_recommendedfuel -->
+      <class name="cuesz03.Iosapp_member_home_Fuelscreen.Case20_Fuel_optimalfuel">
         <methods>
           <include name="Cueszbase"/>
-          <include name="perfom_recommendedactivty"/>
+          <include name="Homescreen"/>
           <include name="tearDown"/>
         </methods>
-      </class> <!-- cuesz02.Iosapp_member_home_PerformScreen.Case11_Perform_recommendedactivity -->
-      <class name="cuesz02.Iosapp_member_home_PerformScreen.Case14_Perform_performalreadycompleted">
+      </class> <!-- cuesz03.Iosapp_member_home_Fuelscreen.Case20_Fuel_optimalfuel -->
+      <class name="cuesz03.Iosapp_member_home_Fuelscreen.Case22_Fuel_breakfast_additionalfuel">
         <methods>
           <include name="Cueszbase"/>
-          <include name="perfom_additonalactivtycompleted"/>
+          <include name="Homescreen"/>
           <include name="tearDown"/>
         </methods>
-      </class> <!-- cuesz02.Iosapp_member_home_PerformScreen.Case14_Perform_performalreadycompleted -->
-      <class name="cuesz02.Iosapp_member_home_PerformScreen.Case15_Perform_movetocurrent">
-        <methods>
-          <include name="Cueszbase"/>
-          <include name="perfom_movetocurrentactivtity"/>
-          <include name="tearDown"/>
-        </methods>
-      </class> <!-- cuesz02.Iosapp_member_home_PerformScreen.Case15_Perform_movetocurrent -->
+      </class> <!-- cuesz03.Iosapp_member_home_Fuelscreen.Case22_Fuel_breakfast_additionalfuel -->
     </classes>
   </test> <!-- Test16(failed) -->
 </suite> <!-- Failed suite [Suite16] -->

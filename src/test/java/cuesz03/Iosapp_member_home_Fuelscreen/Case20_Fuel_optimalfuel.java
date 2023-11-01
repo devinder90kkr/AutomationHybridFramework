@@ -1,9 +1,11 @@
 package cuesz03.Iosapp_member_home_Fuelscreen;
 
 import java.util.HashMap;
+import java.util.List;
 import java.util.NoSuchElementException;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -44,7 +46,45 @@ public class Case20_Fuel_optimalfuel extends AppiummobileBase {
 	private By glas2		= AppiumBy.accessibilityId("WaterGlass2");	
 	private By glas3		= AppiumBy.accessibilityId("WaterGlass3");	
 	private By glas4		= AppiumBy.accessibilityId("WaterGlass4");	
-//	private By caffeine		= AppiumBy.accessibilityId("CaffeineDeviation");
+	private By caffeine		= AppiumBy.accessibilityId("CaffeineDeviation");
+	private By cof1		= AppiumBy.accessibilityId("Coffee1");
+	private By cof2		= AppiumBy.accessibilityId("Coffee2");	
+	private By cof3		= AppiumBy.accessibilityId("Coffee3");	
+	private By cof4		= AppiumBy.accessibilityId("Coffee4");	
+	private By tea1		= AppiumBy.accessibilityId("Tea1");
+	private By tea2		= AppiumBy.accessibilityId("Tea2");
+	private By grentea1		= AppiumBy.accessibilityId("Green tea1");
+	private By grentea2		= AppiumBy.accessibilityId("Green tea2");
+	private By grentea3		= AppiumBy.accessibilityId("Green tea3");
+	private By grentea4		= AppiumBy.accessibilityId("Green tea4");
+	private By grentea5		= AppiumBy.accessibilityId("Green tea5");
+	private By sugarbtn		= AppiumBy.xpath("(//XCUIElementTypeOther[@name=\"CaffineRadioButton\"])[2]");
+	private By notesection	= AppiumBy.accessibilityId("CaffineDeviationNotes");
+	private By Time				= 		AppiumBy.accessibilityId("SelectCaffineTime");
+	private By pickerelement	= 		AppiumBy.xpath("//XCUIElementTypePickerWheel");
+	private By Doneclick		= 		AppiumBy.accessibilityId("AlcohalTime");
+	private By Caffientick		=		AppiumBy.accessibilityId("CaffineSubmit");
+	private By alcholotap		= 		AppiumBy.accessibilityId("alcohalDeviation");
+	private By Tequglass1		= 		AppiumBy.accessibilityId("Tequila1");
+	private By Tequglass2		= 		AppiumBy.accessibilityId("Tequila2");
+	private By Tequglass3		= 		AppiumBy.accessibilityId("Tequila3");
+	private By Tequglass4		= 		AppiumBy.accessibilityId("Tequila4");
+	private By moji1			= 		AppiumBy.accessibilityId("Mojito1");
+	private By moji2			= 		AppiumBy.accessibilityId("Mojito2");
+	private By lager1			= 		AppiumBy.accessibilityId("Lager1");
+	private By lager2			= 		AppiumBy.accessibilityId("Lager2");
+	private By lager3			= 		AppiumBy.accessibilityId("Lager3");
+	private By lager4			= 		AppiumBy.accessibilityId("Lager4");
+	private By lager5			= 		AppiumBy.accessibilityId("Lager5");
+	private By Adalchol			= 		AppiumBy.accessibilityId("Add Alcohol Deviation");
+	private By deviationnotes	= 		AppiumBy.accessibilityId("AlcohalDeviationNotes");
+	private By sugarmixer		= 		AppiumBy.xpath("(//XCUIElementTypeOther[@name=\"Sugar Mixer\"])[2]");
+	private By Alcohaltick		= 		AppiumBy.accessibilityId("AlcohalSubmit");
+	private By Electrolyte		= 		AppiumBy.accessibilityId("ElectrolyteDeviation");
+	private By electro1			= 		AppiumBy.accessibilityId("ElectrolyteDeviation1");
+	private By electro2			= 		AppiumBy.accessibilityId("ElectrolyteDeviation2");
+	private By noteselectro		= 		AppiumBy.accessibilityId("ElectrolyteNotes");
+	private By Submitelctro		= 		AppiumBy.accessibilityId("ElectrolyteSubmit");
 	
 	@Test
 	@Owner("QA") // Add the @Owner annotation to specify the executor
@@ -184,12 +224,8 @@ public class Case20_Fuel_optimalfuel extends AppiummobileBase {
 		
 		// Array of glass locators
         By[] glassLocators = {glas1, glas2, glas3, glas4};
-
         try {
-            // Open the website
-            driver.get("https://example.com");
-
-            // Click on glasses using a loop
+         // Click on glasses using a loop
             for (By locator : glassLocators) {
                 try {
                     WebElement glass = driver.findElement(locator);
@@ -208,11 +244,243 @@ public class Case20_Fuel_optimalfuel extends AppiummobileBase {
 		// Capture a screenshot and attach it to Allure
         AllureUtils.captureScreenshot(driver, "Optimalfuel8");
         
-//        // locate Caffeine deviation icon
-//        WebElement caffeineicon	= driver.findElement(caffeine);
-//        caffeineicon.click();
-//        
+        // locate Caffeine deviation icon
+        WebElement caffeineicon	= driver.findElement(caffeine);
+        caffeineicon.click();      
+     // Array of coffee glass locators
+        By[] coffee = {cof1, cof2, cof3, cof4};
+        try {     
+            // Click on glasses using a loop
+            for (By locator1 : coffee) {
+                try {
+                    WebElement glass = driver.findElement(locator1);
+                    glass.click();
+                    // Add logic for validation or other actions if necessary
+                } catch (NoSuchElementException e) {
+                    System.out.println("Element not found: " + e.getMessage());
+                    // Handle the exception (e.g., log, retry, or terminate the loop)
+                }
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
         
+    	// Capture a screenshot and attach it to Allure
+        AllureUtils.captureScreenshot(driver, "Optimalfuel9");
+        
+        // Array of tea glass locators
+        By[] tea = {tea1, tea2};
+        try {
+       
+            // Click on glasses using a loop
+            for (By locator2 : tea) {
+                try {
+                    WebElement glass = driver.findElement(locator2);
+                    glass.click();
+                    // Add logic for validation or other actions if necessary
+                } catch (NoSuchElementException e) {
+                    System.out.println("Element not found: " + e.getMessage());
+                    // Handle the exception (e.g., log, retry, or terminate the loop)
+                }
+            }
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        
+    	// Capture a screenshot and attach it to Allure
+        AllureUtils.captureScreenshot(driver, "Optimalfuel10");
+        
+        
+     // Array of green tea glass locators
+        By[] greentea = {grentea1, grentea2, grentea3, grentea4, grentea5};
+        try {
+       
+            // Click on glasses using a loop
+            for (By locator3 : greentea) {
+                try {
+                    WebElement glass = driver.findElement(locator3);
+                    glass.click();
+                    // Add logic for validation or other actions if necessary
+                } catch (NoSuchElementException e) {
+                    System.out.println("Element not found: " + e.getMessage());
+                    // Handle the exception (e.g., log, retry, or terminate the loop)
+                }
+            }
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        
+    	// Capture a screenshot and attach it to Allure
+        AllureUtils.captureScreenshot(driver, "Optimalfuel11");
+        
+        // Locate and select radio button for sugar
+        WebElement sugar1  = driver.findElement(sugarbtn);
+        sugar1.click();
+        
+        // locate and add notes for field
+        WebElement notesfield = driver.findElement(notesection);
+        notesfield.sendKeys(" You're doing an amazing job, and I admire your determination and resilience. Keep pushing forward and remember that you are capable of achieving great things.");
+        
+    	// Capture a screenshot and attach it to Allure
+        AllureUtils.captureScreenshot(driver, "Optimalfuel12");
+        
+       // Click on timer 
+        WebElement Timerclick 	= driver.findElement(Time);
+        Timerclick.click();
+        // Click on timer 
+        WebElement Timerclick1 	= driver.findElement(Time);
+        Timerclick1.click();
+        
+        List<WebElement>values = driver.findElements(pickerelement);
+
+		for (int i=0; i<values.size();i++)
+		{		
+		System.out.println(values.get(i).getText());
+		}
+		
+		Thread.sleep(3500);
+		values.get(2).sendKeys("AM");
+		
+		Thread.sleep(3500);
+		values.get(0).sendKeys("6");
+		values.get(0).sendKeys(Keys.TAB);
+
+		Thread.sleep(3500);
+		values.get(1).sendKeys("43");
+		values.get(1).sendKeys(Keys.TAB);
+		  
+		driver.findElement(Doneclick).click();
+		
+		
+		// Capture a screenshot and attach it to Allure
+        AllureUtils.captureScreenshot(driver, "Optimalfuel13");
+		
+		
+		WebElement caffiensubmit	= driver.findElement(Caffientick);
+		caffiensubmit.click();
+        
+		/*************************/
+		
+		//locate and click on alcohol deviation popup 
+		WebElement alcoholclick	= driver.findElement(alcholotap);
+		alcoholclick.click();
+		
+	    // Array of Tequila glass locators
+        By[] Tequila = {Tequglass1, Tequglass2, Tequglass3, Tequglass4};
+        try {   
+            // Click on glasses using a loop
+            for (By locator3 : Tequila) {
+                try {
+                    WebElement glass = driver.findElement(locator3);
+                    glass.click();
+                    // Add logic for validation or other actions if necessary
+                } catch (NoSuchElementException e) {
+                    System.out.println("Element not found: " + e.getMessage());
+                    // Handle the exception (e.g., log, retry, or terminate the loop)
+                }
+            }
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }       
+    	// Capture a screenshot and attach it to Allure
+        AllureUtils.captureScreenshot(driver, "Optimalfuel14");
+		
+        
+        // Array of Mojito glass locators
+        By[] Mojito = {moji1, moji2};
+        try {   
+            // Click on glasses using a loop
+            for (By locator4 : Mojito) {
+                try {
+                    WebElement glass = driver.findElement(locator4);
+                    glass.click();
+                    // Add logic for validation or other actions if necessary
+                } catch (NoSuchElementException e) {
+                    System.out.println("Element not found: " + e.getMessage());
+                    // Handle the exception (e.g., log, retry, or terminate the loop)
+                }
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }       
+    	// Capture a screenshot and attach it to Allure
+        AllureUtils.captureScreenshot(driver, "Optimalfuel15");
+        
+        
+        // Array of Lager glass locators
+        By[] Lager = {lager1, lager2, lager3, lager4, lager5};
+        try {   
+            // Click on glasses using a loop
+            for (By locator5 : Lager) {
+                try {
+                    WebElement glass = driver.findElement(locator5);
+                    glass.click();
+                    // Add logic for validation or other actions if necessary
+                } catch (NoSuchElementException e) {
+                    System.out.println("Element not found: " + e.getMessage());
+                    // Handle the exception (e.g., log, retry, or terminate the loop)
+                }
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }       
+    	// Capture a screenshot and attach it to Allure
+        AllureUtils.captureScreenshot(driver, "Optimalfuel16");
+        
+        
+        WebElement addalchol = driver.findElement(Adalchol);
+        addalchol.click();
+        
+        WebElement alcholodeviation	= driver.findElement(deviationnotes);
+        alcholodeviation.sendKeys("testing notes for Alcholo, ek glass vodka kaam mera roj ka");
+        
+        WebElement Sugarbttn 	= driver.findElement(sugarmixer);
+        Sugarbttn.click();
+        Sugarbttn.click();
+     // Capture a screenshot and attach it to Allure
+        AllureUtils.captureScreenshot(driver, "Optimalfuel17");
+        
+        WebElement alcholosubmit	= driver.findElement(Alcohaltick);
+        alcholosubmit.click();
+        
+        
+        /*********************************/
+        
+        WebElement Electrolyteicon	= driver.findElement(Electrolyte);
+        Electrolyteicon.click();
+        
+        
+        // Array of electrolyte glass locators
+        By[] electrolyte = {electro1, electro2};
+        try {   
+            // Click on glasses using a loop
+            for (By locator6 : electrolyte) {
+                try {
+                    WebElement glass = driver.findElement(locator6);
+                    glass.click();
+                    // Add logic for validation or other actions if necessary
+                } catch (NoSuchElementException e) {
+                    System.out.println("Element not found: " + e.getMessage());
+                    // Handle the exception (e.g., log, retry, or terminate the loop)
+                }
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }       
+    	// Capture a screenshot and attach it to Allure
+        AllureUtils.captureScreenshot(driver, "Optimalfuel18");
+		
+        WebElement elctronotes	= driver.findElement(noteselectro);
+        elctronotes.sendKeys("Dont take any electrolyte consumtion");
+        
+        WebElement elctrosubmitclick =  driver.findElement(Submitelctro);
+        elctrosubmitclick.click();
+        elctrosubmitclick.click();
+        
+		
 		Thread.sleep(2500);
         driver.terminateApp("com.cuesz.mobile");
 	}
