@@ -2,24 +2,24 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-11-01T11:40:52Z" name="Default suite" finished-at="2023-11-01T11:45:12Z" duration-ms="260651">
+  <suite started-at="2023-11-05T21:19:05 IST" name="Default suite" finished-at="2023-11-05T21:20:47 IST" duration-ms="102675">
     <groups>
     </groups>
-    <test started-at="2023-11-01T11:40:52Z" name="Default test" finished-at="2023-11-01T11:45:12Z" duration-ms="260651">
-      <class name="cuesz03.Iosapp_member_home_Fuelscreen.Case20_Fuel_optimalfuel">
-        <test-method is-config="true" signature="Cueszbase()[pri:0, instance:cuesz03.Iosapp_member_home_Fuelscreen.Case20_Fuel_optimalfuel@22d7b4f8]" started-at="2023-11-01T17:10:52Z" name="Cueszbase" finished-at="2023-11-01T17:10:53Z" duration-ms="1507" status="PASS">
+    <test started-at="2023-11-05T21:19:05 IST" name="Default test" finished-at="2023-11-05T21:20:47 IST" duration-ms="102675">
+      <class name="cuesz.membersummarytest.advocate.Case30_MS_Deletenewgoaltest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:cuesz.membersummarytest.advocate.Case30_MS_Deletenewgoaltest@387a8303]" started-at="2023-11-05T21:19:05 IST" name="setUp" finished-at="2023-11-05T21:19:08 IST" duration-ms="3542" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- Cueszbase -->
-        <test-method signature="Homescreen()[pri:0, instance:cuesz03.Iosapp_member_home_Fuelscreen.Case20_Fuel_optimalfuel@22d7b4f8]" started-at="2023-11-01T17:10:53Z" name="Homescreen" finished-at="2023-11-01T17:15:12Z" duration-ms="259025" status="PASS">
+        </test-method> <!-- setUp -->
+        <test-method signature="advocatdeletegoaltTest()[pri:0, instance:cuesz.membersummarytest.advocate.Case30_MS_Deletenewgoaltest@387a8303]" started-at="2023-11-05T21:19:08 IST" name="advocatdeletegoaltTest" finished-at="2023-11-05T21:20:46 IST" duration-ms="97312" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- Homescreen -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:cuesz03.Iosapp_member_home_Fuelscreen.Case20_Fuel_optimalfuel@22d7b4f8]" started-at="2023-11-01T17:15:12Z" name="tearDown" finished-at="2023-11-01T17:15:12Z" duration-ms="18" status="PASS">
+        </test-method> <!-- advocatdeletegoaltTest -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:cuesz.membersummarytest.advocate.Case30_MS_Deletenewgoaltest@387a8303]" started-at="2023-11-05T21:20:46 IST" name="tearDown" finished-at="2023-11-05T21:20:47 IST" duration-ms="893" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- cuesz03.Iosapp_member_home_Fuelscreen.Case20_Fuel_optimalfuel -->
+      </class> <!-- cuesz.membersummarytest.advocate.Case30_MS_Deletenewgoaltest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

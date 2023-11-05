@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Test"
+<testsuite name="Default test"
            tests="1"
            failures="0"
            errors="0"
            skipped="0"
-           time="59.562">
+           time="114.518">
     <properties></properties>
 
 
 
             <testcase
                 name="advocateeditgoaltTest"
-                time="59.562"
+                time="114.518"
                 classname="cuesz.membersummarytest.advocate.Case29_MS_Editnewgoaltest">
             </testcase>
 </testsuite>

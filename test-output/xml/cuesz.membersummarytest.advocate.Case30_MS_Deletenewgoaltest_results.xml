@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Test"
+<testsuite name="Default test"
            tests="1"
            failures="0"
            errors="0"
            skipped="0"
-           time="47.430">
+           time="97.312">
     <properties></properties>
 
 
 
             <testcase
                 name="advocatdeletegoaltTest"
-                time="47.430"
+                time="97.312"
                 classname="cuesz.membersummarytest.advocate.Case30_MS_Deletenewgoaltest">
             </testcase>
 </testsuite>

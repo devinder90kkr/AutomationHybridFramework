@@ -35,15 +35,6 @@ import cuesz.utils.SeleniumUtils;
 		private By Slepeopton2 =(By.xpath("(//input[@placeholder='Enter Cue'])[5]"));
 
 		
-		
-		private By slctbttn2 = (By.xpath("//div[@id='RestoreCard']//div[@class='d-flex justify-content-end calender_drop']//button[1]"));
-		private By slctbttn3 = (By.xpath("//div[@id='RestoreCard']//div[@class='d-flex justify-content-end calender_drop']//button[1]"));
-	
-		private By Copybttn = (By.xpath("(//button[@class='btn btn-sm btn-primary m-1'])[12]"));
-		private By savebttn = (By.xpath("(//button[normalize-space()='Yes'])[1]"));
-		
-
-		
 		public Case45_MSL_restore_current(WebDriver driver) {
 			super(driver);
 			// TODO Auto-generated constructor stub
@@ -89,24 +80,27 @@ import cuesz.utils.SeleniumUtils;
 		      
 			   Thread.sleep(2000);
 			   WebElement restoreoption1 =driver.findElement(rstropton1);
+			   restoreoption1.clear();
 			   Actions builder = new Actions(driver);
 			   builder.moveToElement(restoreoption1).click().sendKeys("ice bath for 30 seconds").perform();
 			   Thread.sleep(2000);
-			  builder.sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.ENTER).perform();
+			  builder.sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.TAB).perform();
 			   
 			   Thread.sleep(2000);
 			   WebElement restoreoption2 =driver.findElement(rstropton2);
+			   restoreoption2.clear();
 			   Actions builder2 = new Actions(driver);
 			   builder2.moveToElement(restoreoption2).click().sendKeys("3x ZMA").perform();
 			   Thread.sleep(2000);
-			   builder2.sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.ENTER).perform();
+			   builder2.sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.TAB).perform();
 			   
 			   Thread.sleep(2000);
 			   WebElement restoreoption3 =driver.findElement(rstropton3);
+			   restoreoption3.clear();
 			   Actions builder3 = new Actions(driver);
 			   builder3.moveToElement(restoreoption3).click().sendKeys("This is manual enterny by automation tool").perform();
 			   Thread.sleep(2000);
-			   builder3.sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.ENTER).perform();
+			   builder3.sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.TAB).perform();
 			   
 			   Thread.sleep(2500);
 			   // Locate the heading element
@@ -125,76 +119,22 @@ import cuesz.utils.SeleniumUtils;
 		       
 		       Thread.sleep(2000);
 			   WebElement Sleepeoption =driver.findElement(Slepeopton);
+			   Sleepeoption.clear();
 			   Actions builder4 = new Actions(driver);
 			   builder4.moveToElement(Sleepeoption).click().sendKeys("swedish relaxation").perform();
 			   Thread.sleep(2000);
-			   builder4.sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.ENTER).perform();
+			   builder4.sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.TAB).perform();
 			   Thread.sleep(2000);
 		       
 			   Thread.sleep(2000);
 			   WebElement Sleepeoption2 =driver.findElement(Slepeopton2);
+			   Sleepeoption2.clear();
 			   Actions builder5 = new Actions(driver);
 			   builder5.moveToElement(Sleepeoption2).click().sendKeys("thinking on purpose").perform();
 			   Thread.sleep(2000);
-			   builder5.sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.ENTER).perform();
+			   builder5.sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.TAB).perform();
 			   Thread.sleep(2000);
 
-				   
-			   /************************************ Select week and copy data******************************************************************/    
-		        
-		        Thread.sleep(5500);
-				// Example usage:
-				WebElement selectbutton11 = driver.findElement(slctbttn2);
-			    // Scroll to the "Staff Notes" element using JavaScriptExecutor
-				((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView();", selectbutton11);
-		        
-		        
-		        Thread.sleep(2500);
-		        // Find and click on the "Select" button
-			    WebElement selectButton = driver.findElement(slctbttn3);
-			    selectButton.click();
-			    
-	/********* select date from calendar******/
-
-			  // Call the utility method to select the desired date as per above scripts 
-		        DatePickerUtility_logicpage.selectDesiredDate(driver);
-		        
-		        Thread.sleep(2500);
-			    WebElement Copybutton = driver.findElement(Copybttn);
-			    Copybutton.click();
-		        Thread.sleep(2500);		
-		        
-		        // Locate an element within the pop-up
-		        By popupElementLocator = By.xpath("//h3[contains(text(), 'Are you sure you want to copy the data for 1 weeks.')]");
-		        WebElement popupElement = driver.findElement(popupElementLocator);
-
-		        // Check if the pop-up element is displayed
-		        if (popupElement.isDisplayed()) {
-		            System.out.println("Pop-up is open.");
-		        } else {
-		            System.out.println("Pop-up is not open.");
-		        }
-		        Thread.sleep(500);
-		     // Locate elements within the pop-up
-		        By dataFromElementLocator = By.xpath("//span[contains(@class, 'date_field')]");
-		        By dataToElementLocator = By.xpath("//ul[contains(@class, 'data_copy_list')]//span");
-
-		        WebElement dataFromElement = driver.findElement(dataFromElementLocator);
-		        WebElement dataToElement = driver.findElement(dataToElementLocator);
-
-		        // Extract and print the values
-		        String dataFromValue = dataFromElement.getText();
-		        String dataToValue = dataToElement.getText();
-
-		        System.out.println("Data to be copied from: " + dataFromValue);
-		        System.out.println("Data will be copied to: " + dataToValue);
-		        
-		        
-		        WebElement saveyesbutton = driver.findElement(savebttn);
-		        saveyesbutton.click();
-		        Thread.sleep(2500); 
-		       
-  
 		 }
 	}
 	 

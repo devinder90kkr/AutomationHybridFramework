@@ -21,6 +21,9 @@ public class Case15_MS_Memberhoverdetail extends BasePage {
 	private By perform		= (By.xpath("//div[@id=\"MemberSummary-MemberDetails-PerformDetails\"]//img"));
 	private By restore		= (By.xpath("//div[@id=\"MemberSummary-MemberDetails-RestoreDetails\"]//img"));
 	private By version		= (By.id("MemberSummary-MemberDetails-Version"));
+	private By memberflag	= (By.id("MemberSummary-MemberDetails-Flag"));
+	private By flagbox		= (By.xpath("//div[@class='flag_modal']//div[1]//div[1]//div[1]//div[1]//input[1]"));
+	private By closebutton	= (By.xpath("//button[@class='close_btn']//span"));
 	
 	
     public Case15_MS_Memberhoverdetail(WebDriver driver) {
@@ -34,6 +37,21 @@ public class Case15_MS_Memberhoverdetail extends BasePage {
         utils.clickMembersummary();
         utils.waitForMilliseconds(2000);
         utils.enterSearchText();
+        
+        
+        Thread.sleep(2000);
+        // Locate the Redflag element to hover over to click and perform desired activity
+           WebElement membrflag = driver.findElement(memberflag);
+           Actions actions1 = new Actions(driver);
+           actions1.moveToElement(membrflag).perform();
+           Thread.sleep(2000);
+           membrflag.click();
+           Thread.sleep(2000);
+           WebElement flagModalElement = driver.findElement(flagbox);
+           flagModalElement.click();
+           Thread.sleep(2000);
+           WebElement Closebtn = driver.findElement(closebutton);
+           Closebtn.click();
         
         Thread.sleep(2000);
      // Locate the morningscan element to hover over
@@ -66,8 +84,8 @@ public class Case15_MS_Memberhoverdetail extends BasePage {
         // Get the perform element
         WebElement performElement = driver.findElement(perform);
         // Perform the hover action on the perform element
-        Actions actions1 = new Actions(driver);
-        actions1.moveToElement(performElement).perform();
+        Actions actions11 = new Actions(driver);
+        actions11.moveToElement(performElement).perform();
      // Capture a screenshot and attach it to Allure
         AllureUtils.captureScreenshot(driver, "fuel_report_screenshot");
         

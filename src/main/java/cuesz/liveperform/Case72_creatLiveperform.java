@@ -121,16 +121,12 @@
 
 package cuesz.liveperform;
 
-import java.time.Duration;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
 
 import cuesz.pages.BasePage;
@@ -217,41 +213,25 @@ public class Case72_creatLiveperform extends BasePage {
 		    driver.findElement(Submitbutton).click();
 		    // Capture a screenshot and attach it to Allure
 	        AllureUtils.captureScreenshot(driver, "Case72_creatLiveperform");
-	        
-//	     // Wait for the dialog to appear
-//	        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(1000));
-//	        WebElement dialog = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@role='dialog']")));
-//
-//	        // If the dialog is present, click the rejection button
-//	        if (dialog != null) {
-//	            WebElement rejectionButton = dialog.findElement(By.id("DecisionPopupRejection"));
-//	            rejectionButton.click();
-//		    } else {
-//		        // If the popup is not displayed, you can choose to skip this step or take some other action
-//		        // For example, you can add a log statement to indicate that the popup did not appear
-//		        System.out.println("Popup not displayed. Continuing without further action.");
-//		    }
-//		 // Capture a screenshot and attach it to Allure
-//	        AllureUtils.captureScreenshot(driver, "Case72_creatLiveperform2");
-//		    
-//	     // Check if the Crossclick element is displayed before clicking on it
-//            WebElement Crossclick = null;
-//            try {
-//                Crossclick = driver.findElement(crossicon);
-//                if (Crossclick.isDisplayed()) {
-//                    Crossclick.click();
-//                } else {
-//                    // Handle the case where the element is not displayed
-//                    System.out.println("Crossclick element is not displayed.");
-//                    // Perform some other action or throw an exception if needed
-//                }
-//            } catch (NoSuchElementException e) {
-//                // Handle the case where the element is not found
-//                System.out.println("Crossclick element not found.");
-//                // Perform some other action or throw an exception if needed
-//            }
-//            
+	       
+	        // Check if the Crossclick element is displayed before clicking on it
+	        WebElement Crossclick = null;
+	        try {
+	            Crossclick = driver.findElement(crossicon);
+	            if (Crossclick.isDisplayed()) {
+	                Crossclick.click();
+	            } else {
+	                // Handle the case where the element is not displayed
+	                System.out.println("Crossclick element is not displayed.");
+	                // Perform some other action or throw an exception if needed
+	            }
+	        } catch (NoSuchElementException e) {
+	            // Handle the case where the element is not found
+	            System.out.println("Crossclick element not found.");
+	            // Perform some other action or throw an exception if needed
+	        }
             
+	        
 		    Thread.sleep(8000);
 		 	}
 		}	
