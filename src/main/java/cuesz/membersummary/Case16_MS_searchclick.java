@@ -5,9 +5,6 @@ import org.openqa.selenium.WebDriver;
 import org.testng.annotations.Test;
 
 
-import io.restassured.RestAssured;
-import io.restassured.response.Response;
-
 import cuesz.pages.BasePage;
 
 public class Case16_MS_searchclick extends BasePage {

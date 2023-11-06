@@ -28,7 +28,9 @@ public class Case22_Fuel_breakfast_additionalfuel extends AppiummobileBase {
 	private By plusadd			= 		AppiumBy.accessibilityId("BreakfastAddIcon");
 	private By doneclick		= 		AppiumBy.accessibilityId("Done");
 	private By additionalsearch	= 		AppiumBy.accessibilityId("AdditionalFuelSearch");
-	private By faggot			= 		AppiumBy.iOSClassChain("**/XCUIElementTypeOther[`label == \"Faggot 90 kcal\"`][3]");
+//	private By faggot			= 		AppiumBy.iOSClassChain("**/XCUIElementTypeOther[`label == \"Faggot 90 kcal\"`][3]");
+	private By faggot			=		AppiumBy.iOSNsPredicateString("name == \"Faggot\"");
+	
 	private By fagoticon		= 		AppiumBy.accessibilityId("FaggotFuelItemInfo");
 	private By backtap			= 		AppiumBy.accessibilityId("BackPress");
 //	private By downarrow		= 		AppiumBy.iOSClassChain("**/XCUIElementTypeOther[`label == \"ArrowDown\"`][4]");
@@ -37,11 +39,12 @@ public class Case22_Fuel_breakfast_additionalfuel extends AppiummobileBase {
 	private By pickerelement	= 		AppiumBy.xpath("//XCUIElementTypePickerWheel");
 	private By Doneclick		= 		AppiumBy.accessibilityId("AlcohalTime");
 	private By submitick		= 		AppiumBy.accessibilityId("ItemSubmit");
-	private By meat				= 		AppiumBy.iOSClassChain("**/XCUIElementTypeOther[`label == \"Meat 256 kcal\"`][2]");
+//	private By meat				= 		AppiumBy.iOSClassChain("**/XCUIElementTypeOther[`label == \"Meat 256 kcal\"`][2]");
+	private By meat				=		AppiumBy.iOSNsPredicateString("name == \"Meat\"");
 	private By meatplus			= 		AppiumBy.accessibilityId("MeatPlus");
 	private By serchclick		= 		AppiumBy.accessibilityId("AdditionalFuelSearch");
 	private By Showclick		= 		AppiumBy.xpath("(//XCUIElementTypeStaticText[@name=\"Show More\"])[1]");
-
+	private By Beetroot			=		AppiumBy.iOSNsPredicateString("name == \"Beetroot\"");
 
 	@Test
 	@Owner("QA") // Add the @Owner annotation to specify the executor
@@ -217,7 +220,7 @@ public class Case22_Fuel_breakfast_additionalfuel extends AppiummobileBase {
         WebElement Showmore		= driver.findElement(Showclick);
         Showmore.click();
 
-        WebElement Fuelselection3	= driver.findElement(AppiumBy.xpath("(//XCUIElementTypeOther[@name=\"Beetroot 22 kcal\"])[2]"));
+        WebElement Fuelselection3	= driver.findElement(Beetroot);
         Fuelselection3.click();
         
 		// Capture a screenshot and attach it to Allure

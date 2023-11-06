@@ -9,7 +9,6 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
-import cuesz.logicpage.Case42_01_MSL_Perform_currentday;
 import cuesz.logicpage.Case43_02_MSL_fuel_currentday;
 import cuesz.logintest.AdvocateLogin;
 import cuesz.utils.AllureUtils;

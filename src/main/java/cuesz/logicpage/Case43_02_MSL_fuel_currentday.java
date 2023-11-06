@@ -97,29 +97,14 @@ import cuesz.utils.DayofWeek;
 			    String partialId = "FuelMealList-" + dayName;
 			    WebElement searchactivity = driver.findElement(By.id(partialId));
 
-			    // Press the down arrow key
-			    Actions builder = new Actions(driver);
-			    builder.sendKeys(Keys.ARROW_DOWN).build().perform();
-
-			    // Press the tab key
-			    builder.sendKeys(Keys.TAB).build().perform();
-
 			    // Click on the element with the ID partialId
 			    searchactivity.click();
 
 			    // Wait for 2 seconds
 			    Thread.sleep(2000);
 
-			    // Repeat the above steps multiple times
-			    for (int i = 0; i < 6; i++) {
-			        builder.sendKeys(Keys.ARROW_DOWN).build().perform();
-			        builder.sendKeys(Keys.TAB).build().perform();
-			        Thread.sleep(2000);
-			        searchactivity.click();
-
-			        // Wait for 2 seconds
-			        Thread.sleep(2000);
-			    }
+			   Actions builder =new Actions(driver);
+			   builder.sendKeys(Keys.TAB).build().perform();
 		    
 		/*********************************Input values for option 1 primary  breakfast field**********************************************************/
 //			        https://chat.openai.com/share/68e7bc08-e866-4816-b311-cdcc35405dea
@@ -709,7 +694,7 @@ import cuesz.utils.DayofWeek;
 				    Thread.sleep(2000);
 				    // Now you can interact with the HydrationTarget element
 				    Actions builder7 = new Actions(driver);			    
-				    builder7.moveToElement(HydrationTarget).click().sendKeys("3 Glasses").perform();
+				    builder7.moveToElement(HydrationTarget).click().sendKeys("8 Glasses").perform();
 				    Thread.sleep(2000);
 				    builder7.sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.ENTER).perform();
 
