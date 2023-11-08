@@ -19,8 +19,8 @@ import io.qameta.allure.Severity;
 import io.qameta.allure.SeverityLevel;
 import io.qameta.allure.Story;
 
-@Epic ("Fuel screen detail ")
-@Feature ("Verify Fuel detail functionlaity related to Optimal fuel.")
+@Epic ("Fuel upload screen functionlaity ")
+@Feature ("Verify Upload detail functionlaity for breakfast.")
 public class Case25_Fuel_breakfast_uploadphotogallery extends AppiummobileBase {
 	
 	private By Homeclick 				= 		AppiumBy.iOSClassChain("**/XCUIElementTypeOther[`label == \"Home\"`][2]");
@@ -38,8 +38,8 @@ public class Case25_Fuel_breakfast_uploadphotogallery extends AppiummobileBase {
 	@Test
 	@Owner("QA") // Add the @Owner annotation to specify the executor
     @Severity(SeverityLevel.NORMAL)      
-    @Description("Member Fuel screen detail verification")
-    @Story("Scroll to Fuel card and verify breakfast assigned by staff ")	
+    @Description("Member check upload functionlaity verification")
+    @Story("Scroll to Fuel card and upload image for breakfast.")	
 	public void Homescreen() throws InterruptedException
 	{	
 		// Create an instance of AppiumUtils and pass the driver
