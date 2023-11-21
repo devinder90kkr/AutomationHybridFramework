@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="MasterSuite">
+
+  <!-- Include Suite14 -->
+  <suite-files>
+    <suite-file path="/Users/chicmic/git/Cuesz_AutomationTests/Case13_Logicpage_currentdaycases-advocate-suite.xml"/>
+    <suite-file path="/Users/chicmic/git/Cuesz_AutomationTests/Cuesz03.Iosapp_member_home_Fuelscreen.xml"/>
+  </suite-files>
+
+  
+
+</suite>

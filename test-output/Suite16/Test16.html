@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Test16</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>3/4/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>8/6/0</td>
 </tr><tr>
-<td>Started on:</td><td>Mon Nov 06 18:34:56 IST 2023</td>
+<td>Started on:</td><td>Tue Nov 21 17:13:21 IST 2023</td>
 </tr>
-<tr><td>Total time:</td><td>698 seconds (698042 ms)</td>
+<tr><td>Total time:</td><td>1230 seconds (1230524 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -75,35 +75,39 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='cuesz03.Iosapp_member_home_Fuelscreen.Case23_01_Fuel_breakfast_editadditionalfuel.Homescreen()'><b>Homescreen</b><br>Test class: cuesz03.Iosapp_member_home_Fuelscreen.Case23_01_Fuel_breakfast_editadditionalfuel</td>
-<td><div><pre>org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters.
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+<td title='cuesz03.Iosapp_member_home_Fuelscreen.Case28_Fuel_breakfast_customfoodsearch.Homescreen()'><b>Homescreen</b><br>Test class: cuesz03.Iosapp_member_home_Fuelscreen.Case28_Fuel_breakfast_customfoodsearch</td>
+<td><div><pre>org.openqa.selenium.StaleElementReferenceException: The previously found element &quot;&quot;AdditionalFuelSearch&quot; TextField&quot; is not present in the current view anymore. Make sure the application UI has the expected state. You could also try to switch the binding strategy using the &apos;boundElementsByIndex&apos; setting for the element lookup. Original error: No matches found for Identity Binding from input {(
+    Other, {{172.6, 164.7}, {300.0, 93.0}}, identifier: &apos;AdditionalFuelSearch&apos;, label: &apos;Search Fuel to log&apos;
+)}
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
 Build info: version: &apos;4.15.0&apos;, revision: &apos;1d14b5521b&apos;
 System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;14.0&apos;, java.version: &apos;21&apos;
 Driver info: io.appium.java_client.ios.IOSDriver
-Command: [1c08645b-0e4e-4ca0-b3b1-f5943a66e6e2, findElement {using=accessibility id, value=BeetrootPlus}]
-Capabilities {appium:automationName: XCuiTest, appium:databaseEnabled: false, appium:deviceName: iPhone 11, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: false, appium:platformVersion: 17.0, appium:takesScreenshot: true, appium:udid: 626549EB-A1C6-40B2-B376-437..., appium:wdaLaunchTimeout: 30000, appium:webStorageEnabled: false, platformName: IOS}
-Session ID: 1c08645b-0e4e-4ca0-b3b1-f5943a66e6e2
+Command: [d1790acb-bd9d-4543-a402-e4230a26d3d7, clickElement {id=82020000-0000-0000-7C15-000000000000}]
+Capabilities {appium:automationName: XCUITest, appium:databaseEnabled: false, appium:deviceName: Iphone13, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: false, appium:platformVersion: 17.2, appium:takesScreenshot: true, appium:udid: 00008110-00142D610A79801E, appium:wdaLaunchTimeout: 30000, appium:webStorageEnabled: false, platformName: IOS}
+Element: [[IOSDriver:  on IOS (d1790acb-bd9d-4543-a402-e4230a26d3d7)] -&gt; accessibility id: AdditionalFuelSearch]
+Session ID: d1790acb-bd9d-4543-a402-e4230a26d3d7
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
 	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
 	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:250)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:602)
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:359)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:353)
-	at cuesz03.Iosapp_member_home_Fuelscreen.Case23_01_Fuel_breakfast_editadditionalfuel.Homescreen(Case23_01_Fuel_breakfast_editadditionalfuel.java:78)
-... Removed 26 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace2002190941", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace2002190941'><pre>org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters.
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:224)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:77)
+	at cuesz03.Iosapp_member_home_Fuelscreen.Case28_Fuel_breakfast_customfoodsearch.Homescreen(Case28_Fuel_breakfast_customfoodsearch.java:111)
+... Removed 27 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1694924087", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1694924087'><pre>org.openqa.selenium.StaleElementReferenceException: The previously found element &quot;&quot;AdditionalFuelSearch&quot; TextField&quot; is not present in the current view anymore. Make sure the application UI has the expected state. You could also try to switch the binding strategy using the &apos;boundElementsByIndex&apos; setting for the element lookup. Original error: No matches found for Identity Binding from input {(
+    Other, {{172.6, 164.7}, {300.0, 93.0}}, identifier: &apos;AdditionalFuelSearch&apos;, label: &apos;Search Fuel to log&apos;
+)}
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
 Build info: version: &apos;4.15.0&apos;, revision: &apos;1d14b5521b&apos;
 System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;14.0&apos;, java.version: &apos;21&apos;
 Driver info: io.appium.java_client.ios.IOSDriver
-Command: [1c08645b-0e4e-4ca0-b3b1-f5943a66e6e2, findElement {using=accessibility id, value=BeetrootPlus}]
-Capabilities {appium:automationName: XCuiTest, appium:databaseEnabled: false, appium:deviceName: iPhone 11, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: false, appium:platformVersion: 17.0, appium:takesScreenshot: true, appium:udid: 626549EB-A1C6-40B2-B376-437..., appium:wdaLaunchTimeout: 30000, appium:webStorageEnabled: false, platformName: IOS}
-Session ID: 1c08645b-0e4e-4ca0-b3b1-f5943a66e6e2
+Command: [d1790acb-bd9d-4543-a402-e4230a26d3d7, clickElement {id=82020000-0000-0000-7C15-000000000000}]
+Capabilities {appium:automationName: XCUITest, appium:databaseEnabled: false, appium:deviceName: Iphone13, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: false, appium:platformVersion: 17.2, appium:takesScreenshot: true, appium:udid: 00008110-00142D610A79801E, appium:wdaLaunchTimeout: 30000, appium:webStorageEnabled: false, platformName: IOS}
+Element: [[IOSDriver:  on IOS (d1790acb-bd9d-4543-a402-e4230a26d3d7)] -&gt; accessibility id: AdditionalFuelSearch]
+Session ID: d1790acb-bd9d-4543-a402-e4230a26d3d7
 	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
 	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
 	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
@@ -113,11 +117,9 @@ Session ID: 1c08645b-0e4e-4ca0-b3b1-f5943a66e6e2
 	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
 	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:250)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:602)
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:359)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:353)
-	at cuesz03.Iosapp_member_home_Fuelscreen.Case23_01_Fuel_breakfast_editadditionalfuel.Homescreen(Case23_01_Fuel_breakfast_editadditionalfuel.java:78)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:224)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:77)
+	at cuesz03.Iosapp_member_home_Fuelscreen.Case28_Fuel_breakfast_customfoodsearch.Homescreen(Case28_Fuel_breakfast_customfoodsearch.java:111)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
@@ -135,6 +137,7 @@ Session ID: 1c08645b-0e4e-4ca0-b3b1-f5943a66e6e2
 	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
 	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
 	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1297)
 	at org.testng.TestNG.runSuitesLocally(TestNG.java:1226)
 	at org.testng.TestNG.runSuites(TestNG.java:1144)
 	at org.testng.TestNG.run(TestNG.java:1115)
@@ -142,18 +145,18 @@ Session ID: 1c08645b-0e4e-4ca0-b3b1-f5943a66e6e2
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 </pre></div></td>
-<td>44</td>
-<td>cuesz03.Iosapp_member_home_Fuelscreen.Case23_01_Fuel_breakfast_editadditionalfuel@4b14918a</td></tr>
+<td>27</td>
+<td>cuesz03.Iosapp_member_home_Fuelscreen.Case28_Fuel_breakfast_customfoodsearch@487db668</td></tr>
 <tr>
-<td title='cuesz03.Iosapp_member_home_Fuelscreen.Case23_02_Fuel_breakfast_additionalfueldeletecase.Homescreen()'><b>Homescreen</b><br>Test class: cuesz03.Iosapp_member_home_Fuelscreen.Case23_02_Fuel_breakfast_additionalfueldeletecase</td>
+<td title='cuesz03.Iosapp_member_home_Fuelscreen.Case29_Fuel_EarlySnacks_recommendedfuel.Homescreen()'><b>Homescreen</b><br>Test class: cuesz03.Iosapp_member_home_Fuelscreen.Case29_Fuel_EarlySnacks_recommendedfuel</td>
 <td><div><pre>org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters.
 For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
 Build info: version: &apos;4.15.0&apos;, revision: &apos;1d14b5521b&apos;
 System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;14.0&apos;, java.version: &apos;21&apos;
 Driver info: io.appium.java_client.ios.IOSDriver
-Command: [7bc1f2e1-58b8-40ad-9fca-9acdb75a0001, findElement {using=-ios class chain, value=**/XCUIElementTypeOther[`label == &quot;Home&quot;`][2]}]
-Capabilities {appium:automationName: XCuiTest, appium:databaseEnabled: false, appium:deviceName: iPhone 11, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: false, appium:platformVersion: 17.0, appium:takesScreenshot: true, appium:udid: 626549EB-A1C6-40B2-B376-437..., appium:wdaLaunchTimeout: 30000, appium:webStorageEnabled: false, platformName: IOS}
-Session ID: 7bc1f2e1-58b8-40ad-9fca-9acdb75a0001
+Command: [d9b5fc58-9986-4712-a395-fe98b19ed5cc, findElement {using=-ios class chain, value=**/XCUIElementTypeOther[`label == &quot;Home&quot;`][2]}]
+Capabilities {appium:automationName: XCUITest, appium:databaseEnabled: false, appium:deviceName: Iphone13, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: false, appium:platformVersion: 17.2, appium:takesScreenshot: true, appium:udid: 00008110-00142D610A79801E, appium:wdaLaunchTimeout: 30000, appium:webStorageEnabled: false, platformName: IOS}
+Session ID: d9b5fc58-9986-4712-a395-fe98b19ed5cc
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
@@ -164,16 +167,16 @@ Session ID: 7bc1f2e1-58b8-40ad-9fca-9acdb75a0001
 	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:66)
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:359)
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:353)
-	at cuesz03.Iosapp_member_home_Fuelscreen.Case23_02_Fuel_breakfast_additionalfueldeletecase.Homescreen(Case23_02_Fuel_breakfast_additionalfueldeletecase.java:47)
-... Removed 26 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1980278840", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1980278840'><pre>org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters.
+	at cuesz03.Iosapp_member_home_Fuelscreen.Case29_Fuel_EarlySnacks_recommendedfuel.Homescreen(Case29_Fuel_EarlySnacks_recommendedfuel.java:61)
+... Removed 27 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace646492862", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace646492862'><pre>org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters.
 For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
 Build info: version: &apos;4.15.0&apos;, revision: &apos;1d14b5521b&apos;
 System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;14.0&apos;, java.version: &apos;21&apos;
 Driver info: io.appium.java_client.ios.IOSDriver
-Command: [7bc1f2e1-58b8-40ad-9fca-9acdb75a0001, findElement {using=-ios class chain, value=**/XCUIElementTypeOther[`label == &quot;Home&quot;`][2]}]
-Capabilities {appium:automationName: XCuiTest, appium:databaseEnabled: false, appium:deviceName: iPhone 11, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: false, appium:platformVersion: 17.0, appium:takesScreenshot: true, appium:udid: 626549EB-A1C6-40B2-B376-437..., appium:wdaLaunchTimeout: 30000, appium:webStorageEnabled: false, platformName: IOS}
-Session ID: 7bc1f2e1-58b8-40ad-9fca-9acdb75a0001
+Command: [d9b5fc58-9986-4712-a395-fe98b19ed5cc, findElement {using=-ios class chain, value=**/XCUIElementTypeOther[`label == &quot;Home&quot;`][2]}]
+Capabilities {appium:automationName: XCUITest, appium:databaseEnabled: false, appium:deviceName: Iphone13, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: false, appium:platformVersion: 17.2, appium:takesScreenshot: true, appium:udid: 00008110-00142D610A79801E, appium:wdaLaunchTimeout: 30000, appium:webStorageEnabled: false, platformName: IOS}
+Session ID: d9b5fc58-9986-4712-a395-fe98b19ed5cc
 	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
 	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
 	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
@@ -187,7 +190,7 @@ Session ID: 7bc1f2e1-58b8-40ad-9fca-9acdb75a0001
 	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:66)
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:359)
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:353)
-	at cuesz03.Iosapp_member_home_Fuelscreen.Case23_02_Fuel_breakfast_additionalfueldeletecase.Homescreen(Case23_02_Fuel_breakfast_additionalfueldeletecase.java:47)
+	at cuesz03.Iosapp_member_home_Fuelscreen.Case29_Fuel_EarlySnacks_recommendedfuel.Homescreen(Case29_Fuel_EarlySnacks_recommendedfuel.java:61)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
@@ -205,6 +208,7 @@ Session ID: 7bc1f2e1-58b8-40ad-9fca-9acdb75a0001
 	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
 	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
 	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1297)
 	at org.testng.TestNG.runSuitesLocally(TestNG.java:1226)
 	at org.testng.TestNG.runSuites(TestNG.java:1144)
 	at org.testng.TestNG.run(TestNG.java:1115)
@@ -213,17 +217,17 @@ Session ID: 7bc1f2e1-58b8-40ad-9fca-9acdb75a0001
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 </pre></div></td>
 <td>10</td>
-<td>cuesz03.Iosapp_member_home_Fuelscreen.Case23_02_Fuel_breakfast_additionalfueldeletecase@6d1ef78d</td></tr>
+<td>cuesz03.Iosapp_member_home_Fuelscreen.Case29_Fuel_EarlySnacks_recommendedfuel@46944ca9</td></tr>
 <tr>
-<td title='cuesz03.Iosapp_member_home_Fuelscreen.Case25_Fuel_breakfast_uploadphotogallery.Homescreen()'><b>Homescreen</b><br>Test class: cuesz03.Iosapp_member_home_Fuelscreen.Case25_Fuel_breakfast_uploadphotogallery</td>
+<td title='cuesz03.Iosapp_member_home_Fuelscreen.Case30_Fuel_Earlysnacks_additionalfuel.Homescreen()'><b>Homescreen</b><br>Test class: cuesz03.Iosapp_member_home_Fuelscreen.Case30_Fuel_Earlysnacks_additionalfuel</td>
 <td><div><pre>org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters.
 For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
 Build info: version: &apos;4.15.0&apos;, revision: &apos;1d14b5521b&apos;
 System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;14.0&apos;, java.version: &apos;21&apos;
 Driver info: io.appium.java_client.ios.IOSDriver
-Command: [fa091733-d7f9-488e-97a4-c5c3b0690ac3, findElement {using=-ios class chain, value=**/XCUIElementTypeOther[`label == &quot;Home&quot;`][2]}]
-Capabilities {appium:automationName: XCuiTest, appium:databaseEnabled: false, appium:deviceName: iPhone 11, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: false, appium:platformVersion: 17.0, appium:takesScreenshot: true, appium:udid: 626549EB-A1C6-40B2-B376-437..., appium:wdaLaunchTimeout: 30000, appium:webStorageEnabled: false, platformName: IOS}
-Session ID: fa091733-d7f9-488e-97a4-c5c3b0690ac3
+Command: [e2876629-db43-4507-b24d-b08b1a316c4c, findElement {using=-ios class chain, value=**/XCUIElementTypeOther[`label == &quot;Home&quot;`][2]}]
+Capabilities {appium:automationName: XCUITest, appium:databaseEnabled: false, appium:deviceName: Iphone13, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: false, appium:platformVersion: 17.2, appium:takesScreenshot: true, appium:udid: 00008110-00142D610A79801E, appium:wdaLaunchTimeout: 30000, appium:webStorageEnabled: false, platformName: IOS}
+Session ID: e2876629-db43-4507-b24d-b08b1a316c4c
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
@@ -234,16 +238,16 @@ Session ID: fa091733-d7f9-488e-97a4-c5c3b0690ac3
 	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:66)
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:359)
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:353)
-	at cuesz03.Iosapp_member_home_Fuelscreen.Case25_Fuel_breakfast_uploadphotogallery.Homescreen(Case25_Fuel_breakfast_uploadphotogallery.java:50)
-... Removed 26 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1518966801", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1518966801'><pre>org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters.
+	at cuesz03.Iosapp_member_home_Fuelscreen.Case30_Fuel_Earlysnacks_additionalfuel.Homescreen(Case30_Fuel_Earlysnacks_additionalfuel.java:51)
+... Removed 27 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1623105503", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1623105503'><pre>org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters.
 For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
 Build info: version: &apos;4.15.0&apos;, revision: &apos;1d14b5521b&apos;
 System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;14.0&apos;, java.version: &apos;21&apos;
 Driver info: io.appium.java_client.ios.IOSDriver
-Command: [fa091733-d7f9-488e-97a4-c5c3b0690ac3, findElement {using=-ios class chain, value=**/XCUIElementTypeOther[`label == &quot;Home&quot;`][2]}]
-Capabilities {appium:automationName: XCuiTest, appium:databaseEnabled: false, appium:deviceName: iPhone 11, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: false, appium:platformVersion: 17.0, appium:takesScreenshot: true, appium:udid: 626549EB-A1C6-40B2-B376-437..., appium:wdaLaunchTimeout: 30000, appium:webStorageEnabled: false, platformName: IOS}
-Session ID: fa091733-d7f9-488e-97a4-c5c3b0690ac3
+Command: [e2876629-db43-4507-b24d-b08b1a316c4c, findElement {using=-ios class chain, value=**/XCUIElementTypeOther[`label == &quot;Home&quot;`][2]}]
+Capabilities {appium:automationName: XCUITest, appium:databaseEnabled: false, appium:deviceName: Iphone13, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: false, appium:platformVersion: 17.2, appium:takesScreenshot: true, appium:udid: 00008110-00142D610A79801E, appium:wdaLaunchTimeout: 30000, appium:webStorageEnabled: false, platformName: IOS}
+Session ID: e2876629-db43-4507-b24d-b08b1a316c4c
 	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
 	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
 	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
@@ -257,7 +261,7 @@ Session ID: fa091733-d7f9-488e-97a4-c5c3b0690ac3
 	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:66)
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:359)
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:353)
-	at cuesz03.Iosapp_member_home_Fuelscreen.Case25_Fuel_breakfast_uploadphotogallery.Homescreen(Case25_Fuel_breakfast_uploadphotogallery.java:50)
+	at cuesz03.Iosapp_member_home_Fuelscreen.Case30_Fuel_Earlysnacks_additionalfuel.Homescreen(Case30_Fuel_Earlysnacks_additionalfuel.java:51)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
@@ -275,6 +279,7 @@ Session ID: fa091733-d7f9-488e-97a4-c5c3b0690ac3
 	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
 	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
 	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1297)
 	at org.testng.TestNG.runSuitesLocally(TestNG.java:1226)
 	at org.testng.TestNG.runSuites(TestNG.java:1144)
 	at org.testng.TestNG.run(TestNG.java:1115)
@@ -283,39 +288,37 @@ Session ID: fa091733-d7f9-488e-97a4-c5c3b0690ac3
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 </pre></div></td>
 <td>10</td>
-<td>cuesz03.Iosapp_member_home_Fuelscreen.Case25_Fuel_breakfast_uploadphotogallery@1a6c1270</td></tr>
+<td>cuesz03.Iosapp_member_home_Fuelscreen.Case30_Fuel_Earlysnacks_additionalfuel@22bac7bc</td></tr>
 <tr>
-<td title='cuesz.logictest.advocate.Case43_02_MSL_Fuel_currentdaytest.advocatelogicmemberTest()'><b>advocatelogicmemberTest</b><br>Test class: cuesz.logictest.advocate.Case43_02_MSL_Fuel_currentdaytest</td>
-<td><div><pre>org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element is not clickable at point (745, -342)
-  (Session info: chrome=119.0.6045.105)
+<td title='cuesz03.Iosapp_member_home_Fuelscreen.Case31_Fuel_EarlySnacks_editadditionalfuel.Homescreen()'><b>Homescreen</b><br>Test class: cuesz03.Iosapp_member_home_Fuelscreen.Case31_Fuel_EarlySnacks_editadditionalfuel</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters.
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
 Build info: version: &apos;4.15.0&apos;, revision: &apos;1d14b5521b&apos;
 System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;14.0&apos;, java.version: &apos;21&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [5745368622e69765e80fa60668beae1e, clickElement {id=E0B2A6FB6CA8FAD63A536758723D70FB_element_333}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 119.0.6045.105, chrome: {chromedriverVersion: 119.0.6045.105 (38c72552c5e..., userDataDir: /var/folders/10/ksb8skmx6tj...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:54174}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:54174/devtoo..., se:cdpVersion: 119.0.6045.105, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on mac (5745368622e69765e80fa60668beae1e)] -&gt; id: FuelMealList-Monday]
-Session ID: 5745368622e69765e80fa60668beae1e
+Driver info: io.appium.java_client.ios.IOSDriver
+Command: [d06f01a4-3513-4e87-9cc5-eedb33114dc3, findElement {using=-ios class chain, value=**/XCUIElementTypeOther[`label == &quot;Home&quot;`][2]}]
+Capabilities {appium:automationName: XCUITest, appium:databaseEnabled: false, appium:deviceName: Iphone13, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: false, appium:platformVersion: 17.2, appium:takesScreenshot: true, appium:udid: 00008110-00142D610A79801E, appium:wdaLaunchTimeout: 30000, appium:webStorageEnabled: false, platformName: IOS}
+Session ID: d06f01a4-3513-4e87-9cc5-eedb33114dc3
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
 	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
+	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:250)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:602)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:224)
-	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:77)
-	at cuesz.logicpage.Case43_02_MSL_fuel_currentday.Perform(Case43_02_MSL_fuel_currentday.java:448)
-	at cuesz.logictest.advocate.Case43_02_MSL_Fuel_currentdaytest.advocatelogicmemberTest(Case43_02_MSL_Fuel_currentdaytest.java:55)
-... Removed 26 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace443401609", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace443401609'><pre>org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element is not clickable at point (745, -342)
-  (Session info: chrome=119.0.6045.105)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:66)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:359)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:353)
+	at cuesz03.Iosapp_member_home_Fuelscreen.Case31_Fuel_EarlySnacks_editadditionalfuel.Homescreen(Case31_Fuel_EarlySnacks_editadditionalfuel.java:46)
+... Removed 27 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1012752603", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1012752603'><pre>org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters.
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
 Build info: version: &apos;4.15.0&apos;, revision: &apos;1d14b5521b&apos;
 System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;14.0&apos;, java.version: &apos;21&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [5745368622e69765e80fa60668beae1e, clickElement {id=E0B2A6FB6CA8FAD63A536758723D70FB_element_333}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 119.0.6045.105, chrome: {chromedriverVersion: 119.0.6045.105 (38c72552c5e..., userDataDir: /var/folders/10/ksb8skmx6tj...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:54174}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:54174/devtoo..., se:cdpVersion: 119.0.6045.105, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on mac (5745368622e69765e80fa60668beae1e)] -&gt; id: FuelMealList-Monday]
-Session ID: 5745368622e69765e80fa60668beae1e
+Driver info: io.appium.java_client.ios.IOSDriver
+Command: [d06f01a4-3513-4e87-9cc5-eedb33114dc3, findElement {using=-ios class chain, value=**/XCUIElementTypeOther[`label == &quot;Home&quot;`][2]}]
+Capabilities {appium:automationName: XCUITest, appium:databaseEnabled: false, appium:deviceName: Iphone13, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: false, appium:platformVersion: 17.2, appium:takesScreenshot: true, appium:udid: 00008110-00142D610A79801E, appium:wdaLaunchTimeout: 30000, appium:webStorageEnabled: false, platformName: IOS}
+Session ID: d06f01a4-3513-4e87-9cc5-eedb33114dc3
 	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
 	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
 	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
@@ -323,13 +326,13 @@ Session ID: 5745368622e69765e80fa60668beae1e
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
 	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
+	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:250)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:602)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:224)
-	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:77)
-	at cuesz.logicpage.Case43_02_MSL_fuel_currentday.Perform(Case43_02_MSL_fuel_currentday.java:448)
-	at cuesz.logictest.advocate.Case43_02_MSL_Fuel_currentdaytest.advocatelogicmemberTest(Case43_02_MSL_Fuel_currentdaytest.java:55)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:66)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:359)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:353)
+	at cuesz03.Iosapp_member_home_Fuelscreen.Case31_Fuel_EarlySnacks_editadditionalfuel.Homescreen(Case31_Fuel_EarlySnacks_editadditionalfuel.java:46)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
@@ -347,6 +350,7 @@ Session ID: 5745368622e69765e80fa60668beae1e
 	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
 	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
 	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1297)
 	at org.testng.TestNG.runSuitesLocally(TestNG.java:1226)
 	at org.testng.TestNG.runSuites(TestNG.java:1144)
 	at org.testng.TestNG.run(TestNG.java:1115)
@@ -354,8 +358,150 @@ Session ID: 5745368622e69765e80fa60668beae1e
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 </pre></div></td>
-<td>178</td>
-<td>cuesz.logictest.advocate.Case43_02_MSL_Fuel_currentdaytest@53dbe163</td></tr>
+<td>10</td>
+<td>cuesz03.Iosapp_member_home_Fuelscreen.Case31_Fuel_EarlySnacks_editadditionalfuel@63798ca7</td></tr>
+<tr>
+<td title='cuesz03.Iosapp_member_home_Fuelscreen.Case32_Fuel_EarlySnacks_uploadphotogallery.Homescreen()'><b>Homescreen</b><br>Test class: cuesz03.Iosapp_member_home_Fuelscreen.Case32_Fuel_EarlySnacks_uploadphotogallery</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters.
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.15.0&apos;, revision: &apos;1d14b5521b&apos;
+System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;14.0&apos;, java.version: &apos;21&apos;
+Driver info: io.appium.java_client.ios.IOSDriver
+Command: [3738a353-fd21-49e5-bf00-90ca73614482, findElement {using=-ios class chain, value=**/XCUIElementTypeOther[`label == &quot;Home&quot;`][2]}]
+Capabilities {appium:automationName: XCUITest, appium:databaseEnabled: false, appium:deviceName: Iphone13, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: false, appium:platformVersion: 17.2, appium:takesScreenshot: true, appium:udid: 00008110-00142D610A79801E, appium:wdaLaunchTimeout: 30000, appium:webStorageEnabled: false, platformName: IOS}
+Session ID: 3738a353-fd21-49e5-bf00-90ca73614482
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:250)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:602)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:66)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:359)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:353)
+	at cuesz03.Iosapp_member_home_Fuelscreen.Case32_Fuel_EarlySnacks_uploadphotogallery.Homescreen(Case32_Fuel_EarlySnacks_uploadphotogallery.java:48)
+... Removed 27 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace2026488714", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2026488714'><pre>org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters.
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.15.0&apos;, revision: &apos;1d14b5521b&apos;
+System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;14.0&apos;, java.version: &apos;21&apos;
+Driver info: io.appium.java_client.ios.IOSDriver
+Command: [3738a353-fd21-49e5-bf00-90ca73614482, findElement {using=-ios class chain, value=**/XCUIElementTypeOther[`label == &quot;Home&quot;`][2]}]
+Capabilities {appium:automationName: XCUITest, appium:databaseEnabled: false, appium:deviceName: Iphone13, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: false, appium:platformVersion: 17.2, appium:takesScreenshot: true, appium:udid: 00008110-00142D610A79801E, appium:wdaLaunchTimeout: 30000, appium:webStorageEnabled: false, platformName: IOS}
+Session ID: 3738a353-fd21-49e5-bf00-90ca73614482
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:250)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:602)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:66)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:359)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:353)
+	at cuesz03.Iosapp_member_home_Fuelscreen.Case32_Fuel_EarlySnacks_uploadphotogallery.Homescreen(Case32_Fuel_EarlySnacks_uploadphotogallery.java:48)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:661)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:869)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1193)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:126)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:744)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:380)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:375)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1297)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1226)
+	at org.testng.TestNG.runSuites(TestNG.java:1144)
+	at org.testng.TestNG.run(TestNG.java:1115)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>10</td>
+<td>cuesz03.Iosapp_member_home_Fuelscreen.Case32_Fuel_EarlySnacks_uploadphotogallery@4612b856</td></tr>
+<tr>
+<td title='cuesz03.Iosapp_member_home_Fuelscreen.Case33_Fuel_Lunch_recommendedfuel.Homescreen()'><b>Homescreen</b><br>Test class: cuesz03.Iosapp_member_home_Fuelscreen.Case33_Fuel_Lunch_recommendedfuel</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters.
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.15.0&apos;, revision: &apos;1d14b5521b&apos;
+System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;14.0&apos;, java.version: &apos;21&apos;
+Driver info: io.appium.java_client.ios.IOSDriver
+Command: [537a5b01-c76d-469e-831b-474a713b8b8c, findElement {using=-ios class chain, value=**/XCUIElementTypeOther[`label == &quot;Home&quot;`][2]}]
+Capabilities {appium:automationName: XCUITest, appium:databaseEnabled: false, appium:deviceName: Iphone13, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: false, appium:platformVersion: 17.2, appium:takesScreenshot: true, appium:udid: 00008110-00142D610A79801E, appium:wdaLaunchTimeout: 30000, appium:webStorageEnabled: false, platformName: IOS}
+Session ID: 537a5b01-c76d-469e-831b-474a713b8b8c
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:250)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:602)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:66)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:359)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:353)
+	at cuesz03.Iosapp_member_home_Fuelscreen.Case33_Fuel_Lunch_recommendedfuel.Homescreen(Case33_Fuel_Lunch_recommendedfuel.java:61)
+... Removed 27 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1599019404", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1599019404'><pre>org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters.
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.15.0&apos;, revision: &apos;1d14b5521b&apos;
+System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;14.0&apos;, java.version: &apos;21&apos;
+Driver info: io.appium.java_client.ios.IOSDriver
+Command: [537a5b01-c76d-469e-831b-474a713b8b8c, findElement {using=-ios class chain, value=**/XCUIElementTypeOther[`label == &quot;Home&quot;`][2]}]
+Capabilities {appium:automationName: XCUITest, appium:databaseEnabled: false, appium:deviceName: Iphone13, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: false, appium:platformVersion: 17.2, appium:takesScreenshot: true, appium:udid: 00008110-00142D610A79801E, appium:wdaLaunchTimeout: 30000, appium:webStorageEnabled: false, platformName: IOS}
+Session ID: 537a5b01-c76d-469e-831b-474a713b8b8c
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:250)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:602)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:66)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:359)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:353)
+	at cuesz03.Iosapp_member_home_Fuelscreen.Case33_Fuel_Lunch_recommendedfuel.Homescreen(Case33_Fuel_Lunch_recommendedfuel.java:61)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:661)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:869)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1193)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:126)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:744)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:380)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:375)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1297)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1226)
+	at org.testng.TestNG.runSuites(TestNG.java:1144)
+	at org.testng.TestNG.run(TestNG.java:1115)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>10</td>
+<td>cuesz03.Iosapp_member_home_Fuelscreen.Case33_Fuel_Lunch_recommendedfuel@22875539</td></tr>
 </table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
@@ -367,18 +513,43 @@ Session ID: 5745368622e69765e80fa60668beae1e
 <tr>
 <td title='cuesz03.Iosapp_member_home_Fuelscreen.Case20_Fuel_optimalfuel.Homescreen()'><b>Homescreen</b><br>Test class: cuesz03.Iosapp_member_home_Fuelscreen.Case20_Fuel_optimalfuel</td>
 <td></td>
-<td>251</td>
-<td>cuesz03.Iosapp_member_home_Fuelscreen.Case20_Fuel_optimalfuel@db57326</td></tr>
+<td>178</td>
+<td>cuesz03.Iosapp_member_home_Fuelscreen.Case20_Fuel_optimalfuel@5dd1c9f2</td></tr>
 <tr>
 <td title='cuesz03.Iosapp_member_home_Fuelscreen.Case21_Fuel_breakfast_recommendedfuel.Homescreen()'><b>Homescreen</b><br>Test class: cuesz03.Iosapp_member_home_Fuelscreen.Case21_Fuel_breakfast_recommendedfuel</td>
 <td></td>
-<td>76</td>
-<td>cuesz03.Iosapp_member_home_Fuelscreen.Case21_Fuel_breakfast_recommendedfuel@34a875b3</td></tr>
+<td>57</td>
+<td>cuesz03.Iosapp_member_home_Fuelscreen.Case21_Fuel_breakfast_recommendedfuel@59b38691</td></tr>
 <tr>
 <td title='cuesz03.Iosapp_member_home_Fuelscreen.Case22_Fuel_breakfast_additionalfuel.Homescreen()'><b>Homescreen</b><br>Test class: cuesz03.Iosapp_member_home_Fuelscreen.Case22_Fuel_breakfast_additionalfuel</td>
 <td></td>
-<td>106</td>
-<td>cuesz03.Iosapp_member_home_Fuelscreen.Case22_Fuel_breakfast_additionalfuel@4748a0f9</td></tr>
+<td>87</td>
+<td>cuesz03.Iosapp_member_home_Fuelscreen.Case22_Fuel_breakfast_additionalfuel@2e2ff723</td></tr>
+<tr>
+<td title='cuesz03.Iosapp_member_home_Fuelscreen.Case23_01_Fuel_breakfast_editadditionalfuel.Homescreen()'><b>Homescreen</b><br>Test class: cuesz03.Iosapp_member_home_Fuelscreen.Case23_01_Fuel_breakfast_editadditionalfuel</td>
+<td></td>
+<td>123</td>
+<td>cuesz03.Iosapp_member_home_Fuelscreen.Case23_01_Fuel_breakfast_editadditionalfuel@324a0017</td></tr>
+<tr>
+<td title='cuesz03.Iosapp_member_home_Fuelscreen.Case23_02_Fuel_breakfast_additionalfueldeletecase.Homescreen()'><b>Homescreen</b><br>Test class: cuesz03.Iosapp_member_home_Fuelscreen.Case23_02_Fuel_breakfast_additionalfueldeletecase</td>
+<td></td>
+<td>62</td>
+<td>cuesz03.Iosapp_member_home_Fuelscreen.Case23_02_Fuel_breakfast_additionalfueldeletecase@6187d1f5</td></tr>
+<tr>
+<td title='cuesz03.Iosapp_member_home_Fuelscreen.Case25_Fuel_breakfast_uploadphotogallery.Homescreen()'><b>Homescreen</b><br>Test class: cuesz03.Iosapp_member_home_Fuelscreen.Case25_Fuel_breakfast_uploadphotogallery</td>
+<td></td>
+<td>120</td>
+<td>cuesz03.Iosapp_member_home_Fuelscreen.Case25_Fuel_breakfast_uploadphotogallery@2445445a</td></tr>
+<tr>
+<td title='cuesz03.Iosapp_member_home_Fuelscreen.Case26_Fuel_breakfast_customfood.Homescreen()'><b>Homescreen</b><br>Test class: cuesz03.Iosapp_member_home_Fuelscreen.Case26_Fuel_breakfast_customfood</td>
+<td></td>
+<td>233</td>
+<td>cuesz03.Iosapp_member_home_Fuelscreen.Case26_Fuel_breakfast_customfood@7502291e</td></tr>
+<tr>
+<td title='cuesz03.Iosapp_member_home_Fuelscreen.Case27_Fuel_breakfast_customfoodaddtobrekfast.Homescreen()'><b>Homescreen</b><br>Test class: cuesz03.Iosapp_member_home_Fuelscreen.Case27_Fuel_breakfast_customfoodaddtobrekfast</td>
+<td></td>
+<td>279</td>
+<td>cuesz03.Iosapp_member_home_Fuelscreen.Case27_Fuel_breakfast_customfoodaddtobrekfast@17aad511</td></tr>
 </table><p>
 </body>
 </html>

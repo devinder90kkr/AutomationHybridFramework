@@ -106,6 +106,7 @@ public class Case28_Fuel_breakfast_customfoodsearch extends AppiummobileBase {
         WebElement chaptiselection	= driver.findElement(AppiumBy.accessibilityId("Chapti"));
         chaptiselection.click();
         
+        Thread.sleep(3500);
         
         WebElement fuelsearch 	= driver.findElement(serchclick);
         fuelsearch.click();

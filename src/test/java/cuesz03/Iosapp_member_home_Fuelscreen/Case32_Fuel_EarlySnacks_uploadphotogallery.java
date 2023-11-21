@@ -30,9 +30,7 @@ public class Case32_Fuel_EarlySnacks_uploadphotogallery extends AppiummobileBase
 	private By pickerelement			= 		AppiumBy.xpath("//XCUIElementTypePickerWheel");
 	private By Doneclick				= 		AppiumBy.accessibilityId("AlcohalTime");
 	private By submittap				= 		AppiumBy.accessibilityId("SubmitImage");
-	private By uploadphoto				= 		AppiumBy.accessibilityId("PhotoUpload");
-	private By arrowclick				= 		AppiumBy.accessibilityId("RightArrow");
-	private By Icondelete				= 		AppiumBy.accessibilityId("DeletePhoto");
+	
 
 
 	@Test
@@ -103,6 +101,13 @@ public class Case32_Fuel_EarlySnacks_uploadphotogallery extends AppiummobileBase
 		Thread.sleep(4500);
 		
 	    
+//		// Method to scroll to perform screen
+//		HashMap<String,Object>scrollObject2 =new HashMap<>();
+//		scrollObject2.put("direction", "down");
+//		scrollObject2.put("Early Snacks", "Early Snacks");
+//		driver.executeScript("mobile:scroll", scrollObject2);
+
+		
 	    Thread.sleep(3000);
 		// Method to scroll to perform screen
 		HashMap<String,Object>scrollObject1 =new HashMap<>();

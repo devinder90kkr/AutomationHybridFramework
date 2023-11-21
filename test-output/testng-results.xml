@@ -2,24 +2,24 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-11-21T10:04:05Z" name="Default suite" finished-at="2023-11-21T10:07:39Z" duration-ms="213940">
+  <suite started-at="2023-11-21T13:19:48Z" name="Default suite" finished-at="2023-11-21T13:23:29Z" duration-ms="221445">
     <groups>
     </groups>
-    <test started-at="2023-11-21T10:04:05Z" name="Default test" finished-at="2023-11-21T10:07:39Z" duration-ms="213940">
-      <class name="cuesz03.Iosapp_member_home_Fuelscreen.Case26_Fuel_breakfast_customfood">
-        <test-method is-config="true" signature="Cueszbase()[pri:0, instance:cuesz03.Iosapp_member_home_Fuelscreen.Case26_Fuel_breakfast_customfood@4f25b795]" started-at="2023-11-21T15:34:05Z" name="Cueszbase" finished-at="2023-11-21T15:34:08Z" duration-ms="2641" status="PASS">
+    <test started-at="2023-11-21T13:19:48Z" name="Default test" finished-at="2023-11-21T13:23:29Z" duration-ms="221445">
+      <class name="cuesz03.Iosapp_member_home_Fuelscreen.Case33_Fuel_Lunch_recommendedfuel">
+        <test-method is-config="true" signature="Cueszbase()[pri:0, instance:cuesz03.Iosapp_member_home_Fuelscreen.Case33_Fuel_Lunch_recommendedfuel@6fb365ed]" started-at="2023-11-21T18:49:48Z" name="Cueszbase" finished-at="2023-11-21T18:49:49Z" duration-ms="983" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Cueszbase -->
-        <test-method signature="Homescreen()[pri:0, instance:cuesz03.Iosapp_member_home_Fuelscreen.Case26_Fuel_breakfast_customfood@4f25b795]" started-at="2023-11-21T15:34:08Z" name="Homescreen" finished-at="2023-11-21T15:37:39Z" duration-ms="211206" status="PASS">
+        <test-method signature="Homescreen()[pri:0, instance:cuesz03.Iosapp_member_home_Fuelscreen.Case33_Fuel_Lunch_recommendedfuel@6fb365ed]" started-at="2023-11-21T18:49:49Z" name="Homescreen" finished-at="2023-11-21T18:53:29Z" duration-ms="220379" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Homescreen -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:cuesz03.Iosapp_member_home_Fuelscreen.Case26_Fuel_breakfast_customfood@4f25b795]" started-at="2023-11-21T15:37:39Z" name="tearDown" finished-at="2023-11-21T15:37:39Z" duration-ms="11" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:cuesz03.Iosapp_member_home_Fuelscreen.Case33_Fuel_Lunch_recommendedfuel@6fb365ed]" started-at="2023-11-21T18:53:29Z" name="tearDown" finished-at="2023-11-21T18:53:29Z" duration-ms="13" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- cuesz03.Iosapp_member_home_Fuelscreen.Case26_Fuel_breakfast_customfood -->
+      </class> <!-- cuesz03.Iosapp_member_home_Fuelscreen.Case33_Fuel_Lunch_recommendedfuel -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

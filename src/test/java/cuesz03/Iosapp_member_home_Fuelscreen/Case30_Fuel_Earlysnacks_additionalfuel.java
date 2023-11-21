@@ -168,6 +168,7 @@ public class Case30_Fuel_Earlysnacks_additionalfuel extends AppiummobileBase {
 		submit2.click();
 		
 		Thread.sleep(4500);
+		Thread.sleep(4500);
 		
 		// Method to scroll to early snack
 		HashMap<String,Object>scrollObject3 =new HashMap<>();

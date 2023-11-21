@@ -57,11 +57,22 @@ public class Case31_Fuel_EarlySnacks_editadditionalfuel extends AppiummobileBase
         //Click on Fuel tab 
         driver.findElement(AppiumBy.accessibilityId("FUEL_SCREEN")).click();
         
+        
+        Thread.sleep(5500);
+        
      // Method to scroll to perform screen
         HashMap<String,Object>scrollObject1 =new HashMap<>();
         scrollObject1.put("direction", "down");
-        scrollObject1.put("Organic ginger spread", "Organic ginger spread");
+        scrollObject1.put("Early Snacks", "Early Snacks");
         driver.executeScript("mobile:scroll", scrollObject1);
+        Thread.sleep(2000);
+        
+        
+     // Method to scroll to perform screen
+        HashMap<String,Object>scrollObject2 =new HashMap<>();
+        scrollObject2.put("direction", "down");
+        scrollObject2.put("Organic ginger spread", "Organic ginger spread");
+        driver.executeScript("mobile:scroll", scrollObject2);
         Thread.sleep(2000);
         
         

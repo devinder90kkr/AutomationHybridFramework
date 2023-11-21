@@ -3,34 +3,48 @@
 <suite name="Failed suite [Suite16]" guice-stage="DEVELOPMENT">
   <test name="Test16(failed)">
     <classes>
-      <class name="cuesz03.Iosapp_member_home_Fuelscreen.Case23_01_Fuel_breakfast_editadditionalfuel">
+      <class name="cuesz03.Iosapp_member_home_Fuelscreen.Case33_Fuel_Lunch_recommendedfuel">
+        <methods>
+          <include name="Homescreen"/>
+          <include name="Cueszbase"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- cuesz03.Iosapp_member_home_Fuelscreen.Case33_Fuel_Lunch_recommendedfuel -->
+      <class name="cuesz03.Iosapp_member_home_Fuelscreen.Case30_Fuel_Earlysnacks_additionalfuel">
         <methods>
           <include name="Cueszbase"/>
           <include name="Homescreen"/>
           <include name="tearDown"/>
         </methods>
-      </class> <!-- cuesz03.Iosapp_member_home_Fuelscreen.Case23_01_Fuel_breakfast_editadditionalfuel -->
-      <class name="cuesz.logictest.advocate.Case43_02_MSL_Fuel_currentdaytest">
-        <methods>
-          <include name="setUp"/>
-          <include name="tearDown"/>
-          <include name="advocatelogicmemberTest"/>
-        </methods>
-      </class> <!-- cuesz.logictest.advocate.Case43_02_MSL_Fuel_currentdaytest -->
-      <class name="cuesz03.Iosapp_member_home_Fuelscreen.Case23_02_Fuel_breakfast_additionalfueldeletecase">
+      </class> <!-- cuesz03.Iosapp_member_home_Fuelscreen.Case30_Fuel_Earlysnacks_additionalfuel -->
+      <class name="cuesz03.Iosapp_member_home_Fuelscreen.Case29_Fuel_EarlySnacks_recommendedfuel">
         <methods>
           <include name="Cueszbase"/>
           <include name="Homescreen"/>
           <include name="tearDown"/>
         </methods>
-      </class> <!-- cuesz03.Iosapp_member_home_Fuelscreen.Case23_02_Fuel_breakfast_additionalfueldeletecase -->
-      <class name="cuesz03.Iosapp_member_home_Fuelscreen.Case25_Fuel_breakfast_uploadphotogallery">
+      </class> <!-- cuesz03.Iosapp_member_home_Fuelscreen.Case29_Fuel_EarlySnacks_recommendedfuel -->
+      <class name="cuesz03.Iosapp_member_home_Fuelscreen.Case32_Fuel_EarlySnacks_uploadphotogallery">
         <methods>
           <include name="Cueszbase"/>
           <include name="Homescreen"/>
           <include name="tearDown"/>
         </methods>
-      </class> <!-- cuesz03.Iosapp_member_home_Fuelscreen.Case25_Fuel_breakfast_uploadphotogallery -->
+      </class> <!-- cuesz03.Iosapp_member_home_Fuelscreen.Case32_Fuel_EarlySnacks_uploadphotogallery -->
+      <class name="cuesz03.Iosapp_member_home_Fuelscreen.Case31_Fuel_EarlySnacks_editadditionalfuel">
+        <methods>
+          <include name="Cueszbase"/>
+          <include name="Homescreen"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- cuesz03.Iosapp_member_home_Fuelscreen.Case31_Fuel_EarlySnacks_editadditionalfuel -->
+      <class name="cuesz03.Iosapp_member_home_Fuelscreen.Case28_Fuel_breakfast_customfoodsearch">
+        <methods>
+          <include name="Cueszbase"/>
+          <include name="Homescreen"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- cuesz03.Iosapp_member_home_Fuelscreen.Case28_Fuel_breakfast_customfoodsearch -->
     </classes>
   </test> <!-- Test16(failed) -->
 </suite> <!-- Failed suite [Suite16] -->
