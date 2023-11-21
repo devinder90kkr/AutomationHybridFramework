@@ -127,6 +127,8 @@ public class Case23_02_Fuel_breakfast_additionalfueldeletecase extends Appiummob
 		
 		
 		
+		Thread.sleep(3500);
+		
 		Thread.sleep(4500);
         driver.terminateApp("com.cuesz.mobile");
 	}

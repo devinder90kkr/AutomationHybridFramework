@@ -129,7 +129,7 @@ public class Case22_Fuel_breakfast_additionalfuel extends AppiummobileBase {
 		// Capture a screenshot and attach it to Allure
         AllureUtils.captureScreenshot(driver, "additional2");
         
-     // Click on timer 
+        // Click on timer 
         WebElement Timerclick 	= driver.findElement(Time);
         Timerclick.click();
         List<WebElement>values = driver.findElements(pickerelement);
