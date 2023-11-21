@@ -33,13 +33,6 @@ public class Step07_MC_createevent extends BasePage {
 }
 @Test
 	public void Schdulevent() throws InterruptedException {	
-//		// Calculate the eventDate dynamically
-//	    LocalDate currentDate = LocalDate.now();
-//	    LocalDate eventLocalDate = currentDate.plusDays(28);
-//	    DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MM-yyyy");
-//	    String eventDate = eventLocalDate.format(formatter);
-
-	
 	
 		 /*Click on Member calendar*/		
 		WebElement Membercalendar= driver.findElement(membercalicon);

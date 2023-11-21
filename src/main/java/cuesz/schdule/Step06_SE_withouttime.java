@@ -49,7 +49,7 @@ public class Step06_SE_withouttime extends BasePage {
 		driver.findElement(Addnewevent).click();
 
 		/*Enter date and then click*/
-	    Thread.sleep(2000);
+	    Thread.sleep(3500);
 	    WebElement date =driver.findElement(Date);
 	    Actions builder1 = new Actions(driver);
 	    builder1.moveToElement(date).click().sendKeys("30-07-2023").sendKeys(Keys.ENTER).perform();;
@@ -67,13 +67,13 @@ public class Step06_SE_withouttime extends BasePage {
    
         
 	    /*Select Event as as Live perform	*/
-	    Thread.sleep(2000);
+        Thread.sleep(3500);
 	    WebElement eventSelection =driver.findElement(Topic);
 	    Actions builder2 = new Actions(driver);
 	    builder2.moveToElement(eventSelection).click().sendKeys("Live perform session").sendKeys(Keys.ENTER).perform();
 	    
 	    /*Select Event as as member selection perform	*/
-	    Thread.sleep(5000);
+	    Thread.sleep(3500);
 	    WebElement memberSelection =driver.findElement(Member);
 	    Actions builder3 = new Actions(driver);
 	    builder3.moveToElement(memberSelection).click().sendKeys(" Kumar Devinder").sendKeys(Keys.ENTER).perform();

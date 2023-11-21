@@ -191,11 +191,11 @@ public class Case03_editevent extends BasePage {
         builder2.sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.ENTER).perform();
 
         
-        /*Select Event as as Live perform	*/
-	    Thread.sleep(2000);
-	    WebElement topicselection =driver.findElement(Topic);
-	    Actions builder3 = new Actions(driver);
-	    builder3.moveToElement(topicselection).click().sendKeys("Motion Evaluation Review").sendKeys(Keys.ENTER).perform();
+//        /*Select Event as as Live perform	*/
+//	    Thread.sleep(2000);
+//	    WebElement topicselection =driver.findElement(Topic);
+//	    Actions builder3 = new Actions(driver);
+//	    builder3.moveToElement(topicselection).click().sendKeys("Motion Evaluation Review").sendKeys(Keys.ENTER).perform();
         
         
 //        /*Enter Notes in create event*/

@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Test"
+<testsuite name="Test1"
            tests="1"
            failures="0"
            errors="0"
            skipped="0"
-           time="25.761">
+           time="27.532">
     <properties></properties>
 
 
 
             <testcase
                 name="advocateScheduleEventTest"
-                time="25.761"
+                time="27.532"
                 classname="cuesz.dashboard.advocate.Step14_DB_MessgNotificationtest">
             </testcase>
 </testsuite>

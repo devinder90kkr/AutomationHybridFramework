@@ -1,10 +1,14 @@
 package cuesz.schdule;
 
+import java.time.Duration;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.openqa.selenium.JavascriptExecutor;
 
 import org.testng.annotations.Test;
@@ -41,8 +45,15 @@ public class Step12_08_SE_createvent extends BasePage {
 			WebElement calendarcontainer = driver.findElement(By.xpath("//span[normalize-space()='Day']"));
 			calendarcontainer.click();
 			
-			// Assuming you want to scroll to an element with the class name 'rbc-events-container'
-	        WebElement dateElement = driver.findElement(By.className("rbc-events-container"));
+			
+			Thread.sleep(2500);
+			WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(50) );
+			WebElement dateElement = wait.until(ExpectedConditions.presenceOfElementLocated(By.className("rbc-events-container")));
+			
+			
+			
+//			// Assuming you want to scroll to an element with the class name 'rbc-events-container'
+//	        WebElement dateElement = driver.findElement(By.className("rbc-events-container"));
 
 	        // Scroll to the element using JavaScript
 	        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", dateElement);

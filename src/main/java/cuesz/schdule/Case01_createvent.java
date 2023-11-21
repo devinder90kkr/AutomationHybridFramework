@@ -49,7 +49,7 @@ public class Case01_createvent extends BasePage {
 			utils.clickaddnewevent();
 				        
 			/*Enter date values*/
-			Thread.sleep(2000);
+			Thread.sleep(3000);
 		    WebElement datefield = driver.findElement(Date);
 		    Actions builder1 = new Actions(driver);
 		    builder1.moveToElement(datefield).click().sendKeys(eventDate).sendKeys(Keys.ENTER).perform();
@@ -98,22 +98,22 @@ public class Case01_createvent extends BasePage {
 		    /*Click on submit button*/
 		    driver.findElement(Submitbutton).click();
 		    
-		 // Check if the Crossclick element is displayed before clicking on it
-			WebElement Crossclick = null;
-			try {
-			    Crossclick = driver.findElement(crossicon);
-			    if (Crossclick.isDisplayed()) {
-			        Crossclick.click();
-			    } else {
-			        // Handle the case where the element is not displayed
-			        System.out.println("Crossclick element is not displayed.");
-			        // Perform some other action or throw an exception if needed
-			    }
-			} catch (NoSuchElementException e) {
-			    // Handle the case where the element is not found
-			    System.out.println("Crossclick element not found.");
-			    // Perform some other action or throw an exception if needed
-			}
+//		 // Check if the Crossclick element is displayed before clicking on it
+//			WebElement Crossclick = null;
+//			try {
+//			    Crossclick = driver.findElement(crossicon);
+//			    if (Crossclick.isDisplayed()) {
+//			        Crossclick.click();
+//			    } else {
+//			        // Handle the case where the element is not displayed
+//			        System.out.println("Crossclick element is not displayed.");
+//			        // Perform some other action or throw an exception if needed
+//			    }
+//			} catch (NoSuchElementException e) {
+//			    // Handle the case where the element is not found
+//			    System.out.println("Crossclick element not found.");
+//			    // Perform some other action or throw an exception if needed
+//			}
 		    
 		    
 		    

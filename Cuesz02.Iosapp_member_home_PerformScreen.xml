@@ -4,9 +4,13 @@
   <test thread-count="5" name="Test16">
     <classes>
 	
-	<class name="cuesz03.Iosapp_member_home_Fuelscreen.Case20_Fuel_optimalfuel"/>
-	<class name="cuesz03.Iosapp_member_home_Fuelscreen.Case21_Fuel_breakfast_recommendedfuel"/>
-	<class name="cuesz03.Iosapp_member_home_Fuelscreen.Case22_Fuel_breakfast_additionalfuel"/>
+	<class name="cuesz02.Iosapp_member_home_PerformScreen.Case11_Perform_recommendedactivity"/>
+	<class name="cuesz02.Iosapp_member_home_PerformScreen.Case12_Perform_additionalactivity_deleteprocess"/>
+	<class name="cuesz02.Iosapp_member_home_PerformScreen.Case13_Perform_additionalactivity"/>
+	<class name="cuesz02.Iosapp_member_home_PerformScreen.Case14_Perform_performalreadycompleted"/>
+	<class name="cuesz02.Iosapp_member_home_PerformScreen.Case15_Perform_movetocurrent"/>
+	<class name="cuesz02.Iosapp_member_home_PerformScreen.Case18_Perform_nextweekactivity"/>
+	<class name="cuesz02.Iosapp_member_home_PerformScreen.Case19_Perform_nextweekactivitywithLP"/>
 	
     </classes>
   </test> <!-- Test -->
