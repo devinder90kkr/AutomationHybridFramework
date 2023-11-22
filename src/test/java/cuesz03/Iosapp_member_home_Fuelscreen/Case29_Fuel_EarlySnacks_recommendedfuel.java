@@ -125,8 +125,8 @@ public class Case29_Fuel_EarlySnacks_recommendedfuel extends AppiummobileBase {
         // Locate and click on recommended Fuel button
         WebElement Recommendedfuel1 	= driver.findElement(recommendedclick);
         Recommendedfuel1.click();
-        
-        
+
+       
         WebElement arrowright = driver.findElement(rightarrow);
         arrowright.click();
         
@@ -247,5 +247,7 @@ public class Case29_Fuel_EarlySnacks_recommendedfuel extends AppiummobileBase {
         driver.terminateApp("com.cuesz.mobile");
 	}
 }
+
+//}
 	
 

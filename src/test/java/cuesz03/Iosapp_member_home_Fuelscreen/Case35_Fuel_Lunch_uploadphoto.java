@@ -21,18 +21,18 @@ import io.qameta.allure.Story;
 
 @Epic ("Fuel upload screen functionlaity ")
 @Feature ("Verify Upload detail functionlaity for breakfast.")
-public class Case25_Fuel_breakfast_uploadphotogallery extends AppiummobileBase {
+public class Case35_Fuel_Lunch_uploadphoto extends AppiummobileBase {
 	
 	private By Homeclick 				= 		AppiumBy.iOSClassChain("**/XCUIElementTypeOther[`label == \"Home\"`][2]");
-	private By uploadbreakfastimage		=		AppiumBy.accessibilityId("BreakfastUploadIcon");
+	private By uploadlunchimage		=		AppiumBy.accessibilityId("LunchUploadIcon");
 	private By gallery					=		AppiumBy.accessibilityId("GalleryClicked");
 	private By Time						= 		AppiumBy.accessibilityId("SelectTime");
 	private By pickerelement			= 		AppiumBy.xpath("//XCUIElementTypePickerWheel");
 	private By Doneclick				= 		AppiumBy.accessibilityId("AlcohalTime");
 	private By submittap				= 		AppiumBy.accessibilityId("SubmitImage");
-	private By uploadphoto				= 		AppiumBy.accessibilityId("PhotoUpload");
 	private By arrowclick				= 		AppiumBy.accessibilityId("RightArrow");
 	private By Icondelete				= 		AppiumBy.accessibilityId("DeletePhoto");
+
 
 	@Test
 	@Owner("QA") // Add the @Owner annotation to specify the executor
@@ -60,7 +60,7 @@ public class Case25_Fuel_breakfast_uploadphotogallery extends AppiummobileBase {
         //Click on Fuel tab 
         driver.findElement(AppiumBy.accessibilityId("FUEL_SCREEN")).click();
         
-        WebElement uploadicon	= driver.findElement(uploadbreakfastimage);
+        WebElement uploadicon	= driver.findElement(uploadlunchimage);
         uploadicon.click();
         
         WebElement galleryclick	= driver.findElement(gallery);
@@ -102,11 +102,11 @@ public class Case25_Fuel_breakfast_uploadphotogallery extends AppiummobileBase {
 		Thread.sleep(4500);
 		
 		
-		WebElement uploadicon1	= driver.findElement(uploadbreakfastimage);
+		WebElement uploadicon1	= driver.findElement(uploadlunchimage);
 	    uploadicon1.click();
 	    
-	    WebElement photoicon	= driver.findElement(uploadphoto);
-	    photoicon.click();
+//	    WebElement photoicon	= driver.findElement(uploadphoto);
+//	    photoicon.click();
 	   
 	    WebElement galleryclick2	= driver.findElement(gallery);
         galleryclick2.click();
@@ -146,7 +146,7 @@ public class Case25_Fuel_breakfast_uploadphotogallery extends AppiummobileBase {
 		
 		Thread.sleep(4500);
 	
-		WebElement uploadicon2	= driver.findElement(uploadbreakfastimage);
+		WebElement uploadicon2	= driver.findElement(uploadlunchimage);
 	    uploadicon2.click();
         
 	    //locate and click on toggel arrow 

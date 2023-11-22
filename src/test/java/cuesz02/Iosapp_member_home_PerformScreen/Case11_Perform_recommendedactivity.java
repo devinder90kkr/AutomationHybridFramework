@@ -94,7 +94,16 @@ public class Case11_Perform_recommendedactivity extends AppiummobileBase {
 		// CLick on Perform card
 		WebElement performcard = driver.findElement(performclick);
 		performcard.click();
-	
+		
+		// Method to scroll to perform screen
+		HashMap<String,Object>scrollObject2 =new HashMap<>();
+		scrollObject2.put("direction", "down");
+		scrollObject2.put("Walking", "Walking");
+		driver.executeScript("mobile:scroll", scrollObject2);
+		Thread.sleep(2000);
+		
+		
+		
 		// Locate the element containing the perform
         WebElement Perform = driver.findElement(walkinlabel);
         // Extract text from the element

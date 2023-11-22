@@ -81,56 +81,9 @@ public class Case26_Fuel_breakfast_customfood extends AppiummobileBase {
         WebElement keypaddone	= driver.findElement(doneclick);
         keypaddone.click();
         
+
 //        String searchText = "Git";
-//        int count = 1;
-//
-//        // Loop until additempopup is visible
-//        while (true) {
-//            // Construct modifiedSearchText by appending count to searchText
-//            String modifiedSearchText = searchText + count + "test";
-//            
-//            // Click on additional search list and fill searchText there
-//            WebElement additionalfuel = driver.findElement(additionalsearch);
-//            additionalfuel.clear();
-//            additionalfuel.sendKeys(modifiedSearchText);
-//
-//            // Check if the element has the desired text
-//            if (additionalfuel.getAttribute("value").equals(modifiedSearchText)) {
-//                // Click on hybridselect
-//                WebElement hybridselect = driver.findElement(AppiumBy.accessibilityId(modifiedSearchText));
-//                hybridselect.click();
-//
-//                try {
-//                    // Check if additempopup is visible
-//                    WebElement additempopup = driver.findElement(AppiumBy.accessibilityId("Add Item"));
-//                    additempopup.click();
-//                    // Break the loop as additempopup is visible now
-//                    break;
-//                } catch (org.openqa.selenium.NoSuchElementException e) {
-//                    // Handle the absence of additempopup, navigate back to additionalfuel and continue the loop
-//                    System.out.println("Add Item popup not found. Navigating back to Additional Fuel.");
-//                    WebElement backbutton = driver.findElement(AppiumBy.accessibilityId("SelectedFuelBackPress"));
-//                    backbutton.click();
-//                    // Increment count for the next iteration
-//                    count++;
-//                }
-//            }
-//        }
-//    
-//        // Construct modifiedSearchText by appending count to searchText
-//        String modifiedSearchText1 = searchText + count + "test";
-//         
-//        WebElement hybridselect = driver.findElement(AppiumBy.accessibilityId(modifiedSearchText1));
-//        hybridselect.click();
-//  
-//   
-//       
-//       // Construct modifiedSearchText by appending count to searchText
-//       String modifiedSearchText3 = searchText + count + "test";
-//       WebElement Foodname = driver.findElement(foodname); 
-//       Foodname.click();
-//       Foodname.sendKeys(modifiedSearchText3);
-        String searchText = "Git";
+        String searchText = "Gil";
         int count = 1;
         String modifiedSearchText = searchText + count + "test";
 
@@ -296,15 +249,15 @@ public class Case26_Fuel_breakfast_customfood extends AppiummobileBase {
        WebElement firstPhoto = driver.findElement(AppiumBy.xpath("//XCUIElementTypeImage[2]"));
        firstPhoto.click();
        
-       
+       Thread.sleep(3500);
        WebElement Submittap = driver.findElement(submittap);
        Submittap.click();
-        Thread.sleep(2000);
+       Thread.sleep(3500);
        
         WebElement Customfoodtick	= driver.findElement(Customtick);
         Customfoodtick.click();
 		
-		
+        Thread.sleep(3500);
        Thread.sleep(4500);
        driver.terminateApp("com.cuesz.mobile");
 	}

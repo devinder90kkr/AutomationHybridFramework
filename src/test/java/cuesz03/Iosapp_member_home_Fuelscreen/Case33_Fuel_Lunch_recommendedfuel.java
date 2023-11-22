@@ -62,23 +62,13 @@ public class Case33_Fuel_Lunch_recommendedfuel extends AppiummobileBase {
 		Homeicon.click();
 		
 		Thread.sleep(3000);
-		// Method to scroll to perform screen
-		HashMap<String,Object>scrollObject =new HashMap<>();
-		scrollObject.put("direction", "down");
-		scrollObject.put("Perform Fuel Mindful Restore", "Perform");
-		driver.executeScript("mobile:scroll", scrollObject);
+		scroll("down", "Perform Fuel Mindful Restore");
+		
 		Thread.sleep(2000);
-
         //Click on Fuel tab 
         driver.findElement(AppiumBy.accessibilityId("FUEL_SCREEN")).click();
-        
-        
-        
-        // Method to scroll to perform screen
- 		HashMap<String,Object>scrollObject1 =new HashMap<>();
- 		scrollObject1.put("direction", "down");
- 		scrollObject1.put("Lunch", "Lunch");
- 		driver.executeScript("mobile:scroll", scrollObject1);
+            
+        scroll("down", "Lunch");
  		Thread.sleep(2000);
         
 		
@@ -158,8 +148,6 @@ public class Case33_Fuel_Lunch_recommendedfuel extends AppiummobileBase {
 		   // Capture a screenshot and attach it to Allure
         AllureUtils.captureScreenshot(driver, "Lunch3");
 
-		
-		
 		driver.findElement(Doneclick).click();
         
 		// Click on breakfast-tick 
@@ -175,64 +163,30 @@ public class Case33_Fuel_Lunch_recommendedfuel extends AppiummobileBase {
         
         Thread.sleep(4500);
         
-        
-        HashMap<String,Object>scrollObject6 =new HashMap<>();
-  		scrollObject6.put("direction", "down");
-  		scrollObject6.put("Lunch", "Lunch");
-  		driver.executeScript("mobile:scroll", scrollObject6);
+       
+        scroll("down", "Lunch");	
+  		scroll("up", "Early Snacks");
   		Thread.sleep(2000);
   		
-  	// Method to scroll to perform screen
-  		HashMap<String,Object>scrollObject7 =new HashMap<>();
-  		scrollObject7.put("direction", "up");
-  		scrollObject7.put("Early Snacks", "Early Snacks");
-  		driver.executeScript("mobile:scroll", scrollObject7);
-  		Thread.sleep(2000);
-  		
-  	// Method to scroll to perform screen
-  		HashMap<String,Object>scrollObject8 =new HashMap<>();
-  		scrollObject8.put("direction", "up");
-  		scrollObject8.put("Breakfast", "Breakfast");
-  		driver.executeScript("mobile:scroll", scrollObject8);
+  		scroll("up", "Breakfast");
   		Thread.sleep(2000);
   
         
-     // Method to scroll to perform screen
-  		HashMap<String,Object>scrollObject5 =new HashMap<>();
-  		scrollObject5.put("direction", "up");
-  		scrollObject5.put("DRINK MORE WATER", "DRINK MORE WATER");
-  		driver.executeScript("mobile:scroll", scrollObject5);
+  		scroll("up", "DRINK MORE WATER");
   		Thread.sleep(2000);
         
-    	// Method to scroll to perform screen
-  		HashMap<String,Object>scrollObject3 =new HashMap<>();
-  		scrollObject3.put("direction", "up");
-  		scrollObject3.put("OPTIMAL FUEL TARGET ACHIEVED", "OPTIMAL FUEL TARGET ACHIEVED");
-  		driver.executeScript("mobile:scroll", scrollObject3);
+  		scroll("up", "OPTIMAL FUEL TARGET ACHIEVED");
   		Thread.sleep(2000);
   		
-  		
-  		HashMap<String,Object>scrollObject4 =new HashMap<>();
-  		scrollObject4.put("direction", "up");
-  		scrollObject4.put("Carbs", "Carbs");
-  		driver.executeScript("mobile:scroll", scrollObject4);
+  		scroll("up", "Carbs");
   		Thread.sleep(2000);
     
   		//click on protein card
   		WebElement protein = driver.findElement(Protcard);
   		protein.click();	
   		
-  		// Scroll to element Early Snacks
-  		HashMap<String,Object>scrollObject62 =new HashMap<>();
-  		scrollObject62.put("direction", "down");
-  		scrollObject62.put("Early Snacks", "Early Snacks");
-  		driver.executeScript("mobile:scroll", scrollObject62);
-  		
-  		// Scroll to element Early Snacks
-  		HashMap<String,Object>scrollObject611 =new HashMap<>();
-  		scrollObject611.put("direction", "down");
-  		scrollObject611.put("Lunch", "Lunch");
-  		driver.executeScript("mobile:scroll", scrollObject611);
+  		scroll("down", "Early Snacks");
+  		scroll("down", "Lunch");
   		Thread.sleep(2000);
   		// Capture a screenshot and attach it to Allure
           AllureUtils.captureScreenshot(driver, "Lunch5");	
@@ -243,17 +197,9 @@ public class Case33_Fuel_Lunch_recommendedfuel extends AppiummobileBase {
   		//click on carbs card
   		WebElement carbs = driver.findElement(carbcard);
   		carbs.click();	
-  		// Scroll to element Early Snacks
-  		HashMap<String,Object>scrollObject63 =new HashMap<>();
-  		scrollObject63.put("direction", "down");
-  		scrollObject63.put("Early Snacks", "Early Snacks");
-  		driver.executeScript("mobile:scroll", scrollObject63);
-  			
-  		// Scroll to element Early Snacks
-  		HashMap<String,Object>scrollObject71 =new HashMap<>();
-  		scrollObject71.put("direction", "down");
-  		scrollObject71.put("Lunch", "Lunch");
-  		driver.executeScript("mobile:scroll", scrollObject71);
+  		
+  		scroll("down", "Early Snacks");  		
+  		scroll("down", "Lunch");
   		Thread.sleep(2000); 		
   		// Capture a screenshot and attach it to Allure
           AllureUtils.captureScreenshot(driver, "Lunch6");
@@ -265,17 +211,8 @@ public class Case33_Fuel_Lunch_recommendedfuel extends AppiummobileBase {
   		WebElement fats = driver.findElement(fatcard);
   		fats.click();	
   		
-  		// Scroll to element Early Snacks
-  		HashMap<String,Object>scrollObject64 =new HashMap<>();
-  		scrollObject64.put("direction", "down");
-  		scrollObject64.put("Early Snacks", "Early Snacks");
-  		driver.executeScript("mobile:scroll", scrollObject64);
-  		
-  		// Scroll to element Early Snacks
-  		HashMap<String,Object>scrollObject81 =new HashMap<>();
-  		scrollObject81.put("direction", "down");
-  		scrollObject81.put("Lunch", "Lunch");
-  		driver.executeScript("mobile:scroll", scrollObject81);
+  		scroll("down", "Early Snacks");
+  		scroll("down", "Lunch");
   		Thread.sleep(2000); 
   		// Capture a screenshot and attach it to Allure
           AllureUtils.captureScreenshot(driver, "Lunch7");
@@ -287,6 +224,14 @@ public class Case33_Fuel_Lunch_recommendedfuel extends AppiummobileBase {
 		Thread.sleep(2500);
         driver.terminateApp("com.cuesz.mobile");
 	}
+
+	 private void scroll(String direction, String elementName) {
+	        HashMap<String, Object> scrollObject = new HashMap<>();
+	        scrollObject.put("direction", direction);
+	        scrollObject.put(elementName, elementName);
+	        driver.executeScript("mobile:scroll", scrollObject);
+	    }
+
 }
 	
 
