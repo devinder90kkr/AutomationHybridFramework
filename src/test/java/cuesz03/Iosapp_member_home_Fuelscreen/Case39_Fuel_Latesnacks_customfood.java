@@ -18,33 +18,35 @@ import io.qameta.allure.Story;
 
 @Epic ("Fuel custom screen detail ")
 @Feature ("Verify Fuel detail functionlaity related to Custom fuel.")
-public class Case26_Fuel_breakfast_customfood extends AppiummobileBase {
+public class Case39_Fuel_Latesnacks_customfood extends AppiummobileBase {
 	
 	private By Homeclick 		= 		AppiumBy.iOSClassChain("**/XCUIElementTypeOther[`label == \"Home\"`][2]");
-	private By plusadd			= 		AppiumBy.accessibilityId("BreakfastAddIcon");
+	private By plusadd			= 		AppiumBy.accessibilityId("Late SnacksAddIcon");
 	private By doneclick		= 		AppiumBy.accessibilityId("Done");
 	private By additionalsearch	= 		AppiumBy.accessibilityId("AdditionalFuelSearch");
 	private By foodname			= 		AppiumBy.xpath("//XCUIElementTypeTextField[@name=\"Food Name\"]");
 	private By servingsize		= 		AppiumBy.xpath("//XCUIElementTypeTextField[@name=\"Serving Size*\"]");
 	private By servingunit		= 		AppiumBy.xpath("//XCUIElementTypeTextField[@name=\"Serving Unit*\"]");
 	private By calories			=		AppiumBy.xpath("//XCUIElementTypeTextField[@name=\"Calories(Kcal)*\"]");
-	private By proteins			= 		AppiumBy.xpath("//XCUIElementTypeTextField[@name=\"Protein(g)\"]");
-	private By carbohydrates	=		AppiumBy.xpath("//XCUIElementTypeTextField[@name=\"Carbohydrates(g)\"]");
-	private By sugar			=		AppiumBy.xpath("//XCUIElementTypeTextField[@name=\"Sugar(g)\"]");
-	private By fat				=		AppiumBy.xpath("//XCUIElementTypeTextField[@name=\"Fat(g)\"]");
-	private By saturatedfat		= 		AppiumBy.xpath("//XCUIElementTypeTextField[@name=\"Saturated Fat\"]");
-	private By dietaryfiber		=		AppiumBy.xpath("//XCUIElementTypeTextField[@name=\"Dietary Fiber(g)\"]");
-	private By cholesterol		=		AppiumBy.xpath("//XCUIElementTypeTextField[@name=\"Cholesterol(mg)\"]");
-	private By sodium			=		AppiumBy.xpath("//XCUIElementTypeTextField[@name=\"Sodium(mg)\"]");
-	private By iron				=		AppiumBy.xpath("//XCUIElementTypeTextField[@name=\"Iron(g)\"]");
-	private By calcium			=		AppiumBy.xpath("//XCUIElementTypeTextField[@name=\"Calcium(g)\"]");
-	private By potassium		=		AppiumBy.xpath("//XCUIElementTypeTextField[@name=\"Potassium(mg)\"]");
-	private By vitaminA			=		AppiumBy.xpath("//XCUIElementTypeTextField[@name=\"Vitamin-A(%dv)\"]");
-	private By vitaminB			=		AppiumBy.xpath("//XCUIElementTypeTextField[@name=\"Vitamin-C(%dv)\"]");
+//	private By proteins			= 		AppiumBy.xpath("//XCUIElementTypeTextField[@name=\"Protein(g)\"]");
+//	private By carbohydrates	=		AppiumBy.xpath("//XCUIElementTypeTextField[@name=\"Carbohydrates(g)\"]");
+//	private By sugar			=		AppiumBy.xpath("//XCUIElementTypeTextField[@name=\"Sugar(g)\"]");
+//	private By fat				=		AppiumBy.xpath("//XCUIElementTypeTextField[@name=\"Fat(g)\"]");
+//	private By saturatedfat		= 		AppiumBy.xpath("//XCUIElementTypeTextField[@name=\"Saturated Fat\"]");
+//	private By dietaryfiber		=		AppiumBy.xpath("//XCUIElementTypeTextField[@name=\"Dietary Fiber(g)\"]");
+//	private By cholesterol		=		AppiumBy.xpath("//XCUIElementTypeTextField[@name=\"Cholesterol(mg)\"]");
+//	private By sodium			=		AppiumBy.xpath("//XCUIElementTypeTextField[@name=\"Sodium(mg)\"]");
+//	private By iron				=		AppiumBy.xpath("//XCUIElementTypeTextField[@name=\"Iron(g)\"]");
+//	private By calcium			=		AppiumBy.xpath("//XCUIElementTypeTextField[@name=\"Calcium(g)\"]");
+//	private By potassium		=		AppiumBy.xpath("//XCUIElementTypeTextField[@name=\"Potassium(mg)\"]");
+//	private By vitaminA			=		AppiumBy.xpath("//XCUIElementTypeTextField[@name=\"Vitamin-A(%dv)\"]");
+//	private By vitaminB			=		AppiumBy.xpath("//XCUIElementTypeTextField[@name=\"Vitamin-C(%dv)\"]");
 	private By customfoodimage	=		AppiumBy.accessibilityId("CustomFoodImage");
 	private By gallery			=		AppiumBy.accessibilityId("GalleryClicked");
 	private By submittap		= 		AppiumBy.accessibilityId("SubmitImage");
 	private By Customtick		=		AppiumBy.accessibilityId("CustomFoodSubmit");
+	private By radioclick		= 		AppiumBy.accessibilityId("Urgent");
+	private By submittick		=		AppiumBy.accessibilityId("ItemSubmit");
 
 	@Test
 	@Owner("QA") // Add the @Owner annotation to specify the executor
@@ -72,10 +74,12 @@ public class Case26_Fuel_breakfast_customfood extends AppiummobileBase {
         //Click on Fuel tab 
         driver.findElement(AppiumBy.accessibilityId("FUEL_SCREEN")).click();
         
-        
+        scroll("down", "Lunch");
+ 		Thread.sleep(2000);
+ 		
         // Locate the element related to breakfast + icon 
-        WebElement breakfastplus 	= driver.findElement(plusadd);
-        breakfastplus.click();
+        WebElement latesnacksplus 	= driver.findElement(plusadd);
+        latesnacksplus.click();
         
         //click on keypad Done button to hide keypad
         WebElement keypaddone	= driver.findElement(doneclick);
@@ -83,7 +87,7 @@ public class Case26_Fuel_breakfast_customfood extends AppiummobileBase {
         
 
 //        String searchText = "Git";
-        String searchText = "Gill";
+        String searchText = "Lost";
         int count = 1;
         String modifiedSearchText = searchText + count + "test";
 
@@ -118,11 +122,15 @@ public class Case26_Fuel_breakfast_customfood extends AppiummobileBase {
             }
         }
 
-        // Now you can use modifiedSearchText outside the loop as well, for example:
-        WebElement Foodname = driver.findElement(foodname);
-        Foodname.sendKeys(modifiedSearchText);
-
+       // Now you can use modifiedSearchText outside the loop as well, for example:
+       WebElement Foodname = driver.findElement(foodname);
+       Foodname.sendKeys(modifiedSearchText);
        
+       //  Locate radio button for custoom food 
+       WebElement radiocheck	= driver.findElement(radioclick);
+       radiocheck.click();
+        
+        
        // Locate the Serving size  element 
        WebElement Servingsize	= driver.findElement(servingsize);
        Servingsize.click();
@@ -146,99 +154,99 @@ public class Case26_Fuel_breakfast_customfood extends AppiummobileBase {
        Calories.sendKeys("176");
        WebElement keypaddone4	= driver.findElement(doneclick);       
        keypaddone4.click();
-       
-       // Locate the Proteins element  
-       WebElement Proteins	= driver.findElement(proteins);
-       Proteins.click();
-       Proteins.sendKeys("4.5");
-       WebElement keypaddone5	= driver.findElement(doneclick);       
-       keypaddone5.click();
-
-       // Locate the Carbohydrates element  
-       WebElement Carbohydrates	= driver.findElement(carbohydrates);
-       Carbohydrates.click();
-       Carbohydrates.sendKeys("37");
-       WebElement keypaddone6	= driver.findElement(doneclick);       
-       keypaddone6.click();
-       
-       // Locate the Sugar element  
-       WebElement Sugar	= driver.findElement(sugar);
-       Sugar.click();
-       Sugar.sendKeys("22");
-       WebElement keypaddone7	= driver.findElement(doneclick);       
-       keypaddone7.click();
-       
-       // Locate the Fat element  
-       WebElement Fat	= driver.findElement(fat);
-       Fat.click();
-       Fat.sendKeys("2.2");
-       WebElement keypaddone8	= driver.findElement(doneclick);       
-       keypaddone8.click();
-       
-       // Locate the Saturated Fat element  
-       WebElement SaturatedFat	= driver.findElement(saturatedfat);
-       SaturatedFat.click();
-       SaturatedFat.sendKeys("1.3");
-       WebElement keypaddone9	= driver.findElement(doneclick);       
-       keypaddone9.click();
-       
-       // Locate the Dietary Fiber element  
-       WebElement DietaryFiber	= driver.findElement(dietaryfiber);
-       DietaryFiber.click();
-       DietaryFiber.sendKeys("2.5");
-       WebElement keypaddone10	= driver.findElement(doneclick);       
-       keypaddone10.click();
-       
-       
-       // Locate the Cholesterol Fiber element  
-       WebElement Cholesterol	= driver.findElement(cholesterol);
-       Cholesterol.click();
-       Cholesterol.sendKeys("7.8");
-       WebElement keypaddone11	= driver.findElement(doneclick);       
-       keypaddone11.click();
-
-       // Locate the Sodium Fiber element  
-       WebElement Sodium	= driver.findElement(sodium);
-       Sodium.click();
-       Sodium.sendKeys("55");
-       WebElement keypaddone12	= driver.findElement(doneclick);       
-       keypaddone12.click();
-       
-       // Locate the Iron Fiber element  
-       WebElement Iron	= driver.findElement(iron);
-       Iron.click();
-       Iron.sendKeys("0.4");
-       WebElement keypaddone13	= driver.findElement(doneclick);       
-       keypaddone13.click();
-       
-       // Locate the Calcium Fiber element  
-       WebElement Calcium	= driver.findElement(calcium);
-       Calcium.click();
-       Calcium.sendKeys("139");
-       WebElement keypaddone14	= driver.findElement(doneclick);       
-       keypaddone14.click();
-       
-       // Locate the Potassium Fiber element  
-       WebElement Potassium	= driver.findElement(potassium);
-       Potassium.click();
-       Potassium.sendKeys("511.4");
-       WebElement keypaddone15	= driver.findElement(doneclick);       
-       keypaddone15.click();
-       
-       // Locate the Vitamin-A Fiber element  
-       WebElement VitaminA	= driver.findElement(vitaminA);
-       VitaminA.click();
-       VitaminA.sendKeys("2.36");
-       WebElement keypaddone16	= driver.findElement(doneclick);       
-       keypaddone16.click();
-       
-       // Locate the Vitamin-C Fiber element  
-       WebElement VitaminB	= driver.findElement(vitaminB);
-       VitaminB.click();
-       VitaminB.sendKeys("0.36");
-       WebElement keypaddone17	= driver.findElement(doneclick);       
-       keypaddone17.click();
-       
+//       
+//       // Locate the Proteins element  
+//       WebElement Proteins	= driver.findElement(proteins);
+//       Proteins.click();
+//       Proteins.sendKeys("4.5");
+//       WebElement keypaddone5	= driver.findElement(doneclick);       
+//       keypaddone5.click();
+//
+//       // Locate the Carbohydrates element  
+//       WebElement Carbohydrates	= driver.findElement(carbohydrates);
+//       Carbohydrates.click();
+//       Carbohydrates.sendKeys("37");
+//       WebElement keypaddone6	= driver.findElement(doneclick);       
+//       keypaddone6.click();
+//       
+//       // Locate the Sugar element  
+//       WebElement Sugar	= driver.findElement(sugar);
+//       Sugar.click();
+//       Sugar.sendKeys("22");
+//       WebElement keypaddone7	= driver.findElement(doneclick);       
+//       keypaddone7.click();
+//       
+//       // Locate the Fat element  
+//       WebElement Fat	= driver.findElement(fat);
+//       Fat.click();
+//       Fat.sendKeys("2.2");
+//       WebElement keypaddone8	= driver.findElement(doneclick);       
+//       keypaddone8.click();
+//       
+//       // Locate the Saturated Fat element  
+//       WebElement SaturatedFat	= driver.findElement(saturatedfat);
+//       SaturatedFat.click();
+//       SaturatedFat.sendKeys("1.3");
+//       WebElement keypaddone9	= driver.findElement(doneclick);       
+//       keypaddone9.click();
+//       
+//       // Locate the Dietary Fiber element  
+//       WebElement DietaryFiber	= driver.findElement(dietaryfiber);
+//       DietaryFiber.click();
+//       DietaryFiber.sendKeys("2.5");
+//       WebElement keypaddone10	= driver.findElement(doneclick);       
+//       keypaddone10.click();
+//       
+//       
+//       // Locate the Cholesterol Fiber element  
+//       WebElement Cholesterol	= driver.findElement(cholesterol);
+//       Cholesterol.click();
+//       Cholesterol.sendKeys("7.8");
+//       WebElement keypaddone11	= driver.findElement(doneclick);       
+//       keypaddone11.click();
+//
+//       // Locate the Sodium Fiber element  
+//       WebElement Sodium	= driver.findElement(sodium);
+//       Sodium.click();
+//       Sodium.sendKeys("55");
+//       WebElement keypaddone12	= driver.findElement(doneclick);       
+//       keypaddone12.click();
+//       
+//       // Locate the Iron Fiber element  
+//       WebElement Iron	= driver.findElement(iron);
+//       Iron.click();
+//       Iron.sendKeys("0.4");
+//       WebElement keypaddone13	= driver.findElement(doneclick);       
+//       keypaddone13.click();
+//       
+//       // Locate the Calcium Fiber element  
+//       WebElement Calcium	= driver.findElement(calcium);
+//       Calcium.click();
+//       Calcium.sendKeys("139");
+//       WebElement keypaddone14	= driver.findElement(doneclick);       
+//       keypaddone14.click();
+//       
+//       // Locate the Potassium Fiber element  
+//       WebElement Potassium	= driver.findElement(potassium);
+//       Potassium.click();
+//       Potassium.sendKeys("511.4");
+//       WebElement keypaddone15	= driver.findElement(doneclick);       
+//       keypaddone15.click();
+//       
+//       // Locate the Vitamin-A Fiber element  
+//       WebElement VitaminA	= driver.findElement(vitaminA);
+//       VitaminA.click();
+//       VitaminA.sendKeys("2.36");
+//       WebElement keypaddone16	= driver.findElement(doneclick);       
+//       keypaddone16.click();
+//       
+//       // Locate the Vitamin-C Fiber element  
+//       WebElement VitaminB	= driver.findElement(vitaminB);
+//       VitaminB.click();
+//       VitaminB.sendKeys("0.36");
+//       WebElement keypaddone17	= driver.findElement(doneclick);       
+//       keypaddone17.click();
+//       
        // Locate and click on Foodimage 
        WebElement Customfoodimage	= driver.findElement(customfoodimage);
        Customfoodimage.click();
@@ -258,9 +266,22 @@ public class Case26_Fuel_breakfast_customfood extends AppiummobileBase {
         Customfoodtick.click();
 		
         Thread.sleep(3500);
+        
+        WebElement editsubmit 	= driver.findElement(submittick);
+		editsubmit.click();
+		
+		 scroll("down", "Lunch");
+	 		Thread.sleep(2000);
+        
        Thread.sleep(4500);
        driver.terminateApp("com.cuesz.mobile");
 	}
+	 private void scroll(String direction, String elementName) {
+	        HashMap<String, Object> scrollObject = new HashMap<>();
+	        scrollObject.put("direction", direction);
+	        scrollObject.put(elementName, elementName);
+	        driver.executeScript("mobile:scroll", scrollObject);
+	    }
+
 }
 	
-

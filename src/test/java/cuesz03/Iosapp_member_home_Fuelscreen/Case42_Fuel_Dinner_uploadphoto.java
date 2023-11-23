@@ -21,25 +21,25 @@ import io.qameta.allure.Story;
 
 @Epic ("Fuel upload screen functionlaity ")
 @Feature ("Verify Upload detail functionlaity for breakfast.")
-public class Case25_Fuel_breakfast_uploadphotogallery extends AppiummobileBase {
+public class Case42_Fuel_Dinner_uploadphoto extends AppiummobileBase {
 	
 	private By Homeclick 				= 		AppiumBy.iOSClassChain("**/XCUIElementTypeOther[`label == \"Home\"`][2]");
-	private By uploadbreakfastimage		=		AppiumBy.accessibilityId("BreakfastUploadIcon");
+	private By uploadlunchimage		=		AppiumBy.accessibilityId("DinnerUploadIcon");
 	private By gallery					=		AppiumBy.accessibilityId("GalleryClicked");
 	private By Time						= 		AppiumBy.accessibilityId("SelectTime");
 	private By pickerelement			= 		AppiumBy.xpath("//XCUIElementTypePickerWheel");
 	private By Doneclick				= 		AppiumBy.accessibilityId("AlcohalTime");
 	private By submittap				= 		AppiumBy.accessibilityId("SubmitImage");
-	private By uploadphoto				= 		AppiumBy.accessibilityId("PhotoUpload");
 	private By arrowclick				= 		AppiumBy.accessibilityId("RightArrow");
 	private By Icondelete				= 		AppiumBy.accessibilityId("DeletePhoto");
+
 
 	@Test
 	@Owner("QA") // Add the @Owner annotation to specify the executor
     @Severity(SeverityLevel.NORMAL)      
     @Description("Member check upload functionlaity verification")
     @Story("Scroll to Fuel card and upload image for breakfast.")	
-	public void Homescreen() throws InterruptedException
+	public void LateSnacks_uploadphoto() throws InterruptedException
 	{	
 		// Create an instance of AppiumUtils and pass the driver
 		AppiumappUtils appiumUtils = new AppiumappUtils(driver);
@@ -60,7 +60,7 @@ public class Case25_Fuel_breakfast_uploadphotogallery extends AppiummobileBase {
         //Click on Fuel tab 
         driver.findElement(AppiumBy.accessibilityId("FUEL_SCREEN")).click();
         
-        WebElement uploadicon	= driver.findElement(uploadbreakfastimage);
+        WebElement uploadicon	= driver.findElement(uploadlunchimage);
         uploadicon.click();
         
         WebElement galleryclick	= driver.findElement(gallery);
@@ -84,15 +84,15 @@ public class Case25_Fuel_breakfast_uploadphotogallery extends AppiummobileBase {
 		System.out.println(values.get(i).getText());
 		}
 		
-		values.get(0).sendKeys("8");
+		values.get(0).sendKeys("5");
 		values.get(0).sendKeys(Keys.TAB);
 
 		Thread.sleep(3500);
-		values.get(1).sendKeys("13");
+		values.get(1).sendKeys("45");
 		values.get(1).sendKeys(Keys.TAB);
 		
 		Thread.sleep(3500);
-		values.get(2).sendKeys("AM");
+		values.get(2).sendKeys("PM");
 
 		driver.findElement(Doneclick).click();
         
@@ -102,7 +102,7 @@ public class Case25_Fuel_breakfast_uploadphotogallery extends AppiummobileBase {
 		Thread.sleep(4500);
 		
 		
-		WebElement uploadicon1	= driver.findElement(uploadbreakfastimage);
+		WebElement uploadicon1	= driver.findElement(uploadlunchimage);
 	    uploadicon1.click();
 	    
 //	    WebElement photoicon	= driver.findElement(uploadphoto);
@@ -129,15 +129,15 @@ public class Case25_Fuel_breakfast_uploadphotogallery extends AppiummobileBase {
 		System.out.println(values1.get(i).getText());
 		}
 		
-		values1.get(0).sendKeys("9");
+		values1.get(0).sendKeys("5");
 		values1.get(0).sendKeys(Keys.TAB);
 
 		Thread.sleep(3500);
-		values1.get(1).sendKeys("13");
+		values1.get(1).sendKeys("43");
 		values1.get(1).sendKeys(Keys.TAB);
 		
 		Thread.sleep(3500);
-		values1.get(2).sendKeys("AM");
+		values1.get(2).sendKeys("PM");
 
 		driver.findElement(Doneclick).click();
         
@@ -146,7 +146,7 @@ public class Case25_Fuel_breakfast_uploadphotogallery extends AppiummobileBase {
 		
 		Thread.sleep(4500);
 	
-		WebElement uploadicon2	= driver.findElement(uploadbreakfastimage);
+		WebElement uploadicon2	= driver.findElement(uploadlunchimage);
 	    uploadicon2.click();
         
 	    //locate and click on toggel arrow 
@@ -162,7 +162,7 @@ public class Case25_Fuel_breakfast_uploadphotogallery extends AppiummobileBase {
 		// Method to scroll to perform screen
 		HashMap<String,Object>scrollObject1 =new HashMap<>();
 		scrollObject1.put("direction", "down");
-		scrollObject1.put("Image uploaded", "Perform");
+		scrollObject1.put("Image uploaded", "Image uploaded");
 		driver.executeScript("mobile:scroll", scrollObject1);
 		Thread.sleep(2000);
 	    

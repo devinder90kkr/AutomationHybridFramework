@@ -21,16 +21,16 @@ import io.qameta.allure.Severity;
 import io.qameta.allure.SeverityLevel;
 import io.qameta.allure.Story;
 
-@Epic ("Fuel screen detail")
-@Feature ("Verify Fuel detail functionlaity related to EarlySnacks functionlaity.")
-public class Case33_Fuel_Lunch_recommendedfuel extends AppiummobileBase {
+@Epic ("Fuel screen detail ")
+@Feature ("Verify Fuel detail functionlaity related to breakfast functionlaity.")
+public class Case40_Fuel_Dinner_recommendedfuel extends AppiummobileBase {
 	
 	private By Homeclick = 		AppiumBy.iOSClassChain("**/XCUIElementTypeOther[`label == \"Home\"`][2]");
 
-	private By Lunchlabel	= 		AppiumBy.iOSNsPredicateString("name == 'Lunch'");
-	private By iconforlunch	= 		AppiumBy.accessibilityId("LunchInfoIcon");
+	private By breakfastlabel	= 		AppiumBy.iOSNsPredicateString("name == 'Breakfast'");
+	private By iconbreakfast	= 		AppiumBy.accessibilityId("DinnerInfoIcon");
 	private By backicon			= 		AppiumBy.accessibilityId("BackPress");
-	private By plusadd			= 		AppiumBy.accessibilityId("LunchAddIcon");
+	private By plusadd			= 		AppiumBy.accessibilityId("DinnerAddIcon");
 	private By doneclick		= 		AppiumBy.accessibilityId("Done");
 	private By recommendedclick	= 		AppiumBy.accessibilityId("AddRecommendedFuel");
 	private By backicon1		= 		AppiumBy.accessibilityId("RecommendBackPress");
@@ -40,17 +40,13 @@ public class Case33_Fuel_Lunch_recommendedfuel extends AppiummobileBase {
 	private By Doneclick		= 		AppiumBy.accessibilityId("AlcohalTime");
 	private By tickbreakfast	= 		AppiumBy.accessibilityId("RecommendedFuelSubmit");
 	private By brekdone			= 		AppiumBy.accessibilityId("Done");
-	private By Protcard			= 		AppiumBy.accessibilityId("Protein");
-	private By crossicon1		= 		AppiumBy.accessibilityId("FuelMacroNutrientCross");
-	private By carbcard			= 		AppiumBy.accessibilityId("Carbs");
-	private By fatcard			= 		AppiumBy.accessibilityId("Fat");
 	
 
 	@Test
 	@Owner("QA") // Add the @Owner annotation to specify the executor
     @Severity(SeverityLevel.NORMAL)      
     @Description("Member Fuel screen detail verification")
-    @Story("Scroll to Fuel card and verify EarlySnacks assigned by staff ")	
+    @Story("Scroll to Fuel card and verify breakfast assigned by staff ")	
 	public void Homescreen() throws InterruptedException
 	{	
 		// Create an instance of AppiumUtils and pass the driver
@@ -62,22 +58,23 @@ public class Case33_Fuel_Lunch_recommendedfuel extends AppiummobileBase {
 		Homeicon.click();
 		
 		Thread.sleep(3000);
-		scroll("down", "Perform Fuel Mindful Restore");
-		
+		// Method to scroll to perform screen
+		HashMap<String,Object>scrollObject =new HashMap<>();
+		scrollObject.put("direction", "down");
+		scrollObject.put("Perform Fuel Mindful Restore", "Perform");
+		driver.executeScript("mobile:scroll", scrollObject);
 		Thread.sleep(2000);
+
         //Click on Fuel tab 
         driver.findElement(AppiumBy.accessibilityId("FUEL_SCREEN")).click();
-            
-       scroll("down", "Lunch");
- 		Thread.sleep(2000);
         
 		
         // Locate the element containing the perform
-        WebElement lunchlabel	= driver.findElement(Lunchlabel);
+        WebElement breakfast = driver.findElement(breakfastlabel);
         // Extract text from the element
-        String actualText = lunchlabel.getText();
+        String actualText = breakfast.getText();
         // Define the expected text
-        String expectedText = "Lunch";
+        String expectedText = "Breakfast";
         
         // Print the actual and expected text to the console
         System.out.println("Actual Text: " + actualText);
@@ -87,17 +84,17 @@ public class Case33_Fuel_Lunch_recommendedfuel extends AppiummobileBase {
 		
         
         // Locate and click on breakfasticon for cal related info
-        WebElement earlysnackicon	= driver.findElement(iconforlunch);
-        earlysnackicon.click();
+        WebElement breakfasticon	= driver.findElement(iconbreakfast);
+        breakfasticon.click();
         WebElement backclick	= driver.findElement(backicon);
         backclick.click();
         
 		// Capture a screenshot and attach it to Allure
-        AllureUtils.captureScreenshot(driver, "lunch1");
+        AllureUtils.captureScreenshot(driver, "Fuel11");
         
         // Locate the element related to breakfast + icon 
-        WebElement earlysnackplus 	= driver.findElement(plusadd);
-        earlysnackplus.click();
+        WebElement breakfastplus 	= driver.findElement(plusadd);
+        breakfastplus.click();
         
        //click on keypad Done button to hide keypad
         WebElement keypaddone	= driver.findElement(doneclick);
@@ -108,20 +105,18 @@ public class Case33_Fuel_Lunch_recommendedfuel extends AppiummobileBase {
         Recommendedfuel.click();
         WebElement recommendebackclick	= driver.findElement(backicon1);
         recommendebackclick.click();
-        
-        //click on keypad Done button to hide keypad
+      //click on keypad Done button to hide keypad
         WebElement keypaddone1	= driver.findElement(doneclick);
         keypaddone1.click();
         // Locate and click on recommended Fuel button
         WebElement Recommendedfuel1 	= driver.findElement(recommendedclick);
         Recommendedfuel1.click();
         
-        
         WebElement arrowright = driver.findElement(rightarrow);
         arrowright.click();
         
-        // Capture a screenshot and attach it to Allure
-        AllureUtils.captureScreenshot(driver, "Lunch2");
+		// Capture a screenshot and attach it to Allure
+        AllureUtils.captureScreenshot(driver, "Fuel12");
 
         
         // Click on timer 
@@ -135,19 +130,21 @@ public class Case33_Fuel_Lunch_recommendedfuel extends AppiummobileBase {
 		System.out.println(values.get(i).getText());
 		}
 		
-		values.get(0).sendKeys("1");
+		values.get(0).sendKeys("6");
 		values.get(0).sendKeys(Keys.TAB);
 
 		Thread.sleep(3500);
-		values.get(1).sendKeys("03");
+		values.get(1).sendKeys("43");
 		values.get(1).sendKeys(Keys.TAB);
 		
 		Thread.sleep(3500);
-		values.get(2).sendKeys("PM");
+		values.get(2).sendKeys("AM");
 	
-		   // Capture a screenshot and attach it to Allure
-        AllureUtils.captureScreenshot(driver, "Lunch3");
+		// Capture a screenshot and attach it to Allure
+        AllureUtils.captureScreenshot(driver, "Fuel13");
 
+		
+		
 		driver.findElement(Doneclick).click();
         
 		// Click on breakfast-tick 
@@ -157,81 +154,19 @@ public class Case33_Fuel_Lunch_recommendedfuel extends AppiummobileBase {
         // Click on Done-breakfast button
         WebElement brekfastdone 	= driver.findElement(brekdone);
         brekfastdone.click();
-           
-        // Capture a screenshot and attach it to Allure
-        AllureUtils.captureScreenshot(driver, "Lunch4");
         
-        Thread.sleep(4500);
+        // Locate and click on breakfasticon for cal related info
+        WebElement breakfasticon1	= driver.findElement(iconbreakfast);
+        breakfasticon1.click();
+        WebElement backclick1	= driver.findElement(backicon);
+        backclick1.click();
         
-       
-        scroll("down", "Lunch");	
-  		scroll("up", "Early Snacks");
-  		Thread.sleep(2000);
-  		
-  		scroll("up", "Breakfast");
-  		Thread.sleep(2000);
-  
-        
-  		scroll("up", "DRINK MORE WATER");
-  		Thread.sleep(2000);
-        
-  		scroll("up", "OPTIMAL FUEL TARGET ACHIEVED");
-  		Thread.sleep(2000);
-  		
-  		scroll("up", "Carbs");
-  		Thread.sleep(2000);
-    
-  		//click on protein card
-  		WebElement protein = driver.findElement(Protcard);
-  		protein.click();	
-  		
-  		scroll("down", "Early Snacks");
-  		scroll("down", "Lunch");
-  		Thread.sleep(2000);
-  		// Capture a screenshot and attach it to Allure
-          AllureUtils.captureScreenshot(driver, "Lunch5");	
-  		//Click on protein cross icon
-  		WebElement proteincross = driver.findElement(crossicon1);
-  		proteincross.click();
-  		
-  		//click on carbs card
-  		WebElement carbs = driver.findElement(carbcard);
-  		carbs.click();	
-  		
-  		scroll("down", "Early Snacks");  		
-  		scroll("down", "Lunch");
-  		Thread.sleep(2000); 		
-  		// Capture a screenshot and attach it to Allure
-          AllureUtils.captureScreenshot(driver, "Lunch6");
-  		//Click on protein cross icon
-  		WebElement carbscross = driver.findElement(crossicon1);
-  		carbscross.click();
-  		
-  		//click on fats card
-  		WebElement fats = driver.findElement(fatcard);
-  		fats.click();	
-  		
-  		scroll("down", "Early Snacks");
-  		scroll("down", "Lunch");
-  		Thread.sleep(2000); 
-  		// Capture a screenshot and attach it to Allure
-          AllureUtils.captureScreenshot(driver, "Lunch7");
-  		//Click on protein cross icon
-  		WebElement fatscross = driver.findElement(crossicon1);
-  		fatscross.click();
-        
+		// Capture a screenshot and attach it to Allure
+        AllureUtils.captureScreenshot(driver, "Fuel14");
         
 		Thread.sleep(2500);
         driver.terminateApp("com.cuesz.mobile");
 	}
-
-	 private void scroll(String direction, String elementName) {
-	        HashMap<String, Object> scrollObject = new HashMap<>();
-	        scrollObject.put("direction", direction);
-	        scrollObject.put(elementName, elementName);
-	        driver.executeScript("mobile:scroll", scrollObject);
-	    }
-
 }
 	
 

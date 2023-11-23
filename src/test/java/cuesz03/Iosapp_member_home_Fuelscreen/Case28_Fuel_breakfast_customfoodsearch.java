@@ -115,7 +115,8 @@ public class Case28_Fuel_breakfast_customfoodsearch extends AppiummobileBase {
         fuelsearch2.click();
         
         
-        String searchText = "Git";
+//      String searchText = "Git";
+      String searchText = "Gill";
         int count = 1;
         String modifiedSearchText = searchText + count + "test";
 

@@ -73,8 +73,8 @@ public class Case34_Fuel_Lunch_additionalfuel extends AppiummobileBase {
         
         
         // Locate the element related to breakfast + icon 
-        WebElement breakfastplus 	= driver.findElement(plusadd);
-        breakfastplus.click();
+        WebElement lunchplus 	= driver.findElement(plusadd);
+        lunchplus.click();
         
         //click on keypad Done button to hide keypad
         WebElement keypaddone	= driver.findElement(doneclick);

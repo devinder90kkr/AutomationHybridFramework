@@ -1,7 +1,10 @@
 package cuesz03.Iosapp_member_home_Fuelscreen;
 
 import java.util.HashMap;
+import java.util.List;
+
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
 
@@ -18,16 +21,19 @@ import io.qameta.allure.Story;
 
 @Epic ("Fuel screen detail ")
 @Feature ("Verify Fuel detail functionlaity related to Optimal fuel.")
-public class Case31_Fuel_EarlySnacks_editadditionalfuel extends AppiummobileBase {
+public class Case45_01_Fuel_Dinner_editadditionalfuel extends AppiummobileBase {
 	
 	private By Homeclick 		= 		AppiumBy.iOSClassChain("**/XCUIElementTypeOther[`label == \"Home\"`][2]");
-	private By editbeetroot		= 		AppiumBy.accessibilityId("Organic ginger spread");
-	private By editclick1		= 		AppiumBy.accessibilityId("Organic ginger spreadPlus");
+	private By editbeetroot		= 		AppiumBy.accessibilityId("Beetroot");
+	private By editclick1		= 		AppiumBy.accessibilityId("BeetrootPlus");
 	private By earlyclick		= 		AppiumBy.xpath("(//XCUIElementTypeOther[@name=\"Early Snacks\"])[2]");
 	private By breakfastclick	=		AppiumBy.xpath("(//XCUIElementTypeOther[@name=\"Breakfast\"])[2]");
 	private By noteclick		= 		AppiumBy.accessibilityId("Notes");
 	private By submittick		= 		AppiumBy.accessibilityId("Submit");
-	
+	private By meatfuel			= 		AppiumBy.accessibilityId("Meat");
+	private By editbreakfastime	= 		AppiumBy.accessibilityId("BreakfastTimeEdit");
+	private By pickerelement	= 		AppiumBy.xpath("//XCUIElementTypePickerWheel");
+	private By Doneclick		= 		AppiumBy.accessibilityId("AlcohalTime");
 	
 
 
@@ -57,57 +63,35 @@ public class Case31_Fuel_EarlySnacks_editadditionalfuel extends AppiummobileBase
         //Click on Fuel tab 
         driver.findElement(AppiumBy.accessibilityId("FUEL_SCREEN")).click();
         
-        
-        Thread.sleep(5500);
-        
 //     // Method to scroll to perform screen
 //        HashMap<String,Object>scrollObject1 =new HashMap<>();
 //        scrollObject1.put("direction", "down");
-//        scrollObject1.put("Early Snacks", "Early Snacks");
+//        scrollObject1.put("Beetroot", "Beetroot");
 //        driver.executeScript("mobile:scroll", scrollObject1);
 //        Thread.sleep(2000);
-        
-        
-     // Replace "com.example.app:id/targetElementId" with the actual ID or accessibility ID of your target element
-        String targetElementId = "com.cuesz.mobile:ios class chain /**/XCUIElementTypeStaticText[`label == \"Early Snacks\"`][1]";
-        HashMap<String, Object> scrollObject1 = new HashMap<>();
-        scrollObject1.put("direction", "down");
-        scrollObject1.put("element", targetElementId);
-
-        driver.executeScript("mobile:scroll", scrollObject);
-        Thread.sleep(2000);
-
-        
-        
-//     // Method to scroll to perform screen
-//        HashMap<String,Object>scrollObject2 =new HashMap<>();
-//        scrollObject2.put("direction", "down");
-//        scrollObject2.put("Organic ginger spread", "Organic ginger spread");
-//        driver.executeScript("mobile:scroll", scrollObject2);
-//        Thread.sleep(2000);
-        
+//        
         
         // Edit feature testing
         WebElement Editbeetroot		= driver.findElement(editbeetroot);
         Editbeetroot.click();
         
         WebElement plusclick	= driver.findElement(editclick1);
-        int numberOfClicks = 2;
+        int numberOfClicks = 3;
         for (int i = 0; i < numberOfClicks; i++) {   
         	plusclick.click();
-        }      
-        
-      //Click on breakfast snacks 
-        WebElement whenclick1	= driver.findElement(breakfastclick);
-        whenclick1.click();
+        }
         
         //Click on early snacks 
         WebElement whenclick	= driver.findElement(earlyclick);
         whenclick.click();
-            
+        
+        //Click on breakfast snacks 
+        WebElement whenclick1	= driver.findElement(breakfastclick);
+        whenclick1.click();
+        
         //Click on notes and enter values in field. 
         WebElement noteedit1 = driver.findElement(noteclick);
-        noteedit1.sendKeys("hello this notes is add for early snack additional fuel");
+        noteedit1.sendKeys("hello this notes is update by automation to verifiy edit field values");
         
         driver.findElement(AppiumBy.xpath("//XCUIElementTypeButton[@name=\"DONE\"]")).click();
 
@@ -125,7 +109,73 @@ public class Case31_Fuel_EarlySnacks_editadditionalfuel extends AppiummobileBase
 		
 		Thread.sleep(5000);
 		
+		/***************edit meat fuel*****************/
+		
+		WebElement meatedit		= driver.findElement(meatfuel);
+		meatedit.click();
+		
+		
+		//Click on notes and enter values in field. 
+        WebElement noteedit2 = driver.findElement(noteclick);
+        noteedit2.sendKeys("hello this notes is update by automation to verifiy edit field values");
+        driver.findElement(AppiumBy.xpath("//XCUIElementTypeButton[@name=\"DONE\"]")).click();
+       
+        
+        //Click on early snacks 
+        WebElement whenclick3	= driver.findElement(earlyclick);
+        whenclick3.click();
+		
+        WebElement editsubmit2 	= driver.findElement(submittick);
+		editsubmit2.click();
+        
+		Thread.sleep(4000);
+		// Method to scroll to perform screen
+		HashMap<String,Object>scrollObject111 =new HashMap<>();
+		scrollObject111.put("direction", "down");
+		scrollObject111.put("Meat", "Meat");
+		driver.executeScript("mobile:scroll", scrollObject111);
+		
+		Thread.sleep(3000);
+		
+		
+		WebElement meatedit1		= driver.findElement(meatfuel);
+		meatedit1.click();
+		 //Click on early snacks 
+        WebElement whenclick4	= driver.findElement(breakfastclick);
+        whenclick4.click();
+		
+        WebElement editsubmit3 	= driver.findElement(submittick);
+		editsubmit3.click();
+		
+		Thread.sleep(2500);
+		
+		  // Method to scroll to perform screen
+		HashMap<String,Object>scrollObject3 =new HashMap<>();
+		scrollObject3.put("direction", "up");
+		scrollObject3.put("Breakfast", "Breakfast");
+		driver.executeScript("mobile:scroll", scrollObject3);
 
+		 // Click on timer 
+        WebElement breakfastedittime 	= driver.findElement(editbreakfastime);
+        breakfastedittime.click();
+        
+        List<WebElement>values = driver.findElements(pickerelement);
+		for (int i=0; i<values.size();i++)
+		{		
+		System.out.println(values.get(i).getText());
+		}
+		values.get(0).sendKeys("9");
+		values.get(0).sendKeys(Keys.TAB);
+		Thread.sleep(3500);
+		values.get(1).sendKeys("08");
+		values.get(1).sendKeys(Keys.TAB);
+		Thread.sleep(3500);
+		values.get(2).sendKeys("AM");
+		driver.findElement(Doneclick).click();
+		
+		
+		
+		
 		
 		Thread.sleep(4500);
         driver.terminateApp("com.cuesz.mobile");

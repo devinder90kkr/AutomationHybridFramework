@@ -4,14 +4,14 @@
            failures="0"
            errors="0"
            skipped="0"
-           time="70.289">
+           time="67.800">
     <properties></properties>
 
 
 
             <testcase
                 name="advocatelogicmemberTest"
-                time="70.289"
+                time="67.800"
                 classname="cuesz.logictest.advocate.Case45_MSL_restore_currenttest">
             </testcase>
 </testsuite>
