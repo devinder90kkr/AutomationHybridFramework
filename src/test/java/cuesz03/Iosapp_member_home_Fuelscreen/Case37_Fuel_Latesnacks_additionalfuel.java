@@ -21,7 +21,7 @@ import io.qameta.allure.SeverityLevel;
 import io.qameta.allure.Story;
 
 @Epic ("Fuel screen detail ")
-@Feature ("Verify Fuel detail functionlaity related to Optimal fuel.")
+@Feature ("Verify Fuel detail functionlaity related to Late snacks for additional fuel.")
 public class Case37_Fuel_Latesnacks_additionalfuel extends AppiummobileBase {
 	
 	private By Homeclick 		= 		AppiumBy.iOSClassChain("**/XCUIElementTypeOther[`label == \"Home\"`][2]");
@@ -46,8 +46,8 @@ public class Case37_Fuel_Latesnacks_additionalfuel extends AppiummobileBase {
 	@Owner("QA") // Add the @Owner annotation to specify the executor
     @Severity(SeverityLevel.NORMAL)      
     @Description("Member Fuel screen detail verification")
-    @Story("Scroll to Fuel card and verify breakfast assigned by staff ")	
-	public void Homescreen() throws InterruptedException
+    @Story("Scroll to Fuel card and verify latesnacks assigned by staff ")	
+	public void Latesnacks_additionalfuel() throws InterruptedException
 	{	
 		// Create an instance of AppiumUtils and pass the driver
 		AppiumappUtils appiumUtils = new AppiumappUtils(driver);
@@ -113,6 +113,9 @@ public class Case37_Fuel_Latesnacks_additionalfuel extends AppiummobileBase {
         WebElement fuelselection	= driver.findElement(Venisonfuelselection);
         fuelselection.click();
       
+        
+        // Capture a screenshot and attach it to Allure
+	    AllureUtils.captureScreenshot(driver, "latesnacks1");
         Thread.sleep(4500);
         
         
@@ -132,6 +135,10 @@ public class Case37_Fuel_Latesnacks_additionalfuel extends AppiummobileBase {
 		Thread.sleep(3500);
 		values.get(2).sendKeys("PM");
 		driver.findElement(Doneclick).click();
+		
+		
+		 // Capture a screenshot and attach it to Allure
+	    AllureUtils.captureScreenshot(driver, "latesnacks2");
         
     	WebElement submit = driver.findElement(submitick);
 		submit.click();
@@ -181,6 +188,10 @@ public class Case37_Fuel_Latesnacks_additionalfuel extends AppiummobileBase {
         fuelselection2.click();
         
         
+        // Capture a screenshot and attach it to Allure
+	    AllureUtils.captureScreenshot(driver, "latesnacks3");
+        
+        
         // Click on fuel search field 
         WebElement additionalfuel3 = driver.findElement(additionalsearch1);
         additionalfuel3.click();
@@ -213,7 +224,8 @@ public class Case37_Fuel_Latesnacks_additionalfuel extends AppiummobileBase {
         WebElement fuelselection3	= driver.findElement(mustardfuelselection);
         fuelselection3.click();
 
-        
+        // Capture a screenshot and attach it to Allure
+	    AllureUtils.captureScreenshot(driver, "latesnacks4");
         Thread.sleep(4500);
         WebElement submit2 = driver.findElement(submitick);
 		submit2.click();

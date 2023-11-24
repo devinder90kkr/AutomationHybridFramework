@@ -9,6 +9,7 @@ import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
 
 import cuesz.pages.AppiummobileBase;
+import cuesz.utils.AllureUtils;
 import cuesz.utils.AppiumappUtils;
 import io.appium.java_client.AppiumBy;
 import io.qameta.allure.Description;
@@ -20,7 +21,7 @@ import io.qameta.allure.SeverityLevel;
 import io.qameta.allure.Story;
 
 @Epic ("Fuel screen detail ")
-@Feature ("Verify Fuel detail functionlaity related to Optimal fuel.")
+@Feature ("Verify Fuel detail functionlaity related to Additional edit in case of dinner.")
 public class Case45_01_Fuel_Dinner_editadditionalfuel extends AppiummobileBase {
 	
 	private By Homeclick 		= 		AppiumBy.iOSClassChain("**/XCUIElementTypeOther[`label == \"Home\"`][2]");
@@ -36,13 +37,12 @@ public class Case45_01_Fuel_Dinner_editadditionalfuel extends AppiummobileBase {
 	private By Doneclick		= 		AppiumBy.accessibilityId("AlcohalTime");
 	
 
-
 	@Test
 	@Owner("QA") // Add the @Owner annotation to specify the executor
     @Severity(SeverityLevel.NORMAL)      
     @Description("Member Fuel screen detail verification")
-    @Story("Scroll to Fuel card and verify breakfast assigned by staff ")	
-	public void Homescreen() throws InterruptedException
+    @Story("Scroll to Fuel card and verify dinner assigned by staff ")	
+	public void Fuel_Dinner_editadditionalfuel() throws InterruptedException
 	{	
 		// Create an instance of AppiumUtils and pass the driver
 		AppiumappUtils appiumUtils = new AppiumappUtils(driver);
@@ -62,15 +62,7 @@ public class Case45_01_Fuel_Dinner_editadditionalfuel extends AppiummobileBase {
 
         //Click on Fuel tab 
         driver.findElement(AppiumBy.accessibilityId("FUEL_SCREEN")).click();
-        
-//     // Method to scroll to perform screen
-//        HashMap<String,Object>scrollObject1 =new HashMap<>();
-//        scrollObject1.put("direction", "down");
-//        scrollObject1.put("Beetroot", "Beetroot");
-//        driver.executeScript("mobile:scroll", scrollObject1);
-//        Thread.sleep(2000);
-//        
-        
+                 
         // Edit feature testing
         WebElement Editbeetroot		= driver.findElement(editbeetroot);
         Editbeetroot.click();
@@ -80,6 +72,10 @@ public class Case45_01_Fuel_Dinner_editadditionalfuel extends AppiummobileBase {
         for (int i = 0; i < numberOfClicks; i++) {   
         	plusclick.click();
         }
+        
+        
+        // Capture a screenshot and attach it to Allure
+	    AllureUtils.captureScreenshot(driver, "Dinner15");
         
         //Click on early snacks 
         WebElement whenclick	= driver.findElement(earlyclick);
@@ -92,6 +88,10 @@ public class Case45_01_Fuel_Dinner_editadditionalfuel extends AppiummobileBase {
         //Click on notes and enter values in field. 
         WebElement noteedit1 = driver.findElement(noteclick);
         noteedit1.sendKeys("hello this notes is update by automation to verifiy edit field values");
+        
+        
+        // Capture a screenshot and attach it to Allure
+	    AllureUtils.captureScreenshot(driver, "Dinner16");
         
         driver.findElement(AppiumBy.xpath("//XCUIElementTypeButton[@name=\"DONE\"]")).click();
 
@@ -124,6 +124,10 @@ public class Case45_01_Fuel_Dinner_editadditionalfuel extends AppiummobileBase {
         //Click on early snacks 
         WebElement whenclick3	= driver.findElement(earlyclick);
         whenclick3.click();
+        
+        
+        // Capture a screenshot and attach it to Allure
+	    AllureUtils.captureScreenshot(driver, "Dinner17");
 		
         WebElement editsubmit2 	= driver.findElement(submittick);
 		editsubmit2.click();
@@ -167,14 +171,11 @@ public class Case45_01_Fuel_Dinner_editadditionalfuel extends AppiummobileBase {
 		values.get(0).sendKeys("9");
 		values.get(0).sendKeys(Keys.TAB);
 		Thread.sleep(3500);
-		values.get(1).sendKeys("08");
+		values.get(1).sendKeys("48");
 		values.get(1).sendKeys(Keys.TAB);
 		Thread.sleep(3500);
-		values.get(2).sendKeys("AM");
+		values.get(2).sendKeys("PM");
 		driver.findElement(Doneclick).click();
-		
-		
-		
 		
 		
 		Thread.sleep(4500);

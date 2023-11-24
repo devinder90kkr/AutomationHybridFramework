@@ -51,7 +51,7 @@ public class Case29_Fuel_EarlySnacks_recommendedfuel extends AppiummobileBase {
     @Severity(SeverityLevel.NORMAL)      
     @Description("Member Fuel screen detail verification")
     @Story("Scroll to Fuel card and verify EarlySnacks assigned by staff ")	
-	public void Homescreen() throws InterruptedException
+	public void Fuel_EarlySnacks_recommendedfuel() throws InterruptedException
 	{	
 		// Create an instance of AppiumUtils and pass the driver
 		AppiumappUtils appiumUtils = new AppiumappUtils(driver);
@@ -113,6 +113,9 @@ public class Case29_Fuel_EarlySnacks_recommendedfuel extends AppiummobileBase {
         WebElement keypaddone	= driver.findElement(doneclick);
         keypaddone.click();
         
+        // Capture a screenshot and attach it to Allure
+	    AllureUtils.captureScreenshot(driver, "earlysnack2");
+        
         // Locate and click on recommended Fuel button
         WebElement Recommendedfuel 	= driver.findElement(recommendedclick);
         Recommendedfuel.click();
@@ -131,7 +134,7 @@ public class Case29_Fuel_EarlySnacks_recommendedfuel extends AppiummobileBase {
         arrowright.click();
         
         // Capture a screenshot and attach it to Allure
-        AllureUtils.captureScreenshot(driver, "earlysnack2");
+        AllureUtils.captureScreenshot(driver, "earlysnack3");
 
         
         // Click on timer 
@@ -145,7 +148,7 @@ public class Case29_Fuel_EarlySnacks_recommendedfuel extends AppiummobileBase {
 		System.out.println(values.get(i).getText());
 		}
 		
-		values.get(0).sendKeys("9");
+		values.get(0).sendKeys("11");
 		values.get(0).sendKeys(Keys.TAB);
 
 		Thread.sleep(3500);
@@ -156,9 +159,8 @@ public class Case29_Fuel_EarlySnacks_recommendedfuel extends AppiummobileBase {
 		values.get(2).sendKeys("AM");
 	
 		   // Capture a screenshot and attach it to Allure
-        AllureUtils.captureScreenshot(driver, "earlysnack3");
+        AllureUtils.captureScreenshot(driver, "earlysnack31");
 
-		
 		
 		driver.findElement(Doneclick).click();
         

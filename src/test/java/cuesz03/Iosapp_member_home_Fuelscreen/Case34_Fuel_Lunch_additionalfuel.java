@@ -9,6 +9,7 @@ import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
 
 import cuesz.pages.AppiummobileBase;
+import cuesz.utils.AllureUtils;
 import cuesz.utils.AppiumappUtils;
 import io.appium.java_client.AppiumBy;
 import io.qameta.allure.Description;
@@ -20,7 +21,7 @@ import io.qameta.allure.SeverityLevel;
 import io.qameta.allure.Story;
 
 @Epic ("Fuel screen detail ")
-@Feature ("Verify Fuel detail functionlaity related to Optimal fuel.")
+@Feature ("Verify Fuel detail functionlaity related to lunch addtional fuel.")
 public class Case34_Fuel_Lunch_additionalfuel extends AppiummobileBase {
 	
 	private By Homeclick 		= 		AppiumBy.iOSClassChain("**/XCUIElementTypeOther[`label == \"Home\"`][2]");
@@ -45,8 +46,8 @@ public class Case34_Fuel_Lunch_additionalfuel extends AppiummobileBase {
 	@Owner("QA") // Add the @Owner annotation to specify the executor
     @Severity(SeverityLevel.NORMAL)      
     @Description("Member Fuel screen detail verification")
-    @Story("Scroll to Fuel card and verify breakfast assigned by staff ")	
-	public void Homescreen() throws InterruptedException
+    @Story("Scroll to Fuel card and verify lunch addtional for member ")	
+	public void Fuel_Lunch_additionalfuel() throws InterruptedException
 	{	
 		// Create an instance of AppiumUtils and pass the driver
 		AppiumappUtils appiumUtils = new AppiumappUtils(driver);
@@ -59,18 +60,12 @@ public class Case34_Fuel_Lunch_additionalfuel extends AppiummobileBase {
 		Thread.sleep(3000);
 		
 		scroll("down", "Perform");
-//		// Method to scroll to perform screen
-//		HashMap<String,Object>scrollObject =new HashMap<>();
-//		scrollObject.put("direction", "down");
-//		scrollObject.put("Perform Fuel Mindful Restore", "Perform");
-//		driver.executeScript("mobile:scroll", scrollObject);
 		Thread.sleep(2000);
 
         //Click on Fuel tab 
         driver.findElement(AppiumBy.accessibilityId("FUEL_SCREEN")).click();
         
         Thread.sleep(3500);
-        
         
         // Locate the element related to breakfast + icon 
         WebElement lunchplus 	= driver.findElement(plusadd);
@@ -83,7 +78,9 @@ public class Case34_Fuel_Lunch_additionalfuel extends AppiummobileBase {
         // Click on fuel search field 
         WebElement additionalfuel = driver.findElement(additionalsearch);
         additionalfuel.click();
-       
+   
+        // Capture a screenshot and attach it to Allure
+        AllureUtils.captureScreenshot(driver, "lunchadd1");
         
         
         WebElement searchtext1	= driver.findElement(AppiumBy.iOSNsPredicateString("label == \"M\""));
@@ -108,6 +105,10 @@ public class Case34_Fuel_Lunch_additionalfuel extends AppiummobileBase {
         WebElement fuelselection	= driver.findElement(stewmeat);
         fuelselection.click();
       
+        
+        // Capture a screenshot and attach it to Allure
+        AllureUtils.captureScreenshot(driver, "lunchadd2");
+        
         Thread.sleep(4500);
         
         // Click on timer 
@@ -118,13 +119,13 @@ public class Case34_Fuel_Lunch_additionalfuel extends AppiummobileBase {
 		{		
 		System.out.println(values.get(i).getText());
 		}
-		values.get(0).sendKeys("9");
+		values.get(0).sendKeys("01");
 		values.get(0).sendKeys(Keys.TAB);
 		Thread.sleep(3500);
-		values.get(1).sendKeys("18");
+		values.get(1).sendKeys("03");
 		values.get(1).sendKeys(Keys.TAB);
 		Thread.sleep(3500);
-		values.get(2).sendKeys("AM");
+		values.get(2).sendKeys("PM");
 		driver.findElement(Doneclick).click();
         
     	WebElement submit = driver.findElement(submitick);
@@ -133,6 +134,10 @@ public class Case34_Fuel_Lunch_additionalfuel extends AppiummobileBase {
 		scroll("down", "Lunch");
 		Thread.sleep(2000);
 		
+		
+		// Capture a screenshot and attach it to Allure
+        AllureUtils.captureScreenshot(driver, "lunchadd21");
+        
 		  // Locate the element related to breakfast + icon 
         WebElement breakfastplus2 	= driver.findElement(plusadd);
         breakfastplus2.click();
@@ -163,6 +168,9 @@ public class Case34_Fuel_Lunch_additionalfuel extends AppiummobileBase {
         WebElement fuelselection2	= driver.findElement(kiwifuelselection);
         fuelselection2.click();
         
+     // Capture a screenshot and attach it to Allure
+        AllureUtils.captureScreenshot(driver, "lunchadd3");
+        
         
         Thread.sleep(3500);
         WebElement submit2 = driver.findElement(submitick);
@@ -182,7 +190,8 @@ public class Case34_Fuel_Lunch_additionalfuel extends AppiummobileBase {
         	plusclick.click();
         }
         
-        
+     // Capture a screenshot and attach it to Allure
+        AllureUtils.captureScreenshot(driver, "lunchadd4");
         //Click on notes and enter values in field. 
         WebElement noteedit1 = driver.findElement(noteclick);
         noteedit1.sendKeys("hello this notes is update by automation to verifiy edit field values");
@@ -200,6 +209,9 @@ public class Case34_Fuel_Lunch_additionalfuel extends AppiummobileBase {
 		editsubmit.click();
 		
 
+		
+		// Capture a screenshot and attach it to Allure
+        AllureUtils.captureScreenshot(driver, "lunchadd5");
 		Thread.sleep(4500);
         driver.terminateApp("com.cuesz.mobile");
 	}

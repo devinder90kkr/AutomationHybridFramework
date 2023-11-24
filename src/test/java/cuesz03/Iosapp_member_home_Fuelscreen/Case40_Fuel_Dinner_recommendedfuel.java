@@ -21,14 +21,14 @@ import io.qameta.allure.Severity;
 import io.qameta.allure.SeverityLevel;
 import io.qameta.allure.Story;
 
-@Epic ("Fuel screen detail ")
-@Feature ("Verify Fuel detail functionlaity related to breakfast functionlaity.")
+@Epic ("Member fuel screen detail ")
+@Feature ("Verify Fuel detail functionlaity related to dinner functionlaity.")
 public class Case40_Fuel_Dinner_recommendedfuel extends AppiummobileBase {
 	
 	private By Homeclick = 		AppiumBy.iOSClassChain("**/XCUIElementTypeOther[`label == \"Home\"`][2]");
 
-	private By breakfastlabel	= 		AppiumBy.iOSNsPredicateString("name == 'Breakfast'");
-	private By iconbreakfast	= 		AppiumBy.accessibilityId("DinnerInfoIcon");
+	private By dinnerlabel	= 		AppiumBy.iOSNsPredicateString("name == 'Dinner'");
+	private By icondinner	= 		AppiumBy.accessibilityId("DinnerInfoIcon");
 	private By backicon			= 		AppiumBy.accessibilityId("BackPress");
 	private By plusadd			= 		AppiumBy.accessibilityId("DinnerAddIcon");
 	private By doneclick		= 		AppiumBy.accessibilityId("Done");
@@ -38,7 +38,7 @@ public class Case40_Fuel_Dinner_recommendedfuel extends AppiummobileBase {
 	private By Time				= 		AppiumBy.accessibilityId("RecommendedFuelTime");
 	private By pickerelement	= 		AppiumBy.xpath("//XCUIElementTypePickerWheel");
 	private By Doneclick		= 		AppiumBy.accessibilityId("AlcohalTime");
-	private By tickbreakfast	= 		AppiumBy.accessibilityId("RecommendedFuelSubmit");
+	private By tickdinner	= 		AppiumBy.accessibilityId("RecommendedFuelSubmit");
 	private By brekdone			= 		AppiumBy.accessibilityId("Done");
 	
 
@@ -46,8 +46,8 @@ public class Case40_Fuel_Dinner_recommendedfuel extends AppiummobileBase {
 	@Owner("QA") // Add the @Owner annotation to specify the executor
     @Severity(SeverityLevel.NORMAL)      
     @Description("Member Fuel screen detail verification")
-    @Story("Scroll to Fuel card and verify breakfast assigned by staff ")	
-	public void Homescreen() throws InterruptedException
+    @Story("Scroll to Fuel card and verify Dinner assigned by staff ")	
+	public void Fuel_Dinner_recommendedfuel() throws InterruptedException
 	{	
 		// Create an instance of AppiumUtils and pass the driver
 		AppiumappUtils appiumUtils = new AppiumappUtils(driver);
@@ -70,11 +70,11 @@ public class Case40_Fuel_Dinner_recommendedfuel extends AppiummobileBase {
         
 		
         // Locate the element containing the perform
-        WebElement breakfast = driver.findElement(breakfastlabel);
+        WebElement dinner = driver.findElement(dinnerlabel);
         // Extract text from the element
-        String actualText = breakfast.getText();
+        String actualText = dinner.getText();
         // Define the expected text
-        String expectedText = "Breakfast";
+        String expectedText = "Dinner";
         
         // Print the actual and expected text to the console
         System.out.println("Actual Text: " + actualText);
@@ -83,18 +83,18 @@ public class Case40_Fuel_Dinner_recommendedfuel extends AppiummobileBase {
         Assert.assertEquals(actualText, expectedText);
 		
         
-        // Locate and click on breakfasticon for cal related info
-        WebElement breakfasticon	= driver.findElement(iconbreakfast);
-        breakfasticon.click();
+        // Locate and click on dinnericon for cal related info
+        WebElement dinnericon	= driver.findElement(icondinner);
+        dinnericon.click();
         WebElement backclick	= driver.findElement(backicon);
         backclick.click();
         
 		// Capture a screenshot and attach it to Allure
-        AllureUtils.captureScreenshot(driver, "Fuel11");
+        AllureUtils.captureScreenshot(driver, "Dinner1");
         
-        // Locate the element related to breakfast + icon 
-        WebElement breakfastplus 	= driver.findElement(plusadd);
-        breakfastplus.click();
+        // Locate the element related to dinner + icon 
+        WebElement dinnerplus 	= driver.findElement(plusadd);
+        dinnerplus.click();
         
        //click on keypad Done button to hide keypad
         WebElement keypaddone	= driver.findElement(doneclick);
@@ -116,7 +116,7 @@ public class Case40_Fuel_Dinner_recommendedfuel extends AppiummobileBase {
         arrowright.click();
         
 		// Capture a screenshot and attach it to Allure
-        AllureUtils.captureScreenshot(driver, "Fuel12");
+        AllureUtils.captureScreenshot(driver, "Dinner2");
 
         
         // Click on timer 
@@ -130,39 +130,38 @@ public class Case40_Fuel_Dinner_recommendedfuel extends AppiummobileBase {
 		System.out.println(values.get(i).getText());
 		}
 		
-		values.get(0).sendKeys("6");
+		values.get(0).sendKeys("9");
 		values.get(0).sendKeys(Keys.TAB);
 
 		Thread.sleep(3500);
-		values.get(1).sendKeys("43");
+		values.get(1).sendKeys("13");
 		values.get(1).sendKeys(Keys.TAB);
 		
 		Thread.sleep(3500);
-		values.get(2).sendKeys("AM");
+		values.get(2).sendKeys("PM");
 	
 		// Capture a screenshot and attach it to Allure
-        AllureUtils.captureScreenshot(driver, "Fuel13");
+        AllureUtils.captureScreenshot(driver, "Dinner3");
 
-		
 		
 		driver.findElement(Doneclick).click();
         
-		// Click on breakfast-tick 
-        WebElement breakfasttick	= driver.findElement(tickbreakfast);
-        breakfasttick.click();
+		// Click on dinner-tick 
+        WebElement dinnertick	= driver.findElement(tickdinner);
+        dinnertick.click();
     		   
-        // Click on Done-breakfast button
+        // Click on Done-dinner button
         WebElement brekfastdone 	= driver.findElement(brekdone);
         brekfastdone.click();
         
-        // Locate and click on breakfasticon for cal related info
-        WebElement breakfasticon1	= driver.findElement(iconbreakfast);
-        breakfasticon1.click();
+        // Locate and click on dinnericon for cal related info
+        WebElement dinnericon1	= driver.findElement(icondinner);
+        dinnericon1.click();
         WebElement backclick1	= driver.findElement(backicon);
         backclick1.click();
         
-		// Capture a screenshot and attach it to Allure
-        AllureUtils.captureScreenshot(driver, "Fuel14");
+     // Capture a screenshot and attach it to Allure
+        AllureUtils.captureScreenshot(driver, "Dinner4");
         
 		Thread.sleep(2500);
         driver.terminateApp("com.cuesz.mobile");

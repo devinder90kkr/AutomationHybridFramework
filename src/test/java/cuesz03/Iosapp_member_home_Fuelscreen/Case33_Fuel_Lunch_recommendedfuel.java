@@ -22,7 +22,7 @@ import io.qameta.allure.SeverityLevel;
 import io.qameta.allure.Story;
 
 @Epic ("Fuel screen detail")
-@Feature ("Verify Fuel detail functionlaity related to EarlySnacks functionlaity.")
+@Feature ("Verify Fuel detail functionlaity related to Lunch functionlaity.")
 public class Case33_Fuel_Lunch_recommendedfuel extends AppiummobileBase {
 	
 	private By Homeclick = 		AppiumBy.iOSClassChain("**/XCUIElementTypeOther[`label == \"Home\"`][2]");
@@ -50,8 +50,8 @@ public class Case33_Fuel_Lunch_recommendedfuel extends AppiummobileBase {
 	@Owner("QA") // Add the @Owner annotation to specify the executor
     @Severity(SeverityLevel.NORMAL)      
     @Description("Member Fuel screen detail verification")
-    @Story("Scroll to Fuel card and verify EarlySnacks assigned by staff ")	
-	public void Homescreen() throws InterruptedException
+    @Story("Scroll to Fuel card and verify Lunch assigned by staff ")	
+	public void Fuel_Lunch_recommendedfuel() throws InterruptedException
 	{	
 		// Create an instance of AppiumUtils and pass the driver
 		AppiumappUtils appiumUtils = new AppiumappUtils(driver);

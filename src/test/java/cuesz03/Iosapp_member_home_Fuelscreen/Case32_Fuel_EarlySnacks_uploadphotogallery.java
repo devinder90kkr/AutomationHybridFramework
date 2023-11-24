@@ -9,6 +9,7 @@ import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
 
 import cuesz.pages.AppiummobileBase;
+import cuesz.utils.AllureUtils;
 import cuesz.utils.AppiumappUtils;
 import io.appium.java_client.AppiumBy;
 import io.qameta.allure.Description;
@@ -30,15 +31,13 @@ public class Case32_Fuel_EarlySnacks_uploadphotogallery extends AppiummobileBase
 	private By pickerelement			= 		AppiumBy.xpath("//XCUIElementTypePickerWheel");
 	private By Doneclick				= 		AppiumBy.accessibilityId("AlcohalTime");
 	private By submittap				= 		AppiumBy.accessibilityId("SubmitImage");
-	
-
 
 	@Test
 	@Owner("QA") // Add the @Owner annotation to specify the executor
     @Severity(SeverityLevel.NORMAL)      
     @Description("Member check upload functionlaity verification")
     @Story("Scroll to Fuel card and upload image for breakfast.")	
-	public void Homescreen() throws InterruptedException
+	public void Fuel_EarlySnacks_uploadphotogallery() throws InterruptedException
 	{	
 		// Create an instance of AppiumUtils and pass the driver
 		AppiumappUtils appiumUtils = new AppiumappUtils(driver);
@@ -71,7 +70,8 @@ public class Case32_Fuel_EarlySnacks_uploadphotogallery extends AppiummobileBase
         WebElement addclick = driver.findElement(AppiumBy.accessibilityId("Add"));
         addclick.click();
         
-        
+     // Capture a screenshot and attach it to Allure
+        AllureUtils.captureScreenshot(driver, "earlysnack6");
         // Click on timer 
         WebElement Timerclick 	= driver.findElement(Time);
         Timerclick.click();
@@ -95,6 +95,10 @@ public class Case32_Fuel_EarlySnacks_uploadphotogallery extends AppiummobileBase
 
 		driver.findElement(Doneclick).click();
         
+		
+		// Capture a screenshot and attach it to Allure
+        AllureUtils.captureScreenshot(driver, "earlysnack7");
+		
 		WebElement Submittap = driver.findElement(submittap);
 		Submittap.click();
 		
@@ -116,7 +120,8 @@ public class Case32_Fuel_EarlySnacks_uploadphotogallery extends AppiummobileBase
 		driver.executeScript("mobile:scroll", scrollObject1);
 		Thread.sleep(2000);
 	    
-	    
+		// Capture a screenshot and attach it to Allure
+        AllureUtils.captureScreenshot(driver, "earlysnack8");
         
 		Thread.sleep(8500);
         driver.terminateApp("com.cuesz.mobile");

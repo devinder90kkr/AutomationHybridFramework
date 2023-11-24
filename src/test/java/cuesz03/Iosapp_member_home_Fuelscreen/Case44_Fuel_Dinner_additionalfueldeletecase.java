@@ -6,6 +6,7 @@ import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
 
 import cuesz.pages.AppiummobileBase;
+import cuesz.utils.AllureUtils;
 import cuesz.utils.AppiumappUtils;
 import io.appium.java_client.AppiumBy;
 import io.qameta.allure.Description;
@@ -33,8 +34,8 @@ public class Case44_Fuel_Dinner_additionalfueldeletecase extends AppiummobileBas
 	@Test
 	@Owner("QA") // Add the @Owner annotation to specify the executor
     @Severity(SeverityLevel.NORMAL)      
-    @Description("Member Fuel screen detail verificationfor addtional")
-    @Story("Scroll to Fuel card and check additional fuel for breakfast.")	
+    @Description("Member Fuel screen detail verification for addtional")
+    @Story("Scroll to Fuel card and check additional fuel for Dinner.")	
 	public void Fuel_Dinner_additional() throws InterruptedException
 	{	
 		// Create an instance of AppiumUtils and pass the driver
@@ -83,6 +84,10 @@ public class Case44_Fuel_Dinner_additionalfueldeletecase extends AppiummobileBas
         WebElement Keypaddone	= driver.findElement(doneclick);
         Keypaddone.click();
         
+        // Capture a screenshot and attach it to Allure
+	    AllureUtils.captureScreenshot(driver, "Dinner14");
+        
+        
         WebElement fuelselection	= driver.findElement(fish);
         fuelselection.click();
 		
@@ -107,6 +112,10 @@ public class Case44_Fuel_Dinner_additionalfueldeletecase extends AppiummobileBas
         
         WebElement brandedShowmore	= driver.findElement(Showclick);
         brandedShowmore.click();
+        
+        
+     // Capture a screenshot and attach it to Allure
+	    AllureUtils.captureScreenshot(driver, "Dinner15");
         
         
         Thread.sleep(3000);

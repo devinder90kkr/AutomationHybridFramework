@@ -6,6 +6,7 @@ import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
 
 import cuesz.pages.AppiummobileBase;
+import cuesz.utils.AllureUtils;
 import cuesz.utils.AppiumappUtils;
 import io.appium.java_client.AppiumBy;
 import io.qameta.allure.Description;
@@ -52,8 +53,8 @@ public class Case39_Fuel_Latesnacks_customfood extends AppiummobileBase {
 	@Owner("QA") // Add the @Owner annotation to specify the executor
     @Severity(SeverityLevel.NORMAL)      
 	@Description("Custom Fuel screen detail verification")
-    @Story("Scroll to Fuel card and verify custom food breakfast.")
-	public void Homescreen() throws InterruptedException
+    @Story("Scroll to Fuel card and verify custom food latesnacks.")
+	public void Fuel_Latesnacks_customfood() throws InterruptedException
 	{	
 		// Create an instance of AppiumUtils and pass the driver
 		AppiumappUtils appiumUtils = new AppiumappUtils(driver);
@@ -85,7 +86,9 @@ public class Case39_Fuel_Latesnacks_customfood extends AppiummobileBase {
         WebElement keypaddone	= driver.findElement(doneclick);
         keypaddone.click();
         
-
+        // Capture a screenshot and attach it to Allure
+	    AllureUtils.captureScreenshot(driver, "latesnacks6");
+	    
 //        String searchText = "Git";
         String searchText = "Lost";
         int count = 1;
@@ -121,6 +124,9 @@ public class Case39_Fuel_Latesnacks_customfood extends AppiummobileBase {
                 }
             }
         }
+        
+     // Capture a screenshot and attach it to Allure
+	    AllureUtils.captureScreenshot(driver, "latesnacks7");
 
        // Now you can use modifiedSearchText outside the loop as well, for example:
        WebElement Foodname = driver.findElement(foodname);
@@ -154,6 +160,10 @@ public class Case39_Fuel_Latesnacks_customfood extends AppiummobileBase {
        Calories.sendKeys("176");
        WebElement keypaddone4	= driver.findElement(doneclick);       
        keypaddone4.click();
+       
+       
+    // Capture a screenshot and attach it to Allure
+	    AllureUtils.captureScreenshot(driver, "latesnacks8");
 //       
 //       // Locate the Proteins element  
 //       WebElement Proteins	= driver.findElement(proteins);
@@ -261,6 +271,10 @@ public class Case39_Fuel_Latesnacks_customfood extends AppiummobileBase {
        WebElement Submittap = driver.findElement(submittap);
        Submittap.click();
        Thread.sleep(3500);
+       
+       
+    // Capture a screenshot and attach it to Allure
+	    AllureUtils.captureScreenshot(driver, "latesnacks9");
        
         WebElement Customfoodtick	= driver.findElement(Customtick);
         Customfoodtick.click();

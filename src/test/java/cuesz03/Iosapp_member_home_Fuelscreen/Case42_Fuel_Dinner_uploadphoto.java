@@ -9,6 +9,7 @@ import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
 
 import cuesz.pages.AppiummobileBase;
+import cuesz.utils.AllureUtils;
 import cuesz.utils.AppiumappUtils;
 import io.appium.java_client.AppiumBy;
 import io.qameta.allure.Description;
@@ -20,7 +21,7 @@ import io.qameta.allure.SeverityLevel;
 import io.qameta.allure.Story;
 
 @Epic ("Fuel upload screen functionlaity ")
-@Feature ("Verify Upload detail functionlaity for breakfast.")
+@Feature ("Verify Upload detail functionlaity for dinner.")
 public class Case42_Fuel_Dinner_uploadphoto extends AppiummobileBase {
 	
 	private By Homeclick 				= 		AppiumBy.iOSClassChain("**/XCUIElementTypeOther[`label == \"Home\"`][2]");
@@ -38,8 +39,8 @@ public class Case42_Fuel_Dinner_uploadphoto extends AppiummobileBase {
 	@Owner("QA") // Add the @Owner annotation to specify the executor
     @Severity(SeverityLevel.NORMAL)      
     @Description("Member check upload functionlaity verification")
-    @Story("Scroll to Fuel card and upload image for breakfast.")	
-	public void LateSnacks_uploadphoto() throws InterruptedException
+    @Story("Scroll to Fuel card and upload image for dinner.")	
+	public void Fuel_Dinner_uploadphoto() throws InterruptedException
 	{	
 		// Create an instance of AppiumUtils and pass the driver
 		AppiumappUtils appiumUtils = new AppiumappUtils(driver);
@@ -71,7 +72,9 @@ public class Case42_Fuel_Dinner_uploadphoto extends AppiummobileBase {
         
         WebElement addclick = driver.findElement(AppiumBy.accessibilityId("Add"));
         addclick.click();
-        
+     
+        // Capture a screenshot and attach it to Allure
+	      AllureUtils.captureScreenshot(driver, "Dinner9");
         
         // Click on timer 
         WebElement Timerclick 	= driver.findElement(Time);
@@ -84,18 +87,21 @@ public class Case42_Fuel_Dinner_uploadphoto extends AppiummobileBase {
 		System.out.println(values.get(i).getText());
 		}
 		
-		values.get(0).sendKeys("5");
+		values.get(0).sendKeys("9");
 		values.get(0).sendKeys(Keys.TAB);
 
 		Thread.sleep(3500);
-		values.get(1).sendKeys("45");
+		values.get(1).sendKeys("20");
 		values.get(1).sendKeys(Keys.TAB);
 		
 		Thread.sleep(3500);
 		values.get(2).sendKeys("PM");
-
+		
 		driver.findElement(Doneclick).click();
-        
+
+		// Capture a screenshot and attach it to Allure
+		AllureUtils.captureScreenshot(driver, "Dinner9");
+
 		WebElement Submittap = driver.findElement(submittap);
 		Submittap.click();
 		
@@ -129,7 +135,7 @@ public class Case42_Fuel_Dinner_uploadphoto extends AppiummobileBase {
 		System.out.println(values1.get(i).getText());
 		}
 		
-		values1.get(0).sendKeys("5");
+		values1.get(0).sendKeys("9");
 		values1.get(0).sendKeys(Keys.TAB);
 
 		Thread.sleep(3500);
@@ -148,6 +154,9 @@ public class Case42_Fuel_Dinner_uploadphoto extends AppiummobileBase {
 	
 		WebElement uploadicon2	= driver.findElement(uploadlunchimage);
 	    uploadicon2.click();
+	    
+	    // Capture a screenshot and attach it to Allure
+	    AllureUtils.captureScreenshot(driver, "Dinner10");
         
 	    //locate and click on toggel arrow 
 	    WebElement arrowright	= driver.findElement(arrowclick);

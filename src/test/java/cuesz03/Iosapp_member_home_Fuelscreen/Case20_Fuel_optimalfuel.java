@@ -91,13 +91,15 @@ public class Case20_Fuel_optimalfuel extends AppiummobileBase {
     @Severity(SeverityLevel.NORMAL)      
     @Description("Member Fuel screen detail verification")
     @Story("Scroll to Fuel card and verify optimal fuel assigned by staff ")		
-	public void Homescreen() throws InterruptedException
+	public void Fuel_optimalfuel() throws InterruptedException
 	{	
 		// Create an instance of AppiumUtils and pass the driver
 		AppiumappUtils appiumUtils = new AppiumappUtils(driver);
         // Launch the app using the utility method
         appiumUtils.launchAppWithPackageId("com.cuesz.mobile");	
 		
+        
+        // Home button click
 		WebElement Homeicon = driver.findElement(Homeclick);
 		Homeicon.click();
 		
@@ -180,11 +182,7 @@ public class Case20_Fuel_optimalfuel extends AppiummobileBase {
 		//Click on  14days from 
 		WebElement day14 = driver.findElement(dayfourteen);
 		day14.click();
-
-//		//Click on  yesterday from 
-//		WebElement yestday = driver.findElement(Yestrday);
-//		yestday.click();
-//		
+	
 		//Click on backfuel from macrobreakdown screen
 		WebElement backclick = driver.findElement(backfuel);
 		backclick.click();

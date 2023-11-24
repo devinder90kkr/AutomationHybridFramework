@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test name="Default test(failed)">
     <classes>
-      <class name="cuesz03.Iosapp_member_home_Fuelscreen.Case44_Fuel_Dinner_additionalfueldeletecase">
+      <class name="cuesz03.Iosapp_member_home_Fuelscreen.Case30_Fuel_Earlysnacks_additionalfuel">
         <methods>
+          <include name="Fuel_Earlysnacks_additionalfuel"/>
           <include name="Cueszbase"/>
           <include name="tearDown"/>
-          <include name="Homescreen"/>
         </methods>
-      </class> <!-- cuesz03.Iosapp_member_home_Fuelscreen.Case44_Fuel_Dinner_additionalfueldeletecase -->
+      </class> <!-- cuesz03.Iosapp_member_home_Fuelscreen.Case30_Fuel_Earlysnacks_additionalfuel -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

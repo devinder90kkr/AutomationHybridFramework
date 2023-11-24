@@ -1,25 +1,123 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="8" passed="8" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-11-23T13:17:33Z" name="Default suite" finished-at="2023-11-23T13:18:54Z" duration-ms="80543">
+  <suite started-at="2023-11-24T10:43:42Z" name="Suite16" finished-at="2023-11-24T11:04:16Z" duration-ms="1234561">
     <groups>
     </groups>
-    <test started-at="2023-11-23T13:17:33Z" name="Default test" finished-at="2023-11-23T13:18:54Z" duration-ms="80543">
-      <class name="cuesz03.Iosapp_member_home_Fuelscreen.Case44_Fuel_Dinner_additionalfueldeletecase">
-        <test-method is-config="true" signature="Cueszbase()[pri:0, instance:cuesz03.Iosapp_member_home_Fuelscreen.Case44_Fuel_Dinner_additionalfueldeletecase@294a6b8e]" started-at="2023-11-23T18:47:33Z" name="Cueszbase" finished-at="2023-11-23T18:47:34Z" duration-ms="933" status="PASS">
+    <test started-at="2023-11-24T10:43:42Z" name="Test16" finished-at="2023-11-24T11:04:16Z" duration-ms="1234561">
+      <class name="cuesz03.Iosapp_member_home_Fuelscreen.Case23_02_Fuel_breakfast_additionalfueldeletecase">
+        <test-method is-config="true" signature="Cueszbase()[pri:0, instance:cuesz03.Iosapp_member_home_Fuelscreen.Case23_02_Fuel_breakfast_additionalfueldeletecase@db57326]" started-at="2023-11-24T16:18:23Z" name="Cueszbase" finished-at="2023-11-24T16:18:24Z" duration-ms="385" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Cueszbase -->
-        <test-method signature="Homescreen()[pri:0, instance:cuesz03.Iosapp_member_home_Fuelscreen.Case44_Fuel_Dinner_additionalfueldeletecase@294a6b8e]" started-at="2023-11-23T18:47:34Z" name="Homescreen" finished-at="2023-11-23T18:48:53Z" duration-ms="79528" status="PASS">
+        <test-method signature="Homescreen()[pri:0, instance:cuesz03.Iosapp_member_home_Fuelscreen.Case23_02_Fuel_breakfast_additionalfueldeletecase@db57326]" started-at="2023-11-24T16:18:24Z" name="Homescreen" finished-at="2023-11-24T16:19:27Z" duration-ms="63698" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Homescreen -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:cuesz03.Iosapp_member_home_Fuelscreen.Case44_Fuel_Dinner_additionalfueldeletecase@294a6b8e]" started-at="2023-11-23T18:48:54Z" name="tearDown" finished-at="2023-11-23T18:48:54Z" duration-ms="14" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:cuesz03.Iosapp_member_home_Fuelscreen.Case23_02_Fuel_breakfast_additionalfueldeletecase@db57326]" started-at="2023-11-24T16:19:27Z" name="tearDown" finished-at="2023-11-24T16:19:27Z" duration-ms="8" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- cuesz03.Iosapp_member_home_Fuelscreen.Case44_Fuel_Dinner_additionalfueldeletecase -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+      </class> <!-- cuesz03.Iosapp_member_home_Fuelscreen.Case23_02_Fuel_breakfast_additionalfueldeletecase -->
+      <class name="cuesz03.Iosapp_member_home_Fuelscreen.Case25_Fuel_breakfast_uploadphotogallery">
+        <test-method is-config="true" signature="Cueszbase()[pri:0, instance:cuesz03.Iosapp_member_home_Fuelscreen.Case25_Fuel_breakfast_uploadphotogallery@34a875b3]" started-at="2023-11-24T16:19:27Z" name="Cueszbase" finished-at="2023-11-24T16:19:28Z" duration-ms="422" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Cueszbase -->
+        <test-method signature="Homescreen()[pri:0, instance:cuesz03.Iosapp_member_home_Fuelscreen.Case25_Fuel_breakfast_uploadphotogallery@34a875b3]" started-at="2023-11-24T16:19:28Z" name="Homescreen" finished-at="2023-11-24T16:21:28Z" duration-ms="119743" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Homescreen -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:cuesz03.Iosapp_member_home_Fuelscreen.Case25_Fuel_breakfast_uploadphotogallery@34a875b3]" started-at="2023-11-24T16:21:28Z" name="tearDown" finished-at="2023-11-24T16:21:28Z" duration-ms="6" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- cuesz03.Iosapp_member_home_Fuelscreen.Case25_Fuel_breakfast_uploadphotogallery -->
+      <class name="cuesz03.Iosapp_member_home_Fuelscreen.Case27_Fuel_breakfast_customfoodaddtobrekfast">
+        <test-method is-config="true" signature="Cueszbase()[pri:0, instance:cuesz03.Iosapp_member_home_Fuelscreen.Case27_Fuel_breakfast_customfoodaddtobrekfast@4b14918a]" started-at="2023-11-24T16:25:00Z" name="Cueszbase" finished-at="2023-11-24T16:25:00Z" duration-ms="411" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Cueszbase -->
+        <test-method signature="Homescreen()[pri:0, instance:cuesz03.Iosapp_member_home_Fuelscreen.Case27_Fuel_breakfast_customfoodaddtobrekfast@4b14918a]" started-at="2023-11-24T16:25:00Z" name="Homescreen" finished-at="2023-11-24T16:29:17Z" duration-ms="257051" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Homescreen -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:cuesz03.Iosapp_member_home_Fuelscreen.Case27_Fuel_breakfast_customfoodaddtobrekfast@4b14918a]" started-at="2023-11-24T16:29:17Z" name="tearDown" finished-at="2023-11-24T16:29:17Z" duration-ms="7" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- cuesz03.Iosapp_member_home_Fuelscreen.Case27_Fuel_breakfast_customfoodaddtobrekfast -->
+      <class name="cuesz03.Iosapp_member_home_Fuelscreen.Case21_Fuel_breakfast_recommendedfuel">
+        <test-method is-config="true" signature="Cueszbase()[pri:0, instance:cuesz03.Iosapp_member_home_Fuelscreen.Case21_Fuel_breakfast_recommendedfuel@78383390]" started-at="2023-11-24T16:13:42Z" name="Cueszbase" finished-at="2023-11-24T16:13:43Z" duration-ms="816" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Cueszbase -->
+        <test-method signature="Homescreen()[pri:0, instance:cuesz03.Iosapp_member_home_Fuelscreen.Case21_Fuel_breakfast_recommendedfuel@78383390]" started-at="2023-11-24T16:13:43Z" name="Homescreen" finished-at="2023-11-24T16:14:40Z" duration-ms="57732" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Homescreen -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:cuesz03.Iosapp_member_home_Fuelscreen.Case21_Fuel_breakfast_recommendedfuel@78383390]" started-at="2023-11-24T16:14:41Z" name="tearDown" finished-at="2023-11-24T16:14:41Z" duration-ms="8" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- cuesz03.Iosapp_member_home_Fuelscreen.Case21_Fuel_breakfast_recommendedfuel -->
+      <class name="cuesz03.Iosapp_member_home_Fuelscreen.Case23_01_Fuel_breakfast_editadditionalfuel">
+        <test-method is-config="true" signature="Cueszbase()[pri:0, instance:cuesz03.Iosapp_member_home_Fuelscreen.Case23_01_Fuel_breakfast_editadditionalfuel@53dbe163]" started-at="2023-11-24T16:16:19Z" name="Cueszbase" finished-at="2023-11-24T16:16:19Z" duration-ms="406" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Cueszbase -->
+        <test-method signature="Homescreen()[pri:0, instance:cuesz03.Iosapp_member_home_Fuelscreen.Case23_01_Fuel_breakfast_editadditionalfuel@53dbe163]" started-at="2023-11-24T16:16:19Z" name="Homescreen" finished-at="2023-11-24T16:18:23Z" duration-ms="124404" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Homescreen -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:cuesz03.Iosapp_member_home_Fuelscreen.Case23_01_Fuel_breakfast_editadditionalfuel@53dbe163]" started-at="2023-11-24T16:18:23Z" name="tearDown" finished-at="2023-11-24T16:18:23Z" duration-ms="7" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- cuesz03.Iosapp_member_home_Fuelscreen.Case23_01_Fuel_breakfast_editadditionalfuel -->
+      <class name="cuesz03.Iosapp_member_home_Fuelscreen.Case28_Fuel_breakfast_customfoodsearch">
+        <test-method is-config="true" signature="Cueszbase()[pri:0, instance:cuesz03.Iosapp_member_home_Fuelscreen.Case28_Fuel_breakfast_customfoodsearch@6d1ef78d]" started-at="2023-11-24T16:29:17Z" name="Cueszbase" finished-at="2023-11-24T16:29:18Z" duration-ms="398" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Cueszbase -->
+        <test-method signature="Homescreen()[pri:0, instance:cuesz03.Iosapp_member_home_Fuelscreen.Case28_Fuel_breakfast_customfoodsearch@6d1ef78d]" started-at="2023-11-24T16:29:18Z" name="Homescreen" finished-at="2023-11-24T16:34:16Z" duration-ms="298752" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Homescreen -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:cuesz03.Iosapp_member_home_Fuelscreen.Case28_Fuel_breakfast_customfoodsearch@6d1ef78d]" started-at="2023-11-24T16:34:16Z" name="tearDown" finished-at="2023-11-24T16:34:16Z" duration-ms="13" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- cuesz03.Iosapp_member_home_Fuelscreen.Case28_Fuel_breakfast_customfoodsearch -->
+      <class name="cuesz03.Iosapp_member_home_Fuelscreen.Case26_Fuel_breakfast_customfood">
+        <test-method is-config="true" signature="Cueszbase()[pri:0, instance:cuesz03.Iosapp_member_home_Fuelscreen.Case26_Fuel_breakfast_customfood@4748a0f9]" started-at="2023-11-24T16:21:28Z" name="Cueszbase" finished-at="2023-11-24T16:21:28Z" duration-ms="417" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Cueszbase -->
+        <test-method signature="Homescreen()[pri:0, instance:cuesz03.Iosapp_member_home_Fuelscreen.Case26_Fuel_breakfast_customfood@4748a0f9]" started-at="2023-11-24T16:21:28Z" name="Homescreen" finished-at="2023-11-24T16:25:00Z" duration-ms="211831" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Homescreen -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:cuesz03.Iosapp_member_home_Fuelscreen.Case26_Fuel_breakfast_customfood@4748a0f9]" started-at="2023-11-24T16:25:00Z" name="tearDown" finished-at="2023-11-24T16:25:00Z" duration-ms="7" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- cuesz03.Iosapp_member_home_Fuelscreen.Case26_Fuel_breakfast_customfood -->
+      <class name="cuesz03.Iosapp_member_home_Fuelscreen.Case22_Fuel_breakfast_additionalfuel">
+        <test-method is-config="true" signature="Cueszbase()[pri:0, instance:cuesz03.Iosapp_member_home_Fuelscreen.Case22_Fuel_breakfast_additionalfuel@6ad3381f]" started-at="2023-11-24T16:14:41Z" name="Cueszbase" finished-at="2023-11-24T16:14:41Z" duration-ms="402" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Cueszbase -->
+        <test-method signature="Homescreen()[pri:0, instance:cuesz03.Iosapp_member_home_Fuelscreen.Case22_Fuel_breakfast_additionalfuel@6ad3381f]" started-at="2023-11-24T16:14:41Z" name="Homescreen" finished-at="2023-11-24T16:16:18Z" duration-ms="97557" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Homescreen -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:cuesz03.Iosapp_member_home_Fuelscreen.Case22_Fuel_breakfast_additionalfuel@6ad3381f]" started-at="2023-11-24T16:16:18Z" name="tearDown" finished-at="2023-11-24T16:16:19Z" duration-ms="7" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- cuesz03.Iosapp_member_home_Fuelscreen.Case22_Fuel_breakfast_additionalfuel -->
+    </test> <!-- Test16 -->
+  </suite> <!-- Suite16 -->
 </testng-results>

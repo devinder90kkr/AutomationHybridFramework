@@ -6,6 +6,7 @@ import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
 
 import cuesz.pages.AppiummobileBase;
+import cuesz.utils.AllureUtils;
 import cuesz.utils.AppiumappUtils;
 import io.appium.java_client.AppiumBy;
 import io.qameta.allure.Description;
@@ -17,7 +18,7 @@ import io.qameta.allure.SeverityLevel;
 import io.qameta.allure.Story;
 
 @Epic ("Fuel custom screen detail ")
-@Feature ("Verify Fuel detail functionlaity related to Custom fuel.")
+@Feature ("Verify Fuel detail functionlaity related to Custom fuel for Lunch.")
 public class Case36_Fuel_Lunch_customfood extends AppiummobileBase {
 	
 	private By Homeclick 		= 		AppiumBy.iOSClassChain("**/XCUIElementTypeOther[`label == \"Home\"`][2]");
@@ -52,8 +53,8 @@ public class Case36_Fuel_Lunch_customfood extends AppiummobileBase {
 	@Owner("QA") // Add the @Owner annotation to specify the executor
     @Severity(SeverityLevel.NORMAL)      
 	@Description("Custom Fuel screen detail verification")
-    @Story("Scroll to Fuel card and verify custom food breakfast.")
-	public void Homescreen() throws InterruptedException
+    @Story("Scroll to Fuel card and verify custom food Lunch.")
+	public void Fuel_Lunch_customfood() throws InterruptedException
 	{	
 		// Create an instance of AppiumUtils and pass the driver
 		AppiumappUtils appiumUtils = new AppiumappUtils(driver);
@@ -84,7 +85,9 @@ public class Case36_Fuel_Lunch_customfood extends AppiummobileBase {
         //click on keypad Done button to hide keypad
         WebElement keypaddone	= driver.findElement(doneclick);
         keypaddone.click();
-        
+      
+        // Capture a screenshot and attach it to Allure
+        AllureUtils.captureScreenshot(driver, "lunchadd10");
 
 //        String searchText = "Git";
         String searchText = "Rost";
@@ -122,6 +125,9 @@ public class Case36_Fuel_Lunch_customfood extends AppiummobileBase {
             }
         }
 
+     // Capture a screenshot and attach it to Allure
+        AllureUtils.captureScreenshot(driver, "lunchadd11");
+        
        // Now you can use modifiedSearchText outside the loop as well, for example:
        WebElement Foodname = driver.findElement(foodname);
        Foodname.sendKeys(modifiedSearchText);
@@ -154,6 +160,11 @@ public class Case36_Fuel_Lunch_customfood extends AppiummobileBase {
        Calories.sendKeys("176");
        WebElement keypaddone4	= driver.findElement(doneclick);       
        keypaddone4.click();
+       
+       
+       // Capture a screenshot and attach it to Allure
+       AllureUtils.captureScreenshot(driver, "lunchadd12");
+
 //       
 //       // Locate the Proteins element  
 //       WebElement Proteins	= driver.findElement(proteins);
@@ -267,11 +278,18 @@ public class Case36_Fuel_Lunch_customfood extends AppiummobileBase {
 		
         Thread.sleep(3500);
         
+        
+        // Capture a screenshot and attach it to Allure
+        AllureUtils.captureScreenshot(driver, "lunchadd13");
+        
         WebElement editsubmit 	= driver.findElement(submittick);
 		editsubmit.click();
 		
 		 scroll("down", "Lunch");
 	 		Thread.sleep(2000);
+	 		
+	 		 // Capture a screenshot and attach it to Allure
+	        AllureUtils.captureScreenshot(driver, "lunchadd14");
         
        Thread.sleep(4500);
        driver.terminateApp("com.cuesz.mobile");

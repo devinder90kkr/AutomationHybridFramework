@@ -9,6 +9,7 @@ import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
 
 import cuesz.pages.AppiummobileBase;
+import cuesz.utils.AllureUtils;
 import cuesz.utils.AppiumappUtils;
 import io.appium.java_client.AppiumBy;
 import io.qameta.allure.Description;
@@ -20,7 +21,7 @@ import io.qameta.allure.SeverityLevel;
 import io.qameta.allure.Story;
 
 @Epic ("Fuel screen detail ")
-@Feature ("Verify Fuel detail functionlaity related to Optimal fuel.")
+@Feature ("Verify Fuel detail functionlaity related to early snacks fuel.")
 public class Case30_Fuel_Earlysnacks_additionalfuel extends AppiummobileBase {
 	
 	private By Homeclick 		= 		AppiumBy.iOSClassChain("**/XCUIElementTypeOther[`label == \"Home\"`][2]");
@@ -40,8 +41,8 @@ public class Case30_Fuel_Earlysnacks_additionalfuel extends AppiummobileBase {
 	@Owner("QA") // Add the @Owner annotation to specify the executor
     @Severity(SeverityLevel.NORMAL)      
     @Description("Member Fuel screen detail verification")
-    @Story("Scroll to Fuel card and verify breakfast assigned by staff ")	
-	public void Homescreen() throws InterruptedException
+    @Story("Scroll to Fuel card and verify early snacks ")	
+	public void Fuel_Earlysnacks_additionalfuel() throws InterruptedException
 	{	
 		// Create an instance of AppiumUtils and pass the driver
 		AppiumappUtils appiumUtils = new AppiumappUtils(driver);
@@ -61,8 +62,24 @@ public class Case30_Fuel_Earlysnacks_additionalfuel extends AppiummobileBase {
 
         //Click on Fuel tab 
         driver.findElement(AppiumBy.accessibilityId("FUEL_SCREEN")).click();
-        
         Thread.sleep(3500);
+        
+        // Method to scroll to perform screen
+     		HashMap<String,Object>scrollObject1 =new HashMap<>();
+     		scrollObject1.put("direction", "down");
+     		scrollObject1.put("Breakfast", "Breakfast");
+     		driver.executeScript("mobile:scroll", scrollObject1);
+     		Thread.sleep(2000);
+             
+         
+             // Method to scroll to perform screen
+      		HashMap<String,Object>scrollObject12 =new HashMap<>();
+      		scrollObject12.put("direction", "down");
+      		scrollObject12.put("Early Snacks", "Early Snacks");
+      		driver.executeScript("mobile:scroll", scrollObject12);
+      		Thread.sleep(2000);
+             
+             Thread.sleep(5500);
         
         
         // Locate the element related to breakfast + icon 
@@ -76,7 +93,9 @@ public class Case30_Fuel_Earlysnacks_additionalfuel extends AppiummobileBase {
         // Click on fuel search field 
         WebElement additionalfuel = driver.findElement(additionalsearch);
         additionalfuel.click();
-       
+    
+        // Capture a screenshot and attach it to Allure
+        AllureUtils.captureScreenshot(driver, "earlysnack5");
         
         
         WebElement searchtext1	= driver.findElement(AppiumBy.iOSNsPredicateString("label == \"C\""));
@@ -106,7 +125,7 @@ public class Case30_Fuel_Earlysnacks_additionalfuel extends AppiummobileBase {
         
         WebElement fuelselection	= driver.findElement(cinamonfuelselection);
         fuelselection.click();
-      
+     
         Thread.sleep(4500);
         
         
@@ -118,7 +137,7 @@ public class Case30_Fuel_Earlysnacks_additionalfuel extends AppiummobileBase {
 		{		
 		System.out.println(values.get(i).getText());
 		}
-		values.get(0).sendKeys("9");
+		values.get(0).sendKeys("11");
 		values.get(0).sendKeys(Keys.TAB);
 		Thread.sleep(3500);
 		values.get(1).sendKeys("18");
@@ -129,13 +148,15 @@ public class Case30_Fuel_Earlysnacks_additionalfuel extends AppiummobileBase {
         
     	WebElement submit = driver.findElement(submitick);
 		submit.click();
+		
+		Thread.sleep(3500);
 
-		// Method to scroll to early snack
-		HashMap<String,Object>scrollObject2 =new HashMap<>();
-		scrollObject2.put("direction", "down");
-		scrollObject2.put("Early Snacks", "Early Snacks");
-		driver.executeScript("mobile:scroll", scrollObject2);
-		Thread.sleep(2000);
+//		// Method to scroll to early snack
+//		HashMap<String,Object>scrollObject2 =new HashMap<>();
+//		scrollObject2.put("direction", "down");
+//		scrollObject2.put("Early Snacks", "Early Snacks");
+//		driver.executeScript("mobile:scroll", scrollObject2);
+//		Thread.sleep(2000);
 		
 		  // Locate the element related to breakfast + icon 
         WebElement breakfastplus2 	= driver.findElement(plusadd);
@@ -164,16 +185,15 @@ public class Case30_Fuel_Earlysnacks_additionalfuel extends AppiummobileBase {
         WebElement fuelselection2	= driver.findElement(ginfuelselectionc);
         fuelselection2.click();
         
+  
         WebElement submit2 = driver.findElement(submitick);
 		submit2.click();
-		
-		Thread.sleep(4500);
 		Thread.sleep(4500);
 		
 		// Method to scroll to early snack
 		HashMap<String,Object>scrollObject3 =new HashMap<>();
 		scrollObject3.put("direction", "down");
-		scrollObject3.put("Early Snacks", "Early Snacks");
+		scrollObject3.put("ginfuelselectionc", "ginfuelselectionc");
 		driver.executeScript("mobile:scroll", scrollObject3);
 		Thread.sleep(2000);
 		

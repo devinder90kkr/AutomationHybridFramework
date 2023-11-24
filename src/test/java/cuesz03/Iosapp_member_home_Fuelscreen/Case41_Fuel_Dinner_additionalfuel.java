@@ -21,7 +21,7 @@ import io.qameta.allure.SeverityLevel;
 import io.qameta.allure.Story;
 
 @Epic ("Fuel screen detail ")
-@Feature ("Verify Fuel detail functionlaity related to Optimal fuel.")
+@Feature ("Verify Fuel detail functionlaity related to dinner addtional fuel.")
 public class Case41_Fuel_Dinner_additionalfuel extends AppiummobileBase {
 	
 	private By Homeclick 		= 		AppiumBy.iOSClassChain("**/XCUIElementTypeOther[`label == \"Home\"`][2]");
@@ -46,8 +46,8 @@ public class Case41_Fuel_Dinner_additionalfuel extends AppiummobileBase {
 	@Owner("QA") // Add the @Owner annotation to specify the executor
     @Severity(SeverityLevel.NORMAL)      
     @Description("Member Fuel screen detail verification")
-    @Story("Scroll to Fuel card and verify breakfast assigned by staff ")	
-	public void Homescreen() throws InterruptedException
+    @Story("Scroll to Fuel card and verify member able to add addtional dinner list")	
+	public void Fuel_Dinner_additionalfuel() throws InterruptedException
 	{	
 		// Create an instance of AppiumUtils and pass the driver
 		AppiumappUtils appiumUtils = new AppiumappUtils(driver);
@@ -78,7 +78,7 @@ public class Case41_Fuel_Dinner_additionalfuel extends AppiummobileBase {
 		Thread.sleep(2000);
         
         
-        // Locate the element related to breakfast + icon 
+        // Locate the element related to dinner + icon 
         WebElement latesnacksplus 	= driver.findElement(plusadd);
         latesnacksplus.click();
         
@@ -90,7 +90,8 @@ public class Case41_Fuel_Dinner_additionalfuel extends AppiummobileBase {
         WebElement additionalfuel = driver.findElement(additionalsearch);
         additionalfuel.click();
        
-        
+        // Capture a screenshot and attach it to Allure
+        AllureUtils.captureScreenshot(driver, "Dinner5");
         
         WebElement searchtext1	= driver.findElement(AppiumBy.iOSNsPredicateString("label == \"J\""));
         searchtext1.click();
@@ -125,7 +126,7 @@ public class Case41_Fuel_Dinner_additionalfuel extends AppiummobileBase {
 		{		
 		System.out.println(values.get(i).getText());
 		}
-		values.get(0).sendKeys("5");
+		values.get(0).sendKeys("9");
 		values.get(0).sendKeys(Keys.TAB);
 		Thread.sleep(3500);
 		values.get(1).sendKeys("18");
@@ -133,6 +134,10 @@ public class Case41_Fuel_Dinner_additionalfuel extends AppiummobileBase {
 		Thread.sleep(3500);
 		values.get(2).sendKeys("PM");
 		driver.findElement(Doneclick).click();
+		
+		
+		// Capture a screenshot and attach it to Allure
+        AllureUtils.captureScreenshot(driver, "Dinner6");
         
     	WebElement submit = driver.findElement(submitick);
 		submit.click();
@@ -144,9 +149,9 @@ public class Case41_Fuel_Dinner_additionalfuel extends AppiummobileBase {
 		driver.executeScript("mobile:scroll", scrollObject2);
 		Thread.sleep(2000);
 		
-		  // Locate the element related to breakfast + icon 
-        WebElement breakfastplus2 	= driver.findElement(plusadd);
-        breakfastplus2.click();
+		  // Locate the element related to dinner + icon 
+        WebElement dinnerplus2 	= driver.findElement(plusadd);
+        dinnerplus2.click();
         
         //click on keypad Done button to hide keypad
         WebElement keypaddone2	= driver.findElement(doneclick);
@@ -170,6 +175,10 @@ public class Case41_Fuel_Dinner_additionalfuel extends AppiummobileBase {
         
         WebElement searchtext15	= driver.findElement(AppiumBy.iOSNsPredicateString("label == \"i\""));
         searchtext15.click();
+        
+	     // Capture a screenshot and attach it to Allure
+	      AllureUtils.captureScreenshot(driver, "Dinner7");
+        
         
         WebElement Keypaddone2	= driver.findElement(doneclick);
         Keypaddone2.click();
@@ -200,6 +209,10 @@ public class Case41_Fuel_Dinner_additionalfuel extends AppiummobileBase {
 
         WebElement fuelselection3	= driver.findElement(bopfuelselection);
         fuelselection3.click();
+        
+        
+     // Capture a screenshot and attach it to Allure
+	      AllureUtils.captureScreenshot(driver, "Dinner8");
         
         Thread.sleep(4500);
         WebElement submit2 = driver.findElement(submitick);
@@ -266,6 +279,12 @@ public class Case41_Fuel_Dinner_additionalfuel extends AppiummobileBase {
   		scrollObject6.put("Late Snacks", "Late Snacks");
   		driver.executeScript("mobile:scroll", scrollObject6);
   		Thread.sleep(2000);
+  		// Scroll to element Early Snacks
+  		HashMap<String,Object>scrollObject61 =new HashMap<>();
+  		scrollObject61.put("direction", "down");
+  		scrollObject61.put("Dinner", "Dinner");
+  		driver.executeScript("mobile:scroll", scrollObject61);
+  		
   		// Capture a screenshot and attach it to Allure
           AllureUtils.captureScreenshot(driver, "earlysnack5");	
   		//Click on protein cross icon
@@ -280,9 +299,13 @@ public class Case41_Fuel_Dinner_additionalfuel extends AppiummobileBase {
   		scrollObject7.put("direction", "down");
   		scrollObject7.put("Late Snacks", "Late Snacks");
   		driver.executeScript("mobile:scroll", scrollObject7);
-  		Thread.sleep(2000); 		
-  		// Capture a screenshot and attach it to Allure
-          AllureUtils.captureScreenshot(driver, "earlysnack6");
+  		Thread.sleep(2000); 	
+  		
+  		// Scroll to element Early Snacks
+  		HashMap<String,Object>scrollObject611 =new HashMap<>();
+  		scrollObject611.put("direction", "down");
+  		scrollObject611.put("Dinner", "Dinner");
+  		driver.executeScript("mobile:scroll", scrollObject611);
   		//Click on protein cross icon
   		WebElement carbscross = driver.findElement(crossicon1);
   		carbscross.click();
@@ -296,15 +319,17 @@ public class Case41_Fuel_Dinner_additionalfuel extends AppiummobileBase {
   		scrollObject8.put("Late Snacks", "Late Snacks");
   		driver.executeScript("mobile:scroll", scrollObject8);
   		Thread.sleep(2000); 
-  		// Capture a screenshot and attach it to Allure
-          AllureUtils.captureScreenshot(driver, "earlysnack7");
+  		
+  	// Scroll to element Early Snacks
+  		HashMap<String,Object>scrollObject67 =new HashMap<>();
+  		scrollObject67.put("direction", "down");
+  		scrollObject67.put("Dinner", "Dinner");
+  		driver.executeScript("mobile:scroll", scrollObject67);
+  		
   		//Click on protein cross icon
   		WebElement fatscross = driver.findElement(crossicon1);
   		fatscross.click();
-		
-		
-		
-		
+
 		Thread.sleep(4500);
         driver.terminateApp("com.cuesz.mobile");
 	}

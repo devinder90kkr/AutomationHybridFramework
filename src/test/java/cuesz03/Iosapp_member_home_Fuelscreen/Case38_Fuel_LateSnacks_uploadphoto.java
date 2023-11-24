@@ -9,6 +9,7 @@ import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
 
 import cuesz.pages.AppiummobileBase;
+import cuesz.utils.AllureUtils;
 import cuesz.utils.AppiumappUtils;
 import io.appium.java_client.AppiumBy;
 import io.qameta.allure.Description;
@@ -20,7 +21,7 @@ import io.qameta.allure.SeverityLevel;
 import io.qameta.allure.Story;
 
 @Epic ("Fuel upload screen functionlaity ")
-@Feature ("Verify Upload detail functionlaity for breakfast.")
+@Feature ("Verify Upload detail functionlaity for latesnacks.")
 public class Case38_Fuel_LateSnacks_uploadphoto extends AppiummobileBase {
 	
 	private By Homeclick 				= 		AppiumBy.iOSClassChain("**/XCUIElementTypeOther[`label == \"Home\"`][2]");
@@ -38,7 +39,7 @@ public class Case38_Fuel_LateSnacks_uploadphoto extends AppiummobileBase {
 	@Owner("QA") // Add the @Owner annotation to specify the executor
     @Severity(SeverityLevel.NORMAL)      
     @Description("Member check upload functionlaity verification")
-    @Story("Scroll to Fuel card and upload image for breakfast.")	
+    @Story("Scroll to Fuel card and upload image for latesnacks.")	
 	public void LateSnacks_uploadphoto() throws InterruptedException
 	{	
 		// Create an instance of AppiumUtils and pass the driver
@@ -95,6 +96,10 @@ public class Case38_Fuel_LateSnacks_uploadphoto extends AppiummobileBase {
 		values.get(2).sendKeys("PM");
 
 		driver.findElement(Doneclick).click();
+		
+		
+		  // Capture a screenshot and attach it to Allure
+	    AllureUtils.captureScreenshot(driver, "latesnacks5");
         
 		WebElement Submittap = driver.findElement(submittap);
 		Submittap.click();
@@ -141,6 +146,9 @@ public class Case38_Fuel_LateSnacks_uploadphoto extends AppiummobileBase {
 
 		driver.findElement(Doneclick).click();
         
+		  // Capture a screenshot and attach it to Allure
+	    AllureUtils.captureScreenshot(driver, "latesnacks6");
+		
 		WebElement Submittap1 = driver.findElement(submittap);
 		Submittap1.click();
 		
@@ -152,6 +160,9 @@ public class Case38_Fuel_LateSnacks_uploadphoto extends AppiummobileBase {
 	    //locate and click on toggel arrow 
 	    WebElement arrowright	= driver.findElement(arrowclick);
 	    arrowright.click();
+	    
+		  // Capture a screenshot and attach it to Allure
+	    AllureUtils.captureScreenshot(driver, "latesnacks7");
 	    
 	    //Locate and click on delete icon
 	    WebElement deleticon	= driver.findElement(Icondelete);
