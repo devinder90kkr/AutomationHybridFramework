@@ -127,8 +127,11 @@ public class Case30_Fuel_Earlysnacks_additionalfuel extends AppiummobileBase {
         fuelselection.click();
      
         Thread.sleep(4500);
+       
         
-        
+        driver.findElement(AppiumBy.iOSNsPredicateString("name == 'Early Snacks'")).click();
+        Thread.sleep(4500);
+          
         // Click on timer 
         WebElement Timerclick 	= driver.findElement(Time);
         Timerclick.click();
@@ -185,6 +188,8 @@ public class Case30_Fuel_Earlysnacks_additionalfuel extends AppiummobileBase {
         WebElement fuelselection2	= driver.findElement(ginfuelselectionc);
         fuelselection2.click();
         
+        
+        driver.findElement(AppiumBy.iOSNsPredicateString("name == 'Early Snacks'")).click();
   
         WebElement submit2 = driver.findElement(submitick);
 		submit2.click();

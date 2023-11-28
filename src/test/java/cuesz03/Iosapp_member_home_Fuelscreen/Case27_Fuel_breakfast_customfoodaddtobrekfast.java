@@ -93,7 +93,7 @@ public class Case27_Fuel_breakfast_customfoodaddtobrekfast extends AppiummobileB
         AllureUtils.captureScreenshot(driver, "Custom1");
         
 //        String searchText = "Git";
-        String searchText = "Gill";
+        String searchText = "Gil";
         int count = 1;
         String modifiedSearchText = searchText + count + "test";
 

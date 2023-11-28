@@ -60,12 +60,12 @@ public class Case31_Fuel_EarlySnacks_editadditionalfuel extends AppiummobileBase
         
         Thread.sleep(4500);        
         
-		// Method to scroll to perform screen
-		HashMap<String,Object>scrollObject1 =new HashMap<>();
-		scrollObject1.put("direction", "down");
-		scrollObject1.put("Breakfast", "Breakfast");
-		driver.executeScript("mobile:scroll", scrollObject1);
-		Thread.sleep(2000);
+//		// Method to scroll to perform screen
+//		HashMap<String,Object>scrollObject1 =new HashMap<>();
+//		scrollObject1.put("direction", "down");
+//		scrollObject1.put("Breakfast", "Breakfast");
+//		driver.executeScript("mobile:scroll", scrollObject1);
+//		Thread.sleep(2000);
         
     
         // Method to scroll to perform screen

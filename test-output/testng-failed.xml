@@ -1,64 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [Suite16]" guice-stage="DEVELOPMENT">
-  <test name="Test16(failed)">
+<suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
+  <test name="Default test(failed)">
     <classes>
-      <class name="cuesz03.Iosapp_member_home_Fuelscreen.Case21_Fuel_breakfast_recommendedfuel">
+      <class name="cuesz03.Iosapp_member_home_Fuelscreen.Case44_Fuel_Dinner_additionalfueldeletecase">
         <methods>
           <include name="Cueszbase"/>
-          <include name="Homescreen"/>
+          <include name="Fuel_Dinner_additional"/>
           <include name="tearDown"/>
         </methods>
-      </class> <!-- cuesz03.Iosapp_member_home_Fuelscreen.Case21_Fuel_breakfast_recommendedfuel -->
-      <class name="cuesz03.Iosapp_member_home_Fuelscreen.Case23_02_Fuel_breakfast_additionalfueldeletecase">
-        <methods>
-          <include name="Cueszbase"/>
-          <include name="Homescreen"/>
-          <include name="tearDown"/>
-        </methods>
-      </class> <!-- cuesz03.Iosapp_member_home_Fuelscreen.Case23_02_Fuel_breakfast_additionalfueldeletecase -->
-      <class name="cuesz03.Iosapp_member_home_Fuelscreen.Case23_01_Fuel_breakfast_editadditionalfuel">
-        <methods>
-          <include name="Cueszbase"/>
-          <include name="Homescreen"/>
-          <include name="tearDown"/>
-        </methods>
-      </class> <!-- cuesz03.Iosapp_member_home_Fuelscreen.Case23_01_Fuel_breakfast_editadditionalfuel -->
-      <class name="cuesz03.Iosapp_member_home_Fuelscreen.Case26_Fuel_breakfast_customfood">
-        <methods>
-          <include name="Cueszbase"/>
-          <include name="tearDown"/>
-          <include name="Homescreen"/>
-        </methods>
-      </class> <!-- cuesz03.Iosapp_member_home_Fuelscreen.Case26_Fuel_breakfast_customfood -->
-      <class name="cuesz03.Iosapp_member_home_Fuelscreen.Case22_Fuel_breakfast_additionalfuel">
-        <methods>
-          <include name="Cueszbase"/>
-          <include name="Homescreen"/>
-          <include name="tearDown"/>
-        </methods>
-      </class> <!-- cuesz03.Iosapp_member_home_Fuelscreen.Case22_Fuel_breakfast_additionalfuel -->
-      <class name="cuesz03.Iosapp_member_home_Fuelscreen.Case25_Fuel_breakfast_uploadphotogallery">
-        <methods>
-          <include name="Cueszbase"/>
-          <include name="Homescreen"/>
-          <include name="tearDown"/>
-        </methods>
-      </class> <!-- cuesz03.Iosapp_member_home_Fuelscreen.Case25_Fuel_breakfast_uploadphotogallery -->
-      <class name="cuesz03.Iosapp_member_home_Fuelscreen.Case27_Fuel_breakfast_customfoodaddtobrekfast">
-        <methods>
-          <include name="Cueszbase"/>
-          <include name="Homescreen"/>
-          <include name="tearDown"/>
-        </methods>
-      </class> <!-- cuesz03.Iosapp_member_home_Fuelscreen.Case27_Fuel_breakfast_customfoodaddtobrekfast -->
-      <class name="cuesz03.Iosapp_member_home_Fuelscreen.Case28_Fuel_breakfast_customfoodsearch">
-        <methods>
-          <include name="Cueszbase"/>
-          <include name="Homescreen"/>
-          <include name="tearDown"/>
-        </methods>
-      </class> <!-- cuesz03.Iosapp_member_home_Fuelscreen.Case28_Fuel_breakfast_customfoodsearch -->
+      </class> <!-- cuesz03.Iosapp_member_home_Fuelscreen.Case44_Fuel_Dinner_additionalfueldeletecase -->
     </classes>
-  </test> <!-- Test16(failed) -->
-</suite> <!-- Failed suite [Suite16] -->
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->
