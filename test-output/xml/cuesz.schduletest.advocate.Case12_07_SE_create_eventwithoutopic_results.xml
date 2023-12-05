@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Default test"
+<testsuite name="Test5"
            tests="1"
            failures="0"
            errors="0"
            skipped="0"
-           time="26.605">
+           time="28.451">
     <properties></properties>
 
 
 
             <testcase
                 name="advocatecreateEventwithoutpicTest"
-                time="26.605"
+                time="28.451"
                 classname="cuesz.schduletest.advocate.Case12_07_SE_create_eventwithoutopic">
             </testcase>
 </testsuite>

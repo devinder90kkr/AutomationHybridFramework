@@ -126,7 +126,7 @@ public class Case34_MSL_MemberBasicinfo extends BasePage {
 	        WebElement popupHeadingElement = driver.findElement(popHeadngelment);
 	        if (popupHeadingElement.isDisplayed()) {
 	            System.out.println("Popup with heading 'Gym' is open.");
-	        } else {
+	        } else {	
 	            System.out.println("Popup with heading 'Gym' is not open.");
 	        }
 

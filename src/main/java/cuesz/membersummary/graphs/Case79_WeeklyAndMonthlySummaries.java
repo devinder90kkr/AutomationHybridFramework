@@ -64,7 +64,7 @@ public class Case79_WeeklyAndMonthlySummaries extends BasePage {
             // Define individual dropdown IDs and corresponding option texts
             String[][] dropdownOptions = {
                 {"WeeklyAndMonthlySummariesPeriod", "Weekly", "Monthly"},
-                {"WeeklyAndMonthlySummariesDuration", "7 Days", "14 Days", "30 Days", "60 Days"},
+                {"WeeklyAndMonthlySummariesDuration", "1 Months", "2 Months", "3 Months", "4 Months"},
                 {"WeeklyAndMonthlySummariesHeartRateOptions", "Resting Heart Rate", "Heart Rate Variability", "Heart Rate During Live Perform", "Heart Rate During Perform Activity"},
                 
                 

@@ -44,10 +44,10 @@ public class Case03_editevent extends BasePage {
 	 public void Editevent() throws InterruptedException {
 	
 
-		Thread.sleep(2000);
+		Thread.sleep(3500);
 		driver.findElement(scheduleIcon).click();
 		
-	    Thread.sleep(2000);
+	    Thread.sleep(3500);
 	    driver.findElement(monthview).click();
 		
 	    // Capture a screenshot and attach it to Allure
@@ -77,9 +77,6 @@ public class Case03_editevent extends BasePage {
 //        }
         
         
-        
-        
-        
         // Find the element to scroll to the specified date on the calendar (matching only the day)
         WebElement element = driver.findElement(By.xpath("//button[@role='cell'][normalize-space()='" + day + "']"));
         ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);
@@ -88,7 +85,7 @@ public class Case03_editevent extends BasePage {
         WebElement dateElement = driver.findElement(By.xpath("//div[@data-date='" + eventDate + "']"));
         dateElement.click();
        
-        Thread.sleep(2000); 
+        Thread.sleep(3500); 
      // Find the elements containing the user labels
         List<WebElement> userLabels = driver.findElements(userlabel);
 
@@ -192,7 +189,7 @@ public class Case03_editevent extends BasePage {
 
         
 //        /*Select Event as as Live perform	*/
-//	    Thread.sleep(2000);
+//	    Thread.sleep(3500);
 //	    WebElement topicselection =driver.findElement(Topic);
 //	    Actions builder3 = new Actions(driver);
 //	    builder3.moveToElement(topicselection).click().sendKeys("Motion Evaluation Review").sendKeys(Keys.ENTER).perform();

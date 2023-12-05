@@ -106,6 +106,8 @@ public class Case34_Fuel_Lunch_additionalfuel extends AppiummobileBase {
         fuelselection.click();
       
         
+        
+        
         // Capture a screenshot and attach it to Allure
         AllureUtils.captureScreenshot(driver, "lunchadd2");
         

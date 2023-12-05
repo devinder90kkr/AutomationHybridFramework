@@ -78,32 +78,32 @@ public class Case67_Fueldashboard1 extends BasePage{
 				WebElement Insulincard = wait.until(ExpectedConditions.elementToBeClickable(driver.findElement(insulin)));
 				Insulincard.click();	
 				
-				 Thread.sleep(1500); 
+				 Thread.sleep(3500); 
 				 WebElement hormonescard  = driver.findElement(hormones);
 				 hormonescard.click();
 				 
-				 Thread.sleep(1500); 
+				 Thread.sleep(3500); 
 				 WebElement cardiocard = driver.findElement(cardio);
 				 cardiocard.click();
 				 
-				 Thread.sleep(1500); 
+				 Thread.sleep(3500); 
 				 WebElement gutcard = driver.findElement(gut);
 				 gutcard.click();
 				 
-				 Thread.sleep(1500); 
+				 Thread.sleep(3500); 
 				 WebElement braincard = driver.findElement(brain);
 				 braincard.click();
 				
-				 Thread.sleep(1500); 
+				 Thread.sleep(3500); 
 				 WebElement adrenalcard = driver.findElement(adrenal);
 				 adrenalcard.click();
 		
-				 Thread.sleep(1500); 
+				 Thread.sleep(3500); 
 				 WebElement Detoxcard  = driver.findElement(Detox);
 				 Detoxcard.click();
 				 
 				 
-				 Thread.sleep(1500); 
+				 Thread.sleep(3500); 
 				 WebElement lipidscard = driver.findElement(lipids);
 				 lipidscard.click();
 				 
@@ -155,7 +155,7 @@ public class Case67_Fueldashboard1 extends BasePage{
 			/****************************************************************************************************/
 			 // Find the <CardiotextArea> element by its ID
 			WebElement CardiotextAreaElement = driver.findElement(CardiotextArea);
-			 Thread.sleep(1500); 
+			 Thread.sleep(3500); 
 			// Scroll to the heading element
 			((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView({ behavior: 'smooth' });", CardiotextAreaElement);
 	
@@ -259,32 +259,32 @@ public class Case67_Fueldashboard1 extends BasePage{
 					WebElement Insulincard = wait.until(ExpectedConditions.elementToBeClickable(driver.findElement(insulin)));
 					Insulincard.click();	
 					
-					 Thread.sleep(1500); 
+					 Thread.sleep(3500); 
 					 WebElement hormonescard  = driver.findElement(hormones);
 					 hormonescard.click();
 					 
-					 Thread.sleep(1500); 
+					 Thread.sleep(3500); 
 					 WebElement cardiocard = driver.findElement(cardio);
 					 cardiocard.click();
 					 
-					 Thread.sleep(1500); 
+					 Thread.sleep(3500); 
 					 WebElement gutcard = driver.findElement(gut);
 					 gutcard.click();
 					 
-					 Thread.sleep(1500); 
+					 Thread.sleep(3500); 
 					 WebElement braincard = driver.findElement(brain);
 					 braincard.click();
 					
-					 Thread.sleep(1500); 
+					 Thread.sleep(3500); 
 					 WebElement adrenalcard = driver.findElement(adrenal);
 					 adrenalcard.click();
 			
-					 Thread.sleep(1500); 
+					 Thread.sleep(3500); 
 					 WebElement Detoxcard  = driver.findElement(Detox);
 					 Detoxcard.click();
 					 
 					 
-					 Thread.sleep(1500); 
+					 Thread.sleep(3500); 
 					 WebElement lipidscard = driver.findElement(lipids);
 					 lipidscard.click();
 					 

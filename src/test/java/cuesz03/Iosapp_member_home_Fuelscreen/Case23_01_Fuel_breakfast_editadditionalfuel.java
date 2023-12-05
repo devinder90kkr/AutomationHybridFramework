@@ -63,13 +63,6 @@ public class Case23_01_Fuel_breakfast_editadditionalfuel extends AppiummobileBas
         //Click on Fuel tab 
         driver.findElement(AppiumBy.accessibilityId("FUEL_SCREEN")).click();
         
-//     // Method to scroll to perform screen
-//        HashMap<String,Object>scrollObject1 =new HashMap<>();
-//        scrollObject1.put("direction", "down");
-//        scrollObject1.put("Beetroot", "Beetroot");
-//        driver.executeScript("mobile:scroll", scrollObject1);
-//        Thread.sleep(2000);
-//        
         
         // Edit feature testing
         WebElement Editbeetroot		= driver.findElement(editbeetroot);

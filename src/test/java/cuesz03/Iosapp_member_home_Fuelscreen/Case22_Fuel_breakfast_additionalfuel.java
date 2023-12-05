@@ -119,6 +119,14 @@ public class Case22_Fuel_breakfast_additionalfuel extends AppiummobileBase {
         WebElement backicon 		= driver.findElement(backtap);
         backicon.click();
         
+        Thread.sleep(3000);
+		// Method to scroll to perform screen
+		HashMap<String,Object>scrollObject56 =new HashMap<>();
+		scrollObject56.put("direction", "down");
+		scrollObject56.put("fagotplus", "fagotplus");
+		driver.executeScript("mobile:scroll", scrollObject56);
+		Thread.sleep(2000);
+        
         
         WebElement faggotplus		= driver.findElement(fagotplus);
         int numberOfClicks = 3;
@@ -189,6 +197,14 @@ public class Case22_Fuel_breakfast_additionalfuel extends AppiummobileBase {
         
         WebElement fuelselection1	= driver.findElement(meat);
         fuelselection1.click();
+        
+        Thread.sleep(3000);
+		// Method to scroll to perform screen
+		HashMap<String,Object>scrollObject57 =new HashMap<>();
+		scrollObject57.put("direction", "down");
+		scrollObject57.put("meatplus", "meatplus");
+		driver.executeScript("mobile:scroll", scrollObject57);
+		Thread.sleep(2000);
            
         WebElement meatclickplus		= driver.findElement(meatplus);
         int numberOfClicks21 = 1;

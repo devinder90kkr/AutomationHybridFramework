@@ -6,14 +6,14 @@ import java.util.Map;
 import org.openqa.selenium.By;
 import io.appium.java_client.AppiumDriver;
 
-public class DateUtils {
+public class DateUtilspast2days {
 
-    public static void clickOnPreviousDay(AppiumDriver driver) {
+    public static void clickOnDayBeforeYesterday(AppiumDriver driver) {
         String currentDay = getCurrentDay();
         Map<String, String> dayToAccessibilityIdMap = getDayToAccessibilityIdMap();
-        String pastDay = getPastDay(currentDay);
-        String pastDayAccessibilityId = dayToAccessibilityIdMap.get(pastDay);
-        driver.findElement(By.id(pastDayAccessibilityId)).click();
+        String dayBeforeYesterday = getDayBeforeYesterday(currentDay);
+        String dayBeforeYesterdayAccessibilityId = dayToAccessibilityIdMap.get(dayBeforeYesterday);
+        driver.findElement(By.id(dayBeforeYesterdayAccessibilityId)).click();
     }
 
     private static String getCurrentDay() {
@@ -22,11 +22,16 @@ public class DateUtils {
         return dayToDayString(dayOfWeek);
     }
 
-    private static String getPastDay(String currentDay) {
+    private static String getDayBeforeYesterday(String currentDay) {
         String[] days = {"Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"};
         for (int i = 0; i < days.length; i++) {
             if (days[i].equals(currentDay)) {
-                return days[i == 0 ? 6 : i - 1];
+                // Calculate the day before yesterday, considering wrap-around
+                int indexTwoDaysBefore = i - 2;
+                if (indexTwoDaysBefore < 0) {
+                    indexTwoDaysBefore += 7; // Wrap around to the end of the array
+                }
+                return days[indexTwoDaysBefore];
             }
         }
         return null;
@@ -49,7 +54,7 @@ public class DateUtils {
             case Calendar.SATURDAY:
                 return "Sat";
             default:
-                return null; // Handle unexpected case
+                return null;
         }
     }
 
@@ -57,12 +62,6 @@ public class DateUtils {
         Map<String, String> map = new HashMap<>();
         map.put("Sun", "SunClicked");
         map.put("Mon", "MonClicked");
-        map.put("Tue", "TueClicked");
-        map.put("Wed", "WedClicked");
-        map.put("Thu", "ThuClicked");
-        map.put("Fri", "FriClicked");
-        map.put("Sat", "SatClicked");
-        
         // ... other days
         return map;
     }

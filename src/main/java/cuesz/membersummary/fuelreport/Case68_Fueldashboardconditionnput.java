@@ -92,7 +92,7 @@ public class Case68_Fueldashboardconditionnput extends BasePage{
 						    
 						}
 					
-					 Thread.sleep(2500);
+					 Thread.sleep(3500);
 					   /************************Member Preferred foods details**************************************************************************/
 				try {	 
 					 WebElement vegancard = driver.findElement(vegan);

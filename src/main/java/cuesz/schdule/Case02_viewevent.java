@@ -32,10 +32,10 @@ public class Case02_viewevent extends BasePage {
 	@Test
 	 public void Viewevent() throws InterruptedException {
 		 		
-		Thread.sleep(2000);
+		Thread.sleep(3500);
 		driver.findElement(scheduleIcon).click();
 		
-	    Thread.sleep(2000);
+	    Thread.sleep(3500);
 	    driver.findElement(monthview).click();   
 	   
 	    // Pass the event date from script one to script two
@@ -86,7 +86,7 @@ public class Case02_viewevent extends BasePage {
         
         Thread.sleep(3000);
         //driver.findElement(By.xpath("(//span[contains(text(),'Kumar Devinder,')])[15]")).click();
-        //Thread.sleep(2000);
+        //Thread.sleep(3500);
         
      // Find the elements containing the user labels
         List<WebElement> userLabels = driver.findElements(userlabel);
@@ -105,7 +105,7 @@ public class Case02_viewevent extends BasePage {
         }
   
         
-Thread.sleep(2000);
+Thread.sleep(3500);
         
 	
 		}

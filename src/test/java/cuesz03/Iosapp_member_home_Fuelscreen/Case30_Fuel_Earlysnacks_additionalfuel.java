@@ -122,10 +122,17 @@ public class Case30_Fuel_Earlysnacks_additionalfuel extends AppiummobileBase {
         WebElement Keypaddone	= driver.findElement(doneclick);
         Keypaddone.click();
         
-        
         WebElement fuelselection	= driver.findElement(cinamonfuelselection);
         fuelselection.click();
-     
+
+        Thread.sleep(3000);
+		// Method to scroll to perform screen
+		HashMap<String,Object>scrollObject15 =new HashMap<>();
+		scrollObject15.put("direction", "down");
+		scrollObject15.put("cinamonfuelselection", "cinamonfuelselection");
+		driver.executeScript("mobile:scroll", scrollObject15);
+        
+        
         Thread.sleep(4500);
        
         
@@ -187,6 +194,13 @@ public class Case30_Fuel_Earlysnacks_additionalfuel extends AppiummobileBase {
 
         WebElement fuelselection2	= driver.findElement(ginfuelselectionc);
         fuelselection2.click();
+        Thread.sleep(3000);
+		// Method to scroll to perform screen
+		HashMap<String,Object>scrollObject16 =new HashMap<>();
+		scrollObject16.put("direction", "down");
+		scrollObject16.put("ginfuelselectionc", "ginfuelselectionc");
+		driver.executeScript("mobile:scroll", scrollObject16);
+        
         
         
         driver.findElement(AppiumBy.iOSNsPredicateString("name == 'Early Snacks'")).click();

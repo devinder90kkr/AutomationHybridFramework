@@ -3,20 +3,27 @@
 <suite name="Failed suite [Suite16]" guice-stage="DEVELOPMENT">
   <test name="Test16(failed)">
     <classes>
-      <class name="cuesz03.Iosapp_member_home_Fuelscreen.Case32_Fuel_EarlySnacks_uploadphotogallery">
-        <methods>
-          <include name="Cueszbase"/>
-          <include name="Fuel_EarlySnacks_uploadphotogallery"/>
-          <include name="tearDown"/>
-        </methods>
-      </class> <!-- cuesz03.Iosapp_member_home_Fuelscreen.Case32_Fuel_EarlySnacks_uploadphotogallery -->
-      <class name="cuesz03.Iosapp_member_home_Fuelscreen.Case31_Fuel_EarlySnacks_editadditionalfuel">
+      <class name="cuesz03.Iosapp_member_home_Fuelscreen.Case26_Fuel_breakfast_customfood">
         <methods>
           <include name="Cueszbase"/>
           <include name="tearDown"/>
-          <include name="Fuel_EarlySnacks_editadditionalfuel"/>
+          <include name="Homescreen"/>
         </methods>
-      </class> <!-- cuesz03.Iosapp_member_home_Fuelscreen.Case31_Fuel_EarlySnacks_editadditionalfuel -->
+      </class> <!-- cuesz03.Iosapp_member_home_Fuelscreen.Case26_Fuel_breakfast_customfood -->
+      <class name="cuesz03.Iosapp_member_home_Fuelscreen.Case27_Fuel_breakfast_customfoodaddtobrekfast">
+        <methods>
+          <include name="Cueszbase"/>
+          <include name="Homescreen"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- cuesz03.Iosapp_member_home_Fuelscreen.Case27_Fuel_breakfast_customfoodaddtobrekfast -->
+      <class name="cuesz03.Iosapp_member_home_Fuelscreen.Case28_Fuel_breakfast_customfoodsearch">
+        <methods>
+          <include name="Cueszbase"/>
+          <include name="Homescreen"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- cuesz03.Iosapp_member_home_Fuelscreen.Case28_Fuel_breakfast_customfoodsearch -->
     </classes>
   </test> <!-- Test16(failed) -->
 </suite> <!-- Failed suite [Suite16] -->

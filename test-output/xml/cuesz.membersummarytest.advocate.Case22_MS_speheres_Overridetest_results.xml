@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Test"
+<testsuite name="Default test"
            tests="1"
            failures="0"
            errors="0"
            skipped="0"
-           time="65.427">
+           time="64.233">
     <properties></properties>
 
 
 
             <testcase
                 name="advocateoverridefeatureTest"
-                time="65.427"
+                time="64.233"
                 classname="cuesz.membersummarytest.advocate.Case22_MS_speheres_Overridetest">
             </testcase>
 </testsuite>

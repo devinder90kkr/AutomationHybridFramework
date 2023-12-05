@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Test"
+<testsuite name="Default test"
            tests="1"
            failures="0"
            errors="0"
            skipped="0"
-           time="53.032">
+           time="62.848">
     <properties></properties>
 
 
 
             <testcase
                 name="advocateMemberhoverTest"
-                time="53.032"
+                time="62.848"
                 classname="cuesz.membersummarygraph.advocate.Case79_WeeklyAndMonthlySummariestest">
             </testcase>
 </testsuite>

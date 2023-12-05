@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test name="Default test(failed)">
     <classes>
-      <class name="cuesz03.Iosapp_member_home_Fuelscreen.Case44_Fuel_Dinner_additionalfueldeletecase">
+      <class name="cuesz.membersummarygraph.advocate.Case79_WeeklyAndMonthlySummariestest">
         <methods>
-          <include name="Cueszbase"/>
-          <include name="Fuel_Dinner_additional"/>
+          <include name="setUp"/>
+          <include name="advocateMemberhoverTest"/>
           <include name="tearDown"/>
         </methods>
-      </class> <!-- cuesz03.Iosapp_member_home_Fuelscreen.Case44_Fuel_Dinner_additionalfueldeletecase -->
+      </class> <!-- cuesz.membersummarygraph.advocate.Case79_WeeklyAndMonthlySummariestest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

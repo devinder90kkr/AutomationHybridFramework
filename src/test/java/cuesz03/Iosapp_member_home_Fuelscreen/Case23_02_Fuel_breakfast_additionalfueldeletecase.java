@@ -85,6 +85,15 @@ public class Case23_02_Fuel_breakfast_additionalfueldeletecase extends Appiummob
         WebElement Keypaddone	= driver.findElement(doneclick);
         Keypaddone.click();
         
+        Thread.sleep(3000);
+		// Method to scroll to perform screen
+		HashMap<String,Object>scrollObject57 =new HashMap<>();
+		scrollObject57.put("direction", "down");
+		scrollObject57.put("fish", "fish");
+		driver.executeScript("mobile:scroll", scrollObject57);
+		Thread.sleep(2000);
+        
+        
         WebElement fuelselection	= driver.findElement(fish);
         fuelselection.click();
 		

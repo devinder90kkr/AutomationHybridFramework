@@ -11,7 +11,7 @@ import org.testng.annotations.Test;
 import cuesz.pages.AppiummobileBase;
 import cuesz.utils.AllureUtils;
 import cuesz.utils.AppiumappUtils;
-import cuesz.utils.DateUtils;
+import cuesz.utils.DateUtilsAppium;
 import io.appium.java_client.AppiumBy;
 import io.qameta.allure.Description;
 import io.qameta.allure.Epic;
@@ -23,7 +23,7 @@ import io.qameta.allure.Story;
 
 @Epic ("Fuel screen detail ")
 @Feature ("Verify Fuel detail functionlaity related to Optimal fuel.")
-public class Case46_Fuel_Pastda_brekfastactivity extends AppiummobileBase {
+public class Case45_Fuel_Pastday1_brekfastactivity extends AppiummobileBase {
 	
 	private By Homeclick 		= 		AppiumBy.iOSClassChain("**/XCUIElementTypeOther[`label == \"Home\"`][2]");
 	private By plusadd			= 		AppiumBy.accessibilityId("BreakfastAddIcon");
@@ -66,7 +66,7 @@ public class Case46_Fuel_Pastda_brekfastactivity extends AppiummobileBase {
 		
 		
 		// Use the utility method
-	    DateUtils.clickOnPreviousDay(driver);
+		DateUtilsAppium.clickOnPreviousDay(driver);
 		
 		Thread.sleep(3000);
 		// Method to scroll to perform screen
@@ -126,6 +126,13 @@ public class Case46_Fuel_Pastda_brekfastactivity extends AppiummobileBase {
         WebElement backicon 		= driver.findElement(backtap);
         backicon.click();
         
+        Thread.sleep(3000);
+		// Method to scroll to perform screen
+		HashMap<String,Object>scrollObject1 =new HashMap<>();
+		scrollObject1.put("direction", "down");
+		scrollObject1.put("fagotplus", "fagotplus");
+		driver.executeScript("mobile:scroll", scrollObject1);
+		Thread.sleep(2000);
         
         WebElement faggotplus		= driver.findElement(fagotplus);
         int numberOfClicks = 3;
@@ -249,26 +256,29 @@ public class Case46_Fuel_Pastda_brekfastactivity extends AppiummobileBase {
         
         Thread.sleep(3000);
 		// Method to scroll to perform screen
-		HashMap<String,Object>scrollObject1 =new HashMap<>();
-		scrollObject1.put("direction", "up");
-		scrollObject1.put("Current 7 days", "Current 7 days");
-		driver.executeScript("mobile:scroll", scrollObject1);
+		HashMap<String,Object>scrollObject11 =new HashMap<>();
+		scrollObject11.put("direction", "up");
+		scrollObject11.put("Current 7 days", "Current 7 days");
+		driver.executeScript("mobile:scroll", scrollObject11);
 		Thread.sleep(2000);
         
         // Use the utility method
-	    DateUtils.clickOnPreviousDay(driver);
+		DateUtilsAppium.clickOnPreviousDay(driver);
 			
         //Click on Fuel tab 
         driver.findElement(AppiumBy.accessibilityId("FUEL_SCREEN")).click();
         
         Thread.sleep(3000);
 		// Method to scroll to perform screen
-		HashMap<String,Object>scrollObject11 =new HashMap<>();
-		scrollObject11.put("direction", "down");
-		scrollObject11.put("plusadd", "plusadd");
-		driver.executeScript("mobile:scroll", scrollObject11);
+		HashMap<String,Object>scrollObject111 =new HashMap<>();
+		scrollObject111.put("direction", "down");
+		scrollObject111.put("plusadd", "plusadd");
+		driver.executeScript("mobile:scroll", scrollObject111);
 		Thread.sleep(2000);
     
+		
+		
+		
         
 		Thread.sleep(4500);
         driver.terminateApp("com.cuesz.mobile");

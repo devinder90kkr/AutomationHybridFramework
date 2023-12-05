@@ -29,7 +29,7 @@ public class Case12_Perform_additionalactivity_deleteprocess extends Appiummobil
 	private By perfomplus	=	 AppiumBy.accessibilityId("AddEvent");
 	private By additionalperform	= AppiumBy.accessibilityId("Start My Perform Activity");
 	private By cross_additionalpopup 	= AppiumBy.accessibilityId("CrossClicked");
-//	private By searcharea			= AppiumBy.accessibilityId("EnterActivityName");
+	private By searcharea			= AppiumBy.accessibilityId("EnterActivityName");
 	private By doneclick			= AppiumBy.accessibilityId("Done");
 	private By selectactivity		= AppiumBy.xpath("(//XCUIElementTypeOther[@name=\"Baseball \"])[3]");
 	private By deletebaseball		= AppiumBy.accessibilityId("Baseball DeleteIcon");
@@ -87,41 +87,40 @@ public class Case12_Perform_additionalactivity_deleteprocess extends Appiummobil
 		WebElement startmyperformactivity2 	= driver.findElement(additionalperform);
 		startmyperformactivity2.click();
 		
-//		// Enter text for Search field 
-//		WebElement Additonalperformsearch	= driver.findElement(searcharea);
-//		Additonalperformsearch.sendKeys("Baseball");
-	
 		// Enter text for Search field 
-		WebElement Additonalperformsearch1	= driver.findElement(AppiumBy.iOSClassChain("label == \"B\""));
+		WebElement Additonalperformsearch	= driver.findElement(searcharea);
+		Additonalperformsearch.click();	
+		// Enter text for Search field 
+		WebElement Additonalperformsearch1	= driver.findElement(AppiumBy.iOSNsPredicateString("label == \"B\""));
 		Additonalperformsearch1.click();
 
 		// Enter text for Search field 
-		WebElement Additonalperformsearch2	= driver.findElement(AppiumBy.iOSClassChain("label == \"a\""));
+		WebElement Additonalperformsearch2	= driver.findElement(AppiumBy.iOSNsPredicateString("label == \"a\""));
 		Additonalperformsearch2.click();
 
 		// Enter text for Search field 
-		WebElement Additonalperformsearch3	= driver.findElement(AppiumBy.iOSClassChain("label == \"s\""));
+		WebElement Additonalperformsearch3	= driver.findElement(AppiumBy.iOSNsPredicateString("label == \"s\""));
 		Additonalperformsearch3.click();
 
 		// Enter text for Search field 
-		WebElement Additonalperformsearch4	= driver.findElement(AppiumBy.iOSClassChain("label == \"e\""));
+		WebElement Additonalperformsearch4	= driver.findElement(AppiumBy.iOSNsPredicateString("label == \"e\""));
 		Additonalperformsearch4.click();
 		
 
 		// Enter text for Search field 
-		WebElement Additonalperformsearch5	= driver.findElement(AppiumBy.iOSClassChain("label == \"b\""));
+		WebElement Additonalperformsearch5	= driver.findElement(AppiumBy.iOSNsPredicateString("label == \"b\""));
 		Additonalperformsearch5.click();
 
 		// Enter text for Search field 
-		WebElement Additonalperformsearch6	= driver.findElement(AppiumBy.iOSClassChain("label == \"a\""));
+		WebElement Additonalperformsearch6	= driver.findElement(AppiumBy.iOSNsPredicateString("label == \"a\""));
 		Additonalperformsearch6.click();
 		
 		// Enter text for Search field 
-		WebElement Additonalperformsearch7	= driver.findElement(AppiumBy.iOSClassChain("label == \"l\""));
+		WebElement Additonalperformsearch7	= driver.findElement(AppiumBy.iOSNsPredicateString("label == \"l\""));
 		Additonalperformsearch7.click();
 		
 		// Enter text for Search field 
-		WebElement Additonalperformsearch8	= driver.findElement(AppiumBy.iOSClassChain("label == \"l\""));
+		WebElement Additonalperformsearch8	= driver.findElement(AppiumBy.iOSNsPredicateString("label == \"l\""));
 		Additonalperformsearch8.click();
 		
 		

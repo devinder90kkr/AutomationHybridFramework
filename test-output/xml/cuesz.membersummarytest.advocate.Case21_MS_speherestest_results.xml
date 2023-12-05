@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Test"
+<testsuite name="Default test"
            tests="1"
            failures="0"
            errors="0"
            skipped="0"
-           time="44.661">
+           time="46.043">
     <properties></properties>
 
 
 
             <testcase
                 name="advocatespheredataTest"
-                time="44.661"
+                time="46.043"
                 classname="cuesz.membersummarytest.advocate.Case21_MS_speherestest">
             </testcase>
 </testsuite>

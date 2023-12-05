@@ -49,21 +49,21 @@ public class Case01_createvent extends BasePage {
 			utils.clickaddnewevent();
 				        
 			/*Enter date values*/
-			Thread.sleep(3000);
+			Thread.sleep(3500);
 		    WebElement datefield = driver.findElement(Date);
 		    Actions builder1 = new Actions(driver);
 		    builder1.moveToElement(datefield).click().sendKeys(eventDate).sendKeys(Keys.ENTER).perform();
 		   
 		    /*Enter values for start time*/
-		    Thread.sleep(2000);
+		    Thread.sleep(3500);
 		    WebElement startTime =driver.findElement(StartTime);
 		    Actions builder = new Actions(driver);
 		    builder.moveToElement(startTime).click().sendKeys("06:30 Pm").perform();
-		    Thread.sleep(2000);
+		    Thread.sleep(3500);
 		    builder.sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.ENTER).perform();
 	       
 		    /*Enter values for end time	*/
-		    Thread.sleep(2000);
+		    Thread.sleep(3500);
 		    WebElement endTime =driver.findElement(EndTime);
 		    Actions builder11 = new Actions(driver);
 		    builder11.moveToElement(endTime).click().sendKeys("07:30 PM").sendKeys(Keys.ENTER).perform();
@@ -71,19 +71,19 @@ public class Case01_createvent extends BasePage {
 	        AllureUtils.captureScreenshot(driver, "fuel_report_screenshot");
 	        
 		    /*Select Event as as Live perform	*/
-		    Thread.sleep(2000);
+		    Thread.sleep(3500);
 		    WebElement topicselection =driver.findElement(Topic);
 		    Actions builder2 = new Actions(driver);
 		    builder2.moveToElement(topicselection).click().sendKeys("Live perform session").sendKeys(Keys.ENTER).perform();
 		    
 		    /*Select Event as as member selection perform	*/
-		    Thread.sleep(2000);
+		    Thread.sleep(3500);
 		    WebElement memberSelection =driver.findElement(Member);
 		    Actions builder3 = new Actions(driver);
 		    builder3.moveToElement(memberSelection).click().sendKeys(" Kumar Devinder").sendKeys(Keys.ENTER).perform();
 
 		    /*Select Coach & advocate from dropdown list*/
-		    Thread.sleep(2000);
+		    Thread.sleep(3500);
 		    WebElement staffSelection =driver.findElement(Staff);
 		    Actions builder4 = new Actions(driver);
 		    builder4.moveToElement(staffSelection).click().sendKeys("seakfreight").sendKeys(Keys.ENTER).perform();

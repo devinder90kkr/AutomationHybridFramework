@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Test"
+<testsuite name="Test10"
            tests="1"
            failures="0"
            errors="0"
            skipped="0"
-           time="55.376">
+           time="98.479">
     <properties></properties>
 
 
 
             <testcase
                 name="advocateMemberhoverTest"
-                time="55.376"
+                time="98.479"
                 classname="cuesz.membersummarygraph.advocate.Case63_CorrelationAnalysistest">
             </testcase>
 </testsuite>
