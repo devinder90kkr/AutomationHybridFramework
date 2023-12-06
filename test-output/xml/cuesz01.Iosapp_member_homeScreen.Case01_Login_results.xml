@@ -4,14 +4,14 @@
            failures="0"
            errors="0"
            skipped="0"
-           time="41.144">
+           time="44.475">
     <properties></properties>
 
 
 
             <testcase
                 name="login"
-                time="41.144"
+                time="44.475"
                 classname="cuesz01.Iosapp_member_homeScreen.Case01_Login">
             </testcase>
 </testsuite>

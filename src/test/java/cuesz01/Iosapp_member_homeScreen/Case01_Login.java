@@ -62,10 +62,10 @@ public class Case01_Login extends AppiummobileBase {
 //		driver.findElement(AppiumBy.iOSNsPredicateString("name == \"SignInTextInput\"")).sendKeys(" 9671114235");
 		
 		Thread.sleep(5000);
-		WebElement mobfield1 = driver.findElement(AppiumBy.accessibilityId("9"));
+		WebElement mobfield1 = driver.findElement(AppiumBy.xpath("//XCUIElementTypeKey[@name=\"9\"]"));
 		mobfield1.click();
 		
-		WebElement mobfield2 = driver.findElement(AppiumBy.accessibilityId("6"));
+		WebElement mobfield2 = driver.findElement(AppiumBy.xpath("//XCUIElementTypeKey[@name=\"6\"]"));
 		mobfield2.click();
 		
 		WebElement mobfield3 = driver.findElement(AppiumBy.xpath("//XCUIElementTypeKey[@name=\"7\"]"));

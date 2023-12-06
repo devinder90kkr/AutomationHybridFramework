@@ -82,8 +82,8 @@ public class Case26_Fuel_breakfast_customfood extends AppiummobileBase {
         keypaddone.click();
         
 
-//        String searchText = "Git";
-        String searchText = "Gil";
+        String searchText = "Git";
+//        String searchText = "Gil";
         int count = 1;
         String modifiedSearchText = searchText + count + "test";
 

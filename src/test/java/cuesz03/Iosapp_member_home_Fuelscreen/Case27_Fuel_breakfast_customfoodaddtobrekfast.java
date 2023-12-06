@@ -92,8 +92,8 @@ public class Case27_Fuel_breakfast_customfoodaddtobrekfast extends AppiummobileB
         // Capture a screenshot and attach it to Allure
         AllureUtils.captureScreenshot(driver, "Custom1");
         
-//        String searchText = "Git";
-        String searchText = "Gis";
+        String searchText = "Git";
+//        String searchText = "Gis";
         int count = 1;
         String modifiedSearchText = searchText + count + "test";
 
