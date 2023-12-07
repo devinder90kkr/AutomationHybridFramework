@@ -9,5 +9,6 @@ public class Configuration {
     
     public static final String EDGE_DRIVER_PATH =	"/Users/chicmic/Documents/Edgedriver-mac-x64/msedgedriver";
     
+    public static final String SAFARI_DRIVER_PATH =	"/usr/bin/safaridriver";
     
 }

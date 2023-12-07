@@ -2,24 +2,20 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-12-07T12:33:30Z" name="Default suite" finished-at="2023-12-07T12:34:04Z" duration-ms="33666">
+  <suite started-at="2023-12-07T14:09:52Z" name="Default suite" finished-at="2023-12-07T14:10:05Z" duration-ms="13367">
     <groups>
     </groups>
-    <test started-at="2023-12-07T12:33:30Z" name="Default test" finished-at="2023-12-07T12:34:04Z" duration-ms="33666">
-      <class name="cuesz.dashboard.advocate.Step12_DB_navlinktest">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:cuesz.dashboard.advocate.Step12_DB_navlinktest@3f9342d4]" started-at="2023-12-07T18:03:30Z" name="setUp" finished-at="2023-12-07T18:03:34Z" duration-ms="3878" status="PASS">
+    <test started-at="2023-12-07T14:09:52Z" name="Default test" finished-at="2023-12-07T14:10:05Z" duration-ms="13367">
+      <class name="cuesz.logintest.AdvocateLogin">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:cuesz.logintest.AdvocateLogin@58326051]" started-at="2023-12-07T19:39:52Z" name="setUp" finished-at="2023-12-07T19:40:01Z" duration-ms="9258" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="advocateScheduleEventTest()[pri:0, instance:cuesz.dashboard.advocate.Step12_DB_navlinktest@3f9342d4]" started-at="2023-12-07T18:03:34Z" name="advocateScheduleEventTest" finished-at="2023-12-07T18:04:03Z" duration-ms="29497" status="PASS">
+        <test-method signature="testAdvocateLogin()[pri:0, instance:cuesz.logintest.AdvocateLogin@58326051]" started-at="2023-12-07T19:40:01Z" name="testAdvocateLogin" finished-at="2023-12-07T19:40:05Z" duration-ms="3851" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- advocateScheduleEventTest -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:cuesz.dashboard.advocate.Step12_DB_navlinktest@3f9342d4]" started-at="2023-12-07T18:04:03Z" name="tearDown" finished-at="2023-12-07T18:04:04Z" duration-ms="213" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- cuesz.dashboard.advocate.Step12_DB_navlinktest -->
+        </test-method> <!-- testAdvocateLogin -->
+      </class> <!-- cuesz.logintest.AdvocateLogin -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

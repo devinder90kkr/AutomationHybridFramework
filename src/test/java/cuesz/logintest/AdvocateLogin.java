@@ -50,7 +50,6 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 import cuesz.pages.Loginpage;
-import cuesz.utils.AllureUtils;
 import cuesz.utils.Configuration;
 import cuesz.utils.WebDriverManager;
 import io.qameta.allure.Allure;
