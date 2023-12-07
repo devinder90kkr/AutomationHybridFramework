@@ -1,5 +1,9 @@
 package cuesz.dashboard.coach;
 
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.util.Properties;
+
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
@@ -16,7 +20,11 @@ public class Step13_DB_notificationtest {
 
     @BeforeClass
     public void setUp() {
-        driver = WebDriverManager.getDriver();
+    	  // Read the browser information from the configuration file
+        String browser = getBrowserFromConfigFile();
+
+        // Set up WebDriverManager with the specified browser
+        driver = WebDriverManager.getDriver(browser);
         driver.manage().window().maximize();
         CaochLogin = new CoachLogin(); // Initialize the CaochLogin object
         dashboardPage = new Step13_DB_notification(driver);
@@ -34,6 +42,15 @@ public class Step13_DB_notificationtest {
         // Add assertions or verifications for successful event scheduling
     }
 
+    private String getBrowserFromConfigFile() {
+        Properties properties = new Properties();
+        try (FileInputStream fis = new FileInputStream("config.properties")) {
+            properties.load(fis);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return properties.getProperty("browser", "chrome");
+    }
     @AfterClass
     public void tearDown() {
         WebDriverManager.quitDriver();

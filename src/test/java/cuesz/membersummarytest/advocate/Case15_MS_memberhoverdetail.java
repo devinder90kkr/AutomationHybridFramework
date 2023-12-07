@@ -1,7 +1,10 @@
 package cuesz.membersummarytest.advocate;
 
 import java.io.ByteArrayOutputStream;
+import java.io.FileInputStream;
+import java.io.IOException;
 import java.io.PrintStream;
+import java.util.Properties;
 
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterClass;
@@ -28,7 +31,10 @@ public class Case15_MS_memberhoverdetail {
 
     @BeforeClass
     public void setUp() {
-        driver = WebDriverManager.getDriver();
+    	// Read the browser information from the configuration file
+        String browser = getBrowserFromConfigFile();
+        // Set up WebDriverManager with the specified browser
+        driver = WebDriverManager.getDriver(browser);
         driver.manage().window().maximize();
         advocateLogin = new AdvocateLogin(); // Initialise the advocateLogin object
         membersummaryPage = new Case15_MS_Memberhoverdetail(driver);
@@ -83,6 +89,16 @@ public class Case15_MS_memberhoverdetail {
         
         return "https://pre-staging.app.cuesz.com/member-summary"; // Replace with your actual dynamic link
     }
+ 
+ private String getBrowserFromConfigFile() {
+     Properties properties = new Properties();
+     try (FileInputStream fis = new FileInputStream("config.properties")) {
+         properties.load(fis);
+     } catch (IOException e) {
+         e.printStackTrace();
+     }
+     return properties.getProperty("browser", "chrome");
+ }
     @AfterClass
     public void tearDown() {
         WebDriverManager.quitDriver();

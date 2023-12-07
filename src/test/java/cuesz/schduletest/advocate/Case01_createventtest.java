@@ -1,6 +1,8 @@
  package cuesz.schduletest.advocate;
 
 import java.io.ByteArrayOutputStream;
+import java.io.FileInputStream;
+import java.io.IOException;
 import java.io.PrintStream;
 
 import org.openqa.selenium.WebDriver;
@@ -22,6 +24,7 @@ import io.qameta.allure.SeverityLevel;
 import io.qameta.allure.Story;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Properties;
 
 
 @Epic ("Advocate Scheduling")
@@ -36,7 +39,11 @@ public class Case01_createventtest {
 
     @BeforeClass
     public void setUp() {
-        driver = WebDriverManager.getDriver();
+    	// Read the browser information from the configuration file
+        String browser = getBrowserFromConfigFile();
+        // Set up WebDriverManager with the specified browser
+        driver = WebDriverManager.getDriver(browser);
+        
         driver.manage().window().maximize();
         advocateLogin = new AdvocateLogin(); // Initialise the advocateLogin object
         scheduleEventPage = new Case01_createvent(driver);
@@ -104,6 +111,16 @@ public class Case01_createventtest {
         
         return "https://pre-staging.app.cuesz.com/schedule-master"; // Replace with your actual dynamic link
     }
+ private String getBrowserFromConfigFile() {
+     Properties properties = new Properties();
+     try (FileInputStream fis = new FileInputStream("config.properties")) {
+         properties.load(fis);
+     } catch (IOException e) {
+         e.printStackTrace();
+     }
+     return properties.getProperty("browser", "chrome");
+ }
+ 
     @AfterClass
     public void tearDown() {
     	// Log all captured status codes in Allure

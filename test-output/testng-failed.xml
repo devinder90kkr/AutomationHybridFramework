@@ -3,14 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test name="Default test(failed)">
     <classes>
-      <class name="cuesz01.Iosapp_member_homeScreen.Case01_Login">
+      <class name="cuesz.dashboard.coach.Step13_DB_notificationtest">
         <methods>
-          <include name="Cueszbase"/>
-          <include name="login"/>
-          <include name="tearDown"/>
+          <include name="advocateScheduleEventTest"/>
           <include name="setUp"/>
+          <include name="tearDown"/>
         </methods>
-      </class> <!-- cuesz01.Iosapp_member_homeScreen.Case01_Login -->
+      </class> <!-- cuesz.dashboard.coach.Step13_DB_notificationtest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

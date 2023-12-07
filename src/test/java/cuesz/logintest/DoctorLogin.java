@@ -1,5 +1,9 @@
 package cuesz.logintest;
 
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.util.Properties;
+
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
@@ -15,8 +19,11 @@ public class DoctorLogin {
     private Loginpage loginPage;
 
     @BeforeClass
-    public void setUp() {
-        driver = WebDriverManager.getDriver();
+    public void setUp() { // Read the browser information from the configuration file
+        String browser = getBrowserFromConfigFile();
+
+        // Set up WebDriverManager with the specified browser
+        driver = WebDriverManager.getDriver(browser);
         driver.manage().window().maximize();
         driver.get(Configuration.BASE_URL);
         loginPage = new Loginpage(driver);
@@ -31,10 +38,21 @@ public class DoctorLogin {
         String password = "User!234";
         Allure.attachment("Login Details", "Username: " + username + "\nPassword: " + password);
     }
-    @AfterClass
-    public void tearDown() {
-        WebDriverManager.quitDriver();
+    
+    
+    private String getBrowserFromConfigFile() {
+        Properties properties = new Properties();
+        try (FileInputStream fis = new FileInputStream("config.properties")) {
+            properties.load(fis);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return properties.getProperty("browser", "chrome");
     }
+//    @AfterClass
+//    public void tearDown() {
+//        WebDriverManager.quitDriver();
+//    }
 }
 
 

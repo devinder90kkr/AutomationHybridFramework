@@ -1,7 +1,10 @@
 package cuesz.membersummary.fuelreport.advocate;
 
 import java.io.ByteArrayOutputStream;
+import java.io.FileInputStream;
+import java.io.IOException;
 import java.io.PrintStream;
+import java.util.Properties;
 
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterClass;
@@ -28,7 +31,10 @@ public class Case82_FuelRecommendationtest {
 
     @BeforeClass
     public void setUp() {
-        driver = WebDriverManager.getDriver();
+    	// Read the browser information from the configuration file
+        String browser = getBrowserFromConfigFile();
+        // Set up WebDriverManager with the specified browser
+        driver = WebDriverManager.getDriver(browser);
         driver.manage().window().maximize();
         advocateLogin = new AdvocateLogin(); // Initialize the advocateLogin object
         membersummarygraphPage = new Case82_FuelRecommendation (driver);
@@ -82,6 +88,15 @@ public class Case82_FuelRecommendationtest {
         
         return "https://pre-staging.app.cuesz.com/member-specs/627d168e40231fb0ba6a057a/fuel"; // Replace with your actual dynamic link
     }
+ private String getBrowserFromConfigFile() {
+     Properties properties = new Properties();
+     try (FileInputStream fis = new FileInputStream("config.properties")) {
+         properties.load(fis);
+     } catch (IOException e) {
+         e.printStackTrace();
+     }
+     return properties.getProperty("browser", "chrome");
+ }
     @AfterClass
     public void tearDown() {
         WebDriverManager.quitDriver();

@@ -7,4 +7,7 @@ public class Configuration {
     // mac system file location
     public static final String CHROME_DRIVER_PATH =	"/Users/chicmic/Documents/chromedriver-mac-x64/chromedriver";	
     
+    public static final String EDGE_DRIVER_PATH =	"/Users/chicmic/Documents/Edgedriver-mac-x64/msedgedriver";
+    
+    
 }

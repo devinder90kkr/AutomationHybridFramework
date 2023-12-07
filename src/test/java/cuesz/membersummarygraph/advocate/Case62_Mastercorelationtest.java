@@ -1,7 +1,10 @@
 package cuesz.membersummarygraph.advocate;
 
 import java.io.ByteArrayOutputStream;
+import java.io.FileInputStream;
+import java.io.IOException;
 import java.io.PrintStream;
+import java.util.Properties;
 
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterClass;
@@ -27,7 +30,10 @@ public class Case62_Mastercorelationtest {
 
     @BeforeClass
     public void setUp() {
-        driver = WebDriverManager.getDriver();
+    	// Read the browser information from the configuration file
+        String browser = getBrowserFromConfigFile();
+        // Set up WebDriverManager with the specified browser
+        driver = WebDriverManager.getDriver(browser);
         driver.manage().window().maximize();
         advocateLogin = new AdvocateLogin(); // Initialize the advocateLogin object
         membersummarygraphPage = new Case62_Mastercorelation (driver);
@@ -82,6 +88,16 @@ public class Case62_Mastercorelationtest {
         
         return "https://pre-staging.app.cuesz.com/insights/master-correlation-analysis/64ec53afcb84720befc71f36"; // Replace with your actual dynamic link
     }
+ 
+ private String getBrowserFromConfigFile() {
+     Properties properties = new Properties();
+     try (FileInputStream fis = new FileInputStream("config.properties")) {
+         properties.load(fis);
+     } catch (IOException e) {
+         e.printStackTrace();
+     }
+     return properties.getProperty("browser", "chrome");
+ }
     @AfterClass
     public void tearDown() {
         WebDriverManager.quitDriver();

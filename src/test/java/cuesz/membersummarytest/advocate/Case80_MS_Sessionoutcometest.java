@@ -1,7 +1,10 @@
 package cuesz.membersummarytest.advocate;
 
 import java.io.ByteArrayOutputStream;
+import java.io.FileInputStream;
+import java.io.IOException;
 import java.io.PrintStream;
+import java.util.Properties;
 
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterClass;
@@ -26,7 +29,11 @@ public class Case80_MS_Sessionoutcometest {
 
     @BeforeClass
     public void setUp() {
-        driver = WebDriverManager.getDriver();
+    	// Read the browser information from the configuration file
+        String browser = getBrowserFromConfigFile();
+        // Set up WebDriverManager with the specified browser
+        driver = WebDriverManager.getDriver(browser);
+        
         driver.manage().window().maximize();
         advocateLogin = new AdvocateLogin(); // Initialise the advocateLogin object
         membersummaryPage = new Case80_MS_Sessionoutcome(driver);
@@ -81,6 +88,16 @@ public class Case80_MS_Sessionoutcometest {
         
         return "https://pre-staging.app.cuesz.com/golive/session_outcome_Info/627d168e40231fb0ba6a057a"; // Replace with your actual dynamic link
     }
+ 
+ private String getBrowserFromConfigFile() {
+     Properties properties = new Properties();
+     try (FileInputStream fis = new FileInputStream("config.properties")) {
+         properties.load(fis);
+     } catch (IOException e) {
+         e.printStackTrace();
+     }
+     return properties.getProperty("browser", "chrome");
+ }
     @AfterClass
     public void tearDown() {
         WebDriverManager.quitDriver();

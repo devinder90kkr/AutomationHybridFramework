@@ -2,24 +2,24 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-12-06T10:14:06Z" name="Default suite" finished-at="2023-12-06T10:20:21Z" duration-ms="374506">
+  <suite started-at="2023-12-07T12:33:30Z" name="Default suite" finished-at="2023-12-07T12:34:04Z" duration-ms="33666">
     <groups>
     </groups>
-    <test started-at="2023-12-06T10:14:06Z" name="Default test" finished-at="2023-12-06T10:20:21Z" duration-ms="374506">
-      <class name="cuesz03.Iosapp_member_home_Fuelscreen.Case26_Fuel_breakfast_customfood">
-        <test-method is-config="true" signature="Cueszbase()[pri:0, instance:cuesz03.Iosapp_member_home_Fuelscreen.Case26_Fuel_breakfast_customfood@4f25b795]" started-at="2023-12-06T15:44:06Z" name="Cueszbase" finished-at="2023-12-06T15:44:12Z" duration-ms="6212" status="PASS">
+    <test started-at="2023-12-07T12:33:30Z" name="Default test" finished-at="2023-12-07T12:34:04Z" duration-ms="33666">
+      <class name="cuesz.dashboard.advocate.Step12_DB_navlinktest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:cuesz.dashboard.advocate.Step12_DB_navlinktest@3f9342d4]" started-at="2023-12-07T18:03:30Z" name="setUp" finished-at="2023-12-07T18:03:34Z" duration-ms="3878" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- Cueszbase -->
-        <test-method signature="Homescreen()[pri:0, instance:cuesz03.Iosapp_member_home_Fuelscreen.Case26_Fuel_breakfast_customfood@4f25b795]" started-at="2023-12-06T15:44:12Z" name="Homescreen" finished-at="2023-12-06T15:50:20Z" duration-ms="367905" status="PASS">
+        </test-method> <!-- setUp -->
+        <test-method signature="advocateScheduleEventTest()[pri:0, instance:cuesz.dashboard.advocate.Step12_DB_navlinktest@3f9342d4]" started-at="2023-12-07T18:03:34Z" name="advocateScheduleEventTest" finished-at="2023-12-07T18:04:03Z" duration-ms="29497" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- Homescreen -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:cuesz03.Iosapp_member_home_Fuelscreen.Case26_Fuel_breakfast_customfood@4f25b795]" started-at="2023-12-06T15:50:21Z" name="tearDown" finished-at="2023-12-06T15:50:21Z" duration-ms="87" status="PASS">
+        </test-method> <!-- advocateScheduleEventTest -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:cuesz.dashboard.advocate.Step12_DB_navlinktest@3f9342d4]" started-at="2023-12-07T18:04:03Z" name="tearDown" finished-at="2023-12-07T18:04:04Z" duration-ms="213" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- cuesz03.Iosapp_member_home_Fuelscreen.Case26_Fuel_breakfast_customfood -->
+      </class> <!-- cuesz.dashboard.advocate.Step12_DB_navlinktest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

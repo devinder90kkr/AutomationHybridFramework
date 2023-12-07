@@ -16,7 +16,7 @@ public class Step12_DB_navlink extends BasePage {
 	private By Membrcommunicate	 =	(By.id("Dashboard-MemberCommunication"));
 	private By stafcommuniction	=	(By.id("Dashboard-StaffCommunication"));
 	private By knwledge	= (By.id("Dashboard-Knowledge"));
-	private By membersummary	=	(By.id("Dashboard-Knowledge"));
+	private By membersummary	=	(By.id("member-summary"));
 
 	
 	

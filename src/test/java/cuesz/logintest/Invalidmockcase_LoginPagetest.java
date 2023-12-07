@@ -22,7 +22,10 @@ import org.testng.annotations.Test;
 import static org.testng.Assert.assertThrows;
 
 import java.io.ByteArrayOutputStream;
+import java.io.FileInputStream;
+import java.io.IOException;
 import java.io.PrintStream;
+import java.util.Properties;
 
 public class Invalidmockcase_LoginPagetest {
 
@@ -32,7 +35,11 @@ public class Invalidmockcase_LoginPagetest {
 
     @BeforeMethod
     public void setUp() {
-        driver = WebDriverManager.getDriver();
+    	 // Read the browser information from the configuration file
+        String browser = getBrowserFromConfigFile();
+
+        // Set up WebDriverManager with the specified browser
+        driver = WebDriverManager.getDriver(browser);
         driver.manage().window().maximize();
         driver.get(Configuration.BASE_URL);
         
@@ -40,9 +47,17 @@ public class Invalidmockcase_LoginPagetest {
         consoleOutput = new ByteArrayOutputStream();
         PrintStream printStream = new PrintStream(consoleOutput);
         System.setOut(printStream);
-        
+           
     }
-
+    private String getBrowserFromConfigFile() {
+        Properties properties = new Properties();
+        try (FileInputStream fis = new FileInputStream("config.properties")) {
+            properties.load(fis);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return properties.getProperty("browser", "chrome");
+    }
     @Test(groups = "invalid")
     @Owner("Devinder Kumar") // Add the @Owner annotation to specify the executor
     @Severity(SeverityLevel.BLOCKER)
@@ -166,10 +181,9 @@ public class Invalidmockcase_LoginPagetest {
         // Include OS information in the test class description
         Allure.description("Operating System: " + osName + " (Version: " + osVersion + ")");
     }
+   
     
-    @AfterClass
-    public void tearDown() {
-    	WebDriverManager.quitDriver();
-    }
+    
+    
     
 }

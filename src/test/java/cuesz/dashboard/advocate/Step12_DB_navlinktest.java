@@ -18,9 +18,12 @@ import cuesz.utils.AllureUtils;
 import cuesz.utils.WebDriverManager;
 
 import java.io.ByteArrayOutputStream;
+import java.io.FileInputStream;
+import java.io.IOException;
 import java.io.PrintStream;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Properties;
 
 @Epic ("Advocate dashboard cases")
 @Feature ("Vaerify navigation for dashbaord.")
@@ -36,7 +39,11 @@ public class Step12_DB_navlinktest {
 
     @BeforeClass
     public void setUp() {
-        driver = WebDriverManager.getDriver();
+    	  // Read the browser information from the configuration file
+        String browser = getBrowserFromConfigFile();
+
+        // Set up WebDriverManager with the specified browser
+        driver = WebDriverManager.getDriver(browser);
         driver.manage().window().maximize();
         advocateLogin = new AdvocateLogin(); // Initialise the advocateLogin object
         dashboardPage = new Step12_DB_navlink(driver);
@@ -110,6 +117,18 @@ public class Step12_DB_navlinktest {
         
         return "https://pre-staging.app.cuesz.com/dashboard"; // Replace with your actual dynamic link
     }
+ 
+ private String getBrowserFromConfigFile() {
+     Properties properties = new Properties();
+     try (FileInputStream fis = new FileInputStream("config.properties")) {
+         properties.load(fis);
+     } catch (IOException e) {
+         e.printStackTrace();
+     }
+     return properties.getProperty("browser", "chrome");
+ }
+
+ 
     @AfterClass
     public void tearDown() {
     	
