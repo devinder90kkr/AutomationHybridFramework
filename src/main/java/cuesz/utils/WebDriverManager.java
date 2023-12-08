@@ -5,6 +5,8 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.edge.EdgeOptions;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.safari.SafariDriver;
 import org.openqa.selenium.safari.SafariOptions;
 
@@ -42,6 +44,12 @@ public class WebDriverManager {
                     // Set Edge browser options as needed
                     System.setProperty("webdriver.safari.driver", Configuration.SAFARI_DRIVER_PATH);
                     driver = new SafariDriver(options);
+                }else if (browser.equalsIgnoreCase("firefox")) {
+                    // Setting up Microsoft Edge options
+                    FirefoxOptions options = new FirefoxOptions();
+                    // Set Edge browser options as needed
+                    System.setProperty("webdriver.gecko.driver", Configuration.FIREFOX_DRIVER_PATH);       
+                    driver = new FirefoxDriver(options);
                 }
 
                 driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(800));

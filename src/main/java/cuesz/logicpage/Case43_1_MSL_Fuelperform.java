@@ -92,6 +92,7 @@ import cuesz.utils.SeleniumUtils;
 		            // Click on "CorrelationAnalysisDuration" first
 		            String dropdownIdDuration = "FuelActivityType-Monday";
 		            WebElement dropdownElementDuration = wait.until(ExpectedConditions.elementToBeClickable(By.id(dropdownIdDuration)));
+		            ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView();", dropdownElementDuration);
 		            dropdownElementDuration.click();
 		            Thread.sleep(2000);
 
