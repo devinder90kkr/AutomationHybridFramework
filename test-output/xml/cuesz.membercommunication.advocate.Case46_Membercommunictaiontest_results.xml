@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Test"
+<testsuite name="Default test"
            tests="1"
            failures="0"
            errors="0"
            skipped="0"
-           time="10.085">
+           time="11.334">
     <properties></properties>
 
 
 
             <testcase
                 name="advocatecmembercommunictaeTest"
-                time="10.085"
+                time="11.334"
                 classname="cuesz.membercommunication.advocate.Case46_Membercommunictaiontest">
             </testcase>
 </testsuite>

@@ -4,14 +4,14 @@
            failures="0"
            errors="0"
            skipped="0"
-           time="64.249">
+           time="55.793">
     <properties></properties>
 
 
 
             <testcase
                 name="advocatecmembercommunictaeTest"
-                time="64.249"
+                time="55.793"
                 classname="cuesz.membercommunication.advocate.Case47_Membersearchtest">
             </testcase>
 </testsuite>

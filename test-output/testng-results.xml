@@ -2,20 +2,24 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-12-08T07:47:35Z" name="Default suite" finished-at="2023-12-08T07:47:57Z" duration-ms="22157">
+  <suite started-at="2023-12-08T12:47:07Z" name="Default suite" finished-at="2023-12-08T12:47:39Z" duration-ms="32236">
     <groups>
     </groups>
-    <test started-at="2023-12-08T07:47:35Z" name="Default test" finished-at="2023-12-08T07:47:57Z" duration-ms="22157">
-      <class name="cuesz.logintest.AdvocateLogin">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:cuesz.logintest.AdvocateLogin@58326051]" started-at="2023-12-08T13:17:35Z" name="setUp" finished-at="2023-12-08T13:17:54Z" duration-ms="19160" status="PASS">
+    <test started-at="2023-12-08T12:47:07Z" name="Default test" finished-at="2023-12-08T12:47:39Z" duration-ms="32236">
+      <class name="cuesz03.Iosapp_member_home_Fuelscreen.Case46_Fuel_Addandevent_additional">
+        <test-method is-config="true" signature="Cueszbase()[pri:0, instance:cuesz03.Iosapp_member_home_Fuelscreen.Case46_Fuel_Addandevent_additional@5b1ebf56]" started-at="2023-12-08T18:17:07Z" name="Cueszbase" finished-at="2023-12-08T18:17:08Z" duration-ms="1077" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method signature="testAdvocateLogin()[pri:0, instance:cuesz.logintest.AdvocateLogin@58326051]" started-at="2023-12-08T13:17:54Z" name="testAdvocateLogin" finished-at="2023-12-08T13:17:57Z" duration-ms="2921" status="PASS">
+        </test-method> <!-- Cueszbase -->
+        <test-method signature="Fuel_addaneventadditionalcase()[pri:0, instance:cuesz03.Iosapp_member_home_Fuelscreen.Case46_Fuel_Addandevent_additional@5b1ebf56]" started-at="2023-12-08T18:17:08Z" name="Fuel_addaneventadditionalcase" finished-at="2023-12-08T18:17:39Z" duration-ms="31078" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testAdvocateLogin -->
-      </class> <!-- cuesz.logintest.AdvocateLogin -->
+        </test-method> <!-- Fuel_addaneventadditionalcase -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:cuesz03.Iosapp_member_home_Fuelscreen.Case46_Fuel_Addandevent_additional@5b1ebf56]" started-at="2023-12-08T18:17:39Z" name="tearDown" finished-at="2023-12-08T18:17:39Z" duration-ms="12" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- cuesz03.Iosapp_member_home_Fuelscreen.Case46_Fuel_Addandevent_additional -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

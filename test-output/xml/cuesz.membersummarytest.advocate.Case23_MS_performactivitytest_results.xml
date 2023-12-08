@@ -4,14 +4,14 @@
            failures="0"
            errors="0"
            skipped="0"
-           time="65.201">
+           time="66.326">
     <properties></properties>
 
 
 
             <testcase
                 name="advocateperformactivityTest"
-                time="65.201"
+                time="66.326"
                 classname="cuesz.membersummarytest.advocate.Case23_MS_performactivitytest">
             </testcase>
 </testsuite>
