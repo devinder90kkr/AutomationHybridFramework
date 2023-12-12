@@ -25,7 +25,7 @@ import io.qameta.allure.Story;
 
 @Epic ("Member fuel screen detail ")
 @Feature ("Verify Fuel detail functionlaity related to dinner functionlaity.")
-public class Case46_Fuel_Addandevent_additional extends AppiummobileBase {
+public class Case46_Fuel_Addandevent_additionalwithdelete extends AppiummobileBase {
 	
 	private By Homeclick 		= 		AppiumBy.iOSClassChain("**/XCUIElementTypeOther[`label == \"Home\"`][2]");
 	private By addeventlabel	= 		AppiumBy.iOSNsPredicateString("label == \"Add An Event\"");
@@ -45,14 +45,18 @@ public class Case46_Fuel_Addandevent_additional extends AppiummobileBase {
 	private By notesevent		= 		AppiumBy.accessibilityId("EventNotes");
 	private By tickbttn			= 		AppiumBy.iOSNsPredicateString("name == \"EventSubmit\"");
 	private By Skipclick		= 		AppiumBy.accessibilityId("Skip");
-	private By hydrationclickicon	=	AppiumBy.iOSClassChain("**/XCUIElementTypeOther[`name == \"Walking-Hydration\"`]/XCUIElementTypeOther");
-
+	private By hydration1click	=		AppiumBy.accessibilityId("Walking-Hydration");
+	private By hydrationplus	=		AppiumBy.accessibilityId("PlusHydrationGlass");
+	private By submithydration	=		AppiumBy.accessibilityId("Submit");
+	private By deleticon		=		AppiumBy.accessibilityId("Walking-Delete");
+	private By yesdeleticon		=		AppiumBy.accessibilityId("Yes");
+	
 	@Test
 	@Owner("QA") // Add the @Owner annotation to specify the executor
     @Severity(SeverityLevel.NORMAL)      
     @Description("Member Fuel screen detail verification")
     @Story("Scroll to Fuel card and verify Dinner assigned by staff ")	
-	public void Fuel_addaneventadditionalcase() throws InterruptedException
+	public void Fuel_addaneventadditionalcasewithdelete() throws InterruptedException
 	{	
 		// Create an instance of AppiumUtils and pass the driver
 		AppiumappUtils appiumUtils = new AppiumappUtils(driver);
@@ -131,7 +135,7 @@ public class Case46_Fuel_Addandevent_additional extends AppiummobileBase {
         WebElement selectwalking 	= driver.findElement(walkingclikc);
         selectwalking.click();
 
-     // Capture a screenshot and attach it to Allure
+        // Capture a screenshot and attach it to Allure
         AllureUtils.captureScreenshot(driver, "addevent3"); 
       
      	// Select starttime	for add an event
@@ -233,8 +237,28 @@ public class Case46_Fuel_Addandevent_additional extends AppiummobileBase {
         Allure.addAttachment("Expected Label", expectedLabel);
         Allure.addAttachment("Actual Label", actualLabel);
 		
-    
+        // Click on walking- hydration icon	
+        WebElement walkinghydration	= driver.findElement(hydration1click);
+        walkinghydration.click();
         
+        // Click on plus icon from hydration
+     	WebElement hydrationpopclick = driver.findElement(hydrationplus);
+     	for (int i = 0; i < 2; i++) {
+     	hydrationpopclick.click();
+     	}
+        
+     	WebElement hydrationsubmit	= driver.findElement(submithydration);
+     	hydrationsubmit.click();
+
+     	// Click on delte icon for walking event
+     	WebElement deletehydration	= driver.findElement(deleticon);
+     	deletehydration.click();
+     	
+     // Click on delte icon for walking event
+     	WebElement yesdeletehydration	= driver.findElement(yesdeleticon);
+     	yesdeletehydration.click();
+     	
+     	
         
         
 		
