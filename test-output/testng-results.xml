@@ -2,20 +2,20 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-12-08T12:47:07Z" name="Default suite" finished-at="2023-12-08T12:47:39Z" duration-ms="32236">
+  <suite started-at="2023-12-12T09:55:44Z" name="Default suite" finished-at="2023-12-12T09:57:43Z" duration-ms="119238">
     <groups>
     </groups>
-    <test started-at="2023-12-08T12:47:07Z" name="Default test" finished-at="2023-12-08T12:47:39Z" duration-ms="32236">
+    <test started-at="2023-12-12T09:55:44Z" name="Default test" finished-at="2023-12-12T09:57:43Z" duration-ms="119238">
       <class name="cuesz03.Iosapp_member_home_Fuelscreen.Case46_Fuel_Addandevent_additional">
-        <test-method is-config="true" signature="Cueszbase()[pri:0, instance:cuesz03.Iosapp_member_home_Fuelscreen.Case46_Fuel_Addandevent_additional@5b1ebf56]" started-at="2023-12-08T18:17:07Z" name="Cueszbase" finished-at="2023-12-08T18:17:08Z" duration-ms="1077" status="PASS">
+        <test-method is-config="true" signature="Cueszbase()[pri:0, instance:cuesz03.Iosapp_member_home_Fuelscreen.Case46_Fuel_Addandevent_additional@6fb365ed]" started-at="2023-12-12T15:25:44Z" name="Cueszbase" finished-at="2023-12-12T15:25:46Z" duration-ms="2032" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Cueszbase -->
-        <test-method signature="Fuel_addaneventadditionalcase()[pri:0, instance:cuesz03.Iosapp_member_home_Fuelscreen.Case46_Fuel_Addandevent_additional@5b1ebf56]" started-at="2023-12-08T18:17:08Z" name="Fuel_addaneventadditionalcase" finished-at="2023-12-08T18:17:39Z" duration-ms="31078" status="PASS">
+        <test-method signature="Fuel_addaneventadditionalcase()[pri:0, instance:cuesz03.Iosapp_member_home_Fuelscreen.Case46_Fuel_Addandevent_additional@6fb365ed]" started-at="2023-12-12T15:25:46Z" name="Fuel_addaneventadditionalcase" finished-at="2023-12-12T15:27:43Z" duration-ms="117129" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Fuel_addaneventadditionalcase -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:cuesz03.Iosapp_member_home_Fuelscreen.Case46_Fuel_Addandevent_additional@5b1ebf56]" started-at="2023-12-08T18:17:39Z" name="tearDown" finished-at="2023-12-08T18:17:39Z" duration-ms="12" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:cuesz03.Iosapp_member_home_Fuelscreen.Case46_Fuel_Addandevent_additional@6fb365ed]" started-at="2023-12-12T15:27:43Z" name="tearDown" finished-at="2023-12-12T15:27:43Z" duration-ms="11" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->

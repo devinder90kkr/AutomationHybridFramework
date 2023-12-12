@@ -77,6 +77,8 @@ public class AppiummobileBase {
     public void Cueszbase() throws MalformedURLException {
 
         XCUITestOptions options = new XCUITestOptions();
+        
+//        // simulator details
 //        options.setDeviceName("iPhone 11");
 //        options.setPlatformVersion("17.0");
 
