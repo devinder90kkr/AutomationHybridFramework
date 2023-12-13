@@ -23,8 +23,8 @@ import io.qameta.allure.Severity;
 import io.qameta.allure.SeverityLevel;
 import io.qameta.allure.Story;
 
-@Epic ("Member fuel screen detail ")
-@Feature ("Verify Fuel detail functionlaity related to dinner functionlaity.")
+@Epic ("Member Add an event screen detail ")
+@Feature ("Verify member able to functionlaity related to add an event functionlaity.")
 public class Case46_Fuel_Addandevent_additionalwithdelete extends AppiummobileBase {
 	
 	private By Homeclick 		= 		AppiumBy.iOSClassChain("**/XCUIElementTypeOther[`label == \"Home\"`][2]");
@@ -54,8 +54,8 @@ public class Case46_Fuel_Addandevent_additionalwithdelete extends AppiummobileBa
 	@Test
 	@Owner("QA") // Add the @Owner annotation to specify the executor
     @Severity(SeverityLevel.NORMAL)      
-    @Description("Member Fuel screen detail verification")
-    @Story("Scroll to Fuel card and verify Dinner assigned by staff ")	
+    @Description("Member add an Event screen detail verification")
+    @Story("Scroll to add an event & verify its related fuel added")	
 	public void Fuel_addaneventadditionalcasewithdelete() throws InterruptedException
 	{	
 		// Create an instance of AppiumUtils and pass the driver
@@ -259,9 +259,6 @@ public class Case46_Fuel_Addandevent_additionalwithdelete extends AppiummobileBa
      	yesdeletehydration.click();
      	
      	
-        
-        
-		
 		Thread.sleep(2500);
         driver.terminateApp("com.cuesz.mobile");
 	}

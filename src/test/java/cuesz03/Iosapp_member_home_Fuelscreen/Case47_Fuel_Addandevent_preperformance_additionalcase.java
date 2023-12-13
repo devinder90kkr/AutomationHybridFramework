@@ -26,9 +26,9 @@ import io.qameta.allure.Severity;
 import io.qameta.allure.SeverityLevel;
 import io.qameta.allure.Story;
 
-@Epic ("Member fuel screen detail ")
-@Feature ("Verify Fuel detail functionlaity related to dinner functionlaity.")
-public class Case47_Fuel_Addandevent_preperformance_additional extends AppiummobileBase {
+@Epic ("Member Add an event screen detail ")
+@Feature ("Verify member able to add functionlaity related to add an event for Pre-performance functionlaity.")
+public class Case47_Fuel_Addandevent_preperformance_additionalcase extends AppiummobileBase {
 	
 	private By Homeclick 		= 		AppiumBy.iOSClassChain("**/XCUIElementTypeOther[`label == \"Home\"`][2]");
 	private By addeventlabel	= 		AppiumBy.iOSNsPredicateString("label == \"Add An Event\"");
@@ -70,8 +70,8 @@ public class Case47_Fuel_Addandevent_preperformance_additional extends Appiummob
 	@Test
 	@Owner("QA") // Add the @Owner annotation to specify the executor
     @Severity(SeverityLevel.NORMAL)      
-    @Description("Member Fuel screen detail verification")
-    @Story("Scroll to Fuel card and verify Dinner assigned by staff ")	
+	@Description("Member scroll to add an Event screen for pre-perfoemnace detail verification")
+    @Story("Scroll to Pre-performance detail and add its related values")
 	public void Fuel_addaneventadditionalcasewithpreperformance() throws InterruptedException {	
 
 		// Create an instance of AppiumUtils and pass the driver

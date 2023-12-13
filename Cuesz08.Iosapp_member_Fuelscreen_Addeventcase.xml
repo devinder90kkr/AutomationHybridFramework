@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite16">	 
+  <test thread-count="5" name="Test16">
+    <classes>
+	<class name="cuesz03.Iosapp_member_home_Fuelscreen.Case46_Fuel_Addandevent_additionalwithdelete"/>
+	<class name="cuesz03.Iosapp_member_home_Fuelscreen.Case47_Fuel_Addandevent_preperformance_additionalcase"/>
+	<class name="cuesz03.Iosapp_member_home_Fuelscreen.Case48_Fuel_Addandevent_Duringperformance_additionalcase"/>
+	<class name="cuesz03.Iosapp_member_home_Fuelscreen.Case49_Fuel_Addandevent_Postperformance_additionalcase"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

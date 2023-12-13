@@ -2,24 +2,24 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-12-13T07:29:25Z" name="Default suite" finished-at="2023-12-13T07:34:54Z" duration-ms="329139">
+  <suite started-at="2023-12-13T10:13:32Z" name="Default suite" finished-at="2023-12-13T10:15:36Z" duration-ms="124126">
     <groups>
     </groups>
-    <test started-at="2023-12-13T07:29:25Z" name="Default test" finished-at="2023-12-13T07:34:54Z" duration-ms="329139">
-      <class name="cuesz03.Iosapp_member_home_Fuelscreen.Case47_Fuel_Addandevent_preperformance_additional">
-        <test-method is-config="true" signature="Cueszbase()[pri:0, instance:cuesz03.Iosapp_member_home_Fuelscreen.Case47_Fuel_Addandevent_preperformance_additional@6fb365ed]" started-at="2023-12-13T12:59:25Z" name="Cueszbase" finished-at="2023-12-13T12:59:27Z" duration-ms="2657" status="PASS">
+    <test started-at="2023-12-13T10:13:32Z" name="Default test" finished-at="2023-12-13T10:15:36Z" duration-ms="124126">
+      <class name="cuesz03.Iosapp_member_home_Fuelscreen.Case49_Fuel_Addandevent_Postperformance_additionalcase">
+        <test-method is-config="true" signature="Cueszbase()[pri:0, instance:cuesz03.Iosapp_member_home_Fuelscreen.Case49_Fuel_Addandevent_Postperformance_additionalcase@6fb365ed]" started-at="2023-12-13T15:43:32Z" name="Cueszbase" finished-at="2023-12-13T15:43:35Z" duration-ms="3062" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Cueszbase -->
-        <test-method signature="Fuel_addaneventadditionalcasewithpreperformance()[pri:0, instance:cuesz03.Iosapp_member_home_Fuelscreen.Case47_Fuel_Addandevent_preperformance_additional@6fb365ed]" started-at="2023-12-13T12:59:27Z" name="Fuel_addaneventadditionalcasewithpreperformance" finished-at="2023-12-13T13:04:54Z" duration-ms="326341" status="PASS">
+        <test-method signature="Fuel_addaneventadditionalcasewithpostperformance()[pri:0, instance:cuesz03.Iosapp_member_home_Fuelscreen.Case49_Fuel_Addandevent_Postperformance_additionalcase@6fb365ed]" started-at="2023-12-13T15:43:35Z" name="Fuel_addaneventadditionalcasewithpostperformance" finished-at="2023-12-13T15:45:36Z" duration-ms="120929" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- Fuel_addaneventadditionalcasewithpreperformance -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:cuesz03.Iosapp_member_home_Fuelscreen.Case47_Fuel_Addandevent_preperformance_additional@6fb365ed]" started-at="2023-12-13T13:04:54Z" name="tearDown" finished-at="2023-12-13T13:04:54Z" duration-ms="41" status="PASS">
+        </test-method> <!-- Fuel_addaneventadditionalcasewithpostperformance -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:cuesz03.Iosapp_member_home_Fuelscreen.Case49_Fuel_Addandevent_Postperformance_additionalcase@6fb365ed]" started-at="2023-12-13T15:45:36Z" name="tearDown" finished-at="2023-12-13T15:45:36Z" duration-ms="21" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- cuesz03.Iosapp_member_home_Fuelscreen.Case47_Fuel_Addandevent_preperformance_additional -->
+      </class> <!-- cuesz03.Iosapp_member_home_Fuelscreen.Case49_Fuel_Addandevent_Postperformance_additionalcase -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

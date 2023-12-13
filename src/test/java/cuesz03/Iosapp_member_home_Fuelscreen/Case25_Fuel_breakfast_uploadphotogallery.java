@@ -30,7 +30,7 @@ public class Case25_Fuel_breakfast_uploadphotogallery extends AppiummobileBase {
 	private By pickerelement			= 		AppiumBy.xpath("//XCUIElementTypePickerWheel");
 	private By Doneclick				= 		AppiumBy.accessibilityId("AlcohalTime");
 	private By submittap				= 		AppiumBy.accessibilityId("SubmitImage");
-	private By uploadphoto				= 		AppiumBy.accessibilityId("PhotoUpload");
+//	private By uploadphoto				= 		AppiumBy.accessibilityId("PhotoUpload");
 	private By arrowclick				= 		AppiumBy.accessibilityId("RightArrow");
 	private By Icondelete				= 		AppiumBy.accessibilityId("DeletePhoto");
 
