@@ -8,11 +8,15 @@ import io.qameta.allure.Allure;
 import java.io.IOException;
 
 public class YourTestClass {
-    private final ApiUtils apiUtils = new ApiUtils();
+   // private final ApiUtils apiUtils = new ApiUtils();
 
     @Test
     public void testTeamMemberApi() {
-        String searchString = "Kumar Devinder"; // Adjust this as per your test case
+    	  String searchString = "Kumar Devinder"; // Adjust this as per your test case
+          String apiUrl = cuesz.utils.ApiConfig.API_URL1; // Use the desired API URL from ApiConfig
+
+          // Create an instance of ApiUtils with the specific API URL
+          ApiUtils apiUtils = new ApiUtils(apiUrl);
 
         try {
             String response = apiUtils.getTeamMemberData(searchString);
