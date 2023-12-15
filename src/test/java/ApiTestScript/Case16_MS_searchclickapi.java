@@ -7,11 +7,11 @@ import cuesz.utils.ApiUtils;
 import io.qameta.allure.Allure;
 import java.io.IOException;
 
-public class YourTestClass {
+public class Case16_MS_searchclickapi {
    // private final ApiUtils apiUtils = new ApiUtils();
 
     @Test
-    public void testTeamMemberApi() {
+    public void searchTeamMemberApi() {
     	  String searchString = "Kumar Devinder"; // Adjust this as per your test case
           String apiUrl = cuesz.utils.ApiConfig.API_URL1; // Use the desired API URL from ApiConfig
 
