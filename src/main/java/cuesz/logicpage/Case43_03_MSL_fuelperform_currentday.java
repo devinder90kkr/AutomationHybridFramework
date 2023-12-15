@@ -78,16 +78,15 @@ import cuesz.utils.DayofWeek;
 		  
 	  /************************************************Input data as per next week selected and populate data in three days***************************************************************************************************/
 		        
-			
-			   WebElement  activeblock = driver.findElement(By.xpath("//div[@id='active_logic_block']"));
+			Thread.sleep(3500);			   WebElement  activeblock = driver.findElement(By.xpath("//div[@id='active_logic_block']"));
 			// Scroll to the "Staff Notes" element using JavaScriptExecutor
-			   ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView();", activeblock);
+			   ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", activeblock);
 			   
 
 	  	   
      /********************************************************************Select the Meal Type *************************************************************************************/
 
-			    Thread.sleep(2500);
+			    Thread.sleep(4500);
 			    int dayOfWeek = Calendar.getInstance().get(Calendar.DAY_OF_WEEK);
 			    String dayName = DayofWeek.getDayName(dayOfWeek);       
 
@@ -276,33 +275,33 @@ import cuesz.utils.DayofWeek;
 					    	
 					    	
 				   
-				   /*Enter values for HydrationTarget*/
-				    Thread.sleep(2000);
-				    	
-				 // Get the current day of the week
-		   			String dayName1 = DayofWeek.getDayName(dayOfWeek);
-				    // Scroll to the HydrationTarget element
-				    WebElement HydrationTarget = driver.findElement(By.id("hydration_fuel-" + dayName1));
-				    ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", HydrationTarget);
-				    Thread.sleep(2000);
-				    // Now you can interact with the HydrationTarget element
-				    Actions builder7 = new Actions(driver);			    
-				    builder7.moveToElement(HydrationTarget).click().sendKeys("3 Glasses").perform();
-				    Thread.sleep(2000);
-				    builder7.sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.ENTER).perform();
-
-				    Thread.sleep(2000);				   
-				    /*Enter values for Electrolyte Target*/
-				    Thread.sleep(2000);
-				    
-				 // Get the current day of the week
-		   			String dayName2 = DayofWeek.getDayName(dayOfWeek);
-				    WebElement ElectrolyteTarget =driver.findElement(By.id("Electrolyte_fuel-" + dayName2));
-				    Actions builder8 = new Actions(driver);
-				    builder8.moveToElement(ElectrolyteTarget).click().sendKeys("2").perform();
-				    Thread.sleep(2000);
-				    builder8.sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.ENTER).perform();
-				    Thread.sleep(2000);				   
+//				   /*Enter values for HydrationTarget*/
+//				    Thread.sleep(2000);
+//				    	
+//				 // Get the current day of the week
+//		   			String dayName1 = DayofWeek.getDayName(dayOfWeek);
+//				    // Scroll to the HydrationTarget element
+//				    WebElement HydrationTarget = driver.findElement(By.id("hydration_fuel-" + dayName1));
+//				    ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", HydrationTarget);
+//				    Thread.sleep(2000);
+//				    // Now you can interact with the HydrationTarget element
+//				    Actions builder7 = new Actions(driver);			    
+//				    builder7.moveToElement(HydrationTarget).click().sendKeys("3 Glasses").perform();
+//				    Thread.sleep(2000);
+//				    builder7.sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.ENTER).perform();
+//
+//				    Thread.sleep(2000);				   
+//				    /*Enter values for Electrolyte Target*/
+//				    Thread.sleep(2000);
+//				    
+//				 // Get the current day of the week
+//		   			String dayName2 = DayofWeek.getDayName(dayOfWeek);
+//				    WebElement ElectrolyteTarget =driver.findElement(By.id("Electrolyte_fuel-" + dayName2));
+//				    Actions builder8 = new Actions(driver);
+//				    builder8.moveToElement(ElectrolyteTarget).click().sendKeys("2").perform();
+//				    Thread.sleep(2000);
+//				    builder8.sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.ENTER).perform();
+//				    Thread.sleep(2000);				   
 		}
 	}
 		

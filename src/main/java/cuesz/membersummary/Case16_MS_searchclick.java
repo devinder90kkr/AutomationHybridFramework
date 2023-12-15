@@ -5,6 +5,7 @@ import org.openqa.selenium.WebDriver;
 import org.testng.annotations.Test;
 
 
+
 import cuesz.pages.BasePage;
 
 public class Case16_MS_searchclick extends BasePage {
@@ -27,7 +28,7 @@ public class Case16_MS_searchclick extends BasePage {
         Thread.sleep(2000);
         driver.findElement(By.xpath("//div[@class='member-items']")).click();
           
-    
+   
 
     }
-}
+}	

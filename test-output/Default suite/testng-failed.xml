@@ -3,13 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test name="Default test(failed)">
     <classes>
-      <class name="cuesz03.Iosapp_member_home_Fuelscreen.Case49_Fuel_Addandevent_Postperformance_additionalcase">
+      <class name="cuesz.test.YourTestClass">
         <methods>
-          <include name="Cueszbase"/>
-          <include name="tearDown"/>
-          <include name="Fuel_addaneventadditionalcasewithpostperformance"/>
+          <include name="testTeamMemberApi"/>
         </methods>
-      </class> <!-- cuesz03.Iosapp_member_home_Fuelscreen.Case49_Fuel_Addandevent_Postperformance_additionalcase -->
+      </class> <!-- cuesz.test.YourTestClass -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
