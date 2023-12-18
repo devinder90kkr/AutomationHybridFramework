@@ -266,14 +266,131 @@ public class Case50_Fuel_Addandevent_Recommendedfuel extends AppiummobileBase {
         }
         
         // Capture a screenshot and attach it to Allure
-        AllureUtils.captureScreenshot(driver, "addpoevent6");
-            
+        AllureUtils.captureScreenshot(driver, "addpoevent6");            
         
 		WebElement submit = driver.findElement(mobileLocators.submitick);
 		submit.click();
 		 
         Thread.sleep(5500);
+        WebElement duringupload = driver.findElement(mobileLocators.uploadicon1);
+        duringupload.click();
+        
+        WebElement galleryclick	= driver.findElement(mobileLocators.gallery);
+        galleryclick.click();
+        
+        WebElement firstPhoto = driver.findElement(AppiumBy.xpath("//XCUIElementTypeImage[3]"));
+        firstPhoto.click();
+        
+        WebElement addclick = driver.findElement(AppiumBy.accessibilityId("Add"));
+        addclick.click();
+           
+		WebElement Submittap = driver.findElement(mobileLocators.submittap);
+		Submittap.click();
+        
+		//scroll to image upload
+		By imaguploadlLocator = AppiumBy.iOSClassChain("**/XCUIElementTypeStaticText[`label == \"Image uploaded\"`]");
+	        if(!isElementPresent(driver, imaguploadlLocator)){
+	            // Scroll to "Basketball" if it's not present
+	            HashMap<String,Object> scrollObject1 = new HashMap<>();
+	            scrollObject1.put("direction", "down");
+	            scrollObject1.put("Image uploaded", "Image uploaded");
+	            driver.executeScript("mobile:scroll", scrollObject1);
+	            Thread.sleep(2000);
+	        }
+        
+	    // Locate and click on post performance Fuel button
+	    WebElement postperformanceplus = driver.findElement(mobileLocators.postplusicon);
+ 		postperformanceplus.click();
+	        
+ 		
+ 		//click on keypad Done button to hide keypad
+        WebElement keypaddone4	= driver.findElement(mobileLocators.doneclick);
+        keypaddone4.click();
+        
+        // Click on fuel search field 
+        WebElement additionalfuel2 = driver.findElement(mobileLocators.additionalsearch);
+        additionalfuel2.click();
+        
+        WebElement searchtext11	= driver.findElement(AppiumBy.iOSNsPredicateString("label == \"M\""));
+        searchtext11.click();
+        
+        WebElement searchtext21	= driver.findElement(AppiumBy.iOSNsPredicateString("label == \"e\""));
+        searchtext21.click();
+        
+        WebElement searchtext31	= driver.findElement(AppiumBy.iOSNsPredicateString("label == \"a\""));
+        searchtext31.click();
 
+        WebElement searchtext41	= driver.findElement(AppiumBy.iOSNsPredicateString("label == \"t\""));
+        searchtext41.click();
+
+      
+        WebElement Keypaddone1	= driver.findElement(mobileLocators.doneclick);
+        Keypaddone1.click();
+
+     // Capture a screenshot and attach it to Allure
+        AllureUtils.captureScreenshot(driver, "addpoevent7"); 
+        
+        
+        WebElement fuelselection1	= driver.findElement(mobileLocators.meat1);
+        fuelselection1.click();
+        
+        Thread.sleep(3000);
+		// Method to scroll to perform screen
+		HashMap<String,Object>scrollObject57 =new HashMap<>();
+		scrollObject57.put("direction", "down");
+		scrollObject57.put("meatplus", "meatplus");
+		driver.executeScript("mobile:scroll", scrollObject57);
+		Thread.sleep(2000);
+           
+        WebElement meatclickplus		= driver.findElement(mobileLocators.meatplus);
+        int numberOfClicks21 = 1;
+        for (int i = 0; i < numberOfClicks21; i++) {   
+        	meatclickplus.click();
+        }
+        
+        WebElement fuelsearch 	= driver.findElement(mobileLocators.serchclick);
+        fuelsearch.click();
+        
+        WebElement fuelsearch2 	= driver.findElement(mobileLocators.serchclick);
+        fuelsearch2.click();
+       
+        WebElement searchtext71	= driver.findElement(AppiumBy.iOSNsPredicateString("label == \"R\""));
+        searchtext71.click();
+        
+        WebElement searchtext51	= driver.findElement(AppiumBy.iOSNsPredicateString("label == \"o\""));
+        searchtext51.click();
+        
+        WebElement searchtext61	= driver.findElement(AppiumBy.iOSNsPredicateString("label == \"o\""));
+        searchtext61.click();
+
+        WebElement searchtext81	= driver.findElement(AppiumBy.iOSNsPredicateString("label == \"t\""));
+        searchtext81.click();
+        
+        WebElement Keypaddone2	= driver.findElement(mobileLocators.doneclick);
+        Keypaddone2.click();
+        
+        WebElement Showmore		= driver.findElement(mobileLocators.Showclick);
+        Showmore.click();
+
+        WebElement Fuelselection3	= driver.findElement(mobileLocators.Beetroot);
+        Fuelselection3.click();
+        
+        // Capture a screenshot and attach it to Allure
+        AllureUtils.captureScreenshot(driver, "addpoevent8"); 
+        
+        
+        Thread.sleep(2500);
+        WebElement submit1 = driver.findElement(mobileLocators.submitick);
+		submit1.click();
+		
+		Thread.sleep(2500);
+		// Capture a screenshot and attach it to Allure
+        AllureUtils.captureScreenshot(driver, "addpoevent9"); 
+        
+        Thread.sleep(3500);
+        
+      
+	        
         
        	Thread.sleep(2500);
         driver.terminateApp("com.cuesz.mobile");

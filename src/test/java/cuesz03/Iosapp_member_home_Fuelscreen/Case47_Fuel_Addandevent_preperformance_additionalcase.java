@@ -16,6 +16,7 @@ import org.testng.annotations.Test;
 import cuesz.pages.AppiummobileBase;
 import cuesz.utils.AllureUtils;
 import cuesz.utils.AppiumappUtils;
+import cuesz.utils.mobileLocators;
 import io.appium.java_client.AppiumBy;
 import io.appium.java_client.AppiumDriver;
 import io.qameta.allure.Allure;
@@ -31,42 +32,7 @@ import io.qameta.allure.Story;
 @Feature ("Verify member able to add functionlaity related to add an event for Pre-performance functionlaity.")
 public class Case47_Fuel_Addandevent_preperformance_additionalcase extends AppiummobileBase {
 	
-	private By Homeclick 		= 		AppiumBy.iOSClassChain("**/XCUIElementTypeOther[`label == \"Home\"`][2]");
-	private By addeventlabel	= 		AppiumBy.iOSNsPredicateString("label == \"Add An Event\"");
-	private By eventbttn		=		AppiumBy.accessibilityId("AddEvent");
-	private By eventcross		=		AppiumBy.accessibilityId("CrossClicked");
-	private By selectactivityfield		=	AppiumBy.accessibilityId("SelectActivity");
-	private By doneclick		= 		AppiumBy.accessibilityId("Done");
-	private By walkingclikc		=		AppiumBy.iOSNsPredicateString("label == \"Walking\"");
-	private By Enteractivityname	=	AppiumBy.accessibilityId("EnterActivityName");
-	private By startTime		=		AppiumBy.accessibilityId("FuelPerformStartTime");
-	private By pickerelement	= 		AppiumBy.xpath("//XCUIElementTypePickerWheel");
-	private By Doneclick		= 		AppiumBy.accessibilityId("AlcohalTime");
-	private By endtime			=		AppiumBy.accessibilityId("FuelPerformEndTime");
-	private By hydration		= 		AppiumBy.accessibilityId("FuelDrinkPlusIcon");
-	private By electro1			= 		AppiumBy.iOSClassChain("**/XCUIElementTypeOther[`name == \"ElectrolyteDeviation\"`][2]");
-	private By electro2			= 		AppiumBy.iOSClassChain("**/XCUIElementTypeOther[`name == \"ElectrolyteDeviation\"`][3]");
-	private By notesevent		= 		AppiumBy.accessibilityId("EventNotes");
-	private By tickbttn			= 		AppiumBy.iOSNsPredicateString("name == \"EventSubmit\"");
-	private By Skipclick		= 		AppiumBy.accessibilityId("Skip");
-	private By hydration1click	=		AppiumBy.accessibilityId("Walking-Hydration");
-	private By hydrationplus	=		AppiumBy.accessibilityId("PlusHydrationGlass");
-	private By submithydration	=		AppiumBy.accessibilityId("Submit");
-	private By preplusicon		=		AppiumBy.accessibilityId("Pre PerformancePlueIcon");
-	private By fish				= 		AppiumBy.iOSNsPredicateString("name == \"Fish\"");
-	private By fishRemove		=		AppiumBy.accessibilityId("FishFuelItemDelete");
-	private By Showclick		= 		AppiumBy.iOSNsPredicateString("name == \"Show More\"");
-	private By Cheesegoat		= 		AppiumBy.accessibilityId("Goat Cheese");
-	private By additionalsearch	= 		AppiumBy.accessibilityId("AdditionalFuelSearch");
-//	private By selectpre		=		AppiumBy.iOSNsPredicateString("name == \"Pre Performance\"");
-	private By submitclick		=		AppiumBy.accessibilityId("ItemSubmit");
-	private By Uploadimage		=		AppiumBy.accessibilityId("Pre PerformanceUploadIcon");
-	private By gallery			=		AppiumBy.accessibilityId("GalleryClicked");
-	private By Time				= 		AppiumBy.accessibilityId("SelectTime");
-	private By submittap		= 		AppiumBy.accessibilityId("SubmitImage");
-	private By infoclick		=		AppiumBy.accessibilityId("Pre PerformanceInfoIcon");	
-	private By backbttn			=		AppiumBy.accessibilityId("BackPress");
-	private By performancetime	=		AppiumBy.accessibilityId("Pre PerformanceTimeEdit");
+
 	
 	@Test
 	@Owner("QA") // Add the @Owner annotation to specify the executor
@@ -80,7 +46,7 @@ public class Case47_Fuel_Addandevent_preperformance_additionalcase extends Appiu
         // Launch the app using the utility method
         appiumUtils.launchAppWithPackageId("com.cuesz.mobile");	
 		
-		WebElement Homeicon = driver.findElement(Homeclick);
+		WebElement Homeicon = driver.findElement(mobileLocators.Homeclick);
 		Homeicon.click();
 		
 		// Capture a screenshot and attach it to Allure
@@ -102,7 +68,7 @@ public class Case47_Fuel_Addandevent_preperformance_additionalcase extends Appiu
     //    Thread.sleep(3500);
      // Wait for the "Add An Event" text to appear on the screen
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(100));
-        wait.until(ExpectedConditions.presenceOfElementLocated(addeventlabel));
+        wait.until(ExpectedConditions.presenceOfElementLocated(mobileLocators.addeventlabel));
         
         Thread.sleep(3500);
 		 By addeventlocator = AppiumBy.accessibilityId("AddEvent");
@@ -125,7 +91,7 @@ public class Case47_Fuel_Addandevent_preperformance_additionalcase extends Appiu
         
 		
         // Locate the element containing the perform
-        WebElement eventadd = driver.findElement(addeventlabel);
+        WebElement eventadd = driver.findElement(mobileLocators.addeventlabel);
         // Extract text from the element
         String actualText = eventadd.getText();
         // Define the expected text
@@ -141,24 +107,24 @@ public class Case47_Fuel_Addandevent_preperformance_additionalcase extends Appiu
         AllureUtils.captureScreenshot(driver, "addevent2"); 
         
         // Locate the element related to add event button 
-        WebElement addaneventbutton 	= driver.findElement(eventbttn);
+        WebElement addaneventbutton 	= driver.findElement(mobileLocators.eventbttn);
         addaneventbutton.click();
               
         // Locate the element related to cross icon
-        WebElement eventcrossbutton 	= driver.findElement(eventcross);
+        WebElement eventcrossbutton 	= driver.findElement(mobileLocators.eventcross);
         eventcrossbutton.click();
         
         // again click on add an event button 
         addaneventbutton.click();
         
         // Locate Select activity field 
-        WebElement selectacticity 	= driver.findElement(selectactivityfield);
+        WebElement selectacticity 	= driver.findElement(mobileLocators.selectactivityfield);
         selectacticity.click();
                 
 //        WebElement Activityname		= driver.findElement(Enteractivityname);   
 //        Activityname.sendKeys("Walking");
         
-        WebElement Activityname		= driver.findElement(Enteractivityname);   
+        WebElement Activityname		= driver.findElement(mobileLocators.Enteractivityname);   
         Activityname.click();
    
         WebElement Activityname1	= driver.findElement(AppiumBy.iOSNsPredicateString("label == \"W\""));
@@ -180,21 +146,21 @@ public class Case47_Fuel_Addandevent_preperformance_additionalcase extends Appiu
         Activityname6.click();
 
         // Enter text for Search field 
-        WebElement donekeypad	= driver.findElement(doneclick);
+        WebElement donekeypad	= driver.findElement(mobileLocators.doneclick);
      	donekeypad.click();
      	
      	 // Locate Select activity field 	
-        WebElement selectwalking 	= driver.findElement(walkingclikc);
+        WebElement selectwalking 	= driver.findElement(mobileLocators.walkingclikc);
         selectwalking.click();
 
         // Capture a screenshot and attach it to Allure
         AllureUtils.captureScreenshot(driver, "addevent3"); 
       
      	// Select starttime	for add an event
-        WebElement startTimerclick 	= driver.findElement(startTime);
+        WebElement startTimerclick 	= driver.findElement(mobileLocators.startTime);
         startTimerclick.click();
         
-        List<WebElement>values = driver.findElements(pickerelement);
+        List<WebElement>values = driver.findElements(mobileLocators.pickerelement);
 
 		for (int i=0; i<values.size();i++)
 		{		
@@ -210,14 +176,14 @@ public class Case47_Fuel_Addandevent_preperformance_additionalcase extends Appiu
 		
 		Thread.sleep(3500);
 		values.get(2).sendKeys("AM");
-		driver.findElement(Doneclick).click();
+		driver.findElement(mobileLocators.Doneclick).click();
        
 		
 		 // Click on start time 
-        WebElement endTimerclick 	= driver.findElement(endtime);
+        WebElement endTimerclick 	= driver.findElement(mobileLocators.endtime);
         endTimerclick.click();
         
-        List<WebElement>values1 = driver.findElements(pickerelement);
+        List<WebElement>values1 = driver.findElements(mobileLocators.pickerelement);
 
 		for (int i=0; i<values1.size();i++)
 		{		
@@ -233,17 +199,17 @@ public class Case47_Fuel_Addandevent_preperformance_additionalcase extends Appiu
 		
 		Thread.sleep(3500);
 		values1.get(2).sendKeys("AM");
-		driver.findElement(Doneclick).click();
+		driver.findElement(mobileLocators.Doneclick).click();
 		
 		// Click on plus icon from hydration
-		WebElement hydrationclick = driver.findElement(hydration);
+		WebElement hydrationclick = driver.findElement(mobileLocators.hydration);
 		for (int i = 0; i < 4; i++) {
 		    hydrationclick.click();
 		}
 
 		
 		// Click on Electrolyte glasses
-        By[] electrolyte = {electro1, electro2};
+        By[] electrolyte = {mobileLocators.electro1, mobileLocators.electro2};
         try {   
             // Click on glasses using a loop
             for (By locator6 : electrolyte) {
@@ -260,7 +226,7 @@ public class Case47_Fuel_Addandevent_preperformance_additionalcase extends Appiu
             e.printStackTrace();
         }       
 		
-		WebElement tellusmre	= driver.findElement(notesevent);
+		WebElement tellusmre	= driver.findElement(mobileLocators.notesevent);
 		tellusmre.sendKeys("Add values by automation tools");
 		
 		
@@ -268,12 +234,12 @@ public class Case47_Fuel_Addandevent_preperformance_additionalcase extends Appiu
         AllureUtils.captureScreenshot(driver, "addevent4"); 
 	
         Thread.sleep(2500);
-		WebElement walkingtick = driver.findElement(tickbttn);
+		WebElement walkingtick = driver.findElement(mobileLocators.tickbttn);
 		walkingtick.click();
 		walkingtick.click();
 	        
 		Thread.sleep(5500);
-		WebElement succeskip	= driver.findElement(Skipclick);
+		WebElement succeskip	= driver.findElement(mobileLocators.Skipclick);
 		succeskip.click();
 	
 		Thread.sleep(2500);
@@ -290,11 +256,11 @@ public class Case47_Fuel_Addandevent_preperformance_additionalcase extends Appiu
         Allure.addAttachment("Actual Label", actualLabel);
 		
         // Click on walking- hydration icon	
-        WebElement walkinghydration	= driver.findElement(hydration1click);
+        WebElement walkinghydration	= driver.findElement(mobileLocators.hydration1click);
         walkinghydration.click();
         
         // Click on plus icon from hydration
-     	WebElement hydrationpopclick = driver.findElement(hydrationplus);
+     	WebElement hydrationpopclick = driver.findElement(mobileLocators.hydrationplus);
      	for (int i = 0; i < 2; i++) {
      	hydrationpopclick.click();
      	}
@@ -302,19 +268,19 @@ public class Case47_Fuel_Addandevent_preperformance_additionalcase extends Appiu
      	// Capture a screenshot and attach it to Allure
         AllureUtils.captureScreenshot(driver, "addevent5");
         
-     	WebElement hydrationsubmit	= driver.findElement(submithydration);
+     	WebElement hydrationsubmit	= driver.findElement(mobileLocators.submithydration);
      	hydrationsubmit.click();
 
      	// Add fuel data for pre-performance 
-     	WebElement pluspreperformance	= driver.findElement(preplusicon);
+     	WebElement pluspreperformance	= driver.findElement(mobileLocators.preplusicon);
      	pluspreperformance.click();
         
      	//click on keypad Done button to hide keypad
-        WebElement keypaddone	= driver.findElement(doneclick);
+        WebElement keypaddone	= driver.findElement(mobileLocators.doneclick);
         keypaddone.click();
         
         // Click on fuel search field 
-        WebElement additionalfuel = driver.findElement(additionalsearch);
+        WebElement additionalfuel = driver.findElement(mobileLocators.additionalsearch);
         additionalfuel.click();
         
         WebElement searchtext1	= driver.findElement(AppiumBy.iOSNsPredicateString("label == \"F\""));
@@ -329,7 +295,7 @@ public class Case47_Fuel_Addandevent_preperformance_additionalcase extends Appiu
         WebElement searchtext4	= driver.findElement(AppiumBy.iOSNsPredicateString("label == \"h\""));
         searchtext4.click();
 
-        WebElement Keypaddone	= driver.findElement(doneclick);
+        WebElement Keypaddone	= driver.findElement(mobileLocators.doneclick);
         Keypaddone.click();
         
         
@@ -345,14 +311,14 @@ public class Case47_Fuel_Addandevent_preperformance_additionalcase extends Appiu
 		Thread.sleep(2000);
         
         
-        WebElement fuelselection	= driver.findElement(fish);
+        WebElement fuelselection	= driver.findElement(mobileLocators.fish);
         fuelselection.click();
 		
-        WebElement fueldelete	= driver.findElement(fishRemove);
+        WebElement fueldelete	= driver.findElement(mobileLocators.fishRemove);
         fueldelete.click();
         
         // Click on fuel search field 
-        WebElement additionalfuel2 = driver.findElement(additionalsearch);
+        WebElement additionalfuel2 = driver.findElement(mobileLocators.additionalsearch);
         additionalfuel2.click();
         
         WebElement searchtext11	= driver.findElement(AppiumBy.iOSNsPredicateString("label == \"G\""));
@@ -364,10 +330,10 @@ public class Case47_Fuel_Addandevent_preperformance_additionalcase extends Appiu
         WebElement searchtext31	= driver.findElement(AppiumBy.iOSNsPredicateString("label == \"a\""));
         searchtext31.click();
         
-        WebElement Keypaddone1	= driver.findElement(doneclick);
+        WebElement Keypaddone1	= driver.findElement(mobileLocators.doneclick);
         Keypaddone1.click();
         
-        WebElement brandedShowmore	= driver.findElement(Showclick);
+        WebElement brandedShowmore	= driver.findElement(mobileLocators.Showclick);
         brandedShowmore.click();
                 
         Thread.sleep(3000);
@@ -377,22 +343,22 @@ public class Case47_Fuel_Addandevent_preperformance_additionalcase extends Appiu
 		scrollObject1.put("Goat Cheese", "Goat Cheese");
 		driver.executeScript("mobile:scroll", scrollObject1);
 		
-		WebElement fuelselection1	= driver.findElement(Cheesegoat);
+		WebElement fuelselection1	= driver.findElement(mobileLocators.Cheesegoat);
         fuelselection1.click();
         
         // Capture a screenshot and attach it to Allure
         AllureUtils.captureScreenshot(driver, "addevent7");
         
         Thread.sleep(2500);
-        WebElement submititems	= driver.findElement(submitclick);
+        WebElement submititems	= driver.findElement(mobileLocators.submitclick);
         submititems.click();
         
         Thread.sleep(4500);
         
-        WebElement uploadpreimage	= driver.findElement(Uploadimage);
+        WebElement uploadpreimage	= driver.findElement(mobileLocators.Uploadimage);
         uploadpreimage.click();
                 
-        WebElement galleryclick	= driver.findElement(gallery);
+        WebElement galleryclick	= driver.findElement(mobileLocators.gallery);
         galleryclick.click();
         
         WebElement firstPhoto = driver.findElement(AppiumBy.xpath("//XCUIElementTypeImage[2]"));
@@ -402,10 +368,10 @@ public class Case47_Fuel_Addandevent_preperformance_additionalcase extends Appiu
         addclick.click();
         
         // Click on timer 
-        WebElement Timerclick 	= driver.findElement(Time);
+        WebElement Timerclick 	= driver.findElement(mobileLocators.Time);
         Timerclick.click();
         
-        List<WebElement>values2 = driver.findElements(pickerelement);
+        List<WebElement>values2 = driver.findElements(mobileLocators.pickerelement);
 
 		for (int i=0; i<values2.size();i++)
 		{		
@@ -422,18 +388,18 @@ public class Case47_Fuel_Addandevent_preperformance_additionalcase extends Appiu
 		Thread.sleep(3500);
 		values2.get(2).sendKeys("AM");
 
-		driver.findElement(Doneclick).click();
+		driver.findElement(mobileLocators.Doneclick).click();
 		
 		 // Capture a screenshot and attach it to Allure
         AllureUtils.captureScreenshot(driver, "addevent8");
 		
         
-		WebElement Submittap = driver.findElement(submittap);
+		WebElement Submittap = driver.findElement(mobileLocators.submittap);
 		Submittap.click();
 
 						
 		Thread.sleep(3500);
-		WebElement infoicon		= driver.findElement(infoclick);
+		WebElement infoicon		= driver.findElement(mobileLocators.infoclick);
 		infoicon.click();
 		
 		Thread.sleep(3000); 
@@ -444,21 +410,21 @@ public class Case47_Fuel_Addandevent_preperformance_additionalcase extends Appiu
 		driver.executeScript("mobile:scroll", scrollObject3);
 		Thread.sleep(2000);
 
-		WebElement 	backincon	= driver.findElement(backbttn);
+		WebElement 	backincon	= driver.findElement(mobileLocators.backbttn);
 		backincon.click();
 		
 		// Wait for the "Add An Event" text to appear on the screen
         WebDriverWait wait1 = new WebDriverWait(driver, Duration.ofSeconds(100));
-        wait1.until(ExpectedConditions.presenceOfElementLocated(performancetime));
+        wait1.until(ExpectedConditions.presenceOfElementLocated(mobileLocators.performancetime));
 		
-		WebElement perperformanceetime	= driver.findElement(performancetime);
+		WebElement perperformanceetime	= driver.findElement(mobileLocators.performancetime);
 		perperformanceetime.click();
 		
 		 // Capture a screenshot and attach it to Allure
         AllureUtils.captureScreenshot(driver, "addevent9");
 		
 		
-		  List<WebElement>values5 = driver.findElements(pickerelement);
+		  List<WebElement>values5 = driver.findElements(mobileLocators.pickerelement);
 
 			for (int i=0; i<values5.size();i++)
 			{		
@@ -476,7 +442,7 @@ public class Case47_Fuel_Addandevent_preperformance_additionalcase extends Appiu
 			values5.get(2).sendKeys("AM");
 			
 			
-			driver.findElement(Doneclick).click();
+			driver.findElement(mobileLocators.Doneclick).click();
 		 // Capture a screenshot and attach it to Allure
         AllureUtils.captureScreenshot(driver, "addevent10");
         

@@ -1,21 +1,81 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-12-18T10:27:57Z" name="Default suite" finished-at="2023-12-18T10:30:48Z" duration-ms="170746">
+  <suite started-at="2023-12-18T13:34:18Z" name="Default suite" finished-at="2023-12-18T13:35:13Z" duration-ms="55113">
     <groups>
     </groups>
-    <test started-at="2023-12-18T10:27:57Z" name="Default test" finished-at="2023-12-18T10:30:48Z" duration-ms="170746">
+    <test started-at="2023-12-18T13:34:18Z" name="Default test" finished-at="2023-12-18T13:35:13Z" duration-ms="55113">
       <class name="cuesz03.Iosapp_member_home_Fuelscreen.Case50_Fuel_Addandevent_Recommendedfuel">
-        <test-method is-config="true" signature="Cueszbase()[pri:0, instance:cuesz03.Iosapp_member_home_Fuelscreen.Case50_Fuel_Addandevent_Recommendedfuel@46dffdc3]" started-at="2023-12-18T15:57:57Z" name="Cueszbase" finished-at="2023-12-18T15:58:02Z" duration-ms="4783" status="PASS">
+        <test-method is-config="true" signature="Cueszbase()[pri:0, instance:cuesz03.Iosapp_member_home_Fuelscreen.Case50_Fuel_Addandevent_Recommendedfuel@46dffdc3]" started-at="2023-12-18T19:04:18Z" name="Cueszbase" finished-at="2023-12-18T19:04:20Z" duration-ms="2020" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Cueszbase -->
-        <test-method signature="Fuel_addaneventadditionalcasewithpostperformance()[pri:0, instance:cuesz03.Iosapp_member_home_Fuelscreen.Case50_Fuel_Addandevent_Recommendedfuel@46dffdc3]" started-at="2023-12-18T15:58:02Z" name="Fuel_addaneventadditionalcasewithpostperformance" finished-at="2023-12-18T16:00:48Z" duration-ms="165815" status="PASS">
+        <test-method signature="Fuel_addaneventadditionalcasewithpostperformance()[pri:0, instance:cuesz03.Iosapp_member_home_Fuelscreen.Case50_Fuel_Addandevent_Recommendedfuel@46dffdc3]" started-at="2023-12-18T19:04:20Z" name="Fuel_addaneventadditionalcasewithpostperformance" finished-at="2023-12-18T19:05:13Z" duration-ms="52998" status="FAIL">
+          <exception class="org.openqa.selenium.NoSuchElementException">
+            <message>
+              <![CDATA[An element could not be located on the page using the given search parameters.
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.16.1', revision: '9b4c83354e'
+System info: os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '14.0', java.version: '21'
+Driver info: io.appium.java_client.ios.IOSDriver
+Command: [c266492a-48c1-44b3-ab5b-1fbb4192b883, findElement {using=xpath, value=(//XCUIElementTypeOther[@name="During Performance"])[2]}]
+Capabilities {appium:automationName: XCuiTest, appium:databaseEnabled: false, appium:deviceName: iPhone 11, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: false, appium:platformVersion: 17.0, appium:takesScreenshot: true, appium:udid: 626549EB-A1C6-40B2-B376-437..., appium:wdaLaunchTimeout: 30000, appium:webStorageEnabled: false, platformName: IOS}
+Session ID: c266492a-48c1-44b3-ab5b-1fbb4192b883]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters.
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.16.1', revision: '9b4c83354e'
+System info: os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '14.0', java.version: '21'
+Driver info: io.appium.java_client.ios.IOSDriver
+Command: [c266492a-48c1-44b3-ab5b-1fbb4192b883, findElement {using=xpath, value=(//XCUIElementTypeOther[@name="During Performance"])[2]}]
+Capabilities {appium:automationName: XCuiTest, appium:databaseEnabled: false, appium:deviceName: iPhone 11, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: false, appium:platformVersion: 17.0, appium:takesScreenshot: true, appium:udid: 626549EB-A1C6-40B2-B376-437..., appium:wdaLaunchTimeout: 30000, appium:webStorageEnabled: false, platformName: IOS}
+Session ID: c266492a-48c1-44b3-ab5b-1fbb4192b883
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:250)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:602)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:359)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:353)
+	at cuesz03.Iosapp_member_home_Fuelscreen.Case50_Fuel_Addandevent_Recommendedfuel.Fuel_addaneventadditionalcasewithpostperformance(Case50_Fuel_Addandevent_Recommendedfuel.java:402)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:661)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:869)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1193)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:126)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:744)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:380)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:375)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1226)
+	at org.testng.TestNG.runSuites(TestNG.java:1144)
+	at org.testng.TestNG.run(TestNG.java:1115)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Fuel_addaneventadditionalcasewithpostperformance -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:cuesz03.Iosapp_member_home_Fuelscreen.Case50_Fuel_Addandevent_Recommendedfuel@46dffdc3]" started-at="2023-12-18T16:00:48Z" name="tearDown" finished-at="2023-12-18T16:00:48Z" duration-ms="37" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:cuesz03.Iosapp_member_home_Fuelscreen.Case50_Fuel_Addandevent_Recommendedfuel@46dffdc3]" started-at="2023-12-18T19:05:13Z" name="tearDown" finished-at="2023-12-18T19:05:13Z" duration-ms="18" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->

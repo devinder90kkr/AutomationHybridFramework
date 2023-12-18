@@ -12,6 +12,7 @@ import org.testng.annotations.Test;
 import cuesz.pages.AppiummobileBase;
 import cuesz.utils.AllureUtils;
 import cuesz.utils.AppiumappUtils;
+import cuesz.utils.mobileLocators;
 import io.appium.java_client.AppiumBy;
 import io.appium.java_client.AppiumDriver;
 import io.qameta.allure.Description;
@@ -26,24 +27,7 @@ import io.qameta.allure.Story;
 @Feature ("Verify member able to add functionlaity related to add an event for post-performance functionlaity.")
 public class Case49_Fuel_Addandevent_Postperformance_additionalcase extends AppiummobileBase {
 	
-	private By Homeclick 		= 		AppiumBy.iOSClassChain("**/XCUIElementTypeOther[`label == \"Home\"`][2]");
-	private By postplusicon	=		AppiumBy.accessibilityId("Post PerformancePlueIcon");
-	private By doneclick		= 		AppiumBy.accessibilityId("Done");
-	private By SanXian			= 		AppiumBy.iOSNsPredicateString("name == \"Di San Xian\"");
-	private By fernfuel			= 		AppiumBy.accessibilityId("Fern");
-	private By additionalsearch	= 		AppiumBy.accessibilityId("AdditionalFuelSearch");
-	private By submitclick		=		AppiumBy.accessibilityId("ItemSubmit");
-	private By infoclick		=		AppiumBy.accessibilityId("Post PerformanceInfoIcon");	
-	private By backbttn			=		AppiumBy.accessibilityId("BackPress");
-	private By showclikc		=		AppiumBy.accessibilityId("Show More");
-	private By vodkafuel		=		AppiumBy.accessibilityId("Vodka");
-	private By additionalsearch1=		AppiumBy.iOSNsPredicateString("label == \"Search Fuel to log\" AND name == \"AdditionalFuelSearch\"");
-	private By Uploadimage		=		AppiumBy.accessibilityId("Post PerformanceUploadIcon");
-	private By gallery			=		AppiumBy.accessibilityId("GalleryClicked");
-	private By Time				= 		AppiumBy.accessibilityId("SelectTime");
-	private By submittap		= 		AppiumBy.accessibilityId("SubmitImage");
-	private By pickerelement	= 		AppiumBy.xpath("//XCUIElementTypePickerWheel");
-	private By Doneclick		= 		AppiumBy.accessibilityId("AlcohalTime");
+	mobileLocators locators = new mobileLocators();	
 	
 	@Test
 	@Owner("QA") // Add the @Owner annotation to specify the executor
@@ -57,7 +41,7 @@ public class Case49_Fuel_Addandevent_Postperformance_additionalcase extends Appi
         // Launch the app using the utility method
         appiumUtils.launchAppWithPackageId("com.cuesz.mobile");	
 		
-		WebElement Homeicon = driver.findElement(Homeclick);
+		WebElement Homeicon = driver.findElement(mobileLocators.Homeclick);
 		Homeicon.click();	
 		
 		Thread.sleep(3000);
@@ -81,28 +65,21 @@ public class Case49_Fuel_Addandevent_Postperformance_additionalcase extends Appi
             driver.executeScript("mobile:scroll", scrollObject1);
             Thread.sleep(2000);
         }
-        
-        
-//        // Method to scroll to perform screen
-//  		HashMap<String,Object>scrollObject3 =new HashMap<>();
-//  		scrollObject3.put("direction", "down");
-//  		scrollObject3.put("Post Performance", "Post Performance");
-//  		driver.executeScript("mobile:scroll", scrollObject3);
-//  		Thread.sleep(2000);
+          
 
   		// Capture a screenshot and attach it to Allure
         AllureUtils.captureScreenshot(driver, "addpostevent1");
   			
      	// Add fuel data for pre-performance 
-     	WebElement postperformance	= driver.findElement(postplusicon);
+     	WebElement postperformance	= driver.findElement(mobileLocators.postplusicon);
      	postperformance.click();
         
      	//click on keypad Done button to hide keypad
-        WebElement keypaddone	= driver.findElement(doneclick);
+        WebElement keypaddone	= driver.findElement(mobileLocators.doneclick);
         keypaddone.click();
         
         // Click on fuel search field 
-        WebElement additionalfuel = driver.findElement(additionalsearch);
+        WebElement additionalfuel = driver.findElement(mobileLocators.additionalsearch);
         additionalfuel.click();
         
         WebElement searchtext1	= driver.findElement(AppiumBy.iOSNsPredicateString("label == \"X\""));
@@ -114,20 +91,20 @@ public class Case49_Fuel_Addandevent_Postperformance_additionalcase extends Appi
         WebElement searchtext3	= driver.findElement(AppiumBy.iOSNsPredicateString("label == \"o\""));
         searchtext3.click();
 
-        WebElement Keypaddone	= driver.findElement(doneclick);
+        WebElement Keypaddone	= driver.findElement(mobileLocators.doneclick);
         Keypaddone.click();
 
-        WebElement Showmoreclick	= driver.findElement(showclikc);
+        WebElement Showmoreclick	= driver.findElement(mobileLocators.showclikc);
         Showmoreclick.click();
 
         // Capture a screenshot and attach it to Allure
         AllureUtils.captureScreenshot(driver, "addpostevent2");
    
-        WebElement fuelselection	= driver.findElement(SanXian);
+        WebElement fuelselection	= driver.findElement(mobileLocators.SanXian);
         fuelselection.click();
         
         Thread.sleep(2500);
-        WebElement submititems	= driver.findElement(submitclick);
+        WebElement submititems	= driver.findElement(mobileLocators.submitclick);
         submititems.click();
 
         // Capture a screenshot and attach it to Allure
@@ -135,11 +112,11 @@ public class Case49_Fuel_Addandevent_Postperformance_additionalcase extends Appi
         
         Thread.sleep(5500);
      // Add fuel data for pre-performance 
-     	WebElement duringpreperformance2	= driver.findElement(postplusicon);
+     	WebElement duringpreperformance2	= driver.findElement(mobileLocators.postplusicon);
      	duringpreperformance2.click();
         
         // Click on fuel search field 
-        WebElement additionalfuel2 = driver.findElement(additionalsearch);
+        WebElement additionalfuel2 = driver.findElement(mobileLocators.additionalsearch);
         additionalfuel2.click();
         
         WebElement searchtext11	= driver.findElement(AppiumBy.iOSNsPredicateString("label == \"F\""));
@@ -151,18 +128,18 @@ public class Case49_Fuel_Addandevent_Postperformance_additionalcase extends Appi
         WebElement searchtext31	= driver.findElement(AppiumBy.iOSNsPredicateString("label == \"r\""));
         searchtext31.click();
         
-        WebElement Keypaddone1	= driver.findElement(doneclick);
+        WebElement Keypaddone1	= driver.findElement(mobileLocators.doneclick);
         Keypaddone1.click();
         
 		
-		WebElement fuelselection1	= driver.findElement(fernfuel);
+		WebElement fuelselection1	= driver.findElement(mobileLocators.fernfuel);
         fuelselection1.click();
         
         // Capture a screenshot and attach it to Allure
         AllureUtils.captureScreenshot(driver, "addpostevent3");
         
         // Click on fuel search field 
-        WebElement additionalfuel4 = driver.findElement(additionalsearch1);
+        WebElement additionalfuel4 = driver.findElement(mobileLocators.additionalsearch1);
         additionalfuel4.click();
         
         WebElement searchtext15	= driver.findElement(AppiumBy.iOSNsPredicateString("label == \"V\""));
@@ -174,22 +151,22 @@ public class Case49_Fuel_Addandevent_Postperformance_additionalcase extends Appi
         WebElement searchtext17	= driver.findElement(AppiumBy.iOSNsPredicateString("label == \"t\""));
         searchtext17.click();
         
-        WebElement Keypaddone2	= driver.findElement(doneclick);
+        WebElement Keypaddone2	= driver.findElement(mobileLocators.doneclick);
         Keypaddone2.click();      
 		
-		WebElement fuelselection3	= driver.findElement(vodkafuel);
+		WebElement fuelselection3	= driver.findElement(mobileLocators.vodkafuel);
         fuelselection3.click();
          
         Thread.sleep(2500);
-        WebElement submititems2	= driver.findElement(submitclick);
+        WebElement submititems2	= driver.findElement(mobileLocators.submitclick);
         submititems2.click();
 
         Thread.sleep(4500);
         
-        WebElement uploadpreimage	= driver.findElement(Uploadimage);
+        WebElement uploadpreimage	= driver.findElement(mobileLocators.Uploadimage);
         uploadpreimage.click();
                 
-        WebElement galleryclick	= driver.findElement(gallery);
+        WebElement galleryclick	= driver.findElement(mobileLocators.gallery);
         galleryclick.click();
         
         WebElement firstPhoto = driver.findElement(AppiumBy.xpath("//XCUIElementTypeImage[3]"));
@@ -199,10 +176,10 @@ public class Case49_Fuel_Addandevent_Postperformance_additionalcase extends Appi
         addclick.click();
         
         // Click on timer 
-        WebElement Timerclick 	= driver.findElement(Time);
+        WebElement Timerclick 	= driver.findElement(mobileLocators.Time);
         Timerclick.click();
         
-        List<WebElement>values2 = driver.findElements(pickerelement);
+        List<WebElement>values2 = driver.findElements(mobileLocators.pickerelement);
 
 		for (int i=0; i<values2.size();i++)
 		{		
@@ -219,18 +196,18 @@ public class Case49_Fuel_Addandevent_Postperformance_additionalcase extends Appi
 		Thread.sleep(3500);
 		values2.get(2).sendKeys("AM");
 
-		driver.findElement(Doneclick).click();
+		driver.findElement(mobileLocators.Doneclick).click();
 		
 		 // Capture a screenshot and attach it to Allure
         AllureUtils.captureScreenshot(driver, "addevent8");
 		
         
-		WebElement Submittap = driver.findElement(submittap);
+		WebElement Submittap = driver.findElement(mobileLocators.submittap);
 		Submittap.click();
         
 					
 		Thread.sleep(3500);
-		WebElement infoicon		= driver.findElement(infoclick);
+		WebElement infoicon		= driver.findElement(mobileLocators.infoclick);
 		infoicon.click();
 		
 		Thread.sleep(3000); 
@@ -241,7 +218,7 @@ public class Case49_Fuel_Addandevent_Postperformance_additionalcase extends Appi
 		driver.executeScript("mobile:scroll", scrollObject4);
 		Thread.sleep(2000);
 
-		WebElement 	backincon	= driver.findElement(backbttn);
+		WebElement 	backincon	= driver.findElement(mobileLocators.backbttn);
 		backincon.click();
 		
 		By postperformanceLocator1 = AppiumBy.iOSClassChain("**/XCUIElementTypeStaticText[`label == \"Post Performance\"`][2]");

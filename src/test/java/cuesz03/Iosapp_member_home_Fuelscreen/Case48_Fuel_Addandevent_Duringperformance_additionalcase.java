@@ -10,6 +10,7 @@ import org.testng.annotations.Test;
 import cuesz.pages.AppiummobileBase;
 import cuesz.utils.AllureUtils;
 import cuesz.utils.AppiumappUtils;
+import cuesz.utils.mobileLocators;
 import io.appium.java_client.AppiumBy;
 import io.appium.java_client.AppiumDriver;
 import io.qameta.allure.Description;
@@ -24,16 +25,7 @@ import io.qameta.allure.Story;
 @Feature ("Verify member able to add functionlaity related to add an event for During-performance functionlaity.")
 public class Case48_Fuel_Addandevent_Duringperformance_additionalcase extends AppiummobileBase {
 	
-	private By Homeclick 		= 		AppiumBy.iOSClassChain("**/XCUIElementTypeOther[`label == \"Home\"`][2]");
-	private By duringplusicon	=		AppiumBy.accessibilityId("During PerformancePlueIcon");
-	private By doneclick		= 		AppiumBy.accessibilityId("Done");
-	private By jimmie			= 		AppiumBy.iOSNsPredicateString("name == \"Jimmies\"");
-	private By Showclick		= 		AppiumBy.iOSNsPredicateString("name == \"Show More\"");
-	private By cognpate			= 		AppiumBy.accessibilityId("Cognac Pate");
-	private By additionalsearch	= 		AppiumBy.accessibilityId("AdditionalFuelSearch");
-	private By submitclick		=		AppiumBy.accessibilityId("ItemSubmit");
-	private By infoclick		=		AppiumBy.accessibilityId("During PerformanceInfoIcon");	
-	private By backbttn			=		AppiumBy.accessibilityId("BackPress");
+	mobileLocators locators = new mobileLocators();	
 	
 	@Test
 	@Owner("QA") // Add the @Owner annotation to specify the executor
@@ -47,7 +39,7 @@ public class Case48_Fuel_Addandevent_Duringperformance_additionalcase extends Ap
         // Launch the app using the utility method
         appiumUtils.launchAppWithPackageId("com.cuesz.mobile");	
 		
-		WebElement Homeicon = driver.findElement(Homeclick);
+		WebElement Homeicon = driver.findElement(mobileLocators.Homeclick);
 		Homeicon.click();
 		
 		
@@ -86,15 +78,15 @@ public class Case48_Fuel_Addandevent_Duringperformance_additionalcase extends Ap
   		
   		
      	// Add fuel data for pre-performance 
-     	WebElement duringpreperformance	= driver.findElement(duringplusicon);
+     	WebElement duringpreperformance	= driver.findElement(mobileLocators.duringplusicon);
      	duringpreperformance.click();
         
      	//click on keypad Done button to hide keypad
-        WebElement keypaddone	= driver.findElement(doneclick);
+        WebElement keypaddone	= driver.findElement(mobileLocators.doneclick);
         keypaddone.click();
         
         // Click on fuel search field 
-        WebElement additionalfuel = driver.findElement(additionalsearch);
+        WebElement additionalfuel = driver.findElement(mobileLocators.additionalsearch);
         additionalfuel.click();
         
         WebElement searchtext1	= driver.findElement(AppiumBy.iOSNsPredicateString("label == \"J\""));
@@ -106,7 +98,7 @@ public class Case48_Fuel_Addandevent_Duringperformance_additionalcase extends Ap
         WebElement searchtext3	= driver.findElement(AppiumBy.iOSNsPredicateString("label == \"m\""));
         searchtext3.click();
 
-        WebElement Keypaddone	= driver.findElement(doneclick);
+        WebElement Keypaddone	= driver.findElement(mobileLocators.doneclick);
         Keypaddone.click();
        
         // Capture a screenshot and attach it to Allure
@@ -115,11 +107,11 @@ public class Case48_Fuel_Addandevent_Duringperformance_additionalcase extends Ap
         // Capture a screenshot and attach it to Allure
         AllureUtils.captureScreenshot(driver, "addevent6");
    
-        WebElement fuelselection	= driver.findElement(jimmie);
+        WebElement fuelselection	= driver.findElement(mobileLocators.jimmie);
         fuelselection.click();
         
         Thread.sleep(2500);
-        WebElement submititems	= driver.findElement(submitclick);
+        WebElement submititems	= driver.findElement(mobileLocators.submitclick);
         submititems.click();
 
         // Capture a screenshot and attach it to Allure
@@ -127,11 +119,11 @@ public class Case48_Fuel_Addandevent_Duringperformance_additionalcase extends Ap
         
         Thread.sleep(5500);
      // Add fuel data for pre-performance 
-     	WebElement duringpreperformance2	= driver.findElement(duringplusicon);
+     	WebElement duringpreperformance2	= driver.findElement(mobileLocators.duringplusicon);
      	duringpreperformance2.click();
         
         // Click on fuel search field 
-        WebElement additionalfuel2 = driver.findElement(additionalsearch);
+        WebElement additionalfuel2 = driver.findElement(mobileLocators.additionalsearch);
         additionalfuel2.click();
         
         WebElement searchtext11	= driver.findElement(AppiumBy.iOSNsPredicateString("label == \"C\""));
@@ -143,10 +135,10 @@ public class Case48_Fuel_Addandevent_Duringperformance_additionalcase extends Ap
         WebElement searchtext31	= driver.findElement(AppiumBy.iOSNsPredicateString("label == \"g\""));
         searchtext31.click();
         
-        WebElement Keypaddone1	= driver.findElement(doneclick);
+        WebElement Keypaddone1	= driver.findElement(mobileLocators.doneclick);
         Keypaddone1.click();
         
-        WebElement brandedShowmore	= driver.findElement(Showclick);
+        WebElement brandedShowmore	= driver.findElement(mobileLocators.Showclick);
         brandedShowmore.click();
                 
         Thread.sleep(3000);
@@ -156,7 +148,7 @@ public class Case48_Fuel_Addandevent_Duringperformance_additionalcase extends Ap
 		scrollObject1.put("Cognac Pate", "Cognac Pate");
 		driver.executeScript("mobile:scroll", scrollObject1);
 		
-		WebElement fuelselection1	= driver.findElement(cognpate);
+		WebElement fuelselection1	= driver.findElement(mobileLocators.cognpate);
         fuelselection1.click();
         
      // Capture a screenshot and attach it to Allure
@@ -164,12 +156,12 @@ public class Case48_Fuel_Addandevent_Duringperformance_additionalcase extends Ap
         
         
         Thread.sleep(2500);
-        WebElement submititems2	= driver.findElement(submitclick);
+        WebElement submititems2	= driver.findElement(mobileLocators.submitclick);
         submititems2.click();
 
 					
 		Thread.sleep(3500);
-		WebElement infoicon		= driver.findElement(infoclick);
+		WebElement infoicon		= driver.findElement(mobileLocators.infoclick);
 		infoicon.click();
 		
 		Thread.sleep(3000); 
@@ -180,7 +172,7 @@ public class Case48_Fuel_Addandevent_Duringperformance_additionalcase extends Ap
 		driver.executeScript("mobile:scroll", scrollObject4);
 		Thread.sleep(2000);
 
-		WebElement 	backincon	= driver.findElement(backbttn);
+		WebElement 	backincon	= driver.findElement(mobileLocators.backbttn);
 		backincon.click();
 		
 		Thread.sleep(3500);
