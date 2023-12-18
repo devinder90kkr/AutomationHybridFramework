@@ -3,7 +3,6 @@ package cuesz03.Iosapp_member_home_Fuelscreen;
 import java.util.HashMap;
 import java.util.List;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
@@ -12,6 +11,7 @@ import cuesz.pages.AppiummobileBase;
 import cuesz.utils.AllureUtils;
 import cuesz.utils.AppiumappUtils;
 import cuesz.utils.DateUtilsAppium;
+import cuesz.utils.mobileLocators;
 import io.appium.java_client.AppiumBy;
 import io.qameta.allure.Description;
 import io.qameta.allure.Epic;
@@ -25,28 +25,7 @@ import io.qameta.allure.Story;
 @Feature ("Verify Fuel detail functionlaity related to Optimal fuel.")
 public class Case45_Fuel_Pastday1_brekfastactivity extends AppiummobileBase {
 	
-	private By Homeclick 		= 		AppiumBy.iOSClassChain("**/XCUIElementTypeOther[`label == \"Home\"`][2]");
-	private By plusadd			= 		AppiumBy.accessibilityId("BreakfastAddIcon");
-	private By doneclick		= 		AppiumBy.accessibilityId("Done");
-	private By additionalsearch	= 		AppiumBy.accessibilityId("AdditionalFuelSearch");
-//	private By faggot			= 		AppiumBy.iOSClassChain("**/XCUIElementTypeOther[`label == \"Faggot 90 kcal\"`][3]");
-	private By faggot			=		AppiumBy.iOSNsPredicateString("name == \"Faggot\"");
-	
-	private By fagoticon		= 		AppiumBy.accessibilityId("FaggotFuelItemInfo");
-	private By backtap			= 		AppiumBy.accessibilityId("BackPress");
-//	private By downarrow		= 		AppiumBy.iOSClassChain("**/XCUIElementTypeOther[`label == \"ArrowDown\"`][4]");
-	private By fagotplus		= 		AppiumBy.accessibilityId("FaggotPlus");
-	private By Time				= 		AppiumBy.accessibilityId("AdditionalItemTime");
-	private By pickerelement	= 		AppiumBy.xpath("//XCUIElementTypePickerWheel");
-	private By Doneclick		= 		AppiumBy.accessibilityId("AlcohalTime");
-	private By submitick		= 		AppiumBy.accessibilityId("ItemSubmit");
-//	private By meat				= 		AppiumBy.iOSClassChain("**/XCUIElementTypeOther[`label == \"Meat 256 kcal\"`][2]");
-	private By meat				=		AppiumBy.iOSNsPredicateString("name == \"Meat\"");
-	private By meatplus			= 		AppiumBy.accessibilityId("MeatPlus");
-	private By serchclick		= 		AppiumBy.accessibilityId("AdditionalFuelSearch");
-	private By Showclick		= 		AppiumBy.xpath("(//XCUIElementTypeStaticText[@name=\"Show More\"])[1]");
-	private By Beetroot			=		AppiumBy.iOSNsPredicateString("name == \"Beetroot\"");
-	private By backpress		= 		AppiumBy.accessibilityId("FuelBackPress");
+	mobileLocators locators = new mobileLocators();	
 
 	@Test
 	@Owner("QA") // Add the @Owner annotation to specify the executor
@@ -60,10 +39,8 @@ public class Case45_Fuel_Pastday1_brekfastactivity extends AppiummobileBase {
         // Launch the app using the utility method
         appiumUtils.launchAppWithPackageId("com.cuesz.mobile");	
 		
-		WebElement Homeicon = driver.findElement(Homeclick);
+		WebElement Homeicon = driver.findElement(mobileLocators.Homeclick);
 		Homeicon.click();
-		
-		
 		
 		// Use the utility method
 		DateUtilsAppium.clickOnPreviousDay(driver);
@@ -81,15 +58,15 @@ public class Case45_Fuel_Pastday1_brekfastactivity extends AppiummobileBase {
         
         
         // Locate the element related to breakfast + icon 
-        WebElement breakfastplus 	= driver.findElement(plusadd);
+        WebElement breakfastplus 	= driver.findElement(mobileLocators.plusadd);
         breakfastplus.click();
         
        //click on keypad Done button to hide keypad
-        WebElement keypaddone	= driver.findElement(doneclick);
+        WebElement keypaddone	= driver.findElement(mobileLocators.doneclick);
         keypaddone.click();
         
         // Click on fuel search field 
-        WebElement additionalfuel = driver.findElement(additionalsearch);
+        WebElement additionalfuel = driver.findElement(mobileLocators.additionalsearch);
         additionalfuel.click();
         
         WebElement searchtext1	= driver.findElement(AppiumBy.iOSNsPredicateString("label == \"F\""));
@@ -110,20 +87,20 @@ public class Case45_Fuel_Pastday1_brekfastactivity extends AppiummobileBase {
         WebElement searchtext6	= driver.findElement(AppiumBy.iOSNsPredicateString("label == \"t\""));
         searchtext6.click();
       
-        WebElement Keypaddone	= driver.findElement(doneclick);
+        WebElement Keypaddone	= driver.findElement(mobileLocators.doneclick);
         Keypaddone.click();
         
         
 		// Capture a screenshot and attach it to Allure
         AllureUtils.captureScreenshot(driver, "additional1");
         
-        WebElement fuelselection	= driver.findElement(faggot);
+        WebElement fuelselection	= driver.findElement(mobileLocators.faggot);
         fuelselection.click();
         
-        WebElement faggoticon		= driver.findElement(fagoticon);
+        WebElement faggoticon		= driver.findElement(mobileLocators.fagoticon);
         faggoticon.click();
         
-        WebElement backicon 		= driver.findElement(backtap);
+        WebElement backicon 		= driver.findElement(mobileLocators.backtap);
         backicon.click();
         
         Thread.sleep(3000);
@@ -134,7 +111,7 @@ public class Case45_Fuel_Pastday1_brekfastactivity extends AppiummobileBase {
 		driver.executeScript("mobile:scroll", scrollObject1);
 		Thread.sleep(2000);
         
-        WebElement faggotplus		= driver.findElement(fagotplus);
+        WebElement faggotplus		= driver.findElement(mobileLocators.fagotplus);
         int numberOfClicks = 3;
         for (int i = 0; i < numberOfClicks; i++) {   
         faggotplus.click();
@@ -144,9 +121,9 @@ public class Case45_Fuel_Pastday1_brekfastactivity extends AppiummobileBase {
         AllureUtils.captureScreenshot(driver, "additional2");
         
         // Click on timer 
-        WebElement Timerclick 	= driver.findElement(Time);
+        WebElement Timerclick 	= driver.findElement(mobileLocators.Time);
         Timerclick.click();
-        List<WebElement>values = driver.findElements(pickerelement);
+        List<WebElement>values = driver.findElements(mobileLocators.pickerelement);
 		for (int i=0; i<values.size();i++)
 		{		
 		System.out.println(values.get(i).getText());
@@ -158,9 +135,9 @@ public class Case45_Fuel_Pastday1_brekfastactivity extends AppiummobileBase {
 		values.get(1).sendKeys(Keys.TAB);
 		Thread.sleep(3500);
 		values.get(2).sendKeys("AM");
-		driver.findElement(Doneclick).click();
+		driver.findElement(mobileLocators.Doneclick).click();
         
-		WebElement submit = driver.findElement(submitick);
+		WebElement submit = driver.findElement(mobileLocators.submitick);
 		submit.click();
 		
 		
@@ -170,15 +147,15 @@ public class Case45_Fuel_Pastday1_brekfastactivity extends AppiummobileBase {
 		
 		
 		 // Locate the element related to breakfast + icon 
-        WebElement breakfastplus2 	= driver.findElement(plusadd);
+        WebElement breakfastplus2 	= driver.findElement(mobileLocators.plusadd);
         breakfastplus2.click();
         
        //click on keypad Done button to hide keypad
-        WebElement keypaddone3	= driver.findElement(doneclick);
+        WebElement keypaddone3	= driver.findElement(mobileLocators.doneclick);
         keypaddone3.click();
         
         // Click on fuel search field 
-        WebElement additionalfuel2 = driver.findElement(additionalsearch);
+        WebElement additionalfuel2 = driver.findElement(mobileLocators.additionalsearch);
         additionalfuel2.click();
         
         WebElement searchtext11	= driver.findElement(AppiumBy.iOSNsPredicateString("label == \"M\""));
@@ -194,26 +171,26 @@ public class Case45_Fuel_Pastday1_brekfastactivity extends AppiummobileBase {
         searchtext41.click();
 
       
-        WebElement Keypaddone1	= driver.findElement(doneclick);
+        WebElement Keypaddone1	= driver.findElement(mobileLocators.doneclick);
         Keypaddone1.click();
 
 		// Capture a screenshot and attach it to Allure
         AllureUtils.captureScreenshot(driver, "additional4");
         
         
-        WebElement fuelselection1	= driver.findElement(meat);
+        WebElement fuelselection1	= driver.findElement(mobileLocators.meat);
         fuelselection1.click();
            
-        WebElement meatclickplus		= driver.findElement(meatplus);
+        WebElement meatclickplus		= driver.findElement(mobileLocators.meatplus);
         int numberOfClicks21 = 1;
         for (int i = 0; i < numberOfClicks21; i++) {   
         	meatclickplus.click();
         }
         
-        WebElement fuelsearch 	= driver.findElement(serchclick);
+        WebElement fuelsearch 	= driver.findElement(mobileLocators.serchclick);
         fuelsearch.click();
         
-        WebElement fuelsearch2 	= driver.findElement(serchclick);
+        WebElement fuelsearch2 	= driver.findElement(mobileLocators.serchclick);
         fuelsearch2.click();
        
         WebElement searchtext71	= driver.findElement(AppiumBy.iOSNsPredicateString("label == \"R\""));
@@ -228,13 +205,13 @@ public class Case45_Fuel_Pastday1_brekfastactivity extends AppiummobileBase {
         WebElement searchtext81	= driver.findElement(AppiumBy.iOSNsPredicateString("label == \"t\""));
         searchtext81.click();
         
-        WebElement Keypaddone2	= driver.findElement(doneclick);
+        WebElement Keypaddone2	= driver.findElement(mobileLocators.doneclick);
         Keypaddone2.click();
         
-        WebElement Showmore		= driver.findElement(Showclick);
+        WebElement Showmore		= driver.findElement(mobileLocators.Showclick);
         Showmore.click();
 
-        WebElement Fuelselection3	= driver.findElement(Beetroot);
+        WebElement Fuelselection3	= driver.findElement(mobileLocators.Beetroot);
         Fuelselection3.click();
         
 		// Capture a screenshot and attach it to Allure
@@ -242,14 +219,14 @@ public class Case45_Fuel_Pastday1_brekfastactivity extends AppiummobileBase {
         
         
         Thread.sleep(2500);
-        WebElement submit1 = driver.findElement(submitick);
+        WebElement submit1 = driver.findElement(mobileLocators.submitick);
 		submit1.click();
 //		
 		Thread.sleep(2500);
 		// Capture a screenshot and attach it to Allure
         AllureUtils.captureScreenshot(driver, "additional6");
         
-        WebElement backdaybuttonfuel	= driver.findElement(backpress);
+        WebElement backdaybuttonfuel	= driver.findElement(mobileLocators.backpress);
         backdaybuttonfuel.click();
 
         Thread.sleep(4500);
