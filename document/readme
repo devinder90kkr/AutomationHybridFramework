@@ -1,0 +1,99 @@
+/*Create document file as for project*/
+	
+	Project name : Cuesz 
+	# Cuesz Selenium Framework
+
+## Overview
+
+This Selenium framework is designed for automated testing of the Cuesz project. 
+It includes test cases for various features organized into different packages. 
+The framework also utilizes Allure as a reporting tool for clear and comprehensive test reporting.
+
+## Table of Contents
+
+- [Packages](#packages)
+  - [Dashboard](#dashboard)
+  - [Liveperform](#liveperform)
+  - [Logicpage](#logicpage)
+  - [Membercommunication](#membercommunication)
+  - [Membersummary](#membersummary)
+  - [Membersummary.fuelreport](#membersummaryfuelreport)
+  - [Membersummary.graphs](#membersummarygraphs)
+  - [Pages](#pages)
+  - [Schdule](#schdule)
+
+- [Allure Reporting](#allure-reporting)
+
+## Packages
+
+### Dashboard
+
+- `Step12_DB_navlink.java`
+- `Step13_DB_notification.java`
+- `Step14_DB_Clock.java`
+- `Step14_DB_MessgNotification.java`
+- `Step15_DB_navlinkcoach.java`
+
+### Liveperform
+
+- `Case72_creatLiveperform.java`
+- `Case73_viewjoinLiveperformcoach.java`
+- `Case74_viewjoinLiveperfoRadvocate.java`
+
+### Logicpage
+
+- `Case34_MSL_MemberBasicinfo.java`
+- `Case35_MSL_MemberWilingnessLimitationScore.java`
+- ...
+- `Case79_WeeklyAndMonthlySummaries.java`
+
+### Membercommunication
+
+- `Case46_Membercommunictaion.java`
+- `Case47_Membersearch.java`
+- `Case48_Memberchat.java`
+- `Case75_Newchat.java`
+- `Case76_chattomemberredirection.java`
+
+### Membersummary
+
+- `Case15_MS_Memberhoverdetail.java`
+- `Case16_MS_searchclick.java`
+- ...
+- `Case81_MS_Sleeptime.java`
+
+### Membersummary.fuelreport
+
+- `Case67_Fueldashboard1.java`
+- `Case68_Fueldashboardconditionnput.java`
+- ...
+- `Case84_FuelRecommendationRecoveryProtocol.java`
+
+### Membersummary.graphs
+
+- `Case61_InsightsDashboard.java`
+- `Case62_Mastercorelation.java`
+- ...
+- `Case79_WeeklyAndMonthlySummaries.java`
+
+### Pages
+
+- `AppiummobileBase.java`
+- `BasePage.java`
+- `Loginpage.java`
+
+### Schdule
+
+- `Case01_createvent.java`
+- `Case02_viewevent.java`
+- ...
+- `Step13_01createventfornextday.java`
+
+## Allure Reporting
+
+This framework utilizes Allure for comprehensive and visually appealing test reports. 
+After running the test suite, you can generate and view the reports using the following steps:
+
+1. Install Allure command-line tool (if not installed).
+2. Navigate to the project root directory.
+3. Run the following command to generate and open the Allure report:
