@@ -2,20 +2,20 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-12-18T07:30:47Z" name="Default suite" finished-at="2023-12-18T07:33:28Z" duration-ms="160740">
+  <suite started-at="2023-12-18T10:27:57Z" name="Default suite" finished-at="2023-12-18T10:30:48Z" duration-ms="170746">
     <groups>
     </groups>
-    <test started-at="2023-12-18T07:30:47Z" name="Default test" finished-at="2023-12-18T07:33:28Z" duration-ms="160740">
+    <test started-at="2023-12-18T10:27:57Z" name="Default test" finished-at="2023-12-18T10:30:48Z" duration-ms="170746">
       <class name="cuesz03.Iosapp_member_home_Fuelscreen.Case50_Fuel_Addandevent_Recommendedfuel">
-        <test-method is-config="true" signature="Cueszbase()[pri:0, instance:cuesz03.Iosapp_member_home_Fuelscreen.Case50_Fuel_Addandevent_Recommendedfuel@525575]" started-at="2023-12-18T13:00:47Z" name="Cueszbase" finished-at="2023-12-18T13:00:49Z" duration-ms="2091" status="PASS">
+        <test-method is-config="true" signature="Cueszbase()[pri:0, instance:cuesz03.Iosapp_member_home_Fuelscreen.Case50_Fuel_Addandevent_Recommendedfuel@46dffdc3]" started-at="2023-12-18T15:57:57Z" name="Cueszbase" finished-at="2023-12-18T15:58:02Z" duration-ms="4783" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Cueszbase -->
-        <test-method signature="Fuel_addaneventadditionalcasewithpostperformance()[pri:0, instance:cuesz03.Iosapp_member_home_Fuelscreen.Case50_Fuel_Addandevent_Recommendedfuel@525575]" started-at="2023-12-18T13:00:49Z" name="Fuel_addaneventadditionalcasewithpostperformance" finished-at="2023-12-18T13:03:28Z" duration-ms="158471" status="PASS">
+        <test-method signature="Fuel_addaneventadditionalcasewithpostperformance()[pri:0, instance:cuesz03.Iosapp_member_home_Fuelscreen.Case50_Fuel_Addandevent_Recommendedfuel@46dffdc3]" started-at="2023-12-18T15:58:02Z" name="Fuel_addaneventadditionalcasewithpostperformance" finished-at="2023-12-18T16:00:48Z" duration-ms="165815" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Fuel_addaneventadditionalcasewithpostperformance -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:cuesz03.Iosapp_member_home_Fuelscreen.Case50_Fuel_Addandevent_Recommendedfuel@525575]" started-at="2023-12-18T13:03:28Z" name="tearDown" finished-at="2023-12-18T13:03:28Z" duration-ms="42" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:cuesz03.Iosapp_member_home_Fuelscreen.Case50_Fuel_Addandevent_Recommendedfuel@46dffdc3]" started-at="2023-12-18T16:00:48Z" name="tearDown" finished-at="2023-12-18T16:00:48Z" duration-ms="37" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->

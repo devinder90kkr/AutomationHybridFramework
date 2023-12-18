@@ -1,6 +1,8 @@
 package cuesz03.Iosapp_member_home_Fuelscreen;
 
 import java.util.HashMap;
+import java.util.NoSuchElementException;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
@@ -9,6 +11,7 @@ import cuesz.pages.AppiummobileBase;
 import cuesz.utils.AllureUtils;
 import cuesz.utils.AppiumappUtils;
 import io.appium.java_client.AppiumBy;
+import io.appium.java_client.AppiumDriver;
 import io.qameta.allure.Description;
 import io.qameta.allure.Epic;
 import io.qameta.allure.Feature;
@@ -59,6 +62,18 @@ public class Case48_Fuel_Addandevent_Duringperformance_additionalcase extends Ap
         //Click on Fuel tab 
         driver.findElement(AppiumBy.accessibilityId("FUEL_SCREEN")).click();
  
+        By duringperformanceLocator = AppiumBy.iOSClassChain("**/XCUIElementTypeStaticText[`label == \"During Performance\"`][2]");
+        if(!isElementPresent(driver, duringperformanceLocator)){
+            // Scroll to "Basketball" if it's not present
+            HashMap<String,Object> scrollObject1 = new HashMap<>();
+            scrollObject1.put("direction", "down");
+            scrollObject1.put("During Performance", "During Performance");
+            driver.executeScript("mobile:scroll", scrollObject1);
+            Thread.sleep(2000);
+        }
+        
+        
+        
         // Method to scroll to perform screen
   		HashMap<String,Object>scrollObject3 =new HashMap<>();
   		scrollObject3.put("direction", "down");
@@ -168,12 +183,17 @@ public class Case48_Fuel_Addandevent_Duringperformance_additionalcase extends Ap
 		WebElement 	backincon	= driver.findElement(backbttn);
 		backincon.click();
 		
-		 // Method to scroll to perform screen
-  		HashMap<String,Object>scrollObject5 =new HashMap<>();
-  		scrollObject5.put("direction", "down");
-  		scrollObject5.put("During Performance", "During Performance");
-  		driver.executeScript("mobile:scroll", scrollObject5);
-  		Thread.sleep(2000);
+		Thread.sleep(3500);
+		 By duringperformanceLocator1 = AppiumBy.iOSClassChain("**/XCUIElementTypeStaticText[`label == \"During Performance\"`][2]");
+	        if(!isElementPresent(driver, duringperformanceLocator1)){
+	            // Scroll to "Basketball" if it's not present
+	            HashMap<String,Object> scrollObject2 = new HashMap<>();
+	            scrollObject2.put("direction", "down");
+	            scrollObject2.put("During Performance", "During Performance");
+	            driver.executeScript("mobile:scroll", scrollObject2);
+	            Thread.sleep(2000);
+	        }
+	        
 		
 		// Capture a screenshot and attach it to Allure
         AllureUtils.captureScreenshot(driver, "addduringevent4");
@@ -181,6 +201,16 @@ public class Case48_Fuel_Addandevent_Duringperformance_additionalcase extends Ap
        	Thread.sleep(2500);
         driver.terminateApp("com.cuesz.mobile");
 	}
+	// Function to check if an element is present on the screen
+			public boolean isElementPresent(AppiumDriver driver, By by){
+			    try{
+			        driver.findElement(by);
+			        return true;
+			    } catch (NoSuchElementException e){
+			        return false;
+			    }
+			}
+	
 }
 	
 

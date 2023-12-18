@@ -2,6 +2,7 @@ package cuesz03.Iosapp_member_home_Fuelscreen;
 
 import java.util.HashMap;
 import java.util.List;
+import java.util.NoSuchElementException;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
@@ -12,6 +13,7 @@ import cuesz.pages.AppiummobileBase;
 import cuesz.utils.AllureUtils;
 import cuesz.utils.AppiumappUtils;
 import io.appium.java_client.AppiumBy;
+import io.appium.java_client.AppiumDriver;
 import io.qameta.allure.Description;
 import io.qameta.allure.Epic;
 import io.qameta.allure.Feature;
@@ -69,13 +71,24 @@ public class Case49_Fuel_Addandevent_Postperformance_additionalcase extends Appi
         //Click on Fuel tab 
         driver.findElement(AppiumBy.accessibilityId("FUEL_SCREEN")).click();
         Thread.sleep(4500);
+
+        By postperformanceLocator = AppiumBy.iOSClassChain("**/XCUIElementTypeStaticText[`label == \"Post Performance\"`][2]");
+        if(!isElementPresent(driver, postperformanceLocator)){
+            // Scroll to "Basketball" if it's not present
+            HashMap<String,Object> scrollObject1 = new HashMap<>();
+            scrollObject1.put("direction", "down");
+            scrollObject1.put("Post Performance", "Post Performance");
+            driver.executeScript("mobile:scroll", scrollObject1);
+            Thread.sleep(2000);
+        }
         
-        // Method to scroll to perform screen
-  		HashMap<String,Object>scrollObject3 =new HashMap<>();
-  		scrollObject3.put("direction", "down");
-  		scrollObject3.put("Post Performance", "Post Performance");
-  		driver.executeScript("mobile:scroll", scrollObject3);
-  		Thread.sleep(2000);
+        
+//        // Method to scroll to perform screen
+//  		HashMap<String,Object>scrollObject3 =new HashMap<>();
+//  		scrollObject3.put("direction", "down");
+//  		scrollObject3.put("Post Performance", "Post Performance");
+//  		driver.executeScript("mobile:scroll", scrollObject3);
+//  		Thread.sleep(2000);
 
   		// Capture a screenshot and attach it to Allure
         AllureUtils.captureScreenshot(driver, "addpostevent1");
@@ -231,12 +244,15 @@ public class Case49_Fuel_Addandevent_Postperformance_additionalcase extends Appi
 		WebElement 	backincon	= driver.findElement(backbttn);
 		backincon.click();
 		
-		 // Method to scroll to perform screen
-  		HashMap<String,Object>scrollObject5 =new HashMap<>();
-  		scrollObject5.put("direction", "down");
-  		scrollObject5.put("During Performance", "During Performance");
-  		driver.executeScript("mobile:scroll", scrollObject5);
-  		Thread.sleep(2000);
+		By postperformanceLocator1 = AppiumBy.iOSClassChain("**/XCUIElementTypeStaticText[`label == \"Post Performance\"`][2]");
+        if(!isElementPresent(driver, postperformanceLocator1)){
+            // Scroll to "Basketball" if it's not present
+            HashMap<String,Object> scrollObject1 = new HashMap<>();
+            scrollObject1.put("direction", "down");
+            scrollObject1.put("Post Performance", "Post Performance");
+            driver.executeScript("mobile:scroll", scrollObject1);
+            Thread.sleep(2000);
+        }
 		
 		// Capture a screenshot and attach it to Allure
         AllureUtils.captureScreenshot(driver, "addpostevent4");
@@ -245,6 +261,17 @@ public class Case49_Fuel_Addandevent_Postperformance_additionalcase extends Appi
        	Thread.sleep(2500);
         driver.terminateApp("com.cuesz.mobile");
 	}
+	
+	// Function to check if an element is present on the screen
+		public boolean isElementPresent(AppiumDriver driver, By by){
+		    try{
+		        driver.findElement(by);
+		        return true;
+		    } catch (NoSuchElementException e){
+		        return false;
+		    }
+		}
+		
 }
 	
 

@@ -14,6 +14,7 @@ import cuesz.pages.AppiummobileBase;
 import cuesz.utils.AllureUtils;
 import cuesz.utils.AppiumappUtils;
 import io.appium.java_client.AppiumBy;
+import io.appium.java_client.AppiumDriver;
 import io.qameta.allure.Allure;
 import io.qameta.allure.Description;
 import io.qameta.allure.Epic;
@@ -84,13 +85,16 @@ public class Case46_Fuel_Addandevent_additionalwithdelete extends AppiummobileBa
         driver.findElement(AppiumBy.accessibilityId("FUEL_SCREEN")).click();
         Thread.sleep(3500);
         
-        
-        // Method to scroll to perform screen
- 		HashMap<String,Object>scrollObject2 =new HashMap<>();
- 		scrollObject2.put("direction", "down");
- 		scrollObject2.put("Add An Event", "Add An Event");
- 		driver.executeScript("mobile:scroll", scrollObject2);
- 		Thread.sleep(2000);
+        Thread.sleep(3500);
+		 By addeventlocator = AppiumBy.accessibilityId("AddEvent");
+	        if(!isElementPresent(driver, addeventlocator)){
+	            // Scroll to "Basketball" if it's not present
+	            HashMap<String,Object> scrollObject2 = new HashMap<>();
+	            scrollObject2.put("direction", "down");
+	            scrollObject2.put("During Performance", "During Performance");
+	            driver.executeScript("mobile:scroll", scrollObject2);
+	            Thread.sleep(2000);
+	        }
         
 		
         // Locate the element containing the perform
@@ -261,6 +265,16 @@ public class Case46_Fuel_Addandevent_additionalwithdelete extends AppiummobileBa
      	
 		Thread.sleep(2500);
         driver.terminateApp("com.cuesz.mobile");
+	}
+	
+	// Function to check if an element is present on the screen
+	public boolean isElementPresent(AppiumDriver driver, By by){
+	    try{
+	        driver.findElement(by);
+	        return true;
+	    } catch (NoSuchElementException e){
+	        return false;
+	    }
 	}
 }
 	

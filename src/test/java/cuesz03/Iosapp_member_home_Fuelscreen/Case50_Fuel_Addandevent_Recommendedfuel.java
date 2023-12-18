@@ -12,6 +12,9 @@ import org.testng.annotations.Test;
 import cuesz.pages.AppiummobileBase;
 import cuesz.utils.AllureUtils;
 import cuesz.utils.AppiumappUtils;
+
+import cuesz.utils.mobileLocators;
+
 import io.appium.java_client.AppiumBy;
 import io.appium.java_client.AppiumDriver;
 import io.qameta.allure.Description;
@@ -26,30 +29,8 @@ import io.qameta.allure.Story;
 @Feature ("Verify member able to add functionlaity related to add an event for post-performance functionlaity.")
 public class Case50_Fuel_Addandevent_Recommendedfuel extends AppiummobileBase {
 	
-	private By Homeclick 		= 		AppiumBy.iOSClassChain("**/XCUIElementTypeOther[`label == \"Home\"`][2]");
-	private By preicon			=		AppiumBy.iOSNsPredicateString("name == \"Pre PerformancePlueIcon\"");
-	private By doneclick		= 		AppiumBy.accessibilityId("Done");
-	private By recommendedclick	= 		AppiumBy.accessibilityId("AddRecommendedFuel");
-	private By headingpre		=		AppiumBy.accessibilityId("Pre");
-	private By tickaction		= 		AppiumBy.accessibilityId("RecommendedFuelSubmit");
-	private By Time				= 		AppiumBy.accessibilityId("RecommendedFuelTime");
-	private By pickerelement	= 		AppiumBy.xpath("//XCUIElementTypePickerWheel");
-	private By Doneclick		= 		AppiumBy.accessibilityId("AlcohalTime");
-	private By brekdone			= 		AppiumBy.accessibilityId("Done");
-	private By duringicon		=		AppiumBy.iOSNsPredicateString("name == \"During PerformancePlueIcon\"");
-	private By during1heading	=		AppiumBy.accessibilityId("During");
-	private By posticon			=		AppiumBy.iOSNsPredicateString("name == \"Post PerformancePlueIcon\"");
-	private By postheading		=		AppiumBy.accessibilityId("Post");
-	
-	private By additionalsearch	= 		AppiumBy.accessibilityId("AdditionalFuelSearch");
-//	private By faggot			= 		AppiumBy.iOSClassChain("**/XCUIElementTypeOther[`label == \"Faggot 90 kcal\"`][3]");
-	private By faggot			=		AppiumBy.iOSNsPredicateString("name == \"Faggot\"");
-	private By fagoticon		= 		AppiumBy.accessibilityId("FaggotFuelItemInfo");
-	private By backtap			= 		AppiumBy.accessibilityId("BackPress");
-//	private By downarrow		= 		AppiumBy.iOSClassChain("**/XCUIElementTypeOther[`label == \"ArrowDown\"`][4]");
-	private By fagotplus		= 		AppiumBy.accessibilityId("FaggotPlus");
-	private By submitick		= 		AppiumBy.accessibilityId("ItemSubmit");
-	
+	mobileLocators locators = new mobileLocators();	
+
 	@Test
 	@Owner("QA") // Add the @Owner annotation to specify the executor
     @Severity(SeverityLevel.NORMAL)      
@@ -62,7 +43,7 @@ public class Case50_Fuel_Addandevent_Recommendedfuel extends AppiummobileBase {
         // Launch the app using the utility method
         appiumUtils.launchAppWithPackageId("com.cuesz.mobile");	
 		
-		WebElement Homeicon = driver.findElement(Homeclick);
+		WebElement Homeicon = driver.findElement(mobileLocators.Homeclick);
 		Homeicon.click();	
 		
 		Thread.sleep(3000);
@@ -92,32 +73,32 @@ public class Case50_Fuel_Addandevent_Recommendedfuel extends AppiummobileBase {
   		// Capture a screenshot and attach it to Allure
         AllureUtils.captureScreenshot(driver, "addpoevent1");
   		
-        WebElement preplusicon	= driver.findElement(preicon);
+        WebElement preplusicon	= driver.findElement(mobileLocators.preicon);
         preplusicon.click();
         
         //click on keypad Done button to hide keypad
-        WebElement keypaddone	= driver.findElement(doneclick);
+        WebElement keypaddone	= driver.findElement(mobileLocators.doneclick);
         keypaddone.click();
         
         // Locate and click on recommended Fuel button
-        WebElement Recommendedfuel 	= driver.findElement(recommendedclick);
+        WebElement Recommendedfuel 	= driver.findElement(mobileLocators.recommendedclick);
         Recommendedfuel.click();
         Thread.sleep(5500);
         
-        WebElement preheading	= driver.findElement(headingpre);
+        WebElement preheading	= driver.findElement(mobileLocators.headingpre);
         preheading.click();
         
-        WebElement preperformancetick	= driver.findElement(tickaction);
+        WebElement preperformancetick	= driver.findElement(mobileLocators.tickaction);
         preperformancetick.click();
                 
         // Capture a screenshot and attach it to Allure
         AllureUtils.captureScreenshot(driver, "addpoevent2");
         
         // Click on timer 
-        WebElement Timerclick 	= driver.findElement(Time);
+        WebElement Timerclick 	= driver.findElement(mobileLocators.Time);
         Timerclick.click();
         
-        List<WebElement>values = driver.findElements(pickerelement);
+        List<WebElement>values = driver.findElements(mobileLocators.pickerelement);
 
 		for (int i=0; i<values.size();i++)
 		{		
@@ -137,40 +118,40 @@ public class Case50_Fuel_Addandevent_Recommendedfuel extends AppiummobileBase {
 		 // Capture a screenshot and attach it to Allure
         AllureUtils.captureScreenshot(driver, "addpoevent3");
 		
-		driver.findElement(Doneclick).click();
+		driver.findElement(mobileLocators.Doneclick).click();
         
 		  // Click on Done-breakfast button
-        WebElement brekfastdone 	= driver.findElement(brekdone);
+        WebElement brekfastdone 	= driver.findElement(mobileLocators.brekdone);
         brekfastdone.click();
         
         Thread.sleep(5500);
     
-        WebElement Duringplusicon	= driver.findElement(duringicon);
+        WebElement Duringplusicon	= driver.findElement(mobileLocators.duringicon);
         Duringplusicon.click();
         
         //click on keypad Done button to hide keypad
-        WebElement keypaddone2	= driver.findElement(doneclick);
+        WebElement keypaddone2	= driver.findElement(mobileLocators.doneclick);
         keypaddone2.click();
         
         // Locate and click on recommended Fuel button
-        WebElement Recommendedfuel2 	= driver.findElement(recommendedclick);
+        WebElement Recommendedfuel2 	= driver.findElement(mobileLocators.recommendedclick);
         Recommendedfuel2.click();
         
-        WebElement duringheading	= driver.findElement(during1heading);
+        WebElement duringheading	= driver.findElement(mobileLocators.during1heading);
         duringheading.click();
        
         
-        WebElement preperformancetick1	= driver.findElement(tickaction);
+        WebElement preperformancetick1	= driver.findElement(mobileLocators.tickaction);
         preperformancetick1.click();
                 
         // Capture a screenshot and attach it to Allure
         AllureUtils.captureScreenshot(driver, "addpoevent2");
         
         // Click on timer 
-        WebElement Timerclick1 	= driver.findElement(Time);
+        WebElement Timerclick1 	= driver.findElement(mobileLocators.Time);
         Timerclick1.click();
         
-        List<WebElement>values1 = driver.findElements(pickerelement);
+        List<WebElement>values1 = driver.findElements(mobileLocators.pickerelement);
 
 		for (int i=0; i<values1.size();i++)
 		{		
@@ -190,49 +171,49 @@ public class Case50_Fuel_Addandevent_Recommendedfuel extends AppiummobileBase {
 		 // Capture a screenshot and attach it to Allure
         AllureUtils.captureScreenshot(driver, "addpoevent3");
 		
-		driver.findElement(Doneclick).click();
+		driver.findElement(mobileLocators.Doneclick).click();
         
 		  // Click on Done-breakfast button
-        WebElement brekfastdone1 	= driver.findElement(brekdone);
+        WebElement brekfastdone1 	= driver.findElement(mobileLocators.brekdone);
         brekfastdone1.click();
         
         
-        WebElement Postplusicon	= driver.findElement(posticon);
+        WebElement Postplusicon	= driver.findElement(mobileLocators.posticon);
         Postplusicon.click();
         
         //click on keypad Done button to hide keypad
-        WebElement keypaddone3	= driver.findElement(doneclick);
+        WebElement keypaddone3	= driver.findElement(mobileLocators.doneclick);
         keypaddone3.click();
         
         // Locate and click on recommended Fuel button
-        WebElement Recommendedfuel3 	= driver.findElement(recommendedclick);
+        WebElement Recommendedfuel3 	= driver.findElement(mobileLocators.recommendedclick);
         Recommendedfuel3.click();
         
-        WebElement duringheading3	= driver.findElement(postheading);
+        WebElement duringheading3	= driver.findElement(mobileLocators.postheading);
         duringheading3.click();
        
         
-        WebElement preperformancetick3 = driver.findElement(tickaction);
+        WebElement preperformancetick3 = driver.findElement(mobileLocators.tickaction);
         preperformancetick3.click();
         
         
         // Click on Done-breakfast button
-        WebElement brekfastdone3 	= driver.findElement(brekdone);
+        WebElement brekfastdone3 	= driver.findElement(mobileLocators.brekdone);
         brekfastdone3.click();
         
         // Capture a screenshot and attach it to Allure
         AllureUtils.captureScreenshot(driver, "addpoevent4");
         
         // Add additional values in pre-performance plus icon 
-        WebElement preplusicon1	= driver.findElement(preicon);
+        WebElement preplusicon1	= driver.findElement(mobileLocators.preicon);
         preplusicon1.click();
         
       //click on keypad Done button to hide keypad
-        WebElement keypaddone1	= driver.findElement(doneclick);
+        WebElement keypaddone1	= driver.findElement(mobileLocators.doneclick);
         keypaddone1.click();
         
         // Click on fuel search field 
-        WebElement additionalfuel = driver.findElement(additionalsearch);
+        WebElement additionalfuel = driver.findElement(mobileLocators.additionalsearch);
         additionalfuel.click();
         
         WebElement searchtext1	= driver.findElement(AppiumBy.iOSNsPredicateString("label == \"F\""));
@@ -253,20 +234,20 @@ public class Case50_Fuel_Addandevent_Recommendedfuel extends AppiummobileBase {
         WebElement searchtext6	= driver.findElement(AppiumBy.iOSNsPredicateString("label == \"t\""));
         searchtext6.click();
       
-        WebElement Keypaddone	= driver.findElement(doneclick);
+        WebElement Keypaddone	= driver.findElement(mobileLocators.doneclick);
         Keypaddone.click();
         
         
         // Capture a screenshot and attach it to Allure
         AllureUtils.captureScreenshot(driver, "addpoevent5");
         
-        WebElement fuelselection	= driver.findElement(faggot);
+        WebElement fuelselection	= driver.findElement(mobileLocators.faggot);
         fuelselection.click();
         
-        WebElement faggoticon		= driver.findElement(fagoticon);
+        WebElement faggoticon		= driver.findElement(mobileLocators.fagoticon);
         faggoticon.click();
         
-        WebElement backicon 		= driver.findElement(backtap);
+        WebElement backicon 		= driver.findElement(mobileLocators.backtap);
         backicon.click();
         
         Thread.sleep(3000);
@@ -278,7 +259,7 @@ public class Case50_Fuel_Addandevent_Recommendedfuel extends AppiummobileBase {
 		Thread.sleep(2000);
         
         
-        WebElement faggotplus		= driver.findElement(fagotplus);
+        WebElement faggotplus		= driver.findElement(mobileLocators.fagotplus);
         int numberOfClicks = 3;
         for (int i = 0; i < numberOfClicks; i++) {   
         faggotplus.click();
@@ -288,14 +269,11 @@ public class Case50_Fuel_Addandevent_Recommendedfuel extends AppiummobileBase {
         AllureUtils.captureScreenshot(driver, "addpoevent6");
             
         
-		WebElement submit = driver.findElement(submitick);
+		WebElement submit = driver.findElement(mobileLocators.submitick);
 		submit.click();
 		 
         Thread.sleep(5500);
-        
-        
-        
-        
+
         
        	Thread.sleep(2500);
         driver.terminateApp("com.cuesz.mobile");
