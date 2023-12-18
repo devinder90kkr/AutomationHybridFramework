@@ -136,6 +136,12 @@ import cuesz.utils.DayofWeek;
 						   Actions builder8 = new Actions(driver);
 						    builder8.moveToElement(duration).click().sendKeys(Keys.BACK_SPACE).sendKeys("45").perform();
 						    Thread.sleep(2000);
+						    
+						 // Capture a screenshot and attach it to Allure
+					        AllureUtils.captureScreenshot(driver, "Fuelperform1");
+						    
+						    
+						    
 							 } catch (Exception e) {
 							e.printStackTrace();
 								} finally {
@@ -169,6 +175,9 @@ import cuesz.utils.DayofWeek;
 				    Thread.sleep(2000);
 				    builder7.sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.ENTER).perform();
 				   Thread.sleep(4500);
+				   
+				// Capture a screenshot and attach it to Allure
+			        AllureUtils.captureScreenshot(driver, "Fuelperform2");
 					    		    
     			   } catch (Exception e) {
     				   e.printStackTrace();
@@ -197,6 +206,10 @@ import cuesz.utils.DayofWeek;
 				    Thread.sleep(2000);
 				    builder7.sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.ENTER).perform();
 				   Thread.sleep(4500);
+				   
+				   
+				// Capture a screenshot and attach it to Allure
+			        AllureUtils.captureScreenshot(driver, "Fuelperform3");
 								    		    
 					} catch (Exception e) {
 					  e.printStackTrace();
@@ -231,6 +244,9 @@ import cuesz.utils.DayofWeek;
 					    builder7.sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.ENTER).perform();
 					   Thread.sleep(4500);
 					    
+					// Capture a screenshot and attach it to Allure
+				        AllureUtils.captureScreenshot(driver, "Fuelperform4");
+					   
 					    } catch (Exception e) {
 					    e.printStackTrace();
 					    } finally {
@@ -263,6 +279,9 @@ import cuesz.utils.DayofWeek;
 					    Thread.sleep(2000);
 					    builder7.sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.ENTER).perform();
 					   Thread.sleep(2500);
+					   
+					// Capture a screenshot and attach it to Allure
+				        AllureUtils.captureScreenshot(driver, "Fuelperform5");
 					    
 					    } catch (Exception e) {
 					    e.printStackTrace();
