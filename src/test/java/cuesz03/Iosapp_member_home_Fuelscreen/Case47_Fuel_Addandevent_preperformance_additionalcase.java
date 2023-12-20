@@ -32,7 +32,7 @@ import io.qameta.allure.Story;
 @Feature ("Verify member able to add functionlaity related to add an event for Pre-performance functionlaity.")
 public class Case47_Fuel_Addandevent_preperformance_additionalcase extends AppiummobileBase {
 	
-
+	mobileLocators locators = new mobileLocators();	
 	
 	@Test
 	@Owner("QA") // Add the @Owner annotation to specify the executor

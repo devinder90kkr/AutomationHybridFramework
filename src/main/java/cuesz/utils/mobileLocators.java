@@ -82,6 +82,9 @@ public class mobileLocators {
 	public static final By yesdeleticon		=		AppiumBy.accessibilityId("Yes");
 	
 	
+	public static final By plusadd			= 		AppiumBy.accessibilityId("BreakfastAddIcon");	
+	public static final By meat				=		AppiumBy.iOSNsPredicateString("name == \"Meat\"");
+	public static final By backpress		= 		AppiumBy.accessibilityId("FuelBackPress");
 	
 	
 	

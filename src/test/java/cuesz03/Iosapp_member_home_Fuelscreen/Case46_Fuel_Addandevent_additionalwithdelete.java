@@ -29,7 +29,7 @@ import io.qameta.allure.Story;
 @Feature ("Verify member able to functionlaity related to add an event functionlaity.")
 public class Case46_Fuel_Addandevent_additionalwithdelete extends AppiummobileBase {
 	
-
+	mobileLocators locators = new mobileLocators();	
 	
 	@Test
 	@Owner("QA") // Add the @Owner annotation to specify the executor
