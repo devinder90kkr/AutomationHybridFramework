@@ -6,6 +6,7 @@ import io.appium.java_client.AppiumBy;
 
 public class mobileLocators {
 	
+	
 	public static final By Homeclick 		= 		AppiumBy.iOSClassChain("**/XCUIElementTypeOther[`label == \"Home\"`][2]");
 	public static final By preicon			=		AppiumBy.iOSNsPredicateString("name == \"Pre PerformancePlueIcon\"");
 	public static final By doneclick		= 		AppiumBy.accessibilityId("Done");
@@ -23,10 +24,8 @@ public class mobileLocators {
 	public static final By uploadicon1		=		AppiumBy.accessibilityId("During PerformanceUploadIcon");
 	public static final By meat1			=		AppiumBy.iOSNsPredicateString("name == \"Meat\"");
 	public static final By meatfuelselect	=		AppiumBy.accessibilityId("Meat");	
-
 	public static final By performanceeditsubmit 	=	AppiumBy.accessibilityId("Submit");
 
-	
 	public static final By meatplus			= 		AppiumBy.accessibilityId("MeatPlus");
 	public static final By serchclick		= 		AppiumBy.accessibilityId("AdditionalFuelSearch");
 	public static final By Beetroot			=		AppiumBy.iOSNsPredicateString("name == \"Beetroot\"");
