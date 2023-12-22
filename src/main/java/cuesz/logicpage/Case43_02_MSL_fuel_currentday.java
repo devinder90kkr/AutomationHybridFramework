@@ -74,13 +74,14 @@ import cuesz.utils.DayofWeek;
 			   // Scroll to the "Staff Notes" element using JavaScriptExecutor
 			   ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView();", selectbutton);
 
-			   Thread.sleep(2500);
+			   Thread.sleep(5500);
 		  
 	  /************************************************Input data as per next week selected and populate data in three days***************************************************************************************************/
 		        
 			
-			   WebElement  activeblock = driver.findElement(By.xpath("//div[@id='active_logic_block']"));
-			// Scroll to the "Staff Notes" element using JavaScriptExecutor
+//			   WebElement  activeblock = driver.findElement(By.xpath("//div[@id='active_logic_block']"));
+			   WebElement  activeblock = driver.findElement(By.xpath("//div[@id='FuelToTrain']//div[@class='logic_block active']"));
+			   // Scroll to the "Staff Notes" element using JavaScriptExecutor
 			   ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView();", activeblock);
 			   
 

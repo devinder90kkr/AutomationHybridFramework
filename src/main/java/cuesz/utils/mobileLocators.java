@@ -8,46 +8,46 @@ public class mobileLocators {
 
 	/****Dated : 20-Dec perform cases locators*****/
 	//Case02_Homescreen_sphereclick
-	public static final By Homeclick = 		AppiumBy.iOSClassChain("**/XCUIElementTypeOther[`label == \"Home\"`][2]");
-	public static final By performlbale = 	AppiumBy.xpath("//XCUIElementTypeOther[starts-with(@name, 'Perform ')]");
-	public static final By fuelable = 		AppiumBy.xpath("//XCUIElementTypeOther[starts-with(@name, 'Fuel ')]");
-	public static final By mindulable = 	AppiumBy.xpath("//XCUIElementTypeOther[starts-with(@name, 'Mindful ')]");
-	public static final By Restorlabel = 	AppiumBy.xpath("//XCUIElementTypeOther[starts-with(@name, 'Restore ')]");
-	public static final By backbttnperform = 		AppiumBy.iOSNsPredicateString("name == 'SeparateSphereBackPress'");
+	public static final By Homeclick 		= AppiumBy.iOSClassChain("**/XCUIElementTypeOther[`label == \"Home\"`][2]");
+	public static final By performlbale 	= AppiumBy.xpath("//XCUIElementTypeOther[starts-with(@name, 'Perform ')]");
+	public static final By fuelable 		= AppiumBy.xpath("//XCUIElementTypeOther[starts-with(@name, 'Fuel ')]");
+	public static final By mindulable 		= AppiumBy.xpath("//XCUIElementTypeOther[starts-with(@name, 'Mindful ')]");
+	public static final By Restorlabel 		= AppiumBy.xpath("//XCUIElementTypeOther[starts-with(@name, 'Restore ')]");
+	public static final By backbttnperform 	= AppiumBy.iOSNsPredicateString("name == 'SeparateSphereBackPress'");
 	
 	// Case03_Homescreen_sphere
-	public static final By separtorclick =	AppiumBy.iOSNsPredicateString("name == 'CombineSphere'");
-	public static final By combinesphereclick	= AppiumBy.iOSNsPredicateString("name == 'SeprateSphere'");
+	public static final By separtorclick 		= AppiumBy.iOSNsPredicateString("name == 'CombineSphere'");
+	public static final By combinesphereclick  	= AppiumBy.iOSNsPredicateString("name == 'SeprateSphere'");
 	
 	//Case05_Homescreen_forward_backwardarrows
-	public static final By backarrowbttn = 		AppiumBy.accessibilityId("HomeBackArrow");
-	public static final By forwardarrowbttn = AppiumBy.accessibilityId("HomeForwardArrow");
+	public static final By backarrowbttn 		= AppiumBy.accessibilityId("HomeBackArrow");
+	public static final By forwardarrowbttn 	= AppiumBy.accessibilityId("HomeForwardArrow");
 	
 	//Case06_Homescreen
-	public static final By Performlabel = 	AppiumBy.iOSNsPredicateString("name == 'Perform'");
-	public static final By Fuelable = 		AppiumBy.iOSNsPredicateString("name == 'Fuel'");
-	public static final By Mindflable  = 	AppiumBy.iOSNsPredicateString("name == 'Mindful'");
-	public static final By Restorelabel = 		AppiumBy.iOSNsPredicateString("name == 'Restore'");	
+	public static final By Performlabel 		= AppiumBy.iOSNsPredicateString("name == 'Perform'");
+	public static final By Fuelable 			= AppiumBy.iOSNsPredicateString("name == 'Fuel'");
+	public static final By Mindflable  			= AppiumBy.iOSNsPredicateString("name == 'Mindful'");
+	public static final By Restorelabel 		= AppiumBy.iOSNsPredicateString("name == 'Restore'");	
 	
 	//Case07_Homescreen_scroller
-	public static final By HomeScrollDown=	AppiumBy.accessibilityId("HomeScrollDown");	
-	public static final By HomeScrollup=	AppiumBy.accessibilityId("HomeScrollUp");	
+	public static final By HomeScrollDown		= AppiumBy.accessibilityId("HomeScrollDown");	
+	public static final By HomeScrollup			= AppiumBy.accessibilityId("HomeScrollUp");	
 	
 	//Case08_Homescreen_notification
-	public static final By notificlick	= 	AppiumBy.accessibilityId("notificationIcon");
+	public static final By notificlick			= AppiumBy.accessibilityId("notificationIcon");
 	
 	//Case09_Homescreen_LPgretherthan15min
-	public static final  By liveperfrmicon = 		AppiumBy.accessibilityId("HomeScreenLPIcon");
+	public static final  By liveperfrmicon		= AppiumBy.accessibilityId("HomeScreenLPIcon");
 	
 	// 21-dec-2023 
-	public static final By performclick	= AppiumBy.accessibilityId("PERFORM_SCREEN");
-	public static final By walkinlabel = AppiumBy.xpath("//XCUIElementTypeStaticText[@name=\"Walking\"]");
-	public static final By walkingstart	= AppiumBy.accessibilityId("Walking Start");
-	public static final By backpressbutton	= AppiumBy.accessibilityId("BackPress");
-	public static final By Syncclick	= AppiumBy.accessibilityId("SyncDevice");
-	public static final By Enabletick	= AppiumBy.accessibilityId("EnableBluetooth");
-	public static final By deviation	= AppiumBy.accessibilityId("AddDeviation");
-	public static final By Crossclick	= AppiumBy.iOSClassChain("**/XCUIElementTypeOther[`label == \"CrossClicked\"`][2]");
+	public static final By performclick				= AppiumBy.accessibilityId("PERFORM_SCREEN");
+	public static final By walkinlabel				= AppiumBy.xpath("//XCUIElementTypeStaticText[@name=\"Walking\"]");
+	public static final By walkingstart				= AppiumBy.accessibilityId("Walking Start");
+	public static final By backpressbutton			= AppiumBy.accessibilityId("BackPress");
+	public static final By Syncclick				= AppiumBy.accessibilityId("SyncDevice");
+	public static final By Enabletick				= AppiumBy.accessibilityId("EnableBluetooth");
+	public static final By deviation				= AppiumBy.accessibilityId("AddDeviation");
+	public static final By Crossclick				= AppiumBy.iOSClassChain("**/XCUIElementTypeOther[`label == \"CrossClicked\"`][2]");
 	public static final By lessthanprecribeclick	= AppiumBy.iOSClassChain("**/XCUIElementTypeOther[`label == \"Less Than Prescribed\"`][3]");
 	public static final By morethanprecribeclick	= AppiumBy.iOSClassChain("**/XCUIElementTypeOther[`label == \"More Than Prescribed\"`][3]");
 	public static final By Injury					= AppiumBy.xpath("(//XCUIElementTypeOther[@name=\"ItemPressed\"])[4]");
@@ -106,9 +106,9 @@ public class mobileLocators {
 	public static final By graphclick1				= AppiumBy.accessibilityId("BoxingGraphIcon");	
 	
 	
-	public static final By perfomplus	=	 AppiumBy.accessibilityId("AddEvent");
+	public static final By perfomplus			= AppiumBy.accessibilityId("AddEvent");
 	public static final By additionalperform	= AppiumBy.accessibilityId("Start My Perform Activity");
-	public static final By cross_additionalpopup 	= AppiumBy.accessibilityId("CrossClicked");
+	public static final By cross_additionalpopup= AppiumBy.accessibilityId("CrossClicked");
 	public static final By searcharea			= AppiumBy.accessibilityId("EnterActivityName");
 	public static final By selectactivity		= AppiumBy.xpath("(//XCUIElementTypeOther[@name=\"Baseball \"])[3]");
 	public static final By deletebaseball		= AppiumBy.accessibilityId("Baseball DeleteIcon");
@@ -117,8 +117,8 @@ public class mobileLocators {
 	public static final By backclick			= AppiumBy.accessibilityId("BackPress");
 	
 	// Case15_Perform_movetocurrent  Dated- 22 Dec
-	public static final By movetoday1	=		AppiumBy.accessibilityId("Move to Today");
-	public static final By startclick 	= 	AppiumBy.iOSNsPredicateString("label == \"Start\"");
+	public static final By movetoday1		= AppiumBy.accessibilityId("Move to Today");
+	public static final By startclick 		= AppiumBy.iOSNsPredicateString("label == \"Start\"");
 	
 	// Case16_Perform_Vo2
 	public static final By Vo2label 		= AppiumBy.iOSClassChain("**/XCUIElementTypeStaticText[`label == \"VO2 Max Test\"`]");
@@ -130,22 +130,22 @@ public class mobileLocators {
 	public static final By synclick			= AppiumBy.xpath("(//XCUIElementTypeOther[@name=\"SyncDevice\"])[2]");
 	public static final By Startbutton		= AppiumBy.xpath("(//XCUIElementTypeOther[@name=\"Start\n"
 			+ "VO2 Test\"])[2]");
-	public static final By currentweighttap =	AppiumBy.iOSClassChain("**/XCUIElementTypeStaticText[`label == \"Current Weight\"`]");
+	public static final By currentweighttap = AppiumBy.iOSClassChain("**/XCUIElementTypeStaticText[`label == \"Current Weight\"`]");
 	public static final By enterweight		= AppiumBy.accessibilityId("EnterWeight");
 	public static final By deletetap		= AppiumBy.accessibilityId("Delete");
-	public static final By num1 = AppiumBy.accessibilityId("8");
-	public static final By num2 = AppiumBy.accessibilityId("6");
-	public static final By num3 = AppiumBy.accessibilityId(".");
-	public static final By num4 = AppiumBy.accessibilityId("0");
-	public static final By num5 = AppiumBy.accessibilityId("5");
+	public static final By num1 			= AppiumBy.accessibilityId("8");
+	public static final By num2 			= AppiumBy.accessibilityId("6");
+	public static final By num3 			= AppiumBy.accessibilityId(".");
+	public static final By num4 			= AppiumBy.accessibilityId("0");
+	public static final By num5 			= AppiumBy.accessibilityId("5");
     
 	//Case17_Perform_LivePerformcurrent 
-	public static final By liveperform	= AppiumBy.iOSClassChain("**/XCUIElementTypeOther[`label == \"Start\n"
+	public static final By liveperform		= 		AppiumBy.iOSClassChain("**/XCUIElementTypeOther[`label == \"Start\n"
 			+ "Live Perform\"`][2]");
 	//Case18_Perform_nextweekactivity
-	public static final By arrowclick	= AppiumBy.accessibilityId("HomeForwardArrow");
+	public static final By arrowclick		= 		AppiumBy.accessibilityId("HomeForwardArrow");
 
-	public static final By Liveclick	= AppiumBy.iOSNsPredicateString("label == \"Live Perform Schedule\"");
+	public static final By Liveclick		= 		AppiumBy.iOSNsPredicateString("label == \"Live Perform Schedule\"");
 	
 	//14-Dec-2021 Fuel cases locators
 	public static final By preicon			=		AppiumBy.iOSNsPredicateString("name == \"Pre PerformancePlueIcon\"");
@@ -164,7 +164,7 @@ public class mobileLocators {
 	public static final By uploadicon1		=		AppiumBy.accessibilityId("During PerformanceUploadIcon");
 	public static final By meat1			=		AppiumBy.iOSNsPredicateString("name == \"Meat\"");
 	public static final By meatfuelselect	=		AppiumBy.accessibilityId("Meat");	
-	public static final By performanceeditsubmit 	=	AppiumBy.accessibilityId("Submit");
+	public static final By performanceeditsubmit =	AppiumBy.accessibilityId("Submit");
 
 	public static final By meatplus			= 		AppiumBy.accessibilityId("MeatPlus");
 	public static final By serchclick		= 		AppiumBy.accessibilityId("AdditionalFuelSearch");
@@ -178,7 +178,7 @@ public class mobileLocators {
 	public static final By fagotplus		= 		AppiumBy.accessibilityId("FaggotPlus");
 	public static final By submitick		= 		AppiumBy.accessibilityId("ItemSubmit");	
 
-	public static final By postplusicon	=		AppiumBy.accessibilityId("Post PerformancePlueIcon");
+	public static final By postplusicon		=		AppiumBy.accessibilityId("Post PerformancePlueIcon");
 	public static final By SanXian			= 		AppiumBy.iOSNsPredicateString("name == \"Di San Xian\"");
 	public static final By fernfuel			= 		AppiumBy.accessibilityId("Fern");
 	public static final By submitclick		=		AppiumBy.accessibilityId("ItemSubmit");
@@ -199,9 +199,9 @@ public class mobileLocators {
 	public static final By addeventlabel	= 		AppiumBy.iOSNsPredicateString("label == \"Add An Event\"");
 	public static final By eventbttn		=		AppiumBy.accessibilityId("AddEvent");
 	public static final By eventcross		=		AppiumBy.accessibilityId("CrossClicked");
-	public static final By selectactivityfield		=	AppiumBy.accessibilityId("SelectActivity");
+	public static final By selectactivityfield	=	AppiumBy.accessibilityId("SelectActivity");
 	public static final By walkingclikc		=		AppiumBy.iOSNsPredicateString("label == \"Walking\"");
-	public static final By Enteractivityname	=	AppiumBy.accessibilityId("EnterActivityName");
+	public static final By Enteractivityname=		AppiumBy.accessibilityId("EnterActivityName");
 	public static final By startTime		=		AppiumBy.accessibilityId("FuelPerformStartTime");
 	public static final By endtime			=		AppiumBy.accessibilityId("FuelPerformEndTime");
 	public static final By hydration		= 		AppiumBy.accessibilityId("FuelDrinkPlusIcon");
@@ -225,6 +225,66 @@ public class mobileLocators {
 	public static final By plusadd			= 		AppiumBy.accessibilityId("BreakfastAddIcon");	
 	public static final By meat				=		AppiumBy.iOSNsPredicateString("name == \"Meat\"");
 	public static final By backpress		= 		AppiumBy.accessibilityId("FuelBackPress");
+	
+	
+	// Case20_Fuel_optimalfuel 
+	public static final By fuellabel 		= AppiumBy.iOSNsPredicateString("name == 'Fuel'");
+	public static final By Fuelmacroheading = AppiumBy.iOSNsPredicateString("name == 'FUEL MACROS BREAKDOWN'");
+	public static final By arrowclick1 		= AppiumBy.accessibilityId("FuelCaloriesArrowLeft");
+	public static final By arrowclick2		= AppiumBy.accessibilityId("FuelCaloriesArrowRight");
+
+	public static final By dayseven		= AppiumBy.xpath("(//XCUIElementTypeOther[@name=\"7 days\"])[2]");
+	public static final By dayfourteen	= AppiumBy.xpath("(//XCUIElementTypeOther[@name=\"14 days\"])[2]");
+//	public static final By Yestrday		= AppiumBy.xpath("(//XCUIElementTypeOther[@name=\"Yesterday\"])[2]");
+	public static final By backfuel		= AppiumBy.accessibilityId("FuelCalorieBackPress");
+	public static final By Protcard		= AppiumBy.accessibilityId("Protein");
+	public static final By crossicon1	= AppiumBy.accessibilityId("FuelMacroNutrientCross");
+	public static final By carbcard		= AppiumBy.accessibilityId("Carbs");
+	public static final By fatcard		= AppiumBy.accessibilityId("Fat");
+//	public static final By popup1		= AppiumBy.accessibilityId("FuelDrinkInfo");
+	public static final By glas1		= AppiumBy.accessibilityId("WaterGlass1");
+	public static final By glas2		= AppiumBy.accessibilityId("WaterGlass2");	
+	public static final By glas3		= AppiumBy.accessibilityId("WaterGlass3");	
+	public static final By glas4		= AppiumBy.accessibilityId("WaterGlass4");	
+	public static final By caffeine		= AppiumBy.accessibilityId("CaffeineDeviation");
+	public static final By cof1			= AppiumBy.accessibilityId("Coffee1");
+	public static final By cof2			= AppiumBy.accessibilityId("Coffee2");	
+	public static final By cof3			= AppiumBy.accessibilityId("Coffee3");	
+	public static final By cof4			= AppiumBy.accessibilityId("Coffee4");	
+	public static final By tea1			= AppiumBy.accessibilityId("Tea1");
+	public static final By tea2			= AppiumBy.accessibilityId("Tea2");
+	public static final By grentea1		= AppiumBy.accessibilityId("Green tea1");
+	public static final By grentea2		= AppiumBy.accessibilityId("Green tea2");
+	public static final By grentea3		= AppiumBy.accessibilityId("Green tea3");
+	public static final By grentea4		= AppiumBy.accessibilityId("Green tea4");
+	public static final By grentea5		= AppiumBy.accessibilityId("Green tea5");
+	public static final By sugarbtn		= AppiumBy.xpath("(//XCUIElementTypeOther[@name=\"CaffineRadioButton\"])[2]");
+	public static final By notesection	= AppiumBy.accessibilityId("CaffineDeviationNotes");
+	public static final By Caffientick		=		AppiumBy.accessibilityId("CaffineSubmit");
+	public static final By alcholotap		= 		AppiumBy.accessibilityId("alcohalDeviation");
+	public static final By Tequglass1		= 		AppiumBy.accessibilityId("Tequila1");
+	public static final By Tequglass2		= 		AppiumBy.accessibilityId("Tequila2");
+	public static final By Tequglass3		= 		AppiumBy.accessibilityId("Tequila3");
+	public static final By Tequglass4		= 		AppiumBy.accessibilityId("Tequila4");
+	public static final By moji1			= 		AppiumBy.accessibilityId("Mojito1");
+	public static final By moji2			= 		AppiumBy.accessibilityId("Mojito2");
+	public static final By lager1			= 		AppiumBy.accessibilityId("Lager1");
+	public static final By lager2			= 		AppiumBy.accessibilityId("Lager2");
+	public static final By lager3			= 		AppiumBy.accessibilityId("Lager3");
+	public static final By lager4			= 		AppiumBy.accessibilityId("Lager4");
+	public static final By lager5			= 		AppiumBy.accessibilityId("Lager5");
+	public static final By Adalchol			= 		AppiumBy.accessibilityId("Add Alcohol Deviation");
+	public static final By deviationnotes	= 		AppiumBy.accessibilityId("AlcohalDeviationNotes");
+	public static final By sugarmixer		= 		AppiumBy.xpath("(//XCUIElementTypeOther[@name=\"Sugar Mixer\"])[2]");
+	public static final By Alcohaltick		= 		AppiumBy.accessibilityId("AlcohalSubmit");
+	public static final By Electrolyte		= 		AppiumBy.accessibilityId("ElectrolyteDeviation");
+	public static final By electro1optimal	= 		AppiumBy.accessibilityId("ElectrolyteDeviation1");
+	public static final By electro2optimal	= 		AppiumBy.accessibilityId("ElectrolyteDeviation2");
+	public static final By noteselectro		= 		AppiumBy.accessibilityId("ElectrolyteNotes");
+	public static final By Submitelctro		= 		AppiumBy.accessibilityId("ElectrolyteSubmit");
+	public static final By Time1	=		AppiumBy.accessibilityId("SelectCaffineTime");
+	
+	
 	
 	
 	

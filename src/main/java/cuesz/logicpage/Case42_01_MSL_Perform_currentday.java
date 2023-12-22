@@ -2,7 +2,9 @@
 	
 	import java.text.ParseException;
 	import java.util.Calendar;
-	import java.time.Duration;
+import java.util.HashMap;
+import java.util.NoSuchElementException;
+import java.time.Duration;
 	import org.openqa.selenium.By;
 	import org.openqa.selenium.JavascriptExecutor;
 	import org.openqa.selenium.Keys;
@@ -15,7 +17,9 @@
 
 	import cuesz.pages.BasePage;
 	import cuesz.utils.SeleniumUtils;
-	import cuesz.utils.DayofWeek;
+import io.appium.java_client.AppiumBy;
+import io.appium.java_client.AppiumDriver;
+import cuesz.utils.DayofWeek;
 	
 	public class Case42_01_MSL_Perform_currentday extends BasePage {
 		
@@ -53,6 +57,7 @@
 		  	   WebElement Performheading = driver.findElement(Prfrmhading);
 		       // Scroll to the "Staff Notes" element using JavaScriptExecutor
 			   ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);;", Performheading);
+			   		   
 			     		
 			   Thread.sleep(5500);				// Wait for the element to be clickable
 			   WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(50)); // Adjust the timeout as needed
@@ -65,7 +70,10 @@
 			   // Scroll to the "Staff Notes" element using JavaScriptExecutor
 			   ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView();", selectbutton);
 
-			   Thread.sleep(2500);
+			   Thread.sleep(5500);
+			   
+			   
+		
 		  
 	     /*******************Input data as per next week selected and populate data in three days************************************************************************/
 		        
@@ -79,7 +87,7 @@
      /*****************************Populate data for monday first activity *********************************************************************************************/
 					
 
-			    Thread.sleep(2500);
+			    Thread.sleep(5500);
 			    
 			    int dayOfWeek = Calendar.getInstance().get(Calendar.DAY_OF_WEEK);
 			    String dayName = DayofWeek.getDayName(dayOfWeek);
@@ -189,6 +197,9 @@
 //			    
 //		 }
 	}
+		
+		
+		
+	
 	}
-	 
 	

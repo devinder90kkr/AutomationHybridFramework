@@ -169,4 +169,3 @@ public class Case21_Fuel_breakfast_recommendedfuel extends AppiummobileBase {
 	}
 }
 	
-

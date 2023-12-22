@@ -73,6 +73,16 @@ import cuesz.utils.SeleniumUtils;
 			   WebElement selectbutton = driver.findElement(slctbttn);
 			   // Scroll to the "Staff Notes" element using JavaScriptExecutor
 			   ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView();", selectbutton);
+			   
+			   
+			   Thread.sleep(5500); 
+				
+			   //WebElement  activeblock = driver.findElement(By.xpath("//div[@id='active_logic_block']"));
+			   WebElement  activeblock = driver.findElement(By.xpath("//div[@id='Restore']//div[@class='logic_block active']//div[@class='logic_block_body']"));
+			// Scroll to the "Staff Notes" element using JavaScriptExecutor
+			   ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView();", activeblock);
+			   
+Thread.sleep(3500);
 
 
      /********************************************************************Populate data for monday first activity *************************************************************************************/

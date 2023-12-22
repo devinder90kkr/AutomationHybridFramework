@@ -11,8 +11,9 @@ public class mobileTestData {
 	
 	public static final String notefield = "verify field accept automate values in Notes field";
 	public static final String Additonalperformsearchfield = "Baseball";
-	
-
+	public static final String amdata = "AM";
+	public static final String timeinput1 = "6";
+	public static final String timeinput2 = "43";
 	
 	
 	
