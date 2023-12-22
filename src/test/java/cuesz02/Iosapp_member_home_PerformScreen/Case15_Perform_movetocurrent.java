@@ -1,12 +1,12 @@
 package cuesz02.Iosapp_member_home_PerformScreen;
 
 import java.util.HashMap;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
 
 import cuesz.pages.AppiummobileBase;
 import cuesz.utils.AppiumappUtils;
+import cuesz.utils.mobileLocators;
 import io.appium.java_client.AppiumBy;
 import io.qameta.allure.Description;
 import io.qameta.allure.Epic;
@@ -22,13 +22,7 @@ import io.qameta.allure.Story;
 
 public class Case15_Perform_movetocurrent extends AppiummobileBase {
 
-	private By Homeclick = 		AppiumBy.iOSClassChain("**/XCUIElementTypeOther[`label == \"Home\"`][2]");
-	private By performclick	= AppiumBy.accessibilityId("PERFORM_SCREEN");
-	
-	private By movetoday1	=		AppiumBy.accessibilityId("Move to Today");
-	private By startclick 	= 	AppiumBy.iOSNsPredicateString("label == \"Start\"");
-	private By backbttn		= AppiumBy.accessibilityId("BackPress");
-	
+	mobileLocators locators = new mobileLocators();	
 	
 	@Test
 	@Owner("QA") // Add the @Owner annotation to specify the executor
@@ -45,7 +39,7 @@ public class Case15_Perform_movetocurrent extends AppiummobileBase {
         appiumUtils.launchAppWithPackageId("com.cuesz.mobile");
 		
 		// CLick on home menu from bottom
-		WebElement Homeicon = driver.findElement(Homeclick);
+		WebElement Homeicon = driver.findElement(mobileLocators.Homeclick);
 		Homeicon.click();
 		
 		// We need to add test data only for Saturday week 
@@ -61,19 +55,19 @@ public class Case15_Perform_movetocurrent extends AppiummobileBase {
 		Thread.sleep(2000);
 		 
 		// CLick on Perform card
-		WebElement performcard = driver.findElement(performclick);
+		WebElement performcard = driver.findElement(mobileLocators.performclick);
 		performcard.click();
 		
-		WebElement clickstart 	= driver.findElement(startclick);
+		WebElement clickstart 	= driver.findElement(mobileLocators.startclick);
 		clickstart.click();
 		
 		
-		WebElement movetoday 	= driver.findElement(movetoday1);
+		WebElement movetoday 	= driver.findElement(mobileLocators.movetoday1);
 		movetoday.click();
 		
-		WebElement backclick	= driver.findElement(backbttn);
+		WebElement backclick	= driver.findElement(mobileLocators.backbttn);
 		backclick.click();
-		WebElement backclick1	= driver.findElement(backbttn);
+		WebElement backclick1	= driver.findElement(mobileLocators.backbttn);
 		backclick1.click();
 		
 		

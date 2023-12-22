@@ -107,9 +107,6 @@ public class mobileLocators {
 	public static final By graphclick1				= AppiumBy.accessibilityId("BoxingGraphIcon");	
 	
 	
-	
-	
-		
 	public static final By perfomplus	=	 AppiumBy.accessibilityId("AddEvent");
 	public static final By additionalperform	= AppiumBy.accessibilityId("Start My Perform Activity");
 	public static final By cross_additionalpopup 	= AppiumBy.accessibilityId("CrossClicked");
@@ -119,6 +116,11 @@ public class mobileLocators {
 	public static final By nodelete 			= AppiumBy.accessibilityId("No");
 	public static final By yesdelete 			= AppiumBy.accessibilityId("Yes");
 	public static final By backclick			= AppiumBy.accessibilityId("BackPress");
+	
+	// Case15_Perform_movetocurrent  Dated- 22 Dec
+	public static final By movetoday1	=		AppiumBy.accessibilityId("Move to Today");
+	public static final By startclick 	= 	AppiumBy.iOSNsPredicateString("label == \"Start\"");
+	
 	
 	
 	//14-Dec-2021 Fuel cases locators
