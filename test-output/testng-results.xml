@@ -2,24 +2,24 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-12-22T11:59:55Z" name="Default suite" finished-at="2023-12-22T12:01:17Z" duration-ms="81540">
+  <suite started-at="2023-12-22T13:25:59Z" name="Default suite" finished-at="2023-12-22T13:28:03Z" duration-ms="123764">
     <groups>
     </groups>
-    <test started-at="2023-12-22T11:59:55Z" name="Default test" finished-at="2023-12-22T12:01:17Z" duration-ms="81540">
-      <class name="cuesz.logictest.advocate.Case45_MSL_restore_currenttest">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:cuesz.logictest.advocate.Case45_MSL_restore_currenttest@50d13246]" started-at="2023-12-22T17:29:55Z" name="setUp" finished-at="2023-12-22T17:29:58Z" duration-ms="2864" status="PASS">
+    <test started-at="2023-12-22T13:25:59Z" name="Default test" finished-at="2023-12-22T13:28:03Z" duration-ms="123764">
+      <class name="cuesz03.Iosapp_member_home_Fuelscreen.Case26_Fuel_breakfast_customfood">
+        <test-method is-config="true" signature="Cueszbase()[pri:0, instance:cuesz03.Iosapp_member_home_Fuelscreen.Case26_Fuel_breakfast_customfood@74bada02]" started-at="2023-12-22T18:55:59Z" name="Cueszbase" finished-at="2023-12-22T18:56:00Z" duration-ms="1056" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method signature="advocatelogicmemberTest()[pri:0, instance:cuesz.logictest.advocate.Case45_MSL_restore_currenttest@50d13246]" started-at="2023-12-22T17:29:58Z" name="advocatelogicmemberTest" finished-at="2023-12-22T17:31:17Z" duration-ms="78401" status="PASS">
+        </test-method> <!-- Cueszbase -->
+        <test-method signature="Homescreen()[pri:0, instance:cuesz03.Iosapp_member_home_Fuelscreen.Case26_Fuel_breakfast_customfood@74bada02]" started-at="2023-12-22T18:56:00Z" name="Homescreen" finished-at="2023-12-22T18:58:03Z" duration-ms="122618" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- advocatelogicmemberTest -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:cuesz.logictest.advocate.Case45_MSL_restore_currenttest@50d13246]" started-at="2023-12-22T17:31:17Z" name="tearDown" finished-at="2023-12-22T17:31:17Z" duration-ms="213" status="PASS">
+        </test-method> <!-- Homescreen -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:cuesz03.Iosapp_member_home_Fuelscreen.Case26_Fuel_breakfast_customfood@74bada02]" started-at="2023-12-22T18:58:03Z" name="tearDown" finished-at="2023-12-22T18:58:03Z" duration-ms="12" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- cuesz.logictest.advocate.Case45_MSL_restore_currenttest -->
+      </class> <!-- cuesz03.Iosapp_member_home_Fuelscreen.Case26_Fuel_breakfast_customfood -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

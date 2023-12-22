@@ -2,6 +2,7 @@ package cuesz03.Iosapp_member_home_Fuelscreen;
 
 import java.util.HashMap;
 import java.util.List;
+import java.util.NoSuchElementException;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
@@ -11,6 +12,7 @@ import org.testng.annotations.Test;
 import cuesz.pages.AppiummobileBase;
 import cuesz.utils.AppiumappUtils;
 import io.appium.java_client.AppiumBy;
+import io.appium.java_client.AppiumDriver;
 import io.qameta.allure.Description;
 import io.qameta.allure.Epic;
 import io.qameta.allure.Feature;
@@ -103,6 +105,17 @@ public class Case23_01_Fuel_breakfast_editadditionalfuel extends AppiummobileBas
 		Thread.sleep(5000);
 		
 		/***************edit meat fuel*****************/
+		//scroll to image upload
+		By meatLocator = AppiumBy.accessibilityId("Meat");
+	        if(!isElementPresent(driver, meatLocator)){
+	            // Scroll to "Basketball" if it's not present
+	            HashMap<String,Object> scrollObject1 = new HashMap<>();
+	            scrollObject1.put("direction", "down");
+	            scrollObject1.put("Meat", "Meat");
+	            driver.executeScript("mobile:scroll", scrollObject1);
+	            Thread.sleep(2000);
+	        }
+		
 		
 		WebElement meatedit		= driver.findElement(meatfuel);
 		meatedit.click();
@@ -122,12 +135,17 @@ public class Case23_01_Fuel_breakfast_editadditionalfuel extends AppiummobileBas
 		editsubmit2.click();
         
 		Thread.sleep(4000);
-		// Method to scroll to perform screen
-		HashMap<String,Object>scrollObject111 =new HashMap<>();
-		scrollObject111.put("direction", "down");
-		scrollObject111.put("Meat", "Meat");
-		driver.executeScript("mobile:scroll", scrollObject111);
-		
+		//scroll to image upload
+		By meatLocator1 = AppiumBy.accessibilityId("Meat");
+	        if(!isElementPresent(driver, meatLocator1)){
+	            // Scroll to "Basketball" if it's not present
+	            HashMap<String,Object> scrollObject1 = new HashMap<>();
+	            scrollObject1.put("direction", "down");
+	            scrollObject1.put("Meat", "Meat");
+	            driver.executeScript("mobile:scroll", scrollObject1);
+	            Thread.sleep(2000);
+	        }
+
 		Thread.sleep(3000);
 		
 		
@@ -142,11 +160,23 @@ public class Case23_01_Fuel_breakfast_editadditionalfuel extends AppiummobileBas
 		
 		Thread.sleep(2500);
 		
-		  // Method to scroll to perform screen
-		HashMap<String,Object>scrollObject3 =new HashMap<>();
-		scrollObject3.put("direction", "up");
-		scrollObject3.put("Breakfast", "Breakfast");
-		driver.executeScript("mobile:scroll", scrollObject3);
+		
+		//scroll to image upload
+		By breakfastLocator = AppiumBy.iOSClassChain("**/XCUIElementTypeStaticText[`label == \"Breakfast\"`][1]");
+	        if(!isElementPresent(driver, breakfastLocator)){
+	            // Scroll to "Basketball" if it's not present
+	            HashMap<String,Object> scrollObject1 = new HashMap<>();
+	            scrollObject1.put("direction", "up");
+	            scrollObject1.put("Breakfast", "Breakfast");
+	            driver.executeScript("mobile:scroll", scrollObject1);
+	            Thread.sleep(2000);
+	        }
+		
+//		// Method to scroll to perform screen
+//		HashMap<String,Object>scrollObject3 =new HashMap<>();
+//		scrollObject3.put("direction", "up");
+//		scrollObject3.put("Breakfast", "Breakfast");
+//		driver.executeScript("mobile:scroll", scrollObject3);
 
 		 // Click on timer 
         WebElement breakfastedittime 	= driver.findElement(editbreakfastime);
@@ -173,6 +203,16 @@ public class Case23_01_Fuel_breakfast_editadditionalfuel extends AppiummobileBas
 		Thread.sleep(4500);
         driver.terminateApp("com.cuesz.mobile");
 	}
+	
+	// Function to check if an element is present on the screen
+			public boolean isElementPresent(AppiumDriver driver, By by){
+			    try{
+			        driver.findElement(by);
+			        return true;
+			    } catch (NoSuchElementException e){
+			        return false;
+			    }
+			}
 }
 	
 

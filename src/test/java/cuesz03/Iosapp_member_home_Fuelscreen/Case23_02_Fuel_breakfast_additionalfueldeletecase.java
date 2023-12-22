@@ -1,6 +1,8 @@
 package cuesz03.Iosapp_member_home_Fuelscreen;
 
 import java.util.HashMap;
+import java.util.NoSuchElementException;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
@@ -8,6 +10,7 @@ import org.testng.annotations.Test;
 import cuesz.pages.AppiummobileBase;
 import cuesz.utils.AppiumappUtils;
 import io.appium.java_client.AppiumBy;
+import io.appium.java_client.AppiumDriver;
 import io.qameta.allure.Description;
 import io.qameta.allure.Epic;
 import io.qameta.allure.Feature;
@@ -141,6 +144,17 @@ public class Case23_02_Fuel_breakfast_additionalfueldeletecase extends Appiummob
 		Thread.sleep(4500);
         driver.terminateApp("com.cuesz.mobile");
 	}
+	// Function to check if an element is present on the screen
+		public boolean isElementPresent(AppiumDriver driver, By by){
+		    try{
+		        driver.findElement(by);
+		        return true;
+		    } catch (NoSuchElementException e){
+		        return false;
+		    }
+		}
+
+	
 }
 	
 

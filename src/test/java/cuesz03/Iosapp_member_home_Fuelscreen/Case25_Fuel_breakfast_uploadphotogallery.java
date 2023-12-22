@@ -2,6 +2,7 @@ package cuesz03.Iosapp_member_home_Fuelscreen;
 
 import java.util.HashMap;
 import java.util.List;
+import java.util.NoSuchElementException;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
@@ -11,6 +12,7 @@ import org.testng.annotations.Test;
 import cuesz.pages.AppiummobileBase;
 import cuesz.utils.AppiumappUtils;
 import io.appium.java_client.AppiumBy;
+import io.appium.java_client.AppiumDriver;
 import io.qameta.allure.Description;
 import io.qameta.allure.Epic;
 import io.qameta.allure.Feature;
@@ -157,20 +159,42 @@ public class Case25_Fuel_breakfast_uploadphotogallery extends AppiummobileBase {
 	    WebElement deleticon	= driver.findElement(Icondelete);
 	    deleticon.click();
 	    Thread.sleep(4500);
+
+	  //scroll to image upload
+  		By imageuplaodedLocator = AppiumBy.xpath("//XCUIElementTypeStaticText[@name=\"Image uploaded\"]");
+  	        if(!isElementPresent(driver, imageuplaodedLocator)){
+  	            // Scroll to "Basketball" if it's not present
+  	            HashMap<String,Object> scrollObject1 = new HashMap<>();
+  	            scrollObject1.put("direction", "down");
+  	            scrollObject1.put("Image uploaded", "Image uploaded");
+  	            driver.executeScript("mobile:scroll", scrollObject1);
+  	            Thread.sleep(2000);
+  	        }
 	    
-	    Thread.sleep(3000);
-		// Method to scroll to perform screen
-		HashMap<String,Object>scrollObject1 =new HashMap<>();
-		scrollObject1.put("direction", "down");
-		scrollObject1.put("Image uploaded", "Perform");
-		driver.executeScript("mobile:scroll", scrollObject1);
-		Thread.sleep(2000);
+	    
+//	    Thread.sleep(3000);
+//		// Method to scroll to perform screen
+//		HashMap<String,Object>scrollObject1 =new HashMap<>();
+//		scrollObject1.put("direction", "down");
+//		scrollObject1.put("Image uploaded", "Perform");
+//		driver.executeScript("mobile:scroll", scrollObject1);
+//		Thread.sleep(2000);
 	    
 	    
         
 		Thread.sleep(8500);
         driver.terminateApp("com.cuesz.mobile");
 	}
+	// Function to check if an element is present on the screen
+			public boolean isElementPresent(AppiumDriver driver, By by){
+			    try{
+			        driver.findElement(by);
+			        return true;
+			    } catch (NoSuchElementException e){
+			        return false;
+			    }
+			}
+	
 }
 	
 

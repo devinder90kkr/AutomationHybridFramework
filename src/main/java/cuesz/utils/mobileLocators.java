@@ -284,7 +284,28 @@ public class mobileLocators {
 	public static final By Submitelctro		= 		AppiumBy.accessibilityId("ElectrolyteSubmit");
 	public static final By Time1	=		AppiumBy.accessibilityId("SelectCaffineTime");
 	
-	
+	//Case26_Fuel_breakfast_customfood
+	public static final By foodname			= 		AppiumBy.xpath("//XCUIElementTypeTextField[@name=\"Food Name\"]");
+	public static final By servingsize		= 		AppiumBy.xpath("//XCUIElementTypeTextField[@name=\"Serving Size*\"]");
+	public static final By servingunit		= 		AppiumBy.xpath("//XCUIElementTypeTextField[@name=\"Serving Unit*\"]");
+	public static final By calories			=		AppiumBy.xpath("//XCUIElementTypeTextField[@name=\"Calories(Kcal)*\"]");
+	public static final By proteins			= 		AppiumBy.xpath("//XCUIElementTypeTextField[@name=\"Protein(g)\"]");
+	public static final By carbohydrates	=		AppiumBy.xpath("//XCUIElementTypeTextField[@name=\"Carbohydrates(g)\"]");
+	public static final By sugar			=		AppiumBy.xpath("//XCUIElementTypeTextField[@name=\"Sugar(g)\"]");
+	public static final By fat				=		AppiumBy.xpath("//XCUIElementTypeTextField[@name=\"Fat(g)\"]");
+	public static final By saturatedfat		= 		AppiumBy.xpath("//XCUIElementTypeTextField[@name=\"Saturated Fat\"]");
+	public static final By dietaryfiber		=		AppiumBy.xpath("//XCUIElementTypeTextField[@name=\"Dietary Fiber(g)\"]");
+	public static final By cholesterol		=		AppiumBy.xpath("//XCUIElementTypeTextField[@name=\"Cholesterol(mg)\"]");
+	public static final By sodium			=		AppiumBy.xpath("//XCUIElementTypeTextField[@name=\"Sodium(mg)\"]");
+	public static final By iron				=		AppiumBy.xpath("//XCUIElementTypeTextField[@name=\"Iron(g)\"]");
+	public static final By calcium			=		AppiumBy.xpath("//XCUIElementTypeTextField[@name=\"Calcium(g)\"]");
+	public static final By potassium		=		AppiumBy.xpath("//XCUIElementTypeTextField[@name=\"Potassium(mg)\"]");
+	public static final By vitaminA			=		AppiumBy.xpath("//XCUIElementTypeTextField[@name=\"Vitamin-A(%dv)\"]");
+	public static final By vitaminB			=		AppiumBy.xpath("//XCUIElementTypeTextField[@name=\"Vitamin-C(%dv)\"]");
+	public static final By customfoodimage	=		AppiumBy.accessibilityId("CustomFoodImage");
+//	public static final By gallery			=		AppiumBy.accessibilityId("GalleryClicked");
+//	public static final By submittap		= 		AppiumBy.accessibilityId("SubmitImage");
+	public static final By Customtick		=		AppiumBy.accessibilityId("CustomFoodSubmit");
 	
 	
 	
