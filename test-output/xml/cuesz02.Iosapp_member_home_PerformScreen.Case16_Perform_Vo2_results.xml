@@ -4,14 +4,14 @@
            failures="0"
            errors="0"
            skipped="0"
-           time="43.678">
+           time="59.585">
     <properties></properties>
 
 
 
             <testcase
                 name="perfom_vo2activity"
-                time="43.678"
+                time="59.585"
                 classname="cuesz02.Iosapp_member_home_PerformScreen.Case16_Perform_Vo2">
             </testcase>
 </testsuite>

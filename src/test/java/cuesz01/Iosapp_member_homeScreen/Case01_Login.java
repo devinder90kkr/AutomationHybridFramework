@@ -2,6 +2,7 @@ package cuesz01.Iosapp_member_homeScreen;
 
 import java.time.Duration;
 
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -110,6 +111,24 @@ public class Case01_Login extends AppiummobileBase {
 		
 		WebElement submitnbutton	= driver.findElement(AppiumBy.xpath("(//XCUIElementTypeOther[@name=\"Submit\"])[3]"));
 		submitnbutton.click();
+		
+		// Check if the Crossclick element is displayed before clicking on it
+		WebElement notificationclick = null;
+		try {
+			notificationclick = driver.findElement(AppiumBy.accessibilityId("Allow"));
+		    if (notificationclick.isDisplayed()) {
+		    	notificationclick.click();
+		    } else {
+		        // Handle the case where the element is not displayed
+		        System.out.println("OK element is not displayed.");
+		        // Perform some other action or throw an exception if needed
+		    }
+		} catch (NoSuchElementException e) {
+		    // Handle the case where the element is not found
+		    System.out.println("Crossclick element not found.");
+		    // Perform some other action or throw an exception if needed
+		}
+		
 		
 		// Capture a screenshot and attach it to Allure
         AllureUtils.captureScreenshot(driver, "landed on home screen");  

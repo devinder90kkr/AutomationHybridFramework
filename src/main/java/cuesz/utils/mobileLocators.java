@@ -1,7 +1,6 @@
 package cuesz.utils;
 
 import org.openqa.selenium.By;
-
 import io.appium.java_client.AppiumBy;
 
 public class mobileLocators {
@@ -121,7 +120,32 @@ public class mobileLocators {
 	public static final By movetoday1	=		AppiumBy.accessibilityId("Move to Today");
 	public static final By startclick 	= 	AppiumBy.iOSNsPredicateString("label == \"Start\"");
 	
-	
+	// Case16_Perform_Vo2
+	public static final By Vo2label 		= AppiumBy.iOSClassChain("**/XCUIElementTypeStaticText[`label == \"VO2 Max Test\"`]");
+	public static final By vo2tap			= AppiumBy.accessibilityId("VO2 Max Test Start");
+	public static final By Ticktap			= AppiumBy.accessibilityId("Submit");
+	public static final By okatap			= AppiumBy.accessibilityId("Allow");
+	public static final By Vo2label1		= AppiumBy.xpath("//XCUIElementTypeStaticText[@name=\"VO2 Max Test\"]");
+	public static final By count			= AppiumBy.xpath("//XCUIElementTypeStaticText[@name=\"06:00\"]");
+	public static final By synclick			= AppiumBy.xpath("(//XCUIElementTypeOther[@name=\"SyncDevice\"])[2]");
+	public static final By Startbutton		= AppiumBy.xpath("(//XCUIElementTypeOther[@name=\"Start\n"
+			+ "VO2 Test\"])[2]");
+	public static final By currentweighttap =	AppiumBy.iOSClassChain("**/XCUIElementTypeStaticText[`label == \"Current Weight\"`]");
+	public static final By enterweight		= AppiumBy.accessibilityId("EnterWeight");
+	public static final By deletetap		= AppiumBy.accessibilityId("Delete");
+	public static final By num1 = AppiumBy.accessibilityId("8");
+	public static final By num2 = AppiumBy.accessibilityId("6");
+	public static final By num3 = AppiumBy.accessibilityId(".");
+	public static final By num4 = AppiumBy.accessibilityId("0");
+	public static final By num5 = AppiumBy.accessibilityId("5");
+    
+	//Case17_Perform_LivePerformcurrent 
+	public static final By liveperform	= AppiumBy.iOSClassChain("**/XCUIElementTypeOther[`label == \"Start\n"
+			+ "Live Perform\"`][2]");
+	//Case18_Perform_nextweekactivity
+	public static final By arrowclick	= AppiumBy.accessibilityId("HomeForwardArrow");
+
+	public static final By Liveclick	= AppiumBy.iOSNsPredicateString("label == \"Live Perform Schedule\"");
 	
 	//14-Dec-2021 Fuel cases locators
 	public static final By preicon			=		AppiumBy.iOSNsPredicateString("name == \"Pre PerformancePlueIcon\"");
