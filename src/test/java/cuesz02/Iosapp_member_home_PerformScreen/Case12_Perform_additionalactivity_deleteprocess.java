@@ -2,13 +2,13 @@ package cuesz02.Iosapp_member_home_PerformScreen;
 
 import java.util.HashMap;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
 
 import cuesz.pages.AppiummobileBase;
 import cuesz.utils.AllureUtils;
 import cuesz.utils.AppiumappUtils;
+import cuesz.utils.mobileLocators;
 import io.appium.java_client.AppiumBy;
 import io.qameta.allure.Description;
 import io.qameta.allure.Epic;
@@ -24,19 +24,7 @@ import io.qameta.allure.Story;
 
 public class Case12_Perform_additionalactivity_deleteprocess extends AppiummobileBase {
 
-	private By Homeclick = 		AppiumBy.iOSClassChain("**/XCUIElementTypeOther[`label == \"Home\"`][2]");
-	private By performclick	= AppiumBy.accessibilityId("PERFORM_SCREEN");
-	private By perfomplus	=	 AppiumBy.accessibilityId("AddEvent");
-	private By additionalperform	= AppiumBy.accessibilityId("Start My Perform Activity");
-	private By cross_additionalpopup 	= AppiumBy.accessibilityId("CrossClicked");
-	private By searcharea			= AppiumBy.accessibilityId("EnterActivityName");
-	private By doneclick			= AppiumBy.accessibilityId("Done");
-	private By selectactivity		= AppiumBy.xpath("(//XCUIElementTypeOther[@name=\"Baseball \"])[3]");
-	private By deletebaseball		= AppiumBy.accessibilityId("Baseball DeleteIcon");
-	private By nodelete 			= AppiumBy.accessibilityId("No");
-	private By yesdelete 			= AppiumBy.accessibilityId("Yes");
-	private By backclick			= AppiumBy.accessibilityId("BackPress");
-	
+	mobileLocators locators = new mobileLocators();	
 	
 	@Test
 	@Owner("QA") // Add the @Owner annotation to specify the executor
@@ -53,7 +41,7 @@ public class Case12_Perform_additionalactivity_deleteprocess extends Appiummobil
         appiumUtils.launchAppWithPackageId("com.cuesz.mobile");
 		
 		// CLick on home menu from bottom
-		WebElement Homeicon = driver.findElement(Homeclick);
+		WebElement Homeicon = driver.findElement(mobileLocators.Homeclick);
 		Homeicon.click();
 		
 		Thread.sleep(3000);
@@ -65,30 +53,30 @@ public class Case12_Perform_additionalactivity_deleteprocess extends Appiummobil
 		Thread.sleep(2000);
 			
 		// CLick on Perform card
-		WebElement performcard = driver.findElement(performclick);
+		WebElement performcard = driver.findElement(mobileLocators.performclick);
 		performcard.click();
 		Thread.sleep(3500);
 		// Capture a screenshot and attach it to Allure
         AllureUtils.captureScreenshot(driver, "perform_click1");
 		
-		WebElement perfomplusicon 	= driver.findElement(perfomplus);
+		WebElement perfomplusicon 	= driver.findElement(mobileLocators.perfomplus);
 		perfomplusicon.click();
 		
-		WebElement startmyperformactivity 	= driver.findElement(additionalperform);
+		WebElement startmyperformactivity 	= driver.findElement(mobileLocators.additionalperform);
 		startmyperformactivity.click();
 		
-		WebElement startmyperfromactivitycross 	= driver.findElement(cross_additionalpopup);
+		WebElement startmyperfromactivitycross 	= driver.findElement(mobileLocators.cross_additionalpopup);
 		startmyperfromactivitycross.click();
 		
 		// repeat steps again 
-		WebElement perfomplusicon1 	= driver.findElement(perfomplus);
+		WebElement perfomplusicon1 	= driver.findElement(mobileLocators.perfomplus);
 		perfomplusicon1.click();
 		
-		WebElement startmyperformactivity2 	= driver.findElement(additionalperform);
+		WebElement startmyperformactivity2 	= driver.findElement(mobileLocators.additionalperform);
 		startmyperformactivity2.click();
 		
 		// Enter text for Search field 
-		WebElement Additonalperformsearch	= driver.findElement(searcharea);
+		WebElement Additonalperformsearch	= driver.findElement(mobileLocators.searcharea);
 		Additonalperformsearch.click();	
 		// Enter text for Search field 
 		WebElement Additonalperformsearch1	= driver.findElement(AppiumBy.iOSNsPredicateString("label == \"B\""));
@@ -125,7 +113,7 @@ public class Case12_Perform_additionalactivity_deleteprocess extends Appiummobil
 		
 		
 		// Enter text for Search field 
-		WebElement donekeypad	= driver.findElement(doneclick);
+		WebElement donekeypad	= driver.findElement(mobileLocators.doneclick);
 		donekeypad.click();
 		
 		// Capture a screenshot and attach it to Allure
@@ -133,23 +121,23 @@ public class Case12_Perform_additionalactivity_deleteprocess extends Appiummobil
 		
 		
 		// Select perform aditonal activity 
-		WebElement selectbaseball 	= driver.findElement(selectactivity);
+		WebElement selectbaseball 	= driver.findElement(mobileLocators.selectactivity);
 		selectbaseball.click();
 		
-		WebElement backactivity 	= driver.findElement(backclick);
+		WebElement backactivity 	= driver.findElement(mobileLocators.backclick);
 		backactivity.click();
 		
 		
-		WebElement deleteaddiotnal	= driver.findElement(deletebaseball);
+		WebElement deleteaddiotnal	= driver.findElement(mobileLocators.deletebaseball);
 		deleteaddiotnal.click();
 		
-		WebElement nodeleteoption	= driver.findElement(nodelete);
+		WebElement nodeleteoption	= driver.findElement(mobileLocators.nodelete);
 		nodeleteoption.click();
 		
-		WebElement deleteaddiotnal1	= driver.findElement(deletebaseball);
+		WebElement deleteaddiotnal1	= driver.findElement(mobileLocators.deletebaseball);
 		deleteaddiotnal1.click();
 		
-		WebElement yesdeleteoption	= driver.findElement(yesdelete);
+		WebElement yesdeleteoption	= driver.findElement(mobileLocators.yesdelete);
 		yesdeleteoption.click();
 		
 		

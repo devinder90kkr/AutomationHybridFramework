@@ -1,14 +1,12 @@
 package cuesz01.Iosapp_member_homeScreen;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
 
 import cuesz.pages.AppiummobileBase;
 import cuesz.utils.AllureUtils;
 import cuesz.utils.AppiumappUtils;
-import io.appium.java_client.AppiumBy;
-
+import cuesz.utils.mobileLocators;
 import io.qameta.allure.Description;
 import io.qameta.allure.Epic;
 import io.qameta.allure.Feature;
@@ -23,9 +21,8 @@ import io.qameta.allure.Story;
 
 public class Case05_Homescreen_forward_backwardarrows extends AppiummobileBase {
 
-	private By Homeclick = 		AppiumBy.iOSClassChain("**/XCUIElementTypeOther[`label == \"Home\"`][2]");
-	private By backarrowbttn = 		AppiumBy.accessibilityId("HomeBackArrow");
-	private By forwardarrowbttn = AppiumBy.accessibilityId("HomeForwardArrow");
+	mobileLocators locators = new mobileLocators();	
+	
 	
 	@Test
 
@@ -43,14 +40,14 @@ public class Case05_Homescreen_forward_backwardarrows extends AppiummobileBase {
         appiumUtils.launchAppWithPackageId("com.cuesz.mobile");
 		
 		// CLick on home menu from bottom
-		WebElement Homeicon = driver.findElement(Homeclick);
+		WebElement Homeicon = driver.findElement(mobileLocators.Homeclick);
 		Homeicon.click();
 
 //		scrollDown();
 		
 		// Click on HomeBackArrow button 4 times
 	    for (int i = 0; i < 4; i++) {
-	        WebElement backarrow = driver.findElement(backarrowbttn);
+	        WebElement backarrow = driver.findElement(mobileLocators.backarrowbttn);
 	        backarrow.click();
 	      //  Thread.sleep(1000); // Optional delay to observe the action
 	        
@@ -62,7 +59,7 @@ public class Case05_Homescreen_forward_backwardarrows extends AppiummobileBase {
 
 	    // Click on HomeForwardArrow button 5 times
 	    for (int i = 0; i < 5; i++) {
-	        WebElement forwardarrow = driver.findElement(forwardarrowbttn );
+	        WebElement forwardarrow = driver.findElement(mobileLocators.forwardarrowbttn );
 	        forwardarrow.click();
 	    //    Thread.sleep(1000); // Optional delay to observe the action
 	        
@@ -73,7 +70,7 @@ public class Case05_Homescreen_forward_backwardarrows extends AppiummobileBase {
 	    }
 
 	    // Click on HomeBackArrow button 1 more time
-	    WebElement backarrow = driver.findElement(backarrowbttn);
+	    WebElement backarrow = driver.findElement(mobileLocators.backarrowbttn);
 	    backarrow.click();
 	    Thread.sleep(1000); // Optional delay to observe the action
 		

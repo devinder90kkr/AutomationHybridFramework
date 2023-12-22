@@ -1,12 +1,12 @@
 package cuesz01.Iosapp_member_homeScreen;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
 
 import cuesz.pages.AppiummobileBase;
 import cuesz.utils.AllureUtils;
 import cuesz.utils.AppiumappUtils;
+import cuesz.utils.mobileLocators;
 import io.appium.java_client.AppiumBy;
 import io.qameta.allure.Description;
 import io.qameta.allure.Epic;
@@ -21,8 +21,7 @@ import io.qameta.allure.Story;
 
 public class Case04_Homescreen_weekdays_past extends AppiummobileBase {
 
-    private By Homeclick = AppiumBy.iOSClassChain("**/XCUIElementTypeOther[`label == \"Home\"`][2]");
-    
+	mobileLocators locators = new mobileLocators();	  
 
 	@Test
 
@@ -37,7 +36,7 @@ public class Case04_Homescreen_weekdays_past extends AppiummobileBase {
         appiumUtils.launchAppWithPackageId("com.cuesz.mobile");
 
         // Click on home menu from the bottom
-        WebElement Homeicon = driver.findElement(Homeclick);
+        WebElement Homeicon = driver.findElement(mobileLocators.Homeclick);
         Homeicon.click();
         
 	     driver.findElement(AppiumBy.accessibilityId("ThuClicked")).click();

@@ -2,11 +2,11 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="MasterSuite">
 
+ <!-- Include Suite15 for breakfast member -->
+  <suite-files> 
+    <suite-file path="/Users/chicmic/git/Cuesz_AutomationTests/Cuesz03.Iosapp_member_Fuelscreen_breakfast.xml"/>
+  </suite-files>
 
-
- 
-  
-  
   <!-- Include Suite16 for Early snacks member -->
   <suite-files> 
     <suite-file path="/Users/chicmic/git/Cuesz_AutomationTests/Cuesz04.Iosapp_member_Fuelscreen_EarlySnacks.xml"/>
@@ -25,9 +25,14 @@
   </suite-files>
 
 
-  <!-- Include Suite18 for Dinner member -->
+  <!-- Include Suite19 for Dinner member -->
   <suite-files> 
     <suite-file path="/Users/chicmic/git/Cuesz_AutomationTests/Cuesz07.Iosapp_member_Fuelscreen_Dinner.xml"/>
+  </suite-files>
+  
+  <!-- Include Suite20 for Dinner member -->
+  <suite-files> 
+    <suite-file path="/Users/chicmic/git/Cuesz_AutomationTests/Cuesz08.Iosapp_member_Fuelscreen_Addeventcase.xml"/>
   </suite-files>
 
 

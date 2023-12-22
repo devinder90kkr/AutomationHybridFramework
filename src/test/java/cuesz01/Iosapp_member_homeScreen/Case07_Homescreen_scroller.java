@@ -1,14 +1,12 @@
 package cuesz01.Iosapp_member_homeScreen;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
 
 import cuesz.pages.AppiummobileBase;
 import cuesz.utils.AllureUtils;
 import cuesz.utils.AppiumappUtils;
-import io.appium.java_client.AppiumBy;
-
+import cuesz.utils.mobileLocators;
 import io.qameta.allure.Description;
 import io.qameta.allure.Epic;
 import io.qameta.allure.Feature;
@@ -23,10 +21,7 @@ import io.qameta.allure.Story;
 
 public class Case07_Homescreen_scroller extends AppiummobileBase {
 
-	private By Homeclick = 		AppiumBy.iOSClassChain("**/XCUIElementTypeOther[`label == \"Home\"`][2]");
-	private By HomeScrollDown=	AppiumBy.accessibilityId("HomeScrollDown");	
-	private By HomeScrollup=	AppiumBy.accessibilityId("HomeScrollUp");	
-	
+	mobileLocators locators = new mobileLocators();	
 
 	@Test
 
@@ -44,17 +39,17 @@ public class Case07_Homescreen_scroller extends AppiummobileBase {
         appiumUtils.launchAppWithPackageId("com.cuesz.mobile");
 		
 		// CLick on home menu from bottom
-		WebElement Homeicon = driver.findElement(Homeclick);
+		WebElement Homeicon = driver.findElement(mobileLocators.Homeclick);
 		Homeicon.click();
 		
-		WebElement scrolldown = driver.findElement(HomeScrollDown);
+		WebElement scrolldown = driver.findElement(mobileLocators.HomeScrollDown);
 		scrolldown.click();
 
 		  // Capture a screenshot and attach it to Allure
         AllureUtils.captureScreenshot(driver, "HomeScrollDown1");
 		
 		
-		WebElement scrollup = driver.findElement(HomeScrollup);
+		WebElement scrollup = driver.findElement(mobileLocators.HomeScrollup);
 		scrollup.click();
 		
 		 // Capture a screenshot and attach it to Allure

@@ -12,7 +12,10 @@ import org.testng.annotations.Test;
 import cuesz.pages.AppiummobileBase;
 import cuesz.utils.AllureUtils;
 import cuesz.utils.AppiumappUtils;
+import cuesz.utils.mobileLocators;
+import cuesz.utils.mobileTestData;
 import io.appium.java_client.AppiumBy;
+import io.appium.java_client.AppiumDriver;
 import io.qameta.allure.Description;
 import io.qameta.allure.Epic;
 import io.qameta.allure.Feature;
@@ -26,48 +29,8 @@ import io.qameta.allure.Story;
 
 
 public class Case14_Perform_performalreadycompleted extends AppiummobileBase {
-
-	private By Homeclick = 		AppiumBy.iOSClassChain("**/XCUIElementTypeOther[`label == \"Home\"`][2]");
-	private By performclick	= AppiumBy.accessibilityId("PERFORM_SCREEN");
-	private By perfomplus	=	 AppiumBy.accessibilityId("AddEvent");
-	private By additionalperform	= AppiumBy.accessibilityId("Start My Perform Activity");
-	private By cross_additionalpopup 	= AppiumBy.accessibilityId("CrossClicked");
-	private By performcompleted			= AppiumBy.accessibilityId("Perform Activity Already Completed");
-	private By crossicon				= AppiumBy.xpath("(//XCUIElementTypeOther[@name=\"CrossClicked\"])[6]");
-	private By activityfield			= AppiumBy.accessibilityId("Type Here");
-	private By activityfield1			= AppiumBy.accessibilityId("EnterActivityName");
-//	private By input1					= AppiumBy.accessibilityId("EnterActivityName");
-	private By Selectoption				= AppiumBy.iOSClassChain("**/XCUIElementTypeOther[`label == \"Baseball \"`][3]");
-	private By starttme					= AppiumBy.accessibilityId("Start");
-	private By pickerelement			= AppiumBy.xpath("//XCUIElementTypePickerWheel");
-	private By Doneclick				= AppiumBy.iOSNsPredicateString("label == \"Done\"");
 	
-	private By Endtme					= AppiumBy.accessibilityId("End");
-	
-	
-	private By Scro1					= AppiumBy.iOSClassChain("**/XCUIElementTypeStaticText[`label == \"4\"`][1]");
-	private By Scro2					= AppiumBy.iOSClassChain("**/XCUIElementTypeStaticText[`label == \"6\"`][1]");
-	private By Scro3					= AppiumBy.iOSClassChain("**/XCUIElementTypeStaticText[`label == \"2\"`][1]");
-	private By Scro4					= AppiumBy.iOSClassChain("**/XCUIElementTypeStaticText[`label == \"8\"`][1]");
-	
-	private By sesson1					= AppiumBy.iOSClassChain("**/XCUIElementTypeOther[`label == \"2\"`][6]");
-	private By sesson2					= AppiumBy.iOSClassChain("**/XCUIElementTypeOther[`label == \"3\"`][6]");
-	private By sesson3					= AppiumBy.iOSClassChain("**/XCUIElementTypeOther[`label == \"5\"`][6]");
-	
-	
-	private By noteclcik				= AppiumBy.accessibilityId("Notes");
-	private By donebttn 				= AppiumBy.iOSClassChain("**/XCUIElementTypeButton[`label == \"DONE\"`]");
-	private By Submitclick				= AppiumBy.accessibilityId("Submit");
-	private By importicon				= AppiumBy.accessibilityId("Baseball ImportIcon");
-	private By importlatericon			= AppiumBy.accessibilityId("Import later");
-	
-	private By graphclick				= AppiumBy.accessibilityId("Baseball GraphIcon");
-	private By graphclse				= AppiumBy.accessibilityId("CrossClicked");
-	
-	private By deletebaseball		= AppiumBy.accessibilityId("Baseball DeleteIcon");
-	private By nodelete 			= AppiumBy.accessibilityId("No");
-	private By yesdelete 			= AppiumBy.accessibilityId("Yes");
-	
+	mobileLocators locators = new mobileLocators();
 	
 	@Test
 	@Owner("QA") // Add the @Owner annotation to specify the executor
@@ -84,7 +47,7 @@ public class Case14_Perform_performalreadycompleted extends AppiummobileBase {
         appiumUtils.launchAppWithPackageId("com.cuesz.mobile");
 		
 		// CLick on home menu from bottom
-		WebElement Homeicon = driver.findElement(Homeclick);
+		WebElement Homeicon = driver.findElement(mobileLocators.Homeclick);
 		Homeicon.click();
 		
 		Thread.sleep(3000);
@@ -95,33 +58,35 @@ public class Case14_Perform_performalreadycompleted extends AppiummobileBase {
 		driver.executeScript("mobile:scroll", scrollObject);
 		Thread.sleep(2000);
 		
-		
 		// CLick on Perform card
-		WebElement performcard = driver.findElement(performclick);
+		WebElement performcard = driver.findElement(mobileLocators.performclick);
 		performcard.click();
-
+	
+		// Capture a screenshot and attach it to Allure
+	    AllureUtils.captureScreenshot(driver, "perform_additional1");
 		
-		WebElement perfomplusicon 	= driver.findElement(perfomplus);
+		WebElement perfomplusicon 	= driver.findElement(mobileLocators.perfomplus);
 		perfomplusicon.click();
 		
-		WebElement startmyperformactivity 	= driver.findElement(additionalperform);
+		WebElement startmyperformactivity 	= driver.findElement(mobileLocators.additionalperform);
 		startmyperformactivity.click();
 		
-		WebElement startmyperfromactivitycross 	= driver.findElement(cross_additionalpopup);
+		WebElement startmyperfromactivitycross 	= driver.findElement(mobileLocators.cross_additionalpopup);
 		startmyperfromactivitycross.click();
 		
+		
 		// repeat steps again 
-		WebElement perfomplusicon1 	= driver.findElement(perfomplus);
+		WebElement perfomplusicon1 	= driver.findElement(mobileLocators.perfomplus);
 		perfomplusicon1.click();
 		
-		WebElement additionalperformcompleted = driver.findElement(performcompleted);
+		WebElement additionalperformcompleted = driver.findElement(mobileLocators.performcompleted);
 		additionalperformcompleted.click();
 		
 		
 		// Check if the Crossclick element is displayed before clicking on it
 				WebElement Crossclick = null;
 				try {
-				    Crossclick = driver.findElement(crossicon);
+				    Crossclick = driver.findElement(mobileLocators.crossicon);
 				    if (Crossclick.isDisplayed()) {
 				        Crossclick.click();
 				    } else {
@@ -135,46 +100,41 @@ public class Case14_Perform_performalreadycompleted extends AppiummobileBase {
 				    // Perform some other action or throw an exception if needed
 				}
 		
-		WebElement Activityinput = driver.findElement(activityfield);
+		WebElement Activityinput = driver.findElement(mobileLocators.activityfield);
 		Activityinput.click();
 		
-		WebElement Activityinput1 = driver.findElement(activityfield1);
+		WebElement Activityinput1 = driver.findElement(mobileLocators.activityfield1);
 		Activityinput1.click();
 		
-		WebElement Searchinput1 	= driver.findElement(AppiumBy.accessibilityId("B"));
+		// Input boxing letter in field 
+		WebElement Searchinput1 	= driver.findElement(mobileLocators.letter1);
 		Searchinput1.click();
 	
-		WebElement Searchinput2 	= driver.findElement(AppiumBy.accessibilityId("a"));
+		WebElement Searchinput2 	= driver.findElement(mobileLocators.letter2);
 		Searchinput2.click();
 		
-		WebElement Searchinput3 	= driver.findElement(AppiumBy.accessibilityId("s"));
+		WebElement Searchinput3 	= driver.findElement(mobileLocators.letter3);
 		Searchinput3.click();
 		
-		WebElement Searchinput4 	= driver.findElement(AppiumBy.accessibilityId("e"));
+		WebElement Searchinput4 	= driver.findElement(mobileLocators.letter4);
 		Searchinput4.click();
 		
-		WebElement Searchinput5 	= driver.findElement(AppiumBy.accessibilityId("b"));
+		WebElement Searchinput5 	= driver.findElement(mobileLocators.letter5);
 		Searchinput5.click();
 		
-		WebElement Searchinput6 	= driver.findElement(AppiumBy.accessibilityId("a"));
+		WebElement Searchinput6 	= driver.findElement(mobileLocators.letter6);
 		Searchinput6.click();
-
-		WebElement Searchinput7 	= driver.findElement(AppiumBy.accessibilityId("l"));
-		Searchinput7.click();
-		
-		WebElement Searchinput8 	= driver.findElement(AppiumBy.accessibilityId("l"));
-		Searchinput8.click();
 		
 		WebElement doneactivity 	= driver.findElement(AppiumBy.accessibilityId("Done"));
 		doneactivity.click();	
 		
-		WebElement Selectactivity = driver.findElement(Selectoption);
+		WebElement Selectactivity = driver.findElement(mobileLocators.Selectoption);
 		Selectactivity.click();
 		
-		WebElement Startselect	= driver.findElement(starttme);
+		WebElement Startselect	= driver.findElement(mobileLocators.starttme);
 		Startselect.click();
 		
-		List<WebElement>values = driver.findElements(pickerelement);
+		List<WebElement>values = driver.findElements(mobileLocators.pickerelement);
 
 		for (int i=0; i<values.size();i++)
 		{		
@@ -191,12 +151,12 @@ public class Case14_Perform_performalreadycompleted extends AppiummobileBase {
 		Thread.sleep(3500);
 		values.get(2).sendKeys("AM");
 	
-		driver.findElement(Doneclick).click();
+		driver.findElement(mobileLocators.Doneclick).click();
 	
-		WebElement Endselect	= driver.findElement(Endtme);
+		WebElement Endselect	= driver.findElement(mobileLocators.Endtme);
 		Endselect.click();
 		
-		List<WebElement>values1 = driver.findElements(pickerelement);
+		List<WebElement>values1 = driver.findElements(mobileLocators.pickerelement);
 
 		for (int i=0; i<values1.size();i++)
 		{		
@@ -213,65 +173,69 @@ public class Case14_Perform_performalreadycompleted extends AppiummobileBase {
 		Thread.sleep(2500);
 		values1.get(2).sendKeys("AM");
 	
-		driver.findElement(Doneclick).click();
+		driver.findElement(mobileLocators.Doneclick).click();
 		
 		
 		// Slider handle for score your activity 
-		WebElement Score1 =driver.findElement(Scro1);
-		Score1.click();
-		WebElement Score2 =driver.findElement(Scro2);
-		Score2.click();
-		WebElement Score3 =driver.findElement(Scro3);
-		Score3.click();
-		WebElement Score4 =driver.findElement(Scro4);
-		Score4.click();
-		
-		// Slider handle for enjoy your session
-		WebElement session1 =driver.findElement(sesson1);
-		session1.click();
-		WebElement session2 =driver.findElement(sesson2);
-		session2.click();
-		WebElement session3 =driver.findElement(sesson3);
-		session3.click();
+ 		WebElement Score1 =driver.findElement(mobileLocators.Scro1);
+ 		Score1.click();
+ 		WebElement Score2 =driver.findElement(mobileLocators.Scro2);
+ 		Score2.click();
+ 		WebElement Score3 =driver.findElement(mobileLocators.Scro3);
+ 		Score3.click();
+ 		WebElement Score4 =driver.findElement(mobileLocators.Scro4);
+ 		Score4.click();
+ 		
+ 		
+ 		// Slider handle for enjoy your session
+ 		WebElement session1 =driver.findElement(mobileLocators.sesson1);
+ 		session1.click();
+ 		WebElement session2 =driver.findElement(mobileLocators.sesson2);
+ 		session2.click();
+ 		WebElement session3 =driver.findElement(mobileLocators.sesson3);
+ 		session3.click();
 				
-		WebElement tellusmore = driver.findElement(noteclcik);
-		tellusmore.sendKeys("Are you looking for feedback for a job performance review, a presentation, a project, or something else");
+		WebElement tellusmore = driver.findElement(mobileLocators.noteclcik);
+		tellusmore.sendKeys(mobileTestData.notefield);
 		
 		
 		Thread.sleep(3500);
 		// Capture a screenshot and attach it to Allure
         AllureUtils.captureScreenshot(driver, "perform4");
 			
-		WebElement telldone = driver.findElement(donebttn);
-		telldone.click();
+        WebElement telldone = driver.findElement(mobileLocators.donebttn);
+ 		telldone.click();
 		
 		
-		WebElement tickbutton 	= driver.findElement(Submitclick);
+		WebElement tickbutton 	= driver.findElement(mobileLocators.Submitclick);
 		tickbutton.click();
 		Thread.sleep(3500);
 
-		Thread.sleep(3000);
-		// Method to scroll to perform screen
-		HashMap<String,Object>scrollObject1 =new HashMap<>();
-		scrollObject1.put("direction", "down");
-		scrollObject1.put("Baseball", "Baseball");
-		driver.executeScript("mobile:scroll", scrollObject1);
-		Thread.sleep(2000);
 		
+		By walkingperformlLocator = AppiumBy.iOSClassChain("**/XCUIElementTypeStaticText[`label == \"Boxing\"`]");
+        if(!isElementPresent(driver, walkingperformlLocator)){
+            // Scroll to "Basketball" if it's not present
+            HashMap<String,Object> scrollObject1 = new HashMap<>();
+            scrollObject1.put("direction", "down");
+            scrollObject1.put("Baseball", "Baseball");
+            driver.executeScript("mobile:scroll", scrollObject1);
+            Thread.sleep(2000);
+        }
+			
 		// Click on Import icon
-        WebElement importnow	= driver.findElement(importicon);
+        WebElement importnow	= driver.findElement(mobileLocators.importicon1);
         importnow.click();
         
         Thread.sleep(3500);
       		// Capture a screenshot and attach it to Allure
               AllureUtils.captureScreenshot(driver, "perform6");
         
-        WebElement importlater	= driver.findElement(importlatericon);
+        WebElement importlater	= driver.findElement(mobileLocators.importlatericon);
         importlater.click();
         
         
         // Click on graph icon
-        WebElement graphicon	= driver.findElement(graphclick);
+        WebElement graphicon	= driver.findElement(mobileLocators.graphclick1);
 		graphicon.click();
 		
 		
@@ -279,25 +243,36 @@ public class Case14_Perform_performalreadycompleted extends AppiummobileBase {
 		// Capture a screenshot and attach it to Allure
         AllureUtils.captureScreenshot(driver, "perform8");
         
-		WebElement graphclose	= driver.findElement(graphclse);
+		WebElement graphclose	= driver.findElement(mobileLocators.graphclse);
 		graphclose.click();
 		
-		WebElement deleteaddiotnal	= driver.findElement(deletebaseball);
+		WebElement deleteaddiotnal	= driver.findElement(mobileLocators.deleteboxing);
 		deleteaddiotnal.click();
 		
-		WebElement nodeleteoption	= driver.findElement(nodelete);
+		WebElement nodeleteoption	= driver.findElement(mobileLocators.nodelete);
 		nodeleteoption.click();
 		
-		WebElement deleteaddiotnal1	= driver.findElement(deletebaseball);
+		WebElement deleteaddiotnal1	= driver.findElement(mobileLocators.deleteboxing);
 		deleteaddiotnal1.click();
 		
-		WebElement yesdeleteoption	= driver.findElement(yesdelete);
+		WebElement yesdeleteoption	= driver.findElement(mobileLocators.yesdelete);
 		yesdeleteoption.click();
 		
 		
 		Thread.sleep(3500);
         driver.terminateApp("com.cuesz.mobile");
 	
+
+	}
 	
-	
-	}}
+	// Function to check if an element is present on the screen
+	public boolean isElementPresent(AppiumDriver driver, By by){
+	    try{
+	        driver.findElement(by);
+	        return true;
+	    } catch (NoSuchElementException e){
+	        return false;
+	    }
+	}
+
+}

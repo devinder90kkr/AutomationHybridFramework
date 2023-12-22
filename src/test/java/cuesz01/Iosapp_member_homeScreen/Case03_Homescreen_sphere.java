@@ -1,14 +1,12 @@
 package cuesz01.Iosapp_member_homeScreen;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
 
 import cuesz.pages.AppiummobileBase;
 import cuesz.utils.AllureUtils;
 import cuesz.utils.AppiumappUtils;
-import io.appium.java_client.AppiumBy;
-
+import cuesz.utils.mobileLocators;
 import io.qameta.allure.Description;
 import io.qameta.allure.Epic;
 import io.qameta.allure.Feature;
@@ -23,10 +21,8 @@ import io.qameta.allure.Story;
 
 public class Case03_Homescreen_sphere extends AppiummobileBase {
 
-	private By Homeclick = 		AppiumBy.iOSClassChain("**/XCUIElementTypeOther[`label == \"Home\"`][2]");
-	private By separtorclick =	AppiumBy.iOSNsPredicateString("name == 'CombineSphere'");
-	private By combinesphereclick	= AppiumBy.iOSNsPredicateString("name == 'SeprateSphere'");
-	
+
+	mobileLocators locators = new mobileLocators();	
 
 	@Test
 	@Owner("QA") // Add the @Owner annotation to specify the executor
@@ -43,12 +39,12 @@ public class Case03_Homescreen_sphere extends AppiummobileBase {
         appiumUtils.launchAppWithPackageId("com.cuesz.mobile");
 		
 		// CLick on home menu from bottom
-		WebElement Homeicon = driver.findElement(Homeclick);
+		WebElement Homeicon = driver.findElement(mobileLocators.Homeclick);
 		Homeicon.click();
 		
         Thread.sleep(2000);
 		// Click on sphere sperators to check spheres activity.
-        WebElement separtor =driver.findElement(separtorclick);
+        WebElement separtor =driver.findElement(mobileLocators.separtorclick);
         separtor.click();
         
         Thread.sleep(2500);
@@ -58,7 +54,7 @@ public class Case03_Homescreen_sphere extends AppiummobileBase {
         
         Thread.sleep(2000);
 		// Click on sphere sperators to check spheres activity.
-        WebElement combinsepartor =driver.findElement(combinesphereclick);
+        WebElement combinsepartor =driver.findElement(mobileLocators.combinesphereclick);
         combinsepartor .click();
         
         Thread.sleep(2500);

@@ -1,10 +1,8 @@
 	package cuesz.logicpage;
 	
 	import java.text.ParseException;
-	import java.time.DayOfWeek;
-	import java.time.LocalDate;
-import java.util.Calendar;
-import java.time.Duration;
+	import java.util.Calendar;
+	import java.time.Duration;
 	import org.openqa.selenium.By;
 	import org.openqa.selenium.JavascriptExecutor;
 	import org.openqa.selenium.Keys;
@@ -21,9 +19,8 @@ import java.time.Duration;
 	
 	public class Case42_01_MSL_Perform_currentday extends BasePage {
 		
-	
-
 		SeleniumUtils utils = new SeleniumUtils(driver);
+		
 		private By Logibttn =   (By.xpath("//span[normalize-space()='Logic Page']"));
 		private By Prfrmhading = (By.id("LivePerfromCard"));
 		private By Prfrmhadingplsu = (By.xpath("//button[@data-bs-target='#LivePerform']"));
@@ -45,20 +42,13 @@ import java.time.Duration;
 		        utils.enterSearchText();
 		        utils.clickMembername();
 	
-	   		   /***********************************landed on Logic page ***************************************************************************************************/
+		  /***********************************landed on Logic page ***************************************************************************************************/
 	   		   Thread.sleep(2000);
 	   		   WebElement Logicbutton =  driver.findElement(Logibttn);
 	   		   Logicbutton.click();
 
-	   		  /****************************************Click on next & previous button and get week*****************************************************************************************************/        
-
-//	   		// Use the next&	previous utility method
-//		        utils.navigateToLastAndNextWeek();
-		        
-		        Thread.sleep(2000);
-		  	        
 		  	
-	  /***************************************Click on Perfom and scroll******************************************************************************************/
+		 /***************************************Click on Perfom and scroll******************************************************************************************/
 		  	   Thread.sleep(5500);
 		  	   WebElement Performheading = driver.findElement(Prfrmhading);
 		       // Scroll to the "Staff Notes" element using JavaScriptExecutor
@@ -77,61 +67,20 @@ import java.time.Duration;
 
 			   Thread.sleep(2500);
 		  
-	  /************************************************Input data as per next week selected and populate data in three days***************************************************************************************************/
+	     /*******************Input data as per next week selected and populate data in three days************************************************************************/
 		        
 			
 			   WebElement  activeblock = driver.findElement(By.xpath("//div[@id='active_logic_block']"));
-			// Scroll to the "Staff Notes" element using JavaScriptExecutor
+			   // Scroll to the "Staff Notes" element using JavaScriptExecutor
 			   ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView();", activeblock);
 			   
 
 	  	   
-     /********************************************************************Populate data for monday first activity *************************************************************************************/
+     /*****************************Populate data for monday first activity *********************************************************************************************/
 					
-			
-			   		        
-			
+
 			    Thread.sleep(2500);
 			    
-//			    // Get the current day of the week (Sunday=1, Monday=2, ..., Saturday=7)
-//		        int dayOfWeek = Calendar.getInstance().get(Calendar.DAY_OF_WEEK);
-//
-//		        // Convert the numeric day of the week to a String representation
-//		        String dayName;
-//		        switch (dayOfWeek) {
-//		            case Calendar.MONDAY:
-//		                dayName = "Monday";
-//		                break;
-//		            case Calendar.TUESDAY:
-//		                dayName = "Tuesday";
-//		                break;
-//		                
-//		            case Calendar.WEDNESDAY:
-//		                dayName = "Wednesday";
-//		                break;
-//		                
-//		            case Calendar.THURSDAY:
-//		                dayName = "Thursday";
-//		                break;
-//		                
-//		            case Calendar.FRIDAY:
-//		                dayName = "Friday";
-//		                break;
-//		           
-//		            case Calendar.SATURDAY:
-//		                dayName = "Saturday";
-//		                break;
-//		                
-//		            case Calendar.SUNDAY:
-//		                dayName = "Sunday";
-//		                break; 
-//		                
-//		                
-//		            // ... repeat for other days of the week
-//		            default:
-//		                dayName = "Unknown";
-//		                break;
-//		        }
 			    int dayOfWeek = Calendar.getInstance().get(Calendar.DAY_OF_WEEK);
 			    String dayName = DayofWeek.getDayName(dayOfWeek);
 		        String partialId = "performActivity-0-" + dayName;

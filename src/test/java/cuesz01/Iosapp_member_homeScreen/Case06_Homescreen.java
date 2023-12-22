@@ -2,7 +2,6 @@ package cuesz01.Iosapp_member_homeScreen;
 
 import java.util.HashMap;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -10,7 +9,7 @@ import org.testng.annotations.Test;
 import cuesz.pages.AppiummobileBase;
 import cuesz.utils.AllureUtils;
 import cuesz.utils.AppiumappUtils;
-import io.appium.java_client.AppiumBy;
+import cuesz.utils.mobileLocators;
 import io.qameta.allure.Allure;
 import io.qameta.allure.Description;
 import io.qameta.allure.Epic;
@@ -24,11 +23,7 @@ import io.qameta.allure.Story;
 @Feature ("Verify Homescreen detail for Perform, Fuel, Mindful & Restore.")
 public class Case06_Homescreen extends AppiummobileBase {
 	
-	private By Homeclick = 		AppiumBy.iOSClassChain("**/XCUIElementTypeOther[`label == \"Home\"`][2]");
-	private By Performlabel = 	AppiumBy.iOSNsPredicateString("name == 'Perform'");
-	private By Fuelable = 		AppiumBy.iOSNsPredicateString("name == 'Fuel'");
-	private By Mindflable  = 	AppiumBy.iOSNsPredicateString("name == 'Mindful'");
-	private By Restorelabel = 		AppiumBy.iOSNsPredicateString("name == 'Restore'");	
+	mobileLocators locators = new mobileLocators();	
 	
 	@Test
 	
@@ -43,7 +38,7 @@ public class Case06_Homescreen extends AppiummobileBase {
         // Launch the app using the utility method
         appiumUtils.launchAppWithPackageId("com.cuesz.mobile");	
 		
-		WebElement Homeicon = driver.findElement(Homeclick);
+		WebElement Homeicon = driver.findElement(mobileLocators.Homeclick);
 		Homeicon.click();
 		
 		Thread.sleep(3000);
@@ -55,7 +50,7 @@ public class Case06_Homescreen extends AppiummobileBase {
 		Thread.sleep(2000);
 		
 		// Locate the element containing the perform
-        WebElement Perform = driver.findElement(Performlabel);
+        WebElement Perform = driver.findElement(mobileLocators.Performlabel);
         // Extract text from the element
         String actualText = Perform.getText();
         // Define the expected text
@@ -74,7 +69,7 @@ public class Case06_Homescreen extends AppiummobileBase {
              
 		
         // Locate the element containing the Fuel
-        WebElement Fuel = driver.findElement(Fuelable);
+        WebElement Fuel = driver.findElement(mobileLocators.Fuelable);
         // Extract text from the element
         String actualText1 = Fuel.getText();
         // Define the expected text
@@ -92,7 +87,7 @@ public class Case06_Homescreen extends AppiummobileBase {
 
         
         // Locate the element containing the Mindful
-        WebElement Mindful = driver.findElement(Mindflable);
+        WebElement Mindful = driver.findElement(mobileLocators.Mindflable);
         // Extract text from the element
         String actualText2 = Mindful.getText();
         // Define the expected text
@@ -111,7 +106,7 @@ public class Case06_Homescreen extends AppiummobileBase {
         
         
         // Locate the element containing the Mindful
-        WebElement Restore = driver.findElement(Restorelabel);
+        WebElement Restore = driver.findElement(mobileLocators.Restorelabel);
         // Extract text from the element
         String actualText3 = Restore.getText();
         // Define the expected text

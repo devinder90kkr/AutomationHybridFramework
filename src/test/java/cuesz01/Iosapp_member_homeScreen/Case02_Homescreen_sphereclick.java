@@ -1,12 +1,12 @@
 package cuesz01.Iosapp_member_homeScreen;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
 
 import cuesz.pages.AppiummobileBase;
 import cuesz.utils.AllureUtils;
 import cuesz.utils.AppiumappUtils;
+import cuesz.utils.mobileLocators;
 import io.appium.java_client.AppiumBy;
 
 import io.qameta.allure.Description;
@@ -23,14 +23,7 @@ import io.qameta.allure.Story;
 
 public class Case02_Homescreen_sphereclick extends AppiummobileBase {
 	
-	
-	private By Homeclick = 		AppiumBy.iOSClassChain("**/XCUIElementTypeOther[`label == \"Home\"`][2]");
-	private By performlbale = 	AppiumBy.xpath("//XCUIElementTypeOther[starts-with(@name, 'Perform ')]");
-	private By fuelable = 		AppiumBy.xpath("//XCUIElementTypeOther[starts-with(@name, 'Fuel ')]");
-	private By mindulable = 	AppiumBy.xpath("//XCUIElementTypeOther[starts-with(@name, 'Mindful ')]");
-	private By Restorlabel = 	AppiumBy.xpath("//XCUIElementTypeOther[starts-with(@name, 'Restore ')]");
-	private By backbttn = 		AppiumBy.iOSNsPredicateString("name == 'SeparateSphereBackPress'");
-	
+	mobileLocators locators = new mobileLocators();	
 	
 	@Test
 	@Owner("QA") // Add the @Owner annotation to specify the executor
@@ -48,7 +41,7 @@ public class Case02_Homescreen_sphereclick extends AppiummobileBase {
         appiumUtils.launchAppWithPackageId("com.cuesz.mobile");
 		
 		// CLick on home menu from bottom
-		WebElement Homeicon = driver.findElement(Homeclick);
+		WebElement Homeicon = driver.findElement(mobileLocators.Homeclick);
 		Homeicon.click();
 		
 		 // Capture a screenshot and attach it to Allure
@@ -57,7 +50,7 @@ public class Case02_Homescreen_sphereclick extends AppiummobileBase {
 		/*************************** Perform ********************************/
 		
 		// Find the element with the "Perform 7%" text
-        WebElement perfelement = driver.findElement(performlbale);
+        WebElement perfelement = driver.findElement(mobileLocators.performlbale);
 
         // Get the text of the element
         String PerformValue = perfelement.getAttribute("name");
@@ -76,13 +69,13 @@ public class Case02_Homescreen_sphereclick extends AppiummobileBase {
         // Capture a screenshot and attach it to Allure
         AllureUtils.captureScreenshot(driver, "ios_Performscreen_screenshot");
         
-        WebElement backicon1 = driver.findElement(backbttn);
+        WebElement backicon1 = driver.findElement(mobileLocators.backbttnperform);
         backicon1.click();
         
 		/*************************** Fuel********************************/
 		
 		// Find the element with the "Fuel 7%" text
-        WebElement fuelelement = driver.findElement(fuelable);
+        WebElement fuelelement = driver.findElement(mobileLocators.fuelable);
 
         // Get the text of the element
         String fuelValue = fuelelement.getAttribute("name");
@@ -101,12 +94,12 @@ public class Case02_Homescreen_sphereclick extends AppiummobileBase {
         // Capture a screenshot and attach it to Allure
         AllureUtils.captureScreenshot(driver, "ios_Fuelscreen_screenshot");
         
-        WebElement backicon2 = driver.findElement(backbttn);
+        WebElement backicon2 = driver.findElement(mobileLocators.backbttnperform);
         backicon2.click();
         /*************************** Mindful********************************/
 		
 		// Find the element with the "Fuel 7%" text
-        WebElement mmindulelement = driver.findElement(mindulable);
+        WebElement mmindulelement = driver.findElement(mobileLocators.mindulable);
 
         // Get the text of the element
         String mindfulValue = mmindulelement.getAttribute("name");
@@ -125,12 +118,12 @@ public class Case02_Homescreen_sphereclick extends AppiummobileBase {
         // Capture a screenshot and attach it to Allure
         AllureUtils.captureScreenshot(driver, "ios_mindfulscreen_screenshot");
         
-        WebElement backicon3 = driver.findElement(backbttn);
+        WebElement backicon3 = driver.findElement(mobileLocators.backbttnperform);
         backicon3.click();
         /*************************** Restore ********************************/
 		
 		// Find the element with the "Fuel 7%" text
-        WebElement Restoreelement = driver.findElement(Restorlabel);
+        WebElement Restoreelement = driver.findElement(mobileLocators.Restorlabel);
 
         // Get the text of the element
         String restoreValue = Restoreelement.getAttribute("name");
@@ -149,7 +142,7 @@ public class Case02_Homescreen_sphereclick extends AppiummobileBase {
         // Capture a screenshot and attach it to Allure
         AllureUtils.captureScreenshot(driver, "ios_restorescreen_screenshot");
         
-        WebElement backicon4 = driver.findElement(backbttn);
+        WebElement backicon4 = driver.findElement(mobileLocators.backbttnperform);
         backicon4.click();
         
         

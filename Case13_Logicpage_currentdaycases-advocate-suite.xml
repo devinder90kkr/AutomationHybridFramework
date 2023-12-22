@@ -6,6 +6,7 @@
     <classes>    
        <class name="cuesz.logictest.advocate.Case42_01_MSL_Perform_currentdaytest" />
        <class name="cuesz.logictest.advocate.Case43_02_MSL_Fuel_currentdaytest" />
+       <class name="cuesz.logictest.advocate.Case43_03_MSL_FuelPerform_currentdaytest" />
        <class name="cuesz.logictest.advocate.Case44_01_MSL_Mindful_currentdaytest" />
        <class name="cuesz.logictest.advocate.Case45_MSL_restore_currenttest" />
           

@@ -102,7 +102,7 @@
                     <div class="method-list-content failed suite-Default_suite">
                       <span>
                         <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="cuesz03.Iosapp_member_home_Fuelscreen.Case50_Fuel_Addandevent_Recommendedfuel" class="method navigator-link" hash-for-method="Fuel_addaneventadditionalcasewithpostperformance">Fuel_addaneventadditionalcasewithpostperformance</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Default_suite" title="cuesz02.Iosapp_member_home_PerformScreen.Case15_Perform_movetocurrent" class="method navigator-link" hash-for-method="perfom_movetocurrentactivtity">perfom_movetocurrentactivtity</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content failed suite-Default_suite -->
@@ -120,22 +120,22 @@
           <div class="suite-Default_suite-class-failed">
             <div class="main-panel-header rounded-window-top">
               <img src="failed.png"/>
-              <span class="class-name">cuesz03.Iosapp_member_home_Fuelscreen.Case50_Fuel_Addandevent_Recommendedfuel</span>
+              <span class="class-name">cuesz02.Iosapp_member_home_PerformScreen.Case15_Perform_movetocurrent</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="Fuel_addaneventadditionalcasewithpostperformance">
-                  </a> <!-- Fuel_addaneventadditionalcasewithpostperformance -->
-                  <span class="method-name">Fuel_addaneventadditionalcasewithpostperformance</span>
-                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters.
+                  <a name="perfom_movetocurrentactivtity">
+                  </a> <!-- perfom_movetocurrentactivtity -->
+                  <span class="method-name">perfom_movetocurrentactivtity</span>
+                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: &apos;label == &apos;By.IosNsPredicate: label == &quot;Perform Fuel Mindful Restore&quot;&apos;&apos; predicate didn&apos;t match any elements
 For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
 Build info: version: &apos;4.16.1&apos;, revision: &apos;9b4c83354e&apos;
 System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;14.0&apos;, java.version: &apos;21&apos;
 Driver info: io.appium.java_client.ios.IOSDriver
-Command: [c266492a-48c1-44b3-ab5b-1fbb4192b883, findElement {using=xpath, value=(//XCUIElementTypeOther[@name=&quot;During Performance&quot;])[2]}]
-Capabilities {appium:automationName: XCuiTest, appium:databaseEnabled: false, appium:deviceName: iPhone 11, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: false, appium:platformVersion: 17.0, appium:takesScreenshot: true, appium:udid: 626549EB-A1C6-40B2-B376-437..., appium:wdaLaunchTimeout: 30000, appium:webStorageEnabled: false, platformName: IOS}
-Session ID: c266492a-48c1-44b3-ab5b-1fbb4192b883
+Command: [9c17a98a-a0af-481b-af9f-42df3561239d, executeScript {script=mobile:scroll, args=[{toVisible=true, predicateString=label == &apos;By.IosNsPredicate: label == &quot;Perform Fuel Mindful Restore&quot;&apos;}]}]
+Capabilities {appium:automationName: XCUITest, appium:databaseEnabled: false, appium:deviceName: Iphone13, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: false, appium:platformVersion: 17.2, appium:takesScreenshot: true, appium:udid: 00008110-00142D610A79801E, appium:wdaLaunchTimeout: 30000, appium:webStorageEnabled: false, platformName: IOS}
+Session ID: 9c17a98a-a0af-481b-af9f-42df3561239d
 	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
 	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
 	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
@@ -145,11 +145,9 @@ Session ID: c266492a-48c1-44b3-ab5b-1fbb4192b883
 	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
 	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:250)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:602)
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:359)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:353)
-	at cuesz03.Iosapp_member_home_Fuelscreen.Case50_Fuel_Addandevent_Recommendedfuel.Fuel_addaneventadditionalcasewithpostperformance(Case50_Fuel_Addandevent_Recommendedfuel.java:402)
+	at org.openqa.selenium.remote.RemoteWebDriver.executeScript(RemoteWebDriver.java:467)
+	at cuesz02.Iosapp_member_home_PerformScreen.Case15_Perform_movetocurrent.scrollDownToElement(Case15_Perform_movetocurrent.java:169)
+	at cuesz02.Iosapp_member_home_PerformScreen.Case15_Perform_movetocurrent.perfom_movetocurrentactivtity(Case15_Perform_movetocurrent.java:136)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
@@ -182,7 +180,7 @@ Session ID: c266492a-48c1-44b3-ab5b-1fbb4192b883
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">/private/var/folders/10/ksb8skmx6tjd6rddphcr0_mr0000gn/T/testng-eclipse-1110166916/testng-customsuite.xml</span>
+            <span class="header-content">/private/var/folders/10/ksb8skmx6tjd6rddphcr0_mr0000gn/T/testng-eclipse--1032437010/testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -191,7 +189,7 @@ Session ID: c266492a-48c1-44b3-ab5b-1fbb4192b883
 &lt;suite name=&quot;Default suite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
   &lt;test name=&quot;Default test&quot; verbose=&quot;2&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;cuesz03.Iosapp_member_home_Fuelscreen.Case50_Fuel_Addandevent_Recommendedfuel&quot;/&gt;
+      &lt;class name=&quot;cuesz02.Iosapp_member_home_PerformScreen.Case15_Perform_movetocurrent&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Default test --&gt;
 &lt;/suite&gt; &lt;!-- Default suite --&gt;
@@ -233,14 +231,14 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(1);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'Fuel_addaneventadditionalcasewithpostperformance')
-data.setCell(0, 2, 'cuesz03.Iosapp_member_home_Fuelscreen.Case50_Fuel_Addandevent_Recommendedfuel')
-data.setCell(0, 3, 52998);
+data.setCell(0, 1, 'perfom_movetocurrentactivtity')
+data.setCell(0, 2, 'cuesz02.Iosapp_member_home_PerformScreen.Case15_Perform_movetocurrent')
+data.setCell(0, 3, 17062);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 52 seconds</span>
+              <span class="suite-total-time">Total running time: 17 seconds</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -266,7 +264,7 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">cuesz03.Iosapp_member_home_Fuelscreen.Case50_Fuel_Addandevent_Recommendedfuel</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">cuesz02.Iosapp_member_home_PerformScreen.Case15_Perform_movetocurrent</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">Cueszbase</span>
                 <span class="method-start">0 ms</span>
@@ -274,12 +272,12 @@ return data;
               <div class="test-method">
                 <img src="failed.png">
                 </img>
-                <span class="method-name">Fuel_addaneventadditionalcasewithpostperformance</span>
-                <span class="method-start">2024 ms</span>
+                <span class="method-name">perfom_movetocurrentactivtity</span>
+                <span class="method-start">944 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">55082 ms</span>
+                <span class="method-start">18054 ms</span>
               </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

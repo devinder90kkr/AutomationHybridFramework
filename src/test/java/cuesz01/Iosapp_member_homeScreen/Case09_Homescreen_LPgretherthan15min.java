@@ -1,13 +1,12 @@
 package cuesz01.Iosapp_member_homeScreen;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
 
 import cuesz.pages.AppiummobileBase;
 import cuesz.utils.AllureUtils;
 import cuesz.utils.AppiumappUtils;
-import io.appium.java_client.AppiumBy;
+import cuesz.utils.mobileLocators;
 import io.qameta.allure.Description;
 import io.qameta.allure.Epic;
 import io.qameta.allure.Feature;
@@ -22,9 +21,7 @@ import io.qameta.allure.Story;
 
 public class Case09_Homescreen_LPgretherthan15min extends AppiummobileBase {
 
-	private By Homeclick = 		AppiumBy.iOSClassChain("**/XCUIElementTypeOther[`label == \"Home\"`][2]");
-	private By liveperfrmicon = 		AppiumBy.accessibilityId("HomeScreenLPIcon");
-
+	mobileLocators locators = new mobileLocators();	
 	
 	@Test
 	@Owner("QA") // Add the @Owner annotation to specify the executor
@@ -41,7 +38,7 @@ public class Case09_Homescreen_LPgretherthan15min extends AppiummobileBase {
         appiumUtils.launchAppWithPackageId("com.cuesz.mobile");
 		
 		// CLick on home menu from bottom
-		WebElement Homeicon = driver.findElement(Homeclick);
+		WebElement Homeicon = driver.findElement(mobileLocators.Homeclick);
 		Homeicon.click();
 		
 		   // Capture a screenshot and attach it to Allure
@@ -49,8 +46,10 @@ public class Case09_Homescreen_LPgretherthan15min extends AppiummobileBase {
 		
 		
         Thread.sleep(3500);
-		WebElement livePerform = driver.findElement(liveperfrmicon);
+		WebElement livePerform = driver.findElement(mobileLocators.liveperfrmicon);
 		livePerform.click();
+		
+		
 		
 		  // Capture a screenshot and attach it to Allure
         AllureUtils.captureScreenshot(driver, "perform selection");

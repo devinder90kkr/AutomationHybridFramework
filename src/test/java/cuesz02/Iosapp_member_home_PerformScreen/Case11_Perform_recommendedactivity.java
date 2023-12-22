@@ -2,7 +2,6 @@ package cuesz02.Iosapp_member_home_PerformScreen;
 
 import java.util.HashMap;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -10,7 +9,10 @@ import org.testng.annotations.Test;
 import cuesz.pages.AppiummobileBase;
 import cuesz.utils.AllureUtils;
 import cuesz.utils.AppiumappUtils;
+import cuesz.utils.mobileLocators;
+import cuesz.utils.mobileTestData;
 import io.appium.java_client.AppiumBy;
+import io.appium.java_client.AppiumDriver;
 import io.qameta.allure.Allure;
 import io.qameta.allure.Description;
 import io.qameta.allure.Epic;
@@ -19,6 +21,8 @@ import io.qameta.allure.Owner;
 import io.qameta.allure.Severity;
 import io.qameta.allure.SeverityLevel;
 import io.qameta.allure.Story;
+
+import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
 
 @Epic ("Perform detail")
@@ -27,42 +31,7 @@ import org.openqa.selenium.NoSuchElementException;
 
 public class Case11_Perform_recommendedactivity extends AppiummobileBase {
 
-	private By Homeclick = 		AppiumBy.iOSClassChain("**/XCUIElementTypeOther[`label == \"Home\"`][2]");
-	private By performclick	= AppiumBy.accessibilityId("PERFORM_SCREEN");
-	private By walkinlabel = AppiumBy.xpath("//XCUIElementTypeStaticText[@name=\"Walking\"]");
-	private By walkingstart	= AppiumBy.accessibilityId("Walking Start");
-	private By backpressbutton	= AppiumBy.accessibilityId("BackPress");
-	private By Syncclick	= AppiumBy.accessibilityId("SyncDevice");
-	private By Enabletick	= AppiumBy.accessibilityId("EnableBluetooth");
-	private By deviation	= AppiumBy.accessibilityId("AddDeviation");
-	private By Crossclick	= AppiumBy.iOSClassChain("**/XCUIElementTypeOther[`label == \"CrossClicked\"`][2]");
-	private By lessthanprecribeclick	= AppiumBy.iOSClassChain("**/XCUIElementTypeOther[`label == \"Less Than Prescribed\"`][3]");
-	private By morethanprecribeclick	= AppiumBy.iOSClassChain("**/XCUIElementTypeOther[`label == \"More Than Prescribed\"`][3]");
-	private By Injury					= AppiumBy.xpath("(//XCUIElementTypeOther[@name=\"ItemPressed\"])[4]");
-	private By Noteclick				= AppiumBy.accessibilityId("Notes");
-	private By tickclick				= AppiumBy.xpath("(//XCUIElementTypeOther[@name=\"Submit\"])[2]");
-	private By Donetap					= AppiumBy.iOSClassChain("**/XCUIElementTypeButton[`label == \"DONE\"`]");
-	private By tickbttn					= AppiumBy.accessibilityId("Submit");
-	private By nobttn					= AppiumBy.accessibilityId("No");
-	private By yesbttn					= AppiumBy.accessibilityId("Yes");
-	private By crossicon				= AppiumBy.iOSClassChain("**/XCUIElementTypeOther[`label == \"CrossClicked\"`][4]");	
-	private By Scro1					= AppiumBy.iOSClassChain("**/XCUIElementTypeStaticText[`label == \"4\"`][1]");
-	private By Scro2					= AppiumBy.iOSClassChain("**/XCUIElementTypeStaticText[`label == \"6\"`][1]");
-	private By Scro3					= AppiumBy.iOSClassChain("**/XCUIElementTypeStaticText[`label == \"2\"`][1]");
-	private By Scro4					= AppiumBy.iOSClassChain("**/XCUIElementTypeStaticText[`label == \"8\"`][1]");
-	private By sesson1					= AppiumBy.iOSClassChain("**/XCUIElementTypeOther[`label == \"2\"`][6]");
-	private By sesson2					= AppiumBy.iOSClassChain("**/XCUIElementTypeOther[`label == \"3\"`][6]");
-	private By sesson3					= AppiumBy.iOSClassChain("**/XCUIElementTypeOther[`label == \"5\"`][6]");
-	private By noteclcik				= AppiumBy.accessibilityId("Notes");
-	private By donebttn 				= AppiumBy.iOSClassChain("**/XCUIElementTypeButton[`label == \"DONE\"`]");
-	private By tick 					= AppiumBy.accessibilityId("Submit");
-	private By graphclick				= AppiumBy.accessibilityId("WalkingGraphIcon");
-	private By graphclse				= AppiumBy.accessibilityId("CrossClicked");
-	private By importicon				= AppiumBy.accessibilityId("WalkingImportIcon");
-	private By importlatericon			= AppiumBy.accessibilityId("Import later");
-	private By deviationicon			= AppiumBy.accessibilityId("WalkingDeviationIcon");
-	private By crossicondeviation				= AppiumBy.accessibilityId("CrossClicked");
-	
+	mobileLocators locators = new mobileLocators();	
 	
 	@Test
 	@Owner("QA") // Add the @Owner annotation to specify the executor
@@ -79,7 +48,7 @@ public class Case11_Perform_recommendedactivity extends AppiummobileBase {
         appiumUtils.launchAppWithPackageId("com.cuesz.mobile");
 		
 		// CLick on home menu from bottom
-		WebElement Homeicon = driver.findElement(Homeclick);
+		WebElement Homeicon = driver.findElement(mobileLocators.Homeclick);
 		Homeicon.click();
 		
 		Thread.sleep(3000);
@@ -92,20 +61,21 @@ public class Case11_Perform_recommendedactivity extends AppiummobileBase {
 		
 		
 		// CLick on Perform card
-		WebElement performcard = driver.findElement(performclick);
+		WebElement performcard = driver.findElement(mobileLocators.performclick);
 		performcard.click();
 		
-		// Method to scroll to perform screen
-		HashMap<String,Object>scrollObject2 =new HashMap<>();
-		scrollObject2.put("direction", "down");
-		scrollObject2.put("Walking", "Walking");
-		driver.executeScript("mobile:scroll", scrollObject2);
-		Thread.sleep(2000);
-		
-		
+		By walkingperformlLocator = AppiumBy.iOSClassChain("**/XCUIElementTypeStaticText[`label == \"Walking\"`]");
+        if(!isElementPresent(driver, walkingperformlLocator)){
+            // Scroll to "Basketball" if it's not present
+            HashMap<String,Object> scrollObject1 = new HashMap<>();
+            scrollObject1.put("direction", "down");
+            scrollObject1.put("Walking", "Walking");
+            driver.executeScript("mobile:scroll", scrollObject1);
+            Thread.sleep(2000);
+        }
 		
 		// Locate the element containing the perform
-        WebElement Perform = driver.findElement(walkinlabel);
+        WebElement Perform = driver.findElement(mobileLocators.walkinlabel);
         // Extract text from the element
         String actualText = Perform.getText();
         // Define the expected text
@@ -120,99 +90,193 @@ public class Case11_Perform_recommendedactivity extends AppiummobileBase {
         // Attach values to Allure report
         Allure.addAttachment("Actual Text", actualText);
         Allure.addAttachment("Expected Text", expectedText);
+        
+        // Use an assertion to verify that actualText4 equals expectedText4
+        Assert.assertEquals(actualText, expectedText);
 		
-        
-        
+ 
         // Capture a screenshot and attach it to Allure
         AllureUtils.captureScreenshot(driver, "perform1");
         
-        
+       
 		// CLick on Walking  card
-		WebElement walkingcard = driver.findElement(walkingstart);
+		WebElement walkingcard = driver.findElement(mobileLocators.walkingstart);
 		walkingcard.click();
 
 		//Click on back button 
-		WebElement Backbttn = driver.findElement(backpressbutton);
+		WebElement Backbttn = driver.findElement(mobileLocators.backpressbutton);
 		Backbttn.click();
 		
 		// CLick on Walking  card
-		WebElement walkingcard1 = driver.findElement(walkingstart);
+		WebElement walkingcard1 = driver.findElement(mobileLocators.walkingstart);
 		walkingcard1.click();
 		
+		// Click on start perform activity for walking activity
+		WebElement startactivitybttn	= driver.findElement(mobileLocators.startperform);
+		// Extract text from the element
+	    String actualText4 = startactivitybttn.getText();
+	    // Define the expected text
+	    String expectedText4 = "Start "
+	    		+ "Perform "
+	    		+ "Activity";
+
+	    // Print the actual and expected text to the console
+	    System.out.println("Actual Text: " + actualText4);
+	    System.out.println("Expected Text: " + expectedText4);
+	    
+	    // Attach values to Allure report
+        Allure.addAttachment("Actual Text", actualText4);
+        Allure.addAttachment("Expected Text", expectedText4);
+        
+        startactivitybttn.click();
+
 		
+		try {
+		    WebElement rhythmtext = driver.findElement(mobileLocators.rhytmtextverification);
+		    // Extract text from the element
+		    String actualText2 = rhythmtext.getText();
+		    // Define the expected text
+		    String expectedText2 = "Rhythm 24 1091";
+
+		    // Print the actual and expected text to the console
+		    System.out.println("Actual Text: " + actualText2);
+		    System.out.println("Expected Text: " + expectedText2);
+		    
+		    // Attach values to Allure report
+	        Allure.addAttachment("Actual Text", actualText2);
+	        Allure.addAttachment("Expected Text", expectedText2);
+	        
+	        // Use an assertion to verify that actualText4 equals expectedText4
+	        Assert.assertEquals(actualText2, expectedText2);
+		    
+
+		    if (actualText2.equals(expectedText2)) {
+		        // If actual text and expected text are the same, click on Syncmydevicebttn
+		        WebElement Syncmydevicebttn = driver.findElement(mobileLocators.syncdevicebttn);
+		        Syncmydevicebttn.click();
+		    } else {
+		        // If actual text and expected text are different, click on syncbttn
+		        WebElement syncbttn = driver.findElement(mobileLocators.synclaterbttn);
+		        syncbttn.click();
+		    }
+		} catch (NoSuchElementException e) {
+		    // Handle the case where the element is not found by clicking on syncbttn
+		    WebElement syncbttn = driver.findElement(mobileLocators.synclaterbttn);
+		    syncbttn.click();
+		}
+
+		Thread.sleep(2500);
+
+		try {
+		    WebElement rhythmtext = driver.findElement(mobileLocators.rhytmtextlabelsyncedverification);
+		    // Extract text from the element
+		    String actualText3 = rhythmtext.getText();
+		    // Define the expected text
+		    String expectedText3 = "Rhythm 24 1091 Synced";
+
+		    // Print the actual and expected text to the console
+		    System.out.println("Actual Text: " + actualText3);
+		    System.out.println("Expected Text: " + expectedText3);
+
+		    // Attach values to Allure report
+		    Allure.addAttachment("Actual Text", actualText3);
+		    Allure.addAttachment("Expected Text", expectedText3);
+		    
+		    // Use an assertion to verify that actualText4 equals expectedText4
+	        Assert.assertEquals(actualText3, expectedText3);
+		    
+		    
+		} catch (NoSuchElementException e) {
+		    // Handle the case where rhythmtext is not found or is empty
+		    WebElement rhythmtext2 = driver.findElement(mobileLocators.rhytmtextlabel);
+		    // Extract text from the element
+		    String actualText5 = rhythmtext2.getText();
+		    // Define the expected text
+		    String expectedText5 = "Sync my device";
+
+		    // Print the actual and expected text to the console
+		    System.out.println("Actual Text: " + actualText5);
+		    System.out.println("Expected Text: " + expectedText5);
+
+		    // Attach values to Allure report
+		    Allure.addAttachment("Actual Text", actualText5);
+		    Allure.addAttachment("Expected Text", expectedText5);
+		    
+		    // Use an assertion to verify that actualText4 equals expectedText4
+	        Assert.assertEquals(actualText5, expectedText5);
+		}
 		
-		// CLick on Walking  card
-		WebElement syncdevice = driver.findElement(Syncclick);
-		syncdevice.click();	
+		try {
+		    WebElement startrecordingcross = driver.findElement(mobileLocators.crossiconrecording);
+		    startrecordingcross.click();
+		    Thread.sleep(5000000);
+		} catch (NoSuchElementException e) {
+		    // Handle the case where startrecordingcross is not available
+		    System.out.println("startrecordingcross element not found. Skipping.");
+		    // You can add additional logging or error handling here if needed
+		}			
 		
-		
-		WebElement bluetoothtick = driver.findElement(Enabletick);
-		bluetoothtick.click();
-     
-		// Capture a screenshot and attach it to Allure
-        AllureUtils.captureScreenshot(driver, "perform2");
-				
 		// Click on deviation 
-		WebElement adddeviation = driver.findElement(deviation);
+		WebElement adddeviation = driver.findElement(mobileLocators.deviation);
 		adddeviation.click();
 		
 		// Click on deviation 
-		WebElement deviationcrossclick = driver.findElement(Crossclick);
+		WebElement deviationcrossclick = driver.findElement(mobileLocators.Crossclick);
 		deviationcrossclick.click();
 		
 		// Click on deviation 
-		WebElement adddeviation2 = driver.findElement(deviation);
+		WebElement adddeviation2 = driver.findElement(mobileLocators.deviation);
 		adddeviation2.click();
 		
 		// Click on deviation option-1
-		WebElement lessprecribed = driver.findElement(lessthanprecribeclick);
+		WebElement lessprecribed = driver.findElement(mobileLocators.lessthanprecribeclick);
 		lessprecribed.click();
 				
 		// Click on deviation option-2
-		WebElement moreprecribed = driver.findElement(morethanprecribeclick);
+		WebElement moreprecribed = driver.findElement(mobileLocators.morethanprecribeclick);
 		moreprecribed.click();
 		
 		// Click on deviation option-1
-		WebElement lessprecribed1 = driver.findElement(lessthanprecribeclick);
+		WebElement lessprecribed1 = driver.findElement(mobileLocators.lessthanprecribeclick);
 		lessprecribed1.click();
 		
 		// Click on deviation option-1
-		WebElement injuryoption = driver.findElement(Injury);
+		WebElement injuryoption = driver.findElement(mobileLocators.Injury);
 		injuryoption.click();
 		
 
-		WebElement notes = driver.findElement(Noteclick);
-		notes.sendKeys("verify field accept automate values in Notes field");
+		WebElement notes = driver.findElement(mobileLocators.Noteclick);
+		notes.sendKeys(mobileTestData.notefield);
 		
 		Thread.sleep(3500);
 		// Capture a screenshot and attach it to Allure
         AllureUtils.captureScreenshot(driver, "perform3");
 		
-		WebElement Donebutton = driver.findElement(Donetap);
+		WebElement Donebutton = driver.findElement(mobileLocators.Donetap);
 		Donebutton.click();
 		
 
-		WebElement tickicon = driver.findElement(tickclick);
+		WebElement tickicon = driver.findElement(mobileLocators.tickclick);
 		tickicon.click();
 
 		
-		WebElement walkingtick = driver.findElement(tickbttn);
+		WebElement walkingtick = driver.findElement(mobileLocators.tick);
 		walkingtick.click();
 		
-		WebElement noption = driver.findElement(nobttn);
+		WebElement noption = driver.findElement(mobileLocators.nobttn);
 		noption.click();
 		
-		WebElement walkingtick1 = driver.findElement(tickbttn);
+		WebElement walkingtick1 = driver.findElement(mobileLocators.tick);
 		walkingtick1.click();
 		
-		WebElement yesption = driver.findElement(yesbttn);
+		WebElement yesption = driver.findElement(mobileLocators.yesbttn);
 		yesption.click();
 		
 		
 		// Check if the Crossclick element is displayed before clicking on it
 		WebElement Crossclick = null;
 		try {
-		    Crossclick = driver.findElement(crossicon);
+		    Crossclick = driver.findElement(mobileLocators.crossicon);
 		    if (Crossclick.isDisplayed()) {
 		        Crossclick.click();
 		    } else {
@@ -228,37 +292,37 @@ public class Case11_Perform_recommendedactivity extends AppiummobileBase {
 		
 	
 		// Slider handle for score your activity 
-		WebElement Score1 =driver.findElement(Scro1);
+		WebElement Score1 =driver.findElement(mobileLocators.Scro1);
 		Score1.click();
-		WebElement Score2 =driver.findElement(Scro2);
+		WebElement Score2 =driver.findElement(mobileLocators.Scro2);
 		Score2.click();
-		WebElement Score3 =driver.findElement(Scro3);
+		WebElement Score3 =driver.findElement(mobileLocators.Scro3);
 		Score3.click();
-		WebElement Score4 =driver.findElement(Scro4);
+		WebElement Score4 =driver.findElement(mobileLocators.Scro4);
 		Score4.click();
 		
 		
 		// Slider handle for enjoy your session
-		WebElement session1 =driver.findElement(sesson1);
+		WebElement session1 =driver.findElement(mobileLocators.sesson1);
 		session1.click();
-		WebElement session2 =driver.findElement(sesson2);
+		WebElement session2 =driver.findElement(mobileLocators.sesson2);
 		session2.click();
-		WebElement session3 =driver.findElement(sesson3);
+		WebElement session3 =driver.findElement(mobileLocators.sesson3);
 		session3.click();
 		
 		
-		WebElement tellusmore = driver.findElement(noteclcik);
-		tellusmore.sendKeys("Are you looking for feedback for a job performance review, a presentation, a project, or something else");
+		WebElement tellusmore = driver.findElement(mobileLocators.noteclcik);
+		tellusmore.sendKeys(mobileTestData.notefield);
 		
 		
 		Thread.sleep(3500);
 		// Capture a screenshot and attach it to Allure
         AllureUtils.captureScreenshot(driver, "perform4");
 			
-		WebElement telldone = driver.findElement(donebttn);
+		WebElement telldone = driver.findElement(mobileLocators.donebttn);
 		telldone.click();
 		
-		WebElement feedbacktick = driver.findElement(tick);
+		WebElement feedbacktick = driver.findElement(mobileLocators.tick);
 		feedbacktick.click();
 		
 			
@@ -267,33 +331,31 @@ public class Case11_Perform_recommendedactivity extends AppiummobileBase {
         AllureUtils.captureScreenshot(driver, "perform5");
         
         // Click on Import icon
-        WebElement importnow	= driver.findElement(importicon);
+        WebElement importnow	= driver.findElement(mobileLocators.importicon);
         importnow.click();
         
         Thread.sleep(3500);
-      		// Capture a screenshot and attach it to Allure
-              AllureUtils.captureScreenshot(driver, "perform6");
+  		// Capture a screenshot and attach it to Allure
+        AllureUtils.captureScreenshot(driver, "perform6");
         
-        WebElement importlater	= driver.findElement(importlatericon);
+        WebElement importlater	= driver.findElement(mobileLocators.importlatericon);
         importlater.click();
         
-      
- 
         // Click on deviation icon
-        WebElement deviation	= driver.findElement(deviationicon);
+        WebElement deviation	= driver.findElement(mobileLocators.deviationicon);
         deviation.click();
         
         Thread.sleep(3500);
 		// Capture a screenshot and attach it to Allure
         AllureUtils.captureScreenshot(driver, "perform7");
         
-        WebElement deviationcross 	= driver.findElement(crossicondeviation);
+        WebElement deviationcross 	= driver.findElement(mobileLocators.crossicondeviation);
         deviationcross.click();  
         
         
         
         // Click on graph icon
-        WebElement graphicon	= driver.findElement(graphclick);
+        WebElement graphicon	= driver.findElement(mobileLocators.graphclick);
 		graphicon.click();
 		
 		
@@ -301,7 +363,7 @@ public class Case11_Perform_recommendedactivity extends AppiummobileBase {
 		// Capture a screenshot and attach it to Allure
         AllureUtils.captureScreenshot(driver, "perform8");
         
-		WebElement graphclose	= driver.findElement(graphclse);
+		WebElement graphclose	= driver.findElement(mobileLocators.graphclse);
 		graphclose.click();
 		
 		
@@ -310,5 +372,17 @@ public class Case11_Perform_recommendedactivity extends AppiummobileBase {
         driver.terminateApp("com.cuesz.mobile");
 	
 	
-	
-	}}
+	}
+
+	// Function to check if an element is present on the screen
+		public boolean isElementPresent(AppiumDriver driver, By by){
+		    try{
+		        driver.findElement(by);
+		        return true;
+		    } catch (NoSuchElementException e){
+		        return false;
+		    }
+		}
+
+
+}
