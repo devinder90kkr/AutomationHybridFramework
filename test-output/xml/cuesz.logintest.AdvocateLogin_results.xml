@@ -4,14 +4,14 @@
            failures="0"
            errors="0"
            skipped="0"
-           time="2.921">
+           time="5.515">
     <properties></properties>
 
 
 
             <testcase
                 name="testAdvocateLogin"
-                time="2.921"
+                time="5.515"
                 classname="cuesz.logintest.AdvocateLogin">
             </testcase>
 </testsuite>

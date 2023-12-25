@@ -1,24 +1,16 @@
 package cuesz.dashboard;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.testng.annotations.Test;
 
 import cuesz.pages.BasePage;
+import cuesz.utils.weblocators;
 
 public class Step12_DB_navlink extends BasePage {
 	
-	
-	private By schdulemastr = (By.id("Dashboard-ScheduleMaster"));
-	private By elemnt = (By.id("dashboard"));
-	private By Membrcommunicate	 =	(By.id("Dashboard-MemberCommunication"));
-	private By stafcommuniction	=	(By.id("Dashboard-StaffCommunication"));
-	private By knwledge	= (By.id("Dashboard-Knowledge"));
-	private By membersummary	=	(By.id("member-summary"));
-
-	
+	weblocators locators = new weblocators();
 	
 	 public Step12_DB_navlink(WebDriver driver) {
 		super(driver);
@@ -29,33 +21,33 @@ public class Step12_DB_navlink extends BasePage {
 		public void Navigationfunctionality() throws InterruptedException {
 		 
 		 Thread.sleep(2000);
-		 driver.findElement(schdulemastr).click();
+		 driver.findElement(weblocators.schdulemastr).click();
 		 
 		 Thread.sleep(2000);
-		 WebElement element = driver.findElement(elemnt);
+		 WebElement element = driver.findElement(weblocators.elemnt);
 		 Actions actions = new Actions(driver);
 		 actions.moveToElement(element).click().build().perform();
 		 
 		 Thread.sleep(2000);
-		 driver.findElement(Membrcommunicate).click();
+		 driver.findElement(weblocators.Membrcommunicate).click();
 		 
 		 Thread.sleep(2000);
-		 driver.findElement(elemnt).click();
+		 driver.findElement(weblocators.elemnt).click();
 		 
 		 Thread.sleep(2000);
-		 driver.findElement(stafcommuniction).click();
+		 driver.findElement(weblocators.stafcommuniction).click();
 		 
 		 Thread.sleep(2000);
-		 driver.findElement(elemnt).click();
+		 driver.findElement(weblocators.elemnt).click();
 		 
 		 Thread.sleep(2000);
-		 driver.findElement(knwledge).click();
+		 driver.findElement(weblocators.knwledge).click();
 		 
 		 Thread.sleep(2000);
-		 driver.findElement(elemnt).click();
+		 driver.findElement(weblocators.elemnt).click();
 		 
 		 Thread.sleep(2000);
-		 driver.findElement(membersummary).click();
+		 driver.findElement(weblocators.membersummary).click();
 		 
 	 }
 

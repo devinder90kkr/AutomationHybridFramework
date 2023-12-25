@@ -14,8 +14,8 @@
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <maven.compiler.source>1.7</maven.compiler.source>
-    <maven.compiler.target>1.7</maven.compiler.target>
+    <maven.compiler.source>1.8</maven.compiler.source>
+    <maven.compiler.target>1.8</maven.compiler.target>
   </properties>
 
  
@@ -111,15 +111,171 @@
     <version>7.8.0</version>
     <scope>test</scope>
 </dependency>
-
-
 </dependencies>
  
+<!-- Create multiple profile suites for testsuites -->
+<!-- for run suites by using command line command is : "mvn test -PDashboad-advocate" -->
+<profiles>
+
+<!-- Suites 1 for Dashboard advocate -->
+<profile>
+<id>Dashboardadvocate</id>
+<build>
+    <pluginManagement><!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->
+      <plugins>  
+		<plugin>
+		        <groupId>org.apache.maven.plugins</groupId>
+		        <artifactId>maven-surefire-plugin</artifactId>
+		        <version>3.2.3</version>
+		        <configuration>
+		          <suiteXmlFiles>
+		            <suiteXmlFile>testSuite/Case0_cuesz-dashboard-Suite.xml</suiteXmlFile>
+		          </suiteXmlFiles>
+		        </configuration>
+		      </plugin>
+</plugins>  
+</pluginManagement>
+</build>
+</profile>
+
+<!-- Suites 2 for Eventcase advocate -->
+<profile>
+<id>Eventcase-Advocate</id>
+<build>
+    <pluginManagement><!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->
+      <plugins>  
+		<plugin>
+		        <groupId>org.apache.maven.plugins</groupId>
+		        <artifactId>maven-surefire-plugin</artifactId>
+		        <version>3.2.3</version>
+		        <configuration>
+		          <suiteXmlFiles>
+		            <suiteXmlFile>testSuite/Case01_Schdule-advocate-Suite.xml</suiteXmlFile>
+		          </suiteXmlFiles>
+		        </configuration>
+		      </plugin>
+</plugins>  
+</pluginManagement>
+</build>
+</profile>
+
+<!-- Suites 3 for Mastercalendar advocate -->
+<profile>
+<id>Mastercalendar-Advocate</id>
+<build>
+    <pluginManagement><!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->
+      <plugins>  
+		<plugin>
+		        <groupId>org.apache.maven.plugins</groupId>
+		        <artifactId>maven-surefire-plugin</artifactId>
+		        <version>3.2.3</version>
+		        <configuration>
+		          <suiteXmlFiles>
+		            <suiteXmlFile>testSuite/Case02_Mastecalendar-advocate-Suite.xml</suiteXmlFile>
+		          </suiteXmlFiles>
+		        </configuration>
+		      </plugin>
+</plugins>  
+</pluginManagement>
+</build>
+</profile>
+
+<!-- Suites 4 for Mastercalendar advocate -->
+<profile>
+<id>NegativeEventcase</id>
+<build>
+    <pluginManagement><!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->
+      <plugins>  
+		<plugin>
+		        <groupId>org.apache.maven.plugins</groupId>
+		        <artifactId>maven-surefire-plugin</artifactId>
+		        <version>3.2.3</version>
+		        <configuration>
+		          <suiteXmlFiles>
+		            <suiteXmlFile>testSuite/Case03_Schdule-negative-advocate-Suite.xml</suiteXmlFile>
+		          </suiteXmlFiles>
+		        </configuration>
+		      </plugin>
+</plugins>  
+</pluginManagement>
+</build>
+</profile>
+
+<!-- Suites 5 for Schdule staffmeeting advocate -->
+<profile>
+<id>StaffmeetingEventcase</id>
+<build>
+    <pluginManagement><!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->
+      <plugins>  
+		<plugin>
+		        <groupId>org.apache.maven.plugins</groupId>
+		        <artifactId>maven-surefire-plugin</artifactId>
+		        <version>3.2.3</version>
+		        <configuration>
+		          <suiteXmlFiles>
+		            <suiteXmlFile>testSuite/Case04_Schdule-Staffmeeting-advocate-Suite.xml</suiteXmlFile>
+		          </suiteXmlFiles>
+		        </configuration>
+		      </plugin>
+</plugins>  
+</pluginManagement>
+</build>
+</profile>
+
+<!-- Suites 6 for logic advocate -->
+<profile>
+<id>Logicadvocatecase</id>
+<build>
+    <pluginManagement><!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->
+      <plugins>  
+		<plugin>
+		        <groupId>org.apache.maven.plugins</groupId>
+		        <artifactId>maven-surefire-plugin</artifactId>
+		        <version>3.2.3</version>
+		        <configuration>
+		          <suiteXmlFiles>
+		            <suiteXmlFile>testSuite/Case05_Logic-advocate-suite.xml</suiteXmlFile>
+		          </suiteXmlFiles>
+		        </configuration>
+		      </plugin>
+</plugins>  
+</pluginManagement>
+</build>
+</profile>
+
+
+<!-- Suites 7 for member summary advocate -->
+<profile>
+<id>Membersummaryadvocate</id>
+<build>
+    <pluginManagement><!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->
+      <plugins>  
+		<plugin>
+		        <groupId>org.apache.maven.plugins</groupId>
+		        <artifactId>maven-surefire-plugin</artifactId>
+		        <version>3.2.3</version>
+		        <configuration>
+		          <suiteXmlFiles>
+		            <suiteXmlFile>testSuite/Case07_Members-Summary-advocate-suite.xml</suiteXmlFile>
+		          </suiteXmlFiles>
+		        </configuration>
+		      </plugin>
+</plugins>  
+</pluginManagement>
+</build>
+</profile>
+
+
+
+</profiles>
+
+
+
+
+
   <build>
     <pluginManagement><!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->
-      <plugins>
-		  
-
+      <plugins>  
         <!-- clean lifecycle, see https://maven.apache.org/ref/current/maven-core/lifecycles.html#clean_Lifecycle -->
         <plugin>
           <artifactId>maven-clean-plugin</artifactId>
