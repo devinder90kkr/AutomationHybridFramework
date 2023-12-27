@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Test1"
+           tests="1"
+           failures="0"
+           errors="0"
+           skipped="0"
+           time="34.329">
+    <properties></properties>
+
+
+
+            <testcase
+                name="advocateScheduleEventTest"
+                time="34.329"
+                classname="cuesz.dashboard.advocate.Step12_DB_navlinktest">
+            </testcase>
+</testsuite>
