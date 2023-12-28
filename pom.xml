@@ -140,7 +140,7 @@
 
 <!-- Suites 2 for Eventcase advocate -->
 <profile>
-<id>Eventcase-Advocate</id>
+<id>EventcaseAdvocate</id>
 <build>
     <pluginManagement><!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->
       <plugins>  
@@ -264,6 +264,30 @@
 </pluginManagement>
 </build>
 </profile>
+
+<!-- Suites 8 for member summary advocate -->
+<profile>
+<id>Logicpagecurrentdays</id>
+<build>
+    <pluginManagement><!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->
+      <plugins>  
+		<plugin>
+		        <groupId>org.apache.maven.plugins</groupId>
+		        <artifactId>maven-surefire-plugin</artifactId>
+		        <version>3.2.3</version>
+		        <configuration>
+		          <suiteXmlFiles>
+		            <suiteXmlFile>testSuite/Case13_Logicpage_currentdaycases-advocate-suite.xml</suiteXmlFile>
+		          </suiteXmlFiles>
+		        </configuration>
+		      </plugin>
+</plugins>  
+</pluginManagement>
+</build>
+</profile>
+
+
+
 
 
 
