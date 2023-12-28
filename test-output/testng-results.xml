@@ -2,20 +2,24 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-12-26T05:51:21Z" name="Default suite" finished-at="2023-12-26T05:51:41Z" duration-ms="19936">
+  <suite started-at="2023-12-28T07:03:48Z" name="Default suite" finished-at="2023-12-28T07:04:38Z" duration-ms="49451">
     <groups>
     </groups>
-    <test started-at="2023-12-26T05:51:21Z" name="Default test" finished-at="2023-12-26T05:51:41Z" duration-ms="19936">
-      <class name="cuesz.logintest.AdvocateLogin">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:cuesz.logintest.AdvocateLogin@64bce832]" started-at="2023-12-26T11:21:21Z" name="setUp" finished-at="2023-12-26T11:21:37Z" duration-ms="16246" status="PASS">
+    <test started-at="2023-12-28T07:03:48Z" name="Default test" finished-at="2023-12-28T07:04:38Z" duration-ms="49451">
+      <class name="cuesz.membersummarytest.advocate.Case30_MS_Deletenewgoaltest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:cuesz.membersummarytest.advocate.Case30_MS_Deletenewgoaltest@50d13246]" started-at="2023-12-28T12:33:48Z" name="setUp" finished-at="2023-12-28T12:33:51Z" duration-ms="2734" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="testAdvocateLogin()[pri:0, instance:cuesz.logintest.AdvocateLogin@64bce832]" started-at="2023-12-26T11:21:37Z" name="testAdvocateLogin" finished-at="2023-12-26T11:21:41Z" duration-ms="3608" status="PASS">
+        <test-method signature="advocatdeletegoaltTest()[pri:0, instance:cuesz.membersummarytest.advocate.Case30_MS_Deletenewgoaltest@50d13246]" started-at="2023-12-28T12:33:51Z" name="advocatdeletegoaltTest" finished-at="2023-12-28T12:34:38Z" duration-ms="46439" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testAdvocateLogin -->
-      </class> <!-- cuesz.logintest.AdvocateLogin -->
+        </test-method> <!-- advocatdeletegoaltTest -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:cuesz.membersummarytest.advocate.Case30_MS_Deletenewgoaltest@50d13246]" started-at="2023-12-28T12:34:38Z" name="tearDown" finished-at="2023-12-28T12:34:38Z" duration-ms="216" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- cuesz.membersummarytest.advocate.Case30_MS_Deletenewgoaltest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
