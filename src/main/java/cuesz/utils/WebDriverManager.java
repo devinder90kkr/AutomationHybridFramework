@@ -28,9 +28,12 @@ public class WebDriverManager {
                     Map<String, Object> prefs = new HashMap<>();
                     prefs.put("profile.default_content_setting_values.notifications", 2);
                     ChromeOptions options = new ChromeOptions();
-                  // Need to add --headless=new because if chrome version more than v109+
+                  
+                    // Need to add --headless=new because if chrome version more than v109+
                     // If chrome version v91-108 thne need to use --headless=chrome
-                   // options.addArguments("--headless=new");
+                    
+                //    options.addArguments("--headless=new");
+                  
                     options.setExperimentalOption("prefs", prefs);	
                     options.addArguments("--use-fake-ui-for-media-stream");
                     System.setProperty("webdriver.chrome.driver", Configuration.CHROME_DRIVER_PATH);

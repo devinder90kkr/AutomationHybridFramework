@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test name="Default test(failed)">
     <classes>
-      <class name="cuesz.membersummarytest.advocate.Case30_MS_Deletenewgoaltest">
+      <class name="cuesz.schduletest.advocate.Step12_08_SE_createventtest">
         <methods>
-          <include name="tearDown"/>
           <include name="setUp"/>
-          <include name="advocatdeletegoaltTest"/>
+          <include name="tearDown"/>
+          <include name="advocateSchedulefromcalendarEventTest"/>
         </methods>
-      </class> <!-- cuesz.membersummarytest.advocate.Case30_MS_Deletenewgoaltest -->
+      </class> <!-- cuesz.schduletest.advocate.Step12_08_SE_createventtest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

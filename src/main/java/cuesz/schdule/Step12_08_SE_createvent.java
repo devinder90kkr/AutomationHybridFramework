@@ -14,6 +14,7 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.testng.annotations.Test;
 
 import cuesz.pages.BasePage;
+import cuesz.utils.AllureUtils;
 import cuesz.utils.SeleniumUtils;
 
 public class Step12_08_SE_createvent extends BasePage {
@@ -39,12 +40,23 @@ public class Step12_08_SE_createvent extends BasePage {
 		 	/**********************Click on Schedule master*********************************/	
 			utils.clickScheduleMaster();		
 			
+			
+			// Capture a screenshot and attach it to Allure
+	        AllureUtils.captureScreenshot(driver, "Step12_08_SE_createvent1");
+			Thread.sleep(3500);	
 			WebElement dayview = driver.findElement(By.xpath("//span[normalize-space()='Next']"));
 			dayview.click();
 			
+			
+			// Capture a screenshot and attach it to Allure
+	        AllureUtils.captureScreenshot(driver, "Step12_08_SE_createvent2");
+			
+			Thread.sleep(3500);
 			WebElement calendarcontainer = driver.findElement(By.xpath("//span[normalize-space()='Day']"));
 			calendarcontainer.click();
 			
+			// Capture a screenshot and attach it to Allure
+	        AllureUtils.captureScreenshot(driver, "Step12_08_SE_createvent3");
 			
 			Thread.sleep(2500);
 			WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(50) );
@@ -68,6 +80,9 @@ public class Step12_08_SE_createvent extends BasePage {
 		    Actions builder2 = new Actions(driver);
 		    builder2.moveToElement(topicselection).click().sendKeys("Live perform session").sendKeys(Keys.ENTER).perform();
 		    
+		    
+		 // Capture a screenshot and attach it to Allure
+	        AllureUtils.captureScreenshot(driver, "Step12_08_SE_createvent4");
 		    /*Select Event as as member selection perform	*/
 		    Thread.sleep(2000);
 		    WebElement memberSelection =driver.findElement(Member);
@@ -81,15 +96,17 @@ public class Step12_08_SE_createvent extends BasePage {
 		    builder4.moveToElement(staffSelection).click().sendKeys("seakfreight").sendKeys(Keys.ENTER).perform();
 		    builder4.moveToElement(staffSelection).click().sendKeys("steveQA Adv").sendKeys(Keys.ENTER).perform();
 
+		    
+		 // Capture a screenshot and attach it to Allure
+	        AllureUtils.captureScreenshot(driver, "Step12_08_SE_createvent5");
+		    
 		    /*Enter Notes in create event*/
 		    driver.findElement(Notes).sendKeys("We are excited to announce that there will be a live performance event. So please availble");
 		    
 		    /*Click on submit button*/
 		    driver.findElement(Submitbutton).click();
 		    
-		    
-		    
-		    
+  
 		    
 		    Thread.sleep(5000);
 		 	}
