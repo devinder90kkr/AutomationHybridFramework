@@ -124,6 +124,8 @@ public class Case12_Perform_additionalactivity_deleteprocess extends Appiummobil
 		WebElement selectbaseball 	= driver.findElement(mobileLocators.selectactivity);
 		selectbaseball.click();
 		
+		Thread.sleep(2500);
+		
 		WebElement backactivity 	= driver.findElement(mobileLocators.backclick);
 		backactivity.click();
 		

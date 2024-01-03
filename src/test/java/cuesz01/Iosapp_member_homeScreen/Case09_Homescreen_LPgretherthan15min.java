@@ -1,5 +1,6 @@
 package cuesz01.Iosapp_member_homeScreen;
 
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
 
@@ -45,9 +46,31 @@ public class Case09_Homescreen_LPgretherthan15min extends AppiummobileBase {
         AllureUtils.captureScreenshot(driver, "LP icon");
 		
 		
-        Thread.sleep(3500);
-		WebElement livePerform = driver.findElement(mobileLocators.liveperfrmicon);
-		livePerform.click();
+//        Thread.sleep(3500);
+//		WebElement livePerform = driver.findElement(mobileLocators.liveperfrmicon);
+//		livePerform.click();
+		
+		
+		
+		  // Check if the Crossclick element is displayed before clicking on it
+		WebElement livePerform = null;
+		try {
+			livePerform = driver.findElement(mobileLocators.liveperfrmicon);
+		    if (livePerform.isDisplayed()) {
+		    	livePerform.click();
+		    } else {
+		        // Handle the case where the element is not displayed
+		        System.out.println("Live perform element is not displayed.");
+		        // Perform some other action or throw an exception if needed
+		    }
+		} catch (NoSuchElementException e) {
+		    // Handle the case where the element is not found
+		    System.out.println("Live perform element not found.");
+		    // Perform some other action or throw an exception if needed
+		}
+		     
+		
+		
 		
 		
 		

@@ -103,10 +103,12 @@ public class Case11_Perform_recommendedactivity extends AppiummobileBase {
 		WebElement walkingcard = driver.findElement(mobileLocators.walkingstart);
 		walkingcard.click();
 
+		Thread.sleep(2500);
 		//Click on back button 
 		WebElement Backbttn = driver.findElement(mobileLocators.backpressbutton);
 		Backbttn.click();
 		
+		Thread.sleep(2500);
 		// CLick on Walking  card
 		WebElement walkingcard1 = driver.findElement(mobileLocators.walkingstart);
 		walkingcard1.click();
