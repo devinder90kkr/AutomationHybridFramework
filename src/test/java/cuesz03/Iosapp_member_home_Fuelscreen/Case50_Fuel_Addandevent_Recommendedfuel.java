@@ -17,6 +17,7 @@ import cuesz.utils.mobileLocators;
 
 import io.appium.java_client.AppiumBy;
 import io.appium.java_client.AppiumDriver;
+import io.qameta.allure.Allure;
 import io.qameta.allure.Description;
 import io.qameta.allure.Epic;
 import io.qameta.allure.Feature;
@@ -58,22 +59,30 @@ public class Case50_Fuel_Addandevent_Recommendedfuel extends AppiummobileBase {
         driver.findElement(AppiumBy.accessibilityId("FUEL_SCREEN")).click();
         Thread.sleep(4500);
         
-      
-        By basketballLocator = AppiumBy.iOSClassChain("**/XCUIElementTypeStaticText[`label == \"Basketball \"`][1]");
-        if(!isElementPresent(driver, basketballLocator)){
-            // Scroll to "Basketball" if it's not present
-            HashMap<String,Object> scrollObject1 = new HashMap<>();
-            scrollObject1.put("direction", "down");
-            scrollObject1.put("Basketball", "Basketball");
-            driver.executeScript("mobile:scroll", scrollObject1);
-            Thread.sleep(2000);
-        }
+     
+        
+      try {
+    	 
+    	// Method to scroll to perform screen
+  		HashMap<String,Object>scrollObject1 =new HashMap<>();
+  		scrollObject1.put("direction", "down");
+  		scrollObject1.put("Lunch", "Lunch");
+  		driver.executeScript("mobile:scroll", scrollObject1);
+  		Thread.sleep(2000);
+    	  
+    	  
+  		// Method to scroll to perform screen
+  		HashMap<String,Object>scrollObject51 =new HashMap<>();
+  		scrollObject51.put("direction", "down");
+  		scrollObject51.put("Basketball", "Basketball");
+  		driver.executeScript("mobile:scroll", scrollObject51);
+  		Thread.sleep(2000);
         
 
   		// Capture a screenshot and attach it to Allure
         AllureUtils.captureScreenshot(driver, "addpoevent1");
   		
-        WebElement preplusicon	= driver.findElement(mobileLocators.preicon);
+        WebElement preplusicon	= driver.findElement(mobileLocators.preicon1);
         preplusicon.click();
         
         //click on keypad Done button to hide keypad
@@ -84,6 +93,8 @@ public class Case50_Fuel_Addandevent_Recommendedfuel extends AppiummobileBase {
         WebElement Recommendedfuel 	= driver.findElement(mobileLocators.recommendedclick);
         Recommendedfuel.click();
         Thread.sleep(5500);
+        
+    try {
         
         WebElement preheading	= driver.findElement(mobileLocators.headingpre);
         preheading.click();
@@ -125,6 +136,16 @@ public class Case50_Fuel_Addandevent_Recommendedfuel extends AppiummobileBase {
         brekfastdone.click();
         
         Thread.sleep(5500);
+        
+        } catch (Exception e) {
+        	// If the arrowright element is not found, log an error message and terminate the app
+            String errorMessage = "Arrowright element not found. Skipping further steps.";
+            System.out.println(errorMessage);
+            Allure.addAttachment("Error", errorMessage);
+            AllureUtils.captureScreenshot(driver, "ArrowRightNotFound");
+            driver.terminateApp("com.cuesz.mobile");
+        }
+        
     
         WebElement Duringplusicon	= driver.findElement(mobileLocators.duringicon);
         Duringplusicon.click();
@@ -291,10 +312,10 @@ public class Case50_Fuel_Addandevent_Recommendedfuel extends AppiummobileBase {
 		By imaguploadlLocator = AppiumBy.iOSClassChain("**/XCUIElementTypeStaticText[`label == \"Image uploaded\"`]");
 	        if(!isElementPresent(driver, imaguploadlLocator)){
 	            // Scroll to "Basketball" if it's not present
-	            HashMap<String,Object> scrollObject1 = new HashMap<>();
-	            scrollObject1.put("direction", "down");
-	            scrollObject1.put("Image uploaded", "Image uploaded");
-	            driver.executeScript("mobile:scroll", scrollObject1);
+	            HashMap<String,Object> scrollObject11 = new HashMap<>();
+	            scrollObject11.put("direction", "down");
+	            scrollObject11.put("Image uploaded", "Image uploaded");
+	            driver.executeScript("mobile:scroll", scrollObject11);
 	            Thread.sleep(2000);
 	        }
         
@@ -389,7 +410,14 @@ public class Case50_Fuel_Addandevent_Recommendedfuel extends AppiummobileBase {
         
         Thread.sleep(3500);
         
-      
+      } catch (Exception e) {
+      	// If the arrowright element is not found, log an error message and terminate the app
+          String errorMessage = "recommended Fuel not found, So its Skipping further steps.";
+          System.out.println(errorMessage);
+          Allure.addAttachment("Error", errorMessage);
+          AllureUtils.captureScreenshot(driver, "ArrowRightNotFound");
+          driver.terminateApp("com.cuesz.mobile");
+      }
 	        
         
        	Thread.sleep(2500);

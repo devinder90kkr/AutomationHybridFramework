@@ -149,6 +149,7 @@ public class mobileLocators {
 	
 	//14-Dec-2021 Fuel cases locators
 	public static final By preicon			=		AppiumBy.iOSNsPredicateString("name == \"Pre PerformancePlueIcon\"");
+	public static final By preicon1			=		AppiumBy.iOSClassChain("**/XCUIElementTypeOther[`label == \"Basketball -PlueIcon\"`][1]");
 	public static final By doneclick		= 		AppiumBy.accessibilityId("Done");
 	public static final By recommendedclick	= 		AppiumBy.accessibilityId("AddRecommendedFuel");
 	public static final By headingpre		=		AppiumBy.accessibilityId("Pre");
