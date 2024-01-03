@@ -38,7 +38,25 @@ public class Case01_Login extends AppiummobileBase {
 			AppiumappUtils appiumUtils = new AppiumappUtils(driver);
 	        // Launch the app using the utility method
 	        appiumUtils.launchAppWithPackageId("com.cuesz.mobile");	
-	
+	        
+	     // Check if the Crossclick element is displayed before clicking on it
+			WebElement allowclick = null;
+			try {
+				allowclick = driver.findElement(AppiumBy.accessibilityId("Allow"));
+			    if (allowclick.isDisplayed()) {
+			    	allowclick.click();
+			    } else {
+			        // Handle the case where the element is not displayed
+			        System.out.println("OK element is not displayed.");
+			        // Perform some other action or throw an exception if needed
+			    }
+			} catch (NoSuchElementException e) {
+			    // Handle the case where the element is not found
+			    System.out.println("Crossclick element not found.");
+			    // Perform some other action or throw an exception if needed
+			}
+			     
+
 		WebElement countryvalues = driver.findElement(AppiumBy.xpath("(//XCUIElementTypeOther[@name=\"🇮🇳\"])[2]"));
 		countryvalues.click();
 		
@@ -58,34 +76,34 @@ public class Case01_Login extends AppiummobileBase {
 //		driver.findElement(AppiumBy.iOSNsPredicateString("name == \"SignInTextInput\"")).sendKeys(" 9671114235");
 		
 		Thread.sleep(5000);
-		WebElement mobfield1 = driver.findElement(AppiumBy.xpath("//XCUIElementTypeKey[@name=\"9\"]"));
+		WebElement mobfield1 = driver.findElement(AppiumBy.xpath("//XCUIElementTypeKey[@name=\"7\"]"));
 		mobfield1.click();
 		
-		WebElement mobfield2 = driver.findElement(AppiumBy.xpath("//XCUIElementTypeKey[@name=\"6\"]"));
+		WebElement mobfield2 = driver.findElement(AppiumBy.xpath("//XCUIElementTypeKey[@name=\"9\"]"));
 		mobfield2.click();
 		
-		WebElement mobfield3 = driver.findElement(AppiumBy.xpath("//XCUIElementTypeKey[@name=\"7\"]"));
+		WebElement mobfield3 = driver.findElement(AppiumBy.xpath("//XCUIElementTypeKey[@name=\"8\"]"));
 		mobfield3.click();	
 		
-		WebElement mobfield4 = driver.findElement(AppiumBy.xpath("//XCUIElementTypeKey[@name=\"1\"]"));
+		WebElement mobfield4 = driver.findElement(AppiumBy.xpath("//XCUIElementTypeKey[@name=\"8\"]"));
 		mobfield4.click();
 		
-		WebElement mobfield5 = driver.findElement(AppiumBy.xpath("//XCUIElementTypeKey[@name=\"1\"]"));
+		WebElement mobfield5 = driver.findElement(AppiumBy.xpath("//XCUIElementTypeKey[@name=\"5\"]"));
 		mobfield5.click();
 		
-		WebElement mobfield6 = driver.findElement(AppiumBy.xpath("//XCUIElementTypeKey[@name=\"1\"]"));
+		WebElement mobfield6 = driver.findElement(AppiumBy.xpath("//XCUIElementTypeKey[@name=\"5\"]"));
 		mobfield6.click();
 		
-		WebElement mobfield7 = driver.findElement(AppiumBy.xpath("//XCUIElementTypeKey[@name=\"4\"]"));
+		WebElement mobfield7 = driver.findElement(AppiumBy.xpath("//XCUIElementTypeKey[@name=\"0\"]"));
 		mobfield7.click();
 		
-		WebElement mobfield8 = driver.findElement(AppiumBy.xpath("//XCUIElementTypeKey[@name=\"2\"]"));
+		WebElement mobfield8 = driver.findElement(AppiumBy.xpath("//XCUIElementTypeKey[@name=\"1\"]"));
 		mobfield8.click();
 		
 		WebElement mobfield9 = driver.findElement(AppiumBy.xpath("//XCUIElementTypeKey[@name=\"3\"]"));
 		mobfield9.click();
 		
-		WebElement mobfield10 = driver.findElement(AppiumBy.xpath("//XCUIElementTypeKey[@name=\"5\"]"));
+		WebElement mobfield10 = driver.findElement(AppiumBy.xpath("//XCUIElementTypeKey[@name=\"0\"]"));
 		mobfield10.click();
 
 		
@@ -113,11 +131,11 @@ public class Case01_Login extends AppiummobileBase {
 		submitnbutton.click();
 		
 		// Check if the Crossclick element is displayed before clicking on it
-		WebElement notificationclick = null;
+		WebElement notificationclick1 = null;
 		try {
-			notificationclick = driver.findElement(AppiumBy.accessibilityId("Allow"));
-		    if (notificationclick.isDisplayed()) {
-		    	notificationclick.click();
+			notificationclick1 = driver.findElement(AppiumBy.accessibilityId("Allow"));
+		    if (notificationclick1.isDisplayed()) {
+		    	notificationclick1.click();
 		    } else {
 		        // Handle the case where the element is not displayed
 		        System.out.println("OK element is not displayed.");
