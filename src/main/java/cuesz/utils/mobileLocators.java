@@ -5,6 +5,10 @@ import io.appium.java_client.AppiumBy;
 
 public class mobileLocators {
 
+	//Dated 4-jan additional fuelcase 
+	public static final By Fuelhomeclick	= AppiumBy.accessibilityId("FUEL_SCREEN"); 
+	public static final By addtionafuelbttn	= AppiumBy.accessibilityId("FuelAddDeviation");
+	public static final By timepicker	= AppiumBy.accessibilityId("AdditionalItemTime");
 
 	/****Dated : 20-Dec perform cases locators*****/
 	//Case02_Homescreen_sphereclick
@@ -307,6 +311,7 @@ public class mobileLocators {
 //	public static final By gallery			=		AppiumBy.accessibilityId("GalleryClicked");
 //	public static final By submittap		= 		AppiumBy.accessibilityId("SubmitImage");
 	public static final By Customtick		=		AppiumBy.accessibilityId("CustomFoodSubmit");
+	
 	
 	
 	

@@ -287,7 +287,7 @@ public class Case29_Fuel_EarlySnacks_recommendedfuel extends AppiummobileBase {
     private By Homeclick = AppiumBy.iOSClassChain("**/XCUIElementTypeOther[`label == \"Home\"`][2]");
 
     private By earlysnacklabel = AppiumBy.iOSNsPredicateString("name == 'Early Snacks'");
-    private By iconearlysnacks = AppiumBy.accessibilityId("Early SnacksInfoIcon");
+//    private By iconearlysnacks = AppiumBy.accessibilityId("Early SnacksInfoIcon");
     private By plusadd = AppiumBy.accessibilityId("Early SnacksAddIcon");
     private By doneclick = AppiumBy.accessibilityId("Done");
     private By recommendedclick = AppiumBy.accessibilityId("AddRecommendedFuel");
