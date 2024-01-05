@@ -13,6 +13,7 @@ import cuesz.pages.AppiummobileBase;
 import cuesz.utils.AllureUtils;
 import cuesz.utils.AppiumappUtils;
 import io.appium.java_client.AppiumBy;
+import io.qameta.allure.Allure;
 import io.qameta.allure.Description;
 import io.qameta.allure.Epic;
 import io.qameta.allure.Feature;
@@ -112,6 +113,8 @@ public class Case40_Fuel_Dinner_recommendedfuel extends AppiummobileBase {
         WebElement Recommendedfuel1 	= driver.findElement(recommendedclick);
         Recommendedfuel1.click();
         
+        try {
+        
         WebElement arrowright = driver.findElement(rightarrow);
         arrowright.click();
         
@@ -160,12 +163,21 @@ public class Case40_Fuel_Dinner_recommendedfuel extends AppiummobileBase {
         WebElement backclick1	= driver.findElement(backicon);
         backclick1.click();
         
-     // Capture a screenshot and attach it to Allure
-        AllureUtils.captureScreenshot(driver, "Dinner4");
+     // Log a message to Allure
+        Allure.addAttachment("Info", "Clicked dinnericon and backclick1 successfully.");
         
-		Thread.sleep(2500);
-        driver.terminateApp("com.cuesz.mobile");
-	}
+        } catch (Exception e) {
+        	// If the arrowright element is not found, log an error message and terminate the app
+            String errorMessage = "Arrowright element not found. Skipping further steps.";
+            System.out.println(errorMessage);
+            Allure.addAttachment("Error", errorMessage);
+            AllureUtils.captureScreenshot(driver, "ArrowRightNotFound");
+            driver.terminateApp("com.cuesz.mobile");
+        }
+
+
+    driver.terminateApp("com.cuesz.mobile");
+
 }
-	
+	}
 

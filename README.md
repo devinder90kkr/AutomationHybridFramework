@@ -346,6 +346,28 @@ Here's a step-by-step guide on setting up TestNG with a project:
 
 
 
+Desired capabilities for appium : 
+ ```
+{
+  "platformName": "iOS",
+  "appium:platformVersion": "16.6.1",
+  "appium:automationName": "XCUITest",
+  "appium:deviceName": "ChicMic’s iPhone (2)",
+  "appium:bundleId": "com.cuesz.mobile",
+  "appium:xcodeOrgId": "U9B8L2V4FL",
+  "appium:xcodeSigningId": "iPhone Developer",
+  "appium:udid": "00008101-000A58221104001E"
+}
+ ```
+
+
+
+
+
+
+
+
+
 Command run for jenkins on mac
 
 * Install the latest LTS version: >> brew install jenkins-lts

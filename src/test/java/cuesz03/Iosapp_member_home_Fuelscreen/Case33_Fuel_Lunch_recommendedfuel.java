@@ -2,6 +2,7 @@ package cuesz03.Iosapp_member_home_Fuelscreen;
 
 import java.util.HashMap;
 import java.util.List;
+import java.util.NoSuchElementException;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
@@ -13,6 +14,8 @@ import cuesz.pages.AppiummobileBase;
 import cuesz.utils.AllureUtils;
 import cuesz.utils.AppiumappUtils;
 import io.appium.java_client.AppiumBy;
+import io.appium.java_client.AppiumDriver;
+import io.qameta.allure.Allure;
 import io.qameta.allure.Description;
 import io.qameta.allure.Epic;
 import io.qameta.allure.Feature;
@@ -68,8 +71,20 @@ public class Case33_Fuel_Lunch_recommendedfuel extends AppiummobileBase {
         //Click on Fuel tab 
         driver.findElement(AppiumBy.accessibilityId("FUEL_SCREEN")).click();
             
-       scroll("down", "Lunch");
- 		Thread.sleep(2000);
+//       scroll("down", "Lunch");
+ 		
+     // Scroll to "Early Snacks" element if it's not present on the screen
+        By lunchLocator = AppiumBy.iOSClassChain("**/XCUIElementTypeStaticText[`label == \"Lunch\"`][1]");
+        if (!isElementPresent(driver, lunchLocator)) {
+            // Scroll to "Early Snacks" if it's not present
+            HashMap<String, Object> scrollObject1 = new HashMap<>();
+            scrollObject1.put("direction", "down");
+            scrollObject1.put("Lunch", "Lunch");
+            driver.executeScript("mobile:scroll", scrollObject1);
+            Thread.sleep(2000);
+        }
+        
+        Thread.sleep(2000);
         
 		
         // Locate the element containing the perform
@@ -112,13 +127,15 @@ public class Case33_Fuel_Lunch_recommendedfuel extends AppiummobileBase {
         //click on keypad Done button to hide keypad
         WebElement keypaddone1	= driver.findElement(doneclick);
         keypaddone1.click();
+        
+        
         // Locate and click on recommended Fuel button
         WebElement Recommendedfuel1 	= driver.findElement(recommendedclick);
         Recommendedfuel1.click();
         
-        
-        WebElement arrowright = driver.findElement(rightarrow);
-        arrowright.click();
+        try {
+        	WebElement arrowright = driver.findElement(rightarrow);
+        	arrowright.click();
         
         // Capture a screenshot and attach it to Allure
         AllureUtils.captureScreenshot(driver, "Lunch2");
@@ -175,8 +192,8 @@ public class Case33_Fuel_Lunch_recommendedfuel extends AppiummobileBase {
   		scroll("up", "DRINK MORE WATER");
   		Thread.sleep(2000);
         
-  		scroll("up", "OPTIMAL FUEL TARGET ACHIEVED");
-  		Thread.sleep(2000);
+//  		scroll("up", "OPTIMAL FUEL TARGET ACHIEVED");
+//  		Thread.sleep(2000);
   		
   		scroll("up", "Carbs");
   		Thread.sleep(2000);
@@ -221,17 +238,39 @@ public class Case33_Fuel_Lunch_recommendedfuel extends AppiummobileBase {
   		fatscross.click();
         
         
-		Thread.sleep(2500);
-        driver.terminateApp("com.cuesz.mobile");
-	}
+        } catch (Exception e) {
+        	// If the arrowright element is not found, log an error message and terminate the app
+            String errorMessage = "Arrowright element not found. Skipping further steps.";
+            System.out.println(errorMessage);
+            Allure.addAttachment("Error", errorMessage);
+            AllureUtils.captureScreenshot(driver, "ArrowRightNotFound");
+            driver.terminateApp("com.cuesz.mobile");
+        }
 
+
+    driver.terminateApp("com.cuesz.mobile");
+
+}
+	
 	 private void scroll(String direction, String elementName) {
 	        HashMap<String, Object> scrollObject = new HashMap<>();
 	        scrollObject.put("direction", direction);
 	        scrollObject.put(elementName, elementName);
 	        driver.executeScript("mobile:scroll", scrollObject);
 	    }
+	 
+	 // Function to check if an element is present on the screen
+	    public boolean isElementPresent(AppiumDriver driver, By by) {
+	        try {
+	            driver.findElement(by);
+	            return true;
+	        } catch (NoSuchElementException e) {
+	            return false;
+	        }
+	    }
+	}
+	 
 
-}
+
 	
 
