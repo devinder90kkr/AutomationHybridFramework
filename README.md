@@ -374,3 +374,12 @@ Command run for jenkins on mac
 * Start the Jenkins service:  >> brew services start jenkins-lts
 * Restart the Jenkins service: >> brew services restart jenkins-lts
 * Update the Jenkins version: >> brew upgrade jenkins-lts
+
+
+
+#Useful Links#
+#link for appium help 
+*https://blog.palo-it.com/en/how-do-you-run-appium-ios-tests-on-real-devices*
+
+#Link for git#
+https://confluence.atlassian.com/bitbucketserver/basic-git-commands-776639767.html
