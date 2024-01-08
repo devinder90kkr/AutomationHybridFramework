@@ -4,12 +4,18 @@ import org.openqa.selenium.By;
 import io.appium.java_client.AppiumBy;
 
 public class mobileLocators {
-
+	
 	//Dated 4-jan additional fuelcase 
 	public static final By Fuelhomeclick	= AppiumBy.accessibilityId("FUEL_SCREEN"); 
 	public static final By addtionafuelbttn	= AppiumBy.accessibilityId("FuelAddDeviation");
-	public static final By timepicker	= AppiumBy.accessibilityId("AdditionalItemTime");
-
+	public static final By timepicker		= AppiumBy.accessibilityId("AdditionalItemTime");
+	public static final By grapefuel		= AppiumBy.accessibilityId("Grapeseed");
+	public static final By eventcategory	= AppiumBy.iOSClassChain("**/XCUIElementTypeOther[`label == \"Early Snacks\"`][2]");
+	public static final By resfuel			= AppiumBy.accessibilityId("Charter Reserve Golden Roast Turkey");
+	public static final By lunchcategory 	= AppiumBy.iOSClassChain("**/XCUIElementTypeOther[`label == \"Lunch\"`][2]");
+	public static final By fiofuel			= AppiumBy.accessibilityId("Panino");
+	public static final By latesnackscategory	= AppiumBy.iOSClassChain("**/XCUIElementTypeOther[`label == \"Late Snacks\"`][2]");
+	
 	/****Dated : 20-Dec perform cases locators*****/
 	//Case02_Homescreen_sphereclick
 	public static final By Homeclick 		= AppiumBy.iOSClassChain("**/XCUIElementTypeOther[`label == \"Home\"`][2]");
