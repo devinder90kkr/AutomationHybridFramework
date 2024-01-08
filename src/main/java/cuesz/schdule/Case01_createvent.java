@@ -2,6 +2,7 @@ package cuesz.schdule;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -11,6 +12,7 @@ import cuesz.pages.BasePage;
 import cuesz.utils.AllureUtils;
 import cuesz.utils.DateGenerator;
 import cuesz.utils.SeleniumUtils;
+import io.appium.java_client.AppiumBy;
 
 public class Case01_createvent extends BasePage {
 	
@@ -90,23 +92,25 @@ public class Case01_createvent extends BasePage {
 		    /*Click on submit button*/
 		    driver.findElement(Submitbutton).click();
 		    
-//		 // Check if the Crossclick element is displayed before clicking on it
-//			WebElement Crossclick = null;
-//			try {
-//			    Crossclick = driver.findElement(crossicon);
-//			    if (Crossclick.isDisplayed()) {
-//			        Crossclick.click();
-//			    } else {
-//			        // Handle the case where the element is not displayed
-//			        System.out.println("Crossclick element is not displayed.");
-//			        // Perform some other action or throw an exception if needed
-//			    }
-//			} catch (NoSuchElementException e) {
-//			    // Handle the case where the element is not found
-//			    System.out.println("Crossclick element not found.");
-//			    // Perform some other action or throw an exception if needed
-//			}
 		    
+		    Thread.sleep(2500);
+		    
+		    // Check if the Crossclick element is displayed before clicking on it
+					WebElement allowclick = null;
+					try {
+						allowclick = driver.findElement(By.id("DecisionPopupRejection"));
+								if (allowclick.isDisplayed()) {
+					    	allowclick.click();
+					    } else {
+					        // Handle the case where the element is not displayed
+					        System.out.println("OK element is not displayed.");
+					        // Perform some other action or throw an exception if needed
+					    }
+					} catch (NoSuchElementException e) {
+					    // Handle the case where the element is not found
+					    System.out.println("Crossclick element not found.");
+					    // Perform some other action or throw an exception if needed
+					}
 		    
 		    
 		    Thread.sleep(5000);
