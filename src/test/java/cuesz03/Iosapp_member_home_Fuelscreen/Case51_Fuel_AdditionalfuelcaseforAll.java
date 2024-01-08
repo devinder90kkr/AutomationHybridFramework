@@ -209,7 +209,35 @@ public class Case51_Fuel_AdditionalfuelcaseforAll extends AppiummobileBase {
 
         mobilelement.clickElement(driver, mobileLocators.submitick);
         
+        /*********Add Dinner for category**********/
         
+        // Click on Additional fuel button
+        mobilelement.clickElement(driver, mobileLocators.addtionafuelbttn);
+        
+        // Click on done from keypad
+     	mobilelement.clickElement(driver, mobileLocators.doneclick);
+     		
+     	// Click on additional search search 
+     	mobilelement.clickElement(driver, mobileLocators.additionalsearch);
+        
+     	// Add Grape food in list
+        mobilelement.clickElementByText(driver, "H");
+        mobilelement.clickElementByText(driver, "u");
+        mobilelement.clickElementByText(driver, "m");
+      
+        
+        // Click on Keypad done (assuming done-click is defined as a locator)
+        mobilelement.clickElement(driver, mobileLocators.doneclick);
+        
+        // Click on fuel selection using the provided locator (faggot)
+        mobilelement.clickElement(driver, mobileLocators.humfuel);
+        
+        // Click on Early snacks category
+        mobilelement.clickElement(driver, mobileLocators.dinnercategory);
+        
+        mobilelement.clickElement(driver, mobileLocators.Doneclick);
+
+        mobilelement.clickElement(driver, mobileLocators.submitick);
         
         
         

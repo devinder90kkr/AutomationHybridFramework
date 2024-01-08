@@ -15,6 +15,8 @@ public class mobileLocators {
 	public static final By lunchcategory 	= AppiumBy.iOSClassChain("**/XCUIElementTypeOther[`label == \"Lunch\"`][2]");
 	public static final By fiofuel			= AppiumBy.accessibilityId("Panino");
 	public static final By latesnackscategory	= AppiumBy.iOSClassChain("**/XCUIElementTypeOther[`label == \"Late Snacks\"`][2]");
+	public static final By humfuel			=	AppiumBy.accessibilityId("Humdingers Shrimp");	
+	public static final By dinnercategory	=	AppiumBy.iOSClassChain("**/XCUIElementTypeOther[`label == \"Dinner\"`][2]");
 	
 	/****Dated : 20-Dec perform cases locators*****/
 	//Case02_Homescreen_sphereclick
