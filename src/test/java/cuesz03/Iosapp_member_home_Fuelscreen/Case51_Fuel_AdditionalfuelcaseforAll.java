@@ -125,6 +125,9 @@ public class Case51_Fuel_AdditionalfuelcaseforAll extends AppiummobileBase {
         // Click on fuel selection using the provided locator (faggot)
         mobilelement.clickElement(driver, mobileLocators.grapefuel);
         
+        // Capture a screenshot and attach it to Allure
+        AllureUtils.captureScreenshot(driver, "Case51_Fuel_Additional4");
+        
         // scroll down to perform fuel mind-full restore label
      	mobilelement.scrollDownToElement(driver, "mobileLocators.grapefuel");
         
@@ -137,6 +140,9 @@ public class Case51_Fuel_AdditionalfuelcaseforAll extends AppiummobileBase {
         mobilelement.setPickerValues(driver, mobileLocators.timepicker, mobileLocators.pickerelement, valuesToSet2);
         
         mobilelement.clickElement(driver, mobileLocators.Doneclick);
+        
+        // Capture a screenshot and attach it to Allure
+        AllureUtils.captureScreenshot(driver, "Case51_Fuel_Additional5");
 
         mobilelement.clickElement(driver, mobileLocators.submitick);
         
@@ -148,6 +154,9 @@ public class Case51_Fuel_AdditionalfuelcaseforAll extends AppiummobileBase {
         
         // Click on done from keypad
      	mobilelement.clickElement(driver, mobileLocators.doneclick);
+     	
+     	 // Capture a screenshot and attach it to Allure
+        AllureUtils.captureScreenshot(driver, "Case51_Fuel_Additional6");
      		
      	// Click on additional search search 
      	mobilelement.clickElement(driver, mobileLocators.additionalsearch);
@@ -164,6 +173,9 @@ public class Case51_Fuel_AdditionalfuelcaseforAll extends AppiummobileBase {
         // Click on fuel selection using the provided locator (faggot)
         mobilelement.clickElement(driver, mobileLocators.resfuel);
         
+        // Capture a screenshot and attach it to Allure
+        AllureUtils.captureScreenshot(driver, "Case51_Fuel_Additional7");
+        
         // Click on Early snacks category
         mobilelement.clickElement(driver, mobileLocators.lunchcategory);
       
@@ -173,6 +185,9 @@ public class Case51_Fuel_AdditionalfuelcaseforAll extends AppiummobileBase {
         
         mobilelement.clickElement(driver, mobileLocators.Doneclick);
 
+        // Capture a screenshot and attach it to Allure
+        AllureUtils.captureScreenshot(driver, "Case51_Fuel_Additional8");
+        
         mobilelement.clickElement(driver, mobileLocators.submitick);
         
         /*********Add Latesnacks for category**********/
@@ -195,6 +210,9 @@ public class Case51_Fuel_AdditionalfuelcaseforAll extends AppiummobileBase {
         // Click on Keypad done (assuming done-click is defined as a locator)
         mobilelement.clickElement(driver, mobileLocators.doneclick);
         
+        // Capture a screenshot and attach it to Allure
+        AllureUtils.captureScreenshot(driver, "Case51_Fuel_Additional9");
+        
         // Click on fuel selection using the provided locator (faggot)
         mobilelement.clickElement(driver, mobileLocators.fiofuel);
         
@@ -206,6 +224,9 @@ public class Case51_Fuel_AdditionalfuelcaseforAll extends AppiummobileBase {
         mobilelement.setPickerValues(driver, mobileLocators.timepicker, mobileLocators.pickerelement, valuesToSet4);
         
         mobilelement.clickElement(driver, mobileLocators.Doneclick);
+        
+        // Capture a screenshot and attach it to Allure
+        AllureUtils.captureScreenshot(driver, "Case51_Fuel_Additional10");
 
         mobilelement.clickElement(driver, mobileLocators.submitick);
         
@@ -229,17 +250,20 @@ public class Case51_Fuel_AdditionalfuelcaseforAll extends AppiummobileBase {
         // Click on Keypad done (assuming done-click is defined as a locator)
         mobilelement.clickElement(driver, mobileLocators.doneclick);
         
+        // Capture a screenshot and attach it to Allure
+        AllureUtils.captureScreenshot(driver, "Case51_Fuel_Additional11");
+        
         // Click on fuel selection using the provided locator (faggot)
         mobilelement.clickElement(driver, mobileLocators.humfuel);
         
         // Click on Early snacks category
         mobilelement.clickElement(driver, mobileLocators.dinnercategory);
-        
-        mobilelement.clickElement(driver, mobileLocators.Doneclick);
 
+        // Capture a screenshot and attach it to Allure
+        AllureUtils.captureScreenshot(driver, "Case51_Fuel_Additional12");
+        
+        
         mobilelement.clickElement(driver, mobileLocators.submitick);
-        
-        
         
         
         

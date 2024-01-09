@@ -5,6 +5,15 @@ import io.appium.java_client.AppiumBy;
 
 public class mobileLocators {
 	
+	//Dated 9-Jan upload images for all category
+	public static final By uploadclickall	= AppiumBy.accessibilityId("FuelUploadImage");
+	public static final By breakfastuploadoption	=	AppiumBy.iOSClassChain("**/XCUIElementTypeOther[`name == \"BreakfastPhotoUpload\"`][1]");
+	public static final By galleryimage1	= AppiumBy.xpath("//XCUIElementTypeImage[2]");
+	public static final By addoption 		= AppiumBy.accessibilityId("Add");
+	public static final By Timepicker		= AppiumBy.accessibilityId("SelectTime");
+	
+	
+	
 	//Dated 4-jan additional fuelcase 
 	public static final By Fuelhomeclick	= AppiumBy.accessibilityId("FUEL_SCREEN"); 
 	public static final By addtionafuelbttn	= AppiumBy.accessibilityId("FuelAddDeviation");
