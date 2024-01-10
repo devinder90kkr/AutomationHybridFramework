@@ -11,7 +11,14 @@ public class mobileLocators {
 	public static final By galleryimage1	= AppiumBy.xpath("//XCUIElementTypeImage[2]");
 	public static final By addoption 		= AppiumBy.accessibilityId("Add");
 	public static final By Timepicker		= AppiumBy.accessibilityId("SelectTime");
-	
+	public static final By earlysnacksuploadoption	=	AppiumBy.iOSClassChain("**/XCUIElementTypeOther[`name == \"Early SnacksPhotoUpload\"`][2]");
+	public static final By galleryimage2	= AppiumBy.xpath("//XCUIElementTypeImage[3]");
+	public static final By lunchuploadoption	= AppiumBy.iOSClassChain("**/XCUIElementTypeOther[`name == \"LunchPhotoUpload\"`][2]");
+	public static final By galleryimage3	= AppiumBy.xpath("//XCUIElementTypeImage[4]");
+	public static final By latesnacksuploadoption	=	AppiumBy.iOSClassChain("**/XCUIElementTypeOther[`name == \"Late SnacksPhotoUpload\"`][2]");
+	public static final By galleryimage4	= AppiumBy.xpath("//XCUIElementTypeImage[5]");
+	public static final By dinneruploadoption	=	AppiumBy.iOSClassChain("**/XCUIElementTypeOther[`name == \"DinnerPhotoUpload\"`][2]");
+	public static final By galleryimage5	= AppiumBy.xpath("//XCUIElementTypeImage[6]");
 	
 	
 	//Dated 4-jan additional fuelcase 

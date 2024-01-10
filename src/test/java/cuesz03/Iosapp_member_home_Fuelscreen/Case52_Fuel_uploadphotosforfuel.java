@@ -57,6 +57,9 @@ public class Case52_Fuel_uploadphotosforfuel extends AppiummobileBase {
 		// Capture a screenshot and attach it to Allure
         AllureUtils.captureScreenshot(driver, "Case52_Fuel_uploadphotosforfuel1");
 		
+        
+        /*************** Add  upload fuel images for breakfast***************/
+        
         // Click on Upload option from bottom
         Thread.sleep(2000);
 		mobilelement.clickElement(driver, mobileLocators.uploadclickall);
@@ -87,9 +90,137 @@ public class Case52_Fuel_uploadphotosforfuel extends AppiummobileBase {
         mobilelement.clickElement(driver, mobileLocators.submittap);
         
         
+        /*************** Add  upload fuel images for early snacks***************/
+        
+        // Click on Upload option from bottom
+        Thread.sleep(2000);
+		mobilelement.clickElement(driver, mobileLocators.uploadclickall);
+		
+		// Click on Upload option for Breakfast Option
+		mobilelement.clickElement(driver, mobileLocators.earlysnacksuploadoption);
+		
+		// Click on gallery option 
+		mobilelement.clickElement(driver, mobileLocators.gallery);
+		
+		// Capture a screenshot and attach it to Allure
+        AllureUtils.captureScreenshot(driver, "Case52_Fuel_uploadphotosforfuel4");
+		
+		// Select image 1 from gallery
+		mobilelement.clickElement(driver, mobileLocators.galleryimage2);
+		
+		// Click on add option from image viewer
+		mobilelement.clickElement(driver, mobileLocators.addoption);
+		
+		 // Set values in the picker elements
+        String[] valuesToSet2 = {"10", "18", "AM"};
+        mobilelement.setPickerValues(driver, mobileLocators.Timepicker, mobileLocators.pickerelement, valuesToSet2);
+        
+        // Capture a screenshot and attach it to Allure
+        AllureUtils.captureScreenshot(driver, "Case52_Fuel_uploadphotosforfuel5");
+        mobilelement.clickElement(driver, mobileLocators.Doneclick);
+
+        mobilelement.clickElement(driver, mobileLocators.submittap);
+        
+        /*************** Add  upload fuel images for early snacks***************/
+        
+        // Click on Upload option from bottom
+        Thread.sleep(2000);
+		mobilelement.clickElement(driver, mobileLocators.uploadclickall);
+		
+		// Click on Upload option for Breakfast Option
+		mobilelement.clickElement(driver, mobileLocators.lunchuploadoption);
+		
+		// Click on gallery option 
+		mobilelement.clickElement(driver, mobileLocators.gallery);
+		
+		// Capture a screenshot and attach it to Allure
+        AllureUtils.captureScreenshot(driver, "Case52_Fuel_uploadphotosforfuel6");
+		
+		// Select image 1 from gallery
+		mobilelement.clickElement(driver, mobileLocators.galleryimage3);
+		
+		// Click on add option from image viewer
+		mobilelement.clickElement(driver, mobileLocators.addoption);
+		
+		 // Set values in the picker elements
+        String[] valuesToSet3 = {"1", "45", "PM"};
+        mobilelement.setPickerValues(driver, mobileLocators.Timepicker, mobileLocators.pickerelement, valuesToSet3);
+        
+        // Capture a screenshot and attach it to Allure
+        AllureUtils.captureScreenshot(driver, "Case52_Fuel_uploadphotosforfuel7");
+        mobilelement.clickElement(driver, mobileLocators.Doneclick);
+
+        mobilelement.clickElement(driver, mobileLocators.submittap);
         
         
-     	Thread.sleep(3500);	
+        /*************** Add  upload fuel images for late snacks***************/
+        
+        // Click on Upload option from bottom
+        Thread.sleep(2000);
+		mobilelement.clickElement(driver, mobileLocators.uploadclickall);
+		
+		// Click on Upload option for Breakfast Option
+		mobilelement.clickElement(driver, mobileLocators.latesnacksuploadoption);
+		
+		// Click on gallery option 
+		mobilelement.clickElement(driver, mobileLocators.gallery);
+		
+		// Capture a screenshot and attach it to Allure
+        AllureUtils.captureScreenshot(driver, "Case52_Fuel_uploadphotosforfuel8");
+		
+		// Select image 1 from gallery
+		mobilelement.clickElement(driver, mobileLocators.galleryimage4);
+		
+		// Click on add option from image viewer
+		mobilelement.clickElement(driver, mobileLocators.addoption);
+		
+		 // Set values in the picker elements
+        String[] valuesToSet4 = {"5", "15", "PM"};
+        mobilelement.setPickerValues(driver, mobileLocators.Timepicker, mobileLocators.pickerelement, valuesToSet4);
+        
+        // Capture a screenshot and attach it to Allure
+        AllureUtils.captureScreenshot(driver, "Case52_Fuel_uploadphotosforfuel9");
+        mobilelement.clickElement(driver, mobileLocators.Doneclick);
+
+        mobilelement.clickElement(driver, mobileLocators.submittap);
+        
+        /*************** Add  upload fuel images for Dinner***************/
+        
+        // Click on Upload option from bottom
+        Thread.sleep(2000);
+		mobilelement.clickElement(driver, mobileLocators.uploadclickall);
+		
+		// Click on Upload option for Breakfast Option
+		mobilelement.clickElement(driver, mobileLocators.dinneruploadoption);
+		
+		// Click on gallery option 
+		mobilelement.clickElement(driver, mobileLocators.gallery);
+		
+		// Capture a screenshot and attach it to Allure
+        AllureUtils.captureScreenshot(driver, "Case52_Fuel_uploadphotosforfuel10");
+		
+		// Select image 1 from gallery
+		mobilelement.clickElement(driver, mobileLocators.galleryimage5);
+		
+		// Click on add option from image viewer
+		mobilelement.clickElement(driver, mobileLocators.addoption);
+		
+		 // Set values in the picker elements
+        String[] valuesToSet5 = {"5", "15", "PM"};
+        mobilelement.setPickerValues(driver, mobileLocators.Timepicker, mobileLocators.pickerelement, valuesToSet5);
+        
+        // Capture a screenshot and attach it to Allure
+        AllureUtils.captureScreenshot(driver, "Case52_Fuel_uploadphotosforfuel11");
+        mobilelement.clickElement(driver, mobileLocators.Doneclick);
+
+        mobilelement.clickElement(driver, mobileLocators.submittap);
+        
+     // Capture a screenshot and attach it to Allure
+        AllureUtils.captureScreenshot(driver, "Case52_Fuel_uploadphotosforfuel12");
+        
+        
+        Thread.sleep(8500);
+        driver.terminateApp("com.cuesz.mobile");
         
 	}
 }
