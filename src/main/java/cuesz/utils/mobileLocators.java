@@ -4,12 +4,36 @@ import org.openqa.selenium.By;
 import io.appium.java_client.AppiumBy;
 
 public class mobileLocators {
-
+	
+	//Dated 9-Jan upload images for all category
+	public static final By uploadclickall	= AppiumBy.accessibilityId("FuelUploadImage");
+	public static final By breakfastuploadoption	=	AppiumBy.iOSClassChain("**/XCUIElementTypeOther[`name == \"BreakfastPhotoUpload\"`][1]");
+	public static final By galleryimage1	= AppiumBy.xpath("//XCUIElementTypeImage[2]");
+	public static final By addoption 		= AppiumBy.accessibilityId("Add");
+	public static final By Timepicker		= AppiumBy.accessibilityId("SelectTime");
+	public static final By earlysnacksuploadoption	=	AppiumBy.iOSClassChain("**/XCUIElementTypeOther[`name == \"Early SnacksPhotoUpload\"`][2]");
+	public static final By galleryimage2	= AppiumBy.xpath("//XCUIElementTypeImage[3]");
+	public static final By lunchuploadoption	= AppiumBy.iOSClassChain("**/XCUIElementTypeOther[`name == \"LunchPhotoUpload\"`][2]");
+	public static final By galleryimage3	= AppiumBy.xpath("//XCUIElementTypeImage[4]");
+	public static final By latesnacksuploadoption	=	AppiumBy.iOSClassChain("**/XCUIElementTypeOther[`name == \"Late SnacksPhotoUpload\"`][2]");
+	public static final By galleryimage4	= AppiumBy.xpath("//XCUIElementTypeImage[5]");
+	public static final By dinneruploadoption	=	AppiumBy.iOSClassChain("**/XCUIElementTypeOther[`name == \"DinnerPhotoUpload\"`][2]");
+	public static final By galleryimage5	= AppiumBy.xpath("//XCUIElementTypeImage[6]");
+	
+	
 	//Dated 4-jan additional fuelcase 
 	public static final By Fuelhomeclick	= AppiumBy.accessibilityId("FUEL_SCREEN"); 
 	public static final By addtionafuelbttn	= AppiumBy.accessibilityId("FuelAddDeviation");
-	public static final By timepicker	= AppiumBy.accessibilityId("AdditionalItemTime");
-
+	public static final By timepicker		= AppiumBy.accessibilityId("AdditionalItemTime");
+	public static final By grapefuel		= AppiumBy.accessibilityId("Grapeseed");
+	public static final By eventcategory	= AppiumBy.iOSClassChain("**/XCUIElementTypeOther[`label == \"Early Snacks\"`][2]");
+	public static final By resfuel			= AppiumBy.accessibilityId("Charter Reserve Golden Roast Turkey");
+	public static final By lunchcategory 	= AppiumBy.iOSClassChain("**/XCUIElementTypeOther[`label == \"Lunch\"`][2]");
+	public static final By fiofuel			= AppiumBy.accessibilityId("Panino");
+	public static final By latesnackscategory	= AppiumBy.iOSClassChain("**/XCUIElementTypeOther[`label == \"Late Snacks\"`][2]");
+	public static final By humfuel			=	AppiumBy.accessibilityId("Humdingers Shrimp");	
+	public static final By dinnercategory	=	AppiumBy.iOSClassChain("**/XCUIElementTypeOther[`label == \"Dinner\"`][2]");
+	
 	/****Dated : 20-Dec perform cases locators*****/
 	//Case02_Homescreen_sphereclick
 	public static final By Homeclick 		= AppiumBy.iOSClassChain("**/XCUIElementTypeOther[`label == \"Home\"`][2]");
