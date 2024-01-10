@@ -215,8 +215,28 @@ public class Case52_Fuel_uploadphotosforfuel extends AppiummobileBase {
 
         mobilelement.clickElement(driver, mobileLocators.submittap);
         
-     // Capture a screenshot and attach it to Allure
+        // Capture a screenshot and attach it to Allure
         AllureUtils.captureScreenshot(driver, "Case52_Fuel_uploadphotosforfuel12");
+        
+        
+        mobilelement.clickElement(driver, mobileLocators.eventcross);
+        
+        
+    	// Scroll to "TODAY'S FUEL SUMMARY"
+		mobilelement.scrollupToElement(driver, "TODAY'S FUEL SUMMARY");
+		Thread.sleep(2000);
+		
+		// Scroll to "Dinner"
+		mobilelement.scrollupToElement(driver, "Dinner");
+		
+        
+        Thread.sleep(3000);
+		// Scroll to "Early-Snacks"
+		mobilelement.scrollupToElement(driver, "Early Snacks");
+
+		
+
+	
         
         
         Thread.sleep(8500);
