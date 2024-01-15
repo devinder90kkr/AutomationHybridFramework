@@ -69,6 +69,8 @@ public class Case53_Fuel_notesbottom extends AppiummobileBase {
         // Click on option2
         mobilelement.clickElement(driver, mobileLocators.option2);
 
+     // Capture a screenshot and attach it to Allure
+        AllureUtils.captureScreenshot(driver, "Case53_Fuel_notesbottom2");
         // Click on option3
         mobilelement.clickElement(driver, mobileLocators.option3);
        
@@ -78,6 +80,10 @@ public class Case53_Fuel_notesbottom extends AppiummobileBase {
         
         // Click on done from keypad 
         mobilelement.clickElement(driver, mobileLocators.doneclick1);
+        
+        
+     // Capture a screenshot and attach it to Allure
+        AllureUtils.captureScreenshot(driver, "Case53_Fuel_notesbottom3");
         
         mobilelement.clickElement(driver, mobileLocators.tick);
         
