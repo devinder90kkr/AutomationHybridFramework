@@ -6,6 +6,7 @@ import cuesz.pages.AppiummobileBase;
 import cuesz.utils.AllureUtils;
 import cuesz.utils.AppiumappUtils;
 import cuesz.utils.mobileLocators;
+import cuesz.utils.mobileTestData;
 import cuesz.utils.mobilelement;
 import io.qameta.allure.Description;
 import io.qameta.allure.Epic;
@@ -56,13 +57,30 @@ public class Case53_Fuel_notesbottom extends AppiummobileBase {
 		
 		// Capture a screenshot and attach it to Allure
         AllureUtils.captureScreenshot(driver, "Case53_Fuel_notesbottom1");
-		
-        
+		 
         /*************** Add  upload fuel images for breakfast***************/
         
+        // Click on Fuel screen
+        mobilelement.clickElement(driver, mobileLocators.notesclick);
+        
+        // Click on option1
+        mobilelement.clickElement(driver, mobileLocators.option1);
+        
+        // Click on option2
+        mobilelement.clickElement(driver, mobileLocators.option2);
+
+        // Click on option3
+        mobilelement.clickElement(driver, mobileLocators.option3);
        
-
-
+       
+        // Click on option3
+        mobilelement.sendKeysToElement(driver, mobileLocators.Notesclick, mobileTestData.notefield);
+        
+        // Click on done from keypad 
+        mobilelement.clickElement(driver, mobileLocators.doneclick1);
+        
+        mobilelement.clickElement(driver, mobileLocators.tick);
+        
         
         Thread.sleep(8500);
         driver.terminateApp("com.cuesz.mobile");
