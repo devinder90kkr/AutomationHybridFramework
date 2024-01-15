@@ -63,12 +63,14 @@ public class mobilelement {
             values.get(i).sendKeys(Keys.TAB);
             Thread.sleep(3500); // Adjust the sleep duration as needed
         }
-	    
-	    
-	    
-	    
-	    
 	    }   
+	    
+	 // Method to send keys to an element
+	    public static void sendKeysToElement(AppiumDriver driver, By elementLocator, String text) {
+	        WebElement element = driver.findElement(elementLocator);
+	        element.sendKeys(text);
+	    }
+	    
 }
 	
 

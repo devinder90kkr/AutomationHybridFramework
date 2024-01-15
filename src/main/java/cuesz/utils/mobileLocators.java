@@ -5,6 +5,14 @@ import io.appium.java_client.AppiumBy;
 
 public class mobileLocators {
 	
+	// Dated 15 Jan this is for tell us more about your fuel
+	public static final By notesclick	= 	AppiumBy.accessibilityId("FuelNotes");
+	public static final By option1		= 	AppiumBy.iOSClassChain("**/XCUIElementTypeOther[`label == \"Did Not Eat Enough\"`][3]");
+	public static final By option2		=	AppiumBy.iOSClassChain("**/XCUIElementTypeOther[`label == \"Fasted Full Day (24 hours)\"`][3]");
+	public static final By option3 		= 	AppiumBy.iOSClassChain("**/XCUIElementTypeOther[`label == \"Ate Too Much\"`][3]");
+	public static final By Notesclick	= 	AppiumBy.accessibilityId("Notes");	
+	public static final By doneclick1	=	AppiumBy.iOSClassChain("**/XCUIElementTypeButton[`label == \"DONE\"`]");
+	
 	//Dated 9-Jan upload images for all category
 	public static final By uploadclickall	= AppiumBy.accessibilityId("FuelUploadImage");
 	public static final By breakfastuploadoption	=	AppiumBy.iOSClassChain("**/XCUIElementTypeOther[`name == \"BreakfastPhotoUpload\"`][1]");
@@ -19,6 +27,7 @@ public class mobileLocators {
 	public static final By galleryimage4	= AppiumBy.xpath("//XCUIElementTypeImage[5]");
 	public static final By dinneruploadoption	=	AppiumBy.iOSClassChain("**/XCUIElementTypeOther[`name == \"DinnerPhotoUpload\"`][2]");
 	public static final By galleryimage5	= AppiumBy.xpath("//XCUIElementTypeImage[6]");
+	public static final By photouplod		= AppiumBy.accessibilityId("PhotoUpload");
 	
 	
 	//Dated 4-jan additional fuelcase 
