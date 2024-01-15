@@ -219,6 +219,7 @@ public class Case52_Fuel_uploadphotosforfuel extends AppiummobileBase {
         AllureUtils.captureScreenshot(driver, "Case52_Fuel_uploadphotosforfuel12");
         
         
+    	    
         mobilelement.clickElement(driver, mobileLocators.eventcross);
         
         
@@ -234,10 +235,7 @@ public class Case52_Fuel_uploadphotosforfuel extends AppiummobileBase {
 		// Scroll to "Early-Snacks"
 		mobilelement.scrollupToElement(driver, "Early Snacks");
 
-		
 
-	
-        
         
         Thread.sleep(8500);
         driver.terminateApp("com.cuesz.mobile");

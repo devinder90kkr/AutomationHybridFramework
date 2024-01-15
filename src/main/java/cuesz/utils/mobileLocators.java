@@ -19,6 +19,7 @@ public class mobileLocators {
 	public static final By galleryimage4	= AppiumBy.xpath("//XCUIElementTypeImage[5]");
 	public static final By dinneruploadoption	=	AppiumBy.iOSClassChain("**/XCUIElementTypeOther[`name == \"DinnerPhotoUpload\"`][2]");
 	public static final By galleryimage5	= AppiumBy.xpath("//XCUIElementTypeImage[6]");
+	public static final By photouplod		= AppiumBy.accessibilityId("PhotoUpload");
 	
 	
 	//Dated 4-jan additional fuelcase 

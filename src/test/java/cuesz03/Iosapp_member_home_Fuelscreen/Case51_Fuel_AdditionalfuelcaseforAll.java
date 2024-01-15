@@ -267,7 +267,8 @@ public class Case51_Fuel_AdditionalfuelcaseforAll extends AppiummobileBase {
         
         
         
-     	Thread.sleep(3500);	
+        Thread.sleep(8500);
+        driver.terminateApp("com.cuesz.mobile");
         
 	}
 }

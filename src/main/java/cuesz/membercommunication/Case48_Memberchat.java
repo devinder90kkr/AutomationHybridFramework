@@ -166,64 +166,133 @@ public class Case48_Memberchat extends BasePage {
 		super(driver);
 	}
 	
+//	 @Test
+//	    public void Membercommunicate() throws InterruptedException {
+//	       
+//		 WebElement Chatclick = driver.findElement(membercomunicate);
+//	        Chatclick.click();
+//	        
+////	        Thread.sleep(2500);
+//	        // Locate the search input field by its locator
+////	        WebElement searchInput = driver.findElement(serchInput);
+//	       
+//	        Thread.sleep(2500);
+//	        String[] membersToSearch = {"Sanjit QA"};
+//
+//	        for (String member : membersToSearch) {
+//	        	
+//	        	// Print the member's name to the console
+//	            System.out.println("Searching for member: " + member);
+//	            
+//	            WebElement searchInput1 = driver.findElement(serchInput);
+//	            searchInput1.click(); // Click on the search input field
+//	            searchInput1.sendKeys(member);
+//	
+//	            // Capture a screenshot and attach it to Allure
+//	            AllureUtils.captureScreenshot(driver, "membersearch_screenshot"); 
+//	            
+//	            // Perform the search action, for example, click a search button (if applicable)
+//	            Thread.sleep(2500);
+//	            // Wait for search results to load (you may need to adjust the wait time)
+//	            try {
+//	                Thread.sleep(2000); // Wait for 2 seconds; adjust as needed
+//	            } catch (InterruptedException e) {
+//	                e.printStackTrace();
+//	            }
+//	            Thread.sleep(2500);
+//	            
+//	            WebElement memberclick = driver.findElement(membclck);
+//	            memberclick.click();
+//	            Thread.sleep(2500);
+////	            WebElement searchbox = driver.findElement(serhbox);
+////	            searchbox.sendKeys("Hello this is just for testing purpse");
+//	            Thread.sleep(2500);
+////	            /**********************Stress testing for notification and chat purpose****************************/
+//	            for (int i = 0; i < 25; i++) { 
+////		            Thread.sleep(2500);
+//		            WebElement searchbox = driver.findElement(serhbox);
+//		         // Send the keys alternatively
+//		            if (i % 2 == 0) {
+//		                searchbox.sendKeys("Times Square is known for its bright lights, massive electronic billboards, and bustling atmosphere. It's a popular destination for New Year's Eve celebrations, with the famous ball drop marking the start of the new year.");
+//		            } else {
+//		                searchbox.sendKeys("NYC is one of the most ethnically diverse cities in the world. People from all over the globe have settled in the city, contributing to its rich tapestry of cultures, languages, and cuisines.");
+//		            }
+//		            WebElement sendbutton2 = driver.findElement(senbttn);
+//	                sendbutton2.click();
+//	                Thread.sleep(1000);
+//		            }
+//	        }
+//	 }
+//}
+	 
 	 @Test
 	    public void Membercommunicate() throws InterruptedException {
-	       
-		 WebElement Chatclick = driver.findElement(membercomunicate);
-	        Chatclick.click();
-	        
-//	        Thread.sleep(2500);
-	        // Locate the search input field by its locator
-//	        WebElement searchInput = driver.findElement(serchInput);
-	       
-	        Thread.sleep(2500);
-	        String[] membersToSearch = {"Sanjit QA"};
 
-	        for (String member : membersToSearch) {
-	        	
-	        	// Print the member's name to the console
-	            System.out.println("Searching for member: " + member);
-	            
-	            WebElement searchInput1 = driver.findElement(serchInput);
-	            searchInput1.click(); // Click on the search input field
-	            searchInput1.sendKeys(member);
-	
-	            // Capture a screenshot and attach it to Allure
-	            AllureUtils.captureScreenshot(driver, "membersearch_screenshot"); 
-	            
-	            // Perform the search action, for example, click a search button (if applicable)
-	            Thread.sleep(2500);
-	            // Wait for search results to load (you may need to adjust the wait time)
-	            try {
-	                Thread.sleep(2000); // Wait for 2 seconds; adjust as needed
-	            } catch (InterruptedException e) {
-	                e.printStackTrace();
-	            }
-	            Thread.sleep(2500);
-	            
-	            WebElement memberclick = driver.findElement(membclck);
-	            memberclick.click();
-	            Thread.sleep(2500);
-//	            WebElement searchbox = driver.findElement(serhbox);
-//	            searchbox.sendKeys("Hello this is just for testing purpse");
-	            Thread.sleep(2500);
-//	            /**********************Stress testing for notification and chat purpose****************************/
-	            for (int i = 0; i < 25; i++) { 
-//		            Thread.sleep(2500);
-		            WebElement searchbox = driver.findElement(serhbox);
-		         // Send the keys alternatively
-		            if (i % 2 == 0) {
-		                searchbox.sendKeys("Hello, this is just for testing purpose");
-		            } else {
-		                searchbox.sendKeys("The world is a vast and mysterious place, full of wonder and adventure. We are all connected, yet each of us has our own unique story to tell.");
-		            }
-		            WebElement sendbutton2 = driver.findElement(senbttn);
+	        WebElement Chatclick = driver.findElement(membercomunicate);
+	        Chatclick.click();
+
+	        Thread.sleep(2500);
+
+	        // Define an array of messages to send
+	        String[] messagesToSend = {
+	                "NYC boasts an array of world-class museums, including The Metropolitan Museum of Art, the Museum of Modern Art (MoMA), and the American Museum of Natural History, among many others.",
+	                "Pi (π) is an irrational number representing the ratio of a circle's circumference to its diameter. Its decimal representation starts with 3.14159 and continues indefinitely.",
+	                "NYC is renowned for its delicious pizza. The city's pizzerias serve a wide variety of pizza styles, including the classic New York-style thin crust pizza that's foldable and often eaten on the go",
+	                "Central Park, located in the heart of Manhattan, is one of the most famous urban parks in the world. It covers 843 acres (about 341 hectares) and offers a wide range of recreational activities, including walking, biking, boating, and even ice skating in the winter.",
+	                "The Arch of Titus, located in Rome, was built in AD 81 to commemorate the capture of Jerusalem and the victory of the Roman Emperor Titus in the Jewish War. The arch is famous for its reliefs depicting the spoils from the Second Temple in Jerusalem, including the menorah, which is considered one of the earliest depictions of this Jewish symbol."
+	                
+	                // Add more messages as needed
+	        };
+
+	        String memberToSearch = "Kumar Devinder"; // You can keep this outside the loop if it's the same for all messages
+	        int numberOfIterations = 5; // Define the number of times you want to send the messages
+
+	        for (int iteration = 0; iteration < numberOfIterations; iteration++) {
+	            for (String message : messagesToSend) {
+	                System.out.println("Searching for member: " + memberToSearch);
+
+	                WebElement searchInput1 = driver.findElement(serchInput);
+	                searchInput1.click();
+	                searchInput1.sendKeys(memberToSearch);
+
+	                AllureUtils.captureScreenshot(driver, "membersearch_screenshot");
+
+	                Thread.sleep(2500);
+
+	                // Wait for search results to load (you may need to adjust the wait time)
+	                try {
+	                    Thread.sleep(2000); // Wait for 2 seconds; adjust as needed
+	                } catch (InterruptedException e) {
+	                    e.printStackTrace();
+	                }
+
+	                Thread.sleep(2500);
+
+	                WebElement memberclick = driver.findElement(membclck);
+	                memberclick.click();
+	                Thread.sleep(2500);
+
+	                WebElement searchbox = driver.findElement(serhbox);
+	                searchbox.sendKeys(message);
+
+	                WebElement sendbutton2 = driver.findElement(senbttn);
 	                sendbutton2.click();
+
 	                Thread.sleep(1000);
-		            }
+	            }
 	        }
-	 }
-}
+	    }
+	}
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
 //	            
 //	            // Capture a screenshot and attach it to Allure
 //	            AllureUtils.captureScreenshot(driver, "text1"); 
