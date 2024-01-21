@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="Suite6">	 
-  <test thread-count="5" name="Test6">
+<suite name="Suite5">	 
+  <test thread-count="5" name="Createevent-staffmeetingcases">
     <classes>     
       <class name="cuesz.schduletest.advocate.Case12_01_SE_createvent_withouttime"/>
       <class name="cuesz.schduletest.advocate.Case12_02_SE_createvent_withpastdate"/>
@@ -9,12 +9,6 @@
       <class name="cuesz.schduletest.advocate.Case12_04_SE_view_staffevent"/>
       <class name="cuesz.schduletest.advocate.Case12_05_SE_edit_staffevent"/>
       <class name="cuesz.schduletest.advocate.Case12_06_SE_delete_staffevent"/>
-      <class name="cuesz.schduletest.advocate.Case12_07_SE_create_eventwithoutopic"/>
-      <class name="cuesz.schduletest.advocate.Step12_08_SE_createventtest"/>
-      <class name="cuesz.schduletest.advocate.Step12_09_SE_createeventforpasttest"/>
-	  <class name="cuesz.schduletest.advocate.Step12_10_SE_createeventbyselecteddatefromcalendartest"/>
-	  <class name="cuesz.schduletest.advocate.Step12_11_SE_createventtimelongerthan15minformebercalltest"/> 
-	  <class name="cuesz.schduletest.advocate.Step13_01createventfornextdaytest"/> 
    </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
