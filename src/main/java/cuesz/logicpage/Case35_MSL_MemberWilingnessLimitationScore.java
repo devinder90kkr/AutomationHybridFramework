@@ -10,36 +10,22 @@ import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
 
 import cuesz.pages.BasePage;
+import cuesz.utils.ElementActions;
 import cuesz.utils.SeleniumUtils;
+import cuesz.utils.weblocators;
 
 public class Case35_MSL_MemberWilingnessLimitationScore extends BasePage {
 	
 	SeleniumUtils utils = new SeleniumUtils(driver);
-	private By Logicbttn =  (By.xpath("//span[normalize-space()='Logic Page']"));
-	private By logcHeadngElment =(By.xpath("//h3[text()='Logic Page']"));
-	private By lablElment =(By.xpath("//label[text()='Willingness']"));
-	private By dotCntaner = (By.className("status_dots_big"));
-	private By bttn1 = (By.xpath("//button[contains(@class, 'btn-secondary') and contains(@class, 'note_btn')]"));
-	private By popHedngelmnt = (By.xpath("//label[text()='Willingness']"));
-	private By txtara =(By.xpath("//textarea[normalize-space()='Hello we automate things by using selenium tools.']"));
-	private By saveBttn =(By.xpath("//button[text()='Save Note']"));
-	private By LimitlablElment = (By.xpath("//label[contains(text(), 'Limitation')]"));
-	private By ttimag	=	(By.tagName("img"));
-	private By stusdotbg	=	(By.cssSelector(".status_dots_big .dots"));
-	private By btton1 =(By.cssSelector("button.btn.btn-secondary.note_btn"));
-	private By popHeadngElement1 = (By.xpath("//label[text()='Limitation']"));
-	private By textAea1 = (By.xpath("//textarea[normalize-space()='Hello we automate things by using selenium tools.']"));
-	private By saveBttn1 =(By.xpath("//button[text()='Save Note']"));
-	
+	private ElementActions elementActions;
 	 public Case35_MSL_MemberWilingnessLimitationScore(WebDriver driver) {
 		super(driver);
+		this.elementActions = new ElementActions(driver); // Initialize elementActions
 		// TODO Auto-generated constructor stub
 	}
-
 	@Test
 	    public void Basicinfo2() throws InterruptedException {
 	        Thread.sleep(2000);
-
 	        utils.clickMembersummary();
 	        utils.waitForMilliseconds(2000);
 	        utils.enterSearchText();
@@ -47,13 +33,11 @@ public class Case35_MSL_MemberWilingnessLimitationScore extends BasePage {
 
    		   /***************************************************************************************************************************************************/
 	        Thread.sleep(2000);
-	        WebElement Logicbutton =   driver.findElement(Logicbttn);
-	        Logicbutton.click();
-	        
+	        elementActions.clickElement(weblocators.logicbttn);     
+	       
 	        Thread.sleep(2000);
 	     // Locate the element that contains the heading "Logic Page"
-	        WebElement logicHeadingElement = driver.findElement(logcHeadngElment);
-
+	        WebElement logicHeadingElement = driver.findElement(weblocators.lgicHeadngElment);
 	        // Check if the element is displayed or not
 	        if (logicHeadingElement.isDisplayed()) {
 	            System.out.println("Logic page heading is displayed.");
@@ -65,7 +49,7 @@ public class Case35_MSL_MemberWilingnessLimitationScore extends BasePage {
 	    
 	        /***************************************************************************************************************************************************/
 	        // Find the Willingness label element
-	        WebElement labelElement = driver.findElement(lablElment);
+	        WebElement labelElement = driver.findElement(weblocators.lablElment);
 
 	        // Extract the name for the label
 	        String labelName = labelElement.getText();
@@ -103,7 +87,7 @@ public class Case35_MSL_MemberWilingnessLimitationScore extends BasePage {
 	    /*Dots need to click*/    
 	        
 	     // Find the container div for dots
-	        WebElement dotsContainer = driver.findElement(dotCntaner);
+	        WebElement dotsContainer = driver.findElement(weblocators.dotCntaner);
 
 	        // Find all the dots within the container
 	        java.util.List<WebElement> dots = dotsContainer.findElements(By.className("dots"));
@@ -124,14 +108,12 @@ public class Case35_MSL_MemberWilingnessLimitationScore extends BasePage {
 	  /*Popup related things start*/
 	        
 	     // Find the button element
-	        WebElement button = driver.findElement(bttn1);
+	        elementActions.clickElement(weblocators.bttn1); 
 
-	        // Click on the button
-	        button.click();
 	        
 
 	        // Verify if the popup is open
-	        WebElement popupHeadingElement = driver.findElement(popHedngelmnt);
+	        WebElement popupHeadingElement = driver.findElement(weblocators.popHedngelmnt);
 	        if (popupHeadingElement.isDisplayed()) {
 	            System.out.println("Popup is open.");
 	        } else {
@@ -140,8 +122,8 @@ public class Case35_MSL_MemberWilingnessLimitationScore extends BasePage {
 
 	    
 	        // Find the text area inside the popup
-	        WebElement textArea = driver.findElement(txtara);
-	    
+	        WebElement textArea = driver.findElement(weblocators.txtara);
+	
 	        // Clear existing text (if any)
 	        textArea.clear();
 
@@ -151,8 +133,7 @@ public class Case35_MSL_MemberWilingnessLimitationScore extends BasePage {
 	        textArea.sendKeys(newText);
 	        
 	        // Find the "Save Note" button and click it
-	        WebElement saveButton = driver.findElement(saveBttn);
-	        saveButton.click();
+	        elementActions.clickElement(weblocators.saveBttn); 
 
 	        // Wait for a short time to allow the save operation to complete (you may need to adjust the wait time)
 	        try {
@@ -167,20 +148,15 @@ public class Case35_MSL_MemberWilingnessLimitationScore extends BasePage {
 
 	        
 	     // Find the Limitation label element
-	        WebElement LimitationlabelElement = driver.findElement(LimitlablElment);
-
+	        WebElement LimitationlabelElement = driver.findElement(weblocators.LimitlablElment);
 	        // Extract the label text
 	        String labelText = LimitationlabelElement.getText();
-
 	        // Print the label text
 	        System.out.println("Label Text: " + labelText);
-
 	        // Find the image element inside the label
-	        WebElement imageElement2 = LimitationlabelElement.findElement(ttimag);
-
+	        WebElement imageElement2 = LimitationlabelElement.findElement(weblocators.ttimag);
 	        // Get the image source
 	        String imageSrc2 = imageElement2.getAttribute("src");
-
 	        // Check if the image link is valid (not a broken link)
 	        boolean isBrokenImage2 = false;
 	        try {
@@ -196,7 +172,6 @@ public class Case35_MSL_MemberWilingnessLimitationScore extends BasePage {
 	            isBrokenImage2 = true;
 	            System.out.println("The image link is broken.");
 	        }
-
 	        if (!isBrokenImage2) {
 	            System.out.println("The image link is valid.");
 	        }
@@ -204,8 +179,7 @@ public class Case35_MSL_MemberWilingnessLimitationScore extends BasePage {
      /*Dots realted this start*/
 	        
 	     // Find all the dots within the container
-	        java.util.List<WebElement> dots1 = driver.findElements(stusdotbg);
-
+	        java.util.List<WebElement> dots1 = driver.findElements(weblocators.stusdotbg);
 	        // Loop through each dot and click on it
 	        for (WebElement dot1 : dots1) {
 	            dot1.click();
@@ -222,15 +196,11 @@ public class Case35_MSL_MemberWilingnessLimitationScore extends BasePage {
 	        }
 	  
 	 /*Popup begining*/       
-	          
-	        
+   
 	     // Find the button element
-	        WebElement button1 = driver.findElement(btton1);
-
-	        // Click on the button
-	        button1.click();
+	        elementActions.clickElement(weblocators.btton1); 
 	        // Verify if the popup is open
-	        WebElement popupHeadingElement1 = driver.findElement(popHeadngElement1);
+	        WebElement popupHeadingElement1 = driver.findElement(weblocators.popHeadngElement1);
 	        if (popupHeadingElement1.isDisplayed()) {
 	            System.out.println("Popup is open.");
 	        } else {
@@ -239,32 +209,22 @@ public class Case35_MSL_MemberWilingnessLimitationScore extends BasePage {
 
 	    
 	        // Find the text area inside the popup
-	        WebElement textArea1 = driver.findElement(textAea1);
-	    
+	        WebElement textArea1 = driver.findElement(weblocators.textAea1);
 	        // Clear existing text (if any)
 	        textArea1.clear();
-
 	        // Input new text
 	        String newText1 = "Hello we automate things by using selenium tools.";
-	    
 	        textArea1.sendKeys(newText1);
 	        
 	        // Find the "Save Note" button and click it
-	        WebElement saveButton1 = driver.findElement(saveBttn1);
-	        saveButton1.click();
-
+	        elementActions.clickElement(weblocators.saveBttn1); 
 	        // Wait for a short time to allow the save operation to complete (you may need to adjust the wait time)
 	        try {
 	            Thread.sleep(2000); // Wait for 2 seconds (you may need to adjust this time)
 	        } catch (InterruptedException e) {
 	            e.printStackTrace();
 	        }
-	        
-	        Thread.sleep(1000);
-	        
-   
-	        
-	        
+	        Thread.sleep(1000);	        
 	 }
 }
  

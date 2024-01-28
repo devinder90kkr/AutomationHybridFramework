@@ -24,4 +24,13 @@ public class ElementActions {
         element.clear();
         element.sendKeys(text);
     }
+    // Check if an element is displayed
+    public boolean isElementDisplayed(By locator) {
+        try {
+            WebElement element = driver.findElement(locator);
+            return element.isDisplayed();
+        } catch (org.openqa.selenium.NoSuchElementException e) {
+            return false;
+        }
+    }
 }

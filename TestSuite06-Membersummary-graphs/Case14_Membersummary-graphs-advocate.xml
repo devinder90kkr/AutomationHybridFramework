@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite15">
+
+  <test thread-count="5" name="Variousgraphcases">
+    <classes>    
+ 	  <class name="cuesz.membersummarytest.advocate.Case61_InsightsDashboardtest"/>
+	  <class name="cuesz.membersummarytest.advocate.Case62_Mastercorelation3monthstest"/>
+      <class name="cuesz.membersummarytest.advocate.Case62_Mastercorelationtest"/>
+	  <class name="cuesz.membersummarytest.advocate.Case62_Mastercorelationtest14daystest"/>
+	  <class name="cuesz.membersummarytest.advocate.Case63_CorrelationAnalysistest"/>
+      <class name="cuesz.membersummarytest.advocate.Case64_RestingPhysiologytest"/>
+<class name="cuesz.membersummarytest.advocate.Case65_BiofeedbackAnalysistest"/>
+<class name="cuesz.membersummarytest.advocate.Case66_TrainingLoadAnalysistest"/>
+<class name="cuesz.membersummarytest.advocate.Case79_WeeklyAndMonthlySummariestest"/>
+
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

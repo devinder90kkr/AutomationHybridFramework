@@ -3,41 +3,22 @@ package cuesz.logicpage;
 import java.io.IOException;
 import java.net.HttpURLConnection;
 import java.net.URL;
-
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
-
 import cuesz.pages.BasePage;
+import cuesz.utils.ElementActions;
 import cuesz.utils.SeleniumUtils;
+import cuesz.utils.webTestdata;
+import cuesz.utils.weblocators;
 
 public class Case34_MSL_MemberBasicinfo extends BasePage {
 	SeleniumUtils utils = new SeleniumUtils(driver);
-	private By logicbttn =  (By.xpath("//span[normalize-space()='Logic Page']"));
-	private By lgicHeadngElment = (By.xpath("//h3[text()='Logic Page']"));
-	private By bascInitle = (By.xpath("//h6[text()='Basic Information']"));
-	private By imgelment	=	(By.xpath("//img[@src]"));
-	private By membrInfElmnt = (By.xpath("//div[@class='user_inf']/h6"));
-	private By gympls = (By.xpath("//label[normalize-space()='Gym']"));
-	private By popHeadngelment = (By.xpath("//label[text()='Gym']"));
-//	private By txtara = (By.xpath("//div[@class='input-fields']//textarea[@class='form-control'][contains(.,'Hello')]"));
-	private By txtara = (By.xpath("//div[@class='form-group']//textarea[@class='form-control']"));
-	private By Savnote = (By.xpath("//button[normalize-space()='Save Note']"));
-	private By partnrtcusz =(By.xpath("//label[normalize-space()='Partner at Cuesz']"));
-	private By popheadngelmnt1 = (By.xpath("//label[text()='Gym Partner']"));
-	//private By partnrtxtara = (By.xpath("//textarea[contains(.,'New test this')]"));
-	private By partnrtxtara = (By.xpath("//div[@class='form-group']//textarea[@class='form-control']"));
-	private By Svaenot2 = (By.xpath("//button[normalize-space()='Save Note']"));
-	private By whjin = (By.xpath("//label[normalize-space()='Why did they join cuesz?']"));
-	private By popHeadngelment2 = (By.xpath("//label[text()='Why join?']"));
-	//private By whyjintxtAra = (By.xpath("//textarea[normalize-space()='Lorem Are you test with automation tool']"));
-	private By whyjintxtAra = (By.xpath("//div[@class='form-group']//textarea[@class='form-control']"));
-	private By SvaeNte3 = (By.xpath("//button[normalize-space()='Save Note']"));
-	
-	
+	private ElementActions elementActions;
 	public Case34_MSL_MemberBasicinfo(WebDriver driver) {
 		super(driver);
+		this.elementActions = new ElementActions(driver); // Initialize elementActions
+		// TODO Auto-generated constructor stub
 	}
 	
 	 @Test
@@ -45,22 +26,15 @@ public class Case34_MSL_MemberBasicinfo extends BasePage {
 	        Thread.sleep(2000);
 
 	        utils.clickMembersummary();
-//	        driver.navigate().refresh();
-//	        utils.clickMembersummary();
-	        
 	        utils.waitForMilliseconds(2000);
 	        utils.enterSearchText();
 	        utils.clickMembername();
-
    		   /***************************************************************************************************************************************************/
 	        Thread.sleep(2000);
-	        WebElement Logicbutton =   driver.findElement(logicbttn);
-	        Logicbutton.click();
-	        
+	        elementActions.clickElement(weblocators.logicbttn);     
 	        Thread.sleep(2000);
-	     // Locate the element that contains the heading "Logic Page"
-	        WebElement logicHeadingElement = driver.findElement(lgicHeadngElment);
-
+	        // Locate the element that contains the heading "Logic Page"
+	        WebElement logicHeadingElement = driver.findElement(weblocators.lgicHeadngElment);
 	        // Check if the element is displayed or not
 	        if (logicHeadingElement.isDisplayed()) {
 	            System.out.println("Logic page heading is displayed.");
@@ -70,7 +44,7 @@ public class Case34_MSL_MemberBasicinfo extends BasePage {
 	        
 	        Thread.sleep(2000);
 	     // Verify the title "Basic Information"
-	        WebElement basicInfoTitle = driver.findElement(bascInitle);
+	        WebElement basicInfoTitle = driver.findElement(weblocators.bascInitle);
 	        if (basicInfoTitle.isDisplayed()) {
 	            System.out.println("Title 'Basic Information' is displayed.");
 	        } else {
@@ -78,7 +52,7 @@ public class Case34_MSL_MemberBasicinfo extends BasePage {
 	        }
 
 	        // Extract the image path
-	        WebElement imageElement = driver.findElement(imgelment);
+	        WebElement imageElement = driver.findElement(weblocators.imgelment);
 	        String imagePath = imageElement.getAttribute("src");
 
 	        // Check if the image path is valid (not a broken link)
@@ -101,20 +75,17 @@ public class Case34_MSL_MemberBasicinfo extends BasePage {
 	            System.out.println("The image link is valid.");
 	        }
 	        
-	     // Find the element containing the member info
-	        WebElement memberInfoElement = driver.findElement(membrInfElmnt);
-
+	        // Find the element containing the member info
+	        WebElement memberInfoElement = driver.findElement(weblocators.membrInfElmnt);
 	        // Extract the member's name
 	        String memberName = memberInfoElement.getText();
-
 	        // Print the member's name
 	        System.out.println("Member Name: " + memberName);
 
 	        /***************************************************************************************************************************************************/
-	     Thread.sleep(2000);
+	        Thread.sleep(2000);
 	        //Find Gym plus button
-	       WebElement Gymplus = driver.findElement(gympls);
-	       Gymplus.click();
+	        elementActions.clickElement(weblocators.gympls);
 	       
 	       try {
 	            Thread.sleep(2000); // Wait for 2 seconds (you may need to adjust this time)
@@ -123,7 +94,7 @@ public class Case34_MSL_MemberBasicinfo extends BasePage {
 	        }
 
 	        // Ensure the popup is open with the heading "Gym"
-	        WebElement popupHeadingElement = driver.findElement(popHeadngelment);
+	        WebElement popupHeadingElement = driver.findElement(weblocators.popHeadngelment);
 	        if (popupHeadingElement.isDisplayed()) {
 	            System.out.println("Popup with heading 'Gym' is open.");
 	        } else {	
@@ -131,8 +102,7 @@ public class Case34_MSL_MemberBasicinfo extends BasePage {
 	        }
 
 	        // Find the text area inside the popup
-	        WebElement textArea = driver.findElement(txtara);
-
+	        WebElement textArea = driver.findElement(weblocators.txtara);
 	        // Check if the field already has a value
 	        String existingValue = textArea.getAttribute("value");
 	        if (!existingValue.isEmpty()) {
@@ -140,20 +110,18 @@ public class Case34_MSL_MemberBasicinfo extends BasePage {
 	        	textArea.clear();
 	        }
 	        // Fill in new details for Gym
-	        String newDetails = "Hello A modern day gymnasium (as gym used to be called way back in Ancient Greece) is a place for indoor physical workout where various equipment and machines are typically used. For some people, a typical gym is a place where you focus on weight lifting and similar activities.";
+	        String newDetails = webTestdata.notefield1;
 	        textArea.sendKeys(newDetails);
 
 	        Thread.sleep(1000);
 	        
 	        //Find Save not button and click on it 
-	        WebElement SaveNote = driver.findElement(Savnote);
-	        SaveNote.click();
+	        elementActions.clickElement(weblocators.Savnote);
 	        
 	        Thread.sleep(1500);
 	        /***************************************************************************************************************************************************/
-	      //Find Gym plus button
-		       WebElement Partneratcuesz = driver.findElement(partnrtcusz);
-		       Partneratcuesz.click();
+	        //Find Gym plus button
+	        elementActions.clickElement(weblocators.partnrtcusz);
 		       
 		       try {
 		            Thread.sleep(2000); // Wait for 2 seconds (you may need to adjust this time)
@@ -162,7 +130,7 @@ public class Case34_MSL_MemberBasicinfo extends BasePage {
 		        }
 
 		        // Ensure the popup is open with the heading "Gym"
-		        WebElement popupHeadingElement1 = driver.findElement(popheadngelmnt1);
+		        WebElement popupHeadingElement1 = driver.findElement(weblocators.popheadngelmnt1);
 		        if (popupHeadingElement1.isDisplayed()) {
 		            System.out.println("Popup with heading 'Gym Partner' is open.");
 		        } else {
@@ -170,7 +138,7 @@ public class Case34_MSL_MemberBasicinfo extends BasePage {
 		        }
 
 		        // Find the text area inside the popup
-		        WebElement PartnertextArea = driver.findElement(partnrtxtara);
+		        WebElement PartnertextArea = driver.findElement(weblocators.partnrtxtara);
 
 		        // Clear existing details
 		     //   PartnertextArea.clear();
@@ -180,23 +148,20 @@ public class Case34_MSL_MemberBasicinfo extends BasePage {
 		        }
 
 		        // Fill in new details for Gym
-		        String newDetails1 = "New test this A modern day gymnasium (as gym used to be called way back in Ancient Greece) is a place for indoor physical workout where various equipment and machines are typically used. For some people, a typical gym is a place where you focus on weight lifting and similar activities.";
+		        String newDetails1 = webTestdata.notefield2;
 		        PartnertextArea.sendKeys(newDetails1);
 
 		        Thread.sleep(1000);
 		        
 		        //Find Save not button and click on it 
-		        WebElement SaveNote2 = driver.findElement(Svaenot2);
-		        SaveNote2.click();
+		        elementActions.clickElement(weblocators.Svaenot2);
 		        Thread.sleep(1500);
 		        
 		    /***************************************************************************************************************************************************/
 		        
 	        
 		        //Find Whyjoin plus button
-			       WebElement whyjoin = driver.findElement(whjin);
-			       whyjoin.click();
-			       
+		        elementActions.clickElement(weblocators.whjin); 
 			       try {
 			            Thread.sleep(2000); // Wait for 2 seconds (you may need to adjust this time)
 			        } catch (InterruptedException e) {
@@ -204,7 +169,7 @@ public class Case34_MSL_MemberBasicinfo extends BasePage {
 			        }
 
 			        // Ensure the popup is open with the heading "Gym"
-			        WebElement popupHeadingElement2 = driver.findElement(popHeadngelment2);
+			        WebElement popupHeadingElement2 = driver.findElement(weblocators.popHeadngelment2);
 			        if (popupHeadingElement2.isDisplayed()) {
 			            System.out.println("Popup with heading 'Why join?' is open.");
 			        } else {
@@ -212,29 +177,20 @@ public class Case34_MSL_MemberBasicinfo extends BasePage {
 			        }
 
 			        // Find the text area inside the popup
-			        WebElement whyjointextArea = driver.findElement(whyjintxtAra);
-
-			        // Clear existing details
-			      //  whyjointextArea.clear();
+			        WebElement whyjointextArea = driver.findElement(weblocators.whyjintxtAra);
 			        if (!whyjointextArea.getAttribute("value").isEmpty()) {
 						 // Clear existing details
 			        	whyjointextArea.clear(); 
 			        	}
-		
-
 			        // Fill in new details for Gym
-			        String newDetails2 = "Lorem Are you test with automation tool";
+			        String newDetails2 = webTestdata.notefield3;
 			        whyjointextArea.sendKeys(newDetails2);
 
 			        Thread.sleep(1000);
 			        
 			        //Find Save not button and click on it 
-			        WebElement SaveNote3 = driver.findElement(SvaeNte3);
-			        SaveNote3.click();
-			        Thread.sleep(1500);
-	        	        
+			        elementActions.clickElement(weblocators.SvaeNte3); 
+			        Thread.sleep(1500);      
 			  	 }
-
 	 }
  
-

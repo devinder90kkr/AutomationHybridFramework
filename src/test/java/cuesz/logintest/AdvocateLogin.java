@@ -71,7 +71,7 @@ public class AdvocateLogin {
 
     @Test
     public void testAdvocateLogin() {
-        loginPage.login("stevecuesz90@gmail.com", "User!234");
+        loginPage.login("markcuesz90@yopmail.com", "User!234");
 
         // Capture and add login details to Allure report
         String username = "stevecuesz90@gmail.com";
