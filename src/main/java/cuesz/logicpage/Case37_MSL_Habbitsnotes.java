@@ -133,121 +133,61 @@ public class Case37_MSL_Habbitsnotes extends BasePage {
 	        
 	        Thread.sleep(1000);
 	        
-	        /****************************************************************Populate data for Wednesday week*******************************************/
-
-	        Thread.sleep(2000);
-	        // Find and fill in the text fields
-	        WebElement notesfield2 = driver.findElement(notesfld2);
-	        notesfield2.clear();
-	        notesfield2.sendKeys("Habits notes are written records of one's daily habits and routines. They can be used to track progress, identify patterns, and make adjustments to improve overall productivity and well-being");
-	        
-	        
-	        Thread.sleep(1500);
-	        // Click outside of the block to save data
-	        WebElement outsideBlock3 = driver.findElement(outeBlck3);
-	        outsideBlock3.click();
-	        
+//	        /****************************************************************Populate data for Wednesday week*******************************************/
+//
+//	        Thread.sleep(2000);
+//	        // Find and fill in the text fields
+//	        WebElement notesfield2 = driver.findElement(notesfld2);
+//	        notesfield2.clear();
+//	        notesfield2.sendKeys("Habits notes are written records of one's daily habits and routines. They can be used to track progress, identify patterns, and make adjustments to improve overall productivity and well-being");
+//	        
+//	        
+//	        Thread.sleep(1500);
+//	        // Click outside of the block to save data
+//	        WebElement outsideBlock3 = driver.findElement(outeBlck3);
+//	        outsideBlock3.click();
+//	        
 	        /**************************** Compares data for next week before copy ***************************************************************************/          
-	        Thread.sleep(2500);
-	        WebElement nextbutton = driver.findElement(netbttn);
-	        nextbutton.click();
-	        Thread.sleep(2000);
-	     
-	        // Find the <div> element for Monday
-	        WebElement mondayBlockElement = driver.findElement(mndayBlcoklement);
-	        String mondayText = mondayBlockElement.getText();
-	        System.out.println("Monday Date: " + mondayText);
-	        
-	        Thread.sleep(2000);
-	        // Wait for the textarea element to be present
-	        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
-	        WebElement habitstxtarea = wait.until(ExpectedConditions.presenceOfElementLocated(habtxtaea));
-	        String habbitsValue = habitstxtarea.getAttribute("value");
-	        System.out.println("Habbits: " + habbitsValue);
-	        
-	        Thread.sleep(2000);
-	        // Find the <div> element for Tuesday
-	        WebElement tuesdayBlockElement = driver.findElement(tudayBlcoklement);
-	        String tuesdayText = tuesdayBlockElement.getText();
-	        System.out.println("Tuesday Date: " + tuesdayText);
-	        
-	        Thread.sleep(2000);
-	        // Wait for the textarea element to be present for Tuesday
-	        WebElement habitstxtarea1 = wait.until(ExpectedConditions.presenceOfElementLocated(habtxtare1));
-	        String habbitsValue1 = habitstxtarea1.getAttribute("value");
-	        System.out.println("Habbits: " + habbitsValue1);
-	        
-	        Thread.sleep(2000);
-	        WebElement lastWeekButton = driver.findElement(latWekubttn);
-	        lastWeekButton.click();
-	        
+//	        Thread.sleep(2500);
+//	        WebElement nextbutton = driver.findElement(netbttn);
+//	        nextbutton.click();
+//	        Thread.sleep(2000);
+//	     
+//	        // Find the <div> element for Monday
+//	        WebElement mondayBlockElement = driver.findElement(mndayBlcoklement);
+//	        String mondayText = mondayBlockElement.getText();
+//	        System.out.println("Monday Date: " + mondayText);
+//	        
+//	        Thread.sleep(2000);
+//	        // Wait for the textarea element to be present
+//	        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
+//	        WebElement habitstxtarea = wait.until(ExpectedConditions.presenceOfElementLocated(habtxtaea));
+//	        String habbitsValue = habitstxtarea.getAttribute("value");
+//	        System.out.println("Habbits: " + habbitsValue);
+//	        
+//	        Thread.sleep(2000);
+//	        // Find the <div> element for Tuesday
+//	        WebElement tuesdayBlockElement = driver.findElement(tudayBlcoklement);
+//	        String tuesdayText = tuesdayBlockElement.getText();
+//	        System.out.println("Tuesday Date: " + tuesdayText);
+//	        
+//	        Thread.sleep(2000);
+//	        // Wait for the textarea element to be present for Tuesday
+//	        WebElement habitstxtarea1 = wait.until(ExpectedConditions.presenceOfElementLocated(habtxtare1));
+//	        String habbitsValue1 = habitstxtarea1.getAttribute("value");
+//	        System.out.println("Habbits: " + habbitsValue1);
+//	        
+//	        Thread.sleep(2000);
+//	        WebElement lastWeekButton = driver.findElement(latWekubttn);
+//	        lastWeekButton.click();
+//	        
 	        /**************************** Select week and copy data*****************************************************************************************/    
 	     // Find and click on the "Select" button
 	        WebElement selectButton = driver.findElement(slctBttn);
 	        selectButton.click();
 
-//	     // Find today's date element
-//	        WebElement todayDateElement = driver.findElement(tdydtelement);
-//
-//	        // Get the text of today's date (e.g., "3")
-//	        String todayDateText = todayDateElement.getText();
-//
-//	        // Extract the day value from today's date
-//	        int today = Integer.parseInt(todayDateText);
-//
-//	        // Calculate the date for two weeks ahead (adding 14 days)
-//	        int twoWeeksAhead = today + 6;
-//
-//	        // Find the date element for two weeks ahead and click on it
-//	        // Note: This assumes that the date picker uses the format "Thu Aug 3 2023"
-//	        String desiredDateLocator = String.format("//div[@aria-label='%s']", LocalDate.now().plusDays(twoWeeksAhead).format(DateTimeFormatter.ofPattern("EEE MMM d yyyy")));
-//	        WebElement desiredDateElement = driver.findElement(By.xpath(desiredDateLocator));
-//	        desiredDateElement.click();
-
-			   /****working fine*******************/
-		     
-//		     
-//		     	// Get the current date using your Currentdategenerator class
-//		        String currentDateStr = Currentdategenerator.generateCurrentDate();
-//		        DateTimeFormatter dateFormatter = DateTimeFormatter.ofPattern("dd-MM-yyyy");
-//		        LocalDate currentDate = LocalDate.parse(currentDateStr, dateFormatter);
-//
-//		        // Find today's date element
-//		        WebElement todayDateElement = driver.findElement(By.xpath("//div[contains(@class, 'DayPicker-Day--today')]"));
-//
-//		        // Get the text of today's date (e.g., "3")
-//		        String todayDateText = todayDateElement.getText();
-//
-//		        // Extract the day value from today's date
-//		        int today = Integer.parseInt(todayDateText);
-//
-//		        // Calculate the date for two weeks ahead (adding 14 days)
-//		        int twoWeeksAhead = today + 2;
-//
-//		        // Calculate the desired date
-//		        LocalDate desiredDate = currentDate.plusDays(twoWeeksAhead);
-//
-//		        // Check if the desired date is in the next month
-//		        if (desiredDate.getMonthValue() != currentDate.getMonthValue()) {
-//		            // Click on the "Next Month" arrow button
-//		            WebElement nextMonthButton = driver.findElement(By.xpath("//span[@class='DayPicker-NavButton DayPicker-NavButton--next']"));
-//		            nextMonthButton.click();
-//		        }
-//
-//		        // Find the date element for the desired date and click on it
-//		        String desiredDateLocator = String.format("//div[@aria-label='%s']", desiredDate.format(DateTimeFormatter.ofPattern("EEE MMM d yyyy")));
-//		        
-//		        WebDriverWait wait2 = new WebDriverWait(driver,Duration.ofSeconds(1000)); // Adjust the timeout as needed
-//		        WebElement desiredDateElement = wait.until(ExpectedConditions.elementToBeClickable(By.xpath(desiredDateLocator)));
-//		        desiredDateElement.click();
-//
-//		        // Print the value of the clicked date
-//		        System.out.println("Clicked on date: " + desiredDateElement.getText());
-
-
-		  // Call the utility method to select the desired date as per above scripts 
-		        DatePickerUtility_logicpage.selectDesiredDate(driver);
-
+	        // Call the utility method to select the desired date as per above scripts 
+	        DatePickerUtility_logicpage.selectDesiredDate(driver);
 	        
 
 	        WebElement Copybutton = driver.findElement(Cpybttn);

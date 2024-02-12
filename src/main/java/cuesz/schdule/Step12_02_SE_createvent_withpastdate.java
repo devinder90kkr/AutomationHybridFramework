@@ -50,19 +50,6 @@ public class Step12_02_SE_createvent_withpastdate extends BasePage {
 	    Actions builder2 = new Actions(driver);
 	    builder2.moveToElement(eventSelection).click().sendKeys("Live perform session").sendKeys(Keys.ENTER).perform();
 	    
-//	    /*Select Event as as member selection perform	*/
-//	    Thread.sleep(2000);
-//	    WebElement memberSelection =driver.findElement(Member);
-//	    Actions builder3 = new Actions(driver);
-//	    builder3.moveToElement(memberSelection).click().sendKeys(" Kumar Devinder").sendKeys(Keys.ENTER).perform();
-//
-//	    /*Select Coach & advocate from dropdown list*/
-//	    Thread.sleep(2000);
-//	    WebElement staffSelection =driver.findElement(Staff);
-//	    Actions builder4 = new Actions(driver);
-//	    builder4.moveToElement(staffSelection).click().sendKeys("seakfreight").sendKeys(Keys.ENTER).perform();
-//	    builder4.moveToElement(staffSelection).click().sendKeys("steveQA Adv").sendKeys(Keys.ENTER).perform();
-
 	    /*Enter Notes in create event*/
 	    driver.findElement(Notes).sendKeys("We are excited to announce that there will be a live performance event. So please availble");
 	    

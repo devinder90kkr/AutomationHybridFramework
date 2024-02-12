@@ -67,48 +67,9 @@ public class Case04_deletevent extends BasePage {
 
 	 		Thread.sleep(3000);
 	 		driver.findElement(By.xpath("//div[@data-date='" + nextDayDate + "']")).click();
-//	    
+   
 	    Thread.sleep(3000);
-        //driver.findElement(By.xpath("(//span[contains(text(),'Kumar Devinder,')])[15]")).click();
-        
-	    
-//	 // Pass the event date from script one to script three
-//        String eventDate = DateGenerator.generateDateSevenDaysAhead();
-//
-//        // Split the date to extract day, month, and year
-//        String[] dateParts = eventDate.split("-");
-//        int day = Integer.parseInt(dateParts[0]);
-//        int month = Integer.parseInt(dateParts[1]);
-//        int year = Integer.parseInt(dateParts[2]);
-//
-//        // Calculate the next day's date
-//        LocalDate currentDate = LocalDate.of(year, month, day);
-//        LocalDate nextDay = currentDate.plusDays(1);
-//
-//        // Format the next day's date
-//        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MM-yyyy");
-//        String nextDayDate = nextDay.format(formatter);
-//
-//     // Check if the current month and year displayed on the calendar match the month and year of the eventDate
-//        String currentMonthAndYear = driver.findElement(By.xpath("//span[normalize-space()='Today']")).getText();
-//        if (!currentMonthAndYear.contains(String.valueOf(month))) {
-//            // Click the "Next Month" button to navigate to the next month
-//            driver.findElement(NextButton).click();
-//        }
-//
-//        // Capture a screenshot and attach it to Allure
-//        AllureUtils.captureScreenshot(driver, "fuel_report_screenshot");
-//
-//        // Find the element to scroll to the next day's date on the calendar (matching only the day)
-//        WebElement element = driver.findElement(By.xpath("//button[@role='cell'][normalize-space()='" + nextDay.getDayOfMonth() + "']"));
-//        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);
-//
-//        Thread.sleep(3000);
-//
-//        // Click the next day's date on the calendar
-//        driver.findElement(By.xpath("//div[@data-date='" + nextDayDate + "']")).click();
 
-        Thread.sleep(3000);
 
 
      // Find the elements containing the user labels
@@ -121,7 +82,8 @@ public class Case04_deletevent extends BasePage {
         }
 
         // Verify the texts
-        if (userTexts1.contains("Kumar Devinder") && userTexts1.contains("Seakfreight") && userTexts1.contains("SteveQA Adv")) {
+//        if (userTexts1.contains("Kumar Devinder") && userTexts1.contains("Seakfreight") && userTexts1.contains("SteveQA Adv")) {
+        if (userTexts1.contains("Kumar Devinder") && userTexts1.contains("Coach Seakfreight") && userTexts1.contains("Devinder - Wellness Advocate")) {
             System.out.println("User text verification passed!");
         } else {
             System.out.println("User text verification failed!");

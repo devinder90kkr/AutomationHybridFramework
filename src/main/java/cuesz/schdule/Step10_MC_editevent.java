@@ -22,12 +22,23 @@ public class Step10_MC_editevent extends BasePage {
 	public static String eventDate = DateGenerator.generateFixedDate(); // Use the generated date
 	
 	private By membercalicon 	=  (By.xpath("//a[@href='/member-calls']//span"));
-	private By usrtitle			=  (By.xpath("//div[@class='user_title']//label"));
-	private By editicon			=  (By.xpath("//button[@class='btn btn-sm edit_btn']"));
-	private By edittim1			=  (By.xpath("(//input[@placeholder='DD-MM-YYYY'])[1]"));
-	private By editicon2		=  (By.xpath("//body[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/form[1]/div[1]/div[2]/div[1]/button[1]"));
-	private By starttime		=  (By.xpath("//input[@id='startTime']"));
-	private By updateeventbtn	=  (By.xpath("//button[normalize-space()='Update Event']"));
+	//private By usrtitle			=  (By.xpath("//div[@class='user_title']//label"));
+//	private By editicon			=  (By.xpath("//button[@class='btn btn-sm edit_btn']"));
+//	private By edittim1			=  (By.xpath("(//input[@placeholder='DD-MM-YYYY'])[1]"));
+	//private By editicon2		=  (By.xpath("//body[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/form[1]/div[1]/div[2]/div[1]/button[1]"));
+//	private By starttime		=  (By.xpath("//input[@id='startTime']"));
+	//private By updateeventbtn	=  (By.xpath("//button[normalize-space()='Update Event']"));
+	
+	
+	
+	 private By usrtitle 	 	= (By.xpath("//div[@class='user_title']//label"));
+	 private By editicon 		= (By.id("editEventButton"));
+	 private By edittim1 		= (By.id("event_date"));
+	 private By editicon2 		= (By.xpath("//div[@id='eventStartTime']/following-sibling::button[contains(@class, 'btn-secondary')]"));
+	 private By starttime		= (By.xpath("//input[@id='startTime']"));
+	 private By updateeventbtn	= (By.xpath("//button[normalize-space()='Update Event']"));
+	
+	
 	
 	
     public Step10_MC_editevent(WebDriver driver) {
@@ -78,7 +89,8 @@ public class Step10_MC_editevent extends BasePage {
             userTexts.add(userLabel.getText());
         }
         // Verify the texts
-        if (userTexts.contains("Kumar Devinder") && userTexts.contains("Seakfreight") && userTexts.contains("SteveQA Adv")) {
+        if (userTexts.contains("Kumar Devinder") && userTexts.contains("Coach Seakfreight") && userTexts.contains("Devinder - Wellness Advocate")) {
+        // if (userTexts.contains("Kumar Devinder") && userTexts.contains("Seakfreight") && userTexts.contains("SteveQA Adv")) {
             System.out.println("User text verification passed!");
         } else {
             System.out.println("User text verification failed!");

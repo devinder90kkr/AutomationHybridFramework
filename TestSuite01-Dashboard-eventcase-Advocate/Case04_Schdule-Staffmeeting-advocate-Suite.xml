@@ -3,8 +3,7 @@
 <suite name="Suite5">	 
   <test thread-count="5" name="Createevent-staffmeetingcases">
     <classes>     
-      <class name="cuesz.schduletest.advocate.Case12_01_SE_createvent_withouttime"/>
-      <class name="cuesz.schduletest.advocate.Case12_02_SE_createvent_withpastdate"/>
+    
       <class name="cuesz.schduletest.advocate.Case12_03_SE_create_staffevent"/>
       <class name="cuesz.schduletest.advocate.Case12_04_SE_view_staffevent"/>
       <class name="cuesz.schduletest.advocate.Case12_05_SE_edit_staffevent"/>

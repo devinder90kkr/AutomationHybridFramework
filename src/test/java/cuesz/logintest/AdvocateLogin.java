@@ -74,7 +74,7 @@ public class AdvocateLogin {
         loginPage.login("markcuesz90@yopmail.com", "User!234");
 
         // Capture and add login details to Allure report
-        String username = "stevecuesz90@gmail.com";
+        String username = "markcuesz90@yopmail.com";
         String password = "User!234";
         Allure.attachment("Login Details", "Username: " + username + "\nPassword: " + password);
     }
@@ -89,9 +89,5 @@ public class AdvocateLogin {
         return properties.getProperty("browser", "chrome");
     }
 
-//    // Add a method to quit the WebDriver in this class (optional)
-//    @AfterClass
-//    public void tearDown() {
-//        WebDriverManager.quitDriver();
-//    }
+
 }

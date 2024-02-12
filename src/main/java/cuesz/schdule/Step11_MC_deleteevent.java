@@ -24,6 +24,7 @@ public class Step11_MC_deleteevent extends BasePage {
 	private By deletbttn	 = (By.xpath("//button[@class='btn btn-sm del_btn']//em"));
 	private By confirmbttn	 = (By.xpath("//span[normalize-space()='Confirm']"));
 	
+	
 	 public Step11_MC_deleteevent(WebDriver driver) {
 		super(driver);
 		// TODO Auto-generated constructor stub
@@ -77,7 +78,8 @@ public class Step11_MC_deleteevent extends BasePage {
         }
 
         // Verify the texts
-        if (userTexts1.contains("Kumar Devinder") && userTexts1.contains("Seakfreight") && userTexts1.contains("SteveQA Adv")) {
+        if (userTexts1.contains("Kumar Devinder") && userTexts1.contains("Coach Seakfreight") && userTexts1.contains("Devinder - Wellness Advocate")) {
+     //   if (userTexts1.contains("Kumar Devinder") && userTexts1.contains("Seakfreight") && userTexts1.contains("SteveQA Adv")) {
             System.out.println("User text verification passed!");
         } else {
             System.out.println("User text verification failed!");

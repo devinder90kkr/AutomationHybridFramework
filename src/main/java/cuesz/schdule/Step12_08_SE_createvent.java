@@ -62,11 +62,6 @@ public class Step12_08_SE_createvent extends BasePage {
 			WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(50) );
 			WebElement dateElement = wait.until(ExpectedConditions.presenceOfElementLocated(By.className("rbc-events-container")));
 			
-			
-			
-//			// Assuming you want to scroll to an element with the class name 'rbc-events-container'
-//	        WebElement dateElement = driver.findElement(By.className("rbc-events-container"));
-
 	        // Scroll to the element using JavaScript
 	        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", dateElement);
 
@@ -94,7 +89,7 @@ public class Step12_08_SE_createvent extends BasePage {
 		    WebElement staffSelection =driver.findElement(Staff);
 		    Actions builder4 = new Actions(driver);
 		    builder4.moveToElement(staffSelection).click().sendKeys("seakfreight").sendKeys(Keys.ENTER).perform();
-		    builder4.moveToElement(staffSelection).click().sendKeys("steveQA Adv").sendKeys(Keys.ENTER).perform();
+		    builder4.moveToElement(staffSelection).click().sendKeys("devinder").sendKeys(Keys.ENTER).perform();
 
 		    
 		 // Capture a screenshot and attach it to Allure
