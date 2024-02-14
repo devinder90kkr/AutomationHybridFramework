@@ -34,7 +34,7 @@ public class Case25_MS_Mindfulsetting extends BasePage {
 	private By inptFild	= (By.className("mindful_select"));
 	private By endtme1	= (By.xpath("//input[contains(@placeholder,'DD-MM-YYYY')]"));
 	private By submbttn	=	(By.xpath("//span[normalize-space()='Submit']"));
-
+	private By multiSwitch = (By.xpath("//div[@class='ps-3 mindful_select_time_switch']//span[@class='MuiSwitch-root']"));
 
     public Case25_MS_Mindfulsetting(WebDriver driver) {
 		super(driver);
@@ -116,6 +116,12 @@ public class Case25_MS_Mindfulsetting extends BasePage {
       builder.moveToElement(Duration).click().sendKeys("8 Minutes").perform();
       Thread.sleep(2000);
       builder.sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.ENTER).perform();
+      
+      
+   // Handle multi-switch button
+      Thread.sleep(2500);
+      WebElement multiSwitchBtn = driver.findElement(multiSwitch);
+      multiSwitchBtn.click();
       
       Thread.sleep(2500);
       // Locate the input field by its XPath
