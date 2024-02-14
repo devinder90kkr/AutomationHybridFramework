@@ -86,7 +86,7 @@ public class Case33_MS_Uploadposture extends BasePage {
         WebElement backUploadButton = driver.findElement(backUloadBttn);
         backUploadButton.sendKeys("/Users/chicmic/git/Cuesz_AutomationTests/Uploadposture/back.jpeg"); // Replace with the actual file path
 
-        Thread.sleep(8000);
+        Thread.sleep(15000);
         WebElement Submitbutton = driver.findElement(Sumitbttn);
         Submitbutton.click();
                  
