@@ -32,7 +32,7 @@ public class WebDriverManager {
                     // Need to add --headless=new because if chrome version more than v109+
                     // If chrome version v91-108 thne need to use --headless=chrome
                     
-               //     options.addArguments("--headless=new");
+                    options.addArguments("--headless=new");
                   
                     options.setExperimentalOption("prefs", prefs);	
                     options.addArguments("--use-fake-ui-for-media-stream");

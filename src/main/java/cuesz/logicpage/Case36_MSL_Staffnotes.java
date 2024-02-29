@@ -234,41 +234,41 @@ public class Case36_MSL_Staffnotes extends BasePage {
 	    
 	        
 	        /**************************** Compares data for next week before copy ***************************************************************************/          
-	        Thread.sleep(2500);
-	        WebElement nextbutton = driver.findElement(nextbttn);
-	        nextbutton.click();
-	  
-	     // Find the <div> element for Monday
-	        WebElement mondayBlockElement = driver.findElement(mondBlockElement);
-
-	        // Extract the text from the <div> element for Monday
-	        String mondayText = mondayBlockElement.getText();
-	        System.out.println("Monday Date: " + mondayText);
-
-	        // Find the <textarea> element for Compliance within Monday block
-	        WebElement complianceTextarea = driver.findElement(complTextarea);
-	        String complianceValue = complianceTextarea.getAttribute("value");
-	        System.out.println("Compliance: " + complianceValue);
-
-	        // Find the <textarea> element for Travel within Monday block
-	        WebElement travelTextarea = driver.findElement(travelarea);
-	        String travelValue = travelTextarea.getAttribute("value");
-	        System.out.println("Travel: " + travelValue);
-
-	        // Find the <textarea> element for Member feedback within Monday block
-	        WebElement memberFeedbackTextarea = driver.findElement(memberFeedarea);
-	        String memberFeedbackValue = memberFeedbackTextarea.getAttribute("value");
-	        System.out.println("Member Feedback: " + memberFeedbackValue);
-
-	        // Find the <textarea> element for Notes within Monday block
-	        WebElement notesTextarea = driver.findElement(notesarea);
-	        String notesValue = notesTextarea.getAttribute("value");
-	        System.out.println("Notes: " + notesValue);
-	        
-	        WebElement lastWeekButton = driver.findElement(lastButton);   
-            lastWeekButton.click();
-            
-	        Thread.sleep(2500);
+//	        Thread.sleep(2500);
+//	        WebElement nextbutton = driver.findElement(nextbttn);
+//	        nextbutton.click();
+//	  
+//	     // Find the <div> element for Monday
+//	        WebElement mondayBlockElement = driver.findElement(mondBlockElement);
+//
+//	        // Extract the text from the <div> element for Monday
+//	        String mondayText = mondayBlockElement.getText();
+//	        System.out.println("Monday Date: " + mondayText);
+//
+//	        // Find the <textarea> element for Compliance within Monday block
+//	        WebElement complianceTextarea = driver.findElement(complTextarea);
+//	        String complianceValue = complianceTextarea.getAttribute("value");
+//	        System.out.println("Compliance: " + complianceValue);
+//
+//	        // Find the <textarea> element for Travel within Monday block
+//	        WebElement travelTextarea = driver.findElement(travelarea);
+//	        String travelValue = travelTextarea.getAttribute("value");
+//	        System.out.println("Travel: " + travelValue);
+//
+//	        // Find the <textarea> element for Member feedback within Monday block
+//	        WebElement memberFeedbackTextarea = driver.findElement(memberFeedarea);
+//	        String memberFeedbackValue = memberFeedbackTextarea.getAttribute("value");
+//	        System.out.println("Member Feedback: " + memberFeedbackValue);
+//
+//	        // Find the <textarea> element for Notes within Monday block
+//	        WebElement notesTextarea = driver.findElement(notesarea);
+//	        String notesValue = notesTextarea.getAttribute("value");
+//	        System.out.println("Notes: " + notesValue);
+//	        
+//	        WebElement lastWeekButton = driver.findElement(lastButton);   
+//            lastWeekButton.click();
+//            
+//	        Thread.sleep(2500);
 	        
 	        /**************************** Select week and copy data*****************************************************************************************/    
 		     
