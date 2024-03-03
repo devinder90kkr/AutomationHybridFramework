@@ -360,14 +360,6 @@ Desired capabilities for appium :
 }
  ```
 
-
-
-
-
-
-
-
-
 Command run for jenkins on mac
 
 * Install the latest LTS version: >> brew install jenkins-lts
@@ -383,3 +375,12 @@ Command run for jenkins on mac
 
 #Link for git#
 https://confluence.atlassian.com/bitbucketserver/basic-git-commands-776639767.html
+
+
+#Added ResponsiveTester script in automation 
+* For responsive we add ResponsiveTester script in utils and call same in Step12_DB_navlink script for testing purpose. 
+
+
+
+
+

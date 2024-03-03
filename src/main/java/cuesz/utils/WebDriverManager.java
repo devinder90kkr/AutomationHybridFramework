@@ -13,6 +13,7 @@ import org.openqa.selenium.safari.SafariOptions;
 import java.time.Duration;
 import java.util.HashMap;
 import java.util.Map;
+import org.openqa.selenium.Dimension;
 
 import io.qameta.allure.Step;
 
@@ -32,7 +33,7 @@ public class WebDriverManager {
                     // Need to add --headless=new because if chrome version more than v109+
                     // If chrome version v91-108 thne need to use --headless=chrome
                     
-                    options.addArguments("--headless=new");
+                 //   options.addArguments("--headless=new");
                   
                     options.setExperimentalOption("prefs", prefs);	
                     options.addArguments("--use-fake-ui-for-media-stream");
@@ -73,4 +74,6 @@ public class WebDriverManager {
             driver = null;
         }
     }
-}
+    }
+    
+

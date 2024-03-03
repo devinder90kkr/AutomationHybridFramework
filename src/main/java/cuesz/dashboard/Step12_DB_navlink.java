@@ -6,6 +6,7 @@ import org.openqa.selenium.interactions.Actions;
 import org.testng.annotations.Test;
 
 import cuesz.pages.BasePage;
+import cuesz.utils.ResponsiveTester;
 import cuesz.utils.weblocators;
 
 public class Step12_DB_navlink extends BasePage {
@@ -19,6 +20,9 @@ public class Step12_DB_navlink extends BasePage {
 
 	 @Test 
 		public void Navigationfunctionality() throws InterruptedException {
+		 
+		 // Call the utility method to perform responsive testing
+	       // ResponsiveTester.testResponsive(driver);
 		 
 		 Thread.sleep(2000);
 		 driver.findElement(weblocators.schdulemastr).click();
