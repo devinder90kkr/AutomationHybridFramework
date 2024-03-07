@@ -64,7 +64,7 @@ public class Step12_DB_navlinktest {
     @Description("Advocate dashboard navlinks")
     @Story("Navigation links verification.")
     
-    public void advocateScheduleEventTest() throws InterruptedException {
+    public void advocateScheduleEventTest() throws InterruptedException, IOException {
         advocateLogin.setUp(); // Call the setUp method of AdvocateLogin to initialise loginPage
         advocateLogin.testAdvocateLogin();
 
