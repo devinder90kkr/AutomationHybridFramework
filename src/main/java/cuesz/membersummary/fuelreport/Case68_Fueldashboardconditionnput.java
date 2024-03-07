@@ -10,6 +10,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
 
 import cuesz.pages.BasePage;
+import cuesz.utils.AllureUtils;
 import cuesz.utils.SeleniumUtils;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.StaleElementReferenceException;
@@ -88,6 +89,11 @@ public class Case68_Fueldashboardconditionnput extends BasePage{
 					 
 					 WebElement Fast186card = driver.findElement(Fast186);
 					 Fast186card.click();
+					 
+					 
+						// Capture a screenshot and attach it to Allure
+				        AllureUtils.captureScreenshot(driver, "Case68_Fueldashboardconditionnput1");
+					 
 					 } catch (StaleElementReferenceException e) {
 						    
 						}
@@ -106,6 +112,10 @@ public class Case68_Fueldashboardconditionnput extends BasePage{
 					 
 					 WebElement Pescatariancard = driver.findElement(Pescatarian);
 					 Pescatariancard.click();	
+					 
+						// Capture a screenshot and attach it to Allure
+				        AllureUtils.captureScreenshot(driver, "Case68_Fueldashboardconditionnput2");
+					 
 					 
 				} catch (StaleElementReferenceException e) {
 				    
@@ -151,6 +161,10 @@ public class Case68_Fueldashboardconditionnput extends BasePage{
 				
 				WebElement CurrentSavebttn = driver.findElement(CurrentConditionSavebttn);
 				CurrentSavebttn.click();
+				
+				// Capture a screenshot and attach it to Allure
+		        AllureUtils.captureScreenshot(driver, "Case68_Fueldashboardconditionnput3");
+				
 				 } catch (StaleElementReferenceException e) {
 					    
 					}
@@ -187,6 +201,10 @@ public class Case68_Fueldashboardconditionnput extends BasePage{
 					
 					WebElement Medicationdsavebttn = driver.findElement(medicationsavebttn);
 					Medicationdsavebttn.click();
+					
+					// Capture a screenshot and attach it to Allure
+			        AllureUtils.captureScreenshot(driver, "Case68_Fueldashboardconditionnput4");
+					
 				
 				 } catch (StaleElementReferenceException e) {
 					    
@@ -233,6 +251,10 @@ public class Case68_Fueldashboardconditionnput extends BasePage{
 			    
 			    WebElement Supplementsavebttn = driver.findElement(supplementsave);
 			   Supplementsavebttn.click(); 		
+			   
+			// Capture a screenshot and attach it to Allure
+		        AllureUtils.captureScreenshot(driver, "Case68_Fueldashboardconditionnput5");
+			   
 			
 		 } catch (StaleElementReferenceException e) {
 			    
@@ -274,6 +296,10 @@ public class Case68_Fueldashboardconditionnput extends BasePage{
 			      
 	        WebElement DnaSavebttn = driver.findElement(dnasavebttn);
 	        DnaSavebttn.click();	
+	        
+	        
+	     // Capture a screenshot and attach it to Allure
+	        AllureUtils.captureScreenshot(driver, "Case68_Fueldashboardconditionnput6");
 	        
 		 } catch (StaleElementReferenceException e) {
 			    

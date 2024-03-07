@@ -11,6 +11,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
 
 import cuesz.pages.BasePage;
+import cuesz.utils.AllureUtils;
 import cuesz.utils.SeleniumUtils;
 import org.openqa.selenium.StaleElementReferenceException;
 
@@ -106,6 +107,10 @@ public class Case67_Fueldashboard1 extends BasePage{
 				 Thread.sleep(3500); 
 				 WebElement lipidscard = driver.findElement(lipids);
 				 lipidscard.click();
+				 		 
+				 
+				// Capture a screenshot and attach it to Allure
+			        AllureUtils.captureScreenshot(driver, "Case67_Fueldashboard1");
 				 
 				} catch (StaleElementReferenceException e) {
 					    
@@ -113,6 +118,8 @@ public class Case67_Fueldashboard1 extends BasePage{
 				
 	 
 			 Thread.sleep(3500);
+			
+			 
 /***v************************************************************************************************************/
 
 		 try {
@@ -146,6 +153,11 @@ public class Case67_Fueldashboard1 extends BasePage{
 	        WebElement guidlinessavebttn = driver.findElement(guidlinesavebtton);
 	        guidlinessavebttn.click();
 	        
+	        // Capture a screenshot and attach it to Allure
+	        AllureUtils.captureScreenshot(driver, "Case67_Fueldashboard2");
+		 
+	        
+	        
 	 } catch (StaleElementReferenceException e) {
 		    
 		}
@@ -167,6 +179,9 @@ public class Case67_Fueldashboard1 extends BasePage{
 			WebElement cardiosave = driver.findElement(cardiosavebtton);
 			cardiosave.click();
 			
+			 // Capture a screenshot and attach it to Allure
+	        AllureUtils.captureScreenshot(driver, "Case67_Fueldashboard3");
+			
 			Thread.sleep(2500);
 			
 			/***************************************************************************************/
@@ -181,6 +196,10 @@ public class Case67_Fueldashboard1 extends BasePage{
 	       
 	        WebElement saveButton = driver.findElement(gutsaveButton);
 	        saveButton.click();
+
+	        // Capture a screenshot and attach it to Allure
+	        AllureUtils.captureScreenshot(driver, "Case67_Fueldashboard4");
+	        
 	        Thread.sleep(2500);
 	        
 	        
@@ -198,6 +217,9 @@ public class Case67_Fueldashboard1 extends BasePage{
 	        // Find and click the "Save" button by its ID
 	        WebElement BrainGuidelinessaveButton = driver.findElement(BGuidelinessaveButton);
 	        BrainGuidelinessaveButton.click();
+	        
+	        // Capture a screenshot and attach it to Allure
+	        AllureUtils.captureScreenshot(driver, "Case67_Fueldashboard5");
 	        Thread.sleep(2500);
 	        
 	       /******************************************************************************************************/ 
@@ -211,6 +233,10 @@ public class Case67_Fueldashboard1 extends BasePage{
 	        // Find and click the "Save" button by its ID
 	        WebElement DetoxsaveButton = driver.findElement(DetoxsaveBttn);
 	        DetoxsaveButton.click();
+	        
+	     // Capture a screenshot and attach it to Allure
+	        AllureUtils.captureScreenshot(driver, "Case67_Fueldashboard6");
+	        
 	        Thread.sleep(2500);
 	        
 	   /*********************************************************************************************************/     
@@ -224,6 +250,10 @@ public class Case67_Fueldashboard1 extends BasePage{
 	        // Find and click the "Save" button by its ID
 	        WebElement lipidssaveButton = driver.findElement(lipidssaveBttn);
 	        lipidssaveButton.click();
+	        
+	        // Capture a screenshot and attach it to Allure
+	        AllureUtils.captureScreenshot(driver, "Case67_Fueldashboard7");
+	        
 	        Thread.sleep(2500);
 	   
 	   /***************************************************************************************************************/     
@@ -238,6 +268,8 @@ public class Case67_Fueldashboard1 extends BasePage{
 	        WebElement DefaultGuidesaveButton = driver.findElement(DefaultGuidesaveBttn);
 	        DefaultGuidesaveButton.click(); 
 			 
+	     // Capture a screenshot and attach it to Allure
+	        AllureUtils.captureScreenshot(driver, "Case67_Fueldashboard8");
 			  
 			 
 			 Thread.sleep(5500);
@@ -287,6 +319,10 @@ public class Case67_Fueldashboard1 extends BasePage{
 					 Thread.sleep(3500); 
 					 WebElement lipidscard = driver.findElement(lipids);
 					 lipidscard.click();
+					 
+					 	// Capture a screenshot and attach it to Allure
+				        AllureUtils.captureScreenshot(driver, "Case67_Fueldashboard9");
+					 
 					 
 					} catch (StaleElementReferenceException e) {
 						    

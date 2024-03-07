@@ -12,6 +12,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
 
 import cuesz.pages.BasePage;
+import cuesz.utils.AllureUtils;
 import cuesz.utils.SeleniumUtils;
 
 public class Case83_FuelRecommendationLP extends BasePage{
@@ -64,20 +65,9 @@ public class Case83_FuelRecommendationLP extends BasePage{
 				 }
 				 WebElement FuelLP = driver.findElement(By.xpath("//button[@id='2']"));
 				 FuelLP.click();
-				 
-//				 // Find the button with the id `FuelReport-FuelRecommendations-Calories-Increment`
-//				 WebElement incrementButton = driver.findElement(By.id("FuelReport-FuelRecommendations-Calories-Increment"));
-//
-//				 // Click the button twice
-//				 for (int i = 0; i < 2; i++) {
-//				   incrementButton.click();
-//				 }
-//
-//				 // Hold the button for 8 seconds
-//				 Actions actions = new Actions(driver);
-//				 actions.clickAndHold(incrementButton).perform();
-//				 Thread.sleep(8000);
-//				 actions.release().perform();
+
+				 // Capture a screenshot and attach it to Allure
+			        AllureUtils.captureScreenshot(driver, "Case83_FuelRecommendationLP1");
 
 				 // Find the button with the id `FuelReport-FuelRecommendations-Carbs-Increment`
 				 WebElement carbIncrementButton = driver.findElement(By.id("FuelReport-FuelRecommendations-Carbs-Increment"));
@@ -103,6 +93,9 @@ public class Case83_FuelRecommendationLP extends BasePage{
 				   proteinIncrementButton.click();
 				 }
 
+				 // Capture a screenshot and attach it to Allure
+			        AllureUtils.captureScreenshot(driver, "Case83_FuelRecommendationLP2");
+				 
 				 // Hold the button for 3 seconds
 				 Actions action2 = new Actions(driver);
 				 action2.clickAndHold(proteinIncrementButton).perform();
@@ -117,6 +110,9 @@ public class Case83_FuelRecommendationLP extends BasePage{
 				 for (int l = 0; l < 2; l++) {
 				   fatIncrementButton.click();
 				 }
+				 
+				// Capture a screenshot and attach it to Allure
+			        AllureUtils.captureScreenshot(driver, "Case83_FuelRecommendationLP3");
 
 				 // Hold the button for 3 seconds
 				 Actions action3 = new Actions(driver);
@@ -130,5 +126,11 @@ public class Case83_FuelRecommendationLP extends BasePage{
 				
 				 // Click the element
 					 Defcal.click();
+					 
+					// Capture a screenshot and attach it to Allure
+				        AllureUtils.captureScreenshot(driver, "Case83_FuelRecommendationLP");
+					 
+					 
+					 
 		 }
 }
