@@ -7,6 +7,7 @@ import io.qameta.allure.Feature;
 import io.qameta.allure.Owner;
 import io.qameta.allure.Severity;
 import io.qameta.allure.SeverityLevel;
+import io.qameta.allure.Step;
 import io.qameta.allure.Story;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterClass;
@@ -16,6 +17,7 @@ import cuesz.dashboard.Step12_DB_navlink;
 import cuesz.logintest.AdvocateLogin;
 import cuesz.utils.AllureUtils;
 import cuesz.utils.WebDriverManager;
+import cuesz.utils.XHRResponseCaptureUtils;
 
 import java.io.ByteArrayOutputStream;
 import java.io.FileInputStream;
@@ -67,7 +69,10 @@ public class Step12_DB_navlinktest {
     public void advocateScheduleEventTest() throws InterruptedException, IOException {
         advocateLogin.setUp(); // Call the setUp method of AdvocateLogin to initialise loginPage
         advocateLogin.testAdvocateLogin();
-
+        
+     // Call the utility method to capture XHR responses
+        XHRResponseCaptureUtils.captureXHRResponses(driver);
+    
         // Access the Schedule Event page
         dashboardPage.Navigationfunctionality();
         
@@ -103,7 +108,11 @@ public class Step12_DB_navlinktest {
         Allure.description("Operating System: " + osName + " (Version: " + osVersion + ")");
         
     }
-    
+
+    @Step("Capture XHR Responses") // Wrap in a step for clarity
+    private void captureXHRResponses() {
+        XHRResponseCaptureUtils.captureXHRResponses(driver);
+    }
     
     private int captureHttpStatusCode() {
         // Implement code to capture the HTTP status code from your application
