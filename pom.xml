@@ -111,6 +111,20 @@
     <version>7.8.0</version>
     <scope>test</scope>
 </dependency>
+
+<!--cucumber java file-->
+<dependency>
+    <groupId>io.cucumber</groupId>
+    <artifactId>cucumber-java</artifactId>
+    <version>7.15.0</version>
+</dependency>
+
+<dependency>
+    <groupId>io.cucumber</groupId>
+    <artifactId>cucumber-testng</artifactId>
+    <version>7.15.0</version>
+</dependency>
+
 </dependencies>
  
 <!-- Create multiple profile suites for testsuites -->
