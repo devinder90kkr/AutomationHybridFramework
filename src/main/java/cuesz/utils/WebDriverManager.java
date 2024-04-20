@@ -1,5 +1,4 @@
-package cuesz.utils;
-
+package cuesz.utils; 								//Package and Import Statements
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -17,12 +16,14 @@ import org.openqa.selenium.Dimension;
 
 import io.qameta.allure.Step;
 
-public class WebDriverManager {
-    private static WebDriver driver;
-
-    @Step("Start the application")
+//Class Declaration and Variables:
+public class WebDriverManager {						//The WebDriverManager class is located in the cuesz.utils package.
+    private static WebDriver driver;				// declares a private static variable driver of type 
+    												// WebDriver to hold the WebDriver instance.
+    	
+    @Step("Start the application")					// This method is annotated with @Step("Start the application"), which is likely used for reporting purposes with Allure.
     public static WebDriver getDriver(String browser) {
-        if (driver == null) {
+        if (driver == null) {								// It checks if driver is null (i.e., WebDriver is not yet initialized).
             try {
                 if (browser.equalsIgnoreCase("chrome")) {
                     // Setting up Google Chrome options
@@ -67,7 +68,7 @@ public class WebDriverManager {
         return driver;
     }
 
-    @Step("Stop the application")
+    @Step("Stop the application")							//This method is annotated with @Step("Stop the application"), possibly for reporting.
     public static void quitDriver() {
         if (driver != null) {
             driver.quit();
