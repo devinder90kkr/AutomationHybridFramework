@@ -3,6 +3,8 @@ package cuesz02.Iosapp_member_home_PerformScreen;
 import java.util.HashMap;
 
 import org.openqa.selenium.WebElement;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -11,6 +13,7 @@ import cuesz.utils.AllureUtils;
 import cuesz.utils.AppiumappUtils;
 import cuesz.utils.mobileLocators;
 import cuesz.utils.mobileTestData;
+import cuesz01.Iosapp_member_homeScreen.Case10_Homescreen_LPwith15min;
 import io.appium.java_client.AppiumBy;
 import io.appium.java_client.AppiumDriver;
 import io.qameta.allure.Allure;
@@ -32,7 +35,7 @@ import org.openqa.selenium.NoSuchElementException;
 public class Case11_Perform_recommendedactivity extends AppiummobileBase {
 
 	mobileLocators locators = new mobileLocators();	
-	
+	 private static final Logger LOGGER = LoggerFactory.getLogger(Case10_Homescreen_LPwith15min.class);
 	@Test
 	@Owner("QA") // Add the @Owner annotation to specify the executor
     @Severity(SeverityLevel.NORMAL)      
@@ -51,6 +54,10 @@ public class Case11_Perform_recommendedactivity extends AppiummobileBase {
 		WebElement Homeicon = driver.findElement(mobileLocators.Homeclick);
 		Homeicon.click();
 		
+		 // Log console message to Allure
+        LOGGER.info("Click on home menu from bottom");
+        AllureUtils.logStep("Click on home menu from bottom");
+		
 		Thread.sleep(3000);
 		// Method to scroll to perform screen
 		HashMap<String,Object>scrollObject =new HashMap<>();
@@ -64,6 +71,11 @@ public class Case11_Perform_recommendedactivity extends AppiummobileBase {
 		WebElement performcard = driver.findElement(mobileLocators.performclick);
 		performcard.click();
 		
+		 // Log console message to Allure
+        LOGGER.info("Click on perform card ");
+        AllureUtils.logStep("Click on perform card");
+		
+		
 		By walkingperformlLocator = AppiumBy.iOSClassChain("**/XCUIElementTypeStaticText[`label == \"Walking\"`]");
         if(!isElementPresent(driver, walkingperformlLocator)){
             // Scroll to "Basketball" if it's not present
@@ -73,6 +85,10 @@ public class Case11_Perform_recommendedactivity extends AppiummobileBase {
             driver.executeScript("mobile:scroll", scrollObject1);
             Thread.sleep(2000);
         }
+        
+        // Log console message to Allure
+        LOGGER.info("Scroll down to activity");
+        AllureUtils.logStep("Scroll down action for activity");
 		
 		// Locate the element containing the perform
         WebElement Perform = driver.findElement(mobileLocators.walkinlabel);
@@ -103,15 +119,28 @@ public class Case11_Perform_recommendedactivity extends AppiummobileBase {
 		WebElement walkingcard = driver.findElement(mobileLocators.walkingstart);
 		walkingcard.click();
 
+		// Log console message to Allure
+        LOGGER.info("Click on activity");
+        AllureUtils.logStep("Click on activity");
+		
+		
 		Thread.sleep(2500);
 		//Click on back button 
 		WebElement Backbttn = driver.findElement(mobileLocators.backpressbutton);
 		Backbttn.click();
 		
+		// Log console message to Allure
+        LOGGER.info("Click on back button");
+        AllureUtils.logStep("Click on back button");
+		
 		Thread.sleep(2500);
 		// CLick on Walking  card
 		WebElement walkingcard1 = driver.findElement(mobileLocators.walkingstart);
 		walkingcard1.click();
+		
+		// Log console message to Allure
+        LOGGER.info("Click on activity start button ");
+        AllureUtils.logStep("Click on activity start button");
 		
 		// Click on start perform activity for walking activity
 		WebElement startactivitybttn	= driver.findElement(mobileLocators.startperform);
@@ -131,6 +160,10 @@ public class Case11_Perform_recommendedactivity extends AppiummobileBase {
         Allure.addAttachment("Expected Text", expectedText4);
         
         startactivitybttn.click();
+        
+        // Log console message to Allure
+        LOGGER.info("Click on activity start  ");
+        AllureUtils.logStep("Click on activity start ");
 
 		
 		try {
@@ -156,15 +189,24 @@ public class Case11_Perform_recommendedactivity extends AppiummobileBase {
 		        // If actual text and expected text are the same, click on Syncmydevicebttn
 		        WebElement Syncmydevicebttn = driver.findElement(mobileLocators.syncdevicebttn);
 		        Syncmydevicebttn.click();
+		        // Log console message to Allure
+		        LOGGER.info("Click on Syncmydevice bttn  ");
+		        AllureUtils.logStep("Click on Syncmydevice bttn ");
 		    } else {
 		        // If actual text and expected text are different, click on syncbttn
 		        WebElement syncbttn = driver.findElement(mobileLocators.synclaterbttn);
 		        syncbttn.click();
+		        // Log console message to Allure
+		        LOGGER.info("Click on Sync later bttn");
+		        AllureUtils.logStep("Click on Sync later bttn ");
 		    }
 		} catch (NoSuchElementException e) {
 		    // Handle the case where the element is not found by clicking on syncbttn
 		    WebElement syncbttn = driver.findElement(mobileLocators.synclaterbttn);
 		    syncbttn.click();
+		    // Log console message to Allure
+	        LOGGER.info("Click on Sync later bttn");
+	        AllureUtils.logStep("Click on Sync later bttn ");
 		}
 
 		Thread.sleep(2500);
@@ -174,7 +216,7 @@ public class Case11_Perform_recommendedactivity extends AppiummobileBase {
 		    // Extract text from the element
 		    String actualText3 = rhythmtext.getText();
 		    // Define the expected text
-		    String expectedText3 = "Rhythm 24 1091 Synced";
+		    String expectedText3 = "Rhythm 24 2759 Synced";
 
 		    // Print the actual and expected text to the console
 		    System.out.println("Actual Text: " + actualText3);
