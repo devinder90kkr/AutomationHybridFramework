@@ -1,6 +1,8 @@
 package cuesz01.Iosapp_member_homeScreen;
 
 import org.openqa.selenium.WebElement;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.testng.annotations.Test;
 
 import cuesz.pages.AppiummobileBase;
@@ -26,6 +28,8 @@ import io.qameta.allure.Story;
 public class Case08_Homescreen_notification extends AppiummobileBase {
 
 	mobileLocators locators = new mobileLocators();	
+	private static final Logger LOGGER = LoggerFactory.getLogger(Case08_Homescreen_notification.class);
+	
 
 	@SuppressWarnings("deprecation")
 	@Test
@@ -46,6 +50,9 @@ public class Case08_Homescreen_notification extends AppiummobileBase {
 		WebElement Homeicon = driver.findElement(mobileLocators.Homeclick);
 		Homeicon.click();
 		
+		 // Log message to console and Allure report
+        LOGGER.info("Clicked on home menu from bottom");
+        AllureUtils.logStep("Clicked on home menu from bottom");
 		
 		// Capture a screenshot and attach it to Allure
         AllureUtils.captureScreenshot(driver, "Notif1");
@@ -54,6 +61,9 @@ public class Case08_Homescreen_notification extends AppiummobileBase {
 		WebElement notificationicon = driver.findElement(mobileLocators.notificlick);
 		notificationicon.click();
 		
+		 // Log message to console and Allure report
+        LOGGER.info("Clicked on Notification icon on top right corner");
+        AllureUtils.logStep("Clicked on notification icon");
 		
 		// Perform the pull-down action
         WebElement element = driver.findElement(AppiumBy.xpath("(//XCUIElementTypeOther[@name=\"ShowAllNotification\"])[1]"));        int startX = element.getLocation().getX() + element.getSize().getWidth() / 2;

@@ -78,18 +78,18 @@ public class AppiummobileBase {
 
         XCUITestOptions options = new XCUITestOptions();
         
-   //      simulator details
-        options.setDeviceName("iPhone 11");
-        options.setPlatformVersion("17.0");
+//   //      simulator details
+//        options.setDeviceName("iPhone 11");
+//        options.setPlatformVersion("17.0");
 
 
-//     //     for real device
-//        options.setPlatformName("iOS");
-//        options.setDeviceName("Iphone13");
-//        options.setPlatformVersion("17.2.1");
-//        options.setAutomationName("XCUITest");
-//        options.setUdid("00008110-00142D610A79801E");
-//        options.setWdaLaunchTimeout(Duration.ofSeconds(30));
+     //     for real device
+        options.setPlatformName("iOS");
+        options.setDeviceName("Iphone13");
+        options.setPlatformVersion("17.4.1");
+        options.setAutomationName("XCUITest");
+        options.setUdid("00008110-00142D610A79801E");
+        options.setWdaLaunchTimeout(Duration.ofSeconds(30));
 
 //        //     for real device
 //        options.setPlatformName("iOS");

@@ -1,6 +1,8 @@
 package cuesz01.Iosapp_member_homeScreen;
 
 import org.openqa.selenium.WebElement;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.testng.annotations.Test;
 
 import cuesz.pages.AppiummobileBase;
@@ -22,6 +24,7 @@ import io.qameta.allure.Story;
 public class Case04_Homescreen_weekdays_past extends AppiummobileBase {
 
 	mobileLocators locators = new mobileLocators();	  
+	private static final Logger LOGGER = LoggerFactory.getLogger(Case04_Homescreen_weekdays_past.class);
 
 	@Test
 
@@ -38,25 +41,55 @@ public class Case04_Homescreen_weekdays_past extends AppiummobileBase {
         // Click on home menu from the bottom
         WebElement Homeicon = driver.findElement(mobileLocators.Homeclick);
         Homeicon.click();
+        Homeicon.click();
+		 // Log message to console and Allure report
+       LOGGER.info("Click on home menu from bottom");
+       AllureUtils.logStep("Click on home menu from bottom");
+       // Capture a screenshot and attach it to Allure
+       AllureUtils.captureScreenshot(driver, "ios_Homescreen_screenshot");
+        
+        
         
 	     driver.findElement(AppiumBy.accessibilityId("ThuClicked")).click();
+		 	// Log message to console and Allure report
+	       LOGGER.info("Click on Thu");
+	       AllureUtils.logStep("Click on Thu");
+	       
 	     driver.findElement(AppiumBy.accessibilityId("FriClicked")).click();
+	 	// Log message to console and Allure report
+	       LOGGER.info("Click on Fri");
+	       AllureUtils.logStep("Click on Fri");
 	     driver.findElement(AppiumBy.accessibilityId("SatClicked")).click();
+	 	// Log message to console and Allure report
+	       LOGGER.info("Click on Sat");
+	       AllureUtils.logStep("Click on Sat");
 	    
 	     Thread.sleep(1000);
 	     // Capture a screenshot and attach it to Allure
 	     AllureUtils.captureScreenshot(driver, "SatClicked");
 	     
 	     driver.findElement(AppiumBy.accessibilityId("SunClicked")).click();
+	 	// Log message to console and Allure report
+	       LOGGER.info("Click on Sun");
+	       AllureUtils.logStep("Click on Sun");
 	     driver.findElement(AppiumBy.accessibilityId("MonClicked")).click();
+	 	// Log message to console and Allure report
+	       LOGGER.info("Click on Mon");
+	       AllureUtils.logStep("Click on Mon");
 	     driver.findElement(AppiumBy.accessibilityId("TueClicked")).click();
+	 	// Log message to console and Allure report
+	       LOGGER.info("Click on Tue");
+	       AllureUtils.logStep("Click on Tue");
 	     
 	     Thread.sleep(1000);
 	     // Capture a screenshot and attach it to Allure
 	     AllureUtils.captureScreenshot(driver, "TueClicked");
 	     
 	     driver.findElement(AppiumBy.accessibilityId("WedClicked")).click();
-		
+	 		// Log message to console and Allure report
+	     	LOGGER.info("Click on Wed");
+	       AllureUtils.logStep("Click on Wed");
+	     
 	     Thread.sleep(2500);
 	     driver.terminateApp("com.cuesz.mobile");
 	

@@ -6,6 +6,8 @@ import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
@@ -23,6 +25,7 @@ import io.qameta.allure.Story;
 @Epic ("Login detail Screen")
 @Feature ("Verify functionlaity for Login screen")
 public class Case01_Login extends AppiummobileBase {
+	private static final Logger LOGGER = LoggerFactory.getLogger(Case01_Login.class);
 	@BeforeClass
 	 public void setUp() {
 	  }
@@ -45,33 +48,54 @@ public class Case01_Login extends AppiummobileBase {
 				allowclick = driver.findElement(AppiumBy.accessibilityId("Allow"));
 			    if (allowclick.isDisplayed()) {
 			    	allowclick.click();
+			    	// Log message to console and Allure report
+			        LOGGER.info("Click on allow notification alert for permission");
+			        AllureUtils.logStep("Click on allow notifcation");  	
 			    } else {
 			        // Handle the case where the element is not displayed
-			        System.out.println("OK element is not displayed.");
+			        System.out.println("OK allow element is not displayed.");
+			    	// Log message to console and Allure report
+			        LOGGER.info("OK allow element is not displayed.");
+			        AllureUtils.logStep("OK allow element is not displayed.");  	
+			        
 			        // Perform some other action or throw an exception if needed
 			    }
 			} catch (NoSuchElementException e) {
 			    // Handle the case where the element is not found
 			    System.out.println("Crossclick element not found.");
+			    // Log message to console and Allure report
+			    LOGGER.info("Crossclick element not found.");
+		        AllureUtils.logStep("Crossclick element not found.");  	
 			    // Perform some other action or throw an exception if needed
 			}
-			     
-
 		WebElement countryvalues = driver.findElement(AppiumBy.xpath("(//XCUIElementTypeOther[@name=\"🇮🇳\"])[2]"));
 		countryvalues.click();
+		// Log message to console and Allure report
+		LOGGER.info("Click on country values icon");
+        AllureUtils.logStep("Click on country values icon");  
 		
 		WebElement countryname = driver.findElement(AppiumBy.accessibilityId("text-input-country-filter"));
 		countryname.sendKeys("India");
+		// Log message to console and Allure report
+		LOGGER.info("Enter India values in field");
+        AllureUtils.logStep("input India values in field");  
 		
 		WebElement indiaselection = driver.findElement(AppiumBy.accessibilityId("country-selector-IN"));
 		indiaselection.click();
-		
+				// Log message to console and Allure report
+				LOGGER.info("Select India values from list");
+		        AllureUtils.logStep("Select India values from list"); 
+		        
 		// Capture a screenshot and attach it to Allure
         AllureUtils.captureScreenshot(driver, "Country selection"); 
 		
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(1000));
 		WebElement mobilefield = wait.until(ExpectedConditions.elementToBeClickable(AppiumBy.iOSNsPredicateString("name == \"SignInTextInput\"")));
 		mobilefield.click();
+		
+		// Log message to console and Allure report
+		LOGGER.info("Click on phone number field");
+        AllureUtils.logStep("Click on phone number field"); 
 		
 //		driver.findElement(AppiumBy.iOSNsPredicateString("name == \"SignInTextInput\"")).sendKeys(" 9671114235");
 		
@@ -106,13 +130,20 @@ public class Case01_Login extends AppiummobileBase {
 		WebElement mobfield10 = driver.findElement(AppiumBy.xpath("//XCUIElementTypeKey[@name=\"0\"]"));
 		mobfield10.click();
 
+				// Log message to console and Allure report
+				LOGGER.info("Member phone number input in app");
+		        AllureUtils.logStep("Phone number inpt in phone number field"); 		
 		
-		// Capture a screenshot and attach it to Allure
+		        // Capture a screenshot and attach it to Allure
         AllureUtils.captureScreenshot(driver, "Mobile number input before login tap"); 
 		
 		Thread.sleep(2000);
 		WebElement Loginbutton	= driver.findElement(AppiumBy.accessibilityId("LoginButton"));
 		Loginbutton.click();
+		
+		// Log message to console and Allure report
+		LOGGER.info("Click on Login button");
+        AllureUtils.logStep("Click on Login button"); 
 	
 		WebElement Otp1 = driver.findElement(AppiumBy.xpath("(//XCUIElementTypeTextField[@name=\"OTPTextInput\"])[1]"));
 		Otp1.sendKeys("2");
@@ -127,8 +158,16 @@ public class Case01_Login extends AppiummobileBase {
 		WebElement Otp6 = driver.findElement(AppiumBy.xpath("(//XCUIElementTypeTextField[@name=\"OTPTextInput\"])[6]"));
 		Otp6.sendKeys("9");
 		
+			// Log message to console and Allure report
+				LOGGER.info("Input OTP values in field");
+		        AllureUtils.logStep("OTP values inserted in field"); 
+		
 		WebElement submitnbutton	= driver.findElement(AppiumBy.xpath("(//XCUIElementTypeOther[@name=\"Submit\"])[3]"));
 		submitnbutton.click();
+		
+		// Log message to console and Allure report
+				LOGGER.info("Click on submit button");
+		        AllureUtils.logStep("Click on submit button"); 
 		
 		// Check if the Crossclick element is displayed before clicking on it
 		WebElement notificationclick1 = null;
@@ -136,15 +175,25 @@ public class Case01_Login extends AppiummobileBase {
 			notificationclick1 = driver.findElement(AppiumBy.accessibilityId("Allow"));
 		    if (notificationclick1.isDisplayed()) {
 		    	notificationclick1.click();
+		    	// Log message to console and Allure report
+				LOGGER.info("Click on notification button");
+		        AllureUtils.logStep("Click on notification button"); 
+		    	
 		    } else {
 		        // Handle the case where the element is not displayed
-		        System.out.println("OK element is not displayed.");
+		        System.out.println(" notfication element is not displayed.");
+		        // Log message to console and Allure report
+				LOGGER.info("notfication element is not displayed.");
+		        AllureUtils.logStep("notfication element is not displayed."); 
 		        // Perform some other action or throw an exception if needed
 		    }
 		} catch (NoSuchElementException e) {
 		    // Handle the case where the element is not found
 		    System.out.println("Crossclick element not found.");
 		    // Perform some other action or throw an exception if needed
+		    // Log message to console and Allure report
+			LOGGER.info("Crossclick element not found.");
+	        AllureUtils.logStep("Crossclick element not found."); 
 		}
 		
 		
