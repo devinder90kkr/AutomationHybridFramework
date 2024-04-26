@@ -381,6 +381,40 @@ https://confluence.atlassian.com/bitbucketserver/basic-git-commands-776639767.ht
 * For responsive we add ResponsiveTester script in utils and call same in Step12_DB_navlink script for testing purpose. 
 
 
+****************************
+#Mobile automation steps as follow :  
+
+To install appium related thing 
+>> npm install -g appium@next 
+>> sudo npm i -g appium
+ 
+to check appium driver install use command : 
+>> appium driver list 
+
+and than if we need to install driver list than use command as 
+
+>> appium driver install xcuitest 
+
+to install uiautomator 2 in your system than use command 
+>> appium driver install uiautomator2 
 
 
+To download appium inspector need to go url for https://github.com/appium/appium-inspector/releases and download 
+
+For appium we need desired capabilities so please use below :
+
+{
+  "platformName": "iOS",
+  "appium:platformVersion": "17.3.1",
+  "appium:automationName": "XCUITest",
+  "appium:deviceName": "Iphone13",
+  "appium:bundleId": "com.cuesz.mobile",
+  "appium:xcodeOrgId": "U9B8L2V4FL",
+  "appium:xcodeSigningId": "iPhone Developer",
+  "appium:udid": "00008110-00142D610A79801E"
+}
+
+>> to https://appium.readthedocs.io/en/latest/en/drivers/ios-xcuitest-real-devices/ 
+
+use command >> brew install ios-deploy 
 
