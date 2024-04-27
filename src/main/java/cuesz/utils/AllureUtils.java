@@ -27,7 +27,10 @@ public class AllureUtils {
         Allure.step(message);
     }
 
- 
+    public static void logMessageAndStep(String message, String stepDescription) {
+        System.out.println(message);
+        Allure.step(stepDescription);
+    }
     }
 
 
