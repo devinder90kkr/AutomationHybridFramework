@@ -26,4 +26,8 @@ public class AllureUtils {
     public static void logStep(String message) {
         Allure.step(message);
     }
-}
+
+ 
+    }
+
+

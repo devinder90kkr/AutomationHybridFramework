@@ -403,16 +403,7 @@ To download appium inspector need to go url for https://github.com/appium/appium
 
 For appium we need desired capabilities so please use below :
 
-{
-  "platformName": "iOS",
-  "appium:platformVersion": "17.3.1",
-  "appium:automationName": "XCUITest",
-  "appium:deviceName": "Iphone13",
-  "appium:bundleId": "com.cuesz.mobile",
-  "appium:xcodeOrgId": "U9B8L2V4FL",
-  "appium:xcodeSigningId": "iPhone Developer",
-  "appium:udid": "00008110-00142D610A79801E"
-}
+
 
 >> to https://appium.readthedocs.io/en/latest/en/drivers/ios-xcuitest-real-devices/ 
 

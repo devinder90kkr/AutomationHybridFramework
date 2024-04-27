@@ -36,6 +36,7 @@ public class Case11_Perform_recommendedactivity extends AppiummobileBase {
 
 	mobileLocators locators = new mobileLocators();	
 	 private static final Logger LOGGER = LoggerFactory.getLogger(Case10_Homescreen_LPwith15min.class);
+	 
 	@Test
 	@Owner("QA") // Add the @Owner annotation to specify the executor
     @Severity(SeverityLevel.NORMAL)      

@@ -24,6 +24,22 @@ public class ElementActions {
         element.clear();
         element.sendKeys(text);
     }
+    
+    // Get text from popup
+    public String getTextFromPopup(By headingLocator, By contentLocator) {
+        StringBuilder popupText = new StringBuilder();
+
+        String headingText = driver.findElement(headingLocator).getText();
+        popupText.append("Heading: ").append(headingText).append("\n");
+
+        String contentText = driver.findElement(contentLocator).getText();
+        popupText.append("Content: ").append(contentText);
+
+        return popupText.toString();
+    }
+
+
+    
     // Check if an element is displayed
     public boolean isElementDisplayed(By locator) {
         try {

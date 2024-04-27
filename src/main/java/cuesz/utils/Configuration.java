@@ -9,8 +9,9 @@ public class Configuration {
 //     public static final String CHROME_DRIVER_PATH = "C:\\Users\\ASUS\\OneDrive\\Documents\\chromedriver-win64\\chromedriver-win64\\chromedriver.exe";
      
 //     mac system file location
-public static final String CHROME_DRIVER_PATH =	"/Users/inderjeetsingh/Documents/chromedriver-mac-x64/chromedriver";	
-     
+// public static final String CHROME_DRIVER_PATH =	"/Users/inderjeetsingh/Documents/chromedriver-mac-x64/chromedriver";	
+   
+    public static final String CHROME_DRIVER_PATH =	"/Users/manoj/Documents/chromedriver-mac-x64/chromedriver";	
     
     
      // mac edge driver path
