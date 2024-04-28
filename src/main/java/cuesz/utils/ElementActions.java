@@ -1,8 +1,10 @@
 package cuesz.utils;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 
 public class ElementActions {
 
@@ -37,9 +39,32 @@ public class ElementActions {
 
         return popupText.toString();
     }
+   // Get text from popup with heading locator only
+    public String getTextFromPopup(By headingLocator) {
+        StringBuilder popupText = new StringBuilder();
 
+        String headingText = driver.findElement(headingLocator).getText();
+        popupText.append("Heading: ").append(headingText);
 
-    
+        return popupText.toString();
+    }
+
+    public void selectValueFromPicker(By timePickerLocator, String time) throws InterruptedException {
+        WebElement timePicker = driver.findElement(timePickerLocator);
+        Actions builder = new Actions(driver);
+        // Click on the time picker to activate it
+        builder.moveToElement(timePicker).click().perform();
+        Thread.sleep(1000); // Add a short delay to ensure the time picker is fully activated
+
+        // Enter the time
+        builder.sendKeys(time).perform();
+        Thread.sleep(1000); // Add a short delay to ensure the time is entered
+
+        // Press the down arrow to select the first suggestion (if applicable)
+        builder.sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.ENTER).perform();
+    }
+
+        
     // Check if an element is displayed
     public boolean isElementDisplayed(By locator) {
         try {

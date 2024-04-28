@@ -4,6 +4,33 @@ import org.openqa.selenium.By;
 
 public class weblocators {
 	
+	//Case91_MS_Reminderfeature
+	public static final By reminderheading 	= (By.xpath("//h2[normalize-space()='Reminders']"));
+	public static final By reminderarrow 	= (By.xpath("//span[contains(@class,'arrow')]"));
+	public static final By reminderaddbttn 	= (By.xpath("(//div[@class='add_btn'])[2]"));
+	public static final By reminderpop 		= (By.xpath("//h4[normalize-space()='Add Reminder']"));
+	public static final By dateField		= (By.xpath("(//input[@placeholder='DD-MM-YYYY'])[3]"));
+	public static final By remindernotesfield 	= (By.xpath("//textarea[@placeholder='Enter Notes']"));
+	public static final By emailtick		= (By.xpath("(//input[contains(@type,'checkbox')])[24]"));
+	public static final By emailclick 		= (By.xpath("//input[@class='rc-time-picker-input']"));
+	public static final By recurring 		= (By.xpath("(//input[contains(@type,'checkbox')])[25]"));
+	public static final By TimeInput		= (By.xpath("//input[@class='rc-time-picker-panel-input']"));
+	//select time values 
+	public static final By time1			=	(By.xpath("(//div[@class='rc-time-picker-panel-select'])[1]//li[text()='08']"));
+	public static final By time2 			=	(By.xpath("(//div[@class='rc-time-picker-panel-select'])[2]//li[text()='18']"));
+	public static final By time3 			=	(By.xpath("(//div[@class='rc-time-picker-panel-select'])[3]//li[text()='pm']"));
+	public static final By recuuring1		= 	(By.xpath("//div[contains(text(),'Select')]"));
+	public static final By submitbttn 		=	(By.xpath("//button[normalize-space()='Submit']"));
+	public static final By editreminder 	=	(By.xpath("//div[@class='reminder-container']//button[1]"));
+	public static final By editreminderheading	= (By.xpath("//h2[normalize-space()='Edit Reminder']"));
+	public static final By headingreminder	= (By.xpath("//p[@id='alert-dialog-description']"));
+	public static final By remindedelte 	= (By.xpath("(//img[@alt='delete'])[11]"));
+	public static final By deletheading		= (By.xpath("//h2[normalize-space()='Delete Reminder']"));
+
+	
+	
+	
+	
 	//Case90_MS_Actionsteps locaators
 	public static final By actionheading = (By.xpath("//h2[contains(text(), 'Action Steps')]"));
     public static final By addbttn = (By.xpath("//div[@class='add_btn']"));
@@ -19,9 +46,6 @@ public class weblocators {
     public static final By cancelbuttn 	=	(By.xpath("//button[@id='DecisionPopupConfirmation']"));
     public static final By confirmbttn 	=	(By.xpath("//button[@id='DecisionPopupRejection']"));
 
-    		
-    		
-    		
 	//Case35_MSL_MemberWilingnessLimitationScore
 	public static final By lablElment =(By.xpath("//label[text()='Willingness']"));
 	public static final By dotCntaner = (By.className("status_dots_big"));
