@@ -4,6 +4,8 @@ import java.util.HashMap;
 
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebElement;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import cuesz.pages.AppiummobileBase;
@@ -27,6 +29,7 @@ import io.qameta.allure.Story;
 public class Case13_Perform_additionalactivity extends AppiummobileBase {
 	
 	mobileLocators locators = new mobileLocators();	
+	private static final Logger LOGGER = LoggerFactory.getLogger(Case13_Perform_additionalactivity.class);
 
 	@Test
 	@Owner("QA") // Add the @Owner annotation to specify the executor
@@ -46,6 +49,11 @@ public class Case13_Perform_additionalactivity extends AppiummobileBase {
 		WebElement Homeicon = driver.findElement(mobileLocators.Homeclick);
 		Homeicon.click();
 		
+		 // Log console message to Allure
+        LOGGER.info("Click on home menu from bottom");
+        AllureUtils.logStep("Click on home menu from bottom");
+		
+		
 		Thread.sleep(3000);
 		// Method to scroll to perform screen
 		HashMap<String,Object>scrollObject =new HashMap<>();
@@ -54,10 +62,21 @@ public class Case13_Perform_additionalactivity extends AppiummobileBase {
 		driver.executeScript("mobile:scroll", scrollObject);
 		Thread.sleep(2000);
 		
+		 // Log console message to Allure
+        LOGGER.info("Scroll down to cards");
+        AllureUtils.logStep("Scroll down to cards");
+        
 		
 		// CLick on Perform card
 		WebElement performcard = driver.findElement(mobileLocators.performclick);
 		performcard.click();
+		
+		 // Log console message to Allure
+        LOGGER.info("Click on perform card ");
+        AllureUtils.logStep("Click on perform card");
+        
+		// Capture a screenshot and attach it to Allure
+        AllureUtils.captureScreenshot(driver, "perform_click11");
 	
 		// Capture a screenshot and attach it to Allure
         AllureUtils.captureScreenshot(driver, "perform_additional1");
@@ -65,22 +84,49 @@ public class Case13_Perform_additionalactivity extends AppiummobileBase {
 		WebElement perfomplusicon 	= driver.findElement(mobileLocators.perfomplus);
 		perfomplusicon.click();
 		
+		// Log console message to Allure
+        LOGGER.info("Click on plus icon  for open popup related to Start my perform & Perfom activity completed");
+        AllureUtils.logStep("Click on plus icon  for open popup related to Start my perform & Perfom activity completed");
+		
 		WebElement startmyperformactivity 	= driver.findElement(mobileLocators.additionalperform);
 		startmyperformactivity.click();
 		
+		// Log console message to Allure
+        LOGGER.info("Click on Start my perform button");
+        AllureUtils.logStep("Click on Start my perform button");
+		
+		
 		WebElement startmyperfromactivitycross 	= driver.findElement(mobileLocators.cross_additionalpopup);
 		startmyperfromactivitycross.click();
+		
+		// Log console message to Allure
+        LOGGER.info("Click on Cross button to close popup");
+        AllureUtils.logStep("Click on Cross button to close popup");
 		
 		// repeat steps again 
 		WebElement perfomplusicon1 	= driver.findElement(mobileLocators.perfomplus);
 		perfomplusicon1.click();
 		
+		// Log console message to Allure
+        LOGGER.info("Click agian on plus icon  for open popup related to Start my perform & Perfom activity completed");
+        AllureUtils.logStep("Click again on plus icon  for open popup related to Start my perform & Perfom activity completed");
+        
+        
+		
 		WebElement startmyperformactivity2 	= driver.findElement(mobileLocators.additionalperform);
 		startmyperformactivity2.click();
+		
+		// Log console message to Allure
+        LOGGER.info("Click again on to open Start my perform button");
+        AllureUtils.logStep("Click again on to open Start my perform button");
 		
 		// Enter text for Search field 
 		WebElement Additonalperformsearch	= driver.findElement(mobileLocators.searcharea);
 		Additonalperformsearch.sendKeys(mobileTestData.Additonalperformsearchfield);
+		
+		// Log console message to Allure
+        LOGGER.info("Click on search to enter perform activity");
+        AllureUtils.logStep("Click on search to enter perform activity");
 		
 		// Enter text for Search field 
 		WebElement donekeypad	= driver.findElement(mobileLocators.doneclick);
@@ -93,6 +139,10 @@ public class Case13_Perform_additionalactivity extends AppiummobileBase {
 		// Select perform aditonal activity 
 		WebElement selectbaseball 	= driver.findElement(mobileLocators.selectactivity);
 		selectbaseball.click();
+		
+		// Log console message to Allure
+        LOGGER.info("Select acitvity from list");
+        AllureUtils.logStep("Select acitvity from list");
 
 		// Click on start perform activity for walking activity
 		WebElement startactivitybttn	= driver.findElement(mobileLocators.startperform);
@@ -106,12 +156,23 @@ public class Case13_Perform_additionalactivity extends AppiummobileBase {
 	    // Print the actual and expected text to the console
 	    System.out.println("Actual Text: " + actualText4);
 	    System.out.println("Expected Text: " + expectedText4);
+	   
+	    // Log console message to Allure
+        LOGGER.info("Extract text for start perform activity ");
+	    AllureUtils.logStep(actualText4);
+        AllureUtils.logStep(expectedText4);
+	    
+	    
 	    
 	    // Attach values to Allure report
         Allure.addAttachment("Actual Text", actualText4);
         Allure.addAttachment("Expected Text", expectedText4);
         
         startactivitybttn.click();
+        
+        // Log console message to Allure
+        LOGGER.info("Start perform activity ");
+        AllureUtils.logStep("Start perform activity");
 
 		
 		try {
@@ -119,7 +180,7 @@ public class Case13_Perform_additionalactivity extends AppiummobileBase {
 		    // Extract text from the element
 		    String actualText2 = rhythmtext.getText();
 		    // Define the expected text
-		    String expectedText2 = "Rhythm 24 1091";
+		    String expectedText2 = "Rhythm 24 2759";
 
 		    // Print the actual and expected text to the console
 		    System.out.println("Actual Text: " + actualText2);
@@ -132,20 +193,38 @@ public class Case13_Perform_additionalactivity extends AppiummobileBase {
 	        // Use an assertion to verify that actualText4 equals expectedText4
 	        Assert.assertEquals(actualText2, expectedText2);
 		    
+	        
+	        // Log console message to Allure
+	        LOGGER.info("Extract text for soche device name");
+		    AllureUtils.logStep(actualText2);
+	        AllureUtils.logStep(expectedText2);
+		    
 
 		    if (actualText2.equals(expectedText2)) {
 		        // If actual text and expected text are the same, click on Syncmydevicebttn
 		        WebElement Syncmydevicebttn = driver.findElement(mobileLocators.syncdevicebttn);
 		        Syncmydevicebttn.click();
+		        // Log console message to Allure
+		        LOGGER.info("Click on sync my device button");
+			    AllureUtils.logStep("Click on sync my device button");
+		       
+		        
 		    } else {
 		        // If actual text and expected text are different, click on syncbttn
 		        WebElement syncbttn = driver.findElement(mobileLocators.synclaterbttn);
 		        syncbttn.click();
+		        
+		        // Log console message to Allure
+		        LOGGER.info("Click on sync later button");
+			    AllureUtils.logStep("Click on later button");
 		    }
 		} catch (NoSuchElementException e) {
 		    // Handle the case where the element is not found by clicking on syncbttn
 		    WebElement syncbttn = driver.findElement(mobileLocators.synclaterbttn);
 		    syncbttn.click();
+		 // Log console message to Allure
+	        LOGGER.info("Click on sync later button");
+		    AllureUtils.logStep("Click on later button");
 		}
 
 		Thread.sleep(2500);
@@ -155,7 +234,7 @@ public class Case13_Perform_additionalactivity extends AppiummobileBase {
 		    // Extract text from the element
 		    String actualText3 = rhythmtext.getText();
 		    // Define the expected text
-		    String expectedText3 = "Rhythm 24 1091 Synced";
+		    String expectedText3 = "Rhythm 24 2759 Synced";
 
 		    // Print the actual and expected text to the console
 		    System.out.println("Actual Text: " + actualText3);
@@ -167,6 +246,12 @@ public class Case13_Perform_additionalactivity extends AppiummobileBase {
 		    
 		    // Use an assertion to verify that actualText4 equals expectedText4
 	        Assert.assertEquals(actualText3, expectedText3);
+	        
+	        
+	        // Log console message to Allure
+	        LOGGER.info("Extract text for soche device name");
+		    AllureUtils.logStep(actualText3);
+	        AllureUtils.logStep(expectedText3);
 		    
 		    
 		} catch (NoSuchElementException e) {
@@ -187,16 +272,30 @@ public class Case13_Perform_additionalactivity extends AppiummobileBase {
 		    
 		    // Use an assertion to verify that actualText4 equals expectedText4
 	        Assert.assertEquals(actualText5, expectedText5);
+	        
+	        
+	        // Log console message to Allure
+	        LOGGER.info("Extract text from app");
+		    AllureUtils.logStep(actualText5);
+	        AllureUtils.logStep(expectedText5);
 		}
 		
 		try {
 		    WebElement startrecordingcross = driver.findElement(mobileLocators.crossiconrecording);
 		    startrecordingcross.click();
+		    
+		    // Log console message to Allure
+	        LOGGER.info("Click on start recording popup");
+		    AllureUtils.logStep("Click on start recording popup");
 		    Thread.sleep(5000000);
 		} catch (NoSuchElementException e) {
 		    // Handle the case where startrecordingcross is not available
 		    System.out.println("startrecordingcross element not found. Skipping.");
 		    // You can add additional logging or error handling here if needed
+		    
+		    // Log console message to Allure
+	        LOGGER.info("startrecordingcross element not found. Skipping.");
+		    AllureUtils.logStep("startrecordingcross element not found. Skipping.");
 		}	
 		
 			
@@ -205,9 +304,17 @@ public class Case13_Perform_additionalactivity extends AppiummobileBase {
      		WebElement adddeviation = driver.findElement(mobileLocators.deviation);
      		adddeviation.click();
      		
+     		// Log console message to Allure
+	        LOGGER.info("Click on add deviation icon");
+		    AllureUtils.logStep("Click on add deviation icon");
+     		
      		// Click on deviation 
      		WebElement deviationcrossclick = driver.findElement(mobileLocators.Crossclick);
      		deviationcrossclick.click();
+     		
+     	// Log console message to Allure
+	        LOGGER.info("Click on close button for deviation icon");
+		    AllureUtils.logStep("Click on close button for deviation icon");
      		
      		// Click on deviation 
      		WebElement adddeviation2 = driver.findElement(mobileLocators.deviation);
@@ -232,6 +339,12 @@ public class Case13_Perform_additionalactivity extends AppiummobileBase {
 
      		WebElement notes = driver.findElement(mobileLocators.Noteclick);
      		notes.sendKeys(mobileTestData.notefield);
+     		
+     		
+     		// Log console message to Allure
+	        LOGGER.info("Fill detail for deivation field such as select prescribed option and select inhury option and notes");
+		    AllureUtils.logStep("Fill detail for deivation field such as select prescribed option and select inhury option and notes");
+     		
      		
      		Thread.sleep(3500);
      		// Capture a screenshot and attach it to Allure
@@ -268,6 +381,10 @@ public class Case13_Perform_additionalactivity extends AppiummobileBase {
      		WebElement submittap = driver.findElement(mobileLocators.submiticon);
      		submittap.click();
      		
+     		// Log console message to Allure
+	        LOGGER.info("Mark complete activity and submit horus and min and click on submit");
+		    AllureUtils.logStep("Mark complete activity and submit horus and min and click on submit");
+     		
 
      		// Check if the Crossclick element is displayed before clicking on it
      		WebElement Crossclick = null;
@@ -275,15 +392,27 @@ public class Case13_Perform_additionalactivity extends AppiummobileBase {
      		    Crossclick = driver.findElement(mobileLocators.crossicon);
      		    if (Crossclick.isDisplayed()) {
      		        Crossclick.click();
+     		        
+     		        
+     		    // Log console message to Allure
+     		        LOGGER.info("Cross click found and clickable");
+     			    AllureUtils.logStep("Cross click found and clickable");
      		    } else {
      		        // Handle the case where the element is not displayed
      		        System.out.println("Crossclick element is not displayed.");
      		        // Perform some other action or throw an exception if needed
+     		       // Log console message to Allure
+     		        LOGGER.info("Crossclick element is not displayed.");
+     			    AllureUtils.logStep("Crossclick element is not displayed.");
      		    }
      		} catch (NoSuchElementException e) {
      		    // Handle the case where the element is not found
      		    System.out.println("Crossclick element not found.");
      		    // Perform some other action or throw an exception if needed
+     		    
+     		   // Log console message to Allure
+ 		        LOGGER.info("Crossclick element is not displayed.");
+ 			    AllureUtils.logStep("Crossclick element is not displayed.");
      		}
      		
      	
@@ -321,6 +450,11 @@ public class Case13_Perform_additionalactivity extends AppiummobileBase {
      		WebElement feedbacktick = driver.findElement(mobileLocators.tick);
      		feedbacktick.click();
 		
+     		// Log console message to Allure
+	        LOGGER.info("Done rating screen score and session rating from member side");
+		    AllureUtils.logStep("Done rating screen score and session rating from member side");
+     		
+     		
 			
 		Thread.sleep(3500);
 		// Capture a screenshot and attach it to Allure
@@ -331,6 +465,10 @@ public class Case13_Perform_additionalactivity extends AppiummobileBase {
         WebElement deviation	= driver.findElement(mobileLocators.deviationicon);
         deviation.click();
         
+    	// Log console message to Allure
+        LOGGER.info("Click on deviation icon");
+	    AllureUtils.logStep("Click on deviation icon");
+        
         Thread.sleep(3500);
 		// Capture a screenshot and attach it to Allure
         AllureUtils.captureScreenshot(driver, "perform7");
@@ -338,11 +476,18 @@ public class Case13_Perform_additionalactivity extends AppiummobileBase {
         WebElement deviationcross 	= driver.findElement(mobileLocators.crossicondeviation);
         deviationcross.click();  
         
+     // Log console message to Allure
+        LOGGER.info("Click on cross icon deviation icon");
+	    AllureUtils.logStep("Click on cross icon deviation icon");
         
         
         // Click on graph icon
         WebElement graphicon	= driver.findElement(mobileLocators.graphclick);
 		graphicon.click();
+		
+		// Log console message to Allure
+        LOGGER.info("Click on graph icon");
+	    AllureUtils.logStep("Click on graph icon");
 		
 		
 		Thread.sleep(3500);
@@ -352,6 +497,9 @@ public class Case13_Perform_additionalactivity extends AppiummobileBase {
 		WebElement graphclose	= driver.findElement(mobileLocators.graphclse);
 		graphclose.click();
 				
+		// Log console message to Allure
+        LOGGER.info("Click on graph close icon");
+	    AllureUtils.logStep("Click on graph closeicon");
 				
 		
 		

@@ -13,7 +13,7 @@ public class weblocators {
 	public static final By remindernotesfield 	= (By.xpath("//textarea[@placeholder='Enter Notes']"));
 	public static final By emailtick		= (By.xpath("(//input[contains(@type,'checkbox')])[24]"));
 	public static final By emailclick 		= (By.xpath("//input[@class='rc-time-picker-input']"));
-	public static final By recurring 		= (By.xpath("(//input[contains(@type,'checkbox')])[25]"));
+	public static final By recurring 		= (By.xpath("(//input[contains(@type,'checkbox')])[28]"));
 	public static final By TimeInput		= (By.xpath("//input[@class='rc-time-picker-panel-input']"));
 	//select time values 
 	public static final By time1			=	(By.xpath("(//div[@class='rc-time-picker-panel-select'])[1]//li[text()='08']"));
@@ -26,6 +26,9 @@ public class weblocators {
 	public static final By headingreminder	= (By.xpath("//p[@id='alert-dialog-description']"));
 	public static final By remindedelte 	= (By.xpath("(//img[@alt='delete'])[11]"));
 	public static final By deletheading		= (By.xpath("//h2[normalize-space()='Delete Reminder']"));
+	//Case92_MS_Reminderfeature_dailynextday 
+	public static final By calendarnextbttn	= (By.xpath("//button[contains(text(),'›')]"));
+	
 
 	
 	

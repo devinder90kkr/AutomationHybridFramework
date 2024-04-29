@@ -4,6 +4,8 @@ import java.util.Calendar;
 import java.util.HashMap;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.testng.annotations.Test;
 
 import cuesz.pages.AppiummobileBase;
@@ -26,6 +28,7 @@ import io.qameta.allure.Story;
 public class Case19_Perform_nextweekactivitywithLP extends AppiummobileBase {
 
 	mobileLocators locators = new mobileLocators();	
+	private static final Logger LOGGER = LoggerFactory.getLogger(Case19_Perform_nextweekactivitywithLP.class);
 	
 	@Test
 	@Owner("QA") // Add the @Owner annotation to specify the executor
@@ -44,10 +47,22 @@ public class Case19_Perform_nextweekactivitywithLP extends AppiummobileBase {
 		// CLick on home menu from bottom
 		WebElement Homeicon = driver.findElement(mobileLocators.Homeclick);
 		Homeicon.click();
+		
+		 // Log console message to Allure
+        LOGGER.info("Click on home menu from bottom");
+        AllureUtils.logStep("Click on home menu from bottom");
+        // Capture a screenshot and attach it to Allure
+        AllureUtils.captureScreenshot(driver, "nextweek1");
 	
 		// CLick on forward arrow button	
 		WebElement arrowicon = driver.findElement(mobileLocators.arrowclick);
 		arrowicon.click();
+		
+		 // Log console message to Allure
+        LOGGER.info("Click on Arrow for next week");
+        AllureUtils.logStep("Click on Arrow for next week");
+        // Capture a screenshot and attach it to Allure
+        AllureUtils.captureScreenshot(driver, "nextweek2");
 			
 		 // Get current day of the week
         Calendar calendar = Calendar.getInstance();
@@ -73,8 +88,11 @@ public class Case19_Perform_nextweekactivitywithLP extends AppiummobileBase {
         WebElement nextDayButton = driver.findElement(nextDayElement);
         nextDayButton.click();
         
-     // Capture a screenshot and attach it to Allure
-        AllureUtils.captureScreenshot(driver, "performneext1");
+        // Log console message to Allure
+        LOGGER.info("Click on day for next week");
+        AllureUtils.logStep("Click on day for next week");
+        // Capture a screenshot and attach it to Allure
+        AllureUtils.captureScreenshot(driver, "nextweek3");
         
         Thread.sleep(3000);
 		// Method to scroll to perform screen
@@ -88,6 +106,12 @@ public class Case19_Perform_nextweekactivitywithLP extends AppiummobileBase {
 		// CLick on Perform card
 		WebElement performcard = driver.findElement(mobileLocators.performclick);
 		performcard.click();
+		
+		// Log console message to Allure
+        LOGGER.info("Click on perform");
+        AllureUtils.logStep("Click on perform");
+        // Capture a screenshot and attach it to Allure
+        AllureUtils.captureScreenshot(driver, "nextweek4");
         
 		WebElement Liveperform	= driver.findElement(mobileLocators.Liveclick);
 		Liveperform.click();

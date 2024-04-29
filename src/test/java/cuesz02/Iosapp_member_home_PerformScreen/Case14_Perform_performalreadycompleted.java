@@ -7,6 +7,8 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebElement;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.testng.annotations.Test;
 
 import cuesz.pages.AppiummobileBase;
@@ -31,6 +33,7 @@ import io.qameta.allure.Story;
 public class Case14_Perform_performalreadycompleted extends AppiummobileBase {
 	
 	mobileLocators locators = new mobileLocators();
+	private static final Logger LOGGER = LoggerFactory.getLogger(Case14_Perform_performalreadycompleted.class);
 	
 	@Test
 	@Owner("QA") // Add the @Owner annotation to specify the executor
@@ -50,6 +53,10 @@ public class Case14_Perform_performalreadycompleted extends AppiummobileBase {
 		WebElement Homeicon = driver.findElement(mobileLocators.Homeclick);
 		Homeicon.click();
 		
+		 // Log console message to Allure
+        LOGGER.info("Click on home menu from bottom");
+        AllureUtils.logStep("Click on home menu from bottom");
+		
 		Thread.sleep(3000);
 		// Method to scroll to perform screen
 		HashMap<String,Object>scrollObject =new HashMap<>();
@@ -58,29 +65,61 @@ public class Case14_Perform_performalreadycompleted extends AppiummobileBase {
 		driver.executeScript("mobile:scroll", scrollObject);
 		Thread.sleep(2000);
 		
+		
+		 // Log console message to Allure
+        LOGGER.info("Scroll down to cards");
+        AllureUtils.logStep("Scroll down to cards");
+        
+        
 		// CLick on Perform card
 		WebElement performcard = driver.findElement(mobileLocators.performclick);
 		performcard.click();
 	
+		 // Log console message to Allure
+        LOGGER.info("Click on perform card ");
+        AllureUtils.logStep("Click on perform card");
+		
 		// Capture a screenshot and attach it to Allure
 	    AllureUtils.captureScreenshot(driver, "perform_additional1");
 		
 		WebElement perfomplusicon 	= driver.findElement(mobileLocators.perfomplus);
 		perfomplusicon.click();
 		
+		// Log console message to Allure
+        LOGGER.info("Click on plus icon  for open popup related to Start my perform & Perfom activity completed");
+        AllureUtils.logStep("Click on plus icon  for open popup related to Start my perform & Perfom activity completed");
+		
 		WebElement startmyperformactivity 	= driver.findElement(mobileLocators.additionalperform);
 		startmyperformactivity.click();
 		
+		// Log console message to Allure
+        LOGGER.info("Click on Start my perform button");
+        AllureUtils.logStep("Click on Start my perform button");
+		
 		WebElement startmyperfromactivitycross 	= driver.findElement(mobileLocators.cross_additionalpopup);
 		startmyperfromactivitycross.click();
+		
+		// Log console message to Allure
+        LOGGER.info("Click on Cross button to close popup");
+        AllureUtils.logStep("Click on Cross button to close popup");
 		
 		
 		// repeat steps again 
 		WebElement perfomplusicon1 	= driver.findElement(mobileLocators.perfomplus);
 		perfomplusicon1.click();
 		
+		// Log console message to Allure
+        LOGGER.info("Click again on to open Start my perform button");
+        AllureUtils.logStep("Click again on to open Start my perform button");
+		
+		
 		WebElement additionalperformcompleted = driver.findElement(mobileLocators.performcompleted);
 		additionalperformcompleted.click();
+		
+		
+		// Log console message to Allure
+        LOGGER.info("Click again on popup and select perform already completed");
+        AllureUtils.logStep("Click again on popup and select perform already completed");
 		
 		
 		// Check if the Crossclick element is displayed before clicking on it
@@ -89,19 +128,35 @@ public class Case14_Perform_performalreadycompleted extends AppiummobileBase {
 				    Crossclick = driver.findElement(mobileLocators.crossicon);
 				    if (Crossclick.isDisplayed()) {
 				        Crossclick.click();
+				        
+				        // Log console message to Allure
+	     		        LOGGER.info("Cross click found and clickable");
+	     			    AllureUtils.logStep("Cross click found and clickable");
+	     			    
 				    } else {
 				        // Handle the case where the element is not displayed
 				        System.out.println("Crossclick element is not displayed.");
 				        // Perform some other action or throw an exception if needed
+				        
+				        // Log console message to Allure
+	     		        LOGGER.info("Crossclick element is not displayed.");
+	     			    AllureUtils.logStep("Crossclick element is not displayed.");
 				    }
 				} catch (NoSuchElementException e) {
 				    // Handle the case where the element is not found
 				    System.out.println("Crossclick element not found.");
 				    // Perform some other action or throw an exception if needed
+				    // Log console message to Allure
+     		        LOGGER.info("Crossclick element is not displayed.");
+     			    AllureUtils.logStep("Crossclick element is not displayed.");
 				}
 		
 		WebElement Activityinput = driver.findElement(mobileLocators.activityfield);
 		Activityinput.click();
+		
+		 // Log console message to Allure
+	        LOGGER.info("Click on activity and landed on additonal perfom activity feedback screen");
+		    AllureUtils.logStep("Click on activity and landed on additonal perfom activity feedback screen");
 		
 		WebElement Activityinput1 = driver.findElement(mobileLocators.activityfield1);
 		Activityinput1.click();
@@ -124,6 +179,9 @@ public class Case14_Perform_performalreadycompleted extends AppiummobileBase {
 		
 		WebElement Searchinput6 	= driver.findElement(mobileLocators.letter6);
 		Searchinput6.click();
+		// Log console message to Allure
+			LOGGER.info("Enter activity name");
+		    AllureUtils.logStep("Enter activity name");
 		
 		WebElement doneactivity 	= driver.findElement(AppiumBy.accessibilityId("Done"));
 		doneactivity.click();	
@@ -156,6 +214,8 @@ public class Case14_Perform_performalreadycompleted extends AppiummobileBase {
 		WebElement Endselect	= driver.findElement(mobileLocators.Endtme);
 		Endselect.click();
 		
+		
+		
 		List<WebElement>values1 = driver.findElements(mobileLocators.pickerelement);
 
 		for (int i=0; i<values1.size();i++)
@@ -172,6 +232,11 @@ public class Case14_Perform_performalreadycompleted extends AppiummobileBase {
 		
 		Thread.sleep(2500);
 		values1.get(2).sendKeys("AM");
+		
+		// Log console message to Allure
+		LOGGER.info("Enter start time and endtime");
+	    AllureUtils.logStep("Enter start and end time");
+
 	
 		driver.findElement(mobileLocators.Doneclick).click();
 		
@@ -199,6 +264,13 @@ public class Case14_Perform_performalreadycompleted extends AppiummobileBase {
 		tellusmore.sendKeys(mobileTestData.notefield);
 		
 		
+		
+		
+		// Log console message to Allure
+		LOGGER.info("Select score to activity and session rating");
+	    AllureUtils.logStep("Select score to activity and session rating");
+			    
+			    
 		Thread.sleep(3500);
 		// Capture a screenshot and attach it to Allure
         AllureUtils.captureScreenshot(driver, "perform4");
@@ -210,6 +282,10 @@ public class Case14_Perform_performalreadycompleted extends AppiummobileBase {
 		WebElement tickbutton 	= driver.findElement(mobileLocators.Submitclick);
 		tickbutton.click();
 		Thread.sleep(3500);
+		
+		// Log console message to Allure
+		LOGGER.info("Submit rating and activity");
+	    AllureUtils.logStep("Submit rating and activity");
 
 		
 		By walkingperformlLocator = AppiumBy.iOSClassChain("**/XCUIElementTypeStaticText[`label == \"Boxing\"`]");
@@ -233,6 +309,10 @@ public class Case14_Perform_performalreadycompleted extends AppiummobileBase {
         WebElement importlater	= driver.findElement(mobileLocators.importlatericon);
         importlater.click();
         
+    	// Log console message to Allure
+		LOGGER.info("Select import icon");
+	    AllureUtils.logStep("Select import icon");
+        
         
         // Click on graph icon
         WebElement graphicon	= driver.findElement(mobileLocators.graphclick1);
@@ -246,6 +326,10 @@ public class Case14_Perform_performalreadycompleted extends AppiummobileBase {
 		WebElement graphclose	= driver.findElement(mobileLocators.graphclse);
 		graphclose.click();
 		
+		// Log console message to Allure
+				LOGGER.info("Select graph icon");
+			    AllureUtils.logStep("Select graph icon");
+		
 		WebElement deleteaddiotnal	= driver.findElement(mobileLocators.deleteboxing);
 		deleteaddiotnal.click();
 		
@@ -257,7 +341,9 @@ public class Case14_Perform_performalreadycompleted extends AppiummobileBase {
 		
 		WebElement yesdeleteoption	= driver.findElement(mobileLocators.yesdelete);
 		yesdeleteoption.click();
-		
+		// Log console message to Allure
+		LOGGER.info("Select delete and its feature ");
+	    AllureUtils.logStep("Select delete and its feature ");
 		
 		Thread.sleep(3500);
         driver.terminateApp("com.cuesz.mobile");

@@ -3,10 +3,13 @@ package cuesz02.Iosapp_member_home_PerformScreen;
 import java.util.HashMap;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebElement;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import cuesz.pages.AppiummobileBase;
+import cuesz.utils.AllureUtils;
 import cuesz.utils.AppiumappUtils;
 import cuesz.utils.mobileLocators;
 import io.appium.java_client.AppiumBy;
@@ -24,7 +27,9 @@ import io.qameta.allure.Story;
 
 
 public class Case16_Perform_Vo2 extends AppiummobileBase {
-
+	
+	private static final Logger LOGGER = LoggerFactory.getLogger(Case16_Perform_Vo2.class);
+	
 	mobileLocators locators = new mobileLocators();	
 	
 	@Test
@@ -45,6 +50,13 @@ public class Case16_Perform_Vo2 extends AppiummobileBase {
 		WebElement Homeicon = driver.findElement(mobileLocators.Homeclick);
 		Homeicon.click();
 		
+		 // Log console message to Allure
+        LOGGER.info("Click on home menu from bottom");
+        AllureUtils.logStep("Click on home menu from bottom");
+        
+        // Capture a screenshot and attach it to Allure
+        AllureUtils.captureScreenshot(driver, "Vo21");
+		
 		 Thread.sleep(3000);
 		// Method to scroll to perform screen
 		HashMap<String,Object>scrollObject =new HashMap<>();
@@ -57,6 +69,12 @@ public class Case16_Perform_Vo2 extends AppiummobileBase {
 		WebElement performcard = driver.findElement(mobileLocators.performclick);
 		performcard.click();
 		
+		 // Log console message to Allure
+        LOGGER.info("Click on perform card ");
+        AllureUtils.logStep("Click on perform card");
+        // Capture a screenshot and attach it to Allure
+        AllureUtils.captureScreenshot(driver, "Vo22");
+        
 		Thread.sleep(2500);
 		
 		// Locate the element containing the perform
@@ -75,18 +93,31 @@ public class Case16_Perform_Vo2 extends AppiummobileBase {
      // Attach values to Allure report
         Allure.addAttachment("Actual Text", actualText);
         Allure.addAttachment("Expected Text", expectedText);
-		
+
+        // Log console message to Allure
+        LOGGER.info("Extract Vo2 label heading");
+        AllureUtils.logStep(actualText);
+        AllureUtils.logStep(expectedText);
+            
+        
 		WebElement Vo2start	= driver.findElement(mobileLocators.vo2tap);
 		Vo2start.click();
-		
+		   // Log console message to Allure
+			LOGGER.info("Click on Vo2 start ");
+	        AllureUtils.logStep("Click on vo2 start ");
+	        // Capture a screenshot and attach it to Allure
+	        AllureUtils.captureScreenshot(driver, "Vo23");
 	
 		WebElement vo2heading =driver.findElement(mobileLocators.currentweighttap);
 
         // Check if the element is displayed
         if (vo2heading.isDisplayed()) {
             System.out.println("Current Weight popup is open.");
+            
+            AllureUtils.logStep("Current Weight popup is open.");
         } else {
             System.out.println("Current Weight popup is not open.");
+            AllureUtils.logStep("Current Weight popup is not open.");
         }
         // Extract text from the element
         String actualText1 = vo2heading.getText();
@@ -103,8 +134,20 @@ public class Case16_Perform_Vo2 extends AppiummobileBase {
         Allure.addAttachment("Actual Text", actualText1);
         Allure.addAttachment("Expected Text", expectedText1);
         
+        
+        // Log console message to Allure
+        LOGGER.info("Extract label for current weight popup");
+        AllureUtils.logStep(actualText1);
+        AllureUtils.logStep(expectedText1);
+        
         WebElement weightenter	= driver.findElement(mobileLocators.enterweight);
         weightenter.click();
+        
+        // Log console message to Allure
+     			LOGGER.info("Enter weight info for Vo2 start ");
+     	        AllureUtils.logStep("Enter weight detail for vo2 start ");
+     	        // Capture a screenshot and attach it to Allure
+     	        AllureUtils.captureScreenshot(driver, "Vo24");
         
         for (int i = 0; i < 5; i++) {
             WebElement deletebttn = driver.findElement(mobileLocators.deletetap);
@@ -128,9 +171,21 @@ public class Case16_Perform_Vo2 extends AppiummobileBase {
         
         WebElement Donclick = driver.findElement(mobileLocators.doneclick);
         Donclick.click();
-                
+        
+        	// Log console message to Allure
+			LOGGER.info("Fill rating for Vo2 screem and click on done");
+	        AllureUtils.logStep("Fill rating for Vo2 screem and click on done");
+	        // Capture a screenshot and attach it to Allure
+	        AllureUtils.captureScreenshot(driver, "Vo25");
+        
 		WebElement submitcurrentweight 	= driver.findElement(mobileLocators.Ticktap);
 		submitcurrentweight.click();
+		
+		// Log console message to Allure
+					LOGGER.info("Click on tick icon");
+			        AllureUtils.logStep("Click on tick icon");
+			        // Capture a screenshot and attach it to Allure
+			        AllureUtils.captureScreenshot(driver, "Vo26");
 			
 		// Check if the Crossclick element is displayed before clicking on it
 		WebElement notificationclick = null;
@@ -138,14 +193,19 @@ public class Case16_Perform_Vo2 extends AppiummobileBase {
 			notificationclick = driver.findElement(mobileLocators.okatap);
 		    if (notificationclick.isDisplayed()) {
 		    	notificationclick.click();
+		    	
+		    	LOGGER.info("Click on nitification for allow");
+		        AllureUtils.logStep("Click on notification for allow");
 		    } else {
 		        // Handle the case where the element is not displayed
 		        System.out.println("OK element is not displayed.");
+		        AllureUtils.logStep("OK element is not displayed.");
 		        // Perform some other action or throw an exception if needed
 		    }
 		} catch (NoSuchElementException e) {
 		    // Handle the case where the element is not found
 		    System.out.println("Crossclick element not found.");
+		    AllureUtils.logStep("Crossclick element not found.");
 		    // Perform some other action or throw an exception if needed
 		}
 		
@@ -166,6 +226,11 @@ public class Case16_Perform_Vo2 extends AppiummobileBase {
         Allure.addAttachment("Actual Text", actualText2);
         Allure.addAttachment("Expected Text", expectedText2);
         
+        // Log console message to Allure
+        LOGGER.info("Extract label for VO2 Max Test");
+        AllureUtils.logStep(actualText2);
+        AllureUtils.logStep(expectedText2);
+               
 				
      // Locate the element containing for the counter for Vo2 max main screen
         WebElement counter = driver.findElement(mobileLocators.count);
@@ -184,6 +249,12 @@ public class Case16_Perform_Vo2 extends AppiummobileBase {
         Allure.addAttachment("Actual Text", actualText3);
         Allure.addAttachment("Expected Text", expectedText3);
         
+     // Log console message to Allure
+        LOGGER.info("Extract label for vo2 duration");
+        AllureUtils.logStep(actualText3);
+        AllureUtils.logStep(expectedText3);
+        
+        
         WebElement startactivitybttn	= driver.findElement(mobileLocators.Startbutton);
 		// Extract text from the element
 	    String actualText4 = startactivitybttn.getText();
@@ -198,6 +269,12 @@ public class Case16_Perform_Vo2 extends AppiummobileBase {
         Allure.addAttachment("Actual Text", actualText4);
         Allure.addAttachment("Expected Text", expectedText4);
         
+        
+     // Log console message to Allure
+        LOGGER.info("Extract label for Start vo2");
+        AllureUtils.logStep(actualText4);
+        AllureUtils.logStep(expectedText4);
+        
         startactivitybttn.click();
         
         // Check if the Crossclick element is displayed before clicking on it
@@ -206,14 +283,19 @@ public class Case16_Perform_Vo2 extends AppiummobileBase {
  			syncmydeviceclick = driver.findElement(AppiumBy.xpath("(//XCUIElementTypeOther[@name=\"Sync my device\"])[5]"));
  		    if (syncmydeviceclick.isDisplayed()) {
  		    	syncmydeviceclick.click();
+ 		    	AllureUtils.logStep("Click on syncmydeviceclick");
+ 		    	
+ 		    	
  		    } else {
  		        // Handle the case where the element is not displayed
  		        System.out.println("OK element is not displayed.");
+ 		       AllureUtils.logStep("Crossclick element not found.");
  		        // Perform some other action or throw an exception if needed
  		    }
  		} catch (NoSuchElementException e) {
  		    // Handle the case where the element is not found
  		    System.out.println("Crossclick element not found.");
+ 		   AllureUtils.logStep("Crossclick element not found.");
  		    // Perform some other action or throw an exception if needed
  		}
         

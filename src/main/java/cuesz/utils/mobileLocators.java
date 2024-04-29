@@ -5,6 +5,9 @@ import io.appium.java_client.AppiumBy;
 
 public class mobileLocators {
 	
+	
+	public static final By movetoday	= AppiumBy.accessibilityId("I'll do it Today");
+	
 	// Dated 15 Jan this is for tell us more about your fuel
 	public static final By notesclick	= 	AppiumBy.accessibilityId("FuelNotes");
 	public static final By option1		= 	AppiumBy.iOSClassChain("**/XCUIElementTypeOther[`label == \"Did Not Eat Enough\"`][3]");
@@ -178,7 +181,7 @@ public class mobileLocators {
     
 	//Case17_Perform_LivePerformcurrent 
 	public static final By liveperform		= 		AppiumBy.iOSClassChain("**/XCUIElementTypeOther[`label == \"Start\n"
-			+ "Live Perform\"`][2]");
+			+ "Live Perform\"`][3]");
 	//Case18_Perform_nextweekactivity
 	public static final By arrowclick		= 		AppiumBy.accessibilityId("HomeForwardArrow");
 
