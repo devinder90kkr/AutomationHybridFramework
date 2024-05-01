@@ -7,6 +7,8 @@ import java.util.NoSuchElementException;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -15,6 +17,7 @@ import cuesz.utils.AllureUtils;
 import cuesz.utils.AppiumappUtils;
 import cuesz.utils.mobileLocators;
 import cuesz.utils.mobileTestData;
+import cuesz02.Iosapp_member_home_PerformScreen.Case19_Perform_nextweekactivitywithLP;
 import io.appium.java_client.AppiumBy;
 import io.qameta.allure.Description;
 import io.qameta.allure.Epic;
@@ -29,6 +32,7 @@ import io.qameta.allure.Story;
 public class Case20_Fuel_optimalfuel extends AppiummobileBase {
 
 	mobileLocators locators = new mobileLocators();
+	private static final Logger LOGGER = LoggerFactory.getLogger(Case20_Fuel_optimalfuel.class);
 	
 	@Test
 	@Owner("QA") // Add the @Owner annotation to specify the executor
@@ -47,6 +51,11 @@ public class Case20_Fuel_optimalfuel extends AppiummobileBase {
 		WebElement Homeicon = driver.findElement(mobileLocators.Homeclick);
 		Homeicon.click();
 		
+		 // Log console message to Allure
+        LOGGER.info("Click on home menu from bottom");
+        AllureUtils.logStep("Click on home menu from bottom");
+		
+		
 		Thread.sleep(3000);
 		// Method to scroll to perform screen
 		HashMap<String,Object>scrollObject =new HashMap<>();
@@ -60,6 +69,10 @@ public class Case20_Fuel_optimalfuel extends AppiummobileBase {
      
         //Click on Fuel tab 
         driver.findElement(AppiumBy.accessibilityId("FUEL_SCREEN")).click();
+        
+        // Log console message to Allure
+        LOGGER.info("Click on FUEL_SCREEN");
+        AllureUtils.logStep("Click on FUEL_SCREEN");
         	
 		// Locate the element containing the perform
         WebElement Fuel1 = driver.findElement(mobileLocators.fuellabel);
@@ -73,9 +86,17 @@ public class Case20_Fuel_optimalfuel extends AppiummobileBase {
         System.out.println("Expected Text: " + expectedText);
         // Compare the actual and expected text
         Assert.assertEquals(actualText, expectedText);
+
+        AllureUtils.logStep(actualText);
+        AllureUtils.logStep(expectedText);
 		
 		// click on Calories optimal fuel 
         driver.findElement(AppiumBy.accessibilityId("Calories")).click();
+        
+        // Log console message to Allure
+        LOGGER.info("Click on Calories");
+        AllureUtils.logStep("Click on Calories");
+        
         
 		// Capture a screenshot and attach it to Allure
         AllureUtils.captureScreenshot(driver, "Optimalfuel2");
@@ -92,12 +113,19 @@ public class Case20_Fuel_optimalfuel extends AppiummobileBase {
         System.out.println("Expected Text: " + expectedText2);
         // Compare the actual and expected text
         Assert.assertEquals(actualText2, expectedText2);
+        
+        AllureUtils.logStep(actualText2);
+        AllureUtils.logStep(expectedText2);
        
         {
         // Click on fuelBackArrow button 4 times
 	    for (int i = 0; i < 3; i++) {
 	        WebElement backarrow = driver.findElement(mobileLocators.arrowclick1);
 	        backarrow.click();
+	        // Log console message to Allure
+	        LOGGER.info("Click on backarrow");
+	        AllureUtils.logStep("Click on backarrow");
+	        
 	      //  Thread.sleep(1000); // Optional delay to observe the action
 	    }
         
@@ -107,6 +135,10 @@ public class Case20_Fuel_optimalfuel extends AppiummobileBase {
 	    for (int i = 0; i < 2; i++) {
 	        WebElement forwardarrow = driver.findElement(mobileLocators.arrowclick2);
 	        forwardarrow.click();
+	        // Log console message to Allure
+	        LOGGER.info("Click on forwardarrow");
+	        AllureUtils.logStep("Click on forwardarrow");
+	        
 	    }
        
         
@@ -119,6 +151,10 @@ public class Case20_Fuel_optimalfuel extends AppiummobileBase {
 		//Click on  7days from 
 		WebElement day7 = driver.findElement(mobileLocators.dayseven);
 		day7.click();
+		
+		 // Log console message to Allure
+        LOGGER.info("Click on day click");
+        AllureUtils.logStep("Click on day click");
   
 		// Capture a screenshot and attach it to Allure
         AllureUtils.captureScreenshot(driver, "Optimalfuel3");
@@ -126,10 +162,17 @@ public class Case20_Fuel_optimalfuel extends AppiummobileBase {
 		//Click on  14days from 
 		WebElement day14 = driver.findElement(mobileLocators.dayfourteen);
 		day14.click();
+		 // Log console message to Allure
+        LOGGER.info("Click on dayfourteen ");
+        AllureUtils.logStep("Click on dayfourteen");
 	
 		//Click on backfuel from macrobreakdown screen
 		WebElement backclick = driver.findElement(mobileLocators.backfuel);
 		backclick.click();
+		
+		// Log console message to Allure
+        LOGGER.info("Click on backclick ");
+        AllureUtils.logStep("Click on backclick");
 		
 		//click on protein card
 		WebElement protein = driver.findElement(mobileLocators.Protcard);

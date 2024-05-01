@@ -7,13 +7,19 @@ public class weblocators {
 	//Case91_MS_Reminderfeature
 	public static final By reminderheading 	= (By.xpath("//h2[normalize-space()='Reminders']"));
 	public static final By reminderarrow 	= (By.xpath("//span[contains(@class,'arrow')]"));
-	public static final By reminderaddbttn 	= (By.xpath("(//div[@class='add_btn'])[2]"));
+//	public static final By reminderaddbttn 	= (By.xpath("(//div[@class='add_btn'])[2]"));
+	public static final By reminderaddbttn	=	(By.id("add-reminder"));
 	public static final By reminderpop 		= (By.xpath("//h4[normalize-space()='Add Reminder']"));
-	public static final By dateField		= (By.xpath("(//input[@placeholder='DD-MM-YYYY'])[3]"));
-	public static final By remindernotesfield 	= (By.xpath("//textarea[@placeholder='Enter Notes']"));
-	public static final By emailtick		= (By.xpath("(//input[contains(@type,'checkbox')])[24]"));
+//	public static final By dateField		= (By.xpath("(//input[@placeholder='DD-MM-YYYY'])[3]"));
+	public static final By dateField		= (By.id("reminder-date"));
+//	public static final By remindernotesfield 	= (By.xpath("//textarea[@placeholder='Enter Notes']"));
+	public static final By remindernotesfield	= (By.id("reminder-note"));
+//	public static final By emailtick		= (By.xpath("(//input[contains(@type,'checkbox')])[24]"));
+	public static final By emailtick		=	(By.id("reminder-email-check"));
 	public static final By emailclick 		= (By.xpath("//input[@class='rc-time-picker-input']"));
+//	public static final By emailclick		=	(By.id("rc-time-picker time-pick"));
 	public static final By recurring 		= (By.xpath("(//input[contains(@type,'checkbox')])[28]"));
+	public static final By outsideclick		=	(By.id("reminder-modal"));
 	public static final By TimeInput		= (By.xpath("//input[@class='rc-time-picker-panel-input']"));
 	//select time values 
 	public static final By time1			=	(By.xpath("(//div[@class='rc-time-picker-panel-select'])[1]//li[text()='08']"));
@@ -36,18 +42,27 @@ public class weblocators {
 	
 	//Case90_MS_Actionsteps locaators
 	public static final By actionheading = (By.xpath("//h2[contains(text(), 'Action Steps')]"));
-    public static final By addbttn = (By.xpath("//div[@class='add_btn']"));
-    public static final By actioninputfield =(By.xpath("//textarea[@placeholder='Add Note']"));
+//    public static final By addbttn = (By.xpath("//div[@class='add_btn']"));
+    public static final By addbttn = (By.id("add-edit-action-step"));
+    //public static final By actioninputfield =(By.xpath("//textarea[@placeholder='Add Note']"));
+    public static final By actioninputfield = (By.id("add-action-step-input-field"));
     public static final By seeMoreButton = (By.xpath("//span[@class='show_more']"));
-    public static final By seemoreclose = (By.xpath("//button[@class='close_btn']//span"));
-    public static final By editicon	= (By.xpath("(//button)[3]"));
-    public static final By edittextarea = (By.xpath("//textarea[@placeholder='Enter Here']"));    
-    public static final By submitbutton = (By.xpath("//button[normalize-space()='Submit']"));
-    public static final By deleteicon = (By.xpath("(//button)[4]"));
+//    public static final By seemoreclose = (By.xpath("//button[@class='close_btn']//span"));    
+    public static final By seemoreclose =  (By.id("close-btn"));
+//    public static final By editicon	= (By.xpath("(//button)[3]"));
+    public static final By editicon	= (By.id("edit-action-step-0"));    
+//    public static final By edittextarea = (By.xpath("//textarea[@placeholder='Enter Here']"));    
+    public static final By edittextarea = (By.id("edit-action-step-input-field"));   
+//    public static final By submitbutton = (By.xpath("//button[normalize-space()='Submit']"));
+    public static final By submitbutton = (By.id("submit-action-step-edit-form"));
+//    public static final By deleteicon = (By.xpath("(//button)[4]"));
+    public static final By deleteicon = (By.id("delete-action-step-0"));
     public static final By deletePopupHeading = (By.xpath("//h2[normalize-space()='Delete Action Step']"));
     public static final By deletePopupContent = (By.xpath("//div[@class='MuiDialogContent-root']"));
-    public static final By cancelbuttn 	=	(By.xpath("//button[@id='DecisionPopupConfirmation']"));
-    public static final By confirmbttn 	=	(By.xpath("//button[@id='DecisionPopupRejection']"));
+//    public static final By cancelbuttn 	=	(By.xpath("//button[@id='DecisionPopupConfirmation']"));
+    public static final By cancelbuttn		= 	(By.id("DecisionPopupConfirmation"));
+//    public static final By confirmbttn 	=	(By.xpath("//button[@id='DecisionPopupRejection']"));
+    public static final By confirmbttn 		=	(By.id("DecisionPopupRejection"));
 
 	//Case35_MSL_MemberWilingnessLimitationScore
 	public static final By lablElment =(By.xpath("//label[text()='Willingness']"));

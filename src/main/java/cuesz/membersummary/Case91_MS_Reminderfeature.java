@@ -87,26 +87,27 @@ public class Case91_MS_Reminderfeature extends BasePage {
         AllureUtils.logStep("Inputting text into the textarea: " + noteText1);
         AllureUtils.captureScreenshot(driver, "reminder4");
 
-//        // select email tick option
-//        elementActions.clickElement(weblocators.emailtick);
-//        AllureUtils.logStep("Clicking on the email tick option");
-//        AllureUtils.captureScreenshot(driver, "reminder5");
-//        
-//        // select email tick option
-//        elementActions.clickElement(weblocators.emailclick);
-//        AllureUtils.logStep("Clicking on the email timepicker for selct time");
-//
-//        // select email timedropdown option
-//        elementActions.clickElement(weblocators.TimeInput);
-//        AllureUtils.logStep("Clicking on the email timepicker");
-//        AllureUtils.captureScreenshot(driver, "reminder6");
-//        
-//        elementActions.clickElement(weblocators.time1);
-//        elementActions.clickElement(weblocators.time2);
-//        elementActions.clickElement(weblocators.time3);
-//        AllureUtils.logStep("Clicking on the email time");
-//        AllureUtils.captureScreenshot(driver, "reminder7");
+        // select email tick option
+        elementActions.clickElement(weblocators.emailtick);
+        AllureUtils.logStep("Clicking on the email tick option");
+        AllureUtils.captureScreenshot(driver, "reminder5");
+        
+        // select email tick option
+        elementActions.clickElement(weblocators.emailclick);
+        AllureUtils.logStep("Clicking on the email timepicker for selct time");
+
+        // select email timedropdown option
+        elementActions.clickElement(weblocators.TimeInput);
+        AllureUtils.logStep("Clicking on the email timepicker");
+        AllureUtils.captureScreenshot(driver, "reminder6");
+        
+        elementActions.clickElement(weblocators.time1);
+        elementActions.clickElement(weblocators.time2);
+        elementActions.clickElement(weblocators.time3);
+        AllureUtils.logStep("Clicking on the email time");
+        AllureUtils.captureScreenshot(driver, "reminder7");
 //      
+        elementActions.clickElement(weblocators.outsideclick);
 
         Thread.sleep(2000);
         // select email tick option
