@@ -4,6 +4,19 @@ import org.openqa.selenium.By;
 
 public class weblocators {
 	
+	//Case92_MS_actiontaken
+	public static final By actiontakenheading	= (By.xpath("//h2[normalize-space()='Action Taken']"));
+	public static final By actionplusicon		= (By.id("add-action-taken")); 
+	public static final By actiontextarea		= (By.id("action-taken-input-field"));
+	public static final By actiondatefield		= (By.id("action-taken-date"));
+	public static final By submitaction			= (By.id("submit-action-taken"));
+	public static final By showmoreaction		= (By.id("show-more"));
+	public static final By actionedit 			= (By.id("edit-action-taken-0"));
+	public static final By deleteaction			= (By.id("delete-action-taken-0"));
+	public static final By deleteactionnotemainheading	= (By.xpath("//h2[normalize-space()='Delete Action Note']"));
+	public static final By deletecontent		=	(By.xpath("//div[@class='MuiDialogContent-root']"));
+	public static final By crossicon1			=	(By.xpath("//button[@id='close-btn']"));
+	
 	//Case91_MS_Reminderfeature
 	public static final By reminderheading 	= (By.xpath("//h2[normalize-space()='Reminders']"));
 	public static final By reminderarrow 	= (By.xpath("//span[contains(@class,'arrow')]"));
@@ -18,28 +31,27 @@ public class weblocators {
 	public static final By emailtick		=	(By.id("reminder-email-check"));
 	public static final By emailclick 		= (By.xpath("//input[@class='rc-time-picker-input']"));
 //	public static final By emailclick		=	(By.id("rc-time-picker time-pick"));
-	public static final By recurring 		= (By.xpath("(//input[contains(@type,'checkbox')])[28]"));
+//	public static final By recurring 		= (By.xpath("(//input[contains(@type,'checkbox')])[28]"));
+	public static final By recurring 		= (By.id("reminder-recurring-check"));
 	public static final By outsideclick		=	(By.id("reminder-modal"));
 	public static final By TimeInput		= (By.xpath("//input[@class='rc-time-picker-panel-input']"));
 	//select time values 
 	public static final By time1			=	(By.xpath("(//div[@class='rc-time-picker-panel-select'])[1]//li[text()='08']"));
 	public static final By time2 			=	(By.xpath("(//div[@class='rc-time-picker-panel-select'])[2]//li[text()='18']"));
 	public static final By time3 			=	(By.xpath("(//div[@class='rc-time-picker-panel-select'])[3]//li[text()='pm']"));
-	public static final By recuuring1		= 	(By.xpath("//div[contains(text(),'Select')]"));
-	public static final By submitbttn 		=	(By.xpath("//button[normalize-space()='Submit']"));
-	public static final By editreminder 	=	(By.xpath("//div[@class='reminder-container']//button[1]"));
+//	public static final By recuuring1		= 	(By.xpath("//div[contains(text(),'Select')]"));
+	public static final By recuuring1		=  	(By.id("reminder-recurring-options"));
+//	public static final By submitbttn 		=	(By.xpath("//button[normalize-space()='Submit']"));
+	public static final By submitbttn		=	(By.id("submit-reminder"));
+//	public static final By editreminder 	=	(By.xpath("//div[@class='reminder-container']//button[1]"));
+	public static final By editreminder 	=	(By.id("edit-reminder-0"));
 	public static final By editreminderheading	= (By.xpath("//h2[normalize-space()='Edit Reminder']"));
 	public static final By headingreminder	= (By.xpath("//p[@id='alert-dialog-description']"));
 	public static final By remindedelte 	= (By.xpath("(//img[@alt='delete'])[11]"));
 	public static final By deletheading		= (By.xpath("//h2[normalize-space()='Delete Reminder']"));
 	//Case92_MS_Reminderfeature_dailynextday 
 	public static final By calendarnextbttn	= (By.xpath("//button[contains(text(),'›')]"));
-	
 
-	
-	
-	
-	
 	//Case90_MS_Actionsteps locaators
 	public static final By actionheading = (By.xpath("//h2[contains(text(), 'Action Steps')]"));
 //    public static final By addbttn = (By.xpath("//div[@class='add_btn']"));

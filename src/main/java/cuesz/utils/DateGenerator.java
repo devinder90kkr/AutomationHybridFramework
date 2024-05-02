@@ -9,7 +9,7 @@ public class DateGenerator {
         LocalDate currentDate = LocalDate.now();
 
      // Set the day to 12 and keep the current month and year
-        LocalDate fixedDate = LocalDate.of(currentDate.getYear(), currentDate.getMonth(), 10);
+        LocalDate fixedDate = LocalDate.of(currentDate.getYear(), currentDate.getMonth(), 1);
 
         // Check if the fixed date is in the past
         if (fixedDate.isBefore(currentDate)) {

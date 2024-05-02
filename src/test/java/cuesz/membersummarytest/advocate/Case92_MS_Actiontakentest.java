@@ -12,19 +12,19 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 import cuesz.logintest.AdvocateLogin;
-import cuesz.membersummary.Case92_MS_Reminderfeature_dailynextday;
+import cuesz.membersummary.Case92_MS_Actiontaken;
 import cuesz.utils.AllureUtils;
 import cuesz.utils.WebDriverManager;
 
 import io.qameta.allure.*;
 
-@Epic ("Cuesz Staff on member Summary page for reminder feature")
-@Feature ("Verify on member summary page staff able to add reminder for member with daily, weekly and monthly")
+@Epic ("Cuesz Staff on member Summary page for Action taken")
+@Feature ("Verify on member summary page staff able to add action taken")
 
-public class Case92_MS_Reminderfeature_dailynextdaytest {
+public class Case92_MS_Actiontakentest {
     private WebDriver driver;
     private AdvocateLogin advocateLogin;
-    private Case92_MS_Reminderfeature_dailynextday membersummaryPage;
+    private Case92_MS_Actiontaken membersummaryPage;
     private ByteArrayOutputStream consoleOutput; // To capture console output
 
     @BeforeClass
@@ -36,7 +36,7 @@ public class Case92_MS_Reminderfeature_dailynextdaytest {
         
         driver.manage().window().maximize();
         advocateLogin = new AdvocateLogin(); // Initialise the advocateLogin object
-        membersummaryPage = new Case92_MS_Reminderfeature_dailynextday(driver);
+        membersummaryPage = new Case92_MS_Actiontaken(driver);
         
      // Redirect console output to capture it
         consoleOutput = new ByteArrayOutputStream();
@@ -48,15 +48,15 @@ public class Case92_MS_Reminderfeature_dailynextdaytest {
     
     @Owner("QA") // Add the @Owner annotation to specify the executor
     @Severity(SeverityLevel.NORMAL)    
-    @Description("Verify the reminder features.")
-    @Story("Successfuly click on reminder button and input values for various recuuring methods.")
+    @Description("Verify the Action takens.")
+    @Story("Successfuly click on action taken button and input values.")
     
     public void actionsteps() throws InterruptedException {
         advocateLogin.setUp(); // Call the setUp method of AdvocateLogin to initialise loginPage
         advocateLogin.testAdvocateLogin();
 
         // Access the Schedule Event page
-        membersummaryPage.remindernextday();
+        membersummaryPage.actiontaken();
     
      // Generate a dynamic link based on some runtime conditions or data
         String dynamicLink = generateDynamicLink();
