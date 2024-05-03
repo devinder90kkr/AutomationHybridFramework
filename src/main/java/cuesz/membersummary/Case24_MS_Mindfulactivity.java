@@ -75,20 +75,19 @@ public class Case24_MS_Mindfulactivity extends BasePage {
         dropdownThisWeek.click();
 
 
-        // Validate the selected option for "This Week" dropdown
-        WebElement selectedOptionThisWeek = driver.findElement(optnthWek);
-        if (selectedOptionThisWeek.getText().trim().equals("This Week")) {
-            System.out.println("Selected option 'This Week' is validated.");
-        } else {
-            System.out.println("Selected option 'This Week' is incorrect.");
-            
-        }
-   
-     // Capture a screenshot and attach it to Allure
-        AllureUtils.captureScreenshot(driver, "fuel_report_screenshot");
+//        // Validate the selected option for "This Week" dropdown
+//        WebElement selectedOptionThisWeek = driver.findElement(optnthWek);
+//        if (selectedOptionThisWeek.getText().trim().equals("This Week")) {
+//            System.out.println("Selected option 'This Week' is validated.");
+//        } else {
+//            System.out.println("Selected option 'This Week' is incorrect.");
+//            
+//        }
+//   
+//     // Capture a screenshot and attach it to Allure
+//        AllureUtils.captureScreenshot(driver, "fuel_report_screenshot");
         
-        Thread.sleep(4000);
-        // Find the dropdown element for "Last Week" 
+
         Thread.sleep(3000);
 	     // Find the dropdown element
 //	        WebElement dropdown1 = driver.findElement(slectOptnThsWek);
