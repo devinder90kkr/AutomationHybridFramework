@@ -57,6 +57,8 @@ import io.qameta.allure.Allure;
 public class AdvocateLogin {
     private WebDriver driver;
     private Loginpage loginPage; 
+    private String advocateEmail;
+    private String advocatePassword;
 
     @BeforeClass
     public void setUp() {
@@ -69,12 +71,15 @@ public class AdvocateLogin {
        // driver.get(Configuration.BASE_URL);
         driver.get(Config.getProperty("BASE_URL"));
         loginPage = new Loginpage(driver);
+        // Read advocate email and password from config file
+        advocateEmail = Config.getProperty("advocatemail");
+        advocatePassword = Config.getProperty("advocatepassword");
     }
 
     @Test
     public void testAdvocateLogin() {
-        loginPage.login("markcuesz90@yopmail.com", "User!234");
-
+      //  loginPage.login("markcuesz90@yopmail.com", "User!234");
+    	  loginPage.login(advocateEmail, advocatePassword);
         // Capture and add login details to Allure report
         String username = "markcuesz90@yopmail.com";
         String password = "User!234";

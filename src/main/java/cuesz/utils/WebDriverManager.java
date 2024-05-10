@@ -126,6 +126,8 @@ public class WebDriverManager {
                     
                     
                     // Set Chrome options as needed
+                    options.setExperimentalOption("prefs", prefs);	
+                    options.addArguments("--use-fake-ui-for-media-stream");
                     driver = new ChromeDriver(options);
                 } else if (browser.equalsIgnoreCase("edge")) {
                     EdgeDriverManager.edgedriver().setup();
