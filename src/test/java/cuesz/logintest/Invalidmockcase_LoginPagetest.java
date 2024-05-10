@@ -2,6 +2,7 @@ package cuesz.logintest;
 
 import cuesz.pages.Loginpage;
 import cuesz.utils.AllureUtils;
+import cuesz.utils.Config;
 import cuesz.utils.Configuration;
 import cuesz.utils.WebDriverManager;
 import io.qameta.allure.Allure;
@@ -41,7 +42,8 @@ public class Invalidmockcase_LoginPagetest {
         // Set up WebDriverManager with the specified browser
         driver = WebDriverManager.getDriver(browser);
         driver.manage().window().maximize();
-        driver.get(Configuration.BASE_URL);
+        // driver.get(Configuration.BASE_URL);
+        driver.get(Config.getProperty("BASE_URL"));
         
      // Redirect console output to capture it
         consoleOutput = new ByteArrayOutputStream();

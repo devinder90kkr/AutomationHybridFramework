@@ -1,7 +1,7 @@
 package cuesz.utils;
 
 public class Configuration {
-    public static final String BASE_URL = "https://pre-staging.app.cuesz.com";
+  //  public static final String BASE_URL = "https://pre-staging.app.cuesz.com";
     //public static final String BASE_URL = "https://ddzyg3vutpr4b.cloudfront.net/";
  //   public static final String BASE_URL = "https://app.cuesz.com/";  
     

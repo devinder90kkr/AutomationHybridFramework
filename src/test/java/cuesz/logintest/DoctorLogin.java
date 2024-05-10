@@ -10,6 +10,7 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 import cuesz.pages.Loginpage;
+import cuesz.utils.Config;
 import cuesz.utils.Configuration;
 import cuesz.utils.WebDriverManager;
 import io.qameta.allure.Allure;
@@ -25,7 +26,8 @@ public class DoctorLogin {
         // Set up WebDriverManager with the specified browser
         driver = WebDriverManager.getDriver(browser);
         driver.manage().window().maximize();
-        driver.get(Configuration.BASE_URL);
+        // driver.get(Configuration.BASE_URL);
+        driver.get(Config.getProperty("BASE_URL"));
         loginPage = new Loginpage(driver);
     }
 
