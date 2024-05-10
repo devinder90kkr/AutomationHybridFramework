@@ -32,10 +32,19 @@ public class WebDriverManager {						//The WebDriverManager class is located in 
                     ChromeOptions options = new ChromeOptions();
                   
                     // Need to add --headless=new because if chrome version more than v109+
-                    // If chrome version v91-108 thne need to use --headless=chrome
-                    
-                 //   options.addArguments("--headless=new");
-                  
+                    // If chrome version v91-108 thne need to use --headless=chrome              
+//                    options.addArguments("--headless=new");
+//                	options.addArguments("addArguments");
+//        			options.addArguments("--window-size=1920,1080");
+//        			// options.addArguments("start-maximized");
+//        			options.addArguments("disable-infobars");
+//        			// options.addArguments("--disable-extensions");
+//        			options.addArguments("--disable-dev-shm-usage");
+//        			options.addArguments("--disable-browser-side-navigation");
+//        			options.addArguments("--disable-gpu");
+//        			options.addArguments("--no-sandbox");
+//        			options.addArguments("--disable-gpu");
+                              
                     options.setExperimentalOption("prefs", prefs);	
                     options.addArguments("--use-fake-ui-for-media-stream");
                     System.setProperty("webdriver.chrome.driver", Configuration.CHROME_DRIVER_PATH);
