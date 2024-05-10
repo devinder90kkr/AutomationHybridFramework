@@ -13,7 +13,7 @@ public class SeleniumUtils {
     }
 
     public void clickElement(By locator) {
-        WebElement element = driver.findElement(locator);
+        WebElement element = driver. findElement(locator);
         element.click();
     }
 
@@ -64,17 +64,25 @@ public class SeleniumUtils {
 //        clickElement(memberSummaryLocator);
     }
     
- // Enter text in the search field
+// // Enter text in the search field
+//    public void enterSearchText() {
+//        By searchFieldLocator = By.xpath("//input[@placeholder='Search Members']");
+//        // String searchmember = "Shelja"; // Define the search text here
+//       // String searchmember = "Kumar Devinder"; // Define the search text here
+//        String searchmember = "Richard"; // Define the search text here
+//        
+//        enterText(searchFieldLocator, searchmember);
+//     //   enterSearchText("Sanjit QA");
+//    }
     public void enterSearchText() {
         By searchFieldLocator = By.xpath("//input[@placeholder='Search Members']");
-        // String searchmember = "Shelja"; // Define the search text here
-       // String searchmember = "Kumar Devinder"; // Define the search text here
-        String searchmember = "Richard"; // Define the search text here
-        
-        enterText(searchFieldLocator, searchmember);
-     //   enterSearchText("Sanjit QA");
+        String searchMember = Config.getProperty("search.text");
+        enterText(searchFieldLocator, searchMember);
     }
-     
+
+    
+    
+    
   // Click on member call 
         public void clickMembername() throws InterruptedException {
             By memberdetail = (By.xpath("//div[@class='member-items']"));
