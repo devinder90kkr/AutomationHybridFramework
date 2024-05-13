@@ -58,11 +58,8 @@ public class Case01_createvent extends BasePage {
 			 // Log message to console and Allure report
 	        LOGGER.info("Click on date field and enter event date");
 	        AllureUtils.logStep("Click on date field and enter event date");
-		    
+	       
 
-	    	// Log message to console and Allure report
-	        LOGGER.info("Click on allow notification alert for permission");
-	        AllureUtils.logStep("Click on allow notifcation");  	
 		   
 		    /*Enter values for start time*/
 		    Thread.sleep(3500);
@@ -71,13 +68,22 @@ public class Case01_createvent extends BasePage {
 		    builder.moveToElement(startTime).click().sendKeys("06:30 Pm").perform();
 		    Thread.sleep(3500);
 		    builder.sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.ENTER).perform();
+		    
+			 // Log message to console and Allure report
+	        LOGGER.info("Click on start time and input values for same");
+	        AllureUtils.logStep("Click on start time and input values for same");
+	       
 	       
 		    /*Enter values for end time	*/
 		    Thread.sleep(3500);
 		    WebElement endTime =driver.findElement(EndTime);
 		    Actions builder11 = new Actions(driver);
 		    builder11.moveToElement(endTime).click().sendKeys("07:30 PM").sendKeys(Keys.ENTER).perform();
-		 // Capture a screenshot and attach it to Allure
+
+			 // Log message to console and Allure report
+	        LOGGER.info("Click on end time and input value.");
+	        AllureUtils.logStep("Click on end time and input value.");
+		    // Capture a screenshot and attach it to Allure
 	        AllureUtils.captureScreenshot(driver, "fuel_report_screenshot");
 	        
 		    /*Select Event as as Live perform	*/
@@ -86,11 +92,20 @@ public class Case01_createvent extends BasePage {
 		    Actions builder2 = new Actions(driver);
 		    builder2.moveToElement(topicselection).click().sendKeys("Live perform session").sendKeys(Keys.ENTER).perform();
 		    
+			 // Log message to console and Allure report
+	        LOGGER.info("Click on Topic time and select Live perform session.");
+	        AllureUtils.logStep("Click on Topic time and select Live perform session.");
+		    
 		    /*Select Event as as member selection perform	*/
 		    Thread.sleep(3500);
 		    WebElement memberSelection =driver.findElement(Member);
 		    Actions builder3 = new Actions(driver);
 		    builder3.moveToElement(memberSelection).click().sendKeys(" Kumar Devinder").sendKeys(Keys.ENTER).perform();
+		    
+		    // Log message to console and Allure report
+	        LOGGER.info("Click on member list and select member");
+	        AllureUtils.logStep("Click on member list and select member");
+		    
 
 		    /*Select Coach & advocate from dropdown list*/
 		    Thread.sleep(3500);
@@ -98,16 +113,28 @@ public class Case01_createvent extends BasePage {
 		    Actions builder4 = new Actions(driver);
 		    builder4.moveToElement(staffSelection).click().sendKeys("seakfreight").sendKeys(Keys.ENTER).perform();
 		    builder4.moveToElement(staffSelection).click().sendKeys("Devinder").sendKeys(Keys.ENTER).perform();
+		    
+		    
+		    // Log message to console and Allure report
+	        LOGGER.info("Click on staff list and select staff");
+	        AllureUtils.logStep("Click on staff list and select staff");
 
+		   
 		    /*Enter Notes in create event*/
 		    driver.findElement(Notes).sendKeys("We are excited to announce that there will be a live performance event. So please availble");
+		    
+		    // Log message to console and Allure report
+	        LOGGER.info("Click on Notes list and input values");
+	        AllureUtils.logStep("Click on Notes list and input values");
 		    
 		 // Capture a screenshot and attach it to Allure
 	        AllureUtils.captureScreenshot(driver, "fuel_report_screenshot");
 		    
 		    /*Click on submit button*/
 		    driver.findElement(Submitbutton).click();
-		    
+		    // Log message to console and Allure report
+	        LOGGER.info("Click on Submit button");
+	        AllureUtils.logStep("Click on submit button");
 		    
 		    Thread.sleep(2500);
 		    

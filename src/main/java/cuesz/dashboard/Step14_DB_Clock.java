@@ -84,7 +84,7 @@ public class Step14_DB_Clock extends BasePage {
 	@Test
 	public void Clock() throws InterruptedException {
 		
-
+		Thread.sleep(2500);
 		elementActions.clickElement(plsIcon);
 		
 		elementActions.sendKeysToElement(serchInput, "delh");
