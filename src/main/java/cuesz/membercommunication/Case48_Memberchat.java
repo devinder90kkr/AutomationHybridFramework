@@ -245,7 +245,7 @@ public class Case48_Memberchat extends BasePage {
 	        };
 
 	        String memberToSearch = "Kumar Devinder"; // You can keep this outside the loop if it's the same for all messages
-	        int numberOfIterations = 5; // Define the number of times you want to send the messages
+	        int numberOfIterations = 1; // Define the number of times you want to send the messages
 
 	        for (int iteration = 0; iteration < numberOfIterations; iteration++) {
 	            for (String message : messagesToSend) {

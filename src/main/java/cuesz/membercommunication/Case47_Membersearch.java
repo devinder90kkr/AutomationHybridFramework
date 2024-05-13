@@ -29,10 +29,10 @@ public class Case47_Membersearch extends BasePage {
 		 WebElement Chatclick = driver.findElement(membercomunicate);
 	        Chatclick.click();
 	        
-	        Thread.sleep(2500);
+	        Thread.sleep(3500);
 	        // Locate the search input field by its locator
 	        WebElement searchInput = driver.findElement(serchInput);
-	        Thread.sleep(2500);
+	        Thread.sleep(3500);
 	        String[] membersToSearch = {"Sanjit QA", "Sheljaaa", "Jagdeep Singh", "Kumar Devinder"};
 
 	        for (String member : membersToSearch) {

@@ -6,15 +6,18 @@ import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.testng.annotations.Test;
 
 import cuesz.pages.BasePage;
 import cuesz.utils.AllureUtils;
 import cuesz.utils.DateGenerator;
 import cuesz.utils.SeleniumUtils;
-import io.appium.java_client.AppiumBy;
 
 public class Case01_createvent extends BasePage {
+	
+	private static final Logger LOGGER = LoggerFactory.getLogger(Case01_createvent.class);
 	
 	SeleniumUtils utils = new SeleniumUtils(driver);
 	public static String eventDate = DateGenerator.generateFixedDate(); // Use the generated date
@@ -41,12 +44,25 @@ public class Case01_createvent extends BasePage {
 		 	/**********************Click on Schedule master*********************************/	
 			utils.clickScheduleMaster();
 			utils.clickaddnewevent();
+			
+			 // Log message to console and Allure report
+	        LOGGER.info("Click on Add new event button");
+	        AllureUtils.logStep("Click on Add new event button from schdule master");
 				        
 			/*Enter date values*/
 			Thread.sleep(4500);
 		    WebElement datefield = driver.findElement(Date);
 		    Actions builder1 = new Actions(driver);
 		    builder1.moveToElement(datefield).click().sendKeys(eventDate).sendKeys(Keys.ENTER).perform();
+		    
+			 // Log message to console and Allure report
+	        LOGGER.info("Click on date field and enter event date");
+	        AllureUtils.logStep("Click on date field and enter event date");
+		    
+
+	    	// Log message to console and Allure report
+	        LOGGER.info("Click on allow notification alert for permission");
+	        AllureUtils.logStep("Click on allow notifcation");  	
 		   
 		    /*Enter values for start time*/
 		    Thread.sleep(3500);

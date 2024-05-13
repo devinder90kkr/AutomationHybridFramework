@@ -101,6 +101,8 @@ import org.openqa.selenium.edge.EdgeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.safari.SafariDriver;
+import org.openqa.selenium.safari.SafariOptions;
+
 import java.time.Duration;
 import java.util.HashMap;
 import java.util.Map;
@@ -135,9 +137,11 @@ public class WebDriverManager {
                     // Set Edge options as needed
                     driver = new EdgeDriver(options);
                 } else if (browser.equalsIgnoreCase("safari")) {
-                    // WebDriverManager doesn't support Safari
-                    // Set Safari options as needed
-                    driver = new SafariDriver();
+                	 // Setting up Microsoft Edge options
+                  SafariOptions options = new SafariOptions();
+                  // Set Edge browser options as needed
+                  System.setProperty("webdriver.safari.driver", Configuration.SAFARI_DRIVER_PATH);
+                  driver = new SafariDriver(options);
                 } else if (browser.equalsIgnoreCase("firefox")) {
                     FirefoxDriverManager.firefoxdriver().setup();
                     FirefoxOptions options = new FirefoxOptions();
