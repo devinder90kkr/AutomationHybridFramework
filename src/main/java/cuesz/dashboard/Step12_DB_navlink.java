@@ -10,7 +10,7 @@ import org.testng.annotations.Test;
 import cuesz.pages.BasePage;
 import cuesz.utils.AllureUtils;
 import cuesz.utils.ResponsiveTester;
-import cuesz.utils.XHRResponseCaptureUtils;
+
 import cuesz.utils.weblocators;
 import io.qameta.allure.Step;
 

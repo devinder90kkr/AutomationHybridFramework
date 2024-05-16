@@ -17,7 +17,7 @@ import cuesz.dashboard.Step12_DB_navlink;
 import cuesz.logintest.AdvocateLogin;
 import cuesz.utils.AllureUtils;
 import cuesz.utils.WebDriverManager;
-import cuesz.utils.XHRResponseCaptureUtils;
+
 
 import java.io.ByteArrayOutputStream;
 import java.io.FileInputStream;
@@ -70,8 +70,7 @@ public class Step12_DB_navlinktest {
         advocateLogin.setUp(); // Call the setUp method of AdvocateLogin to initialise loginPage
         advocateLogin.testAdvocateLogin();
         
-     // Call the utility method to capture XHR responses
-        XHRResponseCaptureUtils.captureXHRResponses(driver);
+
     
         // Access the Schedule Event page
         dashboardPage.Navigationfunctionality();
@@ -109,11 +108,7 @@ public class Step12_DB_navlinktest {
         
     }
 
-    @Step("Capture XHR Responses") // Wrap in a step for clarity
-    private void captureXHRResponses() {
-        XHRResponseCaptureUtils.captureXHRResponses(driver);
-    }
-    
+   
     private int captureHttpStatusCode() {
         // Implement code to capture the HTTP status code from your application
         // For example, you can extract it from a response object or using Selenium WebDriver

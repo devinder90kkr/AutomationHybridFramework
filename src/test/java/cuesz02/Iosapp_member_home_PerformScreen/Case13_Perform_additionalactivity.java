@@ -2,6 +2,7 @@ package cuesz02.Iosapp_member_home_PerformScreen;
 
 import java.util.HashMap;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebElement;
 import org.slf4j.Logger;
@@ -13,6 +14,8 @@ import cuesz.utils.AllureUtils;
 import cuesz.utils.AppiumappUtils;
 import cuesz.utils.mobileLocators;
 import cuesz.utils.mobileTestData;
+import io.appium.java_client.AppiumBy;
+import io.appium.java_client.AppiumDriver;
 import io.qameta.allure.Allure;
 import io.qameta.allure.Description;
 import io.qameta.allure.Epic;
@@ -460,6 +463,17 @@ public class Case13_Perform_additionalactivity extends AppiummobileBase {
 		// Capture a screenshot and attach it to Allure
         AllureUtils.captureScreenshot(driver, "perform5");
         
+        By walkingperformlLocator = AppiumBy.iOSClassChain("**/XCUIElementTypeStaticText[`label == \"Boxing\"`]");
+        if(!isElementPresent(driver, walkingperformlLocator)){
+            // Scroll to "Basketball" if it's not present
+            HashMap<String,Object> scrollObject1 = new HashMap<>();
+            scrollObject1.put("direction", "down");
+            scrollObject1.put("Baseball", "Baseball");
+            driver.executeScript("mobile:scroll", scrollObject1);
+            Thread.sleep(2000);
+        }
+        
+        
         
         // Click on deviation icon
         WebElement deviation	= driver.findElement(mobileLocators.deviationicon);
@@ -508,4 +522,14 @@ public class Case13_Perform_additionalactivity extends AppiummobileBase {
 	
 	
 	
-	}}
+	}// Function to check if an element is present on the screen
+	public boolean isElementPresent(AppiumDriver driver, By by){
+	    try{
+	        driver.findElement(by);
+	        return true;
+	    } catch (NoSuchElementException e){
+	        return false;
+	    }
+	}
+
+}

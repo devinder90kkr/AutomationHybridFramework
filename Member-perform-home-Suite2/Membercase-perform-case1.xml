@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite7">
+  <test thread-count="5" name="Logic-page-basic-cases">
+    <classes>    
+       <class name="cuesz02.Iosapp_member_home_PerformScreen.Case11_Perform_recommendedactivity" />
+       <class name="cuesz02.Iosapp_member_home_PerformScreen.Case12_Perform_additionalactivity_deleteprocess" />
+	   <class name="cuesz02.Iosapp_member_home_PerformScreen.Case13_Perform_additionalactivity" />
+      <class name="cuesz02.Iosapp_member_home_PerformScreen." />
+     <class name="cuesz02.Iosapp_member_home_PerformScreen." />
+     <class name="cuesz02.Iosapp_member_home_PerformScreen." />
+     <class name="cuesz02.Iosapp_member_home_PerformScreen." />
+     <class name="cuesz02.Iosapp_member_home_PerformScreen." />
+     <class name="cuesz02.Iosapp_member_home_PerformScreen." />
+                                           
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->
