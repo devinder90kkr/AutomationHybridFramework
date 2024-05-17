@@ -130,11 +130,11 @@ public class Case01_Login extends AppiummobileBase {
 		WebElement mobfield10 = driver.findElement(AppiumBy.xpath("//XCUIElementTypeKey[@name=\"0\"]"));
 		mobfield10.click();
 
-				// Log message to console and Allure report
-				LOGGER.info("Member phone number input in app");
-		        AllureUtils.logStep("Phone number inpt in phone number field"); 		
-		
-		        // Capture a screenshot and attach it to Allure
+		// Log message to console and Allure report
+		LOGGER.info("Member phone number input in app");
+        AllureUtils.logStep("Phone number inpt in phone number field"); 		
+
+		// Capture a screenshot and attach it to Allure
         AllureUtils.captureScreenshot(driver, "Mobile number input before login tap"); 
 		
 		Thread.sleep(2000);

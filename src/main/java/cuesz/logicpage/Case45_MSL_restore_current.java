@@ -90,27 +90,24 @@ Thread.sleep(3500);
 		      
 			   Thread.sleep(2000);
 			   WebElement restoreoption1 =driver.findElement(rstropton1);
-			   restoreoption1.clear();
 			   Actions builder = new Actions(driver);
 			   builder.moveToElement(restoreoption1).click().sendKeys("ice bath for 30 seconds").perform();
 			   Thread.sleep(2000);
-			  builder.sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.TAB).perform();
+			   builder.sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.ENTER).perform();
 			   
-			   Thread.sleep(2000);
+			   Thread.sleep(2500);
 			   WebElement restoreoption2 =driver.findElement(rstropton2);
-			   restoreoption2.clear();
 			   Actions builder2 = new Actions(driver);
 			   builder2.moveToElement(restoreoption2).click().sendKeys("3x ZMA").perform();
 			   Thread.sleep(2000);
-			   builder2.sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.TAB).perform();
+			   builder2.sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.ENTER).perform();
 			   
-			   Thread.sleep(2000);
+			   Thread.sleep(2500);
 			   WebElement restoreoption3 =driver.findElement(rstropton3);
-			   restoreoption3.clear();
 			   Actions builder3 = new Actions(driver);
 			   builder3.moveToElement(restoreoption3).click().sendKeys("This is manual enterny by automation tool").perform();
 			   Thread.sleep(2000);
-			   builder3.sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.TAB).perform();
+			   builder3.sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.ENTER).perform();
 			   
 			   Thread.sleep(2500);
 			   // Locate the heading element
@@ -127,22 +124,21 @@ Thread.sleep(3500);
 		       }
 		       
 		       
-		       Thread.sleep(2000);
+		       Thread.sleep(2500);
 			   WebElement Sleepeoption =driver.findElement(Slepeopton);
-			   Sleepeoption.clear();
 			   Actions builder4 = new Actions(driver);
 			   builder4.moveToElement(Sleepeoption).click().sendKeys("swedish relaxation").perform();
 			   Thread.sleep(2000);
-			   builder4.sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.TAB).perform();
-			   Thread.sleep(2000);
+			   builder4.sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.ENTER).perform();
+			 
 		       
-			   Thread.sleep(2000);
+			   Thread.sleep(2500);
 			   WebElement Sleepeoption2 =driver.findElement(Slepeopton2);
 			   Sleepeoption2.clear();
 			   Actions builder5 = new Actions(driver);
 			   builder5.moveToElement(Sleepeoption2).click().sendKeys("thinking on purpose").perform();
 			   Thread.sleep(2000);
-			   builder5.sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.TAB).perform();
+			   builder5.sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.ENTER).perform();
 			   Thread.sleep(2000);
 
 		 }

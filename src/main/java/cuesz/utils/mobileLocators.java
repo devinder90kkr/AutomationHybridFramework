@@ -5,6 +5,26 @@ import io.appium.java_client.AppiumBy;
 
 public class mobileLocators {
 	
+	//Locators for Restore card 
+	public static final By restoreclick	= 	AppiumBy.accessibilityId("RESTORE_SCREEN");
+	public static final By restorelabel	=	AppiumBy.accessibilityId("Before Sleep Time");	
+	public static final By restoresublabel	=	AppiumBy.iOSClassChain("**/XCUIElementTypeStaticText[`name == \"one hour before sleep\"`]");
+	public static final By restor1		=	AppiumBy.iOSClassChain("**/XCUIElementTypeOther[`name == \"Before Sleep Time 0\"`][3]");
+	public static final By restor2		=	AppiumBy.iOSClassChain("**/XCUIElementTypeOther[`name == \"Before Sleep Time 1\"`][3]");
+	public static final By Beforesleeptick	=	AppiumBy.accessibilityId("Before Sleep Time Tick");
+	public static final By sleeptimelabel	=	AppiumBy.iOSClassChain("**/XCUIElementTypeStaticText[`name == \"Sleep Time\"`]");
+	public static final By sleeptick	=	AppiumBy.accessibilityId("Sleep Time Tick");
+	public static final By restoreplus	=	AppiumBy.accessibilityId("AddEvent");
+	public static final By addcomemnt	=	AppiumBy.iOSClassChain("**/XCUIElementTypeStaticText[`name == \"Add comments\"`]");
+	public static final By restoraddcomment1	= AppiumBy.accessibilityId("Couldn't sleep");
+	public static final By restoraddcomment2	= AppiumBy.accessibilityId("Different bed");
+	public static final By restoraddcomment3	= AppiumBy.accessibilityId("Stress");
+	public static final By restoraddcomment4	= AppiumBy.accessibilityId("Smoke");
+	public static final By restoraddcomment5	= AppiumBy.accessibilityId("Cold Plunge");
+	public static final By restoraddcomment6	= AppiumBy.accessibilityId("Jet Lag");
+	public static final By returnbtn	=	AppiumBy.accessibilityId("Return");
+	public static final By commentarea	=	AppiumBy.iOSClassChain("**/XCUIElementTypeStaticText[`name == \"Restore Comment\"`]");
+	
 	
 	public static final By movetoday	= AppiumBy.accessibilityId("I'll do it Today");
 	
