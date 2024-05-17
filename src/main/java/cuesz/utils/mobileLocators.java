@@ -6,6 +6,17 @@ import io.appium.java_client.AppiumBy;
 public class mobileLocators {
 	
 	
+	//locators for chat screen
+	public static final By ChatClick	=	AppiumBy.iOSClassChain("**/XCUIElementTypeOther[`name == \"Advocate\"`][2]");
+	public static final By entermessage	=	AppiumBy.accessibilityId("EnterMessage");
+	public static final By sendmessage	=	AppiumBy.accessibilityId("SendMessage");
+	public static final By medialinks	=	AppiumBy.accessibilityId("Media/Links");
+	public static final By media		=	AppiumBy.accessibilityId("Media");
+	public static final By documents	=	AppiumBy.accessibilityId("Documents");
+	public static final By links		=	AppiumBy.accessibilityId("Links");
+	
+	
+	
 	//Locators for morning scan
 	public static final By Morningscanclick	= AppiumBy.iOSClassChain("**/XCUIElementTypeOther[`name == \"Morning Scan\"`][2]");
 	public static final By manualinput	=	AppiumBy.accessibilityId("ManualDataMorningScan");

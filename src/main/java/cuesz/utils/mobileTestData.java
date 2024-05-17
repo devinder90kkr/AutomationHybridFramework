@@ -10,6 +10,11 @@ public class mobileTestData {
 //	builder1.moveToElement(datefield).click().sendKeys(TestData.EVENT_DATE).sendKeys(Keys.ENTER).perform();
 	
 	
+	
+	public static final String message1	=	"Believe you can and you're halfway there";
+	public static final String message2	=	"The only limit to our realization of tomorrow will be our doubts of today";
+	public static final String message3	=	"The journey of a thousand miles begins with one step";
+	
 	public static final String Co2text	=	"30";
 	
 	public static final String notefield = "verify field accept automate values in Notes field";
