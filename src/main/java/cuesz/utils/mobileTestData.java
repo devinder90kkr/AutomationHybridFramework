@@ -9,6 +9,9 @@ public class mobileTestData {
 //	Actions builder1 = new Actions(driver);
 //	builder1.moveToElement(datefield).click().sendKeys(TestData.EVENT_DATE).sendKeys(Keys.ENTER).perform();
 	
+	
+	public static final String Co2text	=	"30";
+	
 	public static final String notefield = "verify field accept automate values in Notes field";
 	public static final String Additonalperformsearchfield = "Baseball";
 	public static final String amdata = "AM";
@@ -33,5 +36,7 @@ public class mobileTestData {
 	public static final String Potassium = "511.4" ;
 	public static final String VitaminA =  "2.36";
 	public static final String VitaminB = "0.36" ;
+	
+
 	
 }

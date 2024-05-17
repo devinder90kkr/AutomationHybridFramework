@@ -5,6 +5,34 @@ import io.appium.java_client.AppiumBy;
 
 public class mobileLocators {
 	
+	
+	//Locators for morning scan
+	public static final By Morningscanclick	= AppiumBy.iOSClassChain("**/XCUIElementTypeOther[`name == \"Morning Scan\"`][2]");
+	public static final By manualinput	=	AppiumBy.accessibilityId("ManualDataMorningScan");
+	public static final By HRVminus		=	AppiumBy.accessibilityId("HRV (rMMSD) Minus");
+	public static final By HRVplus		=	AppiumBy.accessibilityId("HRV (rMMSD) Plus");
+	public static final By RHRminus		=	AppiumBy.accessibilityId("RHR (BPM) Minus");
+	public static final By RHRplus		=	AppiumBy.accessibilityId("RHR (BPM) Plus");
+	public static final By Lminus		= 	AppiumBy.accessibilityId("L Minus");
+	public static final By Lplus		= 	AppiumBy.accessibilityId("L Plus");
+	public static final By Rminus		=	AppiumBy.accessibilityId("R Minus");
+	public static final By Rplus		=	AppiumBy.accessibilityId("R Plus");
+	public static final By Gripoption	= 	AppiumBy.accessibilityId("GripStrength");
+	public static final By co2field		= 	AppiumBy.accessibilityId("CO2Test");
+	public static final By Updatebutton	=	AppiumBy.accessibilityId("UpdateData");
+//	public static final By wenttobed	=	AppiumBy.xpath("//XCUIElementTypeOther[@name=\"Went to bed\"]");
+	public static final By sleep1		=	AppiumBy.iOSClassChain("**/XCUIElementTypeOther[`name == \"5\"`][3]");
+	public static final By sleep2		= 	AppiumBy.iOSClassChain("**/XCUIElementTypeOther[`name == \"2\"`][3]");
+	public static final By mental1		=	AppiumBy.iOSClassChain("**/XCUIElementTypeOther[`name == \"5\"`][6]");
+	public static final By mental2		=	AppiumBy.iOSClassChain("**/XCUIElementTypeOther[`name == \"1\"`][6]");
+	public static final By physical1	=	AppiumBy.iOSClassChain("**/XCUIElementTypeOther[`name == \"2\"`][9]");
+	public static final By physical2	=	AppiumBy.iOSClassChain("**/XCUIElementTypeOther[`name == \"4\"`][9]");
+	public static final By musucle1		=	AppiumBy.iOSClassChain("**/XCUIElementTypeOther[`name == \"2\"`][12]");
+	public static final By musucle2		=	AppiumBy.iOSClassChain("**/XCUIElementTypeOther[`name == \"5\"`][12]");
+	public static final By strees1		= 	AppiumBy.iOSClassChain("**/XCUIElementTypeOther[`name == \"1\"`][15]");
+	
+	
+	
 	//Locators for Restore card 
 	public static final By restoreclick	= 	AppiumBy.accessibilityId("RESTORE_SCREEN");
 	public static final By restorelabel	=	AppiumBy.accessibilityId("Before Sleep Time");	
