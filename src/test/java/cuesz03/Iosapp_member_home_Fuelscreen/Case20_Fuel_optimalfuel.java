@@ -30,9 +30,9 @@ import io.qameta.allure.Story;
 @Epic ("Fuel screen detail ")
 @Feature ("Verify Fuel detail functionlaity related to optimal fuel")
 public class Case20_Fuel_optimalfuel extends AppiummobileBase {
-
-	mobileLocators locators = new mobileLocators();
 	private static final Logger LOGGER = LoggerFactory.getLogger(Case20_Fuel_optimalfuel.class);
+	mobileLocators locators = new mobileLocators();
+	
 	
 	@Test
 	@Owner("QA") // Add the @Owner annotation to specify the executor

@@ -30,7 +30,7 @@ public class Case57Advocate_chat extends AppiummobileBase {
     @Severity(SeverityLevel.NORMAL)      
 	@Description("Member able to do chat and send message and attachment")
     @Story("Scroll to ")
-	public void manualmorningscan() throws InterruptedException {	
+	public void chatscreen() throws InterruptedException {	
 
 		// Create an instance of AppiumUtils and pass the driver
 		AppiumappUtils appiumUtils = new AppiumappUtils(driver);
@@ -78,6 +78,8 @@ public class Case57Advocate_chat extends AppiummobileBase {
         LOGGER.info("Click on media link from chat screen");
         AllureUtils.logStep("Click on media link from chat screen");
         
+        AllureUtils.captureScreenshot(driver, "Case57Advocate_chat5"); 
+        
         
         //Click on media-link icon
         mobilelement.clickElement(driver, mobileLocators.backpressbutton);
@@ -97,23 +99,64 @@ public class Case57Advocate_chat extends AppiummobileBase {
         LOGGER.info("Click on media");
         AllureUtils.logStep("Click on media");
         
-        
+        //Click on documents
         mobilelement.clickElement(driver, mobileLocators.documents);
-     // Log message to console and Allure report
+        // Log message to console and Allure report
         LOGGER.info("Click on documents");
         AllureUtils.logStep("Click on documents");
+        AllureUtils.captureScreenshot(driver, "Case57Advocate_chat6"); 
         
-        
+        //Click on Links
         mobilelement.clickElement(driver, mobileLocators.links);
-     // Log message to console and Allure report
+        // Log message to console and Allure report
         LOGGER.info("Click on links");
         AllureUtils.logStep("Click on links");
+        AllureUtils.captureScreenshot(driver, "Case57Advocate_chat7"); 
         
-        //Click on media-link icon
+        //Click on back press icon
         mobilelement.clickElement(driver, mobileLocators.backpressbutton);
         // Log message to console and Allure report
         LOGGER.info("Click on back from chat screen");
         AllureUtils.logStep("Click on back icon from chat screen");
+        AllureUtils.captureScreenshot(driver, "Case57Advocate_chat8"); 
+        
+//        //Click on search and enter text into it
+//        mobilelement.clickElement(driver, mobileLocators.search);
+//     // Log message to console and Allure report
+//        LOGGER.info("Click on search field from chat screen");
+//        AllureUtils.logStep("Click on search field from chat screen");
+//        AllureUtils.captureScreenshot(driver, "Case57Advocate_chat9"); 
+        /*****Search input locators missing so above case comment for now*******/
+        
+        //Click on attach with camera and gallery 
+        mobilelement.clickElement(driver, mobileLocators.attach);
+        // Log message to console and Allure report
+        LOGGER.info("Click on attach from chat screen");
+        AllureUtils.logStep("Click on attach icon from chat screen");
+        AllureUtils.captureScreenshot(driver, "Case57Advocate_chat9"); 
+        
+        //Click on gallery icon
+        mobilelement.clickElement(driver, mobileLocators.galleryclick);
+        // Log message to console and Allure report
+        LOGGER.info("Click on gallery from chat screen");
+        AllureUtils.logStep("Click on gallery icon from chat screen");
+        AllureUtils.captureScreenshot(driver, "Case57Advocate_chat10"); 
+        
+        mobilelement.clickElement(driver, mobileLocators.image1);
+        // Log message to console and Allure report
+        LOGGER.info("Select image from gallery");
+        AllureUtils.logStep("Select image from gallery");
+        AllureUtils.captureScreenshot(driver, "Case57Advocate_chat11"); 
+        
+        mobilelement.clickElement(driver, mobileLocators.submittap);
+        // Log message to console and Allure report
+        LOGGER.info("Select image submit from gallery");
+        AllureUtils.logStep("elect image submit from gallery");
+        AllureUtils.captureScreenshot(driver, "Case57Advocate_chat12"); 
+        
+        
+        
+        
         
         Thread.sleep(8500);
         driver.terminateApp("com.cuesz.mobile");

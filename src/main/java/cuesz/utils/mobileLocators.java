@@ -14,6 +14,11 @@ public class mobileLocators {
 	public static final By media		=	AppiumBy.accessibilityId("Media");
 	public static final By documents	=	AppiumBy.accessibilityId("Documents");
 	public static final By links		=	AppiumBy.accessibilityId("Links");
+	public static final By search		=	AppiumBy.accessibilityId("Search");
+	public static final By attach		=	AppiumBy.accessibilityId("Attach");
+	public static final By galleryclick	=	AppiumBy.accessibilityId("GalleryClicked");
+	public static final By image1		=	AppiumBy.xpath("//XCUIElementTypeImage[1]");
+	public static final By image2		=	AppiumBy.xpath("//XCUIElementTypeImage[3]");
 	
 	
 	
