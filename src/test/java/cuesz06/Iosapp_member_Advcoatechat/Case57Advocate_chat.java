@@ -92,12 +92,14 @@ public class Case57Advocate_chat extends AppiummobileBase {
         // Log message to console and Allure report
         LOGGER.info("Click on media link from chat screen");
         AllureUtils.logStep("Click on media link from chat screen");
+        AllureUtils.captureScreenshot(driver, "Case57Advocate_chat13"); 
       
         //Click on media
         mobilelement.clickElement(driver, mobileLocators.media);
         // Log message to console and Allure report
         LOGGER.info("Click on media");
         AllureUtils.logStep("Click on media");
+        AllureUtils.captureScreenshot(driver, "Case57Advocate_chat14"); 
         
         //Click on documents
         mobilelement.clickElement(driver, mobileLocators.documents);

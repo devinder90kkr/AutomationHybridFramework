@@ -5,6 +5,26 @@ import io.appium.java_client.AppiumBy;
 
 public class mobileLocators {
 	
+	//Locators for profile 
+	public static final By profilclick	=	AppiumBy.iOSClassChain("**/XCUIElementTypeOther[`name == \"My Profile\"`][2]");
+	public static final By Posturedclick =	AppiumBy.accessibilityId("PostureClicked");
+	public static final By totalbodyfat =	AppiumBy.iOSClassChain("**/XCUIElementTypeOther[`name == \"Total Body Fat\"`][1]");
+	public static final By Visceralfat 	=	AppiumBy.iOSClassChain("**/XCUIElementTypeOther[`name == \"Total Body Fat\"`][2]");
+	public static final By Waisttohip	=	AppiumBy.accessibilityId("Waist to Hip ratio");
+	public static final By waistoheight	=	AppiumBy.accessibilityId("Waist to Height Ratio");
+	public static final By wasitcircumference	=	AppiumBy.accessibilityId("Waist Circumference");
+	public static final By Hipcircumference	=	AppiumBy.accessibilityId("Hip Circumference");
+	public static final By bodyscanrisk	=	AppiumBy.accessibilityId(" Body Scan Risk Indicator");
+	public static final By bodyscanumber	=	AppiumBy.accessibilityId(" Body Scan Number");
+	
+	
+	
+	
+	
+	//Locators for mindful screen 
+	public static final By mindulscreen	= AppiumBy.accessibilityId("MINDFUL_SCREEN");
+	public static final By mindfulabel	= AppiumBy.iOSClassChain("**/XCUIElementTypeStaticText[`name == \"Mindful\"`]");
+	
 	
 	//locators for chat screen
 	public static final By ChatClick	=	AppiumBy.iOSClassChain("**/XCUIElementTypeOther[`name == \"Advocate\"`][2]");
@@ -17,10 +37,8 @@ public class mobileLocators {
 	public static final By search		=	AppiumBy.accessibilityId("Search");
 	public static final By attach		=	AppiumBy.accessibilityId("Attach");
 	public static final By galleryclick	=	AppiumBy.accessibilityId("GalleryClicked");
-	public static final By image1		=	AppiumBy.xpath("//XCUIElementTypeImage[1]");
+	public static final By image1		=	AppiumBy.xpath("//XCUIElementTypeImage[2]");
 	public static final By image2		=	AppiumBy.xpath("//XCUIElementTypeImage[3]");
-	
-	
 	
 	//Locators for morning scan
 	public static final By Morningscanclick	= AppiumBy.iOSClassChain("**/XCUIElementTypeOther[`name == \"Morning Scan\"`][2]");
