@@ -110,8 +110,6 @@ public class Case62Tutorial extends AppiummobileBase {
 
             // Click on backbutton 
             mobilelement.clickElement(driver, mobileLocators.backpressbutton);
-
-            
           
 
               
