@@ -180,10 +180,10 @@ public class Case12_Perform_additionalactivity_deleteprocess extends Appiummobil
 		
 		// Capture a screenshot and attach it to Allure
         AllureUtils.captureScreenshot(driver, "perform_click2");
-		
+		Thread.sleep(2500);
 		
 		// Select perform aditonal activity 
-		WebElement selectbaseball 	= driver.findElement(mobileLocators.selectactivity);
+		WebElement selectbaseball 	= driver.findElement(mobileLocators.selectactivity1);
 		selectbaseball.click();
 		
 		// Log console message to Allure
@@ -201,7 +201,7 @@ public class Case12_Perform_additionalactivity_deleteprocess extends Appiummobil
         LOGGER.info("Click on back button");
         AllureUtils.logStep("Click on back button");
 		
-		WebElement deleteaddiotnal	= driver.findElement(mobileLocators.deletebaseball);
+		WebElement deleteaddiotnal	= driver.findElement(mobileLocators.selectdeleteactivity);
 		deleteaddiotnal.click();
 		 // Capture a screenshot and attach it to Allure
         AllureUtils.captureScreenshot(driver, "perform_click10");
@@ -217,7 +217,7 @@ public class Case12_Perform_additionalactivity_deleteprocess extends Appiummobil
         LOGGER.info("Click on No option for delete button");
         AllureUtils.logStep("Click on no option for delete button");
 		
-		WebElement deleteaddiotnal1	= driver.findElement(mobileLocators.deletebaseball);
+		WebElement deleteaddiotnal1	= driver.findElement(mobileLocators.selectdeleteactivity);
 		deleteaddiotnal1.click();
 		
 		// Log console message to Allure

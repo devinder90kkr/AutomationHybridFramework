@@ -217,6 +217,7 @@ public class mobileLocators {
 	public static final By importicon				= AppiumBy.accessibilityId("WalkingImportIcon");
 	public static final By importlatericon			= AppiumBy.accessibilityId("Import later");
 	public static final By deviationicon			= AppiumBy.accessibilityId("WalkingDeviationIcon");
+	public static final By deviatioicon1			=	AppiumBy.accessibilityId("YogaDeviationIcon");
 	public static final By crossicondeviation		= AppiumBy.accessibilityId("CrossClicked");
 	public static final By syncdevicebttn			= AppiumBy.iOSNsPredicateString("name == \"Sync my device\"");
 	public static final By rhytmtextverification	= AppiumBy.iOSClassChain("**/XCUIElementTypeOther[`label == \"Rhythm 24 1091\"`][2]");
@@ -248,14 +249,19 @@ public class mobileLocators {
 	public static final By deleteboxing				= AppiumBy.accessibilityId("BoxingDeleteIcon");
 	public static final By importicon1				= AppiumBy.accessibilityId("BoxingImportIcon");
 	public static final By graphclick1				= AppiumBy.accessibilityId("BoxingGraphIcon");	
+	public static final By graphclick2				= AppiumBy.accessibilityId("YogaGraphIcon");
+	public static final By sessionfeedback1			= AppiumBy.accessibilityId("YogaFeedbackIcon");
 	
 	
 	public static final By perfomplus			= AppiumBy.accessibilityId("AddEvent");
 	public static final By additionalperform	= AppiumBy.accessibilityId("Start My Perform Activity");
 	public static final By cross_additionalpopup= AppiumBy.accessibilityId("CrossClicked");
 	public static final By searcharea			= AppiumBy.accessibilityId("EnterActivityName");
-	public static final By selectactivity		= AppiumBy.xpath("(//XCUIElementTypeOther[@name=\"Baseball \"])[3]");
-	public static final By deletebaseball		= AppiumBy.accessibilityId("Baseball DeleteIcon");
+	public static final By selectactivity1		=	AppiumBy.xpath("(//XCUIElementTypeOther[@name=\"Baseball \"])[3]");
+	public static final By selectdeleteactivity			= AppiumBy.accessibilityId("Baseball DeleteIcon");
+	
+	public static final By selectactivity		= AppiumBy.iOSClassChain("**/XCUIElementTypeOther[`name == \"Yoga\"`][3]");
+	public static final By deletebaseball		= AppiumBy.accessibilityId("Yoga DeleteIcon");
 	public static final By nodelete 			= AppiumBy.accessibilityId("No");
 	public static final By yesdelete 			= AppiumBy.accessibilityId("Yes");
 	public static final By backclick			= AppiumBy.accessibilityId("BackPress");

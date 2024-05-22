@@ -228,7 +228,7 @@ public class Case61avtarposture extends AppiummobileBase {
             AllureUtils.captureScreenshot(driver, "Case60compare9"); 
       
             
-         // Perform horizontal swipe after clicking infobodyscan
+            // Perform horizontal swipe after clicking infobodyscan
             for (int i = 0; i < 5; i++) {
                 // Perform the swipe
                 mobilelement.performHorizontalSwipe(driver);

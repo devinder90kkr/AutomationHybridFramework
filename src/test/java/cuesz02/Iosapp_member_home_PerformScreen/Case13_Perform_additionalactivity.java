@@ -463,7 +463,7 @@ public class Case13_Perform_additionalactivity extends AppiummobileBase {
 		// Capture a screenshot and attach it to Allure
         AllureUtils.captureScreenshot(driver, "perform5");
         
-        By walkingperformlLocator = AppiumBy.iOSClassChain("**/XCUIElementTypeStaticText[`label == \"Boxing\"`]");
+        By walkingperformlLocator = AppiumBy.iOSClassChain("**/XCUIElementTypeStaticText[`label == \"Yoga\"`]");
         if(!isElementPresent(driver, walkingperformlLocator)){
             // Scroll to "Basketball" if it's not present
             HashMap<String,Object> scrollObject1 = new HashMap<>();
@@ -474,9 +474,25 @@ public class Case13_Perform_additionalactivity extends AppiummobileBase {
         }
         
         
+        // Click on deviation icon
+        WebElement ratingicon	= driver.findElement(mobileLocators.sessionfeedback1);
+        ratingicon.click();
+        // Log console message to Allure
+        LOGGER.info("Click on ratingicon");
+	    AllureUtils.logStep("Click on ratingicon");
+
+	    
+	 // Click on deviation icon
+        WebElement submitcon	= driver.findElement(mobileLocators.Submitclick);
+        submitcon.click();
+        // Log console message to Allure
+        LOGGER.info("Click on Submitclick");
+	    AllureUtils.logStep("Click on Submitclick");
+	    
+        
         
         // Click on deviation icon
-        WebElement deviation	= driver.findElement(mobileLocators.deviationicon);
+        WebElement deviation	= driver.findElement(mobileLocators.deviatioicon1);
         deviation.click();
         
     	// Log console message to Allure
@@ -496,7 +512,7 @@ public class Case13_Perform_additionalactivity extends AppiummobileBase {
         
         
         // Click on graph icon
-        WebElement graphicon	= driver.findElement(mobileLocators.graphclick);
+        WebElement graphicon	= driver.findElement(mobileLocators.graphclick2);
 		graphicon.click();
 		
 		// Log console message to Allure
