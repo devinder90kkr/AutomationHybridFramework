@@ -504,38 +504,38 @@ cueszframework
 		│   └── Membercase-login-homescreen1.xml
 
 
-#### Explanation of Components:
+####  Explanation of Components:
 
-1. **Main Packages and Classes**:
-   - **cuesz.dashboard**: Contains the main scripts related to the dashboard functionality.
+1. Main Packages and Classes:
+   - cuesz.dashboard: Contains the main scripts related to the dashboard functionality.
      - Classes like `Step12_DB_navlink.java`, `Step13_DB_notification.java`, etc. represent various dashboard functionalities.
-   - **cuesz.pages**: Holds the page classes following the Page Object Model.
+   - cuesz.pages: Holds the page classes following the Page Object Model.
      - `AppiummobileBase.java`: Base class for Appium-based mobile pages.
      - `BasePage.java`: Base class for web-based pages.
      - `Loginpage.java`: Page class for the login functionality.
-   - **cuesz.utils**: Utility classes for various support functionalities.
+   - cuesz.utils: Utility classes for various support functionalities.
      - Classes such as `AllureUtils.java`, `ApiConfig.java`, `ElementActions.java`, etc., provide utility methods and configurations.
 
-2. **Test Packages and Classes**:
-   - **ApiTestScript**: Contains API testing scripts.
+2. Test Packages and Classes:
+   - ApiTestScript: Contains API testing scripts.
      - Example: `Case16_MS_searchclickapi.java`
-   - **cuesz.dashboard.advocate**: Test scripts for the advocate role in the dashboard.
+   - cuesz.dashboard.advocate: Test scripts for the advocate role in the dashboard.
      - Test classes like `Step12_DB_navlinktest.java`, `Step13_DB_notificationtest.java`, etc.
-   - **cuesz.dashboard.coach**: Test scripts for the coach role in the dashboard.
+   - cuesz.dashboard.coach: Test scripts for the coach role in the dashboard.
      - Test classes such as `Step13_DB_notificationtest.java`, `Step14_DB_Clocktest.java`, etc.
-   - **cuesz.logintest**: Test scripts related to the login functionality.
+   - cuesz.logintest: Test scripts related to the login functionality.
      - Classes like `AdvocateLogin.java`, `CoachLogin.java`, etc.
-   - **cuesz01.Iosapp_member_homeScreen**: Mobile test scripts for the home screen of an iOS app.
+   - cuesz01.Iosapp_member_homeScreen: Mobile test scripts for the home screen of an iOS app.
      - Test cases such as `Case01_Login.java`, `Case02_Homescreen_sphereclick.java`, etc.
-   - **cuesz02.Iosapp_member_home_PerformScreen**: Mobile test scripts for the performance screen of an iOS app.
+   - cuesz02.Iosapp_member_home_PerformScreen: Mobile test scripts for the performance screen of an iOS app.
      - Test cases like `Case20_Fuel_optimalfuel.java`, `Case21_Fuel_breakfast_recommendedfuel.java`, etc.
 
-3. **Configuration and Dependencies**:
-   - **Config.properties**: Configuration properties file.
-   - **pom.xml**: Maven project configuration file.
-   - **JRE System Library** and **maven dependencies**: Libraries and dependencies required for the project.
-   - **bin**: Compiled binary files.
-   - **folder for suites for web**: Contains test suites for web-based testing.
-   - **folder for suites for mobile**: Contains test suites for mobile-based testing.
+3. Configuration and Dependencies:
+   - Config.properties: Configuration properties file.
+   - pom.xml: Maven project configuration file.
+   - JRE System Library and maven dependencies: Libraries and dependencies required for the project.
+   - bin: Compiled binary files.
+   - folder for suites for web: Contains test suites for web-based testing.
+   - folder for suites for mobile: Contains test suites for mobile-based testing.
 
 This structure ensures modularity and separation of concerns, making the framework scalable and maintainable.
