@@ -539,3 +539,18 @@ cueszframework
    - folder for suites for mobile: Contains test suites for mobile-based testing.
 
 This structure ensures modularity and separation of concerns, making the framework scalable and maintainable.
+
+
+
+
+The framework you've described is a custom automation testing framework built using **Selenium WebDriver** for web automation, **Appium** for mobile automation, and **TestNG** for test execution and management. The framework also incorporates **Maven** for dependency management and build automation, and **Allure** for reporting.
+
+This framework can be referred to as a **Hybrid Automation Testing Framework** because it integrates multiple tools and technologies to support both web and mobile testing. Here are the key components that define this framework:
+
+1. **Selenium WebDriver**: For web automation.
+2. **Appium**: For mobile automation.
+3. **TestNG**: For test management and execution.
+4. **Maven**: For project and dependency management.
+5. **Allure**: For generating test reports.
+
+Given its architecture and the tools it incorporates, a suitable name for this framework could be **Cuesz Hybrid Automation Framework**. This name reflects its capability to handle both web and mobile test automation in an integrated and structured manner.
