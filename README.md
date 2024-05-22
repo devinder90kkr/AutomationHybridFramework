@@ -409,3 +409,133 @@ For appium we need desired capabilities so please use below :
 
 use command >> brew install ios-deploy 
 
+
+### Project Name: cueszframework
+
+#### Project Structure:
+
+```
+cueszframework
+│
+├─── TestNg
+│
+├─── src
+│    ├─── main
+│    │    ├─── cuesz.dashboard
+│    │    │    ├─── Step12_DB_navlink.java
+│    │    │    ├─── Step13_DB_notification.java
+│    │    │    ├─── Step14_DB_Clock.java
+│    │    │    ├─── Step14_DB_MessgNotification.java
+│    │    │    ├─── Step15_DB_navlinkcoach.java
+│    │    │
+│    │    ├─── cuesz.pages
+│    │    │    ├─── AppiummobileBase.java
+│    │    │    ├─── BasePage.java
+│    │    │    ├─── Loginpage.java
+│    │    │
+│    │    ├─── cuesz.utils
+│    │         ├─── AllureUtils.java
+│    │         ├─── ApiConfig.java
+│    │         ├─── ApiUtils.java
+│    │         ├─── AppiumappUtils.java
+│    │         ├─── Config.java
+│    │         ├─── Configuration.java
+│    │         ├─── Currentdategenerator.java
+│    │         ├─── ElementActions.java
+│    │         ├─── mobilelement.java
+│    │         ├─── mobileLocators.java
+│    │         ├─── mobileTestData.java
+│    │         ├─── ResponsiveTester.java
+│    │         ├─── SeleniumUtils.java
+│    │         ├─── WebDriverManager.java
+│    │         ├─── weblocators.java
+│    │         ├─── webTestdata.java
+│    │
+│    ├─── test
+│    │    ├─── ApiTestScript
+│    │    │    ├─── Case16_MS_searchclickapi.java
+│    │    │
+│    │    ├─── cuesz.dashboard.advocate
+│    │    │    ├─── Step12_DB_navlinktest.java
+│    │    │    ├─── Step13_DB_notificationtest.java
+│    │    │    ├─── Step14_DB_Clocktest.java
+│    │    │    ├─── Step14_DB_MessgNotificationtest.java
+│    │    │
+│    │    ├─── cuesz.dashboard.coach
+│    │    │    ├─── Step13_DB_notificationtest.java
+│    │    │    ├─── Step14_DB_Clocktest.java
+│    │    │    ├─── Step14_DB_MessgNotificationtest.java
+│    │    │    ├─── Step15_DB_navlinkcoachtest.java
+│    │    │
+│    │    ├─── cuesz.logintest
+│    │    │    ├─── AdvocateLogin.java
+│    │    │    ├─── CoachLogin.java
+│    │    │    ├─── DoctorLogin.java
+│    │    │    ├─── Invalidmockcase_LoginPagetest.java
+│    │    │
+│    │    ├─── cuesz01.Iosapp_member_homeScreen
+│    │    │    ├─── Case01_Login.java
+│    │    │    ├─── Case02_Homescreen_sphereclick.java
+│    │    │    ├─── Case03_Homescreen_sphere.java
+│    │    │    ├─── Case04_Homescreen_weekdays_past.java
+│    │    │    ├─── Case05_Homescreen_forward_backwardarrows.java
+│    │    │
+│    │    ├─── cuesz02.Iosapp_member_home_PerformScreen
+│    │         ├─── Case20_Fuel_optimalfuel.java
+│    │         ├─── Case21_Fuel_breakfast_recommendedfuel.java
+│    │         ├─── Case22_Fuel_breakfast_additionalfuel.java
+│
+├─── JRE System Library
+│
+├─── maven dependencies
+│
+├─── bin
+│
+├─── Config.properties
+│
+├─── pom.xml
+│
+├─── folder for suites for web
+		├── Case0_cuesz-dashboard-Suite.xml
+│   	└── Case01_Schdule-advocate-Suite.xml
+│
+└─── folder for suites for mobile
+		├── Membercase-combinesuitewithweb-app-part2.xml
+		│   └── Membercase-login-homescreen1.xml
+
+
+#### Explanation of Components:
+
+1. **Main Packages and Classes**:
+   - **cuesz.dashboard**: Contains the main scripts related to the dashboard functionality.
+     - Classes like `Step12_DB_navlink.java`, `Step13_DB_notification.java`, etc. represent various dashboard functionalities.
+   - **cuesz.pages**: Holds the page classes following the Page Object Model.
+     - `AppiummobileBase.java`: Base class for Appium-based mobile pages.
+     - `BasePage.java`: Base class for web-based pages.
+     - `Loginpage.java`: Page class for the login functionality.
+   - **cuesz.utils**: Utility classes for various support functionalities.
+     - Classes such as `AllureUtils.java`, `ApiConfig.java`, `ElementActions.java`, etc., provide utility methods and configurations.
+
+2. **Test Packages and Classes**:
+   - **ApiTestScript**: Contains API testing scripts.
+     - Example: `Case16_MS_searchclickapi.java`
+   - **cuesz.dashboard.advocate**: Test scripts for the advocate role in the dashboard.
+     - Test classes like `Step12_DB_navlinktest.java`, `Step13_DB_notificationtest.java`, etc.
+   - **cuesz.dashboard.coach**: Test scripts for the coach role in the dashboard.
+     - Test classes such as `Step13_DB_notificationtest.java`, `Step14_DB_Clocktest.java`, etc.
+   - **cuesz.logintest**: Test scripts related to the login functionality.
+     - Classes like `AdvocateLogin.java`, `CoachLogin.java`, etc.
+   - **cuesz01.Iosapp_member_homeScreen**: Mobile test scripts for the home screen of an iOS app.
+     - Test cases such as `Case01_Login.java`, `Case02_Homescreen_sphereclick.java`, etc.
+   - **cuesz02.Iosapp_member_home_PerformScreen**: Mobile test scripts for the performance screen of an iOS app.
+     - Test cases like `Case20_Fuel_optimalfuel.java`, `Case21_Fuel_breakfast_recommendedfuel.java`, etc.
+
+3. **Configuration and Dependencies**:
+   - **Config.properties**: Configuration properties file.
+   - **pom.xml**: Maven project configuration file.
+   - **JRE System Library** and **maven dependencies**: Libraries and dependencies required for the project.
+   - **bin**: Compiled binary files.
+   - **folder for suites for web**: Contains test suites for web-based testing.
+   - **folder for suites for mobile**: Contains test suites for mobile-based testing.
+
+This structure ensures modularity and separation of concerns, making the framework scalable and maintainable.
