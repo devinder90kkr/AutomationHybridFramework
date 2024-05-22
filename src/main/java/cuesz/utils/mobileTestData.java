@@ -9,6 +9,14 @@ public class mobileTestData {
 //	Actions builder1 = new Actions(driver);
 //	builder1.moveToElement(datefield).click().sendKeys(TestData.EVENT_DATE).sendKeys(Keys.ENTER).perform();
 	
+	//static date for compare for richard use
+	public static final String comparedate1	= "08 May, 2024";
+	public static final String comparedate2	= "29 Nov, 2023";
+	public static final String comparedate3	= "05 Sep, 2023";
+	public static final String comparedate4	= "23 Oct, 2023";
+	public static final String posturedate1	= "10 May, 2024";
+	public static final String posturedate2	= "08 May, 2024";
+	public static final String posturedate3	= "29 Nov, 2023";
 	
 	
 	public static final String message1	=	"Believe you can and you're halfway there";

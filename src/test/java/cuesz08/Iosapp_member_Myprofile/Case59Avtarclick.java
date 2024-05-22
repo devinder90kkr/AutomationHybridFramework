@@ -18,8 +18,8 @@ import io.qameta.allure.Severity;
 import io.qameta.allure.SeverityLevel;
 import io.qameta.allure.Story;
 
-@Epic ("Member access My profile feature")
-@Feature ("Verify that member able to access my profile setting")
+@Epic ("Member access review body scan detail")
+@Feature ("Verify that member able to access my profile setting and check body scan result")
 public class Case59Avtarclick extends AppiummobileBase {
 	private static final Logger LOGGER = LoggerFactory.getLogger(Case59Avtarclick.class);
 	
@@ -28,8 +28,8 @@ public class Case59Avtarclick extends AppiummobileBase {
 	@Test
 	@Owner("QA") // Add the @Owner annotation to specify the executor
     @Severity(SeverityLevel.NORMAL)      
-	@Description("Member able to access my profile")
-    @Story("My profile feature access able by member ")
+	@Description("Member able to review body scan detail")
+    @Story("Body scan result feature access able by member ")
 	public void avtarscren() throws InterruptedException {	
 		try {  
 		// Create an instance of AppiumUtils and pass the driver
