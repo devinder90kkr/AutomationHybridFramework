@@ -325,8 +325,15 @@ public class Case54_Restore extends AppiummobileBase {
             LOGGER.error("Exception occurred: " + e.getMessage());
             AllureUtils.captureScreenshot(driver, "Error_Screenshot");
             Assert.fail("Test execution failed: " + e.getMessage());
+        } finally {
+            // Terminate the app in the finally block to ensure it runs no matter what
+            try {
+                driver.terminateApp("com.cuesz.mobile");
+                LOGGER.info("App terminated in finally block.");
+            } catch (Exception e) {
+                LOGGER.error("Failed to terminate app in finally block: " + e.getMessage());
+                Allure.addAttachment("Error", "Failed to terminate app: " + e.getMessage());
+            }
         }
     }
 }
-
-
