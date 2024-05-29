@@ -29,7 +29,7 @@
        <class name="cuesz05.Iosapp_member_Morningscan.Case56Morningscan_manual"/>
 
 		<!-- Chat screen -->
-       <class name="cuesz06.Iosapp_member_Advcoatechat.Case57Advocate_chat"/>
+   <!--     <class name="cuesz06.Iosapp_member_Advcoatechat.Case57Advocate_chat"/> -->
        
        <!-- Boyscan result -->
         <class name="cuesz08.Iosapp_member_Myprofile.Case59Avtarclick" />

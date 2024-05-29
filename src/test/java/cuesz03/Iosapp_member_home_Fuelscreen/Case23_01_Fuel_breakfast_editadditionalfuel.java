@@ -7,9 +7,12 @@ import java.util.NoSuchElementException;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.testng.annotations.Test;
 
 import cuesz.pages.AppiummobileBase;
+import cuesz.utils.AllureUtils;
 import cuesz.utils.AppiumappUtils;
 import io.appium.java_client.AppiumBy;
 import io.appium.java_client.AppiumDriver;
@@ -24,6 +27,7 @@ import io.qameta.allure.Story;
 @Epic ("Fuel screen detail ")
 @Feature ("Verify Fuel detail functionlaity related to Optimal fuel.")
 public class Case23_01_Fuel_breakfast_editadditionalfuel extends AppiummobileBase {
+	private static final Logger LOGGER = LoggerFactory.getLogger(Case23_01_Fuel_breakfast_editadditionalfuel.class);
 	
 	private By Homeclick 		= 		AppiumBy.iOSClassChain("**/XCUIElementTypeOther[`label == \"Home\"`][2]");
 	private By editbeetroot		= 		AppiumBy.accessibilityId("Beetroot");
@@ -53,6 +57,11 @@ public class Case23_01_Fuel_breakfast_editadditionalfuel extends AppiummobileBas
 		
 		WebElement Homeicon = driver.findElement(Homeclick);
 		Homeicon.click();
+	    // Log console message to Allure
+        LOGGER.info("Click on Homeicon");
+        AllureUtils.logStep("Click on Homeicon");
+        // Capture a screenshot and attach it to Allure
+        AllureUtils.captureScreenshot(driver, "Homeicon1");
 		
 		Thread.sleep(3000);
 		// Method to scroll to perform screen
@@ -64,30 +73,55 @@ public class Case23_01_Fuel_breakfast_editadditionalfuel extends AppiummobileBas
 
         //Click on Fuel tab 
         driver.findElement(AppiumBy.accessibilityId("FUEL_SCREEN")).click();
-        
+        // Log console message to Allure
+        LOGGER.info("Click on fuel screen");
+        AllureUtils.logStep("Click on fuel screen");
+        AllureUtils.captureScreenshot(driver, "Case23_Fuel_screen1");
+
         
         // Edit feature testing
         WebElement Editbeetroot		= driver.findElement(editbeetroot);
         Editbeetroot.click();
+        // Log console message to Allure
+        LOGGER.info("Click on Editbeetroot");
+        AllureUtils.logStep("Click on Editbeetroot");
+        AllureUtils.captureScreenshot(driver, "Case23_Editbeetroot");
+
         
         WebElement plusclick	= driver.findElement(editclick1);
         int numberOfClicks = 3;
         for (int i = 0; i < numberOfClicks; i++) {   
         	plusclick.click();
+        	 LOGGER.info("Click on plusicon");
+             AllureUtils.logStep("Click on plusicon");
+             // Capture a screenshot and attach it to Allure
+             AllureUtils.captureScreenshot(driver, "Case21_plusicon");
         }
         
         //Click on early snacks 
         WebElement whenclick	= driver.findElement(earlyclick);
         whenclick.click();
+        // Log console message to Allure
+        LOGGER.info("Click on earlyclick");
+        AllureUtils.logStep("Click on earlyclick");
+        AllureUtils.captureScreenshot(driver, "Case23_earlyclick");
+
         
         //Click on breakfast snacks 
         WebElement whenclick1	= driver.findElement(breakfastclick);
         whenclick1.click();
+        // Log console message to Allure
+        LOGGER.info("Click on breakfastclick");
+        AllureUtils.logStep("Click on breakfastclick");
+        AllureUtils.captureScreenshot(driver, "Case23_breakfastclick");
+
         
         //Click on notes and enter values in field. 
         WebElement noteedit1 = driver.findElement(noteclick);
         noteedit1.sendKeys("hello this notes is update by automation to verifiy edit field values");
-        
+        LOGGER.info("Enter value for note field");
+        AllureUtils.logStep("Enter value for note field");
+       
         driver.findElement(AppiumBy.xpath("//XCUIElementTypeButton[@name=\"DONE\"]")).click();
 
         Thread.sleep(3000);
@@ -95,12 +129,17 @@ public class Case23_01_Fuel_breakfast_editadditionalfuel extends AppiummobileBas
 		HashMap<String,Object>scrollObject11 =new HashMap<>();
 		scrollObject11.put("direction", "down");
 		scrollObject11.put("Source", "Source");
+		
 		driver.executeScript("mobile:scroll", scrollObject11);
 		Thread.sleep(2000);
         
-		
 		WebElement editsubmit 	= driver.findElement(submittick);
 		editsubmit.click();
+		// Log console message to Allure
+        LOGGER.info("Click on editsubmit");
+        AllureUtils.logStep("Click on editsubmit");
+        AllureUtils.captureScreenshot(driver, "Case23_editsubmit");
+
 		
 		Thread.sleep(5000);
 		
@@ -119,20 +158,36 @@ public class Case23_01_Fuel_breakfast_editadditionalfuel extends AppiummobileBas
 		
 		WebElement meatedit		= driver.findElement(meatfuel);
 		meatedit.click();
+		// Log console message to Allure
+        LOGGER.info("Click on meatedit");
+        AllureUtils.logStep("Click on meatedit");
+        AllureUtils.captureScreenshot(driver, "Case23_meatedit");
 		
 		
 		//Click on notes and enter values in field. 
         WebElement noteedit2 = driver.findElement(noteclick);
         noteedit2.sendKeys("hello this notes is update by automation to verifiy edit field values");
+        LOGGER.info("Enter value for note field");
+        AllureUtils.logStep("Enter value for note field");
+        
         driver.findElement(AppiumBy.xpath("//XCUIElementTypeButton[@name=\"DONE\"]")).click();
        
         
         //Click on early snacks 
         WebElement whenclick3	= driver.findElement(earlyclick);
         whenclick3.click();
-		
+        // Log console message to Allure
+        LOGGER.info("Click on whenclick3");
+        AllureUtils.logStep("Click on whenclick3");
+        
+        
         WebElement editsubmit2 	= driver.findElement(submittick);
 		editsubmit2.click();
+		 // Log console message to Allure
+        LOGGER.info("Click on editsubmit2");
+        AllureUtils.logStep("Click on editsubmit2");
+        AllureUtils.captureScreenshot(driver, "editsubmit2");
+        
         
 		Thread.sleep(4000);
 		//scroll to image upload
@@ -151,13 +206,27 @@ public class Case23_01_Fuel_breakfast_editadditionalfuel extends AppiummobileBas
 		
 		WebElement meatedit1		= driver.findElement(meatfuel);
 		meatedit1.click();
+		// Log console message to Allure
+        LOGGER.info("Click on meatedit1");
+        AllureUtils.logStep("Click on meatedit1");
+        AllureUtils.captureScreenshot(driver, "editsubmit122");
+       
+
 		 //Click on early snacks 
         WebElement whenclick4	= driver.findElement(breakfastclick);
         whenclick4.click();
+     // Log console message to Allure
+        LOGGER.info("Click on whenclick4");
+        AllureUtils.logStep("Click on whenclick4");
+        AllureUtils.captureScreenshot(driver, "editsubmit542");
 		
         WebElement editsubmit3 	= driver.findElement(submittick);
 		editsubmit3.click();
-		
+		// Log console message to Allure
+        LOGGER.info("Click on editsubmit3");
+        AllureUtils.logStep("Click on editsubmit3");
+        AllureUtils.captureScreenshot(driver, "editsubmit265");
+
 		Thread.sleep(2500);
 		
 		
@@ -181,6 +250,10 @@ public class Case23_01_Fuel_breakfast_editadditionalfuel extends AppiummobileBas
 		 // Click on timer 
         WebElement breakfastedittime 	= driver.findElement(editbreakfastime);
         breakfastedittime.click();
+     // Log console message to Allure
+        LOGGER.info("Click on breakfastedittime");
+        AllureUtils.logStep("Click on breakfastedittime");
+        AllureUtils.captureScreenshot(driver, "Case23_Fuel_breakfastedittime");
         
         List<WebElement>values = driver.findElements(pickerelement);
 		for (int i=0; i<values.size();i++)
@@ -195,10 +268,10 @@ public class Case23_01_Fuel_breakfast_editadditionalfuel extends AppiummobileBas
 		Thread.sleep(3500);
 		values.get(2).sendKeys("AM");
 		driver.findElement(Doneclick).click();
-		
-		
-		
-		
+		// Log console message to Allure
+        LOGGER.info("Click on Done");
+        AllureUtils.logStep("Click on done");
+       
 		
 		Thread.sleep(4500);
         driver.terminateApp("com.cuesz.mobile");
@@ -215,4 +288,3 @@ public class Case23_01_Fuel_breakfast_editadditionalfuel extends AppiummobileBas
 			}
 }
 	
-

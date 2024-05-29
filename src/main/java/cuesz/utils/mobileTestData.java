@@ -9,6 +9,9 @@ public class mobileTestData {
 //	Actions builder1 = new Actions(driver);
 //	builder1.moveToElement(datefield).click().sendKeys(TestData.EVENT_DATE).sendKeys(Keys.ENTER).perform();
 	
+	
+	public static final String commonfood1	=	"Protein Powder";
+	
 	//static date for compare for richard use
 	public static final String comparedate1	= "08 May, 2024";
 	public static final String comparedate2	= "29 Nov, 2023";
@@ -32,7 +35,7 @@ public class mobileTestData {
 	public static final String timeinput2 = "43";
 	
 	//case26_Fuel_breakfast_customfood
-	public static final  String searchText = "Gif";
+	public static final  String searchText = "Tsm";
 	public static final String Servingsize = "45";
 	public static final String Servingunit = "cup";
 	public static final String Calories = "176";

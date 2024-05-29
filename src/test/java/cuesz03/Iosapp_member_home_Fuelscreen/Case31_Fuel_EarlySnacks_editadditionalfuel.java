@@ -3,6 +3,8 @@ package cuesz03.Iosapp_member_home_Fuelscreen;
 import java.util.HashMap;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.testng.annotations.Test;
 
 import cuesz.pages.AppiummobileBase;
@@ -20,7 +22,7 @@ import io.qameta.allure.Story;
 @Epic ("Fuel screen detail ")
 @Feature ("Verify Fuel detail functionlaity related to early snacks edit additional fuel.")
 public class Case31_Fuel_EarlySnacks_editadditionalfuel extends AppiummobileBase {
-	
+	private static final Logger LOGGER = LoggerFactory.getLogger(Case31_Fuel_EarlySnacks_editadditionalfuel.class);
 	private By Homeclick 		= 		AppiumBy.iOSClassChain("**/XCUIElementTypeOther[`label == \"Home\"`][2]");
 	private By editbeetroot		= 		AppiumBy.accessibilityId("Organic ginger spread");
 	private By editclick1		= 		AppiumBy.accessibilityId("Organic ginger spreadPlus");
@@ -46,6 +48,12 @@ public class Case31_Fuel_EarlySnacks_editadditionalfuel extends AppiummobileBase
 		
 		WebElement Homeicon = driver.findElement(Homeclick);
 		Homeicon.click();
+		// Log console message to Allure
+ 		LOGGER.info("Click on Homeicon");
+ 		AllureUtils.logStep("Click on Homeicon");
+ 		// Capture a screenshot and attach it to Allure
+ 		AllureUtils.captureScreenshot(driver, "Case31_1");
+		
 		
 		Thread.sleep(3000);
 		// Method to scroll to perform screen
@@ -57,6 +65,10 @@ public class Case31_Fuel_EarlySnacks_editadditionalfuel extends AppiummobileBase
 
         //Click on Fuel tab 
         driver.findElement(AppiumBy.accessibilityId("FUEL_SCREEN")).click();
+        // Log console message to Allure
+        LOGGER.info("Click on fuel screen");
+        AllureUtils.logStep("Click on fuel screen");
+        AllureUtils.captureScreenshot(driver, "Case31_2");
         
         Thread.sleep(4500);        
         
@@ -67,13 +79,15 @@ public class Case31_Fuel_EarlySnacks_editadditionalfuel extends AppiummobileBase
 //		driver.executeScript("mobile:scroll", scrollObject1);
 //		Thread.sleep(2000);
         
+     // Scroll down to find Breakfast section
+        scrollToElementWithText("Early Snacks");
     
-        // Method to scroll to perform screen
- 		HashMap<String,Object>scrollObject12 =new HashMap<>();
- 		scrollObject12.put("direction", "down");
- 		scrollObject12.put("Early Snacks", "Early Snacks");
- 		driver.executeScript("mobile:scroll", scrollObject12);
- 		Thread.sleep(2000);
+//        // Method to scroll to perform screen
+// 		HashMap<String,Object>scrollObject12 =new HashMap<>();
+// 		scrollObject12.put("direction", "down");
+// 		scrollObject12.put("Early Snacks", "Early Snacks");
+// 		driver.executeScript("mobile:scroll", scrollObject12);
+// 		Thread.sleep(2000);
         
         Thread.sleep(5500);
          
@@ -90,23 +104,42 @@ public class Case31_Fuel_EarlySnacks_editadditionalfuel extends AppiummobileBase
         // Edit feature testing
         WebElement Editbeetroot		= driver.findElement(editbeetroot);
         Editbeetroot.click();
+     // Log console message to Allure
+		LOGGER.info("Click on Editbeetroot");
+		AllureUtils.logStep("Click on Editbeetroot");
+		// Capture a screenshot and attach it to Allure
+		AllureUtils.captureScreenshot(driver, "Case31_3");	
+        
         
         WebElement plusclick	= driver.findElement(editclick1);
         int numberOfClicks = 2;
         for (int i = 0; i < numberOfClicks; i++) {   
         	plusclick.click();
+        	// Log console message to Allure
+            LOGGER.info("Click on plusclick");
+            AllureUtils.logStep("Click on plusclick");
+            AllureUtils.captureScreenshot(driver, "plusclick_31");
         }      
         
         
      // Capture a screenshot and attach it to Allure
         AllureUtils.captureScreenshot(driver, "earlysnack5");
+        
       //Click on breakfast snacks 
         WebElement whenclick1	= driver.findElement(breakfastclick);
         whenclick1.click();
+        // Log console message to Allure
+        LOGGER.info("Click on breakfastclick");
+        AllureUtils.logStep("Click on breakfastclick");
+        AllureUtils.captureScreenshot(driver, "breakfastclick_31");
         
         //Click on early snacks 
         WebElement whenclick	= driver.findElement(earlyclick);
         whenclick.click();
+        // Log console message to Allure
+        LOGGER.info("Click on whenclick");
+        AllureUtils.logStep("Click on whenclick");
+        AllureUtils.captureScreenshot(driver, "whenclick_31");
             
         //Click on notes and enter values in field. 
         WebElement noteedit1 = driver.findElement(noteclick);
@@ -115,17 +148,27 @@ public class Case31_Fuel_EarlySnacks_editadditionalfuel extends AppiummobileBase
         driver.findElement(AppiumBy.xpath("//XCUIElementTypeButton[@name=\"DONE\"]")).click();
 
         Thread.sleep(3000);
-		// Method to scroll to perform screen
-		HashMap<String,Object>scrollObject111 =new HashMap<>();
-		scrollObject111.put("direction", "down");
-		scrollObject111.put("Source", "Source");
-		driver.executeScript("mobile:scroll", scrollObject111);
-		Thread.sleep(2000);
+//		// Method to scroll to perform screen
+//		HashMap<String,Object>scrollObject111 =new HashMap<>();
+//		scrollObject111.put("direction", "down");
+//		scrollObject111.put("Source", "Source");
+//		driver.executeScript("mobile:scroll", scrollObject111);
+//		Thread.sleep(2000);
+        
+     // Scroll down to find Source section
+        scrollToElementWithText("Source");
+        Thread.sleep(2500);
+        
         
 		
 		WebElement editsubmit 	= driver.findElement(submittick);
 		editsubmit.click();
-		
+		// Log console message to Allure
+        LOGGER.info("Click on editsubmit");
+        AllureUtils.logStep("Click on editsubmit");
+        AllureUtils.captureScreenshot(driver, "editsubmit_31");
+            
+        
 		Thread.sleep(5000);
 		
 
@@ -133,6 +176,11 @@ public class Case31_Fuel_EarlySnacks_editadditionalfuel extends AppiummobileBase
 		Thread.sleep(4500);
         driver.terminateApp("com.cuesz.mobile");
 	}
+	 // Utility method to scroll to element with specific text
+    private void scrollToElementWithText(String text) {
+        HashMap<String, Object> scrollObject = new HashMap<>();
+        scrollObject.put("direction", "down");
+        scrollObject.put("predicateString", "label CONTAINS '" + text + "'");
+        driver.executeScript("mobile:scroll", scrollObject);
+    }
 }
-	
-

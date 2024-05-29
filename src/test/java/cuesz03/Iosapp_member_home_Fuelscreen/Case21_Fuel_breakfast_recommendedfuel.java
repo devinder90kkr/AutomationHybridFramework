@@ -57,14 +57,12 @@ public class Case21_Fuel_breakfast_recommendedfuel extends AppiummobileBase {
 
         WebElement Homeicon = driver.findElement(Homeclick);
         Homeicon.click();
-        
-        // Log console message to Allure
         LOGGER.info("Click on home menu from bottom");
         AllureUtils.logStep("Click on home menu from bottom");
         // Capture a screenshot and attach it to Allure
         AllureUtils.captureScreenshot(driver, "Case21_Fuel_breakfast_recommendedfuel1");
-        Thread.sleep(3000);
-
+       
+        
         HashMap<String, Object> scrollObject = new HashMap<>();
         scrollObject.put("direction", "down");
         scrollObject.put("Perform Fuel Mindful Restore", "Perform");
@@ -93,14 +91,17 @@ public class Case21_Fuel_breakfast_recommendedfuel extends AppiummobileBase {
         breakfasticon.click();
         WebElement backclick = driver.findElement(backicon);
         backclick.click();
-
-        AllureUtils.captureScreenshot(driver, "Fuel11");
+        LOGGER.info("Click on backicon");
+        AllureUtils.logStep("Click on backicon");
+        Thread.sleep(2500);
+        AllureUtils.captureScreenshot(driver, "Case21_backicon");
 
         WebElement breakfastplus = driver.findElement(plusadd);
         breakfastplus.click();
         // Log console message to Allure
         LOGGER.info("Click on fuel plus icon");
         AllureUtils.logStep("Click on fuel plus icon");
+        Thread.sleep(2500);
         AllureUtils.captureScreenshot(driver, "Case21_Fuel_breakfast_recommendedfuel3");
         
         
@@ -116,26 +117,44 @@ public class Case21_Fuel_breakfast_recommendedfuel extends AppiummobileBase {
         // Log console message to Allure
         LOGGER.info("Click on Recommended fuel");
         AllureUtils.logStep("Click on Recommended fuel");
+        Thread.sleep(2500);
         AllureUtils.captureScreenshot(driver, "Case21_Fuel_breakfast_recommendedfuel4");
         
         
         WebElement recommendebackclick = driver.findElement(backicon1);
         recommendebackclick.click();
+        // Log console message to Allure
+        LOGGER.info("Click on Recommended back button");
+        AllureUtils.logStep("Click on Recommended back button");       
 
         WebElement keypaddone1 = driver.findElement(doneclick);
         keypaddone1.click();
+        // Log console message to Allure
+        LOGGER.info("Click on Done ");
+        AllureUtils.logStep("Click on done");       
 
+        
         WebElement Recommendedfuel1 = driver.findElement(recommendedclick);
         Recommendedfuel1.click();
+        LOGGER.info("Click on Recommended fuel again ");
+        AllureUtils.logStep("Click on Recommended fuel again");
+        Thread.sleep(2500);
+        AllureUtils.captureScreenshot(driver, "Case21_Fuel_breakfast_recommendedfuel5");
+        
 
         try {
             // Try to locate and click on the arrowright element
             WebElement arrowright = driver.findElement(rightarrow);
             arrowright.click();
+           
+            LOGGER.info("Click on arrowright ");
+            AllureUtils.logStep("Click on arrowright");     
             
             // If the arrowright element is clicked successfully, continue with the rest of the steps
             WebElement Timerclick = driver.findElement(Time);
             Timerclick.click();
+            LOGGER.info("Click on Timerclick ");
+            AllureUtils.logStep("Click on Timerclick");    
             
             List<WebElement> values = driver.findElements(pickerelement);
             
@@ -153,24 +172,41 @@ public class Case21_Fuel_breakfast_recommendedfuel extends AppiummobileBase {
             Thread.sleep(3500);
             values.get(2).sendKeys("AM");
             
+            LOGGER.info("enter time ");
+            AllureUtils.logStep("Enter time");    
+            
+            Thread.sleep(2500);
             // Capture a screenshot and attach it to Allure
             AllureUtils.captureScreenshot(driver, "Fuel13");
             
             driver.findElement(Doneclick).click();
+            LOGGER.info("Click on Doneclick ");
+            AllureUtils.logStep("Click on Doneclick");    
             
             // Click on breakfast-tick
             WebElement breakfasttick = driver.findElement(tickbreakfast);
             breakfasttick.click();
+            LOGGER.info("click on Tick");
+            AllureUtils.logStep("click on tick");    
+            Thread.sleep(2500);
+            // Capture a screenshot and attach it to Allure
+            AllureUtils.captureScreenshot(driver, "Fuel131");
             
+
             // Click on Done-breakfast button
             WebElement brekfastdone = driver.findElement(brekdone);
-            brekfastdone.click();
+            brekfastdone.click();  
+         // Log console message to Allure
+            LOGGER.info("Click on Done ");
+            AllureUtils.logStep("Click on done");    
             
         } catch (Exception e) {
         	// If the arrowright element is not found, log an error message and terminate the app
             String errorMessage = "Arrowright element not found. Skipping further steps.";
             System.out.println(errorMessage);
             Allure.addAttachment("Error", errorMessage);
+            
+            Thread.sleep(2500);
             AllureUtils.captureScreenshot(driver, "ArrowRightNotFound");
             driver.terminateApp("com.cuesz.mobile");
         }
