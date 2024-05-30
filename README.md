@@ -554,3 +554,8 @@ This framework can be referred to as a **Hybrid Automation Testing Framework** b
 5. **Allure**: For generating test reports.
 
 Given its architecture and the tools it incorporates, a suitable name for this framework could be **Cuesz Hybrid Automation Framework**. This name reflects its capability to handle both web and mobile test automation in an integrated and structured manner.
+
+
+#git useful command
+git remote rm origin
+git remote add origin  https://devinder90chicmic@github.com/Cuesz-limited/Cuesz_AutomationTests.git 
