@@ -11,9 +11,7 @@ public class mobileLocators {
 	public static final By motionsession =	AppiumBy.iOSClassChain("**/XCUIElementTypeOther[`name == \"Motion Explore Session\"`][2]");
 	public static final By livesession	=	AppiumBy.iOSClassChain("**/XCUIElementTypeOther[`name == \"Live Perform Session\"`][2]");
     public static final By monthlybody	=	AppiumBy.iOSClassChain("**/XCUIElementTypeOther[`name == \"Monthly Body Composition\"`][2]");
-    
-	
-	
+
 
 	//Locators for bosy scan in profile 
 	public static final By profilclick	=	AppiumBy.iOSClassChain("**/XCUIElementTypeOther[`name == \"My Profile\"`][2]");
@@ -46,6 +44,25 @@ public class mobileLocators {
 	//Locators for mindful screen 
 	public static final By mindulscreen	= AppiumBy.accessibilityId("MINDFUL_SCREEN");
 	public static final By mindfulabel	= AppiumBy.iOSClassChain("**/XCUIElementTypeStaticText[`name == \"Mindful\"`]");
+	public static final By mindfulstart	= AppiumBy.accessibilityId("Adaptive Biofeedback Start");
+	public static final By guidedoption	= AppiumBy.accessibilityId("GuidedToogleButton");
+	public static final By defaulguide	= AppiumBy.accessibilityId("Default");
+	public static final By guidelabel	= AppiumBy.iOSClassChain("**/XCUIElementTypeStaticText[`name == \"Guided\"`]");
+	public static final By vibrationlabel	= AppiumBy.iOSClassChain("**/XCUIElementTypeStaticText[`name == \"Vibration\"`]");
+	public static final By vibrationToggel	= AppiumBy.accessibilityId("VibrationToogleButton");
+	public static final By mindfulsounds		= AppiumBy.accessibilityId("soundDataToogleButton");
+	public static final By displaylabel	= AppiumBy.iOSClassChain("**/XCUIElementTypeStaticText[`name == \"Display Physiological Data\"`]");
+	public static final By displaydatatoggel	= AppiumBy.accessibilityId("Display Physiological DataToogleButton");
+	public static final By adaptivereminderlabel	=	AppiumBy.accessibilityId("Adaptive Biofeedback Reminder");
+	public static final By stressoption1	= AppiumBy.iOSClassChain("**/XCUIElementTypeOther[`name == \"2\"`][3]");
+	public static final By stressoption2	= AppiumBy.iOSClassChain("**/XCUIElementTypeOther[`name == \"4\"`][3]");
+	public static final By stressoption3	= AppiumBy.iOSClassChain("**/XCUIElementTypeOther[`name == \"1\"`][3]");
+	public static final By energy1		= AppiumBy.iOSClassChain("**/XCUIElementTypeOther[`name == \"1\"`][6]");
+	public static final By energy2		= AppiumBy.iOSClassChain("**/XCUIElementTypeOther[`name == \"5\"`][6]");
+	public static final By energy3		= AppiumBy.iOSClassChain("**/XCUIElementTypeOther[`name == \"3\"`][6]");
+	public static final By selectTimereminder 	= AppiumBy.accessibilityId("SelectTimeReminder");
+	public static final By submittimer	= AppiumBy.iOSClassChain("**/XCUIElementTypeOther[`name == \"Submit\"`][2]");
+	
 	
 	
 	//locators for chat screen
@@ -147,7 +164,7 @@ public class mobileLocators {
 	public static final By lunchcategory 	= AppiumBy.iOSClassChain("**/XCUIElementTypeOther[`label == \"Lunch\"`][2]");
 	public static final By fiofuel			= AppiumBy.accessibilityId("Panino");
 	public static final By latesnackscategory	= AppiumBy.iOSClassChain("**/XCUIElementTypeOther[`label == \"Late Snacks\"`][2]");
-	public static final By humfuel			=	AppiumBy.accessibilityId("Humdingers Shrimp");	
+	public static final By humfuel			=	AppiumBy.accessibilityId("Hummus");	
 	public static final By dinnercategory	=	AppiumBy.iOSClassChain("**/XCUIElementTypeOther[`label == \"Dinner\"`][2]");
 	
 	/****Dated : 20-Dec perform cases locators*****/

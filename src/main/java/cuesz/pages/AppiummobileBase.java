@@ -91,6 +91,19 @@ public class AppiummobileBase {
         options.setUdid("00008110-00142D610A79801E");
         options.setWdaLaunchTimeout(Duration.ofSeconds(30));
 
+        
+//        //     for real device
+//        options.setPlatformName("iOS");
+//        options.setDeviceName("iPhone 13 pro");
+//        options.setPlatformVersion("17.4.1");
+//        options.setAutomationName("XCUITest");
+//        options.setUdid("00008110-000E58443E9A801E");
+//        options.setWdaLaunchTimeout(Duration.ofSeconds(30));
+
+        
+        
+        
+        
 //        //     for real device
 //        options.setPlatformName("iOS");
 //        options.setDeviceName("ChicMic’s iPhone (2)");
