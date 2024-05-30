@@ -7,61 +7,67 @@ public class mobileLocators {
 	
 	
 	//Tutrial screen locators
-	public static final By tutorialbttn	 =	AppiumBy.accessibilityId("Tutorial");
-	public static final By motionsession =	AppiumBy.iOSClassChain("**/XCUIElementTypeOther[`name == \"Motion Explore Session\"`][2]");
-	public static final By livesession	=	AppiumBy.iOSClassChain("**/XCUIElementTypeOther[`name == \"Live Perform Session\"`][2]");
-    public static final By monthlybody	=	AppiumBy.iOSClassChain("**/XCUIElementTypeOther[`name == \"Monthly Body Composition\"`][2]");
+	public static final By tutorialbttn	 	=	AppiumBy.accessibilityId("Tutorial");
+	public static final By motionsession 	=	AppiumBy.iOSClassChain("**/XCUIElementTypeOther[`name == \"Motion Explore Session\"`][2]");
+	public static final By livesession		=	AppiumBy.iOSClassChain("**/XCUIElementTypeOther[`name == \"Live Perform Session\"`][2]");
+    public static final By monthlybody		=	AppiumBy.iOSClassChain("**/XCUIElementTypeOther[`name == \"Monthly Body Composition\"`][2]");
 
 
 	//Locators for bosy scan in profile 
-	public static final By profilclick	=	AppiumBy.iOSClassChain("**/XCUIElementTypeOther[`name == \"My Profile\"`][2]");
-	public static final By Posturedclick =	AppiumBy.accessibilityId("PostureClicked");
-	public static final By totalbodyfat =	AppiumBy.iOSClassChain("**/XCUIElementTypeOther[`name == \"Total Body Fat\"`][1]");
-	public static final By Visceralfat 	=	AppiumBy.iOSClassChain("**/XCUIElementTypeOther[`name == \"Total Body Fat\"`][2]");
-	public static final By Waisttohip	=	AppiumBy.accessibilityId("Waist to Hip ratio");
-	public static final By waistoheight	=	AppiumBy.accessibilityId("Waist to Height Ratio");
+	public static final By profilclick		=	AppiumBy.iOSClassChain("**/XCUIElementTypeOther[`name == \"My Profile\"`][2]");
+	public static final By Posturedclick 	=	AppiumBy.accessibilityId("PostureClicked");
+	public static final By totalbodyfat 	=	AppiumBy.iOSClassChain("**/XCUIElementTypeOther[`name == \"Total Body Fat\"`][1]");
+	public static final By Visceralfat 		=	AppiumBy.iOSClassChain("**/XCUIElementTypeOther[`name == \"Total Body Fat\"`][2]");
+	public static final By Waisttohip		=	AppiumBy.accessibilityId("Waist to Hip ratio");
+	public static final By waistoheight		=	AppiumBy.accessibilityId("Waist to Height Ratio");
 	public static final By wasitcircumference	=	AppiumBy.accessibilityId("Waist Circumference");
-	public static final By Hipcircumference	=	AppiumBy.accessibilityId("Hip Circumference");
-	public static final By bodyscanrisk	=	AppiumBy.accessibilityId(" Body Scan Risk Indicator");
+	public static final By Hipcircumference		=	AppiumBy.accessibilityId("Hip Circumference");
+	public static final By bodyscanrisk		=	AppiumBy.accessibilityId(" Body Scan Risk Indicator");
 	public static final By bodyscanumber	=	AppiumBy.accessibilityId(" Body Scan Number");
-	public static final By comparebttn	=	AppiumBy.accessibilityId("CompareBodyScan");
-	public static final By drop1		=	AppiumBy.accessibilityId("CompareArrowDownLeft");
-	public static final By dropd2		=	AppiumBy.accessibilityId("CompareArrowDownRight");
-	public static final By bodyscandrop	=	AppiumBy.accessibilityId("BodyScanArrowDown");
-	public static final By scanspeher	=	AppiumBy.accessibilityId("BodyScanSphere");
-	public static final By movetoresult	=	AppiumBy.accessibilityId("MoveToBodyScan");
-	public static final By bodyscangrid =	AppiumBy.accessibilityId("BodyScanGrid");
+	public static final By comparebttn		=	AppiumBy.accessibilityId("CompareBodyScan");
+	public static final By drop1			=	AppiumBy.accessibilityId("CompareArrowDownLeft");
+	public static final By dropd2			=	AppiumBy.accessibilityId("CompareArrowDownRight");
+	public static final By bodyscandrop		=	AppiumBy.accessibilityId("BodyScanArrowDown");
+	public static final By scanspeher		=	AppiumBy.accessibilityId("BodyScanSphere");
+	public static final By movetoresult		=	AppiumBy.accessibilityId("MoveToBodyScan");
+	public static final By bodyscangrid 	=	AppiumBy.accessibilityId("BodyScanGrid");
 	public static final By totalbodyfat1	=	AppiumBy.accessibilityId("Total Body Fat");
-	public static final By visceralfat	=	AppiumBy.accessibilityId("Visceral Fat");
-	public static final By waisthip		=	AppiumBy.accessibilityId("Waist To Hip Ratio");
+	public static final By visceralfat		=	AppiumBy.accessibilityId("Visceral Fat");
+	public static final By waisthip			=	AppiumBy.accessibilityId("Waist To Hip Ratio");
 	public static final By waistcirmference	=	AppiumBy.accessibilityId("Waist Circumference");
 	public static final By hipcircumference	=	AppiumBy.accessibilityId("Hip Circumference");
-	public static final By infobodyscan	=	AppiumBy.accessibilityId("BodyScanInfoScreen");
-	public static final By rightarrow	=	AppiumBy.accessibilityId("BodyScanRight");
-	public static final By leftarrow	=	AppiumBy.accessibilityId("BodyScanLeft");
+	public static final By infobodyscan		=	AppiumBy.accessibilityId("BodyScanInfoScreen");
+	public static final By rightarrow		=	AppiumBy.accessibilityId("BodyScanRight");
+	public static final By leftarrow		=	AppiumBy.accessibilityId("BodyScanLeft");
 	
 	
 	//Locators for mindful screen 
-	public static final By mindulscreen	= AppiumBy.accessibilityId("MINDFUL_SCREEN");
-	public static final By mindfulabel	= AppiumBy.iOSClassChain("**/XCUIElementTypeStaticText[`name == \"Mindful\"`]");
-	public static final By mindfulstart	= AppiumBy.accessibilityId("Adaptive Biofeedback Start");
-	public static final By guidedoption	= AppiumBy.accessibilityId("GuidedToogleButton");
-	public static final By defaulguide	= AppiumBy.accessibilityId("Default");
-	public static final By guidelabel	= AppiumBy.iOSClassChain("**/XCUIElementTypeStaticText[`name == \"Guided\"`]");
+	public static final By mindulscreen		= AppiumBy.accessibilityId("MINDFUL_SCREEN");
+	public static final By mindfulabel		= AppiumBy.iOSClassChain("**/XCUIElementTypeStaticText[`name == \"Mindful\"`]");
+	public static final By mindfulstart		= AppiumBy.accessibilityId("Adaptive Biofeedback Start");
+	public static final By guidedoption		= AppiumBy.accessibilityId("GuidedToogleButton");
+	public static final By defaulguide		= AppiumBy.accessibilityId("Default");
+	public static final By guidelabel		= AppiumBy.iOSClassChain("**/XCUIElementTypeStaticText[`name == \"Guided\"`]");
 	public static final By vibrationlabel	= AppiumBy.iOSClassChain("**/XCUIElementTypeStaticText[`name == \"Vibration\"`]");
 	public static final By vibrationToggel	= AppiumBy.accessibilityId("VibrationToogleButton");
-	public static final By mindfulsounds		= AppiumBy.accessibilityId("soundDataToogleButton");
-	public static final By displaylabel	= AppiumBy.iOSClassChain("**/XCUIElementTypeStaticText[`name == \"Display Physiological Data\"`]");
+	public static final By mindfulsounds	= AppiumBy.accessibilityId("soundDataToogleButton");
+	public static final By displaylabel		= AppiumBy.iOSClassChain("**/XCUIElementTypeStaticText[`name == \"Display Physiological Data\"`]");
 	public static final By displaydatatoggel	= AppiumBy.accessibilityId("Display Physiological DataToogleButton");
 	public static final By adaptivereminderlabel	=	AppiumBy.accessibilityId("Adaptive Biofeedback Reminder");
 	public static final By stressoption1	= AppiumBy.iOSClassChain("**/XCUIElementTypeOther[`name == \"2\"`][3]");
 	public static final By stressoption2	= AppiumBy.iOSClassChain("**/XCUIElementTypeOther[`name == \"4\"`][3]");
 	public static final By stressoption3	= AppiumBy.iOSClassChain("**/XCUIElementTypeOther[`name == \"1\"`][3]");
-	public static final By energy1		= AppiumBy.iOSClassChain("**/XCUIElementTypeOther[`name == \"1\"`][6]");
-	public static final By energy2		= AppiumBy.iOSClassChain("**/XCUIElementTypeOther[`name == \"5\"`][6]");
-	public static final By energy3		= AppiumBy.iOSClassChain("**/XCUIElementTypeOther[`name == \"3\"`][6]");
+	public static final By energy1			= AppiumBy.iOSClassChain("**/XCUIElementTypeOther[`name == \"1\"`][6]");
+	public static final By energy2			= AppiumBy.iOSClassChain("**/XCUIElementTypeOther[`name == \"5\"`][6]");
+	public static final By energy3			= AppiumBy.iOSClassChain("**/XCUIElementTypeOther[`name == \"3\"`][6]");
 	public static final By selectTimereminder 	= AppiumBy.accessibilityId("SelectTimeReminder");
-	public static final By submittimer	= AppiumBy.iOSClassChain("**/XCUIElementTypeOther[`name == \"Submit\"`][2]");
+	public static final By submittimer		= AppiumBy.iOSClassChain("**/XCUIElementTypeOther[`name == \"Submit\"`][2]");
+	public static final By tracklabel		= AppiumBy.accessibilityId("To track your progress accurately during your Adaptive Biofeedback session, it is recommended that you keep the app active in the foreground.");
+	public static final By rhytmverification	=	AppiumBy.iOSClassChain("**/XCUIElementTypeOther[`name == \"Rhythm 24 2759\"`][2]");
+	public static final By syncdevice		=	AppiumBy.accessibilityId("SyncDevice");
+	public static final By startmindful		= AppiumBy.accessibilityId("Start");
+	public static final By submitmindful	= AppiumBy.accessibilityId("Submit");
+	public static final By savebttn			= AppiumBy.accessibilityId("Save");
 	
 	
 	
