@@ -38,9 +38,8 @@ public class Case16_Perform_Vo2 extends AppiummobileBase {
     @Description("Verify perform screen & check Additional activity functionlaity.")
     @Story("here, we need to verify Additional perform activity functionality")	
 	
-	public void perfom_vo2activity() throws InterruptedException
-	{	
-
+	public void perfom_vo2activity() throws InterruptedException{	
+try {
 		// Create an instance of AppiumUtils and pass the driver
 		AppiumappUtils appiumUtils = new AppiumappUtils(driver);
         // Launch the app using the utility method
@@ -303,9 +302,17 @@ public class Case16_Perform_Vo2 extends AppiummobileBase {
         
         
     		
-		Thread.sleep(3500);
-        driver.terminateApp("com.cuesz.mobile");
-	
-	
-	
-	}}
+} catch (Exception e) {
+    LOGGER.error("An error occurred during the mindful screen test", e);
+    AllureUtils.logStep("An error occurred: " + e.getMessage());
+} finally {
+    // Terminate the app whether the test passed or failed
+    try {
+        Thread.sleep(8500);
+    } catch (InterruptedException e) {
+        LOGGER.error("Thread interrupted during final sleep", e);
+        Thread.currentThread().interrupt();
+    }
+    driver.terminateApp("com.cuesz.mobile");
+}
+}}

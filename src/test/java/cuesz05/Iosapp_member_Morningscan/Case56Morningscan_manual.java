@@ -35,7 +35,7 @@ public class Case56Morningscan_manual extends AppiummobileBase {
 	@Description("Member scroll to restore and able to add by using restor from + icon")
     @Story("Scroll to ")
 	public void manualmorningscan() throws InterruptedException {	
-
+try {
 		// Create an instance of AppiumUtils and pass the driver
 		AppiumappUtils appiumUtils = new AppiumappUtils(driver);
         // Launch the app using the utility method
@@ -193,8 +193,17 @@ public class Case56Morningscan_manual extends AppiummobileBase {
         LOGGER.info("Click on Tick options");
         AllureUtils.logStep("Click on tick options"); 
         
+} catch (Exception e) {
+    LOGGER.error("An error occurred during the mindful screen test", e);
+    AllureUtils.logStep("An error occurred: " + e.getMessage());
+} finally {
+    // Terminate the app whether the test passed or failed
+    try {
         Thread.sleep(8500);
-        driver.terminateApp("com.cuesz.mobile");
-        
-	}
+    } catch (InterruptedException e) {
+        LOGGER.error("Thread interrupted during final sleep", e);
+        Thread.currentThread().interrupt();
+    }
+    driver.terminateApp("com.cuesz.mobile");
 }
+}}
