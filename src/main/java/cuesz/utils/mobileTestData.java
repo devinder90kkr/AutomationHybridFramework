@@ -35,7 +35,7 @@ public class mobileTestData {
 	public static final String timeinput2 = "43";
 	
 	//case26_Fuel_breakfast_customfood
-	public static final  String searchText = "ysm";
+	public static final  String searchText = "uzt";
 	public static final String Servingsize = "45";
 	public static final String Servingunit = "cup";
 	public static final String Calories = "176";
