@@ -1,13 +1,8 @@
 //https://chat.openai.com/share/f592ab35-529c-4434-a989-5fac7039696c
 package cuesz07.Iosapp_member_Mindful;
 
-import java.time.Duration;
-
 import org.openqa.selenium.NoSuchElementException;
-import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.testng.Assert;
@@ -17,6 +12,7 @@ import cuesz.utils.AllureUtils;
 import cuesz.utils.AppiumappUtils;
 import cuesz.utils.mobileLocators;
 import cuesz.utils.mobilelement;
+import io.appium.java_client.AppiumBy;
 import io.qameta.allure.Allure;
 import io.qameta.allure.Description;
 import io.qameta.allure.Epic;
@@ -28,8 +24,8 @@ import io.qameta.allure.Story;
 
 @Epic ("Member access mindful feature")
 @Feature ("Verify that member able to do access mindful biofeedback")
-public class Case59mindfulwith_sosche extends AppiummobileBase {
-	private static final Logger LOGGER = LoggerFactory.getLogger(Case59mindfulwith_sosche.class);
+public class Case60mindfulwith_sosche extends AppiummobileBase {
+	private static final Logger LOGGER = LoggerFactory.getLogger(Case60mindfulwith_sosche.class);
 	
 	mobileLocators locators = new mobileLocators();	
 
@@ -39,7 +35,8 @@ public class Case59mindfulwith_sosche extends AppiummobileBase {
 	@Description("Member able to update and change biofeedback options on screen and redirect to mindful screen")
     @Story("Scroll to mindful and access options for mindful feature ")
 	public void mindfulscreen() throws InterruptedException {	
-            // Create an instance of AppiumUtils and pass the driver
+        try {    
+		// Create an instance of AppiumUtils and pass the driver
             AppiumappUtils appiumUtils = new AppiumappUtils(driver);
             // Launch the app using the utility method
             appiumUtils.launchAppWithPackageId("com.cuesz.mobile");
@@ -136,41 +133,6 @@ public class Case59mindfulwith_sosche extends AppiummobileBase {
             
             Thread.sleep(2500);
             
-//            try {
-//                WebElement rhythmtext = driver.findElement(mobileLocators.rhytmverification);
-//                // Extract text from the element
-//                String actualText2 = rhythmtext.getText();
-//                // Define the expected text
-//                String expectedText2 = "Rhythm 24 2759";
-//
-//                // Print the actual and expected text to the console
-//                System.out.println("Actual Text: " + actualText2);
-//                System.out.println("Expected Text: " + expectedText2);
-//
-//                // Attach values to Allure report
-//                Allure.addAttachment("Actual Text", actualText2);
-//                Allure.addAttachment("Expected Text", expectedText2);
-//
-//                // Use an assertion to verify that actualText2 equals expectedText2
-//                Assert.assertEquals(actualText2, expectedText2);
-//
-//                if (actualText2.equals(expectedText2)) {
-//                    // If actual text and expected text are the same, click on Syncmydevicebttn
-//                    WebElement Syncmydevicebttn = driver.findElement(mobileLocators.syncdevicebttn);
-//                    Syncmydevicebttn.click();
-//                    // Log console message to Allure
-//                    LOGGER.info("Click on Syncmydevice bttn");
-//                    AllureUtils.logStep("Click on Syncmydevice bttn");
-//                }
-//            } catch (NoSuchElementException e) {
-//                // Handle the case where the element is not found
-//                LOGGER.error("Element not found: rhytmverification", e);
-//                AllureUtils.logStep("Element not found: rhytmverification");
-//            } catch (AssertionError e) {
-//                // Handle the case where the text does not match
-//                LOGGER.error("Text does not match: expected 'Rhythm 24 2759' but found '" + e.getMessage() + "'", e);
-//                AllureUtils.logStep("Text does not match: expected 'Rhythm 24 2759' but found '" + e.getMessage() + "'");
-//            }
             
             try {
                 // Find and click on Syncmydevicebttn
@@ -222,28 +184,78 @@ public class Case59mindfulwith_sosche extends AppiummobileBase {
             LOGGER.info("Clicked on startmindful button");
             AllureUtils.logStep("Clicked on startmindful button");
             
-            Thread.sleep(3000);
-            Thread.sleep(3000);
-            Thread.sleep(3000);
-            
-            //Click on mindful submit button
-            mobilelement.clickElement(driver, mobileLocators.backpressbutton);
-            //Log console message to Allure
-            LOGGER.info("Clicked on submitmindful button");
-            AllureUtils.logStep("Clicked on submitmindful button");
-            
-            Thread.sleep(3000);
-            mobilelement.clickElement(driver, mobileLocators.yesdeleticon);
-            
-            mobilelement.clickElement(driver, mobileLocators.savebttn);
-            mobilelement.clickElement(driver,mobileLocators.stressoption1);
-            mobilelement.clickElement(driver,mobileLocators.stressoption3);
-            
-            Thread.sleep(3000);
-            mobilelement.clickElement(driver, mobileLocators.submittimer);
-         
-        Thread.sleep(8500);
-        driver.terminateApp("com.cuesz.mobile");
-        
-	}}
 
+//            // Wait loop with check for the next button
+//               for (int i = 0; i < 10; i++) {
+//                   try {
+//                       Thread.sleep(1000);
+//                       LOGGER.info("Waiting for nextbutton to enabled and complete mindful: " + (i + 1));
+//                       if (mobilelement.isElementDisplayed(driver, mobileLocators.performanceeditsubmit)) {
+//                           mobilelement.clickElement(driver, mobileLocators.performanceeditsubmit);
+//                        // Capture a screenshot and attach it to Allure
+//                           AllureUtils.captureScreenshot(driver, "Case59mindful_functionliaty7");
+////                           mobilelement.clickElement(driver, mobileLocators.nextbutton);
+//                           LOGGER.info("Click on performanceeditsubmit");
+//                           AllureUtils.logStep("Click on performanceeditsubmit");
+//                           break;
+//                       }
+//                   } catch (InterruptedException e) {
+//                       LOGGER.error("Thread interrupted", e);
+//                       Thread.currentThread().interrupt();
+//                   } catch (NoSuchElementException e) {
+//                       LOGGER.error("Element not found: performanceeditsubmit", e);
+//                   }
+//               }      
+               
+            // Wait for the mindful session to complete (timer to reach 00:00)
+               for (int i = 0; i < 123; i++) { // Adjust the maximum wait time as needed
+                   Thread.sleep(1000);
+                   try {
+                       WebElement timerElement = driver.findElement(AppiumBy.iOSClassChain("**/XCUIElementTypeStaticText[`name == \"00:00\"`]"));
+                       if (timerElement != null) {
+                           break;
+                       }
+                   } catch (NoSuchElementException e) {
+                       // If the element is not found, continue waiting
+                       System.out.println("Waiting for mindful session to complete: " + (i + 1) + " seconds");
+                   }
+               }
+
+               // Click on performanceeditsubmit button
+               mobilelement.clickElement(driver, mobileLocators.performanceeditsubmit);
+               // Capture a screenshot and attach it to Allure
+               AllureUtils.captureScreenshot(driver, "Case59mindful_functionliaty7");
+               LOGGER.info("Click on performanceeditsubmit");
+               AllureUtils.logStep("Click on performanceeditsubmit");
+               
+               
+               mobilelement.clickElement(driver,mobileLocators.stressoption1);
+               mobilelement.clickElement(driver,mobileLocators.stressoption3);
+               
+               // Capture a screenshot and attach it to Allure
+               AllureUtils.captureScreenshot(driver, "Case59mindful_functionliaty8");
+               LOGGER.info("Click on stressoption");
+               AllureUtils.logStep("Click on stressoption");
+               
+               Thread.sleep(3000);
+               mobilelement.clickElement(driver, mobileLocators.submittimer);
+               // Capture a screenshot and attach it to Allure
+        
+               LOGGER.info("Click on submittimer");
+               AllureUtils.logStep("Click on submittimer");
+               
+
+           } catch (Exception e) {
+               LOGGER.error("An error occurred during the mindful screen test", e);
+               AllureUtils.logStep("An error occurred: " + e.getMessage());
+           } finally {
+               // Terminate the app whether the test passed or failed
+               try {
+                   Thread.sleep(8500);
+               } catch (InterruptedException e) {
+                   LOGGER.error("Thread interrupted during final sleep", e);
+                   Thread.currentThread().interrupt();
+               }
+               driver.terminateApp("com.cuesz.mobile");
+           }
+       }}
