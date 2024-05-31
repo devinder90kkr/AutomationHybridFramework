@@ -109,6 +109,14 @@ public class mobileLocators {
 	public static final By musucle1		=	AppiumBy.iOSClassChain("**/XCUIElementTypeOther[`name == \"2\"`][12]");
 	public static final By musucle2		=	AppiumBy.iOSClassChain("**/XCUIElementTypeOther[`name == \"5\"`][12]");
 	public static final By strees1		= 	AppiumBy.iOSClassChain("**/XCUIElementTypeOther[`name == \"1\"`][15]");
+	public static final By morningscanlabel	=	 AppiumBy.accessibilityId("Please ensure that you keep the app active in the foreground while completing your Morning Scan session so that your progress can be tracked.");
+	public static final By morninglabel	=	AppiumBy.iOSClassChain("**/XCUIElementTypeStaticText[`name == \"MORNING SCAN\"`]");
+	public static final By cancel		=	AppiumBy.accessibilityId("Cancel");
+	public static final By redo			=	AppiumBy.iOSClassChain("**/XCUIElementTypeOther[`name == \"Scanning Cancel\"`]/XCUIElementTypeOther[2]");
+	public static final By scanningtext	=	AppiumBy.iOSClassChain("**/XCUIElementTypeStaticText[`name == \"Scanning\"`]");
+	public static final By nextbutton	=	AppiumBy.accessibilityId("Next");
+	public static final By wentobed 	=	AppiumBy.accessibilityId("WentTobedTimmer");
+	public static final By Wokeupbed	=	AppiumBy.accessibilityId("WokeUpTimmer");
 	
 	
 	

@@ -19,7 +19,6 @@
 	   <class name="cuesz02.Iosapp_member_home_PerformScreen.Case12_Perform_additionalactivity_deleteprocess"/>
 	   <class name="cuesz02.Iosapp_member_home_PerformScreen.Case13_Perform_additionalactivity"/>
        <class name="cuesz02.Iosapp_member_home_PerformScreen.Case14_Perform_performalreadycompleted"/>
-	<!--   <class name="cuesz02.Iosapp_member_home_PerformScreen.Case15_Perform_movetocurrent"/> -->
        
        <!-- Restore cases -->
        <class name="cuesz04.Iosapp_member_home_Restore.Case54_Restore"/>
@@ -28,14 +27,16 @@
        <!-- Moringscan cases -->
        <class name="cuesz05.Iosapp_member_Morningscan.Case56Morningscan_manual"/>
 
-		<!-- Chat screen -->
-   <!--     <class name="cuesz06.Iosapp_member_Advcoatechat.Case57Advocate_chat"/> -->
        
        <!-- Boyscan result -->
         <class name="cuesz08.Iosapp_member_Myprofile.Case59Avtarclick" />
        	<class name="cuesz08.Iosapp_member_Myprofile.Case60compare" />
      	<class name="cuesz08.Iosapp_member_Myprofile.Case61avtarposture"/>     
        <class name="cuesz08.Iosapp_member_Myprofile.Case62Tutorial"/>     
+
+		<!-- Mindful basic cases -->
+      	<class name="cuesz07.Iosapp_member_Mindful.Case58mindfulcasebasic" />
+       
        
     </classes>
   </test> <!-- Test -->

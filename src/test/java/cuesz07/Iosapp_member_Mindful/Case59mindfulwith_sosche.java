@@ -28,8 +28,8 @@ import io.qameta.allure.Story;
 
 @Epic ("Member access mindful feature")
 @Feature ("Verify that member able to do access mindful biofeedback")
-public class Case59mindful_functionliaty extends AppiummobileBase {
-	private static final Logger LOGGER = LoggerFactory.getLogger(Case59mindful_functionliaty.class);
+public class Case59mindfulwith_sosche extends AppiummobileBase {
+	private static final Logger LOGGER = LoggerFactory.getLogger(Case59mindfulwith_sosche.class);
 	
 	mobileLocators locators = new mobileLocators();	
 

@@ -7,6 +7,8 @@ import java.util.List;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
+import org.openqa.selenium.NoSuchElementException;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.interactions.PointerInput;
@@ -18,11 +20,21 @@ import io.appium.java_client.ios.IOSDriver;
 
 public class mobilelement {
 	
+		
+		//Used in morning scan for waiting and displayed button
+		public static boolean isElementDisplayed(WebDriver driver, By locator) {
+	    try {
+	        return driver.findElement(locator).isDisplayed();
+	    } catch (NoSuchElementException e) {
+	        return false;
+	    }
+		}
+	
 	// Method to get text from an element
-	public static String getElementText(AppiumDriver driver, By elementLocator) {
+		public static String getElementText(AppiumDriver driver, By elementLocator) {
 	    WebElement element = driver.findElement(elementLocator);
 	    return element.getText();
-	}
+		}
 	
 	
 		// Method to perform horizontal swipe
