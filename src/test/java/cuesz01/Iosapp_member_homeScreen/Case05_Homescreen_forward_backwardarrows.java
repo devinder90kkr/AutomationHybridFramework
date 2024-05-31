@@ -1,6 +1,8 @@
 package cuesz01.Iosapp_member_homeScreen;
 
 import org.openqa.selenium.WebElement;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.testng.annotations.Test;
 
 import cuesz.pages.AppiummobileBase;
@@ -22,7 +24,7 @@ import io.qameta.allure.Story;
 public class Case05_Homescreen_forward_backwardarrows extends AppiummobileBase {
 
 	mobileLocators locators = new mobileLocators();	
-	
+	private static final Logger LOGGER = LoggerFactory.getLogger(Case05_Homescreen_forward_backwardarrows.class);	
 	
 	@Test
 
@@ -42,14 +44,22 @@ public class Case05_Homescreen_forward_backwardarrows extends AppiummobileBase {
 		// CLick on home menu from bottom
 		WebElement Homeicon = driver.findElement(mobileLocators.Homeclick);
 		Homeicon.click();
-
+			// Log message to console and Allure report
+	       LOGGER.info("Click on home menu from bottom");
+	       AllureUtils.logStep("Click on home menu from bottom");
+	       // Capture a screenshot and attach it to Allure
+	       AllureUtils.captureScreenshot(driver, "ios_Homescreen_screenshot");
+		
 //		scrollDown();
 		
 		// Click on HomeBackArrow button 4 times
 	    for (int i = 0; i < 4; i++) {
 	        WebElement backarrow = driver.findElement(mobileLocators.backarrowbttn);
 	        backarrow.click();
-	      //  Thread.sleep(1000); // Optional delay to observe the action
+	        //  Thread.sleep(1000); // Optional delay to observe the action
+	    		// Log message to console and Allure report
+		       LOGGER.info("Click on back arrow for old week");
+		       AllureUtils.logStep("Click on back arrow for old week");
 	        
 	        Thread.sleep(2500);
 	        // Capture a screenshot and attach it to Allure
@@ -62,7 +72,9 @@ public class Case05_Homescreen_forward_backwardarrows extends AppiummobileBase {
 	        WebElement forwardarrow = driver.findElement(mobileLocators.forwardarrowbttn );
 	        forwardarrow.click();
 	    //    Thread.sleep(1000); // Optional delay to observe the action
-	        
+	     // Log message to console and Allure report
+		       LOGGER.info("Click on forward arrow for new or upcoming week");
+		       AllureUtils.logStep("Click on new arrow for new or upcoming week");
 	        
 	        Thread.sleep(2500);
 	        // Capture a screenshot and attach it to Allure
@@ -72,6 +84,9 @@ public class Case05_Homescreen_forward_backwardarrows extends AppiummobileBase {
 	    // Click on HomeBackArrow button 1 more time
 	    WebElement backarrow = driver.findElement(mobileLocators.backarrowbttn);
 	    backarrow.click();
+	 // Log message to console and Allure report
+	       LOGGER.info("Click on back button");
+	       AllureUtils.logStep("Click on back button");
 	    Thread.sleep(1000); // Optional delay to observe the action
 		
 	    Thread.sleep(2500);

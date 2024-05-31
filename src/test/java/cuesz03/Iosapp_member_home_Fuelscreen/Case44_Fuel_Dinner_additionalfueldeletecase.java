@@ -3,6 +3,8 @@ package cuesz03.Iosapp_member_home_Fuelscreen;
 import java.util.HashMap;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.testng.annotations.Test;
 
 import cuesz.pages.AppiummobileBase;
@@ -20,6 +22,7 @@ import io.qameta.allure.Story;
 @Epic ("Fuel screen detail ")
 @Feature ("Verify Fuel detail functionlaity related to additional fuel.")
 public class Case44_Fuel_Dinner_additionalfueldeletecase extends AppiummobileBase {
+	private static final Logger LOGGER = LoggerFactory.getLogger(Case44_Fuel_Dinner_additionalfueldeletecase.class);
 	
 	private By Homeclick 		= 		AppiumBy.iOSClassChain("**/XCUIElementTypeOther[`label == \"Home\"`][2]");
 	private By plusadd			= 		AppiumBy.accessibilityId("DinnerAddIcon");
@@ -45,7 +48,12 @@ public class Case44_Fuel_Dinner_additionalfueldeletecase extends AppiummobileBas
 		
 		WebElement Homeicon = driver.findElement(Homeclick);
 		Homeicon.click();
-		
+		// Log console message to Allure
+		LOGGER.info("Click on home menu from bottom");
+        AllureUtils.logStep("Click on home menu from bottom");
+        // Capture a screenshot and attach it to Allure
+        AllureUtils.captureScreenshot(driver, "44_1");
+		        
 		Thread.sleep(3000);
 		// Method to scroll to perform screen
 		HashMap<String,Object>scrollObject =new HashMap<>();
@@ -56,18 +64,34 @@ public class Case44_Fuel_Dinner_additionalfueldeletecase extends AppiummobileBas
 
         //Click on Fuel tab 
         driver.findElement(AppiumBy.accessibilityId("FUEL_SCREEN")).click();
+        // Log console message to Allure
+        LOGGER.info("Click on fuel screen");
+        AllureUtils.logStep("Click on fuel screen");
+        AllureUtils.captureScreenshot(driver,"44_2");
         
         // Locate the element related to breakfast + icon 
         WebElement breakfastplus 	= driver.findElement(plusadd);
         breakfastplus.click();
+        // Log console message to Allure
+        LOGGER.info("Click on breakfastplus");
+        AllureUtils.logStep("Click on breakfastplus");
+        AllureUtils.captureScreenshot(driver,"44_3");
         
        //click on keypad Done button to hide keypad
         WebElement keypaddone	= driver.findElement(doneclick);
         keypaddone.click();
+        // Log console message to Allure
+        LOGGER.info("Click on keypaddone");
+        AllureUtils.logStep("Click on keypaddone");
+        AllureUtils.captureScreenshot(driver,"44_4");
         
         // Click on fuel search field 
         WebElement additionalfuel = driver.findElement(additionalsearch);
         additionalfuel.click();
+        // Log console message to Allure
+        LOGGER.info("Click on additionalfuel");
+        AllureUtils.logStep("Click on additionalfuel");
+        AllureUtils.captureScreenshot(driver,"44_5");
         
         WebElement searchtext1	= driver.findElement(AppiumBy.iOSNsPredicateString("label == \"F\""));
         searchtext1.click();
@@ -84,19 +108,40 @@ public class Case44_Fuel_Dinner_additionalfueldeletecase extends AppiummobileBas
         WebElement Keypaddone	= driver.findElement(doneclick);
         Keypaddone.click();
         
+        // Log console message to Allure
+        LOGGER.info("Enter values for search, Click on Done");
+        AllureUtils.logStep("Enter values for search, Click on done");
+		// Capture a screenshot and attach it to Allure
+        AllureUtils.captureScreenshot(driver, "Case44_6");
+        		
         // Capture a screenshot and attach it to Allure
 	    AllureUtils.captureScreenshot(driver, "Dinner14");
         
         
         WebElement fuelselection	= driver.findElement(fish);
         fuelselection.click();
-		
+        // Log console message to Allure
+        LOGGER.info("Click on fuelselection");
+        AllureUtils.logStep("Click on fuelselection");
+		// Capture a screenshot and attach it to Allure
+        AllureUtils.captureScreenshot(driver, "Case44_7");
+        
         WebElement fueldelete	= driver.findElement(fishRemove);
         fueldelete.click();
+        // Log console message to Allure
+        LOGGER.info("Click on fueldelete");
+        AllureUtils.logStep("Click on fueldelete");
+		// Capture a screenshot and attach it to Allure
+        AllureUtils.captureScreenshot(driver, "Case44_8");
         
         // Click on fuel search field 
         WebElement additionalfuel2 = driver.findElement(additionalsearch);
         additionalfuel2.click();
+        // Log console message to Allure
+        LOGGER.info("Click on additionalfuel2");
+        AllureUtils.logStep("Click on additionalfuel2");
+		// Capture a screenshot and attach it to Allure
+        AllureUtils.captureScreenshot(driver, "Case44_9");
         
         WebElement searchtext11	= driver.findElement(AppiumBy.iOSNsPredicateString("label == \"G\""));
         searchtext11.click();
@@ -110,9 +155,19 @@ public class Case44_Fuel_Dinner_additionalfueldeletecase extends AppiummobileBas
         WebElement Keypaddone1	= driver.findElement(doneclick);
         Keypaddone1.click();
         
+        // Log console message to Allure
+        LOGGER.info("Enter values for search, Click on Done");
+        AllureUtils.logStep("Enter values for search, Click on done");
+		// Capture a screenshot and attach it to Allure
+        AllureUtils.captureScreenshot(driver, "Case44_10");
+        		
         WebElement brandedShowmore	= driver.findElement(Showclick);
-        brandedShowmore.click();
-        
+        brandedShowmore.click();        
+        // Log console message to Allure
+        LOGGER.info("Click on brandedShowmore");
+        AllureUtils.logStep("Click on brandedShowmore");
+		// Capture a screenshot and attach it to Allure
+        AllureUtils.captureScreenshot(driver, "Case44_11");
         
      // Capture a screenshot and attach it to Allure
 	    AllureUtils.captureScreenshot(driver, "Dinner15");
@@ -127,10 +182,30 @@ public class Case44_Fuel_Dinner_additionalfueldeletecase extends AppiummobileBas
 		
 		WebElement fuelselection1	= driver.findElement(Cheesegoat);
         fuelselection1.click();
+        // Log console message to Allure
+        LOGGER.info("Click on fuelselection1");
+        AllureUtils.logStep("Click on fuelselection1");
+		// Capture a screenshot and attach it to Allure
+        AllureUtils.captureScreenshot(driver, "Case44_12");
+        
+        
+        
+        //Click on dinner  
+	     WebElement dinnerClick = driver.findElement(AppiumBy.iOSClassChain("**/XCUIElementTypeOther[`name == \"Dinner\"`][2]"));
+	     dinnerClick.click();
+	     // Log console message to Allure
+       LOGGER.info("Click on dinnerClick");
+       AllureUtils.logStep("Click on dinnerClick");
+        
         
         WebElement submit1 = driver.findElement(submitick);
 		submit1.click();
-		
+		// Log console message to Allure
+        LOGGER.info("Click on submit1");
+        AllureUtils.logStep("Click on submit1");
+		// Capture a screenshot and attach it to Allure
+        AllureUtils.captureScreenshot(driver, "Case44_13");
+        
 		Thread.sleep(4500);
 		
 		Thread.sleep(3500);
@@ -147,4 +222,3 @@ public class Case44_Fuel_Dinner_additionalfueldeletecase extends AppiummobileBas
 	}
 }
 	
-

@@ -7,6 +7,8 @@ import java.util.NoSuchElementException;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -27,7 +29,7 @@ import io.qameta.allure.Story;
 @Epic ("Fuel screen detail")
 @Feature ("Verify Fuel detail functionlaity related to Lunch functionlaity.")
 public class Case33_Fuel_Lunch_recommendedfuel extends AppiummobileBase {
-	
+	private static final Logger LOGGER = LoggerFactory.getLogger(Case33_Fuel_Lunch_recommendedfuel.class);
 	private By Homeclick = 		AppiumBy.iOSClassChain("**/XCUIElementTypeOther[`label == \"Home\"`][2]");
 
 	private By Lunchlabel	= 		AppiumBy.iOSNsPredicateString("name == 'Lunch'");
@@ -63,15 +65,23 @@ public class Case33_Fuel_Lunch_recommendedfuel extends AppiummobileBase {
 		
 		WebElement Homeicon = driver.findElement(Homeclick);
 		Homeicon.click();
-		
+		// Log console message to Allure
+ 		LOGGER.info("Click on Homeicon");
+ 		AllureUtils.logStep("Click on Homeicon");
+ 		// Capture a screenshot and attach it to Allure
+ 		AllureUtils.captureScreenshot(driver, "Case33_1");
+		 		
 		Thread.sleep(3000);
 		scroll("down", "Perform Fuel Mindful Restore");
 		
 		Thread.sleep(2000);
         //Click on Fuel tab 
         driver.findElement(AppiumBy.accessibilityId("FUEL_SCREEN")).click();
-            
-//       scroll("down", "Lunch");
+        // Log console message to Allure
+        LOGGER.info("Click on fuel screen");
+        AllureUtils.logStep("Click on fuel screen");
+        AllureUtils.captureScreenshot(driver, "Case33_2");
+        
  		
      // Scroll to "Early Snacks" element if it's not present on the screen
         By lunchLocator = AppiumBy.iOSClassChain("**/XCUIElementTypeStaticText[`label == \"Lunch\"`][1]");
@@ -104,8 +114,17 @@ public class Case33_Fuel_Lunch_recommendedfuel extends AppiummobileBase {
         // Locate and click on breakfasticon for cal related info
         WebElement earlysnackicon	= driver.findElement(iconforlunch);
         earlysnackicon.click();
+        // Log console message to Allure
+        LOGGER.info("Click on earlysnackicon");
+        AllureUtils.logStep("Click on earlysnackicon");
+        AllureUtils.captureScreenshot(driver, "Case33_3");
+        
         WebElement backclick	= driver.findElement(backicon);
         backclick.click();
+        // Log console message to Allure
+        LOGGER.info("Click on backicon");
+        AllureUtils.logStep("Click on backicon");
+        AllureUtils.captureScreenshot(driver, "Case33_4");
         
 		// Capture a screenshot and attach it to Allure
         AllureUtils.captureScreenshot(driver, "lunch1");
@@ -113,37 +132,66 @@ public class Case33_Fuel_Lunch_recommendedfuel extends AppiummobileBase {
         // Locate the element related to breakfast + icon 
         WebElement earlysnackplus 	= driver.findElement(plusadd);
         earlysnackplus.click();
+        // Log console message to Allure
+        LOGGER.info("Click on earlysnackplus");
+        AllureUtils.logStep("Click on earlysnackplus");
+        AllureUtils.captureScreenshot(driver, "Case33_5");
         
        //click on keypad Done button to hide keypad
         WebElement keypaddone	= driver.findElement(doneclick);
         keypaddone.click();
+        // Log console message to Allure
+        LOGGER.info("Click on keypaddone");
+        AllureUtils.logStep("Click on keypaddone");
+        AllureUtils.captureScreenshot(driver, "Case33_6");
+        
         
         // Locate and click on recommended Fuel button
         WebElement Recommendedfuel 	= driver.findElement(recommendedclick);
         Recommendedfuel.click();
+        // Log console message to Allure
+        LOGGER.info("Click on Recommendedfuel");
+        AllureUtils.logStep("Click on Recommendedfuel");
+        AllureUtils.captureScreenshot(driver, "Case33_7");
+        
         WebElement recommendebackclick	= driver.findElement(backicon1);
         recommendebackclick.click();
+        // Log console message to Allure
+        LOGGER.info("Click on recommendebackclick");
+        AllureUtils.logStep("Click on recommendebackclick");
+        AllureUtils.captureScreenshot(driver, "Case33_8");
         
         //click on keypad Done button to hide keypad
         WebElement keypaddone1	= driver.findElement(doneclick);
         keypaddone1.click();
+        // Log console message to Allure
+        LOGGER.info("Click on keypaddone1");
+        AllureUtils.logStep("Click on keypaddone1");
+        AllureUtils.captureScreenshot(driver, "Case33_9");
         
         
         // Locate and click on recommended Fuel button
         WebElement Recommendedfuel1 	= driver.findElement(recommendedclick);
         Recommendedfuel1.click();
+     // Log console message to Allure
+        LOGGER.info("Click on Recommendedfuel1");
+        AllureUtils.logStep("Click on Recommendedfuel1");
+        AllureUtils.captureScreenshot(driver, "Case33_10");
         
         try {
         	WebElement arrowright = driver.findElement(rightarrow);
         	arrowright.click();
-        
-        // Capture a screenshot and attach it to Allure
-        AllureUtils.captureScreenshot(driver, "Lunch2");
-
-        
+        	// Log console message to Allure
+            LOGGER.info("Click on arrowright");
+            AllureUtils.logStep("Click on arrowright");
+   
         // Click on timer 
         WebElement Timerclick 	= driver.findElement(Time);
         Timerclick.click();
+        // Log console message to Allure
+        LOGGER.info("Click on Timerclick");
+        AllureUtils.logStep("Click on Timerclick");
+        AllureUtils.captureScreenshot(driver, "Case33_11");
         
         List<WebElement>values = driver.findElements(pickerelement);
 
@@ -161,20 +209,33 @@ public class Case33_Fuel_Lunch_recommendedfuel extends AppiummobileBase {
 		
 		Thread.sleep(3500);
 		values.get(2).sendKeys("PM");
-	
-		   // Capture a screenshot and attach it to Allure
+		// Log console message to Allure
+		LOGGER.info("enter time ");
+		AllureUtils.logStep("Enter time");   
+		
+		// Capture a screenshot and attach it to Allure
         AllureUtils.captureScreenshot(driver, "Lunch3");
 
 		driver.findElement(Doneclick).click();
+		// Log console message to Allure
+        LOGGER.info("Click on Doneclick ");
+        AllureUtils.logStep("Click on Doneclick"); 
         
 		// Click on breakfast-tick 
         WebElement breakfasttick	= driver.findElement(tickbreakfast);
         breakfasttick.click();
-    		   
+        // Log console message to Allure
+        LOGGER.info("Click on breakfasttick");
+        AllureUtils.logStep("Click on breakfasttick");
+        AllureUtils.captureScreenshot(driver, "Case33_12");
+        
         // Click on Done-breakfast button
         WebElement brekfastdone 	= driver.findElement(brekdone);
         brekfastdone.click();
-           
+        // Log console message to Allure
+        LOGGER.info("Click on brekdone");
+        AllureUtils.logStep("Click on brekdone");
+       
         // Capture a screenshot and attach it to Allure
         AllureUtils.captureScreenshot(driver, "Lunch4");
         
@@ -192,8 +253,6 @@ public class Case33_Fuel_Lunch_recommendedfuel extends AppiummobileBase {
   		scroll("up", "DRINK MORE WATER");
   		Thread.sleep(2000);
         
-//  		scroll("up", "OPTIMAL FUEL TARGET ACHIEVED");
-//  		Thread.sleep(2000);
   		
   		scroll("up", "Carbs");
   		Thread.sleep(2000);
@@ -201,6 +260,10 @@ public class Case33_Fuel_Lunch_recommendedfuel extends AppiummobileBase {
   		//click on protein card
   		WebElement protein = driver.findElement(Protcard);
   		protein.click();	
+  		// Log console message to Allure
+        LOGGER.info("Click on protein");
+        AllureUtils.logStep("Click on protein");
+        AllureUtils.captureScreenshot(driver, "Case33_14");
   		
   		scroll("down", "Early Snacks");
   		scroll("down", "Lunch");
@@ -210,10 +273,18 @@ public class Case33_Fuel_Lunch_recommendedfuel extends AppiummobileBase {
   		//Click on protein cross icon
   		WebElement proteincross = driver.findElement(crossicon1);
   		proteincross.click();
-  		
+  		// Log console message to Allure
+        LOGGER.info("Click on proteincross");
+        AllureUtils.logStep("Click on proteincross");
+        AllureUtils.captureScreenshot(driver, "Case33_15");
+        
   		//click on carbs card
   		WebElement carbs = driver.findElement(carbcard);
   		carbs.click();	
+  	// Log console message to Allure
+        LOGGER.info("Click on carbs");
+        AllureUtils.logStep("Click on carbs");
+        AllureUtils.captureScreenshot(driver, "Case33_16");
   		
   		scroll("down", "Early Snacks");  		
   		scroll("down", "Lunch");
@@ -221,21 +292,35 @@ public class Case33_Fuel_Lunch_recommendedfuel extends AppiummobileBase {
   		// Capture a screenshot and attach it to Allure
           AllureUtils.captureScreenshot(driver, "Lunch6");
   		//Click on protein cross icon
+          
   		WebElement carbscross = driver.findElement(crossicon1);
   		carbscross.click();
-  		
+  		// Log console message to Allure
+        LOGGER.info("Click on carbscross");
+        AllureUtils.logStep("Click on carbscross");
+        AllureUtils.captureScreenshot(driver, "carbscross");
+        
   		//click on fats card
   		WebElement fats = driver.findElement(fatcard);
   		fats.click();	
-  		
+  		// Log console message to Allure
+        LOGGER.info("Click on fats");
+        AllureUtils.logStep("Click on fats");
+        AllureUtils.captureScreenshot(driver, "fats");
+        
   		scroll("down", "Early Snacks");
   		scroll("down", "Lunch");
   		Thread.sleep(2000); 
   		// Capture a screenshot and attach it to Allure
           AllureUtils.captureScreenshot(driver, "Lunch7");
   		//Click on protein cross icon
+          
   		WebElement fatscross = driver.findElement(crossicon1);
   		fatscross.click();
+  		// Log console message to Allure
+        LOGGER.info("Click on fatscross");
+        AllureUtils.logStep("Click on fatscross");
+        AllureUtils.captureScreenshot(driver, "33_fatscross");
         
         
         } catch (Exception e) {
@@ -273,4 +358,3 @@ public class Case33_Fuel_Lunch_recommendedfuel extends AppiummobileBase {
 
 
 	
-

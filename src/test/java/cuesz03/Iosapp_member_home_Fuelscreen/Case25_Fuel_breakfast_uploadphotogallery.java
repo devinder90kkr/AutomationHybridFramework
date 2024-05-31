@@ -7,9 +7,12 @@ import java.util.NoSuchElementException;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.testng.annotations.Test;
 
 import cuesz.pages.AppiummobileBase;
+import cuesz.utils.AllureUtils;
 import cuesz.utils.AppiumappUtils;
 import io.appium.java_client.AppiumBy;
 import io.appium.java_client.AppiumDriver;
@@ -24,7 +27,7 @@ import io.qameta.allure.Story;
 @Epic ("Fuel upload screen functionlaity ")
 @Feature ("Verify Upload detail functionlaity for breakfast.")
 public class Case25_Fuel_breakfast_uploadphotogallery extends AppiummobileBase {
-	
+	private static final Logger LOGGER = LoggerFactory.getLogger(Case25_Fuel_breakfast_uploadphotogallery.class);
 	private By Homeclick 				= 		AppiumBy.iOSClassChain("**/XCUIElementTypeOther[`label == \"Home\"`][2]");
 	private By uploadbreakfastimage		=		AppiumBy.accessibilityId("BreakfastUploadIcon");
 	private By gallery					=		AppiumBy.accessibilityId("GalleryClicked");
@@ -32,7 +35,7 @@ public class Case25_Fuel_breakfast_uploadphotogallery extends AppiummobileBase {
 	private By pickerelement			= 		AppiumBy.xpath("//XCUIElementTypePickerWheel");
 	private By Doneclick				= 		AppiumBy.accessibilityId("AlcohalTime");
 	private By submittap				= 		AppiumBy.accessibilityId("SubmitImage");
-//	private By uploadphoto				= 		AppiumBy.accessibilityId("PhotoUpload");
+	private By photoupload					= 		AppiumBy.accessibilityId("PhotoUpload");
 	private By arrowclick				= 		AppiumBy.accessibilityId("RightArrow");
 	private By Icondelete				= 		AppiumBy.accessibilityId("DeletePhoto");
 
@@ -50,7 +53,12 @@ public class Case25_Fuel_breakfast_uploadphotogallery extends AppiummobileBase {
 		
 		WebElement Homeicon = driver.findElement(Homeclick);
 		Homeicon.click();
-		
+		// Log console message to Allure
+		LOGGER.info("Click on home menu from bottom");
+		AllureUtils.logStep("Click on home menu from bottom");
+		// Capture a screenshot and attach it to Allure
+		AllureUtils.captureScreenshot(driver, "Case21_Fuel_breakfast_recommendedfuel1");
+	       
 		Thread.sleep(3000);
 		// Method to scroll to perform screen
 		HashMap<String,Object>scrollObject =new HashMap<>();
@@ -61,23 +69,46 @@ public class Case25_Fuel_breakfast_uploadphotogallery extends AppiummobileBase {
 
         //Click on Fuel tab 
         driver.findElement(AppiumBy.accessibilityId("FUEL_SCREEN")).click();
+        // Log console message to Allure
+        LOGGER.info("Click on fuel screen");
+        AllureUtils.logStep("Click on fuel screenc");
+        AllureUtils.captureScreenshot(driver, "Case21_Fuel_breakfast_recommendedfuel2");
         
         WebElement uploadicon	= driver.findElement(uploadbreakfastimage);
         uploadicon.click();
+        // Log console message to Allure
+        LOGGER.info("Click on uploadicon");
+        AllureUtils.logStep("Click on uploadicon");
+        AllureUtils.captureScreenshot(driver, "uploadicon1");
         
         WebElement galleryclick	= driver.findElement(gallery);
         galleryclick.click();
+        // Log console message to Allure
+        LOGGER.info("Click on galleryclick");
+        AllureUtils.logStep("Click on galleryclick");
+        AllureUtils.captureScreenshot(driver, "uploadicon2");
         
         WebElement firstPhoto = driver.findElement(AppiumBy.xpath("//XCUIElementTypeImage[2]"));
         firstPhoto.click();
+        // Log console message to Allure
+        LOGGER.info("Click on firstPhoto");
+        AllureUtils.logStep("Click on firstPhoto");
+        AllureUtils.captureScreenshot(driver, "uploadicon3");
         
         WebElement addclick = driver.findElement(AppiumBy.accessibilityId("Add"));
         addclick.click();
-        
+        // Log console message to Allure
+        LOGGER.info("Click on addclick");
+        AllureUtils.logStep("Click on addclick");
+        AllureUtils.captureScreenshot(driver, "uploadicon4");
         
         // Click on timer 
         WebElement Timerclick 	= driver.findElement(Time);
         Timerclick.click();
+        // Log console message to Allure
+        LOGGER.info("Click on Timerclick");
+        AllureUtils.logStep("Click on Timerclick");
+        AllureUtils.captureScreenshot(driver, "uploadicon5");
         
         List<WebElement>values = driver.findElements(pickerelement);
 
@@ -95,27 +126,60 @@ public class Case25_Fuel_breakfast_uploadphotogallery extends AppiummobileBase {
 		
 		Thread.sleep(3500);
 		values.get(2).sendKeys("AM");
+		// Log console message to Allure
+		LOGGER.info("enter time ");
+        AllureUtils.logStep("Enter time");    
+        // Capture a screenshot and attach it to Allure
+        AllureUtils.captureScreenshot(driver, "uploadicon6");
 
 		driver.findElement(Doneclick).click();
+		// Log console message to Allure
+		LOGGER.info("Click on Doneclick ");
+        AllureUtils.logStep("Click on Doneclick");  
         
 		WebElement Submittap = driver.findElement(submittap);
 		Submittap.click();
-		
+		// Log console message to Allure
+		LOGGER.info("click on Submittap");
+        AllureUtils.logStep("click on Submittap");    
+        // Capture a screenshot and attach it to Allure
+        AllureUtils.captureScreenshot(driver, "uploadicon7");
+         
 		Thread.sleep(4500);
 		
 		
 		WebElement uploadicon1	= driver.findElement(uploadbreakfastimage);
 	    uploadicon1.click();
-	    
-//	    WebElement photoicon	= driver.findElement(uploadphoto);
-//	    photoicon.click();
+	    // Log console message to Allure
+	    LOGGER.info("click on uploadicon1");
+        AllureUtils.logStep("click on uploadicon1");    
+        
+        
+        
+        
+        WebElement Photoupload	= driver.findElement(photoupload);
+        Photoupload.click();
+	    // Log console message to Allure
+	    LOGGER.info("click on Photoupload");
+        AllureUtils.logStep("click on Photoupload");    
+          
+        // Capture a screenshot and attach it to Allure
+        AllureUtils.captureScreenshot(driver, "uploadicon8");
+        
+        
+      
 	   
 	    WebElement galleryclick2	= driver.findElement(gallery);
         galleryclick2.click();
+        // Log console message to Allure
+        LOGGER.info("click on galleryclick2");
+        AllureUtils.logStep("click on galleryclick2");    
+        // Capture a screenshot and attach it to Allure
+        AllureUtils.captureScreenshot(driver, "uploadicon9");
 	    
         WebElement firstPhoto2 = driver.findElement(AppiumBy.xpath("//XCUIElementTypeImage[3]"));
         firstPhoto2.click();
-        
+       
         WebElement addclick2 = driver.findElement(AppiumBy.accessibilityId("Add"));
         addclick2.click();
         
@@ -123,6 +187,7 @@ public class Case25_Fuel_breakfast_uploadphotogallery extends AppiummobileBase {
         // Click on timer 
         WebElement Timerclick2 	= driver.findElement(Time);
         Timerclick2.click();
+        
         
         List<WebElement>values1 = driver.findElements(pickerelement);
 
@@ -140,24 +205,48 @@ public class Case25_Fuel_breakfast_uploadphotogallery extends AppiummobileBase {
 		
 		Thread.sleep(3500);
 		values1.get(2).sendKeys("AM");
+		// Log console message to Allure
+		LOGGER.info("enter time ");
+		AllureUtils.logStep("Enter time");    
+		// Capture a screenshot and attach it to Allure
+		AllureUtils.captureScreenshot(driver, "uploadicon10");
 
 		driver.findElement(Doneclick).click();
         
 		WebElement Submittap1 = driver.findElement(submittap);
 		Submittap1.click();
-		
+		// Log console message to Allure
+        LOGGER.info("click on Submittap1");
+        AllureUtils.logStep("click on Submittap1");    
+        // Capture a screenshot and attach it to Allure
+        AllureUtils.captureScreenshot(driver, "uploadicon11");
 		Thread.sleep(4500);
 	
 		WebElement uploadicon2	= driver.findElement(uploadbreakfastimage);
 	    uploadicon2.click();
+	    // Log console message to Allure
+        LOGGER.info("click on uploadicon2");
+        AllureUtils.logStep("click on uploadicon2");    
+        // Capture a screenshot and attach it to Allure
+        AllureUtils.captureScreenshot(driver, "uploadicon12");
         
 	    //locate and click on toggel arrow 
 	    WebElement arrowright	= driver.findElement(arrowclick);
 	    arrowright.click();
+	    // Log console message to Allure
+        LOGGER.info("click on arrowright");
+        AllureUtils.logStep("click on arrowright");    
+        // Capture a screenshot and attach it to Allure
+        AllureUtils.captureScreenshot(driver, "uploadicon13");
 	    
 	    //Locate and click on delete icon
 	    WebElement deleticon	= driver.findElement(Icondelete);
 	    deleticon.click();
+	    // Log console message to Allure
+        LOGGER.info("click on deleticon");
+        AllureUtils.logStep("click on deleticon");    
+        // Capture a screenshot and attach it to Allure
+        AllureUtils.captureScreenshot(driver, "uploadicon14");
 	    Thread.sleep(4500);
 
 	  //scroll to image upload
@@ -170,18 +259,7 @@ public class Case25_Fuel_breakfast_uploadphotogallery extends AppiummobileBase {
   	            driver.executeScript("mobile:scroll", scrollObject1);
   	            Thread.sleep(2000);
   	        }
-	    
-	    
-//	    Thread.sleep(3000);
-//		// Method to scroll to perform screen
-//		HashMap<String,Object>scrollObject1 =new HashMap<>();
-//		scrollObject1.put("direction", "down");
-//		scrollObject1.put("Image uploaded", "Perform");
-//		driver.executeScript("mobile:scroll", scrollObject1);
-//		Thread.sleep(2000);
-	    
-	    
-        
+	      
 		Thread.sleep(8500);
         driver.terminateApp("com.cuesz.mobile");
 	}
@@ -197,4 +275,3 @@ public class Case25_Fuel_breakfast_uploadphotogallery extends AppiummobileBase {
 	
 }
 	
-

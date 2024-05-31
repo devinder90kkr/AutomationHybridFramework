@@ -7,6 +7,7 @@ import io.qameta.allure.Feature;
 import io.qameta.allure.Owner;
 import io.qameta.allure.Severity;
 import io.qameta.allure.SeverityLevel;
+import io.qameta.allure.Step;
 import io.qameta.allure.Story;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterClass;
@@ -16,6 +17,7 @@ import cuesz.dashboard.Step12_DB_navlink;
 import cuesz.logintest.AdvocateLogin;
 import cuesz.utils.AllureUtils;
 import cuesz.utils.WebDriverManager;
+
 
 import java.io.ByteArrayOutputStream;
 import java.io.FileInputStream;
@@ -64,10 +66,12 @@ public class Step12_DB_navlinktest {
     @Description("Advocate dashboard navlinks")
     @Story("Navigation links verification.")
     
-    public void advocateScheduleEventTest() throws InterruptedException {
+    public void advocateScheduleEventTest() throws InterruptedException, IOException {
         advocateLogin.setUp(); // Call the setUp method of AdvocateLogin to initialise loginPage
         advocateLogin.testAdvocateLogin();
+        
 
+    
         // Access the Schedule Event page
         dashboardPage.Navigationfunctionality();
         
@@ -103,8 +107,8 @@ public class Step12_DB_navlinktest {
         Allure.description("Operating System: " + osName + " (Version: " + osVersion + ")");
         
     }
-    
-    
+
+   
     private int captureHttpStatusCode() {
         // Implement code to capture the HTTP status code from your application
         // For example, you can extract it from a response object or using Selenium WebDriver

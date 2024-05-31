@@ -25,9 +25,7 @@ public class Case18_MS_DotAbiltest {
     private WebDriver driver;
     private AdvocateLogin advocateLogin;
     private Case18_MS_DotAbiltyPM membersummaryPage;
-    
     private ByteArrayOutputStream consoleOutput; // To capture console output
-
     @BeforeClass
     public void setUp() {
     	// Read the browser information from the configuration file
@@ -43,9 +41,7 @@ public class Case18_MS_DotAbiltest {
         PrintStream printStream = new PrintStream(consoleOutput);
         System.setOut(printStream);     
     }
-
     @Test
-   
     @Owner("QA") // Add the @Owner annotation to specify the executor
     @Severity(SeverityLevel.NORMAL)    
     @Description("Verify the Ability to Perform functionlaity as per member.")
@@ -80,15 +76,12 @@ public class Case18_MS_DotAbiltest {
         String osVersion = System.getProperty("os.version");
 
         // Include OS information in the test class description
-        Allure.description("Operating System: " + osName + " (Version: " + osVersion + ")");
-        
+        Allure.description("Operating System: " + osName + " (Version: " + osVersion + ")");   
     }
-    
  private String generateDynamicLink() {
         
         return "https://app.cuesz.com/member-specs/627d168e40231fb0ba6a057a"; // Replace with your actual dynamic link
     }
- 
  private String getBrowserFromConfigFile() {
      Properties properties = new Properties();
      try (FileInputStream fis = new FileInputStream("config.properties")) {

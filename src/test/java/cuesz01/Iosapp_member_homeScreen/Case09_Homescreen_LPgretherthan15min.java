@@ -2,6 +2,8 @@ package cuesz01.Iosapp_member_homeScreen;
 
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebElement;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.testng.annotations.Test;
 
 import cuesz.pages.AppiummobileBase;
@@ -22,6 +24,8 @@ import io.qameta.allure.Story;
 
 public class Case09_Homescreen_LPgretherthan15min extends AppiummobileBase {
 
+	private static final Logger LOGGER = LoggerFactory.getLogger(Case09_Homescreen_LPgretherthan15min.class);
+	
 	mobileLocators locators = new mobileLocators();	
 	
 	@Test
@@ -42,16 +46,14 @@ public class Case09_Homescreen_LPgretherthan15min extends AppiummobileBase {
 		WebElement Homeicon = driver.findElement(mobileLocators.Homeclick);
 		Homeicon.click();
 		
+        // Log message to console and Allure report
+        LOGGER.info("Clicked on home menu from bottom");
+        AllureUtils.logStep("Clicked on home menu from bottom");
+
+		
 		   // Capture a screenshot and attach it to Allure
         AllureUtils.captureScreenshot(driver, "LP icon");
-		
-		
-//        Thread.sleep(3500);
-//		WebElement livePerform = driver.findElement(mobileLocators.liveperfrmicon);
-//		livePerform.click();
-		
-		
-		
+			
 		  // Check if the Crossclick element is displayed before clicking on it
 		WebElement livePerform = null;
 		try {
@@ -62,18 +64,19 @@ public class Case09_Homescreen_LPgretherthan15min extends AppiummobileBase {
 		        // Handle the case where the element is not displayed
 		        System.out.println("Live perform element is not displayed.");
 		        // Perform some other action or throw an exception if needed
+		     // Log message to console and Allure report
+                LOGGER.info("Live perform element is not displayed.");
+                AllureUtils.logStep("Live perform element is not displayed.");
 		    }
 		} catch (NoSuchElementException e) {
 		    // Handle the case where the element is not found
 		    System.out.println("Live perform element not found.");
 		    // Perform some other action or throw an exception if needed
+		 // Log message to console and Allure report
+            LOGGER.info("Live perform element not found.");
+            AllureUtils.logStep("Live perform element not found.");
 		}
 		     
-		
-		
-		
-		
-		
 		  // Capture a screenshot and attach it to Allure
         AllureUtils.captureScreenshot(driver, "perform selection");
 	
@@ -81,6 +84,5 @@ public class Case09_Homescreen_LPgretherthan15min extends AppiummobileBase {
 		Thread.sleep(2500);
         driver.terminateApp("com.cuesz.mobile");
 	
-	
-	
+
 	}}

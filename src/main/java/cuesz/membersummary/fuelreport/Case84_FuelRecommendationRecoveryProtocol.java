@@ -113,6 +113,9 @@ public class Case84_FuelRecommendationRecoveryProtocol extends BasePage{
 				   carbIncrementButton.click();
 				 }
 
+				// Capture a screenshot and attach it to Allure
+			        AllureUtils.captureScreenshot(driver, "Case84_FuelRecommendationRecoveryProtocol1");
+				 
 				 // Hold the button for 5 seconds
 				 Actions action1 = new Actions(driver);
 				 action1.clickAndHold(carbIncrementButton).perform();
@@ -128,6 +131,9 @@ public class Case84_FuelRecommendationRecoveryProtocol extends BasePage{
 				   proteinIncrementButton.click();
 				 }
 
+				 
+				// Capture a screenshot and attach it to Allure
+			        AllureUtils.captureScreenshot(driver, "Case84_FuelRecommendationRecoveryProtocol2");
 				 // Hold the button for 3 seconds
 				 Actions action2 = new Actions(driver);
 				 action2.clickAndHold(proteinIncrementButton).perform();
@@ -143,6 +149,9 @@ public class Case84_FuelRecommendationRecoveryProtocol extends BasePage{
 				   fatIncrementButton.click();
 				 }
 
+				 
+				// Capture a screenshot and attach it to Allure
+			        AllureUtils.captureScreenshot(driver, "Case84_FuelRecommendationRecoveryProtocol3");
 				 // Hold the button for 3 seconds
 				 Actions action3 = new Actions(driver);
 				 action3.clickAndHold(fatIncrementButton).perform();
@@ -181,6 +190,9 @@ public class Case84_FuelRecommendationRecoveryProtocol extends BasePage{
 				       
 					            WebElement outclick = driver.findElement(click1);
 					            outclick.click();
+					            
+					         // Capture a screenshot and attach it to Allure
+						        AllureUtils.captureScreenshot(driver, "Case84_FuelRecommendationRecoveryProtocol4");
 					            
 						   } catch (Exception e) {
 							    e.printStackTrace();
@@ -236,6 +248,9 @@ public class Case84_FuelRecommendationRecoveryProtocol extends BasePage{
 					            
 					            WebElement outclick = driver.findElement(click1);
 					            outclick.click();
+					            
+					         // Capture a screenshot and attach it to Allure
+						        AllureUtils.captureScreenshot(driver, "Case84_FuelRecommendationRecoveryProtocol5");
 			          	    
 						   } catch (Exception e) {
 							    e.printStackTrace();
@@ -267,6 +282,8 @@ public class Case84_FuelRecommendationRecoveryProtocol extends BasePage{
 					            WebElement outclick = driver.findElement(click1);
 					            outclick.click();
 					            
+					         // Capture a screenshot and attach it to Allure
+						        AllureUtils.captureScreenshot(driver, "Case84_FuelRecommendationRecoveryProtocol6");
 
 						   } catch (Exception e) {
 							    e.printStackTrace();
@@ -295,6 +312,9 @@ public class Case84_FuelRecommendationRecoveryProtocol extends BasePage{
 					            
 					            WebElement outclick = driver.findElement(click1);
 					            outclick.click();
+					            
+					         // Capture a screenshot and attach it to Allure
+						        AllureUtils.captureScreenshot(driver, "Case84_FuelRecommendationRecoveryProtocol7");
 			          	    
 						   } catch (Exception e) {
 							    e.printStackTrace();
@@ -329,6 +349,9 @@ public class Case84_FuelRecommendationRecoveryProtocol extends BasePage{
 					            WebElement outclick = driver.findElement(click2);
 					            outclick.click();
 					            
+					         // Capture a screenshot and attach it to Allure
+						        AllureUtils.captureScreenshot(driver, "Case84_FuelRecommendationRecoveryProtocol8");
+					            
 						   } catch (Exception e) {
 							    e.printStackTrace();
 							} finally {
@@ -354,6 +377,9 @@ public class Case84_FuelRecommendationRecoveryProtocol extends BasePage{
 					            WebElement outclick = driver.findElement(click2);
 					            outclick.click();
 			          	    
+					         // Capture a screenshot and attach it to Allure
+						        AllureUtils.captureScreenshot(driver, "Case84_FuelRecommendationRecoveryProtocol9");
+					            
 						   } catch (Exception e) {
 							    e.printStackTrace();
 							} finally {
@@ -382,6 +408,9 @@ public class Case84_FuelRecommendationRecoveryProtocol extends BasePage{
 					            
 					            WebElement outclick = driver.findElement(click2);
 					            outclick.click();
+					            
+					         // Capture a screenshot and attach it to Allure
+						        AllureUtils.captureScreenshot(driver, "Case84_FuelRecommendationRecoveryProtocol10");
 					         
 						   } catch (Exception e) {
 							    e.printStackTrace();
@@ -409,6 +438,9 @@ public class Case84_FuelRecommendationRecoveryProtocol extends BasePage{
 					            WebElement outclick = driver.findElement(click2);
 					            outclick.click();
 			          	    
+					         // Capture a screenshot and attach it to Allure
+						        AllureUtils.captureScreenshot(driver, "Case84_FuelRecommendationRecoveryProtocol11");
+					            
 						   } catch (Exception e) {
 							    e.printStackTrace();
 							} finally {
@@ -439,6 +471,9 @@ public class Case84_FuelRecommendationRecoveryProtocol extends BasePage{
 					            
 					            WebElement outclick = driver.findElement(click3);
 					            outclick.click();
+					            
+					         // Capture a screenshot and attach it to Allure
+						        AllureUtils.captureScreenshot(driver, "Case84_FuelRecommendationRecoveryProtocol12");
 
 						   } catch (Exception e) {
 							    e.printStackTrace();
@@ -466,6 +501,9 @@ public class Case84_FuelRecommendationRecoveryProtocol extends BasePage{
 					            WebElement outclick = driver.findElement(click3);
 					            outclick.click();
 			          	    
+					         // Capture a screenshot and attach it to Allure
+						        AllureUtils.captureScreenshot(driver, "Case84_FuelRecommendationRecoveryProtocol13");
+					            
 						   } catch (Exception e) {
 							    e.printStackTrace();
 							} finally {
@@ -510,6 +548,10 @@ public class Case84_FuelRecommendationRecoveryProtocol extends BasePage{
 						    Docprotnotes.click();
 						    Docprotnotes.sendKeys("Test Random Notes for Automation testing");
 						    Thread.sleep(3000);
+						    
+						 // Capture a screenshot and attach it to Allure
+					        AllureUtils.captureScreenshot(driver, "Case84_FuelRecommendationRecoveryProtocol14");
+						    
 						    
 						    WebElement SaveButn = driver.findElement(Svbtn);
 						    SaveButn.click();

@@ -33,7 +33,7 @@ public class Case03_editevent extends BasePage {
 	 private By Topic		 = (By.id("eventTopics"));
 	 private By Notes		 =  (By.xpath("//textarea[contains(@placeholder,'Enter Notes')]"));
 	 private By updatebutton	= (By.xpath("//button[normalize-space()='Update Event']"));
-//	 private By NextButton = (By.xpath("//span[normalize-space()='Next']"));
+
 	
 	
 	public Case03_editevent(WebDriver driver) {
@@ -58,24 +58,6 @@ public class Case03_editevent extends BasePage {
         eventDate = Case01_createvent.eventDate;
         // Extract the day portion from the eventDate
         String day = eventDate.split("-")[0];
-
-
-//     // Pass the event date from script one to script two
-//        eventDate = DateGenerator.generateDateSevenDaysAhead();
-//
-//        // Extract the day and month portion from the eventDate
-//        String day = eventDate.split("-")[0];
-//        String month = eventDate.split("-")[1];
-//
-//        // Find the current month and year displayed on the calendar
-//        String currentMonthAndYear = driver.findElement(By.xpath("//span[normalize-space()='Today']")).getText();
-//
-//        // Check if the current month and year match the month and year of the eventDate
-//        if (!currentMonthAndYear.contains(month)) {
-//            // Click the "Next" button to navigate to the next month
-//            driver.findElement(NextButton).click();
-//        }
-        
         
         // Find the element to scroll to the specified date on the calendar (matching only the day)
         WebElement element = driver.findElement(By.xpath("//button[@role='cell'][normalize-space()='" + day + "']"));
@@ -95,7 +77,8 @@ public class Case03_editevent extends BasePage {
             userTexts.add(userLabel.getText());
         }
         // Verify the texts
-        if (userTexts.contains("Kumar Devinder") && userTexts.contains("Seakfreight") && userTexts.contains("SteveQA Adv")) {
+        if (userTexts.contains("Kumar Devinder") && userTexts.contains("Coach Seakfreight") && userTexts.contains("Devinder - Wellness Advocate")) {
+//        if (userTexts.contains("Kumar Devinder") && userTexts.contains("Seakfreight") && userTexts.contains("SteveQA Adv")) {
             System.out.println("User text verification passed!");
         } else {
             System.out.println("User text verification failed!");
@@ -166,14 +149,7 @@ public class Case03_editevent extends BasePage {
         // Press Enter to confirm the new time
         builder1.sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.ENTER).perform();
         
-        Thread.sleep(5500);
-        
-        
-//        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(1000)); // Wait up to 10 seconds
-//        WebElement editIconEndTime = wait.until(ExpectedConditions.presenceOfElementLocated(editIconendtime));
-//        // Click on the end time edit icon
-//        editIconEndTime.click();
-      
+        Thread.sleep(5500); 
         // Find the input field for start time and clear the existing value
         WebElement endTimeInput = driver.findElement(EndTime);
 //       // window command
@@ -186,17 +162,6 @@ public class Case03_editevent extends BasePage {
         builder2.moveToElement(endTimeInput).sendKeys("11:00 AM");
         // Press Enter to confirm the new time
         builder2.sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.ENTER).perform();
-
-        
-//        /*Select Event as as Live perform	*/
-//	    Thread.sleep(3500);
-//	    WebElement topicselection =driver.findElement(Topic);
-//	    Actions builder3 = new Actions(driver);
-//	    builder3.moveToElement(topicselection).click().sendKeys("Motion Evaluation Review").sendKeys(Keys.ENTER).perform();
-        
-        
-//        /*Enter Notes in create event*/
-//	    driver.findElement(Notes).sendKeys("We are excited to announce that there will be a live performance event. So please availble");
         
 	    // Find the input element
 	    WebElement notesElement = driver.findElement(Notes);

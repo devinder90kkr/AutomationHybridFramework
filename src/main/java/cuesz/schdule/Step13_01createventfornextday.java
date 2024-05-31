@@ -91,7 +91,7 @@ public class Step13_01createventfornextday extends BasePage {
 		    WebElement staffSelection =driver.findElement(Staff);
 		    Actions builder4 = new Actions(driver);
 		    builder4.moveToElement(staffSelection).click().sendKeys("seakfreight").sendKeys(Keys.ENTER).perform();
-		    builder4.moveToElement(staffSelection).click().sendKeys("steveQA Adv").sendKeys(Keys.ENTER).perform();
+		    builder4.moveToElement(staffSelection).click().sendKeys("devinder").sendKeys(Keys.ENTER).perform();
 
 		    /*Enter Notes in create event*/
 		    driver.findElement(Notes).sendKeys("We are excited to announce that there will be a live performance event. So please availble");

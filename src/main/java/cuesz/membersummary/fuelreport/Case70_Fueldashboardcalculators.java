@@ -10,6 +10,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
 
 import cuesz.pages.BasePage;
+import cuesz.utils.AllureUtils;
 import cuesz.utils.SeleniumUtils;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
@@ -79,6 +80,10 @@ public class Case70_Fueldashboardcalculators extends BasePage{
 			            // Use JavascriptExecutor to scroll to the element
 			            ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", targetElement);
 			        
+			            
+			         // Capture a screenshot and attach it to Allure
+				        AllureUtils.captureScreenshot(driver, "Case70_Fueldashboardcalculators1");
+			            
 			            
 			            // Optionally, you can wait for the results or perform other actions here
 

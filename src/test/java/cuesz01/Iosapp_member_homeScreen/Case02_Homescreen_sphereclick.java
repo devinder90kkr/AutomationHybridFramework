@@ -1,6 +1,8 @@
 package cuesz01.Iosapp_member_homeScreen;
 
 import org.openqa.selenium.WebElement;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.testng.annotations.Test;
 
 import cuesz.pages.AppiummobileBase;
@@ -24,6 +26,7 @@ import io.qameta.allure.Story;
 public class Case02_Homescreen_sphereclick extends AppiummobileBase {
 	
 	mobileLocators locators = new mobileLocators();	
+	private static final Logger LOGGER = LoggerFactory.getLogger(Case02_Homescreen_sphereclick.class);
 	
 	@Test
 	@Owner("QA") // Add the @Owner annotation to specify the executor
@@ -44,6 +47,9 @@ public class Case02_Homescreen_sphereclick extends AppiummobileBase {
 		WebElement Homeicon = driver.findElement(mobileLocators.Homeclick);
 		Homeicon.click();
 		
+		 // Log message to console and Allure report
+        LOGGER.info("Click on home menu from bottom");
+        AllureUtils.logStep("Click on home menu from bottom");
 		 // Capture a screenshot and attach it to Allure
         AllureUtils.captureScreenshot(driver, "ios_Homescreen_screenshot");
 		
@@ -64,6 +70,10 @@ public class Case02_Homescreen_sphereclick extends AppiummobileBase {
         // Use the dynamic XPath for automation
         WebElement performElement = driver.findElement(AppiumBy.xpath(performdynamicXPath));
         performElement.click();
+
+        // Log message to console and Allure report
+        LOGGER.info("Click on Perform card");
+        AllureUtils.logStep("Click on perfom card");
         
         Thread.sleep(1000);
         // Capture a screenshot and attach it to Allure
@@ -71,6 +81,9 @@ public class Case02_Homescreen_sphereclick extends AppiummobileBase {
         
         WebElement backicon1 = driver.findElement(mobileLocators.backbttnperform);
         backicon1.click();
+        // Log message to console and Allure report
+        LOGGER.info("Click on back button");
+        AllureUtils.logStep("Click on back button");
         
 		/*************************** Fuel********************************/
 		
@@ -90,12 +103,19 @@ public class Case02_Homescreen_sphereclick extends AppiummobileBase {
         WebElement fuelElement = driver.findElement(AppiumBy.xpath(dynamicXPath));
         fuelElement.click();
         
+        // Log message to console and Allure report
+        LOGGER.info("Click on Fuel card");
+        AllureUtils.logStep("Click on Fuel card");
+        
         Thread.sleep(1000);
         // Capture a screenshot and attach it to Allure
         AllureUtils.captureScreenshot(driver, "ios_Fuelscreen_screenshot");
         
         WebElement backicon2 = driver.findElement(mobileLocators.backbttnperform);
         backicon2.click();
+        // Log message to console and Allure report
+        LOGGER.info("Click on back button");
+        AllureUtils.logStep("Click on back button");
         /*************************** Mindful********************************/
 		
 		// Find the element with the "Fuel 7%" text
@@ -114,12 +134,19 @@ public class Case02_Homescreen_sphereclick extends AppiummobileBase {
         WebElement mindfulElement = driver.findElement(AppiumBy.xpath(mindfuldynamicXPath));
         mindfulElement.click();
         
+        // Log message to console and Allure report
+        LOGGER.info("Click on mindful card");
+        AllureUtils.logStep("Click on mindfull card");
+        
         Thread.sleep(1000);
         // Capture a screenshot and attach it to Allure
         AllureUtils.captureScreenshot(driver, "ios_mindfulscreen_screenshot");
         
         WebElement backicon3 = driver.findElement(mobileLocators.backbttnperform);
         backicon3.click();
+        // Log message to console and Allure report
+        LOGGER.info("Click on back button");
+        AllureUtils.logStep("Click on back button");
         /*************************** Restore ********************************/
 		
 		// Find the element with the "Fuel 7%" text
@@ -138,12 +165,20 @@ public class Case02_Homescreen_sphereclick extends AppiummobileBase {
         WebElement restoreElement = driver.findElement(AppiumBy.xpath(restoredynamicXPath));
         restoreElement.click();
         
+     // Log message to console and Allure report
+        LOGGER.info("Click on restore card");
+        AllureUtils.logStep("Click on restore card");
+        
         Thread.sleep(1000);
         // Capture a screenshot and attach it to Allure
         AllureUtils.captureScreenshot(driver, "ios_restorescreen_screenshot");
         
         WebElement backicon4 = driver.findElement(mobileLocators.backbttnperform);
         backicon4.click();
+        
+     // Log message to console and Allure report
+        LOGGER.info("Click on back button");
+        AllureUtils.logStep("Click on back button");
         
         
         // Capture a screenshot and attach it to Allure

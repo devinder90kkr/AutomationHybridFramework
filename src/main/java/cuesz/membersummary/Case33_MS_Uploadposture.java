@@ -1,11 +1,15 @@
 /*https://chat.openai.com/share/c262f25b-bab9-4b0a-ae68-6065478296aa*/
 package cuesz.membersummary;
 
+import java.time.Duration;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
 
 import cuesz.pages.BasePage;
@@ -86,14 +90,18 @@ public class Case33_MS_Uploadposture extends BasePage {
         WebElement backUploadButton = driver.findElement(backUloadBttn);
         backUploadButton.sendKeys("/Users/chicmic/git/Cuesz_AutomationTests/Uploadposture/back.jpeg"); // Replace with the actual file path
 
-        Thread.sleep(8000);
-        WebElement Submitbutton = driver.findElement(Sumitbttn);
-        Submitbutton.click();
-                 
-        Thread.sleep(4500);
-        }    
+     
+        
+        //Thread.sleep(15000);
+     // Wait for the submit button's color to change
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(100)); // Adjust the timeout as needed
+        wait.until(ExpectedConditions.attributeContains(Sumitbttn, "style", "#ff620a"));
+
+        // Execute JavaScript to click the button
+        JavascriptExecutor executor = (JavascriptExecutor) driver;
+        executor.executeScript("arguments[0].click();", driver.findElement(Sumitbttn));
     }
-  
+}
     
         
        

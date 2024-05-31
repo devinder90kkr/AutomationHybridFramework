@@ -16,15 +16,24 @@ public class Step07_MC_createevent extends BasePage {
 //	public static String eventDate = "28-09-2023"; // Date to be passed to script two
 	private By membercalicon 	=  (By.xpath("//a[@href='/member-calls']//span"));
 	private By Addnewevent 		=  (By.xpath("//button[normalize-space()='Add New Event']"));
-	private By startdate 		=  (By.xpath("//input[@placeholder='DD-MM-YYYY']"));
-	private By starttime		=  (By.xpath("//div[contains(text(),'Start Time')]"));
-	private By endtime 			=  (By.xpath("//div[contains(text(),'End Time')]"));
-	private By eventselect		=  (By.xpath("//div[@class='react-select__value-container css-1hwfws3']"));
-	private By memberselect		=  (By.xpath("//div[contains(@class,'react-select__value-container css-1hwfws3')]"));
-	private By staffSelect		=  (By.xpath("//div[@class='react-select__value-container react-select__value-container--is-multi css-1hwfws3']"));
-	private By notes			=  (By.xpath("//textarea[@placeholder='Enter Notes']"));
-	private By createeven		=  (By.xpath("//button[normalize-space()='Create Event']"));
+//	private By startdate 		=  (By.xpath("//input[@placeholder='DD-MM-YYYY']"));
+//	private By starttime		=  (By.xpath("//div[contains(text(),'Start Time')]"));
+//	private By endtime 			=  (By.xpath("//div[contains(text(),'End Time')]"));
+//	private By eventselect		=  (By.xpath("//div[@class='react-select__value-container css-1hwfws3']"));
+//	private By memberselect		=  (By.xpath("//div[contains(@class,'react-select__value-container css-1hwfws3')]"));
+//	private By staffSelect		=  (By.xpath("//div[@class='react-select__value-container react-select__value-container--is-multi css-1hwfws3']"));
+//	private By notes			=  (By.xpath("//textarea[@placeholder='Enter Notes']"));
+//	private By createeven		=  (By.xpath("//button[normalize-space()='Create Event']"));
 
+	private By startdate 		 = (By.id("event_date"));	
+	private By starttime 	 =	(By.id("eventStartTime"));	
+	private By endtime		 = 	(By.id("eventEndTime"));
+	private By eventselect		 = (By.id("eventTopics"));
+	private By memberselect 		= (By.id("eventMemberlist"));
+	private By staffSelect 		= (By.id("Helsenki"));	
+	private By notes		 =  (By.name("note"));
+	private By createeven  =	 (By.xpath("//button[normalize-space()='Create Event']"));
+	
 
  public Step07_MC_createevent(WebDriver driver) {
 	super(driver);
@@ -80,7 +89,7 @@ public class Step07_MC_createevent extends BasePage {
 	    WebElement staffSelection =driver.findElement(staffSelect);
 	    Actions builder4 = new Actions(driver);
 	    builder4.moveToElement(staffSelection).click().sendKeys("seakfreight").sendKeys(Keys.ENTER).perform();
-	    builder4.moveToElement(staffSelection).click().sendKeys("steveQA Adv").sendKeys(Keys.ENTER).perform();
+	    builder4.moveToElement(staffSelection).click().sendKeys("Devinder").sendKeys(Keys.ENTER).perform();
 
 	    /*Enter Notes in create event*/
 	    driver.findElement(notes).sendKeys("We are excited to announce that there will be a live performance event. So please availble");

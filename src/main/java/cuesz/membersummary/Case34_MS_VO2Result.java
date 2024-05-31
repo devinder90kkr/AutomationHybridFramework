@@ -21,11 +21,6 @@ public class Case34_MS_VO2Result extends BasePage {
 	 SeleniumUtils utils = new SeleniumUtils(driver);
 	private By elementScrollTo 	=	(By.xpath("//h4[contains(text(), 'VO2 Result')]"));
 	private By selectype 	= 	(By.id("MemberSummary-Vo2Result-Duration"));
-	//private By selectype	= 	(By.xpath("//div[text()='11-08-2023']"));
-	private By selctype2	=	(By.xpath("(//div[contains(text(),'01-08-2023 IST')])[1]"));
-	private By selctype3	= (By.xpath("(//div[contains(text(),'24-07-2023 IST')])[1]"));	
-	private By selectype4	= (By.xpath("(//div[contains(text(),'21-07-2023 IST')])[1]"));
-	//private By selectype5	=	(By.xpath("(//input[@value='01-09-2023'])[1]"));
 	private By selectype5 	= (By.id("MemberSummary-Vo2Result-NextScan-DatePicker"));
 
 	
@@ -59,7 +54,8 @@ public class Case34_MS_VO2Result extends BasePage {
         
         WebElement selecttype = driver.findElement(selectype);
         Actions builder1 = new Actions(driver);
-	    builder1.moveToElement(selecttype).click().sendKeys("24-08-2023").perform();
+//	    builder1.moveToElement(selecttype).click().sendKeys("24-08-2023").perform();
+        builder1.moveToElement(selecttype).click().sendKeys("24").perform();
 	    Thread.sleep(2000);
 	    builder1.sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.ENTER).perform();
   
@@ -73,8 +69,9 @@ public class Case34_MS_VO2Result extends BasePage {
 //	    WebElement selecttype1 = driver.findElement(selctype2);
 	    WebElement selecttype1 = driver.findElement(selectype);
         Actions builder2 = new Actions(driver);
-	    builder2.moveToElement(selecttype1).click().sendKeys("12-07-2023").perform();
-	    Thread.sleep(2000);
+//	    builder2.moveToElement(selecttype1).click().sendKeys("12-07-2023").perform();
+        builder2.moveToElement(selecttype1).click().sendKeys("12").perform();
+        Thread.sleep(2000);
 	    builder2.sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.ENTER).perform();
         
 	
@@ -85,8 +82,9 @@ public class Case34_MS_VO2Result extends BasePage {
 	  //  WebElement selecttype3 = driver.findElement(selctype3);
 	    WebElement selecttype3 = driver.findElement(selectype);
         Actions builder3 = new Actions(driver);
-	    builder3.moveToElement(selecttype3).click().sendKeys("06-06-2023").perform();
-	    Thread.sleep(2000);
+//	    builder3.moveToElement(selecttype3).click().sendKeys("06-06-2023").perform();
+        builder3.moveToElement(selecttype3).click().sendKeys("06").perform();
+        Thread.sleep(2000);
 	    builder3.sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.ENTER).perform();
         
 	

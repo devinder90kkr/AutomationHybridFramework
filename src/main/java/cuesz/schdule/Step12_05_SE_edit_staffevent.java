@@ -74,7 +74,8 @@ public class Step12_05_SE_edit_staffevent extends BasePage {
             userTexts.add(userLabel.getText());
         }
         // Verify the texts
-        if (userTexts.contains("Kumar Devinder") && userTexts.contains("Seakfreight") && userTexts.contains("SteveQA Adv")) {
+        if (userTexts.contains("Kumar Devinder") && userTexts.contains("Coach Seakfreight") && userTexts.contains("Devinder - Wellness Advocate")) {
+        // if (userTexts.contains("Kumar Devinder") && userTexts.contains("Seakfreight") && userTexts.contains("SteveQA Adv")) {
             System.out.println("User text verification passed!");
         } else {
             System.out.println("User text verification failed!");

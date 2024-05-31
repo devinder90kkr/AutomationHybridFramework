@@ -1,16 +1,65 @@
 package cuesz.utils;
 
+import java.time.Duration;
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
+import org.openqa.selenium.NoSuchElementException;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.interactions.PointerInput;
+import org.openqa.selenium.interactions.Sequence;
 
 import io.appium.java_client.AppiumBy;
 import io.appium.java_client.AppiumDriver;
+import io.appium.java_client.ios.IOSDriver;
 
 public class mobilelement {
+	
+		
+		//Used in morning scan for waiting and displayed button
+		public static boolean isElementDisplayed(WebDriver driver, By locator) {
+	    try {
+	        return driver.findElement(locator).isDisplayed();
+	    } catch (NoSuchElementException e) {
+	        return false;
+	    }
+		}
+	
+	// Method to get text from an element
+		public static String getElementText(AppiumDriver driver, By elementLocator) {
+	    WebElement element = driver.findElement(elementLocator);
+	    return element.getText();
+		}
+	
+	
+		// Method to perform horizontal swipe
+		public static void performHorizontalSwipe(AppiumDriver driver) {
+		    // Screen size
+		    int screenWidth = driver.manage().window().getSize().width;
+		    int screenHeight = driver.manage().window().getSize().height;
+		
+		    // Define start and end points for the swipe
+		    int startX = (int) (screenWidth * 0.9);
+		    int endX = (int) (screenWidth * 0.1);
+		    int startY = screenHeight / 2;
+		
+		    // Create the touch actions using PointerInput
+		    PointerInput finger = new PointerInput(PointerInput.Kind.TOUCH, "finger");
+		    Sequence swipe = new Sequence(finger, 1);
+		
+		    swipe.addAction(finger.createPointerMove(Duration.ZERO, PointerInput.Origin.viewport(), startX, startY));
+		    swipe.addAction(finger.createPointerDown(PointerInput.MouseButton.LEFT.asArg()));
+		    swipe.addAction(finger.createPointerMove(Duration.ofSeconds(1), PointerInput.Origin.viewport(), endX, startY));
+		    swipe.addAction(finger.createPointerUp(PointerInput.MouseButton.LEFT.asArg()));
+		
+		    driver.perform(Arrays.asList(swipe));
+		}
+	
 	
 		// mobile scroll down method
 		public static void scrollDownToElement(AppiumDriver driver, String elementText) throws InterruptedException {
@@ -65,12 +114,21 @@ public class mobilelement {
         }
 	    }   
 	    
-	 // Method to send keys to an element
+	    // Method to send keys to an element
 	    public static void sendKeysToElement(AppiumDriver driver, By elementLocator, String text) {
 	        WebElement element = driver.findElement(elementLocator);
 	        element.sendKeys(text);
 	    }
-	    
+	    public static boolean isElementPresent(AppiumDriver driver, By locator) {
+	        try {
+	            // Attempt to find the element
+	            driver.findElement(locator);
+	            return true; // Element found
+	        } catch (org.openqa.selenium.NoSuchElementException e) {
+	            return false; // Element not found
+	        }
+	    }
+
 }
 	
 

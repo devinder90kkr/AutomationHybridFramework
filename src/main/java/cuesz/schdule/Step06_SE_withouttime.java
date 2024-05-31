@@ -56,16 +56,8 @@ public class Step06_SE_withouttime extends BasePage {
 	    
 	    // Capture a screenshot and attach it to Allure
         AllureUtils.captureScreenshot(driver, "fuel_report_screenshot");
-        
-//	    /* Skip start time and end time fields */
-//        Thread.sleep(2000);
-//        WebElement startTime = driver.findElement(starttime);
-//        WebElement endTime11 = driver.findElement(endtime);
-//        Actions builder = new Actions(driver);
-//        builder.moveToElement(startTime).click().sendKeys(Keys.TAB).sendKeys(Keys.CONTROL + "a").sendKeys(Keys.DELETE).perform();
-//        builder.moveToElement(endTime11).click().sendKeys(Keys.TAB).sendKeys(Keys.CONTROL + "a").sendKeys(Keys.DELETE).perform();
    
-        
+  
 	    /*Select Event as as Live perform	*/
         Thread.sleep(3500);
 	    WebElement eventSelection =driver.findElement(Topic);
@@ -83,7 +75,7 @@ public class Step06_SE_withouttime extends BasePage {
 	    WebElement staffSelection =driver.findElement(Staff);
 	    Actions builder4 = new Actions(driver);
 	    builder4.moveToElement(staffSelection).click().sendKeys("seakfreight").sendKeys(Keys.ENTER).perform();
-	    builder4.moveToElement(staffSelection).click().sendKeys("steveQA Adv").sendKeys(Keys.ENTER).perform();
+	    builder4.moveToElement(staffSelection).click().sendKeys("Devinder").sendKeys(Keys.ENTER).perform();
 	    
 	    /*Enter Notes in create event*/
 	    driver.findElement(Notes).sendKeys("We are excited to announce that there will be a live performance event. So please availble");

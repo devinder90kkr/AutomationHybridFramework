@@ -102,6 +102,6 @@ public class Case46_Membercommunictaiontest {
  
  @AfterClass
     public void tearDown() {
-          
+	 WebDriverManager.quitDriver();  
     }
 }

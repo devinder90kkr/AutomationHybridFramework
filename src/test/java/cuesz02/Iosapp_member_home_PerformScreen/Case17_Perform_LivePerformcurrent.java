@@ -1,6 +1,8 @@
 package cuesz02.Iosapp_member_home_PerformScreen;
 
 import org.openqa.selenium.WebElement;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.testng.annotations.Test;
 
 import cuesz.pages.AppiummobileBase;
@@ -22,6 +24,7 @@ import io.qameta.allure.Story;
 public class Case17_Perform_LivePerformcurrent extends AppiummobileBase {
 
 	mobileLocators locators = new mobileLocators();	
+	private static final Logger LOGGER = LoggerFactory.getLogger(Case17_Perform_LivePerformcurrent.class);
 
 	
 	@Test
@@ -42,6 +45,11 @@ public class Case17_Perform_LivePerformcurrent extends AppiummobileBase {
 		WebElement Homeicon = driver.findElement(mobileLocators.Homeclick);
 		Homeicon.click();
 		
+		 // Log console message to Allure
+        LOGGER.info("Click on home menu from bottom");
+        AllureUtils.logStep("Click on home menu from bottom");
+        
+		
 		   // Capture a screenshot and attach it to Allure
         AllureUtils.captureScreenshot(driver, "LP icon");
 		
@@ -50,12 +58,18 @@ public class Case17_Perform_LivePerformcurrent extends AppiummobileBase {
 		WebElement livePerform = driver.findElement(mobileLocators.liveperfrmicon);
 		livePerform.click();
 		
+		 // Log console message to Allure
+        LOGGER.info("Click on livePerform ");
+        AllureUtils.logStep("Click on livePerform");
+		
 		  // Capture a screenshot and attach it to Allure
         AllureUtils.captureScreenshot(driver, "perform selection");
         
         WebElement StartLP	= driver.findElement(mobileLocators.liveperform);
         StartLP.click();
-	
+     // Log console message to Allure
+        LOGGER.info("Click on StartLP ");
+        AllureUtils.logStep("Click on StartLP");
         
 //        this is incomplete script for LP 
 

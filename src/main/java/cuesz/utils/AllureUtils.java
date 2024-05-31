@@ -21,4 +21,16 @@ public class AllureUtils {
             System.out.println("Failed to capture screenshot: " + e.getMessage());
         }
     }
-}
+    
+    
+    public static void logStep(String message) {
+        Allure.step(message);
+    }
+
+    public static void logMessageAndStep(String message, String stepDescription) {
+        System.out.println(message);
+        Allure.step(stepDescription);
+    }
+    }
+
+

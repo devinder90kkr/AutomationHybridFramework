@@ -111,6 +111,20 @@
     <version>7.8.0</version>
     <scope>test</scope>
 </dependency>
+
+<!--cucumber java file-->
+<dependency>
+    <groupId>io.cucumber</groupId>
+    <artifactId>cucumber-java</artifactId>
+    <version>7.15.0</version>
+</dependency>
+
+<dependency>
+    <groupId>io.cucumber</groupId>
+    <artifactId>cucumber-testng</artifactId>
+    <version>7.15.0</version>
+</dependency>
+
 </dependencies>
  
 <!-- Create multiple profile suites for testsuites -->
@@ -129,7 +143,7 @@
 		        <version>3.2.3</version>
 		        <configuration>
 		          <suiteXmlFiles>
-		            <suiteXmlFile>TestSuite01-Dashboard-eventcase-Advocate\Case0_cuesz-dashboard-Suite.xml</suiteXmlFile>
+		            <suiteXmlFile>TestSuite01-Dashboard-eventcase-Advocate/Case0_cuesz-dashboard-Suite.xml</suiteXmlFile>
 		          </suiteXmlFiles>
 		        </configuration>
 		      </plugin>
@@ -161,7 +175,7 @@
 
 <!-- Suites 3 for Mastercalendar advocate -->
 <profile>
-<id>Mastercalendar-Advocate</id>
+<id>MastercalendarAdvocate</id>
 <build>
     <pluginManagement><!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->
       <plugins>  
@@ -225,7 +239,7 @@
 
 <!-- Suites 6 for Schdule Othercases advocate -->
 <profile>
-<id>Schdule-Othercases</id>
+<id>SchduleOthercases</id>
 <build>
     <pluginManagement><!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->
       <plugins>  
@@ -289,7 +303,7 @@
 
 <!-- Suites 9 for Logic advocate advocate -->
 <profile>
-<id>Logicadvocate-performnext weekcases</id>
+<id>Logicadvocate-performnext_weekcases</id>
 <build>
     <pluginManagement><!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->
       <plugins>  
@@ -460,7 +474,7 @@
 
 <!-- Suites 18 for fuel liveperform advocate advocate -->
 <profile>
-<id>MembersummaryLiveperform cases</id>
+<id>MembersummaryLiveperform_cases</id>
 <build>
     <pluginManagement><!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->
       <plugins>  
@@ -499,11 +513,11 @@
         <!-- default lifecycle, jar packaging: see https://maven.apache.org/ref/current/maven-core/default-bindings.html#Plugin_bindings_for_jar_packaging -->
         <plugin>
           <artifactId>maven-resources-plugin</artifactId>
-          <version>3.0.2</version>
+          <version>3.3.1</version>
         </plugin>
         <plugin>
           <artifactId>maven-compiler-plugin</artifactId>
-          <version>3.8.0</version>
+          <version>3.12.1</version>
         </plugin>
         <plugin>
           <artifactId>maven-surefire-plugin</artifactId>

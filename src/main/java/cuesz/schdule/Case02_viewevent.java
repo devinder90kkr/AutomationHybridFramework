@@ -7,6 +7,8 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.testng.annotations.Test;
 
 import cuesz.pages.BasePage;
@@ -14,6 +16,7 @@ import cuesz.utils.AllureUtils;
 import cuesz.utils.DateGenerator;
 
 public class Case02_viewevent extends BasePage {
+	private static final Logger LOGGER = LoggerFactory.getLogger(Case02_viewevent.class);
 	
 	//private String eventDate; // Date parameter from script one
 	
@@ -35,8 +38,15 @@ public class Case02_viewevent extends BasePage {
 		Thread.sleep(3500);
 		driver.findElement(scheduleIcon).click();
 		
+		LOGGER.info("Click on schdule feature");
+        AllureUtils.logStep("Click on schdule feature");
+		
 	    Thread.sleep(3500);
 	    driver.findElement(monthview).click();   
+	 
+	    LOGGER.info("Click on monthly view option");
+        AllureUtils.logStep("Click on monthly view option");
+	    
 	   
 	    // Pass the event date from script one to script two
         eventDate = Case01_createvent.eventDate;
@@ -46,49 +56,20 @@ public class Case02_viewevent extends BasePage {
         WebElement element = driver.findElement(By.xpath("//button[@role='cell'][normalize-space()='" + day + "']"));
         ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);
       
-     // Capture a screenshot and attach it to Allure
+        LOGGER.info("Passed event date");
+        AllureUtils.logStep("Passed event date");
+        // Capture a screenshot and attach it to Allure
         AllureUtils.captureScreenshot(driver, "fuel_report_screenshot");
         
         Thread.sleep(3000);
-//        WebElement dateElement = driver.findElement(By.xpath("//div[@data-date='27-07-2023']"));
-     //   dateElement.click();
         WebElement dateElement = driver.findElement(By.xpath("//div[@data-date='" + eventDate + "']"));
         dateElement.click();
-
-//	    // Pass the event date from script one to script two
-//	    eventDate = DateGenerator.generateDateSevenDaysAhead();
-//
-//	    // Extract the day and month portion from the eventDate
-//	    String day = eventDate.split("-")[0];
-//	    String month = eventDate.split("-")[1];
-//
-//	    // Find the current month and year displayed on the calendar
-//	    String currentMonthAndYear = driver.findElement(By.xpath("//span[normalize-space()='Today']")).getText();
-//
-//	    // Check if the current month and year match the month and year of the eventDate
-//	    if (!currentMonthAndYear.contains(month)) {
-//	        // Click the "Next" button to navigate to the next month
-//	        driver.findElement(NextButton).click();
-//	    }
-//
-//	    // Find the element to scroll to the specified date on the calendar (matching only the day)
-//	    WebElement element = driver.findElement(By.xpath("//button[@role='cell'][normalize-space()='" + day + "']"));
-//	    ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);
-//
-//	    // Capture a screenshot and attach it to Allure
-//	    AllureUtils.captureScreenshot(driver, "fuel_report_screenshot");
-//
-//	    Thread.sleep(3000);
-//
-//	    WebElement dateElement1 = driver.findElement(By.xpath("//div[@data-date='" + eventDate + "']"));
-//	    dateElement1.click();
-
+        LOGGER.info("Click on passed event date");
+        AllureUtils.logStep("Click on passed event date");
         
-        Thread.sleep(3000);
-        //driver.findElement(By.xpath("(//span[contains(text(),'Kumar Devinder,')])[15]")).click();
-        //Thread.sleep(3500);
         
-     // Find the elements containing the user labels
+        Thread.sleep(3000); 
+        // Find the elements containing the user labels
         List<WebElement> userLabels = driver.findElements(userlabel);
 
         // Get the texts from the user labels
@@ -98,8 +79,12 @@ public class Case02_viewevent extends BasePage {
         }
 
         // Verify the texts
-        if (userTexts.contains("Kumar Devinder") && userTexts.contains("Seakfreight") && userTexts.contains("SteveQA Adv")) {
+        if (userTexts.contains("Kumar Devinder") && userTexts.contains("Coach Seakfreight") && userTexts.contains("Devinder - Wellness Advocate")) {
             System.out.println("User text verification passed!");
+            
+            LOGGER.info("View event detail as per member & staff info");
+            AllureUtils.logStep("View event detail as per member & staff info");
+            
         } else {
             System.out.println("User text verification failed!");
         }

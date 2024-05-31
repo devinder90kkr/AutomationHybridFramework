@@ -3,6 +3,8 @@ package cuesz01.Iosapp_member_homeScreen;
 import java.util.HashMap;
 
 import org.openqa.selenium.WebElement;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -24,6 +26,7 @@ import io.qameta.allure.Story;
 public class Case06_Homescreen extends AppiummobileBase {
 	
 	mobileLocators locators = new mobileLocators();	
+	private static final Logger LOGGER = LoggerFactory.getLogger(Case06_Homescreen.class);
 	
 	@Test
 	
@@ -40,6 +43,12 @@ public class Case06_Homescreen extends AppiummobileBase {
 		
 		WebElement Homeicon = driver.findElement(mobileLocators.Homeclick);
 		Homeicon.click();
+		
+		 // Log message to console and Allure report
+        LOGGER.info("Clicked on home menu from bottom");
+        AllureUtils.logStep("Clicked on home menu from bottom");
+        // Capture a screenshot and attach it to Allure
+        AllureUtils.captureScreenshot(driver, "homescreen");
 		
 		Thread.sleep(3000);
 		// Method to scroll to perform screen

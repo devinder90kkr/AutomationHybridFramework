@@ -12,6 +12,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
 
 import cuesz.pages.BasePage;
+import cuesz.utils.AllureUtils;
 import cuesz.utils.SeleniumUtils;
 
 public class Case82_FuelRecommendation extends BasePage{
@@ -121,6 +122,9 @@ public class Case82_FuelRecommendation extends BasePage{
 				 Thread.sleep(3000);
 				 action3.release().perform();
 				 
+				 
+				 // Capture a screenshot and attach it to Allure
+			        AllureUtils.captureScreenshot(driver, "Case82_FuelRecommendation1");
 				 Thread.sleep(3000);
 				 
 				 WebElement Defcal = driver.findElement(By.id("Recovery Days"));

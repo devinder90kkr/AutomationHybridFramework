@@ -9,16 +9,17 @@ import java.util.Properties;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
+//import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 import cuesz.dashboard.Step13_DB_notification;
 import cuesz.logintest.AdvocateLogin;
 import cuesz.utils.AllureUtils;
 import cuesz.utils.WebDriverManager;
-
 import io.qameta.allure.*;
+
 @Epic ("Advocate dashboard cases")
 @Feature ("Vaerify notififcation for dashbaord.")
-
+//@Listeners({io.qameta.allure.testng.AllureTestNg.class}) // Add Allure listener annotation
 public class Step13_DB_notificationtest {
     private WebDriver driver;
     private AdvocateLogin advocateLogin;

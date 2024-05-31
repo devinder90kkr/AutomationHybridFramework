@@ -1,6 +1,8 @@
 package cuesz01.Iosapp_member_homeScreen;
 
 import org.openqa.selenium.WebElement;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.testng.annotations.Test;
 
 import cuesz.pages.AppiummobileBase;
@@ -23,7 +25,8 @@ public class Case03_Homescreen_sphere extends AppiummobileBase {
 
 
 	mobileLocators locators = new mobileLocators();	
-
+	private static final Logger LOGGER = LoggerFactory.getLogger(Case03_Homescreen_sphere.class);
+	
 	@Test
 	@Owner("QA") // Add the @Owner annotation to specify the executor
     @Severity(SeverityLevel.NORMAL)      
@@ -41,11 +44,20 @@ public class Case03_Homescreen_sphere extends AppiummobileBase {
 		// CLick on home menu from bottom
 		WebElement Homeicon = driver.findElement(mobileLocators.Homeclick);
 		Homeicon.click();
-		
+		 // Log message to console and Allure report
+        LOGGER.info("Click on home menu from bottom");
+        AllureUtils.logStep("Click on home menu from bottom");
+        // Capture a screenshot and attach it to Allure
+        AllureUtils.captureScreenshot(driver, "ios_Homescreen_screenshot");
+        
+        
         Thread.sleep(2000);
 		// Click on sphere sperators to check spheres activity.
         WebElement separtor =driver.findElement(mobileLocators.separtorclick);
         separtor.click();
+        // Log message to console and Allure report
+        LOGGER.info("Click on sphere sperator");
+        AllureUtils.logStep("Click sphere seprator");
         
         Thread.sleep(2500);
      // Capture a screenshot and attach it to Allure
@@ -56,6 +68,10 @@ public class Case03_Homescreen_sphere extends AppiummobileBase {
 		// Click on sphere sperators to check spheres activity.
         WebElement combinsepartor =driver.findElement(mobileLocators.combinesphereclick);
         combinsepartor .click();
+        
+     // Log message to console and Allure report
+        LOGGER.info("Click on sphere sperator for combine");
+        AllureUtils.logStep("Click sphere seprator for combine");
         
         Thread.sleep(2500);
      // Capture a screenshot and attach it to Allure

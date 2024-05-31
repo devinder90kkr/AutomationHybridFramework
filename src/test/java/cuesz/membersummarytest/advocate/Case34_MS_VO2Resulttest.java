@@ -85,10 +85,10 @@ public class Case34_MS_VO2Resulttest {
         
     }
     
- private String generateDynamicLink() {
-        
+ private String generateDynamicLink() {        
         return "https://pre-staging.app.cuesz.com/member-specs/627d168e40231fb0ba6a057a"; // Replace with your actual dynamic link
-    }
+   
+ }
  
  private String getBrowserFromConfigFile() {
      Properties properties = new Properties();

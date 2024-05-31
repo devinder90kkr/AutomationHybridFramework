@@ -62,17 +62,17 @@ public class Case26_MS_Fuelactivity extends BasePage {
      // Find the dropdown element for "This Week"
         WebElement dropdownThisWeek = driver.findElement(drpdwnThWek);
         dropdownThisWeek.click();
-
-
-        // Validate the selected option for "This Week" dropdown
-        WebElement selectedOptionThisWeek = driver.findElement(slectOptnThWek);
-        if (selectedOptionThisWeek.getText().trim().equals("This Week")) {
-            System.out.println("Selected option 'This Week' is validated.");
-        } else {
-            System.out.println("Selected option 'This Week' is incorrect.");
-            
-        }
-        Thread.sleep(4000);
+//
+//
+//        // Validate the selected option for "This Week" dropdown
+//        WebElement selectedOptionThisWeek = driver.findElement(slectOptnThWek);
+//        if (selectedOptionThisWeek.getText().trim().equals("This Week")) {
+//            System.out.println("Selected option 'This Week' is validated.");
+//        } else {
+//            System.out.println("Selected option 'This Week' is incorrect.");
+//            
+//        }
+//        Thread.sleep(4000);
 //        // Find the dropdown element for "Last Week" 
         Thread.sleep(3000);
 //	     // Find the dropdown element

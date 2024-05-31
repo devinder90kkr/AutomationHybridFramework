@@ -18,12 +18,23 @@ public class Step12_03_SE_create_staffevent extends BasePage {
 	private By Schdulemaste = 	(By.xpath("//*[@id=\"root\"]/div/div[1]/div/div/div/div[2]/div/div[1]/div/div[2]"));
 	private By Addnewbuttn  = 	(By.xpath("//div[@id='root']/div/div/div/div/div[2]/div/div/button"));
 	private By Date 		= 	(By.id("event_date"));	
-	private By startime		=	(By.xpath("//div[contains(text(),'Start Time')]"));
-	private By endtime		=   (By.xpath("//div[contains(text(),'End Time')]"));
-	private By eventSelectn =	(By.xpath("//div[@class='react-select__value-container css-1hwfws3']"));
-	private By Staff		 =	(By.xpath("//div[@class='react-select__value-container react-select__value-container--is-multi css-1hwfws3']"));
-	private By Notes		 =  (By.xpath("//textarea[@placeholder='Enter Notes']"));
+	//private By startime		=	(By.xpath("//div[contains(text(),'Start Time')]"));
+	//private By endtime		=   (By.xpath("//div[contains(text(),'End Time')]"));
+	//private By eventSelectn =	(By.xpath("//div[@class='react-select__value-container css-1hwfws3']"));
+	//private By Staff		 =	(By.xpath("//div[@class='react-select__value-container react-select__value-container--is-multi css-1hwfws3']"));
+	//private By Notes		 =  (By.xpath("//textarea[@placeholder='Enter Notes']"));
+//	private By Submitbutton  =	 (By.xpath("//button[normalize-space()='Create Event']"));
+	
+	
+
+	private By startime 	 =	(By.id("eventStartTime"));	
+	private By endtime		 = 	(By.id("eventEndTime"));
+	private By eventSelectn		 = (By.id("eventTopics"));
+	private By Staff 		= (By.id("Helsenki"));	
+	private By Notes		 =  (By.name("note"));
 	private By Submitbutton  =	 (By.xpath("//button[normalize-space()='Create Event']"));
+	
+	
 	
 	 public Step12_03_SE_create_staffevent(WebDriver driver) {
 		super(driver);
@@ -72,7 +83,7 @@ public class Step12_03_SE_create_staffevent extends BasePage {
 	    WebElement staffSelection =driver.findElement(Staff);
 	    Actions builder4 = new Actions(driver);
 	    builder4.moveToElement(staffSelection).click().sendKeys("seakfreight").sendKeys(Keys.ENTER).perform();
-	    builder4.moveToElement(staffSelection).click().sendKeys("steveQA Adv").sendKeys(Keys.ENTER).perform();
+	    builder4.moveToElement(staffSelection).click().sendKeys("devinder").sendKeys(Keys.ENTER).perform();
 
 	    /*Enter Notes in create event*/
 	    driver.findElement(Notes).sendKeys("We are excited to announce that there will be a live performance event. So please availble");

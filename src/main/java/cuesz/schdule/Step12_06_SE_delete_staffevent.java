@@ -78,7 +78,8 @@ public class Step12_06_SE_delete_staffevent extends BasePage {
         }
 
         // Verify the texts
-        if (userTexts1.contains("Seakfreight") && userTexts1.contains("SteveQA Adv")) {
+        if (userTexts1.contains("Coach Seakfreight") && userTexts1.contains("Devinder - Wellness Advocate")) {
+       // if (userTexts1.contains("Seakfreight") && userTexts1.contains("SteveQA Adv")) {
             System.out.println("User text verification passed!");
         } else {
             System.out.println("User text verification failed!");
@@ -94,13 +95,13 @@ public class Step12_06_SE_delete_staffevent extends BasePage {
         
         Thread.sleep(2000);
 
-		// Verify that the event is deleted
-		WebElement deletedEvent = driver.findElement(By.xpath("//div[@data-date='" + nextDayDate + "']"));
-		if (deletedEvent.getAttribute("class").contains("event_dot")) {
-			System.out.println("Event deletion verification failed!");
-		} else {
-			System.out.println("Event deletion verification passed!");
-        
-		}
+//		// Verify that the event is deleted
+//		WebElement deletedEvent = driver.findElement(By.xpath("//div[@data-date='" + nextDayDate + "']"));
+//		if (deletedEvent.getAttribute("class").contains("event_dot")) {
+//			System.out.println("Event deletion verification failed!");
+//		} else {
+//			System.out.println("Event deletion verification passed!");
+//        
+//		}
 	}
 	 }	

@@ -3,6 +3,8 @@ package cuesz02.Iosapp_member_home_PerformScreen;
 import java.util.HashMap;
 
 import org.openqa.selenium.WebElement;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.testng.annotations.Test;
 
 import cuesz.pages.AppiummobileBase;
@@ -25,6 +27,7 @@ import io.qameta.allure.Story;
 public class Case12_Perform_additionalactivity_deleteprocess extends AppiummobileBase {
 
 	mobileLocators locators = new mobileLocators();	
+	private static final Logger LOGGER = LoggerFactory.getLogger(Case12_Perform_additionalactivity_deleteprocess.class);
 	
 	@Test
 	@Owner("QA") // Add the @Owner annotation to specify the executor
@@ -44,6 +47,10 @@ public class Case12_Perform_additionalactivity_deleteprocess extends Appiummobil
 		WebElement Homeicon = driver.findElement(mobileLocators.Homeclick);
 		Homeicon.click();
 		
+		 // Log console message to Allure
+        LOGGER.info("Click on home menu from bottom");
+        AllureUtils.logStep("Click on home menu from bottom");
+		
 		Thread.sleep(3000);
 		// Method to scroll to perform screen
 		HashMap<String,Object>scrollObject =new HashMap<>();
@@ -56,28 +63,72 @@ public class Case12_Perform_additionalactivity_deleteprocess extends Appiummobil
 		WebElement performcard = driver.findElement(mobileLocators.performclick);
 		performcard.click();
 		Thread.sleep(3500);
+		
+		 // Log console message to Allure
+        LOGGER.info("Click on perform card ");
+        AllureUtils.logStep("Click on perform card");
 		// Capture a screenshot and attach it to Allure
         AllureUtils.captureScreenshot(driver, "perform_click1");
 		
 		WebElement perfomplusicon 	= driver.findElement(mobileLocators.perfomplus);
 		perfomplusicon.click();
+		 
+		// Log console message to Allure
+        LOGGER.info("Click on plus icon  for open popup related to Start my perform & Perfom activity completed");
+        AllureUtils.logStep("Click on plus icon  for open popup related to Start my perform & Perfom activity completed");
+        
+     // Capture a screenshot and attach it to Allure
+        AllureUtils.captureScreenshot(driver, "perform_click2");
 		
 		WebElement startmyperformactivity 	= driver.findElement(mobileLocators.additionalperform);
 		startmyperformactivity.click();
 		
+		// Log console message to Allure
+        LOGGER.info("Click on Start my perform button");
+        AllureUtils.logStep("Click on Start my perform button");
+        
+     // Capture a screenshot and attach it to Allure
+        AllureUtils.captureScreenshot(driver, "perform_click3");
+		
 		WebElement startmyperfromactivitycross 	= driver.findElement(mobileLocators.cross_additionalpopup);
 		startmyperfromactivitycross.click();
+	
+		// Log console message to Allure
+        LOGGER.info("Click on Cross button to close popup");
+        AllureUtils.logStep("Click on Cross button to close popup");
+     // Capture a screenshot and attach it to Allure
+        AllureUtils.captureScreenshot(driver, "perform_click4");
+		
 		
 		// repeat steps again 
 		WebElement perfomplusicon1 	= driver.findElement(mobileLocators.perfomplus);
 		perfomplusicon1.click();
 		
+		// Log console message to Allure
+        LOGGER.info("Click agian on plus icon  for open popup related to Start my perform & Perfom activity completed");
+        AllureUtils.logStep("Click again on plus icon  for open popup related to Start my perform & Perfom activity completed");
+     // Capture a screenshot and attach it to Allure
+        AllureUtils.captureScreenshot(driver, "perform_click5");
+		
 		WebElement startmyperformactivity2 	= driver.findElement(mobileLocators.additionalperform);
 		startmyperformactivity2.click();
+
+		// Log console message to Allure
+        LOGGER.info("Click again on to open Start my perform button");
+        AllureUtils.logStep("Click again on to open Start my perform button");
+        // Capture a screenshot and attach it to Allure
+        AllureUtils.captureScreenshot(driver, "perform_click6");
 		
 		// Enter text for Search field 
 		WebElement Additonalperformsearch	= driver.findElement(mobileLocators.searcharea);
 		Additonalperformsearch.click();	
+		
+		// Log console message to Allure
+        LOGGER.info("Click on search to enter perform activity");
+        AllureUtils.logStep("Click on search to enter perform activity");
+     // Capture a screenshot and attach it to Allure
+        AllureUtils.captureScreenshot(driver, "perform_click7");
+		
 		// Enter text for Search field 
 		WebElement Additonalperformsearch1	= driver.findElement(AppiumBy.iOSNsPredicateString("label == \"B\""));
 		Additonalperformsearch1.click();
@@ -111,18 +162,34 @@ public class Case12_Perform_additionalactivity_deleteprocess extends Appiummobil
 		WebElement Additonalperformsearch8	= driver.findElement(AppiumBy.iOSNsPredicateString("label == \"l\""));
 		Additonalperformsearch8.click();
 		
+		// Log console message to Allure
+        LOGGER.info("Enter activity name for additonal");
+        AllureUtils.logStep("Enter activity name for additonal");
+     // Capture a screenshot and attach it to Allure
+        AllureUtils.captureScreenshot(driver, "perform_click8");
 		
+			
 		// Enter text for Search field 
 		WebElement donekeypad	= driver.findElement(mobileLocators.doneclick);
 		donekeypad.click();
 		
+		// Log console message to Allure
+        LOGGER.info("Click on done button from keypad");
+        AllureUtils.logStep("Click on done button from keypad");
+    
+		
 		// Capture a screenshot and attach it to Allure
         AllureUtils.captureScreenshot(driver, "perform_click2");
-		
+		Thread.sleep(2500);
 		
 		// Select perform aditonal activity 
-		WebElement selectbaseball 	= driver.findElement(mobileLocators.selectactivity);
+		WebElement selectbaseball 	= driver.findElement(mobileLocators.selectactivity1);
 		selectbaseball.click();
+		
+		// Log console message to Allure
+        LOGGER.info("Select acitvity from list");
+        AllureUtils.logStep("Select acitvity from list");
+		
 		
 		Thread.sleep(2500);
 		
@@ -130,17 +197,41 @@ public class Case12_Perform_additionalactivity_deleteprocess extends Appiummobil
 		backactivity.click();
 		
 		
-		WebElement deleteaddiotnal	= driver.findElement(mobileLocators.deletebaseball);
+		// Log console message to Allure
+        LOGGER.info("Click on back button");
+        AllureUtils.logStep("Click on back button");
+		
+		WebElement deleteaddiotnal	= driver.findElement(mobileLocators.selectdeleteactivity);
 		deleteaddiotnal.click();
+		 // Capture a screenshot and attach it to Allure
+        AllureUtils.captureScreenshot(driver, "perform_click10");
+		
+		// Log console message to Allure
+        LOGGER.info("Click on delete button");
+        AllureUtils.logStep("Click on delete button");
 		
 		WebElement nodeleteoption	= driver.findElement(mobileLocators.nodelete);
 		nodeleteoption.click();
 		
-		WebElement deleteaddiotnal1	= driver.findElement(mobileLocators.deletebaseball);
+		// Log console message to Allure
+        LOGGER.info("Click on No option for delete button");
+        AllureUtils.logStep("Click on no option for delete button");
+		
+		WebElement deleteaddiotnal1	= driver.findElement(mobileLocators.selectdeleteactivity);
 		deleteaddiotnal1.click();
+		
+		// Log console message to Allure
+        LOGGER.info("Click again on delete button");
+        AllureUtils.logStep("Click again on delete button");
 		
 		WebElement yesdeleteoption	= driver.findElement(mobileLocators.yesdelete);
 		yesdeleteoption.click();
+		 // Capture a screenshot and attach it to Allure
+        AllureUtils.captureScreenshot(driver, "perform_click11");
+		
+		// Log console message to Allure
+        LOGGER.info("Click on yes option for delete button");
+        AllureUtils.logStep("Click on yes option for delete button");
 		
 		
 		// Capture a screenshot and attach it to Allure

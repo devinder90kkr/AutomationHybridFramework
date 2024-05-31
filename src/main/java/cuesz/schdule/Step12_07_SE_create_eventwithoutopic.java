@@ -18,10 +18,17 @@ public class Step12_07_SE_create_eventwithoutopic extends BasePage {
 	private By Schdulemaste = 	(By.xpath("//*[@id=\"root\"]/div/div[1]/div/div/div/div[2]/div/div[1]/div/div[2]"));
 	private By Addnewbuttn  = 	(By.xpath("//div[@id='root']/div/div/div/div/div[2]/div/div/button"));
 	private By Date 		= 	(By.id("event_date"));	
-	private By startime		=	(By.xpath("//div[contains(text(),'Start Time')]"));
-	private By endtime		= (By.xpath("//div[contains(text(),'End Time')]"));
-	private By Notes		 =  (By.xpath("//textarea[@placeholder='Enter Notes']"));
+//	private By startime		=	(By.xpath("//div[contains(text(),'Start Time')]"));
+//	private By endtime		= (By.xpath("//div[contains(text(),'End Time')]"));
+//	private By Notes		 =  (By.xpath("//textarea[@placeholder='Enter Notes']"));
+//	private By Submitbutton  =	 (By.xpath("//button[normalize-space()='Create Event']"));
+//	
+
+	private By startime 	 =	(By.id("eventStartTime"));	
+	private By endtime		 = 	(By.id("eventEndTime"));
+	private By Notes		 =  (By.name("note"));
 	private By Submitbutton  =	 (By.xpath("//button[normalize-space()='Create Event']"));
+	
 	
 
 	 public Step12_07_SE_create_eventwithoutopic(WebDriver driver) {

@@ -3,11 +3,14 @@ package cuesz03.Iosapp_member_home_Fuelscreen;
 import java.util.HashMap;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.testng.annotations.Test;
 
 import cuesz.pages.AppiummobileBase;
 import cuesz.utils.AllureUtils;
 import cuesz.utils.AppiumappUtils;
+import cuesz.utils.mobileTestData;
 import io.appium.java_client.AppiumBy;
 import io.qameta.allure.Description;
 import io.qameta.allure.Epic;
@@ -20,6 +23,7 @@ import io.qameta.allure.Story;
 @Epic ("Fuel custom screen detail ")
 @Feature ("Verify Fuel detail functionlaity related to Custom fuel.")
 public class Case39_Fuel_Latesnacks_customfood extends AppiummobileBase {
+	private static final Logger LOGGER = LoggerFactory.getLogger(Case39_Fuel_Latesnacks_customfood .class);
 	
 	private By Homeclick 		= 		AppiumBy.iOSClassChain("**/XCUIElementTypeOther[`label == \"Home\"`][2]");
 	private By plusadd			= 		AppiumBy.accessibilityId("Late SnacksAddIcon");
@@ -48,6 +52,7 @@ public class Case39_Fuel_Latesnacks_customfood extends AppiummobileBase {
 	private By Customtick		=		AppiumBy.accessibilityId("CustomFoodSubmit");
 	private By radioclick		= 		AppiumBy.accessibilityId("Urgent");
 	private By submittick		=		AppiumBy.accessibilityId("ItemSubmit");
+	private By latesnack		= 		AppiumBy.iOSClassChain("**/XCUIElementTypeOther[`name == \"Late Snacks\"`][2]");
 
 	@Test
 	@Owner("QA") // Add the @Owner annotation to specify the executor
@@ -63,6 +68,11 @@ public class Case39_Fuel_Latesnacks_customfood extends AppiummobileBase {
 		
 		WebElement Homeicon = driver.findElement(Homeclick);
 		Homeicon.click();
+		// Log console message to Allure
+		LOGGER.info("Click on home menu from bottom");
+        AllureUtils.logStep("Click on home menu from bottom");
+        // Capture a screenshot and attach it to Allure
+        AllureUtils.captureScreenshot(driver, "39_1");
 		
 		Thread.sleep(3000);
 		// Method to scroll to perform screen
@@ -74,6 +84,11 @@ public class Case39_Fuel_Latesnacks_customfood extends AppiummobileBase {
 
         //Click on Fuel tab 
         driver.findElement(AppiumBy.accessibilityId("FUEL_SCREEN")).click();
+        // Log console message to Allure
+        LOGGER.info("Click on fuel screen");
+        AllureUtils.logStep("Click on fuel screen");
+        AllureUtils.captureScreenshot(driver,"39_2");
+        
         
         scroll("down", "Lunch");
  		Thread.sleep(2000);
@@ -81,18 +96,33 @@ public class Case39_Fuel_Latesnacks_customfood extends AppiummobileBase {
         // Locate the element related to breakfast + icon 
         WebElement latesnacksplus 	= driver.findElement(plusadd);
         latesnacksplus.click();
+        // Log console message to Allure
+        LOGGER.info("Click on latesnacksplus");
+        AllureUtils.logStep("Click on latesnacksplus");
+        AllureUtils.captureScreenshot(driver,"39_3");
+        
         
         //click on keypad Done button to hide keypad
         WebElement keypaddone	= driver.findElement(doneclick);
         keypaddone.click();
+        // Log console message to Allure
+        LOGGER.info("Click on keypaddone");
+        AllureUtils.logStep("Click on keypaddone");
+        AllureUtils.captureScreenshot(driver,"39_4");
         
         // Capture a screenshot and attach it to Allure
 	    AllureUtils.captureScreenshot(driver, "latesnacks6");
 	    
-//        String searchText = "Git";
-        String searchText = "Lost";
+	    //  String searchText = "Git";
+        String searchText = mobileTestData.searchText;
+        //        String searchText = "Gil";
         int count = 1;
         String modifiedSearchText = searchText + count + "test";
+	    
+//	    // String searchText = "Git";
+//        String searchText = "Lost";
+//        int count = 1;
+//        String modifiedSearchText = searchText + count + "test";
 
         // Loop until additempopup is visible
         while (true) {
@@ -130,37 +160,72 @@ public class Case39_Fuel_Latesnacks_customfood extends AppiummobileBase {
 
        // Now you can use modifiedSearchText outside the loop as well, for example:
        WebElement Foodname = driver.findElement(foodname);
-       Foodname.sendKeys(modifiedSearchText);
+       Foodname.sendKeys(modifiedSearchText);     
+       // Log console message to Allure
+       LOGGER.info("Enter food to search" );
+       AllureUtils.logStep("Enter food to search");
+       AllureUtils.captureScreenshot(driver,"39_5");
        
        //  Locate radio button for custoom food 
        WebElement radiocheck	= driver.findElement(radioclick);
        radiocheck.click();
-        
+       // Log console message to Allure
+       LOGGER.info("Click on radiocheck");
+       AllureUtils.logStep("Click on radiocheck");
+       AllureUtils.captureScreenshot(driver,"39_6");
         
        // Locate the Serving size  element 
        WebElement Servingsize	= driver.findElement(servingsize);
        Servingsize.click();
+       // Log console message to Allure
+       LOGGER.info("enter value for serving size element ");
+       AllureUtils.logStep("enter value for serving size element");    
+       // Capture a screenshot and attach it to Allure
+       AllureUtils.captureScreenshot(driver, "Case39_7");
+       
        Servingsize.sendKeys("45");
+       
        //click on keypad Done button to hide keypad
        WebElement keypaddone2	= driver.findElement(doneclick);       
        keypaddone2.click();
- 
+       // Log console message to Allure
+       LOGGER.info("Click on keypaddone2");
+       AllureUtils.logStep("Click on keypaddone2");
+       AllureUtils.captureScreenshot(driver,"39_8");
+       
        // Locate the Serving unit  element 
        WebElement Servingunit	= driver.findElement(servingunit);
        Servingunit.click();
+       // Log console message to Allure
+       LOGGER.info("enter value for Servingunit ");
+       AllureUtils.logStep("enter value for Servingunit");    
+       // Capture a screenshot and attach it to Allure
+       AllureUtils.captureScreenshot(driver, "Case39_9");
        Servingunit.sendKeys("cup");
-     //click on keypad Done button to hide keypad
+       
+       //click on keypad Done button to hide keypad
        WebElement keypaddone3	= driver.findElement(doneclick);       
        keypaddone3.click();
-       
+       // Log console message to Allure
+       LOGGER.info("Click on keypaddone3");
+       AllureUtils.logStep("Click on keypaddone3");
+       AllureUtils.captureScreenshot(driver,"39_10");
        
        // Locate the calories element  
        WebElement Calories	= driver.findElement(calories);
        Calories.click();
+       // Log console message to Allure
+       LOGGER.info("Click on Calories");
+       AllureUtils.logStep("Click on Calories");
+       AllureUtils.captureScreenshot(driver,"39_11");
        Calories.sendKeys("176");
+       
        WebElement keypaddone4	= driver.findElement(doneclick);       
        keypaddone4.click();
-       
+       // Log console message to Allure
+       LOGGER.info("Click on done");
+       AllureUtils.logStep("Click on done");
+       AllureUtils.captureScreenshot(driver,"39_12");
        
     // Capture a screenshot and attach it to Allure
 	    AllureUtils.captureScreenshot(driver, "latesnacks8");
@@ -260,16 +325,30 @@ public class Case39_Fuel_Latesnacks_customfood extends AppiummobileBase {
        // Locate and click on Foodimage 
        WebElement Customfoodimage	= driver.findElement(customfoodimage);
        Customfoodimage.click();
-     
+       
        WebElement galleryclick	= driver.findElement(gallery);
        galleryclick.click();
+       // Log console message to Allure
+       LOGGER.info("Click on galleryclick");
+       AllureUtils.logStep("Click on galleryclick");
+       AllureUtils.captureScreenshot(driver,"39_13");
        
        WebElement firstPhoto = driver.findElement(AppiumBy.xpath("//XCUIElementTypeImage[2]"));
-       firstPhoto.click();
+       firstPhoto.click(); 
+       // Log console message to Allure
+       LOGGER.info("Click on firstPhoto");
+       AllureUtils.logStep("Click on firstPhoto");
+       AllureUtils.captureScreenshot(driver,"39_14");
+       
        
        Thread.sleep(3500);
+       
        WebElement Submittap = driver.findElement(submittap);
        Submittap.click();
+       // Log console message to Allure
+       LOGGER.info("Click on Submittap");
+       AllureUtils.logStep("Click on Submittap");
+       AllureUtils.captureScreenshot(driver,"39_15");
        Thread.sleep(3500);
        
        
@@ -278,12 +357,27 @@ public class Case39_Fuel_Latesnacks_customfood extends AppiummobileBase {
        
         WebElement Customfoodtick	= driver.findElement(Customtick);
         Customfoodtick.click();
-		
+        // Log console message to Allure
+        LOGGER.info("Click on Customfoodtick");
+        AllureUtils.logStep("Click on Customfoodtick");
+        AllureUtils.captureScreenshot(driver,"39_16");
+        
         Thread.sleep(3500);
+        
+        
+        WebElement Latesnack	= driver.findElement(latesnack);
+        Latesnack.click();
+        // Log console message to Allure
+        LOGGER.info(" Click on Latesnack");
+        AllureUtils.logStep("Click on fuelLatesnackselection3");
         
         WebElement editsubmit 	= driver.findElement(submittick);
 		editsubmit.click();
-		
+		// Log console message to Allure
+        LOGGER.info("Click on editsubmit");
+        AllureUtils.logStep("Click on editsubmit");
+        AllureUtils.captureScreenshot(driver,"39_17");
+        
 		 scroll("down", "Lunch");
 	 		Thread.sleep(2000);
         
