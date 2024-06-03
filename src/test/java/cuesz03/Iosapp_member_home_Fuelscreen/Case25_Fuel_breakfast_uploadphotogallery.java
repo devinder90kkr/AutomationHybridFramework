@@ -44,8 +44,8 @@ public class Case25_Fuel_breakfast_uploadphotogallery extends AppiummobileBase {
     @Severity(SeverityLevel.NORMAL)      
     @Description("Member check upload functionlaity verification")
     @Story("Scroll to Fuel card and upload image for breakfast.")	
-	public void Homescreen() throws InterruptedException
-	{	
+	public void Homescreen() throws InterruptedException{
+		try {
 		// Create an instance of AppiumUtils and pass the driver
 		AppiumappUtils appiumUtils = new AppiumappUtils(driver);
         // Launch the app using the utility method
@@ -260,9 +260,23 @@ public class Case25_Fuel_breakfast_uploadphotogallery extends AppiummobileBase {
   	            Thread.sleep(2000);
   	        }
 	      
-		Thread.sleep(8500);
-        driver.terminateApp("com.cuesz.mobile");
-	}
+
+		 } catch (Exception e) {
+	            LOGGER.error("An error occurred during the mindful screen test", e);
+	            AllureUtils.logStep("An error occurred: " + e.getMessage());
+	        } finally {
+	            // Terminate the app whether the test passed or failed
+	            try {
+	                Thread.sleep(8500);
+	            } catch (InterruptedException e) {
+	                LOGGER.error("Thread interrupted during final sleep", e);
+	                Thread.currentThread().interrupt();
+	            }
+	            driver.terminateApp("com.cuesz.mobile");
+	        }
+	    }
+	
+
 	// Function to check if an element is present on the screen
 			public boolean isElementPresent(AppiumDriver driver, By by){
 			    try{

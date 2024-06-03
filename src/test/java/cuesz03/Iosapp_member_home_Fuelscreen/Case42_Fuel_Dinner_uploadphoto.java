@@ -43,8 +43,8 @@ public class Case42_Fuel_Dinner_uploadphoto extends AppiummobileBase {
     @Severity(SeverityLevel.NORMAL)      
     @Description("Member check upload functionlaity verification")
     @Story("Scroll to Fuel card and upload image for dinner.")	
-	public void Fuel_Dinner_uploadphoto() throws InterruptedException
-	{	
+	public void Fuel_Dinner_uploadphoto() throws InterruptedException{
+		try {
 		// Create an instance of AppiumUtils and pass the driver
 		AppiumappUtils appiumUtils = new AppiumappUtils(driver);
         // Launch the app using the utility method
@@ -242,8 +242,19 @@ public class Case42_Fuel_Dinner_uploadphoto extends AppiummobileBase {
 	    
 	    
         
-		Thread.sleep(8500);
-        driver.terminateApp("com.cuesz.mobile");
-	}
+		 Thread.sleep(3500);
+		 } catch (Exception e) {
+	            LOGGER.error("An error occurred during the cases ", e);
+	            AllureUtils.logStep("An error occurred: " + e.getMessage());
+	        } finally {
+	            // Terminate the app whether the test passed or failed
+	            try {
+	                Thread.sleep(8500);
+	            } catch (InterruptedException e) {
+	                LOGGER.error("Thread interrupted during final sleep", e);
+	                Thread.currentThread().interrupt();
+	            }
+	            driver.terminateApp("com.cuesz.mobile");
+	        }
+	    }
 }
-	

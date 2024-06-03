@@ -58,8 +58,8 @@ public class Case43_Fuel_Dinner_customfood extends AppiummobileBase {
     @Severity(SeverityLevel.NORMAL)      
 	@Description("Custom Fuel screen detail verification")
     @Story("Scroll to Fuel card and verify custom food breakfast.")
-	public void Fuel_Dinner_customfood() throws InterruptedException
-	{	
+	public void Fuel_Dinner_customfood() throws InterruptedException{
+		try {
 		// Create an instance of AppiumUtils and pass the driver
 		AppiumappUtils appiumUtils = new AppiumappUtils(driver);
         // Launch the app using the utility method
@@ -376,9 +376,21 @@ public class Case43_Fuel_Dinner_customfood extends AppiummobileBase {
 		 scroll("down", "Lunch");
 	 		Thread.sleep(2000);
         
-       Thread.sleep(4500);
-       driver.terminateApp("com.cuesz.mobile");
-	}
+	 		 Thread.sleep(3500);
+		 } catch (Exception e) {
+	            LOGGER.error("An error occurred during the cases ", e);
+	            AllureUtils.logStep("An error occurred: " + e.getMessage());
+	        } finally {
+	            // Terminate the app whether the test passed or failed
+	            try {
+	                Thread.sleep(8500);
+	            } catch (InterruptedException e) {
+	                LOGGER.error("Thread interrupted during final sleep", e);
+	                Thread.currentThread().interrupt();
+	            }
+	            driver.terminateApp("com.cuesz.mobile");
+	        }
+	    }
 	 private void scroll(String direction, String elementName) {
 	        HashMap<String, Object> scrollObject = new HashMap<>();
 	        scrollObject.put("direction", direction);

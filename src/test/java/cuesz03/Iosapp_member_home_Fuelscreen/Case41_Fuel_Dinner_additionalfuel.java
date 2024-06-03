@@ -52,8 +52,8 @@ public class Case41_Fuel_Dinner_additionalfuel extends AppiummobileBase {
     @Severity(SeverityLevel.NORMAL)      
     @Description("Member Fuel screen detail verification")
     @Story("Scroll to Fuel card and verify member able to add addtional dinner list")	
-	public void Fuel_Dinner_additionalfuel() throws InterruptedException
-	{	
+	public void Fuel_Dinner_additionalfuel() throws InterruptedException{
+		try {
 		// Create an instance of AppiumUtils and pass the driver
 		AppiumappUtils appiumUtils = new AppiumappUtils(driver);
         // Launch the app using the utility method
@@ -456,8 +456,19 @@ public class Case41_Fuel_Dinner_additionalfuel extends AppiummobileBase {
 		// Capture a screenshot and attach it to Allure
         AllureUtils.captureScreenshot(driver, "Case41_23");
         
-		Thread.sleep(4500);
-        driver.terminateApp("com.cuesz.mobile");
-	}
+        Thread.sleep(3500);
+		 } catch (Exception e) {
+	            LOGGER.error("An error occurred during the cases ", e);
+	            AllureUtils.logStep("An error occurred: " + e.getMessage());
+	        } finally {
+	            // Terminate the app whether the test passed or failed
+	            try {
+	                Thread.sleep(8500);
+	            } catch (InterruptedException e) {
+	                LOGGER.error("Thread interrupted during final sleep", e);
+	                Thread.currentThread().interrupt();
+	            }
+	            driver.terminateApp("com.cuesz.mobile");
+	        }
+	    }
 }
-	
