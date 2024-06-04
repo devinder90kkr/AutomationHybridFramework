@@ -3,11 +3,11 @@ package cuesz03.Iosapp_member_home_Fuelscreen;
 
 import org.testng.annotations.Test;
 import cuesz.pages.AppiummobileBase;
-import cuesz.utils.AllureUtils;
 import cuesz.utils.AppiumappUtils;
-import cuesz.utils.mobileLocators;
-import cuesz.utils.mobileTestData;
-import cuesz.utils.mobilelement;
+import cuesz.utils.mobile.mobileLocators;
+import cuesz.utils.mobile.mobileTestData;
+import cuesz.utils.mobile.mobilelement;
+import cuesz.utils.reporting.AllureUtils;
 import io.qameta.allure.Description;
 import io.qameta.allure.Epic;
 import io.qameta.allure.Feature;

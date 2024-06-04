@@ -12,8 +12,8 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 	import org.openqa.selenium.support.ui.WebDriverWait;
 	import org.testng.annotations.Test;
 	import cuesz.pages.BasePage;
-import cuesz.utils.AllureUtils;
 import cuesz.utils.SeleniumUtils;
+import cuesz.utils.reporting.AllureUtils;
 	
 	public class Case43_1_MSL_Fuelperform extends BasePage {
 		

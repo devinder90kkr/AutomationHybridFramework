@@ -8,9 +8,9 @@ import org.openqa.selenium.interactions.Actions;
 import org.testng.annotations.Test;
 
 import cuesz.pages.BasePage;
-import cuesz.utils.AllureUtils;
-import cuesz.utils.DateGenerator;
 import cuesz.utils.SeleniumUtils;
+import cuesz.utils.date.DateGenerator;
+import cuesz.utils.reporting.AllureUtils;
 
 public class Step14_creatguestevent extends BasePage {
 	

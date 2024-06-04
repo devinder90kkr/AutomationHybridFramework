@@ -13,9 +13,9 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
 
 import cuesz.pages.BasePage;
-import cuesz.utils.AllureUtils;
-import cuesz.utils.Nextdategenerator;
 import cuesz.utils.SeleniumUtils;
+import cuesz.utils.date.Nextdategenerator;
+import cuesz.utils.reporting.AllureUtils;
 
 public class Step13_01createventfornextday extends BasePage {
 	

@@ -16,8 +16,8 @@ import org.openqa.selenium.By;
 	import org.openqa.selenium.support.ui.WebDriverWait;
 	import org.testng.annotations.Test;
 	import cuesz.pages.BasePage;
-	import cuesz.utils.AllureUtils;
-	import cuesz.utils.SeleniumUtils;
+import cuesz.utils.SeleniumUtils;
+import cuesz.utils.reporting.AllureUtils;
 	
 	public class Case23_MS_performactivity extends BasePage {
 	

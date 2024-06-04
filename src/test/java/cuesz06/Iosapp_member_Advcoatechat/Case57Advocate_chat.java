@@ -5,11 +5,11 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.testng.annotations.Test;
 import cuesz.pages.AppiummobileBase;
-import cuesz.utils.AllureUtils;
 import cuesz.utils.AppiumappUtils;
-import cuesz.utils.mobileLocators;
-import cuesz.utils.mobileTestData;
-import cuesz.utils.mobilelement;
+import cuesz.utils.mobile.mobileLocators;
+import cuesz.utils.mobile.mobileTestData;
+import cuesz.utils.mobile.mobilelement;
+import cuesz.utils.reporting.AllureUtils;
 import io.qameta.allure.Description;
 import io.qameta.allure.Epic;
 import io.qameta.allure.Feature;
@@ -31,7 +31,7 @@ public class Case57Advocate_chat extends AppiummobileBase {
 	@Description("Member able to do chat and send message and attachment")
     @Story("Scroll to ")
 	public void chatscreen() throws InterruptedException {	
-
+try {
 		// Create an instance of AppiumUtils and pass the driver
 		AppiumappUtils appiumUtils = new AppiumappUtils(driver);
         // Launch the app using the utility method
@@ -71,97 +71,39 @@ public class Case57Advocate_chat extends AppiummobileBase {
             AllureUtils.captureScreenshot(driver, "Case57Advocate_chat" + (i + 2)); // Start with chat2 for second message, chat3 for third, etc.
         }
 
+        //Click on media chat plus icon
+        mobilelement.clickElement(driver, mobileLocators.chatplus);
         
-        //Click on media-link icon
-        mobilelement.clickElement(driver, mobileLocators.medialinks);
-        // Log message to console and Allure report
-        LOGGER.info("Click on media link from chat screen");
-        AllureUtils.logStep("Click on media link from chat screen");
-        
-        AllureUtils.captureScreenshot(driver, "Case57Advocate_chat5"); 
-        
-        
-        //Click on media-link icon
-        mobilelement.clickElement(driver, mobileLocators.backpressbutton);
-        // Log message to console and Allure report
-        LOGGER.info("Click on back from chat screen");
-        AllureUtils.logStep("Click on back icon from chat screen");
-        
-        //Click on media-link icon
-        mobilelement.clickElement(driver, mobileLocators.medialinks);
-        // Log message to console and Allure report
-        LOGGER.info("Click on media link from chat screen");
-        AllureUtils.logStep("Click on media link from chat screen");
-        AllureUtils.captureScreenshot(driver, "Case57Advocate_chat13"); 
-      
-        //Click on media
+        // Click on media icon
         mobilelement.clickElement(driver, mobileLocators.media);
-        // Log message to console and Allure report
-        LOGGER.info("Click on media");
-        AllureUtils.logStep("Click on media");
-        AllureUtils.captureScreenshot(driver, "Case57Advocate_chat14"); 
         
-        //Click on documents
-        mobilelement.clickElement(driver, mobileLocators.documents);
-        // Log message to console and Allure report
-        LOGGER.info("Click on documents");
-        AllureUtils.logStep("Click on documents");
-        AllureUtils.captureScreenshot(driver, "Case57Advocate_chat6"); 
-        
-        //Click on Links
-        mobilelement.clickElement(driver, mobileLocators.links);
-        // Log message to console and Allure report
-        LOGGER.info("Click on links");
-        AllureUtils.logStep("Click on links");
-        AllureUtils.captureScreenshot(driver, "Case57Advocate_chat7"); 
-        
-        //Click on back press icon
+        //Click on back icon
         mobilelement.clickElement(driver, mobileLocators.backpressbutton);
-        // Log message to console and Allure report
-        LOGGER.info("Click on back from chat screen");
-        AllureUtils.logStep("Click on back icon from chat screen");
-        AllureUtils.captureScreenshot(driver, "Case57Advocate_chat8"); 
         
-//        //Click on search and enter text into it
-//        mobilelement.clickElement(driver, mobileLocators.search);
-//     // Log message to console and Allure report
-//        LOGGER.info("Click on search field from chat screen");
-//        AllureUtils.logStep("Click on search field from chat screen");
-//        AllureUtils.captureScreenshot(driver, "Case57Advocate_chat9"); 
-        /*****Search input locators missing so above case comment for now*******/
+        // Click on media icon
+        mobilelement.clickElement(driver, mobileLocators.media);
         
-        //Click on attach with camera and gallery 
-        mobilelement.clickElement(driver, mobileLocators.attach);
-        // Log message to console and Allure report
-        LOGGER.info("Click on attach from chat screen");
-        AllureUtils.logStep("Click on attach icon from chat screen");
-        AllureUtils.captureScreenshot(driver, "Case57Advocate_chat9"); 
+        //Click on media click 
+        mobilelement.clickElement(driver, mobileLocators.media1);
         
-        //Click on gallery icon
-        mobilelement.clickElement(driver, mobileLocators.galleryclick);
-        // Log message to console and Allure report
-        LOGGER.info("Click on gallery from chat screen");
-        AllureUtils.logStep("Click on gallery icon from chat screen");
-        AllureUtils.captureScreenshot(driver, "Case57Advocate_chat10"); 
-        
-        mobilelement.clickElement(driver, mobileLocators.image1);
-        // Log message to console and Allure report
-        LOGGER.info("Select image from gallery");
-        AllureUtils.logStep("Select image from gallery");
-        AllureUtils.captureScreenshot(driver, "Case57Advocate_chat11"); 
-        
-        mobilelement.clickElement(driver, mobileLocators.submittap);
-        // Log message to console and Allure report
-        LOGGER.info("Select image submit from gallery");
-        AllureUtils.logStep("elect image submit from gallery");
-        AllureUtils.captureScreenshot(driver, "Case57Advocate_chat12"); 
+        //Click on crossi icon
+        mobilelement.clickElement(driver, mobileLocators.cross);
         
         
         
-        
-        
-        Thread.sleep(8500);
-        driver.terminateApp("com.cuesz.mobile");
-        
+			        Thread.sleep(3500);
+				} catch (Exception e) {
+			LOGGER.error("An error occurred during the cases ", e);
+			AllureUtils.logStep("An error occurred: " + e.getMessage());
+		} finally {
+		// Terminate the app whether the test passed or failed
+		try {
+			Thread.sleep(8500);
+		} catch (InterruptedException e) {
+		LOGGER.error("Thread interrupted during final sleep", e);
+		Thread.currentThread().interrupt();
 	}
+			driver.terminateApp("com.cuesz.mobile");
 }
+	}
+		}

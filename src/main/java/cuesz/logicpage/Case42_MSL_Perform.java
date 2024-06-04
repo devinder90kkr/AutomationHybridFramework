@@ -13,8 +13,8 @@ import org.openqa.selenium.WebElement;
 	import org.testng.annotations.Test;
 
 import cuesz.pages.BasePage;
-import cuesz.utils.DatePickerUtility_logicpage;
 import cuesz.utils.SeleniumUtils;
+import cuesz.utils.date.DatePickerUtility_logicpage;
 	
 	public class Case42_MSL_Perform extends BasePage {
 		

@@ -3,7 +3,8 @@ package ApiTestScript;
 import org.json.JSONObject;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import cuesz.utils.ApiUtils;
+
+import cuesz.utils.api.ApiUtils;
 import io.qameta.allure.Allure;
 import java.io.IOException;
 
@@ -13,7 +14,7 @@ public class Case16_MS_searchclickapi {
     @Test
     public void searchTeamMemberApi() {
     	  String searchString = "Kumar Devinder"; // Adjust this as per your test case
-          String apiUrl = cuesz.utils.ApiConfig.API_URL1; // Use the desired API URL from ApiConfig
+          String apiUrl = cuesz.utils.api.ApiConfig.API_URL1; // Use the desired API URL from ApiConfig
 
           // Create an instance of ApiUtils with the specific API URL
           ApiUtils apiUtils = new ApiUtils(apiUrl);

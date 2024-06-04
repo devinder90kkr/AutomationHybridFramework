@@ -13,9 +13,8 @@ import org.testng.annotations.Test;
 
 import cuesz.logintest.AdvocateLogin;
 import cuesz.membersummary.Case15_MS_Memberhoverdetail;
-import cuesz.utils.AllureUtils;
 import cuesz.utils.WebDriverManager;
-
+import cuesz.utils.reporting.AllureUtils;
 import io.qameta.allure.*;
 
 @Epic ("Cuesz Staff on member Summary page")

@@ -1,4 +1,4 @@
-package cuesz.utils;
+package cuesz.utils.api;
 
 import java.net.URI;
 import java.net.URLEncoder;

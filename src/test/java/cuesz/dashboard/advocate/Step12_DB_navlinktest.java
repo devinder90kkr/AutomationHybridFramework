@@ -15,9 +15,8 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 import cuesz.dashboard.Step12_DB_navlink;
 import cuesz.logintest.AdvocateLogin;
-import cuesz.utils.AllureUtils;
 import cuesz.utils.WebDriverManager;
-
+import cuesz.utils.reporting.AllureUtils;
 
 import java.io.ByteArrayOutputStream;
 import java.io.FileInputStream;

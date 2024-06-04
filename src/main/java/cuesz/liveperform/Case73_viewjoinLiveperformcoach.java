@@ -15,8 +15,8 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
 
 import cuesz.pages.BasePage;
-import cuesz.utils.AllureUtils;
-import cuesz.utils.Currentdategenerator;
+import cuesz.utils.date.Currentdategenerator;
+import cuesz.utils.reporting.AllureUtils;
 
 public class Case73_viewjoinLiveperformcoach extends BasePage {
 	

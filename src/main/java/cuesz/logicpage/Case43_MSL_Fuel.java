@@ -15,10 +15,10 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 	import org.openqa.selenium.support.ui.WebDriverWait;
 	import org.testng.annotations.Test;
 	import cuesz.pages.BasePage;
-import cuesz.utils.AllureUtils;
-import cuesz.utils.Currentdategenerator;
-import cuesz.utils.DatePickerUtility_logicpage;
 import cuesz.utils.SeleniumUtils;
+import cuesz.utils.date.Currentdategenerator;
+import cuesz.utils.date.DatePickerUtility_logicpage;
+import cuesz.utils.reporting.AllureUtils;
 	
 	public class Case43_MSL_Fuel extends BasePage {
 		

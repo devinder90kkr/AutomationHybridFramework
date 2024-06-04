@@ -1,4 +1,4 @@
-package cuesz.utils;
+package cuesz.utils.web;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;

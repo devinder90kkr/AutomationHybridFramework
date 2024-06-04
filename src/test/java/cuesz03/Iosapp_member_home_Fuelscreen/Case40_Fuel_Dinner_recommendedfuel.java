@@ -12,8 +12,8 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import cuesz.pages.AppiummobileBase;
-import cuesz.utils.AllureUtils;
 import cuesz.utils.AppiumappUtils;
+import cuesz.utils.reporting.AllureUtils;
 import io.appium.java_client.AppiumBy;
 import io.qameta.allure.Allure;
 import io.qameta.allure.Description;

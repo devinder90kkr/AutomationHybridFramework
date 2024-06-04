@@ -14,9 +14,9 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
 
 import cuesz.pages.BasePage;
-import cuesz.utils.AllureUtils;
-import cuesz.utils.Currentdategenerator;
 import cuesz.utils.SeleniumUtils;
+import cuesz.utils.date.Currentdategenerator;
+import cuesz.utils.reporting.AllureUtils;
 
 public class Case34_01_MS_VO2assigntomember extends BasePage {
 	 //public static String eventDate = "26-10-2023"; // Date to be passed nextscandate below

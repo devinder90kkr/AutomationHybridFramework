@@ -1,10 +1,10 @@
 package cuesz.logintest;
 
 import cuesz.pages.Loginpage;
-import cuesz.utils.AllureUtils;
 import cuesz.utils.Config;
 import cuesz.utils.Configuration;
 import cuesz.utils.WebDriverManager;
+import cuesz.utils.reporting.AllureUtils;
 import io.qameta.allure.Allure;
 import io.qameta.allure.Description;
 import io.qameta.allure.Epic;

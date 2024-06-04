@@ -13,9 +13,8 @@ import org.testng.annotations.Test;
 
 import cuesz.logintest.AdvocateLogin;
 import cuesz.schdule.Step12_02_SE_createvent_withpastdate;
-import cuesz.utils.AllureUtils;
 import cuesz.utils.WebDriverManager;
-
+import cuesz.utils.reporting.AllureUtils;
 import io.qameta.allure.*;
 
 @Epic ("Advocate Scheduling")

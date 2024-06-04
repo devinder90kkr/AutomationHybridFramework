@@ -61,8 +61,8 @@ import org.openqa.selenium.WebDriver;
 import org.testng.annotations.Test;
 
 import cuesz.pages.BasePage;
-import cuesz.utils.AllureUtils;
-import cuesz.utils.ElementActions;
+import cuesz.utils.reporting.AllureUtils;
+import cuesz.utils.web.ElementActions;
 
 public class Step14_DB_Clock extends BasePage {
 	

@@ -12,8 +12,8 @@ import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
 
 import cuesz.pages.BasePage;
-import cuesz.utils.AllureUtils;
-import cuesz.utils.DateGenerator;
+import cuesz.utils.date.DateGenerator;
+import cuesz.utils.reporting.AllureUtils;
 
 public class Case04_deletevent extends BasePage {
 	

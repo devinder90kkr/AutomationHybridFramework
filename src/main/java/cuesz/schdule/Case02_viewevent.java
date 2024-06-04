@@ -12,8 +12,8 @@ import org.slf4j.LoggerFactory;
 import org.testng.annotations.Test;
 
 import cuesz.pages.BasePage;
-import cuesz.utils.AllureUtils;
-import cuesz.utils.DateGenerator;
+import cuesz.utils.date.DateGenerator;
+import cuesz.utils.reporting.AllureUtils;
 
 public class Case02_viewevent extends BasePage {
 	private static final Logger LOGGER = LoggerFactory.getLogger(Case02_viewevent.class);

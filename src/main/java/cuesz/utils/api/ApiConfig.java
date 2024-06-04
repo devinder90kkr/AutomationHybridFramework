@@ -1,4 +1,4 @@
-package cuesz.utils;
+package cuesz.utils.api;
 
 public class ApiConfig {
     public static final String API_URL1 = "https://pre-stageapi.app.cuesz.com/v3/team/member";

@@ -13,8 +13,8 @@ import org.testng.annotations.Test;
 
 import cuesz.logintest.AdvocateLogin;
 import cuesz.membercommunication.Case46_Membercommunictaion;
-import cuesz.utils.AllureUtils;
 import cuesz.utils.WebDriverManager;
+import cuesz.utils.reporting.AllureUtils;
 import io.qameta.allure.*;
 
 @Epic ("Cuesz Staff testing for member coomunication ")

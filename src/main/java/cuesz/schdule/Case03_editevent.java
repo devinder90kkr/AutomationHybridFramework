@@ -12,8 +12,8 @@ import org.openqa.selenium.interactions.Actions;
 import org.testng.annotations.Test;
 
 import cuesz.pages.BasePage;
-import cuesz.utils.AllureUtils;
-import cuesz.utils.DateGenerator;
+import cuesz.utils.date.DateGenerator;
+import cuesz.utils.reporting.AllureUtils;
 
 public class Case03_editevent extends BasePage {
 	// public static String eventDate = Case01_createvent.eventDate; // Get event date from the first script

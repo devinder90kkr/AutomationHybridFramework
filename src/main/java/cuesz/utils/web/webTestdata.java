@@ -1,4 +1,4 @@
-package cuesz.utils;
+package cuesz.utils.web;
 
 public class webTestdata {
 	

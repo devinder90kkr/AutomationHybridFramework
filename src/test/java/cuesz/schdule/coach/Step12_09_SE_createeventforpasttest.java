@@ -13,9 +13,8 @@ import org.testng.annotations.Test;
 import cuesz.logintest.CoachLogin;
 import cuesz.schdule.Step12_08_SE_createvent;
 import cuesz.schdule.Step12_09_SE_createeventforpast;
-import cuesz.utils.AllureUtils;
 import cuesz.utils.WebDriverManager;
-
+import cuesz.utils.reporting.AllureUtils;
 import io.qameta.allure.*;
 
 @Epic ("Coach Scheduling")
