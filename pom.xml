@@ -143,7 +143,7 @@
 		        <version>3.2.3</version>
 		        <configuration>
 		          <suiteXmlFiles>
-		            <suiteXmlFile>TestSuite01-Dashboard-eventcase-Advocate/Case0_cuesz-dashboard-Suite.xml</suiteXmlFile>
+		            <suiteXmlFile>Webapp-advocate-Suites/Case0_cuesz-dashboard-Suite.xml</suiteXmlFile>
 		          </suiteXmlFiles>
 		        </configuration>
 		      </plugin>
@@ -164,7 +164,7 @@
 		        <version>3.2.3</version>
 		        <configuration>
 		          <suiteXmlFiles>
-		            <suiteXmlFile>TestSuite01-Dashboard-eventcase-Advocate\Case01_Schdule-advocate-Suite.xml</suiteXmlFile>
+		            <suiteXmlFile>Webapp-advocate-Suites/Case01_Schdule-advocate-Suite.xml</suiteXmlFile>
 		          </suiteXmlFiles>
 		        </configuration>
 		      </plugin>
@@ -185,7 +185,7 @@
 		        <version>3.2.3</version>
 		        <configuration>
 		          <suiteXmlFiles>
-		            <suiteXmlFile>TestSuite01-Dashboard-eventcase-Advocate\Case02_Mastecalendar-advocate-Suite.xml</suiteXmlFile>
+		            <suiteXmlFile>Webapp-advocate-Suites/Case02_Mastecalendar-advocate-Suite.xml</suiteXmlFile>
 		          </suiteXmlFiles>
 		        </configuration>
 		      </plugin>
@@ -206,7 +206,7 @@
 		        <version>3.2.3</version>
 		        <configuration>
 		          <suiteXmlFiles>
-		            <suiteXmlFile>TestSuite01-Dashboard-eventcase-Advocate\Case03_Schdule-negative-advocate-Suite.xml</suiteXmlFile>
+		            <suiteXmlFile>Webapp-advocate-Suites/Case03_Schdule-negative-advocate-Suite.xml</suiteXmlFile>
 		          </suiteXmlFiles>
 		        </configuration>
 		      </plugin>
@@ -227,7 +227,7 @@
 		        <version>3.2.3</version>
 		        <configuration>
 		          <suiteXmlFiles>
-		            <suiteXmlFile>TestSuite01-Dashboard-eventcase-Advocate\Case04_Schdule-Staffmeeting-advocate-Suite.xml</suiteXmlFile>
+		            <suiteXmlFile>Webapp-advocate-Suites/Case04_Schdule-Staffmeeting-advocate-Suite.xml</suiteXmlFile>
 		          </suiteXmlFiles>
 		        </configuration>
 		      </plugin>
@@ -249,7 +249,7 @@
 		        <version>3.2.3</version>
 		        <configuration>
 		          <suiteXmlFiles>
-		            <suiteXmlFile>TestSuite01-Dashboard-eventcase-Advocate\Case04.1_Schdule-cases-advocate-Suite.xml</suiteXmlFile>
+		            <suiteXmlFile>Webapp-advocate-Suites/Case04.1_Schdule-cases-advocate-Suite.xml</suiteXmlFile>
 		          </suiteXmlFiles>
 		        </configuration>
 		      </plugin>
@@ -258,9 +258,10 @@
 </build>
 </profile>
 
-<!-- Suites 7 for Membercommunocationcases advocate -->
+
+<!-- Suites 7 for Schdule Othercases advocate -->
 <profile>
-<id>Membercommunicationcases</id>
+<id>Logicbasicadvocate</id>
 <build>
     <pluginManagement><!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->
       <plugins>  
@@ -270,7 +271,7 @@
 		        <version>3.2.3</version>
 		        <configuration>
 		          <suiteXmlFiles>
-		            <suiteXmlFile>TestSuite02-Membecommunication-Advocate\Case10_member-communication.xml</suiteXmlFile>
+		            <suiteXmlFile>Webapp-advocate-Suites/Case05_Logic-advocate-suite.xml</suiteXmlFile>
 		          </suiteXmlFiles>
 		        </configuration>
 		      </plugin>
@@ -280,9 +281,9 @@
 </profile>
 
 
-<!-- Suites 8 for Logic advocate advocate -->
+<!-- Suites 8 for Schdule Othercases advocate -->
 <profile>
-<id>Logicadvocatebasic</id>
+<id>Logiactivitynextdate</id>
 <build>
     <pluginManagement><!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->
       <plugins>  
@@ -292,7 +293,7 @@
 		        <version>3.2.3</version>
 		        <configuration>
 		          <suiteXmlFiles>
-		            <suiteXmlFile>TestSuite03-Logicpage-Advocate\Case05_Logic-advocate-suite.xml</suiteXmlFile>
+		            <suiteXmlFile>Webapp-advocate-Suites/Case06_Logic-advocate-activity-suite.xml</suiteXmlFile>
 		          </suiteXmlFiles>
 		        </configuration>
 		      </plugin>
@@ -301,9 +302,9 @@
 </build>
 </profile>
 
-<!-- Suites 9 for Logic advocate advocate -->
+<!-- Suites 9 for Schdule Othercases advocate -->
 <profile>
-<id>Logicadvocate-performnext_weekcases</id>
+<id>Logiactivitycurrenrdate</id>
 <build>
     <pluginManagement><!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->
       <plugins>  
@@ -313,7 +314,7 @@
 		        <version>3.2.3</version>
 		        <configuration>
 		          <suiteXmlFiles>
-		            <suiteXmlFile>TestSuite03-Logicpage-Advocate\Case06_Logic-advocate-activity-suite.xml</suiteXmlFile>
+		            <suiteXmlFile>Webapp-advocate-Suites/Case06_Logic-advocate-Currentdaysuite.xml</suiteXmlFile>
 		          </suiteXmlFiles>
 		        </configuration>
 		      </plugin>
@@ -322,9 +323,9 @@
 </build>
 </profile>
 
-<!-- Suites 10 for Logic advocate advocate -->
+<!-- Suites 10 for Schdule Othercases advocate -->
 <profile>
-<id>Logicadvocate-perform_current_weekcases</id>
+<id>Membersummarybasiccases</id>
 <build>
     <pluginManagement><!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->
       <plugins>  
@@ -334,7 +335,7 @@
 		        <version>3.2.3</version>
 		        <configuration>
 		          <suiteXmlFiles>
-		            <suiteXmlFile>TestSuite03-Logicpage-Advocate\Case07_Logic-advocate-Currentdays-activity-suite.xml</suiteXmlFile>
+		            <suiteXmlFile>Webapp-advocate-Suites/Case08_Membersummary-part01(basiccases)-advocate.xml</suiteXmlFile>
 		          </suiteXmlFiles>
 		        </configuration>
 		      </plugin>
@@ -343,9 +344,9 @@
 </build>
 </profile>
 
-<!-- Suites 11 for Logic advocate advocate -->
+<!-- Suites 11 for Schdule Othercases advocate -->
 <profile>
-<id>Membersummarypart-01</id>
+<id>Membersummarydropdownlist</id>
 <build>
     <pluginManagement><!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->
       <plugins>  
@@ -355,7 +356,7 @@
 		        <version>3.2.3</version>
 		        <configuration>
 		          <suiteXmlFiles>
-		            <suiteXmlFile>TestSuite04-Membersummary-advocate\Case08_Membersummary-part01-advocate.xml</suiteXmlFile>
+		            <suiteXmlFile>Webapp-advocate-Suites/Case09_Membersummary-part02(performmindfulfuelandrestoredropdown)-advocate2.xml</suiteXmlFile>
 		          </suiteXmlFiles>
 		        </configuration>
 		      </plugin>
@@ -363,136 +364,6 @@
 </pluginManagement>
 </build>
 </profile>
-
-<!-- Suites 12 for Logic advocate advocate -->
-<profile>
-<id>Membersummarypart-02</id>
-<build>
-    <pluginManagement><!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->
-      <plugins>  
-		<plugin>
-		        <groupId>org.apache.maven.plugins</groupId>
-		        <artifactId>maven-surefire-plugin</artifactId>
-		        <version>3.2.3</version>
-		        <configuration>
-		          <suiteXmlFiles>
-		            <suiteXmlFile>TestSuite04-Membersummary-advocate\Case09_Membersummary-part02-advocate2.xml</suiteXmlFile>
-		          </suiteXmlFiles>
-		        </configuration>
-		      </plugin>
-</plugins>  
-</pluginManagement>
-</build>
-</profile>
-
-<!-- Suites 13 for Logic advocate advocate -->
-<profile>
-<id>Membersummarypart-03</id>
-<build>
-    <pluginManagement><!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->
-      <plugins>  
-		<plugin>
-		        <groupId>org.apache.maven.plugins</groupId>
-		        <artifactId>maven-surefire-plugin</artifactId>
-		        <version>3.2.3</version>
-		        <configuration>
-		          <suiteXmlFiles>
-		            <suiteXmlFile>TestSuite04-Membersummary-advocate\Case11_Membersummary-part03-advocate3.xml</suiteXmlFile>
-		          </suiteXmlFiles>
-		        </configuration>
-		      </plugin>
-</plugins>  
-</pluginManagement>
-</build>
-</profile>
-
-
-<!-- Suites 14 for Logic advocate advocate -->
-<profile>
-<id>Membersummarypart-04</id>
-<build>
-    <pluginManagement><!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->
-      <plugins>  
-		<plugin>
-		        <groupId>org.apache.maven.plugins</groupId>
-		        <artifactId>maven-surefire-plugin</artifactId>
-		        <version>3.2.3</version>
-		        <configuration>
-		          <suiteXmlFiles>
-		            <suiteXmlFile>TestSuite04-Membersummary-advocate\Case12_Membersummary-part04-advocate4.xml</suiteXmlFile>
-		          </suiteXmlFiles>
-		        </configuration>
-		      </plugin>
-</plugins>  
-</pluginManagement>
-</build>
-</profile>
-
-
-<!-- Suites 16 for fuel report advocate advocate -->
-<profile>
-<id>Membersummaryfuelreportcases</id>
-<build>
-    <pluginManagement><!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->
-      <plugins>  
-		<plugin>
-		        <groupId>org.apache.maven.plugins</groupId>
-		        <artifactId>maven-surefire-plugin</artifactId>
-		        <version>3.2.3</version>
-		        <configuration>
-		          <suiteXmlFiles>
-		            <suiteXmlFile>TestSuite05-Membersummary-Fuelreport\Case13_Membersummary-fuelreport01-advocate.xml</suiteXmlFile>
-		          </suiteXmlFiles>
-		        </configuration>
-		      </plugin>
-</plugins>  
-</pluginManagement>
-</build>
-</profile>
-
-<!-- Suites 17 for fuel report advocate advocate -->
-<profile>
-<id>Membersummarygraphscases</id>
-<build>
-    <pluginManagement><!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->
-      <plugins>  
-		<plugin>
-		        <groupId>org.apache.maven.plugins</groupId>
-		        <artifactId>maven-surefire-plugin</artifactId>
-		        <version>3.2.3</version>
-		        <configuration>
-		          <suiteXmlFiles>
-		            <suiteXmlFile>TestSuite06-Membersummary-graphs\Case14_Membersummary-graphs-advocate.xml</suiteXmlFile>
-		          </suiteXmlFiles>
-		        </configuration>
-		      </plugin>
-</plugins>  
-</pluginManagement>
-</build>
-</profile>
-
-
-<!-- Suites 18 for fuel liveperform advocate advocate -->
-<profile>
-<id>MembersummaryLiveperform_cases</id>
-<build>
-    <pluginManagement><!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->
-      <plugins>  
-		<plugin>
-		        <groupId>org.apache.maven.plugins</groupId>
-		        <artifactId>maven-surefire-plugin</artifactId>
-		        <version>3.2.3</version>
-		        <configuration>
-		          <suiteXmlFiles>
-		            <suiteXmlFile>TestSuite07-Membersummary-liveperformadvocate\Case15_Membersummary-liveperform-advocate.xml</suiteXmlFile>
-		          </suiteXmlFiles>
-		        </configuration>
-		      </plugin>
-</plugins>  
-</pluginManagement>
-</build>
-</profile>
-
 
 
 
