@@ -5,6 +5,9 @@ import io.appium.java_client.AppiumBy;
 
 public class mobileLocators {
 	
+
+	
+	
 	
 	//Tutrial screen locators
 	public static final By tutorialbttn	 	=	AppiumBy.accessibilityId("Tutorial");
@@ -88,6 +91,12 @@ public class mobileLocators {
 	public static final By media1		=	AppiumBy.iOSClassChain("**/XCUIElementTypeOther[`name == \"Image0\"`][1]");
 	public static final By media2		=	AppiumBy.iOSClassChain("**/XCUIElementTypeOther[`name == \"Image1\"`][1]");
 	public static final By cross 		= 	AppiumBy.iOSClassChain("**/XCUIElementTypeOther[`name == \"✕\"`][3]");
+	public static final By document		= 	AppiumBy.accessibilityId("Documents");
+	public static final By document1	=	AppiumBy.iOSClassChain("**/XCUIElementTypeOther[`name == \"ChatDocumentundefined\"`][1]");
+	public static final By done1		=	AppiumBy.accessibilityId("QLOverlayDoneButtonAccessibilityIdentifier");
+	
+	
+	
 	
 	
 	//Locators for morning scan
