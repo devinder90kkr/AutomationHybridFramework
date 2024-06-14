@@ -92,10 +92,10 @@ public class Case03_editevent extends BasePage {
         ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", editButton);
         editButton.click();
         
-     // Find the input field for the edit date and clear the existing value
+        // Find the input field for the edit date and clear the existing value
         WebElement editTime1 = driver.findElement(edittime);
         Actions builder11 = new Actions(driver);
-     // windows command
+        // windows command
 	   // editTime1.sendKeys(Keys.CONTROL + "a");
 	    // mac command
         editTime1.sendKeys(Keys.COMMAND + "a");

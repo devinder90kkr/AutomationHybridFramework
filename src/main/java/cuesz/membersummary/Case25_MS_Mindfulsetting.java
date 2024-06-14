@@ -16,13 +16,16 @@ import org.testng.annotations.Test;
 
 import cuesz.pages.BasePage;
 import cuesz.utils.SeleniumUtils;
+import cuesz.utils.date.Currentdategenerator;
 import cuesz.utils.reporting.AllureUtils;
 
 public class Case25_MS_Mindfulsetting extends BasePage {
 	
 	SeleniumUtils utils = new SeleniumUtils(driver);
-	private By prfrmHeadng = (By.xpath("//h2[contains(text(), 'Mindful')]"));
-	private By setingmindfu	= (By.xpath("//div[@id='MindFulData']//div[@class='d-flex justify-content-between align-item-center']//em"));
+	public static String eventDate = Currentdategenerator.generateCurrentDate(); // Use the generated date
+//	private By prfrmHeadng = (By.xpath("//h2[contains(text(), 'Mindful')]"));
+//	private By setingmindfu	= (By.xpath("//div[@id='MindFulData']//div[@class='d-flex justify-content-between align-item-center']//em"));
+private By setingmindfu		=	(By.id("MemberSummary-Mindfull-Settings"));	
 	private By modlpup	= (By.xpath("//div[@class='modal-content']"));
 	private By vibratTsogle	= (By.name("Vibration"));
 	private By guidTogle	= (By.name("Sound"));
@@ -60,25 +63,12 @@ public class Case25_MS_Mindfulsetting extends BasePage {
         ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", driver.findElement(headingLocator));        
         
         Thread.sleep(2500);
-     // Find the element for the perform heading
-        WebElement performHeading = driver.findElement(prfrmHeadng);
-
-        // Validate the heading for perform
-        if (performHeading.isDisplayed()) {
-            System.out.println("Heading for Mindful is verified.");
-        } else {
-            System.out.println("Heading for Mindful is not found.");
-        }
-
-     
-        
-        Thread.sleep(2500);
         WebElement settingmindful = driver.findElement(setingmindfu);
         settingmindful.click();
         
         Thread.sleep(1000);
         
-     // Wait for the modal popup to be present in the DOM and visible
+        // Wait for the modal popup to be present in the DOM and visible
         WebElement modalElement = new WebDriverWait(driver, Duration.ofSeconds(10))
                 .until(ExpectedConditions.visibilityOfElementLocated(modlpup));
 
@@ -88,39 +78,47 @@ public class Case25_MS_Mindfulsetting extends BasePage {
         } else {
             System.out.println("Modal Popup is not open.");
         }
-     // Capture a screenshot and attach it to Allure
+        // Capture a screenshot and attach it to Allure
         AllureUtils.captureScreenshot(driver, "fuel_report_screenshot");
         
         Thread.sleep(2500);
-     // Find and enable the "Vibrations" toggle
+        // Find and enable the "Vibrations" toggle
         WebElement vibrationsToggle =   driver.findElement(vibratTsogle);
+        vibrationsToggle.click();
+        Thread.sleep(2500);
         vibrationsToggle.click();
 
         Thread.sleep(2500);
-     // Find the "Guided" toggle
-     WebElement guidedToggle = driver.findElement(guidTogle);
+        // Find the "Guided" toggle
+        WebElement guidedToggle = driver.findElement(guidTogle);
 
-     // Check if the "Guided" toggle is enabled
-     if (guidedToggle.isSelected()) {
+        // Check if the "Guided" toggle is enabled
+        if (guidedToggle.isSelected()) {
          // Find and enable the "Guided Audio" toggle
          WebElement guidedAudioToggle = driver.findElement(guidAudioTogle);
          guidedAudioToggle.click();
          Thread.sleep(2500);
-     } else {
-         System.out.println("Cannot enable Guided Audio toggle as Guided toggle is not active.");
+         guidedAudioToggle.click();
+         Thread.sleep(2500);
+        } else {
+        	System.out.println("Cannot enable Guided Audio toggle as Guided toggle is not active.");
      }
 
      	Thread.sleep(2500);
       WebElement Duration = driver.findElement(durton);
       Actions builder = new Actions(driver);
-      builder.moveToElement(Duration).click().sendKeys("8 Minutes").perform();
-      Thread.sleep(2000);
-      builder.sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.ENTER).perform();
+      builder.moveToElement(Duration).click().sendKeys("2 Minutes").perform();
+//      Thread.sleep(2000);
+//      builder.sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.TAB).perform();
+      builder.moveToElement(Duration).sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.TAB).perform();
+      
       
       
    // Handle multi-switch button
       Thread.sleep(2500);
       WebElement multiSwitchBtn = driver.findElement(multiSwitch);
+      multiSwitchBtn.click();
+      Thread.sleep(2500);
       multiSwitchBtn.click();
       
       Thread.sleep(2500);
@@ -129,7 +127,7 @@ public class Case25_MS_Mindfulsetting extends BasePage {
       // Clear the existing value (optional, if needed)
       timeInput.clear();
       // Set the desired time value using sendKeys()
-      timeInput.sendKeys("05:25 AM");
+      timeInput.sendKeys("11:30 AM");
       Thread.sleep(2000);
       
    // Locate the parent element that contains all the radio buttons by its XPath
@@ -171,15 +169,20 @@ public class Case25_MS_Mindfulsetting extends BasePage {
 	    Thread.sleep(2000);
 	    WebElement endTime1 =driver.findElement(endtme1);
 	    Actions builder1 = new Actions(driver);
-	    builder1.moveToElement(endTime1).click().sendKeys("28-09-2023").sendKeys(Keys.ENTER).perform();;
+	 // Clear any existing values
+	    endTime1.sendKeys(Keys.COMMAND+ "a");
+	    endTime1.sendKeys(Keys.DELETE);
+	    builder1.moveToElement(endTime1).click().sendKeys(eventDate).sendKeys(Keys.ENTER).perform();
 
+	    Thread.sleep(2500);
 	    
 	 // Capture a screenshot and attach it to Allure
         AllureUtils.captureScreenshot(driver, "fuel_report_screenshot");
 
 	    WebElement submitbutton = driver.findElement(submbttn);
 	    submitbutton.click();
-	   
+
+	    Thread.sleep(3500);
       
     }
 }           
