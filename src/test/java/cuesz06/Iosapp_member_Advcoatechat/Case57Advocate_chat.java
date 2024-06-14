@@ -4,6 +4,9 @@ package cuesz06.Iosapp_member_Advcoatechat;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.testng.annotations.Test;
+
+import com.github.javafaker.Faker;
+
 import cuesz.pages.AppiummobileBase;
 import cuesz.utils.AppiumappUtils;
 import cuesz.utils.mobile.mobileLocators;
@@ -47,29 +50,54 @@ try {
         AllureUtils.captureScreenshot(driver, "Case57Advocate_chat1"); 
         
         
+//        // Define your messages in an array or list
+//        String[] messages = { mobileTestData.message1, mobileTestData.message2, mobileTestData.message3 };
+//
+//        for (int i = 0; i < messages.length; i++) {
+//            String message = messages[i];
+//            
+//            // Enter message in field
+//            mobilelement.sendKeysToElement(driver, mobileLocators.entermessage, message);
+//            
+//            // Log message to console and Allure report
+//            LOGGER.info("Enter message field: " + message);
+//            AllureUtils.logStep("Enter input message in field: " + message);
+//            
+//            // Click on send button
+//            mobilelement.clickElement(driver, mobileLocators.sendmessage);
+//            
+//            // Log message to console and Allure report
+//            LOGGER.info("Click on send message icon");
+//            AllureUtils.logStep("Click on send message icon");
+//            
+//            // Capture a screenshot and attach it to Allure
+//            AllureUtils.captureScreenshot(driver, "Case57Advocate_chat" + (i + 2)); // Start with chat2 for second message, chat3 for third, etc.
+//        }
+        
+        // Define a Faker instance
+        Faker faker = new Faker();
+
         // Define your messages in an array or list
-        String[] messages = { mobileTestData.message1, mobileTestData.message2, mobileTestData.message3 };
+        String[] messages = new String[4];
+        for (int i = 0; i < messages.length; i++) {
+            messages[i] = faker.lorem().sentence();
+        }
 
         for (int i = 0; i < messages.length; i++) {
             String message = messages[i];
-            
+
             // Enter message in field
             mobilelement.sendKeysToElement(driver, mobileLocators.entermessage, message);
-            
-            // Log message to console and Allure report
             LOGGER.info("Enter message field: " + message);
             AllureUtils.logStep("Enter input message in field: " + message);
-            
+
             // Click on send button
             mobilelement.clickElement(driver, mobileLocators.sendmessage);
-            
-            // Log message to console and Allure report
             LOGGER.info("Click on send message icon");
             AllureUtils.logStep("Click on send message icon");
-            
+
             // Capture a screenshot and attach it to Allure
             AllureUtils.captureScreenshot(driver, "Case57Advocate_chat" + (i + 2)); // Start with chat2 for second message, chat3 for third, etc.
-        }
 
         //Click on media chat plus icon
         mobilelement.clickElement(driver, mobileLocators.chatplus);
@@ -183,12 +211,17 @@ try {
         // Log message to console and Allure report
         LOGGER.info("Click on links");
         AllureUtils.logStep("Click on links");
+        // Capture a screenshot and attach it to Allure
+        AllureUtils.captureScreenshot(driver, "Case57Advocate_chat13"); 
         
         //Click on back icon
         mobilelement.clickElement(driver, mobileLocators.backpressbutton);
         // Log message to console and Allure report
         LOGGER.info("Click on backpressbutton icon");
         AllureUtils.logStep("Click on backpressbutton icon");
+        // Capture a screenshot and attach it to Allure
+        AllureUtils.captureScreenshot(driver, "Case57Advocate_chat14"); 
+        
         
 //        //click on search option
 //        mobilelement.clickElement(driver, mobileLocators.searchtext);
@@ -201,6 +234,8 @@ try {
         // Log message to console and Allure report
         LOGGER.info("Click on Attahment icon");
         AllureUtils.logStep("Click on Attahment icon");
+        // Capture a screenshot and attach it to Allure
+        AllureUtils.captureScreenshot(driver, "Case57Advocate_chat15"); 
         
     	// Click on gallery option 
 		mobilelement.clickElement(driver, mobileLocators.gallery);
@@ -213,7 +248,9 @@ try {
 		 // Log message to console and Allure report
         LOGGER.info("Click on galleryimage1");
         AllureUtils.logStep("Click on galleryimage1");
-		
+        // Capture a screenshot and attach it to Allure
+        AllureUtils.captureScreenshot(driver, "Case57Advocate_chat16"); 
+        
 		// Click on add option from image viewer
 		mobilelement.clickElement(driver, mobileLocators.submittap);
 		 // Log message to console and Allure report
@@ -235,20 +272,22 @@ try {
         // Log message to console and Allure report
         LOGGER.info("Click on urgenticon icon");
         AllureUtils.logStep("Click on urgenticon icon");
+        // Capture a screenshot and attach it to Allure
+        AllureUtils.captureScreenshot(driver, "Case57Advocate_chat17"); 
         
         
         // Define your messages in an array or list
         String[] messages1 = { mobileTestData.message4, mobileTestData.message5 };
 
-        for (int i = 0; i < messages1.length; i++) {
-            String message = messages1[i];
+        for (int i1 = 0; i1 < messages1.length; i1++) {
+            String message1 = messages1[i1];
             
             // Enter message in field
-            mobilelement.sendKeysToElement(driver, mobileLocators.entermessage, message);
+            mobilelement.sendKeysToElement(driver, mobileLocators.entermessage, message1);
             
             // Log message to console and Allure report
-            LOGGER.info("Enter message field: " + message);
-            AllureUtils.logStep("Enter input message in field: " + message);
+            LOGGER.info("Enter message field: " + message1);
+            AllureUtils.logStep("Enter input message in field: " + message1);
             
             // Click on send button
             mobilelement.clickElement(driver, mobileLocators.sendmessage);
@@ -258,11 +297,11 @@ try {
             AllureUtils.logStep("Click on send message icon");
             
             // Capture a screenshot and attach it to Allure
-            AllureUtils.captureScreenshot(driver, "Case57Advocate_chat" + (i + 2)); // Start with chat2 for second message, chat3 for third, etc.
+            AllureUtils.captureScreenshot(driver, "Case57Advocate_chat" + (i1 + 2)); // Start with chat2 for second message, chat3 for third, etc.
         }
 
         Thread.sleep(3500);
-				} catch (Exception e) {
+        }} catch (Exception e) {
 			LOGGER.error("An error occurred during the cases ", e);
 			AllureUtils.logStep("An error occurred: " + e.getMessage());
 		} finally {
@@ -275,5 +314,5 @@ try {
 	}
 			driver.terminateApp("com.cuesz.mobile");
 }
-	}
-		}
+	
+		}}
