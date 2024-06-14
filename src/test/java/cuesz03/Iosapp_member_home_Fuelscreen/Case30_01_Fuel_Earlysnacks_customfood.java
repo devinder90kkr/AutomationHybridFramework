@@ -2,6 +2,7 @@ package cuesz03.Iosapp_member_home_Fuelscreen;
 
 import java.util.HashMap;
 import java.util.List;
+import java.util.NoSuchElementException;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
@@ -23,13 +24,13 @@ import io.qameta.allure.Severity;
 import io.qameta.allure.SeverityLevel;
 import io.qameta.allure.Story;
 
-@Epic ("Fuel custom screen detail ")
-@Feature ("Verify Fuel detail functionlaity related to Custom fuel and add to breakfast list.")
-public class Case27_Fuel_breakfast_customfoodaddtobrekfast extends AppiummobileBase {
-	private static final Logger LOGGER = LoggerFactory.getLogger(Case27_Fuel_breakfast_customfoodaddtobrekfast.class);
+@Epic ("Fuel screen detail ")
+@Feature ("Verify Fuel detail functionlaity related to early snacks fuel.")
+public class Case30_01_Fuel_Earlysnacks_customfood extends AppiummobileBase {
+	private static final Logger LOGGER = LoggerFactory.getLogger(Case30_01_Fuel_Earlysnacks_customfood.class);
 	
 	private By Homeclick 		= 		AppiumBy.iOSClassChain("**/XCUIElementTypeOther[`label == \"Home\"`][2]");
-	private By plusadd			= 		AppiumBy.accessibilityId("BreakfastAddIcon");
+	private By plusadd			= 		AppiumBy.accessibilityId("Early SnacksAddIcon");
 	private By doneclick		= 		AppiumBy.accessibilityId("Done");
 	private By additionalsearch	= 		AppiumBy.accessibilityId("AdditionalFuelSearch");
 	private By foodname			= 		AppiumBy.xpath("//XCUIElementTypeTextField[@name=\"Food Name\"]");
@@ -57,13 +58,15 @@ public class Case27_Fuel_breakfast_customfoodaddtobrekfast extends AppiummobileB
 	private By Time				= 		AppiumBy.accessibilityId("AdditionalItemTime");
 	private By pickerelement	= 		AppiumBy.xpath("//XCUIElementTypePickerWheel");
 	private By Doneclick		= 		AppiumBy.accessibilityId("AlcohalTime");
-
+	
+	
+	
 	@Test
 	@Owner("QA") // Add the @Owner annotation to specify the executor
     @Severity(SeverityLevel.NORMAL)      
-    @Description("Custom Fuel screen detail verification")
-    @Story("Scroll to Fuel card and verify custom food to  breakfast.")	
-	public void Homescreen() throws InterruptedException{
+    @Description("Member Fuel screen detail verification")
+    @Story("Scroll to Fuel card and verify early snacks ")	
+	public void Fuel_Earlysnacks_additionalfuel() throws InterruptedException{
 		try {
 		// Create an instance of AppiumUtils and pass the driver
 		AppiumappUtils appiumUtils = new AppiumappUtils(driver);
@@ -73,12 +76,12 @@ public class Case27_Fuel_breakfast_customfoodaddtobrekfast extends AppiummobileB
 		WebElement Homeicon = driver.findElement(Homeclick);
 		Homeicon.click();
 		// Log console message to Allure
-		LOGGER.info("Click on Homeicon");
-		AllureUtils.logStep("Click on Homeicon");
-		// Capture a screenshot and attach it to Allure
-		AllureUtils.captureScreenshot(driver, "Case27_1");
+ 		LOGGER.info("Click on Homeicon");
+ 		AllureUtils.logStep("Click on Homeicon");
+ 		// Capture a screenshot and attach it to Allure
+ 		AllureUtils.captureScreenshot(driver, "Case30_1");	
+		 		
 		Thread.sleep(3000);
-		
 		// Method to scroll to perform screen
 		HashMap<String,Object>scrollObject =new HashMap<>();
 		scrollObject.put("direction", "down");
@@ -91,26 +94,71 @@ public class Case27_Fuel_breakfast_customfoodaddtobrekfast extends AppiummobileB
         // Log console message to Allure
         LOGGER.info("Click on fuel screen");
         AllureUtils.logStep("Click on fuel screen");
-        AllureUtils.captureScreenshot(driver, "Case27_2");
+        AllureUtils.captureScreenshot(driver, "Case30_2");
+        Thread.sleep(3500);
         
-        // Locate the element related to breakfast + icon 
-        WebElement breakfastplus 	= driver.findElement(plusadd);
-        breakfastplus.click();
-        // Log console message to Allure
-        LOGGER.info("Click on Homeicon");
-	    AllureUtils.logStep("Click on Homeicon");
-	    // Capture a screenshot and attach it to Allure
-	    AllureUtils.captureScreenshot(driver, "Case27_3");
+//        // Method to scroll to perform screen
+//     		HashMap<String,Object>scrollObject1 =new HashMap<>();
+//     		scrollObject1.put("direction", "down");
+//     		scrollObject1.put("Breakfast", "Breakfast");
+//     		driver.executeScript("mobile:scroll", scrollObject1);
+//     		Thread.sleep(2000);
+//             
+//         
+//             // Method to scroll to perform screen
+//      		HashMap<String,Object>scrollObject12 =new HashMap<>();
+//      		scrollObject12.put("direction", "down");
+//      		scrollObject12.put("Early Snacks", "Early Snacks");
+//      		driver.executeScript("mobile:scroll", scrollObject12);
+//      		Thread.sleep(2000);
+//             
+//             Thread.sleep(5500);
+//        
+//        
+//        // Locate the element related to breakfast + icon 
+//        WebElement breakfastplus 	= driver.findElement(plusadd);
+//        breakfastplus.click();
+//        // Log console message to Allure
+//        LOGGER.info("Click on breakfastplus");
+//        AllureUtils.logStep("Click on breakfastplus");
+//        AllureUtils.captureScreenshot(driver, "breakfastplus_30");
+        boolean elementFound = false;
+        int maxScrolls = 5; // Maximum number of scrolls to avoid infinite loop
+        int scrollCount = 0;
+
+        // Attempt to find and click the plusadd element
+        while (!elementFound && scrollCount < maxScrolls) {
+            try {
+                WebElement breakfastplus = driver.findElement(plusadd);
+                breakfastplus.click();
+                elementFound = true;
+
+                // Log console message to Allure
+                LOGGER.info("Click on breakfastplus");
+                AllureUtils.logStep("Click on breakfastplus");
+                AllureUtils.captureScreenshot(driver, "breakfastplus_30");
+            } catch (NoSuchElementException e) {
+                // If element is not found, scroll down
+                HashMap<String, Object> scrollObject1 = new HashMap<>();
+                scrollObject1.put("direction", "down");
+                driver.executeScript("mobile:scroll", scrollObject1);
+                Thread.sleep(2000);
+                scrollCount++;
+            }
+        }
+
+        if (!elementFound) {
+            LOGGER.error("Element plusadd not found after maximum scrolls");
+            AllureUtils.logStep("Element plusadd not found after maximum scrolls");
+        }
         
         //click on keypad Done button to hide keypad
         WebElement keypaddone	= driver.findElement(doneclick);
         keypaddone.click();
         // Log console message to Allure
-        LOGGER.info("Click on Done");
-        AllureUtils.logStep("Click on Done");
+        LOGGER.info("Click on Doneclick ");
+        AllureUtils.logStep("Click on Doneclick"); 
         
-        // Capture a screenshot and attach it to Allure
-        AllureUtils.captureScreenshot(driver, "Custom1");
         
         String searchText = mobileTestData.searchText;
         //        String searchText = "Gil";
@@ -407,36 +455,36 @@ public class Case27_Fuel_breakfast_customfoodaddtobrekfast extends AppiummobileB
        
        
        
-       // Locate and click on Foodimage 
-       WebElement Customfoodimage	= driver.findElement(customfoodimage);
-       Customfoodimage.click();
-       
-       // Capture a screenshot and attach it to Allure
-       AllureUtils.captureScreenshot(driver, "Custom4");
-     
-       WebElement galleryclick	= driver.findElement(gallery);
-       galleryclick.click();
-       // Log console message to Allure
-       LOGGER.info("Click on galleryclick");
-       AllureUtils.logStep("Click on galleryclick");
-       AllureUtils.captureScreenshot(driver, "Case27_20");
-       
-       
-       WebElement firstPhoto = driver.findElement(AppiumBy.xpath("//XCUIElementTypeImage[2]"));
-       firstPhoto.click();
-       
-       
-       // Capture a screenshot and attach it to Allure
-       AllureUtils.captureScreenshot(driver, "Custom5");
-       WebElement Submittap = driver.findElement(submittap);
-       Submittap.click();
-   	   // Log console message to Allure
-       LOGGER.info("Click on Submittap");
-       AllureUtils.logStep("Click on Submittap");
-       AllureUtils.captureScreenshot(driver, "Case27_21");
-       
-        Thread.sleep(2000);
-       
+//       // Locate and click on Foodimage 
+//       WebElement Customfoodimage	= driver.findElement(customfoodimage);
+//       Customfoodimage.click();
+//       
+//       // Capture a screenshot and attach it to Allure
+//       AllureUtils.captureScreenshot(driver, "Custom4");
+//     
+//       WebElement galleryclick	= driver.findElement(gallery);
+//       galleryclick.click();
+//       // Log console message to Allure
+//       LOGGER.info("Click on galleryclick");
+//       AllureUtils.logStep("Click on galleryclick");
+//       AllureUtils.captureScreenshot(driver, "Case27_20");
+//       
+//       
+//       WebElement firstPhoto = driver.findElement(AppiumBy.xpath("//XCUIElementTypeImage[2]"));
+//       firstPhoto.click();
+//       
+//       
+//       // Capture a screenshot and attach it to Allure
+//       AllureUtils.captureScreenshot(driver, "Custom5");
+//       WebElement Submittap = driver.findElement(submittap);
+//       Submittap.click();
+//   	   // Log console message to Allure
+//       LOGGER.info("Click on Submittap");
+//       AllureUtils.logStep("Click on Submittap");
+//       AllureUtils.captureScreenshot(driver, "Case27_21");
+//       
+//        Thread.sleep(2000);
+//       
         WebElement Customfoodtick	= driver.findElement(Customtick);
         Customfoodtick.click();        
      // Log console message to Allure
@@ -466,17 +514,26 @@ public class Case27_Fuel_breakfast_customfoodaddtobrekfast extends AppiummobileB
 	// Log console message to Allure
 	    LOGGER.info("Click on done icon");
 	    AllureUtils.logStep("Click on done icon");
+
         
-		WebElement submit = driver.findElement(submitick);
-		submit.click();
+        driver.findElement(AppiumBy.iOSNsPredicateString("name == 'Early Snacks'")).click();
+  
+        WebElement submit2 = driver.findElement(submitick);
+		submit2.click();
 		// Log console message to Allure
-        LOGGER.info("Click on submit");
-        AllureUtils.logStep("Click on submit");
-        AllureUtils.captureScreenshot(driver, "Case27_23");
-        
-        
-		Thread.sleep(8500);
- 
+        LOGGER.info("Click on submit2");
+        AllureUtils.logStep("Click on submit2");
+        AllureUtils.captureScreenshot(driver, "submit2_30");
+		Thread.sleep(4500);
+		
+		// Method to scroll to early snack
+		HashMap<String,Object>scrollObject3 =new HashMap<>();
+		scrollObject3.put("direction", "down");
+		scrollObject3.put("ginfuelselectionc", "ginfuelselectionc");
+		driver.executeScript("mobile:scroll", scrollObject3);
+		Thread.sleep(2000);
+		
+		
 	    Thread.sleep(3500);
 			 } catch (Exception e) {
 		            LOGGER.error("An error occurred during the mindful screen test", e);
