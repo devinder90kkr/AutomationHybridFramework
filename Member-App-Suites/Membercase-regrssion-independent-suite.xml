@@ -26,6 +26,7 @@
        
        <!-- Moringscan cases -->
        <class name="cuesz05.Iosapp_member_Morningscan.Case56Morningscan_manual"/>
+         <class name="cuesz05.Iosapp_member_Morningscan.Case60Morningscanwith_scoshe"/>
 
        
        <!-- Boyscan result -->
@@ -36,7 +37,8 @@
 
 		<!-- Mindful basic cases -->
       	<class name="cuesz07.Iosapp_member_Mindful.Case58mindfulcasebasic" />
-       
+       <class name="cuesz07.Iosapp_member_Mindful.Case59mindfulwith_sosche_backbutton" />
+       <class name="cuesz07.Iosapp_member_Mindful.Case60mindfulwith_sosche" />
        
     </classes>
   </test> <!-- Test -->

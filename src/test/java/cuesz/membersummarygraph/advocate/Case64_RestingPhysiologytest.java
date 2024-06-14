@@ -13,9 +13,8 @@ import org.testng.annotations.Test;
 
 import cuesz.logintest.AdvocateLogin;
 import cuesz.membersummary.graphs.Case64_RestingPhysiology;
-import cuesz.utils.AllureUtils;
 import cuesz.utils.WebDriverManager;
-
+import cuesz.utils.reporting.AllureUtils;
 import io.qameta.allure.*;
 
 @Epic ("Cuesz Staff on member graph's page")

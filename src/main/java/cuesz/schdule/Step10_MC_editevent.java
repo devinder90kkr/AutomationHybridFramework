@@ -13,7 +13,7 @@ import org.openqa.selenium.interactions.Actions;
 import org.testng.annotations.Test;
 
 import cuesz.pages.BasePage;
-import cuesz.utils.DateGenerator;
+import cuesz.utils.date.DateGenerator;
 
 public class Step10_MC_editevent extends BasePage {
 

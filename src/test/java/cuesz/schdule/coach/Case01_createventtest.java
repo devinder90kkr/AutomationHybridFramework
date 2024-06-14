@@ -13,9 +13,8 @@ import org.testng.annotations.Test;
 
 import cuesz.logintest.CoachLogin;
 import cuesz.schdule.Case01_createvent;
-import cuesz.utils.AllureUtils;
 import cuesz.utils.WebDriverManager;
-
+import cuesz.utils.reporting.AllureUtils;
 import io.qameta.allure.*;
 
 

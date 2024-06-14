@@ -9,7 +9,7 @@ import org.openqa.selenium.interactions.Actions;
 import org.testng.annotations.Test;
 
 import cuesz.pages.BasePage;
-import cuesz.utils.DateGenerator;
+import cuesz.utils.date.DateGenerator;
 
 public class Step12_03_SE_create_staffevent extends BasePage {	
 //	public static String eventDate = "26-09-2023"; // Date to be passed to script two

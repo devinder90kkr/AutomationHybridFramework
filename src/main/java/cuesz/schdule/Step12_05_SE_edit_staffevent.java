@@ -13,7 +13,7 @@ import org.openqa.selenium.interactions.Actions;
 import org.testng.annotations.Test;
 
 import cuesz.pages.BasePage;
-import cuesz.utils.DateGenerator;
+import cuesz.utils.date.DateGenerator;
 
 public class Step12_05_SE_edit_staffevent extends BasePage {
 	 public static String eventDate = DateGenerator.generateFixedDate(); // Use the generated date

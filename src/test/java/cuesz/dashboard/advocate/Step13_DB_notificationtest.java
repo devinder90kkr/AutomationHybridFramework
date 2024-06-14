@@ -13,8 +13,8 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 import cuesz.dashboard.Step13_DB_notification;
 import cuesz.logintest.AdvocateLogin;
-import cuesz.utils.AllureUtils;
 import cuesz.utils.WebDriverManager;
+import cuesz.utils.reporting.AllureUtils;
 import io.qameta.allure.*;
 
 @Epic ("Advocate dashboard cases")

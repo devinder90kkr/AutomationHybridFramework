@@ -13,8 +13,8 @@ import org.testng.annotations.Test;
 
 import cuesz.liveperform.Case74_viewjoinLiveperfoRadvocate;
 import cuesz.logintest.AdvocateLogin;
-import cuesz.utils.AllureUtils;
 import cuesz.utils.WebDriverManager;
+import cuesz.utils.reporting.AllureUtils;
 import io.qameta.allure.*;
 
 

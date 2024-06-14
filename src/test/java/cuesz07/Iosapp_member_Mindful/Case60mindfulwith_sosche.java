@@ -8,10 +8,10 @@ import org.slf4j.LoggerFactory;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import cuesz.pages.AppiummobileBase;
-import cuesz.utils.AllureUtils;
 import cuesz.utils.AppiumappUtils;
-import cuesz.utils.mobileLocators;
-import cuesz.utils.mobilelement;
+import cuesz.utils.mobile.mobileLocators;
+import cuesz.utils.mobile.mobilelement;
+import cuesz.utils.reporting.AllureUtils;
 import io.appium.java_client.AppiumBy;
 import io.qameta.allure.Allure;
 import io.qameta.allure.Description;
@@ -183,30 +183,7 @@ public class Case60mindfulwith_sosche extends AppiummobileBase {
             //Log console message to Allure
             LOGGER.info("Clicked on startmindful button");
             AllureUtils.logStep("Clicked on startmindful button");
-            
-
-//            // Wait loop with check for the next button
-//               for (int i = 0; i < 10; i++) {
-//                   try {
-//                       Thread.sleep(1000);
-//                       LOGGER.info("Waiting for nextbutton to enabled and complete mindful: " + (i + 1));
-//                       if (mobilelement.isElementDisplayed(driver, mobileLocators.performanceeditsubmit)) {
-//                           mobilelement.clickElement(driver, mobileLocators.performanceeditsubmit);
-//                        // Capture a screenshot and attach it to Allure
-//                           AllureUtils.captureScreenshot(driver, "Case59mindful_functionliaty7");
-////                           mobilelement.clickElement(driver, mobileLocators.nextbutton);
-//                           LOGGER.info("Click on performanceeditsubmit");
-//                           AllureUtils.logStep("Click on performanceeditsubmit");
-//                           break;
-//                       }
-//                   } catch (InterruptedException e) {
-//                       LOGGER.error("Thread interrupted", e);
-//                       Thread.currentThread().interrupt();
-//                   } catch (NoSuchElementException e) {
-//                       LOGGER.error("Element not found: performanceeditsubmit", e);
-//                   }
-//               }      
-               
+                 
             // Wait for the mindful session to complete (timer to reach 00:00)
                for (int i = 0; i < 123; i++) { // Adjust the maximum wait time as needed
                    Thread.sleep(1000);

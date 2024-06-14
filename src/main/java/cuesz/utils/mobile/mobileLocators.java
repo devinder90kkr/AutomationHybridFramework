@@ -1,9 +1,12 @@
-package cuesz.utils;
+package cuesz.utils.mobile;
 
 import org.openqa.selenium.By;
 import io.appium.java_client.AppiumBy;
 
 public class mobileLocators {
+	
+
+	
 	
 	
 	//Tutrial screen locators
@@ -75,7 +78,7 @@ public class mobileLocators {
 	public static final By ChatClick	=	AppiumBy.iOSClassChain("**/XCUIElementTypeOther[`name == \"Advocate\"`][2]");
 	public static final By entermessage	=	AppiumBy.accessibilityId("EnterMessage");
 	public static final By sendmessage	=	AppiumBy.accessibilityId("SendMessage");
-	public static final By medialinks	=	AppiumBy.accessibilityId("Media/Links");
+	//public static final By medialinks	=	AppiumBy.accessibilityId("Media/Links");
 	public static final By media		=	AppiumBy.accessibilityId("Media");
 	public static final By documents	=	AppiumBy.accessibilityId("Documents");
 	public static final By links		=	AppiumBy.accessibilityId("Links");
@@ -84,6 +87,18 @@ public class mobileLocators {
 	public static final By galleryclick	=	AppiumBy.accessibilityId("GalleryClicked");
 	public static final By image1		=	AppiumBy.xpath("//XCUIElementTypeImage[2]");
 	public static final By image2		=	AppiumBy.xpath("//XCUIElementTypeImage[3]");
+	public static final By chatplus		=	AppiumBy.accessibilityId("ShowMediaOptions");
+	public static final By media1		=	AppiumBy.iOSClassChain("**/XCUIElementTypeOther[`name == \"Image0\"`][1]");
+	public static final By media2		=	AppiumBy.iOSClassChain("**/XCUIElementTypeOther[`name == \"Image1\"`][1]");
+	public static final By cross 		= 	AppiumBy.iOSClassChain("**/XCUIElementTypeOther[`name == \"✕\"`][3]");
+	public static final By document		= 	AppiumBy.accessibilityId("Documents");
+	public static final By document1	=	AppiumBy.iOSClassChain("**/XCUIElementTypeOther[`name == \"ChatDocumentundefined\"`][1]");
+	public static final By done1		=	AppiumBy.accessibilityId("QLOverlayDoneButtonAccessibilityIdentifier");
+	public static final By searchtext	=	AppiumBy.accessibilityId("Search");	
+	public static final By Attahment	=	AppiumBy.accessibilityId("Attach");
+	
+	
+	
 	
 	//Locators for morning scan
 	public static final By Morningscanclick	= AppiumBy.iOSClassChain("**/XCUIElementTypeOther[`name == \"Morning Scan\"`][2]");

@@ -13,8 +13,8 @@ import org.testng.annotations.Test;
 
 import cuesz.liveperform.Case73_viewjoinLiveperformcoach;
 import cuesz.logintest.CoachLogin;
-import cuesz.utils.AllureUtils;
 import cuesz.utils.WebDriverManager;
+import cuesz.utils.reporting.AllureUtils;
 import io.qameta.allure.*;
 
 

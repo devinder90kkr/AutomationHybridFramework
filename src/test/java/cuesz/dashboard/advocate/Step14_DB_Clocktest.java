@@ -13,8 +13,8 @@ import org.testng.annotations.Test;
 
 import cuesz.dashboard.Step14_DB_Clock;
 import cuesz.logintest.AdvocateLogin;
-import cuesz.utils.AllureUtils;
 import cuesz.utils.WebDriverManager;
+import cuesz.utils.reporting.AllureUtils;
 import io.qameta.allure.Allure;
 import io.qameta.allure.Description;
 import io.qameta.allure.Epic;

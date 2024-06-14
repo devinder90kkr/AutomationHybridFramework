@@ -7,10 +7,10 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
 import cuesz.pages.BasePage;
-import cuesz.utils.ElementActions;
 import cuesz.utils.SeleniumUtils;
-import cuesz.utils.webTestdata;
-import cuesz.utils.weblocators;
+import cuesz.utils.web.ElementActions;
+import cuesz.utils.web.webTestdata;
+import cuesz.utils.web.weblocators;
 
 public class Case34_MSL_MemberBasicinfo extends BasePage {
 	SeleniumUtils utils = new SeleniumUtils(driver);

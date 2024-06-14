@@ -14,9 +14,9 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
 
 import cuesz.pages.BasePage;
-import cuesz.utils.Currentdategenerator;
-import cuesz.utils.DatePickerUtility_logicpage;
 import cuesz.utils.SeleniumUtils;
+import cuesz.utils.date.Currentdategenerator;
+import cuesz.utils.date.DatePickerUtility_logicpage;
 
 public class Case37_MSL_Habbitsnotes extends BasePage {
 

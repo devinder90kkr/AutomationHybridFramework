@@ -12,12 +12,12 @@ import org.slf4j.LoggerFactory;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import cuesz.pages.BasePage;
-import cuesz.utils.AllureUtils;
-import cuesz.utils.DateGenerator;
-import cuesz.utils.ElementActions;
 import cuesz.utils.SeleniumUtils;
-import cuesz.utils.webTestdata;
-import cuesz.utils.weblocators;
+import cuesz.utils.date.DateGenerator;
+import cuesz.utils.reporting.AllureUtils;
+import cuesz.utils.web.ElementActions;
+import cuesz.utils.web.webTestdata;
+import cuesz.utils.web.weblocators;
 import io.qameta.allure.Allure;
 
 public class Case91_MS_Reminderfeature extends BasePage {

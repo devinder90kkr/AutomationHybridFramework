@@ -17,9 +17,9 @@ import java.time.Duration;
 
 	import cuesz.pages.BasePage;
 	import cuesz.utils.SeleniumUtils;
+import cuesz.utils.date.DayofWeek;
 import io.appium.java_client.AppiumBy;
 import io.appium.java_client.AppiumDriver;
-import cuesz.utils.DayofWeek;
 	
 	public class Case42_01_MSL_Perform_currentday extends BasePage {
 		

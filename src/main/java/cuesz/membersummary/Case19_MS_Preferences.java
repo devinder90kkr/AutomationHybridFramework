@@ -6,8 +6,8 @@ import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
 
 import cuesz.pages.BasePage;
-import cuesz.utils.AllureUtils;
 import cuesz.utils.SeleniumUtils;
+import cuesz.utils.reporting.AllureUtils;
 
 public class Case19_MS_Preferences extends BasePage {
 	

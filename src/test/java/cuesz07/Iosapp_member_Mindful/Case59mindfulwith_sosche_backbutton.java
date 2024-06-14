@@ -1,22 +1,17 @@
 //https://chat.openai.com/share/f592ab35-529c-4434-a989-5fac7039696c
 package cuesz07.Iosapp_member_Mindful;
 
-import java.time.Duration;
-
 import org.openqa.selenium.NoSuchElementException;
-import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import cuesz.pages.AppiummobileBase;
-import cuesz.utils.AllureUtils;
 import cuesz.utils.AppiumappUtils;
-import cuesz.utils.mobileLocators;
-import cuesz.utils.mobilelement;
+import cuesz.utils.mobile.mobileLocators;
+import cuesz.utils.mobile.mobilelement;
+import cuesz.utils.reporting.AllureUtils;
 import io.qameta.allure.Allure;
 import io.qameta.allure.Description;
 import io.qameta.allure.Epic;
@@ -39,7 +34,8 @@ public class Case59mindfulwith_sosche_backbutton extends AppiummobileBase {
 	@Description("Member able to update and change biofeedback options on screen and redirect to mindful screen")
     @Story("Scroll to mindful and access options for mindful feature ")
 	public void mindfulscreen() throws InterruptedException {	
-            // Create an instance of AppiumUtils and pass the driver
+        try {   
+		// Create an instance of AppiumUtils and pass the driver
             AppiumappUtils appiumUtils = new AppiumappUtils(driver);
             // Launch the app using the utility method
             appiumUtils.launchAppWithPackageId("com.cuesz.mobile");
@@ -136,41 +132,6 @@ public class Case59mindfulwith_sosche_backbutton extends AppiummobileBase {
             
             Thread.sleep(2500);
             
-//            try {
-//                WebElement rhythmtext = driver.findElement(mobileLocators.rhytmverification);
-//                // Extract text from the element
-//                String actualText2 = rhythmtext.getText();
-//                // Define the expected text
-//                String expectedText2 = "Rhythm 24 2759";
-//
-//                // Print the actual and expected text to the console
-//                System.out.println("Actual Text: " + actualText2);
-//                System.out.println("Expected Text: " + expectedText2);
-//
-//                // Attach values to Allure report
-//                Allure.addAttachment("Actual Text", actualText2);
-//                Allure.addAttachment("Expected Text", expectedText2);
-//
-//                // Use an assertion to verify that actualText2 equals expectedText2
-//                Assert.assertEquals(actualText2, expectedText2);
-//
-//                if (actualText2.equals(expectedText2)) {
-//                    // If actual text and expected text are the same, click on Syncmydevicebttn
-//                    WebElement Syncmydevicebttn = driver.findElement(mobileLocators.syncdevicebttn);
-//                    Syncmydevicebttn.click();
-//                    // Log console message to Allure
-//                    LOGGER.info("Click on Syncmydevice bttn");
-//                    AllureUtils.logStep("Click on Syncmydevice bttn");
-//                }
-//            } catch (NoSuchElementException e) {
-//                // Handle the case where the element is not found
-//                LOGGER.error("Element not found: rhytmverification", e);
-//                AllureUtils.logStep("Element not found: rhytmverification");
-//            } catch (AssertionError e) {
-//                // Handle the case where the text does not match
-//                LOGGER.error("Text does not match: expected 'Rhythm 24 2759' but found '" + e.getMessage() + "'", e);
-//                AllureUtils.logStep("Text does not match: expected 'Rhythm 24 2759' but found '" + e.getMessage() + "'");
-//            }
             
             try {
                 // Find and click on Syncmydevicebttn
@@ -242,8 +203,17 @@ public class Case59mindfulwith_sosche_backbutton extends AppiummobileBase {
             Thread.sleep(3000);
             mobilelement.clickElement(driver, mobileLocators.submittimer);
          
-        Thread.sleep(8500);
-        driver.terminateApp("com.cuesz.mobile");
-        
-	}}
-
+        } catch (Exception e) {
+            LOGGER.error("An error occurred during the mindful screen test", e);
+            AllureUtils.logStep("An error occurred: " + e.getMessage());
+        } finally {
+            // Terminate the app whether the test passed or failed
+            try {
+                Thread.sleep(8500);
+            } catch (InterruptedException e) {
+                LOGGER.error("Thread interrupted during final sleep", e);
+                Thread.currentThread().interrupt();
+            }
+            driver.terminateApp("com.cuesz.mobile");
+        }
+    }}

@@ -13,10 +13,9 @@
 	
 	import cuesz.logintest.AdvocateLogin;
 	import cuesz.membersummary.Case16_MS_searchclick;
-	import cuesz.utils.AllureUtils;
-	import cuesz.utils.WebDriverManager;
-	
-	import io.qameta.allure.*;
+import cuesz.utils.WebDriverManager;
+import cuesz.utils.reporting.AllureUtils;
+import io.qameta.allure.*;
 	
 	@Epic ("Cuesz Staff on member Summary page")
 	@Feature ("Verify on member summary page search working as per keyword.")

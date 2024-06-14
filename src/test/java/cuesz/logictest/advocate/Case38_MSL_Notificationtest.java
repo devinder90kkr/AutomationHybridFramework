@@ -14,9 +14,8 @@ import org.testng.annotations.Test;
 
 import cuesz.logicpage.Case38_MSL_Notification;
 import cuesz.logintest.AdvocateLogin;
-import cuesz.utils.AllureUtils;
 import cuesz.utils.WebDriverManager;
-
+import cuesz.utils.reporting.AllureUtils;
 import io.qameta.allure.*;
 
 @Epic ("Cuesz Staff on Logic Page perform habbits Notes Testing")

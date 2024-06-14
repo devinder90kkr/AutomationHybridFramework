@@ -10,9 +10,9 @@ import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
 
 import cuesz.pages.BasePage;
-import cuesz.utils.ElementActions;
 import cuesz.utils.SeleniumUtils;
-import cuesz.utils.weblocators;
+import cuesz.utils.web.ElementActions;
+import cuesz.utils.web.weblocators;
 
 public class Case35_MSL_MemberWilingnessLimitationScore extends BasePage {
 	

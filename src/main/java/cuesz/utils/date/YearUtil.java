@@ -1,4 +1,4 @@
-package cuesz.utils;
+package cuesz.utils.date;
 import java.util.Calendar;
 
 @SuppressWarnings("unused")

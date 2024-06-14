@@ -27,7 +27,7 @@
 //        }
 //    }
 //}
-package cuesz.utils;
+package cuesz.utils.web;
 
 import org.openqa.selenium.Dimension;
 import org.openqa.selenium.WebDriver;

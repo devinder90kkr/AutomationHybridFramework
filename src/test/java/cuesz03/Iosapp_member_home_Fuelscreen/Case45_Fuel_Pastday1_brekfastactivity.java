@@ -10,10 +10,10 @@ import org.slf4j.LoggerFactory;
 import org.testng.annotations.Test;
 
 import cuesz.pages.AppiummobileBase;
-import cuesz.utils.AllureUtils;
 import cuesz.utils.AppiumappUtils;
-import cuesz.utils.DateUtilsAppium;
-import cuesz.utils.mobileLocators;
+import cuesz.utils.appium.date.DateUtilsAppium;
+import cuesz.utils.mobile.mobileLocators;
+import cuesz.utils.reporting.AllureUtils;
 import io.appium.java_client.AppiumBy;
 import io.qameta.allure.Description;
 import io.qameta.allure.Epic;
@@ -35,8 +35,8 @@ public class Case45_Fuel_Pastday1_brekfastactivity extends AppiummobileBase {
     @Severity(SeverityLevel.NORMAL)      
     @Description("Member Fuel screen detail verification")
     @Story("Scroll to Fuel card and verify breakfast assigned by staff ")	
-	public void Homescreen() throws InterruptedException
-	{	
+	public void Homescreen() throws InterruptedException{
+		try {
 		// Create an instance of AppiumUtils and pass the driver
 		AppiumappUtils appiumUtils = new AppiumappUtils(driver);
         // Launch the app using the utility method
@@ -347,8 +347,19 @@ public class Case45_Fuel_Pastday1_brekfastactivity extends AppiummobileBase {
 		
 		
         
-		Thread.sleep(4500);
-        driver.terminateApp("com.cuesz.mobile");
-	}
+		 Thread.sleep(3500);
+		 } catch (Exception e) {
+	            LOGGER.error("An error occurred during the cases ", e);
+	            AllureUtils.logStep("An error occurred: " + e.getMessage());
+	        } finally {
+	            // Terminate the app whether the test passed or failed
+	            try {
+	                Thread.sleep(8500);
+	            } catch (InterruptedException e) {
+	                LOGGER.error("Thread interrupted during final sleep", e);
+	                Thread.currentThread().interrupt();
+	            }
+	            driver.terminateApp("com.cuesz.mobile");
+	        }
+	    }
 }
-	

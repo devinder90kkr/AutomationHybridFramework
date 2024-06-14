@@ -11,9 +11,9 @@ import org.slf4j.LoggerFactory;
 import org.testng.annotations.Test;
 
 import cuesz.pages.BasePage;
-import cuesz.utils.AllureUtils;
-import cuesz.utils.DateGenerator;
 import cuesz.utils.SeleniumUtils;
+import cuesz.utils.date.DateGenerator;
+import cuesz.utils.reporting.AllureUtils;
 
 public class Case01_createvent extends BasePage {
 	

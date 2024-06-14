@@ -11,7 +11,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
 
 import cuesz.pages.BasePage;
-import cuesz.utils.AllureUtils;
+import cuesz.utils.reporting.AllureUtils;
 
 public class Case75_Newchat extends BasePage {
 	 WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(1000)); 	

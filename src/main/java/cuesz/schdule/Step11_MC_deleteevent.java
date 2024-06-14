@@ -13,7 +13,7 @@ import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
 
 import cuesz.pages.BasePage;
-import cuesz.utils.DateGenerator;
+import cuesz.utils.date.DateGenerator;
 
 public class Step11_MC_deleteevent extends BasePage {
 	

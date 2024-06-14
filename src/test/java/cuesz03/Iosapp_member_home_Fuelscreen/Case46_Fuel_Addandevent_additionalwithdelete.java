@@ -273,9 +273,9 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import cuesz.pages.AppiummobileBase;
-import cuesz.utils.AllureUtils;
 import cuesz.utils.AppiumappUtils;
-import cuesz.utils.mobileLocators;
+import cuesz.utils.mobile.mobileLocators;
+import cuesz.utils.reporting.AllureUtils;
 import io.appium.java_client.AppiumBy;
 import io.appium.java_client.AppiumDriver;
 import io.qameta.allure.Allure;
@@ -299,8 +299,8 @@ public class Case46_Fuel_Addandevent_additionalwithdelete extends AppiummobileBa
     @Severity(SeverityLevel.NORMAL)      
     @Description("Member add an Event screen detail verification")
     @Story("Scroll to add an event & verify its related fuel added")	
-	public void Fuel_addaneventadditionalcasewithdelete() throws InterruptedException
-	{	
+	public void Fuel_addaneventadditionalcasewithdelete() throws InterruptedException{
+		try {
 		// Create an instance of AppiumUtils and pass the driver
 		AppiumappUtils appiumUtils = new AppiumappUtils(driver);
         // Launch the app using the utility method
@@ -575,9 +575,22 @@ public class Case46_Fuel_Addandevent_additionalwithdelete extends AppiummobileBa
 		AllureUtils.captureScreenshot(driver, "Case46_14");
           		
      		
-		Thread.sleep(2500);
-        driver.terminateApp("com.cuesz.mobile");
-	}
+		 Thread.sleep(3500);
+		 } catch (Exception e) {
+	            LOGGER.error("An error occurred during the cases ", e);
+	            AllureUtils.logStep("An error occurred: " + e.getMessage());
+	        } finally {
+	            // Terminate the app whether the test passed or failed
+	            try {
+	                Thread.sleep(8500);
+	            } catch (InterruptedException e) {
+	                LOGGER.error("Thread interrupted during final sleep", e);
+	                Thread.currentThread().interrupt();
+	            }
+	            driver.terminateApp("com.cuesz.mobile");
+	        }
+	    }
+
 	
 	// Function to check if an element is present on the screen
 	public boolean isElementPresent(AppiumDriver driver, By by){

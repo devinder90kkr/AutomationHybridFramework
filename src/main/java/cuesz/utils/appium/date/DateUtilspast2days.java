@@ -1,4 +1,4 @@
-package cuesz.utils;
+package cuesz.utils.appium.date;
 
 import java.util.Calendar;
 import java.util.HashMap;

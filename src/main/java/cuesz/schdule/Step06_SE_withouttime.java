@@ -8,7 +8,7 @@ import org.openqa.selenium.interactions.Actions;
 import org.testng.annotations.Test;
 
 import cuesz.pages.BasePage;
-import cuesz.utils.AllureUtils;
+import cuesz.utils.reporting.AllureUtils;
 
 public class Step06_SE_withouttime extends BasePage {
 		

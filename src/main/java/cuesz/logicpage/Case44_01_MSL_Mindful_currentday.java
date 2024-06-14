@@ -17,7 +17,7 @@ import java.time.Duration;
 	import cuesz.pages.BasePage;
 //import cuesz.utils.AllureUtils;
 import cuesz.utils.SeleniumUtils;
-import cuesz.utils.DayofWeek;	
+import cuesz.utils.date.DayofWeek;	
 
 	public class Case44_01_MSL_Mindful_currentday extends BasePage {
 		

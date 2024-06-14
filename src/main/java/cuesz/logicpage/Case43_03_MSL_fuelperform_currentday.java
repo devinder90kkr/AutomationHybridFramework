@@ -15,9 +15,9 @@ import java.time.Duration;
 	import org.testng.annotations.Test;
 
 	import cuesz.pages.BasePage;
-import cuesz.utils.AllureUtils;
 import cuesz.utils.SeleniumUtils;
-import cuesz.utils.DayofWeek;	
+import cuesz.utils.date.DayofWeek;
+import cuesz.utils.reporting.AllureUtils;	
 
 	public class Case43_03_MSL_fuelperform_currentday extends BasePage {
 		

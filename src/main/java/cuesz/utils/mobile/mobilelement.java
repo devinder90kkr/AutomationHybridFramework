@@ -1,4 +1,4 @@
-package cuesz.utils;
+package cuesz.utils.mobile;
 
 import java.time.Duration;
 import java.util.Arrays;
