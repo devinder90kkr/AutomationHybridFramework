@@ -94,7 +94,8 @@ public class mobileLocators {
 	public static final By document		= 	AppiumBy.accessibilityId("Documents");
 	public static final By document1	=	AppiumBy.iOSClassChain("**/XCUIElementTypeOther[`name == \"ChatDocumentundefined\"`][1]");
 	public static final By done1		=	AppiumBy.accessibilityId("QLOverlayDoneButtonAccessibilityIdentifier");
-	
+	public static final By searchtext	=	AppiumBy.accessibilityId("Search");	
+	public static final By Attahment	=	AppiumBy.accessibilityId("Attach");
 	
 	
 	

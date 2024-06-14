@@ -177,15 +177,48 @@ try {
             AllureUtils.captureScreenshot(driver, "Case57Advocate_chat12"); 
         }
         
-        
- 
-        
+    
         //click on links	
         mobilelement.clickElement(driver, mobileLocators.links);
         // Log message to console and Allure report
         LOGGER.info("Click on links");
         AllureUtils.logStep("Click on links");
         
+        //Click on back icon
+        mobilelement.clickElement(driver, mobileLocators.backpressbutton);
+        // Log message to console and Allure report
+        LOGGER.info("Click on backpressbutton icon");
+        AllureUtils.logStep("Click on backpressbutton icon");
+        
+//        //click on search option
+//        mobilelement.clickElement(driver, mobileLocators.searchtext);
+//        // Log message to console and Allure report
+//        LOGGER.info("Click on searchtext icon");
+//        AllureUtils.logStep("Click on searchtext icon");
+        
+        //Click on attachment 
+        mobilelement.clickElement(driver, mobileLocators.Attahment);
+        // Log message to console and Allure report
+        LOGGER.info("Click on Attahment icon");
+        AllureUtils.logStep("Click on Attahment icon");
+        
+    	// Click on gallery option 
+		mobilelement.clickElement(driver, mobileLocators.gallery);
+		 // Log message to console and Allure report
+        LOGGER.info("Click on gallery icon");
+        AllureUtils.logStep("Click on gallery icon");
+		
+		// Select image 1 from gallery
+		mobilelement.clickElement(driver, mobileLocators.galleryimage1);
+		 // Log message to console and Allure report
+        LOGGER.info("Click on galleryimage1");
+        AllureUtils.logStep("Click on galleryimage1");
+		
+		// Click on add option from image viewer
+		mobilelement.clickElement(driver, mobileLocators.submittap);
+		 // Log message to console and Allure report
+        LOGGER.info("Click on submittap icon");
+        AllureUtils.logStep("Click on submittap icon");
         
         
         
