@@ -220,9 +220,48 @@ try {
         LOGGER.info("Click on submittap icon");
         AllureUtils.logStep("Click on submittap icon");
         
+        Thread.sleep(2500);
+        //Click on media chat plus icon
+        mobilelement.clickElement(driver, mobileLocators.chatplus);
+        mobilelement.clickElement(driver, mobileLocators.chatplus);
+        // Log message to console and Allure report
+        LOGGER.info("Click on chatplus icon");
+        AllureUtils.logStep("Click on chatplus icon");
+        // Capture a screenshot and attach it to Allure
+        AllureUtils.captureScreenshot(driver, "Case57Advocate_chat4");
+        
+        //Click on urgenticon
+        mobilelement.clickElement(driver, mobileLocators.urgenticon);
+        // Log message to console and Allure report
+        LOGGER.info("Click on urgenticon icon");
+        AllureUtils.logStep("Click on urgenticon icon");
         
         
-			        Thread.sleep(3500);
+        // Define your messages in an array or list
+        String[] messages1 = { mobileTestData.message4, mobileTestData.message5 };
+
+        for (int i = 0; i < messages1.length; i++) {
+            String message = messages1[i];
+            
+            // Enter message in field
+            mobilelement.sendKeysToElement(driver, mobileLocators.entermessage, message);
+            
+            // Log message to console and Allure report
+            LOGGER.info("Enter message field: " + message);
+            AllureUtils.logStep("Enter input message in field: " + message);
+            
+            // Click on send button
+            mobilelement.clickElement(driver, mobileLocators.sendmessage);
+            
+            // Log message to console and Allure report
+            LOGGER.info("Click on send message icon");
+            AllureUtils.logStep("Click on send message icon");
+            
+            // Capture a screenshot and attach it to Allure
+            AllureUtils.captureScreenshot(driver, "Case57Advocate_chat" + (i + 2)); // Start with chat2 for second message, chat3 for third, etc.
+        }
+
+        Thread.sleep(3500);
 				} catch (Exception e) {
 			LOGGER.error("An error occurred during the cases ", e);
 			AllureUtils.logStep("An error occurred: " + e.getMessage());

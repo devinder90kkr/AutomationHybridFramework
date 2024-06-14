@@ -97,15 +97,16 @@ public class Case26_Fuel_breakfast_customfood extends AppiummobileBase {
             // Log console message to Allure
             LOGGER.info("Enter additonals fuel values" );
             AllureUtils.logStep("Enter additonals fuel values");
+            
             Thread.sleep(2000);
             // Check if the element has the desired text
             if (additionalfuel.getAttribute("value").equals(modifiedSearchText)) {
                 // Click on hybridselect
-//                WebElement hybridselect = driver.findElement(AppiumBy.accessibilityId(modifiedSearchText));
-//                hybridselect.click();
-            	Thread.sleep(2000);
-            	WebElement hybridselect = driver.findElement(AppiumBy.xpath("//XCUIElementTypeOther[@name='" + modifiedSearchText + "']"));
-            	hybridselect.click();
+                WebElement hybridselect = driver.findElement(AppiumBy.accessibilityId(modifiedSearchText));
+                hybridselect.click();
+//            	Thread.sleep(2000);
+//            	WebElement hybridselect = driver.findElement(AppiumBy.xpath("//XCUIElementTypeOther[@name='" + modifiedSearchText + "']"));
+//            	hybridselect.click();
                 // Log console message to Allure
                 LOGGER.info("Click on hybrid select" );
                 AllureUtils.logStep("Click on hybrid select	");
