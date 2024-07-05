@@ -1,11 +1,15 @@
 package cuesz.schdule;
 
+import java.time.Duration;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.testng.annotations.Test;
@@ -39,31 +43,37 @@ public class Case01_createvent extends BasePage {
 	}
 	@Test
 	 public void Schdulevent() throws InterruptedException {
-		
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(50));
 		
 		 	/**********************Click on Schedule master*********************************/	
 			utils.clickScheduleMaster();
 			utils.clickaddnewevent();
-			
+			Thread.sleep(3500);
 			 // Log message to console and Allure report
 	        LOGGER.info("Click on Add new event button");
 	        AllureUtils.logStep("Click on Add new event button from schdule master");
 				        
-			/*Enter date values*/
-			Thread.sleep(4500);
-		    WebElement datefield = driver.findElement(Date);
-		    Actions builder1 = new Actions(driver);
-		    builder1.moveToElement(datefield).click().sendKeys(eventDate).sendKeys(Keys.ENTER).perform();
-		    
-			 // Log message to console and Allure report
+//			/*Enter date values*/
+//			Thread.sleep(4500);
+//		    WebElement datefield = driver.findElement(Date);
+//		    Actions builder1 = new Actions(driver);
+//		    builder1.moveToElement(datefield).click().sendKeys(eventDate).sendKeys(Keys.ENTER).perform();
+//		    
+			
+	        /*Enter date values*/
+			WebElement datefield = wait.until(ExpectedConditions.elementToBeClickable(Date));
+			Actions builder1 = new Actions(driver);
+			builder1.moveToElement(datefield).click().sendKeys(eventDate).sendKeys(Keys.ENTER).perform();
+	        // Log message to console and Allure report
 	        LOGGER.info("Click on date field and enter event date");
 	        AllureUtils.logStep("Click on date field and enter event date");
 	       
 
 		   
 		    /*Enter values for start time*/
-		    Thread.sleep(3500);
-		    WebElement startTime =driver.findElement(StartTime);
+		  //  Thread.sleep(3500);
+		  //  WebElement startTime =driver.findElement(StartTime);
+			WebElement startTime = wait.until(ExpectedConditions.elementToBeClickable(StartTime));
 		    Actions builder = new Actions(driver);
 		    builder.moveToElement(startTime).click().sendKeys("06:30 Pm").perform();
 		    Thread.sleep(3500);
@@ -75,8 +85,9 @@ public class Case01_createvent extends BasePage {
 	       
 	       
 		    /*Enter values for end time	*/
-		    Thread.sleep(3500);
-		    WebElement endTime =driver.findElement(EndTime);
+		  //  Thread.sleep(3500);
+		    //WebElement endTime =driver.findElement(EndTime);
+		    WebElement endTime = wait.until(ExpectedConditions.elementToBeClickable(EndTime));
 		    Actions builder11 = new Actions(driver);
 		    builder11.moveToElement(endTime).click().sendKeys("07:30 PM").sendKeys(Keys.ENTER).perform();
 
@@ -87,8 +98,9 @@ public class Case01_createvent extends BasePage {
 	        AllureUtils.captureScreenshot(driver, "fuel_report_screenshot");
 	        
 		    /*Select Event as as Live perform	*/
-		    Thread.sleep(3500);
-		    WebElement topicselection =driver.findElement(Topic);
+		 //   Thread.sleep(3500);
+		    //WebElement topicselection =driver.findElement(Topic);
+		    WebElement topicselection = wait.until(ExpectedConditions.elementToBeClickable(Topic));
 		    Actions builder2 = new Actions(driver);
 		    builder2.moveToElement(topicselection).click().sendKeys("Live perform session").sendKeys(Keys.ENTER).perform();
 		    
@@ -97,7 +109,7 @@ public class Case01_createvent extends BasePage {
 	        AllureUtils.logStep("Click on Topic time and select Live perform session.");
 		    
 		    /*Select Event as as member selection perform	*/
-		    Thread.sleep(3500);
+		  //  Thread.sleep(3500);
 		    WebElement memberSelection =driver.findElement(Member);
 		    Actions builder3 = new Actions(driver);
 		    builder3.moveToElement(memberSelection).click().sendKeys(" Kumar Devinder").sendKeys(Keys.ENTER).perform();
@@ -108,7 +120,7 @@ public class Case01_createvent extends BasePage {
 		    
 
 		    /*Select Coach & advocate from dropdown list*/
-		    Thread.sleep(3500);
+		   // Thread.sleep(3500);
 		    WebElement staffSelection =driver.findElement(Staff);
 		    Actions builder4 = new Actions(driver);
 		    builder4.moveToElement(staffSelection).click().sendKeys("seakfreight").sendKeys(Keys.ENTER).perform();

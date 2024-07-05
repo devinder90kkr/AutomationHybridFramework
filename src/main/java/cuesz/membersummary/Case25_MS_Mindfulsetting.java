@@ -108,13 +108,12 @@ private By setingmindfu		=	(By.id("MemberSummary-Mindfull-Settings"));
       WebElement Duration = driver.findElement(durton);
       Actions builder = new Actions(driver);
       builder.moveToElement(Duration).click().sendKeys("2 Minutes").perform();
-//      Thread.sleep(2000);
-//      builder.sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.TAB).perform();
-      builder.moveToElement(Duration).sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.TAB).perform();
+      // Thread.sleep(2000);
+      builder.sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.ENTER).perform();
+
       
       
-      
-   // Handle multi-switch button
+      // Handle multi-switch button
       Thread.sleep(2500);
       WebElement multiSwitchBtn = driver.findElement(multiSwitch);
       multiSwitchBtn.click();

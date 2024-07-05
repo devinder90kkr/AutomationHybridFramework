@@ -1,5 +1,6 @@
 package cuesz.schdule;
 
+import java.time.Duration;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -7,6 +8,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.testng.annotations.Test;
@@ -34,6 +36,7 @@ public class Case02_viewevent extends BasePage {
 	}
 	@Test
 	 public void Viewevent() throws InterruptedException {
+		//WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(50));
 		 		
 		Thread.sleep(3500);
 		driver.findElement(scheduleIcon).click();

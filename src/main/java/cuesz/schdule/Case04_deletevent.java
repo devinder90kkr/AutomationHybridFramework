@@ -1,5 +1,6 @@
 package cuesz.schdule;
 
+import java.time.Duration;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
@@ -9,6 +10,8 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
 
 import cuesz.pages.BasePage;
@@ -34,6 +37,7 @@ public class Case04_deletevent extends BasePage {
 	}
 	@Test
 	 public void Deletevent() throws InterruptedException {
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 	
 		Thread.sleep(3500);
 		driver.findElement(scheduleIcon).click();
@@ -59,11 +63,15 @@ public class Case04_deletevent extends BasePage {
 	 		String nextDayDate = nextDay.format(formatter);
 
 	 		// Capture a screenshot and attach it to Allure
-	        AllureUtils.captureScreenshot(driver, "fuel_report_screenshot"); 
+	        AllureUtils.captureScreenshot(driver, "Case04_deletevent1"); 
 	 		
+	        // //button[normalize-space()='07']
+	        
+	      
 	 		// Find the element to scroll to the next day's date on the calendar (matching only the day)
-	 		WebElement element = driver.findElement(By.xpath("//button[@role='cell'][normalize-space()='" + nextDay.getDayOfMonth() + "']"));
-	 		((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);
+//	 	WebElement element = driver.findElement(By.xpath("//button[@role='cell'][normalize-space()='" + nextDay.getDayOfMonth() + "']"));
+	 	WebElement element = driver.findElement(By.xpath("//button[normalize-space()='" + nextDay.getDayOfMonth() + "']"));
+	 	((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);
 
 	 		Thread.sleep(3000);
 	 		driver.findElement(By.xpath("//div[@data-date='" + nextDayDate + "']")).click();
@@ -90,7 +98,7 @@ public class Case04_deletevent extends BasePage {
         }
         
         // Capture a screenshot and attach it to Allure
-        AllureUtils.captureScreenshot(driver, "fuel_report_screenshot"); 
+        AllureUtils.captureScreenshot(driver, "Case04_deletevent2"); 
         
         Thread.sleep(3500);  
         //find delete button and then delete event
@@ -100,16 +108,8 @@ public class Case04_deletevent extends BasePage {
         driver.findElement(confirmbutton).click();
         
         Thread.sleep(3500);
-
-//		// Verify that the event is deleted
-//		WebElement deletedEvent = driver.findElement(By.xpath("//div[@data-date='" + nextDayDate + "']"));
-//		if (deletedEvent.getAttribute("class").contains("event_dot")) {
-//			System.out.println("Event deletion verification failed!");
-//		} else {
-//			System.out.println("Event deletion verification passed!");
 			
 			// Capture a screenshot and attach it to Allure
-	        AllureUtils.captureScreenshot(driver, "fuel_report_screenshot"); 
+	        AllureUtils.captureScreenshot(driver, "Case04_deletevent3"); 
 		}
 	}
-//	 }	
