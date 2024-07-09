@@ -17,22 +17,15 @@ import java.time.Duration;
 	import cuesz.pages.BasePage;
 //import cuesz.utils.AllureUtils;
 import cuesz.utils.SeleniumUtils;
-import cuesz.utils.date.DayofWeek;	
+import cuesz.utils.date.DayofWeek;
+import cuesz.utils.web.weblocators;	
 
 	public class Case44_01_MSL_Mindful_currentday extends BasePage {
 		
 	
 
 		SeleniumUtils utils = new SeleniumUtils(driver);
-		private By Logibttn =   (By.xpath("//span[normalize-space()='Logic Page']"));
-		private By mindfulhdng = (By.id("Mindfull"));
-		private By mindflnopls = (By.xpath("//div[normalize-space()='Mindful']//button[@type='button']"));
-		private By slctbttn = (By.xpath("//div[@id='Mindfull']//div[@class='d-flex justify-content-end calender_drop']//button[1]"));
 		
-	    private By outsideBlck2 = (By.tagName("body"));
-	   
-		
-
 		 public Case44_01_MSL_Mindful_currentday(WebDriver driver) {
 			super(driver);
 			// TODO Auto-generated constructor stub
@@ -49,7 +42,7 @@ import cuesz.utils.date.DayofWeek;
 	
 	   		   /***********************************landed on Logic page ***************************************************************************************************/
 	   		   Thread.sleep(2000);
-	   		   WebElement Logicbutton =  driver.findElement(Logibttn);
+	   		   WebElement Logicbutton =  driver.findElement(weblocators.Logibttn);
 	   		   Logicbutton.click();
 
 	   		  /****************************************Click on next & previous button and get week*****************************************************************************************************/        
@@ -58,18 +51,18 @@ import cuesz.utils.date.DayofWeek;
 		  	        
 		        /***************************************Click on mindful and scroll******************************************************************************************/
 			  	   Thread.sleep(5500);
-			  	   WebElement mindfulheading = driver.findElement(mindfulhdng);
+			  	   WebElement mindfulheading = driver.findElement(weblocators.mindfulhdng);
 			       // Scroll to the "Staff Notes" element using JavaScriptExecutor
 				   ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);;", mindfulheading);
 				     		
 				   Thread.sleep(9500);				// Wait for the element to be clickable
 				   WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(50)); // Adjust the timeout as needed
-				   WebElement mindfulnoteplus = wait.until(ExpectedConditions.elementToBeClickable(mindflnopls));
+				   WebElement mindfulnoteplus = wait.until(ExpectedConditions.elementToBeClickable(weblocators.mindflnopls));
 				   mindfulnoteplus.click();
 				   		
 				   Thread.sleep(5500);
 				   // Example usage:
-				   WebElement selectbutton = driver.findElement(slctbttn);
+				   WebElement selectbutton = driver.findElement(weblocators.slctbttn);
 				   // Scroll to the "Staff Notes" element using JavaScriptExecutor
 				   ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView();", selectbutton);
 		  
@@ -120,7 +113,7 @@ Thread.sleep(3500);
 			        Thread.sleep(2000);
 			     
 			        // Click outside of the block to save data
-			        WebElement outsideBlock2 = driver.findElement(outsideBlck2);
+			        WebElement outsideBlock2 = driver.findElement(weblocators.outsideBlck2);
 			        outsideBlock2.click();
 			    }
 			    
@@ -164,7 +157,7 @@ Thread.sleep(3500);
 				            
 			            }
 				   // Click outside of the block to save data
-			        WebElement outsideBlock2 = driver.findElement(outsideBlck2);
+			        WebElement outsideBlock2 = driver.findElement(weblocators.outsideBlck2);
 			        outsideBlock2.click();
 			}
 	}		

@@ -79,7 +79,7 @@ public class DatePickerUtility_logicpage {
 	        LocalDate currentDate = LocalDate.now();
 
 	        // Calculate the desired date, which is two weeks ahead from the day after tomorrow
-	        LocalDate desiredDate = currentDate.plusDays(2).plusWeeks(3);
+	        LocalDate desiredDate = currentDate.plusDays(1).plusWeeks(2);
 
 //	        // Convert desiredDate to the desired format
 	        String desiredDateLocator = String.format("//div[@aria-label='%s']", desiredDate.format(DateTimeFormatter.ofPattern("EEE MMM d yyyy")));
@@ -105,4 +105,3 @@ public class DatePickerUtility_logicpage {
 	    }
 	}
 
-	
