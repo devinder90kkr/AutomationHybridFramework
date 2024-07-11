@@ -4,6 +4,42 @@ import org.openqa.selenium.By;
 
 public class weblocators {
 	
+	//Case43_1_MSL_Fuelperform
+	public static final By Activityselect	= (By.id("FuelPerform-SelectActivity-Monday"));
+	public static final By notesfield		= (By.id("editorFuelPerform-Note-Monday"));
+	public static final By Durationfield	= (By.id("FuelPerform-Mins-Monday"));
+	public static final By inptFild 	= 	(By.xpath("//div[@id='FuelPerformSelectedOptionsPrePerform-Perform-prePerform-Primary-Monday']//input"));
+	public static final By inptFild1 = (By.xpath("//div[@id='FuelPerformSelectedOptionsPrePerform-Perform-prePerform-Secondary-Monday']//input"));
+	public static final By inptFild2 = (By.xpath("//div[@id='FuelPerformSelectedOptionsDuringPerform-Perform-duringPerform-Primary-Monday']//input"));	
+	public static final By inptFild3	= (By.xpath("//div[@id='FuelPerformSelectedOptionsPostPerform-Perform-postPerform-Secondary-Monday']//input"));
+
+	//Case01_createvent
+	public static final By Date 		 = (By.id("event_date"));	
+	public static final By StartTime 	 =	(By.id("eventStartTime"));	
+	public static final By EndTime		 = 	(By.id("eventEndTime"));
+	public static final By Topic		 = (By.id("eventTopics"));
+	public static final By Member 		= (By.id("eventMemberlist"));
+	public static final By Staff 		= (By.id("Helsenki"));	
+	public static final By Notes		 =  (By.name("note"));
+	public static final By Submitbutton  =	 (By.xpath("//button[normalize-space()='Create Event']"));
+	//	Case02_viewevent
+	public static final By scheduleIcon 	= (By.xpath("//a[@href='/schedule-master']//span//img[@alt='icon']"));
+	public static final By monthview 		= (By.xpath("//span[normalize-space()='Month']"));
+	public static final By userlabel 	 	= (By.xpath("//div[@class='user_title']//label"));
+	//	Case03_editevent
+	 public static final By editBttn 		= (By.id("editEventButton"));
+	 public static final By edittime 		= (By.id("event_date"));
+	 public static final By editIconstarttime 		= (By.xpath("//div[@id='eventStartTime']/following-sibling::button[contains(@class, 'btn-secondary')]"));
+	 public static final By startime		= (By.xpath("//input[@id='startTime']"));
+	 public static final By updatebutton	= (By.xpath("//button[normalize-space()='Update Event']"));
+	 public static final By editEndTime		= 	  (By.xpath("//input[@id='endTime']"));
+	 //Case04_deletevent
+	 public static final By deletebutton	= (By.xpath("//button[@class='btn btn-sm del_btn']//em"));
+	 public static final By confirmbutton 	= (By.xpath("//span[normalize-space()='Confirm']"));
+
+	
+	
+	
 	
 	//Case45_MSL_restore
 	public static final By rstrhading = (By.xpath("(//div[normalize-space()='Restore'])[1]"));

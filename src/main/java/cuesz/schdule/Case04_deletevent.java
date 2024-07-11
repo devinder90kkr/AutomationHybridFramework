@@ -17,20 +17,14 @@ import org.testng.annotations.Test;
 import cuesz.pages.BasePage;
 import cuesz.utils.date.DateGenerator;
 import cuesz.utils.reporting.AllureUtils;
+import cuesz.utils.web.webTestdata;
+import cuesz.utils.web.weblocators;
 
 public class Case04_deletevent extends BasePage {
 	
 	 public static String eventDate = DateGenerator.generateFixedDate(); // Use the generated date
-	 
-	 private By scheduleIcon 	= (By.xpath("//a[@href='/schedule-master']//span//img[@alt='icon']"));
-	 private By monthview 		= (By.xpath("//span[normalize-space()='Month']"));
-	 private By userlabel		= (By.xpath("//div[@class='user_title']//label"));
-	 private By deletebutton	= (By.xpath("//button[@class='btn btn-sm del_btn']//em"));
-	 private By confirmbutton 	= (By.xpath("//span[normalize-space()='Confirm']"));
-//	 private By NextButton = (By.xpath("//span[normalize-space()='Next']")); // XPath for the "Next Month" button
-
-	 
 	
+
 	public Case04_deletevent(WebDriver driver) {
 		super(driver);
 		// TODO Auto-generated constructor stub
@@ -40,10 +34,10 @@ public class Case04_deletevent extends BasePage {
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 	
 		Thread.sleep(3500);
-		driver.findElement(scheduleIcon).click();
+		driver.findElement(weblocators.scheduleIcon).click();
 		
 	    Thread.sleep(3500);
-	    driver.findElement(monthview).click();
+	    driver.findElement(weblocators.monthview).click();
 	    
 	 // Pass the event date from script one to script three
 	 		String eventDate = Case01_createvent.eventDate;
@@ -61,28 +55,26 @@ public class Case04_deletevent extends BasePage {
 	 		// Format the next day's date
 	 		DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MM-yyyy");
 	 		String nextDayDate = nextDay.format(formatter);
+	 	// Extract the day portion from the eventDate
+	        String day = nextDayDate.split("-")[0];
 
 	 		// Capture a screenshot and attach it to Allure
 	        AllureUtils.captureScreenshot(driver, "Case04_deletevent1"); 
 	 		
-	        // //button[normalize-space()='07']
-	        
 	      
 	 		// Find the element to scroll to the next day's date on the calendar (matching only the day)
 //	 	WebElement element = driver.findElement(By.xpath("//button[@role='cell'][normalize-space()='" + nextDay.getDayOfMonth() + "']"));
 	 	WebElement element = driver.findElement(By.xpath("//button[normalize-space()='" + nextDay.getDayOfMonth() + "']"));
 	 	((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);
 
-	 		Thread.sleep(3000);
-	 		driver.findElement(By.xpath("//div[@data-date='" + nextDayDate + "']")).click();
-   
+	 	// Construct the XPath for the event dynamically
+        String eventXPath = String.format("//div[@id='Schedule Master-LPS-%s-%s-%s']", day, webTestdata.membername, webTestdata.editstartInput);
+        WebElement eventClick = wait.until(ExpectedConditions.elementToBeClickable(By.xpath(eventXPath)));
+        eventClick.click();
+        	
 	    Thread.sleep(3000);
-
-
-
-     // Find the elements containing the user labels
-        List<WebElement> userLabels1 = driver.findElements(userlabel);
-
+	    // Find the elements containing the user labels
+        List<WebElement> userLabels1 = driver.findElements(weblocators.userlabel);
         // Get the texts from the user labels
         List<String> userTexts1 = new ArrayList<>();
         for (WebElement userLabel : userLabels1) {
@@ -90,24 +82,20 @@ public class Case04_deletevent extends BasePage {
         }
 
         // Verify the texts
-//        if (userTexts1.contains("Kumar Devinder") && userTexts1.contains("Seakfreight") && userTexts1.contains("SteveQA Adv")) {
-        if (userTexts1.contains("Kumar Devinder") && userTexts1.contains("Coach Seakfreight") && userTexts1.contains("Devinder - Wellness Advocate")) {
+        	 if (userTexts1.contains(webTestdata.membername) && userTexts1.contains(webTestdata.staff1) && userTexts1.contains(webTestdata.staff2)) {
             System.out.println("User text verification passed!");
         } else {
             System.out.println("User text verification failed!");
         }
         
         // Capture a screenshot and attach it to Allure
-        AllureUtils.captureScreenshot(driver, "Case04_deletevent2"); 
-        
-	       
-	        
+        AllureUtils.captureScreenshot(driver, "Case04_deletevent2");         
         Thread.sleep(3500);  
         //find delete button and then delete event
-        driver.findElement(deletebutton).click();
+        driver.findElement(weblocators.deletebutton).click();
         
         Thread.sleep(3000);
-        driver.findElement(confirmbutton).click();
+        driver.findElement(weblocators.confirmbutton).click();
         
         Thread.sleep(3500);
 			

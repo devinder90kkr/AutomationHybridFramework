@@ -1,5 +1,6 @@
 package cuesz.schdule;
 
+import java.time.Duration;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -9,52 +10,36 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
 
 import cuesz.pages.BasePage;
 import cuesz.utils.date.DateGenerator;
 import cuesz.utils.reporting.AllureUtils;
+import cuesz.utils.web.webTestdata;
+import cuesz.utils.web.weblocators;
 
 public class Case03_editevent extends BasePage {
-	// public static String eventDate = Case01_createvent.eventDate; // Get event date from the first script
-	 
-	 public static String eventDate = DateGenerator.generateFixedDate(); // Use the generated date
-//	 public static String editedEventDate;
-	 
-	 private By scheduleIcon 	= (By.xpath("//a[@href='/schedule-master']//span//img[@alt='icon']"));
-	 private By monthview 		= (By.xpath("//span[normalize-space()='Month']"));
-	 private By userlabel 	 	= (By.xpath("//div[@class='user_title']//label"));
-	 private By editBttn 		= (By.id("editEventButton"));
-	 private By edittime 		= (By.id("event_date"));
-	 private By editIconstarttime 		= (By.xpath("//div[@id='eventStartTime']/following-sibling::button[contains(@class, 'btn-secondary')]"));
-	 private By startime		= (By.xpath("//input[@id='startTime']"));
-	 private By EndTime		= 	  (By.xpath("//input[@id='endTime']"));
-	 
-	 private By Topic		 = (By.id("eventTopics"));
-	 private By Notes		 =  (By.xpath("//textarea[contains(@placeholder,'Enter Notes')]"));
-	 private By updatebutton	= (By.xpath("//button[normalize-space()='Update Event']"));
+	public static String eventDate = DateGenerator.generateFixedDate(); // Use the generated date	 
 
-	
-	
 	public Case03_editevent(WebDriver driver) {
 		super(driver);
 		// TODO Auto-generated constructor stub
 	}
 	@Test
 	 public void Editevent() throws InterruptedException {
-	
-
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(50));
 		Thread.sleep(3500);
-		driver.findElement(scheduleIcon).click();
+		driver.findElement(weblocators.scheduleIcon).click();
 		
 	    Thread.sleep(3500);
-	    driver.findElement(monthview).click();
-		
+	    driver.findElement(weblocators.monthview).click();		
 	    // Capture a screenshot and attach it to Allure
-        AllureUtils.captureScreenshot(driver, "fuel_report_screenshot"); 
+        AllureUtils.captureScreenshot(driver, "Case03_editevent1"); 
 
-        
-	 // Pass the event date from script one to script two
+ 
+        // Pass the event date from script one to script two
         eventDate = Case01_createvent.eventDate;
         // Extract the day portion from the eventDate
         String day = eventDate.split("-")[0];
@@ -63,13 +48,16 @@ public class Case03_editevent extends BasePage {
         WebElement element = driver.findElement(By.xpath("//button[@role='cell'][normalize-space()='" + day + "']"));
         ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);
 	           
-        Thread.sleep(3000);
-        WebElement dateElement = driver.findElement(By.xpath("//div[@data-date='" + eventDate + "']"));
-        dateElement.click();
        
+        // Construct the XPath for the event dynamically
+        String eventXPath = String.format("//div[@id='Schedule Master-LPS-%s-%s-%s']", day, webTestdata.membername, webTestdata.starTime);
+//        WebElement eventClick = driver.findElement(By.xpath(eventXPath));
+        WebElement eventClick = wait.until(ExpectedConditions.elementToBeClickable(By.xpath(eventXPath)));
+        eventClick.click();
+        
         Thread.sleep(3500); 
-     // Find the elements containing the user labels
-        List<WebElement> userLabels = driver.findElements(userlabel);
+        // Find the elements containing the user labels
+        List<WebElement> userLabels = driver.findElements(weblocators.userlabel);
 
         // Get the texts from the user labels
         List<String> userTexts = new ArrayList<>();
@@ -78,34 +66,30 @@ public class Case03_editevent extends BasePage {
         }
         // Verify the texts
         if (userTexts.contains("Kumar Devinder") && userTexts.contains("Coach Seakfreight") && userTexts.contains("Devinder - Wellness Advocate")) {
-//        if (userTexts.contains("Kumar Devinder") && userTexts.contains("Seakfreight") && userTexts.contains("SteveQA Adv")) {
             System.out.println("User text verification passed!");
         } else {
             System.out.println("User text verification failed!");
         }
 
-   	 // Capture a screenshot and attach it to Allure
-        AllureUtils.captureScreenshot(driver, "fuel_report_screenshot"); 
+        // Capture a screenshot and attach it to Allure
+        AllureUtils.captureScreenshot(driver, "Case03_editevent2"); 
 
         // Click on edit button
-        WebElement editButton = driver.findElement(editBttn);
+        WebElement editButton = driver.findElement(weblocators.editBttn);
         ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", editButton);
         editButton.click();
         
         // Find the input field for the edit date and clear the existing value
-        WebElement editTime1 = driver.findElement(edittime);
+        WebElement editTime1 = driver.findElement(weblocators.edittime);
         Actions builder11 = new Actions(driver);
         // windows command
-	   // editTime1.sendKeys(Keys.CONTROL + "a");
+	    editTime1.sendKeys(Keys.CONTROL + "a");
 	    // mac command
-        editTime1.sendKeys(Keys.COMMAND + "a");
-        // Windows command
-       // editTime1.sendKeys(Keys.CONTROL + "a");
+//        editTime1.sendKeys(Keys.COMMAND + "a");
         editTime1.sendKeys(Keys.DELETE);
 
         // Get the assigned event date from Script 1
         String assignedDate = Case01_createvent.eventDate;
-
         // Split the date to extract day, month, and year
         String[] dateParts = assignedDate.split("-");
         int day1 = Integer.parseInt(dateParts[0]);
@@ -124,64 +108,59 @@ public class Case03_editevent extends BasePage {
         }
 
         // Format the next day's date
-        String nextDayDate = String.format("%02d-%02d-%04d", day1, month1, year);
-        
-//     // Store the edited date in the variable
-//        editedEventDate = nextDayDate;
-
+        String nextDayDate = String.format("%02d-%02d-%04d", day1, month1, year);        
         // Enter the updated date in the edit field
         builder11.moveToElement(editTime1).click().sendKeys(nextDayDate).sendKeys(Keys.ENTER).perform();
 
         Thread.sleep(3500);
-     // Click on the start time edit icon
-        driver.findElement(editIconstarttime).click(); 
+        // Click on the start time edit icon
+        driver.findElement(weblocators.editIconstarttime).click(); 
         // Find the input field for start time and clear the existing value
-        WebElement startTimeInput = driver.findElement(startime);
+        WebElement startTimeInput = driver.findElement(weblocators.startime);
         
-//        // window command
-        // startTimeInput.sendKeys(Keys.CONTROL + "a");
-//         //mac command
-        startTimeInput.sendKeys(Keys.COMMAND + "a");
+        // window command
+         startTimeInput.sendKeys(Keys.CONTROL + "a");
+        //mac command
+//        startTimeInput.sendKeys(Keys.COMMAND + "a");
         startTimeInput.sendKeys(Keys.DELETE);
-//        // Enter the new start time (09:00 AM)
+        // Enter the new start time (09:00 AM)
         Actions builder1 = new Actions(driver);
-        builder1.moveToElement(startTimeInput).sendKeys("10:00 AM");
+        builder1.moveToElement(startTimeInput).sendKeys(webTestdata.editstartTimeInput);
         // Press Enter to confirm the new time
         builder1.sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.ENTER).perform();
         
         Thread.sleep(5500); 
         // Find the input field for start time and clear the existing value
-        WebElement endTimeInput = driver.findElement(EndTime);
-//       // window command
-    //    endTimeInput.sendKeys(Keys.CONTROL + "a");
-//         //mac command
-        endTimeInput.sendKeys(Keys.COMMAND + "a");
+//        WebElement endTimeInput = driver.findElement(weblocators.EndTime);
+        WebElement endTimeInput = wait.until(ExpectedConditions.elementToBeClickable(weblocators.editEndTime));
+       // window command
+        endTimeInput.sendKeys(Keys.CONTROL + "a");
+         //mac command
+//        endTimeInput.sendKeys(Keys.COMMAND + "a");
         endTimeInput.sendKeys(Keys.DELETE);
         // Enter the new start time (09:00 AM)
         Actions builder2 = new Actions(driver);
-        builder2.moveToElement(endTimeInput).sendKeys("11:00 AM");
+        builder2.moveToElement(endTimeInput).sendKeys(webTestdata.editendTimeInput);
         // Press Enter to confirm the new time
         builder2.sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.ENTER).perform();
         
 	    // Find the input element
-	    WebElement notesElement = driver.findElement(Notes);
-
+	    WebElement notesElement = driver.findElement(weblocators.Notes);
 	    // Check if the input field has some text
 	    if (!notesElement.getAttribute("value").isEmpty()) {
 	        // Clear the input field
 	        notesElement.clear();
 	    }
-
 	    // Input the new value
-	    notesElement.sendKeys("this text is update during edit field values.");
+	    notesElement.sendKeys(webTestdata.edittopicvalues);
 	    
    
    	 	// Capture a screenshot and attach it to Allure
-        AllureUtils.captureScreenshot(driver, "fuel_report_screenshot"); 
+        AllureUtils.captureScreenshot(driver, "Case03_editevent3"); 
 
                 
         Thread.sleep(5000);
-        driver.findElement(updatebutton).click();
+        driver.findElement(weblocators.updatebutton).click();
         
         Thread.sleep(3000);
         

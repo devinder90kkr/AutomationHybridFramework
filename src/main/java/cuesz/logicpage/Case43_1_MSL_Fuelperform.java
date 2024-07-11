@@ -14,7 +14,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 	import cuesz.pages.BasePage;
 import cuesz.utils.SeleniumUtils;
 import cuesz.utils.reporting.AllureUtils;
-import cuesz.utils.web.webTestdata;
+import cuesz.utils.web.weblocators;
 	
 	public class Case43_1_MSL_Fuelperform extends BasePage {
 		
@@ -50,7 +50,7 @@ import cuesz.utils.web.webTestdata;
 	
 	   		   /***********************************landed on Logic page ***************************************************************************************************/
 	   		   Thread.sleep(2000);
-	   		   WebElement Logicbutton =   driver.findElement(webTestdata.logibttn);
+	   		   WebElement Logicbutton =   driver.findElement(weblocators.logibttn);
 	   		   Logicbutton.click();
 
 	   		   /****************************************Click on next & previous button and get week*****************************************************************************************************/        
@@ -64,18 +64,18 @@ import cuesz.utils.web.webTestdata;
 		      
 	   		   /***************************************Click on Perfom and scroll******************************************************************************************/
 		  	   Thread.sleep(5500);
-		  	   WebElement Fuelheading = driver.findElement(webTestdata.fuelcrad);
+		  	   WebElement Fuelheading = driver.findElement(weblocators.fuelcrad);
 		       // Scroll to the "Staff Notes" element using JavaScriptExecutor
 			   ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);;", Fuelheading);
 			     		
 			   Thread.sleep(5500);				// Wait for the element to be clickable
 			   WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5000)); // Adjust the timeout as needed
-			   WebElement Performnoteplus = wait.until(ExpectedConditions.elementToBeClickable(webTestdata.Fulplus));
+			   WebElement Performnoteplus = wait.until(ExpectedConditions.elementToBeClickable(weblocators.Fulplus));
 			   Performnoteplus.click();
 			   		
 			   Thread.sleep(5500);
 			   // Example usage:
-			   WebElement selectbutton = driver.findElement(webTestdata.selectbton);
+			   WebElement selectbutton = driver.findElement(weblocators.selectbton);
 			   // Scroll to the "Staff Notes" element using JavaScriptExecutor
 			   ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView();", selectbutton);
 
@@ -124,7 +124,7 @@ import cuesz.utils.web.webTestdata;
 		   AllureUtils.captureScreenshot(driver, "Optimal");
 		   try {
 		       // Enter values for fat fields
-		       WebElement fatsfield = driver.findElement(webTestdata.fatfild);
+		       WebElement fatsfield = driver.findElement(weblocators.fatfild);
 
 		       // Check if values exist, and if so, clear them
 		       if (!fatsfield.getAttribute("value").isEmpty()) {
@@ -139,7 +139,7 @@ import cuesz.utils.web.webTestdata;
 		       
 		       Thread.sleep(3500);
 		       // Repeat the same process for carbs and protein fields
-		       WebElement carbsfield = driver.findElement(webTestdata.carbfild);
+		       WebElement carbsfield = driver.findElement(weblocators.carbfild);
 		       if (!carbsfield.getAttribute("value").isEmpty()) {
 		    	   carbsfield.clear();		    	  
 		       }
@@ -148,7 +148,7 @@ import cuesz.utils.web.webTestdata;
 		       carbsfield.sendKeys("210");
 		     
 		       Thread.sleep(3500);
-		       WebElement Proteinfield = driver.findElement(webTestdata.Prteinfeld);
+		       WebElement Proteinfield = driver.findElement(weblocators.Prteinfeld);
 		       if (!Proteinfield.getAttribute("value").isEmpty()) {
 		    	   Proteinfield.clear();
 		       }
@@ -205,7 +205,7 @@ import cuesz.utils.web.webTestdata;
 					   
 			    /*Enter values for Activity*/
 			    Thread.sleep(2000);
-			    WebElement Activity =driver.findElement(webTestdata.Activityselect);
+			    WebElement Activity =driver.findElement(weblocators.Activityselect);
 			    Actions builder6 = new Actions(driver);
 			    builder6.moveToElement(Activity).click().sendKeys("walking").perform();
 			    Thread.sleep(2000);
@@ -217,7 +217,7 @@ import cuesz.utils.web.webTestdata;
    /********************************************Now move to Note/duration field*************************************************/		   
 			  
    
-			   WebElement notes = driver.findElement(webTestdata.notesfield);   
+			   WebElement notes = driver.findElement(weblocators.notesfield);   
 			   if (!notes.getAttribute("value").isEmpty()) {
 				   notes.clear();
 		       }
@@ -226,7 +226,7 @@ import cuesz.utils.web.webTestdata;
  
 			   
 			   Thread.sleep(1500);
-			   WebElement duration = driver.findElement(webTestdata.Durationfield);
+			   WebElement duration = driver.findElement(weblocators.Durationfield);
 			   if (!duration.getAttribute("value").isEmpty()) {
 				   duration.clear();
 		       }
@@ -239,7 +239,7 @@ import cuesz.utils.web.webTestdata;
 			   
 			   try {
 		            // Locate the input field
-				   WebElement inputField = driver.findElement(webTestdata.inptFild);
+				   WebElement inputField = driver.findElement(weblocators.inptFild);
 		            // Enter values into the input field
 		            inputField.sendKeys("Gluten Free bread");
 		            Thread.sleep(3500);
@@ -268,7 +268,7 @@ import cuesz.utils.web.webTestdata;
 	   /******************************Input values for option 2 Pre-Perform Secondary field*****************************************/		   
 			   try {
 		            // Locate the input field
-				   WebElement inputField = driver.findElement(webTestdata.inptFild1);
+				   WebElement inputField = driver.findElement(weblocators.inptFild1);
 		            // Enter values into the input field
 		            inputField.sendKeys("fried egg");
 		            Thread.sleep(3500);
@@ -300,7 +300,7 @@ import cuesz.utils.web.webTestdata;
 						   
 						   try {
 					            // Locate the input field
-							   WebElement inputField = driver.findElement(webTestdata.inptFild2);
+							   WebElement inputField = driver.findElement(weblocators.inptFild2);
 					            // Enter values into the input field
 					            inputField.sendKeys("Broccoli");
 					            Thread.sleep(3500);
@@ -331,7 +331,7 @@ import cuesz.utils.web.webTestdata;
 									   
 									   try {
 								            // Locate the input field
-										   WebElement inputField = driver.findElement(webTestdata.inptFild3);
+										   WebElement inputField = driver.findElement(weblocators.inptFild3);
 								            // Enter values into the input field
 								            inputField.sendKeys("jicama");
 								            Thread.sleep(3500);

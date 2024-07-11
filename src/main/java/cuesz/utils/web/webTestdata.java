@@ -2,25 +2,27 @@ package cuesz.utils.web;
 
 import org.openqa.selenium.By;
 
+import cuesz.utils.date.DateGenerator;
+
 public class webTestdata {
 	
-	//Case43_1_MSL_Fuelperform
-	public static final By fuelcrad = 		(By.id("FuelCard"));
-	public static final By Fulplus= 		(By.xpath("//button[@data-bs-target='#FuelToTrain']"));
-	public static final By selectbton = 	(By.xpath("//div[@id='FuelCard']//div[@class='d-flex justify-content-end calender_drop']//button[1]"));
-	public static final By logibttn =	(By.xpath("//span[normalize-space()='Logic Page']"));
-	public static final By fatfild =	(By.id("FuelRecFat-Monday"));
-	public static final By carbfild	= 	(By.id("FuelRecCarbs-Monday"));
-	public static final By Prteinfeld	= (By.id("FuelRecProtein-Monday"));
-	public static final By Activityselect	= (By.id("FuelPerform-SelectActivity-Monday"));
-	public static final By notesfield		= (By.id("editorFuelPerform-Note-Monday"));
-	public static final By Durationfield	= (By.id("FuelPerform-Mins-Monday"));
-	public static final By inptFild 	= 	(By.xpath("//div[@id='FuelPerformSelectedOptionsPrePerform-Perform-prePerform-Primary-Monday']//input"));
-	public static final By inptFild1 = (By.xpath("//div[@id='FuelPerformSelectedOptionsPrePerform-Perform-prePerform-Secondary-Monday']//input"));
-	public static final By inptFild2 = (By.xpath("//div[@id='FuelPerformSelectedOptionsDuringPerform-Perform-duringPerform-Primary-Monday']//input"));	
-	public static final By inptFild3	= (By.xpath("//div[@id='FuelPerformSelectedOptionsPostPerform-Perform-postPerform-Secondary-Monday']//input"));
+	//Case01_createvent
 	
+	public static final String startime =	"06:30 Pm";
+	public static String starTime = "06:30";
+	public static final String endtime	=	"07:30 PM";
+	public static final String topic 	=	"Live perform session";
+	public static final String membername = "Kumar Devinder";
+	public static final String staff1	= "Coach Seakfreight";
+	public static final String staff2	=	"Devinder - Wellness Advocate";
+	public static final String notes	= "We are excited to announce that there will be a live performance event. So please availble";
+	public static final String editstartTimeInput	=	"10:00 AM";
+	public static String editstartInput = "10:00";
+	public static final String editendTimeInput	=	"11:00 AM";
+	public static final String edittopicvalues = "this text is update during edit field values.";
+
 	
+
 	//Case43_02_MSL_fuel_currentday
 	public static final String fuel1	="Mushrooms Cooked";
 	public static final String fuel2 	="Blueberries";
