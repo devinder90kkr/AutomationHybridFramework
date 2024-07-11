@@ -4,6 +4,11 @@ import org.openqa.selenium.By;
 
 public class weblocators {
 	
+	//	Step06_SE_withouttime
+	public static final By Addnewevent 		=  (By.xpath("//button[normalize-space()='Add New Event']"));	
+	public static final By membercalicon 	=  (By.xpath("//a[@href='/member-calls']//span"));
+	public static final By usertitle=  (By.xpath("//div[@class='user_title']//label"));
+			
 	//Case43_1_MSL_Fuelperform
 	public static final By Activityselect	= (By.id("FuelPerform-SelectActivity-Monday"));
 	public static final By notesfield		= (By.id("editorFuelPerform-Note-Monday"));
@@ -36,8 +41,9 @@ public class weblocators {
 	 //Case04_deletevent
 	 public static final By deletebutton	= (By.xpath("//button[@class='btn btn-sm del_btn']//em"));
 	 public static final By confirmbutton 	= (By.xpath("//span[normalize-space()='Confirm']"));
-
-	
+	 //Step05_SM_daymonthweek
+	 public static final By dayview			= (By.xpath("//span[normalize-space()='Day']"));
+	 public static final By weekview			= (By.xpath("//span[normalize-space()='Week']"));
 	
 	
 	

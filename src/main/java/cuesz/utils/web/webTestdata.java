@@ -7,7 +7,7 @@ import cuesz.utils.date.DateGenerator;
 public class webTestdata {
 	
 	//Case01_createvent
-	
+	public static String eventDate = DateGenerator.generateFixedDate(); // Use the generated date
 	public static final String startime =	"06:30 Pm";
 	public static String starTime = "06:30";
 	public static final String endtime	=	"07:30 PM";
@@ -20,7 +20,6 @@ public class webTestdata {
 	public static String editstartInput = "10:00";
 	public static final String editendTimeInput	=	"11:00 AM";
 	public static final String edittopicvalues = "this text is update during edit field values.";
-
 	
 
 	//Case43_02_MSL_fuel_currentday
