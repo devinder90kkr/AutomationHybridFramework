@@ -14,6 +14,7 @@ import java.util.HashMap;
 import java.util.Map;
 import org.openqa.selenium.Dimension;
 
+import io.github.bonigarcia.wdm.managers.ChromeDriverManager;
 import io.qameta.allure.Step;
 
 //Class Declaration and Variables:
@@ -29,6 +30,7 @@ public class WebDriverManager {						//The WebDriverManager class is located in 
                     // Setting up Google Chrome options
                     Map<String, Object> prefs = new HashMap<>();
                     prefs.put("profile.default_content_setting_values.notifications", 2);
+                    ChromeDriverManager.chromedriver().setup();
                     ChromeOptions options = new ChromeOptions();
                   
                     // Need to add --headless=new because if chrome version more than v109+
