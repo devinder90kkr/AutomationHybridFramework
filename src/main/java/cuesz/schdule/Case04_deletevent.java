@@ -39,31 +39,30 @@ public class Case04_deletevent extends BasePage {
 	    Thread.sleep(3500);
 	    driver.findElement(weblocators.monthview).click();
 	    
-	 // Pass the event date from script one to script three
-	 		String eventDate = Case01_createvent.eventDate;
+    	// Pass the event date from script one to script three
+ 		String eventDate = Case01_createvent.eventDate;
 
-	 		// Split the date to extract day, month, and year
-	 		String[] dateParts = eventDate.split("-");
-	 		int day1 = Integer.parseInt(dateParts[0]);
-	 		int month1 = Integer.parseInt(dateParts[1]);
-	 		int year = Integer.parseInt(dateParts[2]);
+ 		// Split the date to extract day, month, and year
+ 		String[] dateParts = eventDate.split("-");
+ 		int day1 = Integer.parseInt(dateParts[0]);
+ 		int month1 = Integer.parseInt(dateParts[1]);
+ 		int year = Integer.parseInt(dateParts[2]);
 
-	 		// Calculate the next day's date
-	 		LocalDate currentDate = LocalDate.of(year, month1, day1);
-	 		LocalDate nextDay = currentDate.plusDays(1);
+ 		// Calculate the next day's date
+ 		LocalDate currentDate = LocalDate.of(year, month1, day1);
+ 		LocalDate nextDay = currentDate.plusDays(1);
 
-	 		// Format the next day's date
-	 		DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MM-yyyy");
-	 		String nextDayDate = nextDay.format(formatter);
-	 	// Extract the day portion from the eventDate
-	        String day = nextDayDate.split("-")[0];
+ 		// Format the next day's date
+ 		DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MM-yyyy");
+ 		String nextDayDate = nextDay.format(formatter);
+ 		// Extract the day portion from the eventDate
+        String day = nextDayDate.split("-")[0];
 
-	 		// Capture a screenshot and attach it to Allure
-	        AllureUtils.captureScreenshot(driver, "Case04_deletevent1"); 
+ 		// Capture a screenshot and attach it to Allure
+        AllureUtils.captureScreenshot(driver, "Case04_deletevent1"); 
 	 		
 	      
-	 		// Find the element to scroll to the next day's date on the calendar (matching only the day)
-//	 	WebElement element = driver.findElement(By.xpath("//button[@role='cell'][normalize-space()='" + nextDay.getDayOfMonth() + "']"));
+	 	// Find the element to scroll to the next day's date on the calendar (matching only the day)
 	 	WebElement element = driver.findElement(By.xpath("//button[normalize-space()='" + nextDay.getDayOfMonth() + "']"));
 	 	((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);
 

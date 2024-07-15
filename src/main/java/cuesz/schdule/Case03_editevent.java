@@ -83,9 +83,9 @@ public class Case03_editevent extends BasePage {
         WebElement editTime1 = driver.findElement(weblocators.edittime);
         Actions builder11 = new Actions(driver);
         // windows command
-	    editTime1.sendKeys(Keys.CONTROL + "a");
+//	    editTime1.sendKeys(Keys.CONTROL + "a");
 	    // mac command
-//        editTime1.sendKeys(Keys.COMMAND + "a");
+        editTime1.sendKeys(Keys.COMMAND + "a");
         editTime1.sendKeys(Keys.DELETE);
 
         // Get the assigned event date from Script 1
@@ -119,9 +119,9 @@ public class Case03_editevent extends BasePage {
         WebElement startTimeInput = driver.findElement(weblocators.startime);
         
         // window command
-         startTimeInput.sendKeys(Keys.CONTROL + "a");
+//         startTimeInput.sendKeys(Keys.CONTROL + "a");
         //mac command
-//        startTimeInput.sendKeys(Keys.COMMAND + "a");
+        startTimeInput.sendKeys(Keys.COMMAND + "a");
         startTimeInput.sendKeys(Keys.DELETE);
         // Enter the new start time (09:00 AM)
         Actions builder1 = new Actions(driver);
@@ -134,9 +134,9 @@ public class Case03_editevent extends BasePage {
 //        WebElement endTimeInput = driver.findElement(weblocators.EndTime);
         WebElement endTimeInput = wait.until(ExpectedConditions.elementToBeClickable(weblocators.editEndTime));
        // window command
-        endTimeInput.sendKeys(Keys.CONTROL + "a");
+//        endTimeInput.sendKeys(Keys.CONTROL + "a");
          //mac command
-//        endTimeInput.sendKeys(Keys.COMMAND + "a");
+        endTimeInput.sendKeys(Keys.COMMAND + "a");
         endTimeInput.sendKeys(Keys.DELETE);
         // Enter the new start time (09:00 AM)
         Actions builder2 = new Actions(driver);
