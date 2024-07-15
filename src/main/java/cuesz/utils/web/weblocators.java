@@ -4,6 +4,21 @@ import org.openqa.selenium.By;
 
 public class weblocators {
 	
+	
+	
+	//Step12_03_SE_create_staffevent
+	public static final By endtime		 = 	(By.id("eventEndTime"));
+	public static final By eventSelectn		 = (By.id("eventTopics"));
+	public static final By scdedulemastr = (By.xpath("//a[@href='/schedule-master']//span//img[@alt='icon']"));
+	public static final By monthvew		 = (By.xpath("//span[normalize-space()='Month']"));
+	public static final By usrlabel		 = (By.xpath("//div[@class='user_title']//label"));
+	
+	
+	//	Step12_01_SE_createvent_withouttime	
+	public static final By Schdulemaste = 	(By.xpath("//*[@id=\"root\"]/div/div[1]/div/div/div/div[2]/div/div[1]/div/div[2]"));
+	public static final By Addnewbuttn  = 	(By.xpath("//div[@id='root']/div/div/div/div/div[2]/div/div/button"));
+	public static final By labeltxt		=	(By.id("eventTopics"));
+	
 	//Step09_MC_viewevent
 	public static final By membrcall 	=  (By.xpath("//a[@href='/member-calls']//span"));	
 	 public static final By usrtitle 	 	= (By.xpath("//div[@class='user_title']//label"));
