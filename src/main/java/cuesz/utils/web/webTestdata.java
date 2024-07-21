@@ -1,7 +1,5 @@
 package cuesz.utils.web;
 
-import org.openqa.selenium.By;
-
 import cuesz.utils.date.DateGenerator;
 
 public class webTestdata {
@@ -12,6 +10,7 @@ public class webTestdata {
 	public static String starTime = "06:30";
 	public static final String endtime	=	"07:30 PM";
 	public static final String topic 	=	"Live perform session";
+	public static final String topic2 	=	"Staff Meeting";
 	public static final String membername = "Kumar Devinder";
 	public static final String staff1	= "Coach Seakfreight";
 	public static final String staff2	=	"Devinder - Wellness Advocate";

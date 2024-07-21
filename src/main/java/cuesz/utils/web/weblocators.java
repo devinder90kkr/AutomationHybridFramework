@@ -4,6 +4,34 @@ import org.openqa.selenium.By;
 
 public class weblocators {
 	
+	
+	
+	//Step12_03_SE_create_staffevent
+	public static final By endtime		 = 	(By.id("eventEndTime"));
+	public static final By eventSelectn		 = (By.id("eventTopics"));
+	public static final By scdedulemastr = (By.xpath("//a[@href='/schedule-master']//span//img[@alt='icon']"));
+	public static final By monthvew		 = (By.xpath("//span[normalize-space()='Month']"));
+	public static final By usrlabel		 = (By.xpath("//div[@class='user_title']//label"));
+	
+	
+	//	Step12_01_SE_createvent_withouttime	
+	public static final By Schdulemaste = 	(By.xpath("//*[@id=\"root\"]/div/div[1]/div/div/div/div[2]/div/div[1]/div/div[2]"));
+	public static final By Addnewbuttn  = 	(By.xpath("//div[@id='root']/div/div/div/div/div[2]/div/div/button"));
+	public static final By labeltxt		=	(By.id("eventTopics"));
+	
+	//Step09_MC_viewevent
+	public static final By membrcall 	=  (By.xpath("//a[@href='/member-calls']//span"));	
+	 public static final By usrtitle 	 	= (By.xpath("//div[@class='user_title']//label"));
+	 public static final By editiconmc 		= (By.id("editEventButton"));
+	 public static final By edittim1 		= (By.id("event_date"));
+	 public static final By editicon2 		= (By.xpath("//div[@id='eventStartTime']/following-sibling::button[contains(@class, 'btn-secondary')]"));
+	 public static final By starttime		= (By.xpath("//input[@id='startTime']"));
+	 public static final By updateeventbtn	= (By.xpath("//button[normalize-space()='Update Event']"));
+	 public static final By Membercalenda = (By.xpath("//a[@href='/member-calls']//span"));
+		public static final By usrlabl		 = (By.xpath("//div[@class='user_title']//label"));
+		public static final By deletbttn	 = (By.xpath("//button[@class='btn btn-sm del_btn']//em"));
+		public static final By confirmbttn2	 = (By.xpath("//span[normalize-space()='Confirm']"));	
+		
 	//	Step06_SE_withouttime
 	public static final By Addnewevent 		=  (By.xpath("//button[normalize-space()='Add New Event']"));	
 	public static final By membercalicon 	=  (By.xpath("//a[@href='/member-calls']//span"));
