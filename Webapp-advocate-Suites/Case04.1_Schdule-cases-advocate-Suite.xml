@@ -3,7 +3,8 @@
 <suite name="Suite5A">	 
   <test thread-count="6" name="Createevent-variouscases">
     <classes>     
- <class name="cuesz.schduletest.advocate.Case12_07_SE_create_eventwithoutopic"/>
+	 
+	  <class name="cuesz.schduletest.advocate.Case12_07_SE_create_eventwithoutopic"/>
       <class name="cuesz.schduletest.advocate.Step12_08_SE_createventtest"/>
       <class name="cuesz.schduletest.advocate.Step12_09_SE_createeventforpasttest"/>
 	  <class name="cuesz.schduletest.advocate.Step12_10_SE_createeventbyselecteddatefromcalendartest"/>

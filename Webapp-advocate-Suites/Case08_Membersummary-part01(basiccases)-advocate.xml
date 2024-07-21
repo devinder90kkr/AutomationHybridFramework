@@ -4,7 +4,7 @@
 
   <test thread-count="5" name="Membersummary-Basic-cases">
     <classes>    
- <class name="cuesz.membersummarytest.advocate.Case15_MS_memberhoverdetail"/>
+	 <class name="cuesz.membersummarytest.advocate.Case15_MS_memberhoverdetail"/>
 	  <class name="cuesz.membersummarytest.advocate.Case16_MS_searchclik"/>
       <class name="cuesz.membersummarytest.advocate.Case17_MS_profle"/>
 	  <class name="cuesz.membersummarytest.advocate.Case18_MS_DotAbiltest"/>

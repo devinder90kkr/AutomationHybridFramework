@@ -5,7 +5,7 @@
   <test thread-count="5" name="Member-summary-spheres-perform-mindful-fuel-restore-dropdowncases">
     <classes>    
       
- <class name="cuesz.membersummarytest.advocate.Case21_MS_speherestest"/>
+ 	  <class name="cuesz.membersummarytest.advocate.Case21_MS_speherestest"/>
 	  <class name="cuesz.membersummarytest.advocate.Case22_MS_speheres_Overridetest"/>
 	  <class name="cuesz.membersummarytest.advocate.Case23_MS_performactivitytest"/>
 	  <class name="cuesz.membersummarytest.advocate.Case24_MS_Mindfulactivitytest"/>

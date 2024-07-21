@@ -10,6 +10,7 @@
  	   <class name="cuesz.logictest.advocate.Case43_1_MSL_Fuelperformtest" />
        <class name="cuesz.logictest.advocate.Case44_MSL_Mindfultest" />
 	   <class name="cuesz.logictest.advocate.Case45_MSL_restoretest" />    
-    </classes>
+    
+</classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
