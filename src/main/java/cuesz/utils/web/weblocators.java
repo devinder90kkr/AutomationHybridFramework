@@ -8,6 +8,7 @@ public class weblocators {
 	//Case101_Workout_Templates
 	public static final By templateicon		 = 	(By.xpath("//a[@href='/templates']//span"));
 	public static final By templateplsicon		 = 	(By.xpath("//div[@class='btn_grey']//em"));
+	public static final By addTemplateHeading	=	(By.xpath("//h2[normalize-space()='Add Template']"));
 			
 	//Step12_03_SE_create_staffevent
 	public static final By endtime		 = 	(By.id("eventEndTime"));

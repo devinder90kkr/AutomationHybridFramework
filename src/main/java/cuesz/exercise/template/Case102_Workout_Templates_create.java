@@ -10,6 +10,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.testng.annotations.Test;
+import org.testng.Assert;
 import org.testng.SkipException;
 
 import cuesz.pages.BasePage;
@@ -17,19 +18,20 @@ import cuesz.utils.reporting.AllureUtils;
 import cuesz.utils.web.ElementActions;
 import cuesz.utils.web.weblocators;
 
-public class Case101_Workout_Templates extends BasePage {
-	private static final Logger LOGGER = LoggerFactory.getLogger(Case101_Workout_Templates.class);
+public class Case102_Workout_Templates_create extends BasePage {
+	private static final Logger LOGGER = LoggerFactory.getLogger(Case102_Workout_Templates_create.class);
 	private ElementActions elementActions;
 
-    public Case101_Workout_Templates(WebDriver driver) {
+    public Case102_Workout_Templates_create(WebDriver driver) {
         super(driver);
         this.elementActions = new ElementActions(driver);
     }
 
     @Test
-    public void Workouttemplate() throws InterruptedException {
+    public void Createworkout() throws InterruptedException {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
         try {
+            	
         	// Click on Workout template icon from nav bar menu
             wait.until(ExpectedConditions.visibilityOfElementLocated(weblocators.templateicon));
             elementActions.clickElement(weblocators.templateicon);
@@ -38,7 +40,7 @@ public class Case101_Workout_Templates extends BasePage {
             AllureUtils.logStep("Clicked on templateicon");
             // Capture a screenshot and attach it to Allure
             AllureUtils.captureScreenshot(driver, "Case102_Workout_Templates1");
-        	
+
             // Click on Workout template icon from nav bar menu
             wait.until(ExpectedConditions.visibilityOfElementLocated(weblocators.templateplsicon));
             elementActions.clickElement(weblocators.templateplsicon);
@@ -47,6 +49,23 @@ public class Case101_Workout_Templates extends BasePage {
 	        AllureUtils.logStep("Click on templateplsicon");
 	        // Capture a screenshot and attach it to Allure
 	        AllureUtils.captureScreenshot(driver, "Case101_Workout_Templates2");
+	        
+	        // Verify Add Template heading is displayed
+            wait.until(ExpectedConditions.visibilityOfElementLocated(weblocators.addTemplateHeading));
+            boolean isHeadingDisplayed = elementActions.isElementDisplayed(weblocators.addTemplateHeading);
+            Assert.assertTrue(isHeadingDisplayed, "Add Template heading is not displayed");
+
+            // Get heading text
+            String headingText = elementActions.getTextFromPopup(weblocators.addTemplateHeading);
+            // Log message to console and Allure report
+            LOGGER.info("Verified Add Template heading is displayed: " + headingText);
+            AllureUtils.logStep("Verified Add Template heading is displayed: " + headingText);
+            // Capture a screenshot and attach it to Allure
+            AllureUtils.captureScreenshot(driver, "Case102_Workout_Templates_Add_Template_Heading");
+	        
+            
+            
+            
             
             
         } catch (TimeoutException e) {
