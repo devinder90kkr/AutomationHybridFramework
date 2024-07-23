@@ -4,6 +4,14 @@ import cuesz.utils.date.DateGenerator;
 
 public class webTestdata {
 	
+	
+	//	Case102_Workout_Templates_create
+	public static final String templatename = "MassProduction";
+	public static final String exercisename = "Above Head Chest Stretch, Bodyweight";
+	public static final String description = "hello this is just for testing purpose";
+	public static final String repsdata	=	"5";
+	public static final String recoverydata	=	"22";
+	
 	//Case01_createvent
 	public static String eventDate = DateGenerator.generateFixedDate(); // Use the generated date
 	public static final String startime =	"06:30 Pm";
