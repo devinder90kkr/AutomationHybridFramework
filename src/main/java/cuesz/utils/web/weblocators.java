@@ -5,7 +5,10 @@ import org.openqa.selenium.By;
 public class weblocators {
 	
 	
-	
+	//Case101_Workout_Templates
+	public static final By templateicon		 = 	(By.xpath("//a[@href='/templates']//span"));
+	public static final By templateplsicon		 = 	(By.xpath("//div[@class='btn_grey']//em"));
+			
 	//Step12_03_SE_create_staffevent
 	public static final By endtime		 = 	(By.id("eventEndTime"));
 	public static final By eventSelectn		 = (By.id("eventTopics"));

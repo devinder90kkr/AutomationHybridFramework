@@ -1,5 +1,7 @@
 // package and import statement 
 package cuesz.pages;
+import java.util.concurrent.TimeUnit;
+
 import org.openqa.selenium.WebDriver;
 
 public class BasePage {							//Class declaration
@@ -8,7 +10,9 @@ public class BasePage {							//Class declaration
 
 // Define Constructor 
 	public BasePage(WebDriver driver) {     	// is the constructor of the BasePage class.
-    this.driver = driver; 						// Inside the constructor, this.driver = driver; assigns the driver parameter passed to the BasePage class's driver variable.
+    this.driver = driver; 	
+ // Set implicit wait time to 10 seconds
+    driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);// Inside the constructor, this.driver = driver; assigns the driver parameter passed to the BasePage class's driver variable.
 }
 
 // Common methods that can be used across different page classes

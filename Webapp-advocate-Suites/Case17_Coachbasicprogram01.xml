@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Coach program basic">
+
+  <test thread-count="5" name="Permission cases for coach program">
+    <classes>    
+ 	  <class name="cuesz.exercisetest.template.Case101_Workouttest_Templates_leadcoach"/>
+	 <class name="cuesz.exercisetest.template.Case102_Workouttest_Templates_nonleadcoach"/>
+	  <class name="cuesz.exercisetest.template.Case103_Workouttest_Templates_advocate"/>
+	   <class name="cuesz.exercisetest.template.Case104_Workouttest_Templates_doctor"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->
