@@ -57,8 +57,6 @@ public class Case102_Workout_Templates_create extends BasePage {
             // Log message to console and Allure report
             LOGGER.info("Verified Add Template heading is displayed: " + headingText);
             AllureUtils.logStep("Verified Add Template heading is displayed: " + headingText);
-            // Capture a screenshot and attach it to Allure
-            AllureUtils.captureScreenshot(driver, "Case102_Workout_Templates_Add_Template_Heading");
             
     
             // Click on Workout template icon from nav bar menu
@@ -80,8 +78,6 @@ public class Case102_Workout_Templates_create extends BasePage {
             // Log message to console and Allure report
             LOGGER.info("Verified Add Template heading is displayed: " + headingText1);
             AllureUtils.logStep("Verified Add Template heading is displayed: " + headingText1);
-            // Capture a screenshot and attach it to Allure
-            AllureUtils.captureScreenshot(driver, "Case102_Workout_Templates_Add_Template_Heading");
 	        
             //Verify Add Template heading is displayed
             wait.until(ExpectedConditions.visibilityOfElementLocated(weblocators.templatname));
@@ -138,7 +134,10 @@ public class Case102_Workout_Templates_create extends BasePage {
             // Log message to console and Allure report
 	        LOGGER.info("Verified and add reps values corresponding to exercise");
 	        AllureUtils.logStep("Verified and add reps values corresponding to exercise");
-
+	        // Capture a screenshot and attach it to Allure
+	        AllureUtils.captureScreenshot(driver, "Case102_Workout_Exercise_Container_Displayed1");
+	        
+	        
             
             //add reps for exercise
 	        wait.until(ExpectedConditions.elementToBeClickable(weblocators.recoveryfield));
