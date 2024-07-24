@@ -14,19 +14,12 @@ import org.testng.annotations.Test;
 import cuesz.pages.BasePage;
 import cuesz.utils.date.DateGenerator;
 import cuesz.utils.reporting.AllureUtils;
+import cuesz.utils.web.webTestdata;
+import cuesz.utils.web.weblocators;
 
 public class Case02_viewevent extends BasePage {
 	private static final Logger LOGGER = LoggerFactory.getLogger(Case02_viewevent.class);
-	
-	//private String eventDate; // Date parameter from script one
-	
 	public static String eventDate = DateGenerator.generateFixedDate(); // Use the generated date
-	
-	private By scheduleIcon 	= (By.xpath("//a[@href='/schedule-master']//span//img[@alt='icon']"));
-	private By monthview 		= (By.xpath("//span[normalize-space()='Month']"));
-	private By userlabel 	 	= (By.xpath("//div[@class='user_title']//label"));
-//	private By NextButton = (By.xpath("//span[normalize-space()='Next']"));
-
 	
 	public Case02_viewevent(WebDriver driver) {
 		super(driver);
@@ -34,15 +27,16 @@ public class Case02_viewevent extends BasePage {
 	}
 	@Test
 	 public void Viewevent() throws InterruptedException {
+		//WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(50));
 		 		
 		Thread.sleep(3500);
-		driver.findElement(scheduleIcon).click();
+		driver.findElement(weblocators.scheduleIcon).click();
 		
 		LOGGER.info("Click on schdule feature");
         AllureUtils.logStep("Click on schdule feature");
 		
 	    Thread.sleep(3500);
-	    driver.findElement(monthview).click();   
+	    driver.findElement(weblocators.monthview).click();   
 	 
 	    LOGGER.info("Click on monthly view option");
         AllureUtils.logStep("Click on monthly view option");
@@ -59,18 +53,16 @@ public class Case02_viewevent extends BasePage {
         LOGGER.info("Passed event date");
         AllureUtils.logStep("Passed event date");
         // Capture a screenshot and attach it to Allure
-        AllureUtils.captureScreenshot(driver, "fuel_report_screenshot");
+        AllureUtils.captureScreenshot(driver, "Case02_viewevent1");
         
-        Thread.sleep(3000);
-        WebElement dateElement = driver.findElement(By.xpath("//div[@data-date='" + eventDate + "']"));
-        dateElement.click();
-        LOGGER.info("Click on passed event date");
-        AllureUtils.logStep("Click on passed event date");
-        
+        // Construct the XPath for the event dynamically
+        String eventXPath = String.format("//div[@id='Schedule Master-LPS-%s-%s-%s']", day, webTestdata.membername, webTestdata.starTime);
+        WebElement eventClick = driver.findElement(By.xpath(eventXPath));
+        eventClick.click();
         
         Thread.sleep(3000); 
         // Find the elements containing the user labels
-        List<WebElement> userLabels = driver.findElements(userlabel);
+        List<WebElement> userLabels = driver.findElements(weblocators.userlabel);
 
         // Get the texts from the user labels
         List<String> userTexts = new ArrayList<>();
@@ -79,7 +71,7 @@ public class Case02_viewevent extends BasePage {
         }
 
         // Verify the texts
-        if (userTexts.contains("Kumar Devinder") && userTexts.contains("Coach Seakfreight") && userTexts.contains("Devinder - Wellness Advocate")) {
+        if (userTexts.contains(webTestdata.membername) && userTexts.contains(webTestdata.staff1) && userTexts.contains(webTestdata.staff2)) {
             System.out.println("User text verification passed!");
             
             LOGGER.info("View event detail as per member & staff info");
@@ -88,10 +80,8 @@ public class Case02_viewevent extends BasePage {
         } else {
             System.out.println("User text verification failed!");
         }
-  
-        
+    
 Thread.sleep(3500);
-        
-	
+        	
 		}
 	}	

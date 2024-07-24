@@ -4,11 +4,7 @@ import org.openqa.selenium.By;
 import io.appium.java_client.AppiumBy;
 
 public class mobileLocators {
-	
-
-	
-	
-	
+		
 	//Tutrial screen locators
 	public static final By tutorialbttn	 	=	AppiumBy.accessibilityId("Tutorial");
 	public static final By motionsession 	=	AppiumBy.iOSClassChain("**/XCUIElementTypeOther[`name == \"Motion Explore Session\"`][2]");
@@ -71,8 +67,7 @@ public class mobileLocators {
 	public static final By startmindful		= AppiumBy.accessibilityId("Start");
 	public static final By submitmindful	= AppiumBy.accessibilityId("Submit");
 	public static final By savebttn			= AppiumBy.accessibilityId("Save");
-	
-	
+
 	
 	//locators for chat screen
 	public static final By ChatClick	=	AppiumBy.iOSClassChain("**/XCUIElementTypeOther[`name == \"Advocate\"`][2]");
@@ -96,6 +91,7 @@ public class mobileLocators {
 	public static final By done1		=	AppiumBy.accessibilityId("QLOverlayDoneButtonAccessibilityIdentifier");
 	public static final By searchtext	=	AppiumBy.accessibilityId("Search");	
 	public static final By Attahment	=	AppiumBy.accessibilityId("Attach");
+	public static final By urgenticon	=	AppiumBy.accessibilityId("Urgent");
 	
 	
 	

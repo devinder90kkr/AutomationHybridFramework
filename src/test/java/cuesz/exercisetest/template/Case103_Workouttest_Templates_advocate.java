@@ -1,31 +1,35 @@
-	package cuesz.schduletest.advocate;
+ package cuesz.exercisetest.template;
 
-import java.io.ByteArrayOutputStream;
 import java.io.FileInputStream;
 import java.io.IOException;
-import java.io.PrintStream;
-import java.util.Properties;
-
 import org.openqa.selenium.WebDriver;
+import org.testng.SkipException;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
+import cuesz.exercise.template.Case101_Workout_Templates;
 import cuesz.logintest.AdvocateLogin;
-import cuesz.schdule.Step10_MC_editevent;
 import cuesz.utils.WebDriverManager;
 import cuesz.utils.reporting.AllureUtils;
-import io.qameta.allure.*;
+import io.qameta.allure.Allure;
+import io.qameta.allure.Description;
+import io.qameta.allure.Epic;
+import io.qameta.allure.Feature;
+import io.qameta.allure.Owner;
+import io.qameta.allure.Severity;
+import io.qameta.allure.SeverityLevel;
+import io.qameta.allure.Story;
+import java.util.Properties;
 
-@Epic ("Advocate Scheduling")
-@Feature ("Edit event from master calendar")
 
-public class Case10_MC_editevent {
+@Epic ("Exercise Workout templates")
+@Feature ("Workout Creation from coach panel")
+public class Case103_Workouttest_Templates_advocate {
     private WebDriver driver;
     private AdvocateLogin advocateLogin;
-    private Step10_MC_editevent scheduleEventPage;
+    private Case101_Workout_Templates WorkouttemplatePage;
     
-    private ByteArrayOutputStream consoleOutput; // To capture console output
 
     @BeforeClass
     public void setUp() {
@@ -35,45 +39,38 @@ public class Case10_MC_editevent {
         driver = WebDriverManager.getDriver(browser);
         
         driver.manage().window().maximize();
-        advocateLogin = new AdvocateLogin(); // Initialize the advocateLogin object
-        scheduleEventPage = new Step10_MC_editevent(driver);
-
-        // Redirect console output to capture it
-        consoleOutput = new ByteArrayOutputStream();
-        PrintStream printStream = new PrintStream(consoleOutput);
-        System.setOut(printStream);
+        advocateLogin = new AdvocateLogin(); // Initialise the advocateLogin object
+        WorkouttemplatePage = new Case101_Workout_Templates(driver);
+        
     }
     
-
     @Test
     
     @Owner("QA") // Add the @Owner annotation to specify the executor
-    @Severity(SeverityLevel.NORMAL)      
-    @Description("Advocate edit event from master calendar")
+    @Severity(SeverityLevel.NORMAL)     
+    @Description("Advocate schdules and creates an event")
     @Story("Schdule Events")
-    
-    public void advocateMastereditEventTest() throws InterruptedException {
-        advocateLogin.setUp(); // Call the setUp method of AdvocateLogin to initialize loginPage
-        advocateLogin.testAdvocateLogin();
+    public void workoutemplate() throws InterruptedException {
+    	 advocateLogin.setUp(); // Call the setUp method of AdvocateLogin to initialise loginPage
+         advocateLogin.testAdvocateLogin();
+    	
+    	try {
+            WorkouttemplatePage.Workouttemplate();
+        } catch (SkipException e) {
+            System.out.println(e.getMessage());
+        }
 
         // Access the Schedule Event page
-        scheduleEventPage.Editevent();
-    
+//    	WorkouttemplatePage.Workouttemplate();
+        
         // Generate a dynamic link based on some runtime conditions or data
         String dynamicLink = generateDynamicLink();
 
         // Add the dynamic link to the Allure report
-        Allure.link("Case10_MC_editevent", dynamicLink);
+        Allure.link("Case01_createventtest", dynamicLink);
     
-        // Capture console logs
-        String consoleLogs = consoleOutput.toString();
-        System.out.println(consoleLogs); // Print console logs to console (optional)
-        
-        // Log console logs in Allure
-        Allure.addAttachment("Console Output", "text/plain", consoleLogs);
-        
         // Capture a screenshot and attach it to Allure
-        AllureUtils.captureScreenshot(driver, "Case10_MC_editevent");
+        AllureUtils.captureScreenshot(driver, "Case103_Workouttest_Templates_advocate");
         Allure.step("Step Details");
         
         // Retrieve OS information
@@ -84,12 +81,11 @@ public class Case10_MC_editevent {
         Allure.description("Operating System: " + osName + " (Version: " + osVersion + ")");
         
     }
-    
+   
  private String generateDynamicLink() {
         
-        return "https://pre-staging.app.cuesz.com/member-calls"; // Replace with your actual dynamic link
+        return "https://pre-staging.app.cuesz.com/templates"; // Replace with your actual dynamic link
     }
- 
  private String getBrowserFromConfigFile() {
      Properties properties = new Properties();
      try (FileInputStream fis = new FileInputStream("config.properties")) {
@@ -99,10 +95,12 @@ public class Case10_MC_editevent {
      }
      return properties.getProperty("browser", "chrome");
  }
+ 
     @AfterClass
     public void tearDown() {
-        WebDriverManager.quitDriver();
+    	 if (driver != null) {
+             driver.quit();
+    	WebDriverManager.quitDriver();
        
     }
-}
-
+}}

@@ -14,16 +14,13 @@ import org.testng.annotations.Test;
 
 import cuesz.pages.BasePage;
 import cuesz.utils.date.DateGenerator;
+import cuesz.utils.reporting.AllureUtils;
+import cuesz.utils.web.webTestdata;
+import cuesz.utils.web.weblocators;
 
 public class Step11_MC_deleteevent extends BasePage {
 	
 	public static String eventDate = DateGenerator.generateFixedDate(); // Use the generated date 
-	
-	private By Membercalenda = (By.xpath("//a[@href='/member-calls']//span"));
-	private By usrlabl		 = (By.xpath("//div[@class='user_title']//label"));
-	private By deletbttn	 = (By.xpath("//button[@class='btn btn-sm del_btn']//em"));
-	private By confirmbttn	 = (By.xpath("//span[normalize-space()='Confirm']"));
-	
 	
 	 public Step11_MC_deleteevent(WebDriver driver) {
 		super(driver);
@@ -33,43 +30,47 @@ public class Step11_MC_deleteevent extends BasePage {
 	 @Test
 	public void Deleteevent() throws InterruptedException {
 
-		 /*Click on Member calendar*/		
-			WebElement Membercalendar= driver.findElement(Membercalenda);
-			Membercalendar.click();
-			Thread.sleep(2000);
-		
-//	    Thread.sleep(2000);
-//	    driver.findElement(By.xpath("//span[normalize-space()='Month']")).click();
-	    
-	 // Pass the event date from script one to script three
-	 		String eventDate = Step07_MC_createevent.eventDate;
+	 /*Click on Member calendar*/		
+		WebElement Membercalendar= driver.findElement(weblocators.Membercalenda);
+		Membercalendar.click();
+		Thread.sleep(2000);
+	
 
-	 		// Split the date to extract day, month, and year
-	 		String[] dateParts = eventDate.split("-");
-	 		int day = Integer.parseInt(dateParts[0]);
-	 		int month = Integer.parseInt(dateParts[1]);
-	 		int year = Integer.parseInt(dateParts[2]);
+		// Pass the event date from script one to script three
+ 		String eventDate = Step07_MC_createevent.eventDate;
 
-	 		// Calculate the next day's date
-	 		LocalDate currentDate = LocalDate.of(year, month, day);
-	 		LocalDate nextDay = currentDate.plusDays(1);
+ 		// Split the date to extract day, month, and year
+ 		String[] dateParts = eventDate.split("-");
+ 		int day = Integer.parseInt(dateParts[0]);
+ 		int month = Integer.parseInt(dateParts[1]);
+ 		int year = Integer.parseInt(dateParts[2]);
 
-	 		// Format the next day's date
-	 		DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MM-yyyy");
-	 		String nextDayDate = nextDay.format(formatter);
+ 		// Calculate the next day's date
+ 		LocalDate currentDate = LocalDate.of(year, month, day);
+ 		LocalDate nextDay = currentDate.plusDays(1);
 
-	 		// Find the element to scroll to the next day's date on the calendar (matching only the day)
-	 		WebElement element = driver.findElement(By.xpath("//button[@role='cell'][normalize-space()='" + nextDay.getDayOfMonth() + "']"));
-	 		((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);
+ 		// Format the next day's date
+ 		DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MM-yyyy");
+ 		String nextDayDate = nextDay.format(formatter);
+ 		// Extract the day portion from the eventDate
+        String day1 = nextDayDate.split("-")[0];
+ 		
+ 		
+ 		// Capture a screenshot and attach it to Allure
+        AllureUtils.captureScreenshot(driver, "Step11_MC_deleteevent1"); 
 
-	 		Thread.sleep(3000);
-	 		driver.findElement(By.xpath("//div[@data-date='" + nextDayDate + "']")).click();
-	    
-	    Thread.sleep(3000);
-        //driver.findElement(By.xpath("(//span[contains(text(),'Kumar Devinder,')])[15]")).click();
-        
+ 		// Find the element to scroll to the next day's date on the calendar (matching only the day)
+ 		WebElement element = driver.findElement(By.xpath("//button[@role='cell'][normalize-space()='" + nextDay.getDayOfMonth() + "']"));
+ 		((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);
+ 		
+ 		 // Construct the XPath for the event dynamically
+        String eventXPath = String.format("//div[@id='Member Call-LPS-%s-%s-%s']", day1, webTestdata.membername, webTestdata.editstartInput);
+        WebElement eventClick = driver.findElement(By.xpath(eventXPath));
+        eventClick.click();
+	 		
+
      // Find the elements containing the user labels
-        List<WebElement> userLabels1 = driver.findElements(usrlabl);
+        List<WebElement> userLabels1 = driver.findElements(weblocators.usrlabl);
 
         // Get the texts from the user labels
         List<String> userTexts1 = new ArrayList<>();
@@ -78,8 +79,7 @@ public class Step11_MC_deleteevent extends BasePage {
         }
 
         // Verify the texts
-        if (userTexts1.contains("Kumar Devinder") && userTexts1.contains("Coach Seakfreight") && userTexts1.contains("Devinder - Wellness Advocate")) {
-     //   if (userTexts1.contains("Kumar Devinder") && userTexts1.contains("Seakfreight") && userTexts1.contains("SteveQA Adv")) {
+       	 if (userTexts1.contains(webTestdata.membername) && userTexts1.contains(webTestdata.staff1) && userTexts1.contains(webTestdata.staff2)) {
             System.out.println("User text verification passed!");
         } else {
             System.out.println("User text verification failed!");
@@ -87,11 +87,11 @@ public class Step11_MC_deleteevent extends BasePage {
         
         Thread.sleep(2000);  
         //find delete button and then delete event
-        driver.findElement(deletbttn).click();
+        driver.findElement(weblocators.deletbttn).click();
         
         
         Thread.sleep(3000);
-        driver.findElement(confirmbttn).click();
+        driver.findElement(weblocators.confirmbttn).click();
         
         Thread.sleep(2000);
 

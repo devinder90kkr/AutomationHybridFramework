@@ -6,7 +6,7 @@ public class Configuration {
  //   public static final String BASE_URL = "https://app.cuesz.com/";  
     
 //    //Window system file location
-//     public static final String CHROME_DRIVER_PATH = "C:\\Users\\ASUS\\OneDrive\\Documents\\chromedriver-win64\\chromedriver-win64\\chromedriver.exe";
+//     public static final String CHROME_DRIVER_PATH = "C:\\Users\\ASUS\\Downloads\\chromedriver-win64\\chromedriver-win64\\chromedriver.exe";
      
 //     mac system file location
  public static final String CHROME_DRIVER_PATH =	"/Users/inderjeetsingh/Documents/chromedriver-mac-x64/chromedriver";	

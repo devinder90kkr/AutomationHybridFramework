@@ -25,6 +25,8 @@ public class mobileTestData {
 	public static final String message1	=	"Believe you can and you're halfway there";
 	public static final String message2	=	"The only limit to our realization of tomorrow will be our doubts of today";
 	public static final String message3	=	"The journey of a thousand miles begins with one step";
+	public static final String message4	=	"The loop has a maximum scroll count (maxScrolls) to prevent an infinite loop in case the element is not found";
+	public static final String message5	=	"If the loop exits without finding the element (i.e., after the maximum number of scrolls), it logs an error.";
 	
 	public static final String Co2text	=	"30";
 	
@@ -35,7 +37,7 @@ public class mobileTestData {
 	public static final String timeinput2 = "43";
 	
 	//case26_Fuel_breakfast_customfood
-	public static final  String searchText = "wplt";
+	public static final  String searchText = "lilt";
 	public static final String Servingsize = "45";
 	public static final String Servingunit = "cup";
 	public static final String Calories = "176";

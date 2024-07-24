@@ -1,10 +1,8 @@
 	package cuesz.logicpage;
 	
 	import java.text.ParseException;
-	import java.time.DayOfWeek;
-	import java.time.LocalDate;
-import java.util.Calendar;
-import java.time.Duration;
+	import java.util.Calendar;
+	import java.time.Duration;
 	import org.openqa.selenium.By;
 	import org.openqa.selenium.JavascriptExecutor;
 	import org.openqa.selenium.Keys;
@@ -16,21 +14,16 @@ import java.time.Duration;
 	import org.testng.annotations.Test;
 
 	import cuesz.pages.BasePage;
-import cuesz.utils.SeleniumUtils;
-import cuesz.utils.date.DayofWeek;
-import cuesz.utils.reporting.AllureUtils;	
+	import cuesz.utils.SeleniumUtils;
+	import cuesz.utils.date.DayofWeek;
+	import cuesz.utils.reporting.AllureUtils;
+import cuesz.utils.web.webTestdata;
+import cuesz.utils.web.weblocators;	
 
 	public class Case43_02_MSL_fuel_currentday extends BasePage {
 		
-	
 
 		SeleniumUtils utils = new SeleniumUtils(driver);
-		private By Logibttn =   (By.xpath("//span[normalize-space()='Logic Page']"));
-		private By Fuelheading = (By.id("FuelCard"));
-		private By Fuelheadingplus = (By.xpath("//button[@data-bs-target='#FuelToTrain']"));
-		private By selctbttn = (By.id("SelectWeekFuelCard"));
-
-		
 
 		 public Case43_02_MSL_fuel_currentday(WebDriver driver) {
 			super(driver);
@@ -48,16 +41,16 @@ import cuesz.utils.reporting.AllureUtils;
 	
 	   		   /***********************************landed on Logic page ***************************************************************************************************/
 	   		   Thread.sleep(2000);
-	   		   WebElement Logicbutton =  driver.findElement(Logibttn);
+	   		   WebElement Logicbutton =  driver.findElement(weblocators.Logibttn);
 	   		   Logicbutton.click();
 
-	   		  /****************************************Click on next & previous button and get week*****************************************************************************************************/        
+	   		  /****************************************Click on next & previous button and get week**************************************************************************/        
 		        
 		        Thread.sleep(2000);
 		  	        
-	  /***************************************Click on Fuel and scroll******************************************************************************************/
+		      /***************************************Click on Fuel and scroll******************************************************************************************/
 		  	   Thread.sleep(5500);
-		  	   WebElement FuelHead = driver.findElement(Fuelheading);
+		  	   WebElement FuelHead = driver.findElement(weblocators.Fuelheading);
 		       // Scroll to the "Staff Notes" element using JavaScriptExecutor
 			   ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);;", FuelHead);
 			     		
@@ -65,32 +58,25 @@ import cuesz.utils.reporting.AllureUtils;
 			   
 			   // Wait for the element to be clickable
 			   WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(50)); // Adjust the timeout as needed
-			   WebElement Fuelnoteplus = wait.until(ExpectedConditions.elementToBeClickable(Fuelheadingplus));
+			   WebElement Fuelnoteplus = wait.until(ExpectedConditions.elementToBeClickable(weblocators.Fuelheadingplus));
 			   Fuelnoteplus.click();
 			   		
 			   Thread.sleep(5500);
 			   // Example usage:
-			   WebElement selectbutton = driver.findElement(selctbttn);
+			   WebElement selectbutton = driver.findElement(weblocators.selctbttn);
 			   // Scroll to the "Staff Notes" element using JavaScriptExecutor
 			   ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView();", selectbutton);
 
 			   Thread.sleep(5500);
 		  
-	  /************************************************Input data as per next week selected and populate data in three days***************************************************************************************************/
+			   /************************************************Input data as per next week selected and populate data in three days*********************************************/
 		        
-			
-//			   WebElement  activeblock = driver.findElement(By.xpath("//div[@id='active_logic_block']"));
 			   WebElement  activeblock = driver.findElement(By.xpath("//div[@id='FuelToTrain']//div[@class='logic_block active']"));
 			   // Scroll to the "Staff Notes" element using JavaScriptExecutor
 			   ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView();", activeblock);
 			   
+			   /******************************************************Populate data for monday first activity ************************************************/
 
-	  	   
-     /********************************************************************Populate data for monday first activity *************************************************************************************/
-					
-			
-			   		        
-			
 			    Thread.sleep(2500);
 			    int dayOfWeek = Calendar.getInstance().get(Calendar.DAY_OF_WEEK);
 			    String dayName = DayofWeek.getDayName(dayOfWeek);       
@@ -107,7 +93,7 @@ import cuesz.utils.reporting.AllureUtils;
 			   Actions builder =new Actions(driver);
 			   builder.sendKeys(Keys.TAB).build().perform();
 		    
-		/*********************************Input values for option 1 primary  breakfast field**********************************************************/
+			   /*********************************Input values for option 1 primary  breakfast field**********************************************************/
 //			        https://chat.openai.com/share/68e7bc08-e866-4816-b311-cdcc35405dea
 				   
 				   Thread.sleep(3500);
@@ -117,7 +103,7 @@ import cuesz.utils.reporting.AllureUtils;
 			            // Locate the input field
 			            WebElement inputField = driver.findElement(By.xpath("//div[@class='FuelOptionFirst_1-" + dayName1 + " react-select__input']/input"));
 			            // Enter values into the input field
-			            inputField.sendKeys("Mushrooms Cooked");
+			            inputField.sendKeys(webTestdata.fuel1);
 			            Thread.sleep(3500);
 			            // Simulate pressing the Enter key
 			            inputField.sendKeys(Keys.ENTER); 
@@ -127,7 +113,7 @@ import cuesz.utils.reporting.AllureUtils;
 			            
 			            Thread.sleep(1000);
 			         // Enter the second value "Curd" into the input field
-			            inputField.sendKeys("Blueberries");
+			            inputField.sendKeys(webTestdata.fuel2);
 			            Thread.sleep(3500);
 			            // Simulate pressing the Enter key to select the second value
 			            inputField.sendKeys(Keys.ENTER);
@@ -150,18 +136,17 @@ import cuesz.utils.reporting.AllureUtils;
 			            // Locate the input field
 			            WebElement inputField = driver.findElement((By.xpath("//div[@class='FuelOptionSecond_1-" + dayName2 + " react-select__input']/input")));
 			            // Enter values into the input field
-			            inputField.sendKeys("Pizza");		
+			            inputField.sendKeys(webTestdata.fuel3);		
 			            Thread.sleep(3500);
 			            // Simulate pressing the Enter key
 			            inputField.sendKeys(Keys.ENTER);
-			      
-	
+
 			            // Clear the input field to enter the second value
 			            inputField.clear();
 			            Thread.sleep(2500);
 			            
 			          // Enter the second value "Curd" into the input field
-			            inputField.sendKeys("Kiwi");	
+			            inputField.sendKeys(webTestdata.fuel4);	
 			            Thread.sleep(3500);
 			            // Simulate pressing the Enter key to select the second value
 			            inputField.sendKeys(Keys.ENTER);
@@ -183,7 +168,7 @@ import cuesz.utils.reporting.AllureUtils;
 			            // Locate the input field
 			            WebElement inputField = driver.findElement((By.xpath("//div[@class='FuelOptionFirst_2-" + dayName3 + " react-select__input']/input")));
 			            // Enter values into the input field
-			            inputField.sendKeys("walnuts");
+			            inputField.sendKeys(webTestdata.fuel5);
 			            Thread.sleep(3500);
 			            // Simulate pressing the Enter key
 			            inputField.sendKeys(Keys.ENTER);
@@ -234,7 +219,7 @@ import cuesz.utils.reporting.AllureUtils;
 			            // Locate the input field
 			            WebElement inputField = driver.findElement(By.xpath("//div[@class='FuelOptionFirst_1-" + dayName1 + " react-select__input']/input"));
 			            // Enter values into the input field
-			            inputField.sendKeys("Gluten Free bread");
+			            inputField.sendKeys(webTestdata.fuel6);
 			            Thread.sleep(3500);
 			            // Simulate pressing the Enter key
 			            inputField.sendKeys(Keys.ENTER);
@@ -243,7 +228,7 @@ import cuesz.utils.reporting.AllureUtils;
 			            inputField.clear();
 			            Thread.sleep(1000);              
 			         // Enter the second value "Curd" into the input field
-			            inputField.sendKeys("Almond milk");
+			            inputField.sendKeys(webTestdata.fuel7);
 			            Thread.sleep(3500);
 			            // Simulate pressing the Enter key to select the second value
 			            inputField.sendKeys(Keys.ENTER);
@@ -264,7 +249,7 @@ import cuesz.utils.reporting.AllureUtils;
 			            // Locate the input field
 			            WebElement inputField = driver.findElement((By.xpath("//div[@class='FuelOptionFirst_2-" + dayName2 + " react-select__input']/input")));
 			            // Enter values into the input field
-			            inputField.sendKeys("boiled egg");
+			            inputField.sendKeys(webTestdata.fuel8);
 			            Thread.sleep(3500);
 			            // Simulate pressing the Enter key
 			            inputField.sendKeys(Keys.ENTER);
@@ -284,7 +269,7 @@ import cuesz.utils.reporting.AllureUtils;
 			            // Locate the input field
 			            WebElement inputField = driver.findElement((By.xpath("//div[@class='FuelOptionFirst_3-" + dayName3 + " react-select__input']/input")));
 			            // Enter values into the input field
-			            inputField.sendKeys("Dark Chocolate");
+			            inputField.sendKeys(webTestdata.fuel9);
 			            Thread.sleep(3500);
 			            // Simulate pressing the Enter key
 			            inputField.sendKeys(Keys.ENTER);
@@ -335,7 +320,7 @@ import cuesz.utils.reporting.AllureUtils;
 			            // Locate the input field
 			            WebElement inputField = driver.findElement(By.xpath("//div[@class='FuelOptionFirst_1-" + dayName1 + " react-select__input']/input"));
 			            // Enter values into the input field
-			            inputField.sendKeys("Cauliflower");
+			            inputField.sendKeys(webTestdata.fuel10);
 			            Thread.sleep(3500);
 			            // Simulate pressing the Enter key
 			            inputField.sendKeys(Keys.ENTER);
@@ -346,7 +331,7 @@ import cuesz.utils.reporting.AllureUtils;
 			            Thread.sleep(1000);   	            
 			         
 			            // Enter the second value "Curd" into the input field
-			            inputField.sendKeys("Meat");
+			            inputField.sendKeys(webTestdata.fuel11);
 			            Thread.sleep(3500);
 			            // Simulate pressing the Enter key to select the second value
 			            inputField.sendKeys(Keys.ENTER);
@@ -367,7 +352,7 @@ import cuesz.utils.reporting.AllureUtils;
 			            // Locate the input field
 			            WebElement inputField = driver.findElement(By.xpath("//div[@class='FuelOptionFirst_2-" + dayName2 + " react-select__input']/input"));
 			            // Enter values into the input field
-			            inputField.sendKeys("avocado");
+			            inputField.sendKeys(webTestdata.fuel12);
 			            Thread.sleep(3500);	    
 			            // Simulate pressing the Enter key
 			            inputField.sendKeys(Keys.ENTER);
@@ -387,7 +372,7 @@ import cuesz.utils.reporting.AllureUtils;
 			            // Locate the input field
 			            WebElement inputField = driver.findElement(By.xpath("//div[@class='FuelOptionFirst_3-" + dayName3 + " react-select__input']/input"));
 			            // Enter values into the input field
-			            inputField.sendKeys("rice");
+			            inputField.sendKeys(webTestdata.fuel13);
 			            Thread.sleep(3500);
 			            // Simulate pressing the Enter key
 			            inputField.sendKeys(Keys.ENTER);
@@ -409,7 +394,7 @@ import cuesz.utils.reporting.AllureUtils;
 			            // Locate the input field
 			            WebElement inputField = driver.findElement(By.xpath("//div[@class='FuelOptionSecond_3-" + dayName4 + " react-select__input']/input"));
 			            // Enter values into the input field
-			            inputField.sendKeys("fish");
+			            inputField.sendKeys(webTestdata.fuel14);
 			            Thread.sleep(3500);
 			            // Simulate pressing the Enter key
 			            inputField.sendKeys(Keys.ENTER);
@@ -419,7 +404,7 @@ import cuesz.utils.reporting.AllureUtils;
 			            
 			            Thread.sleep(1000);  	            
 			         // Enter the second value "Curd" into the input field
-			            inputField.sendKeys("Goetta");
+			            inputField.sendKeys(webTestdata.fuel15);
 			            Thread.sleep(3500);
 			            // Simulate pressing the Enter key to select the second value
 			            inputField.sendKeys(Keys.ENTER);
@@ -474,7 +459,7 @@ import cuesz.utils.reporting.AllureUtils;
 			            // Locate the input field
 			            WebElement inputField = driver.findElement(By.xpath("//div[@class='FuelOptionFirst_1-" + dayName1 + " react-select__input']/input"));
 			            // Enter values into the input field
-			            inputField.sendKeys("Swordfish");
+			            inputField.sendKeys(webTestdata.fuel16);
 			            Thread.sleep(3500);
 			            // Simulate pressing the Enter key
 			            inputField.sendKeys(Keys.ENTER);
@@ -484,7 +469,7 @@ import cuesz.utils.reporting.AllureUtils;
 			            
 			            Thread.sleep(1000);   	            
 			         // Enter the second value "Curd" into the input field
-			            inputField.sendKeys("peanuts");
+			            inputField.sendKeys(webTestdata.fuel17);
 			            Thread.sleep(3500);
 			            // Simulate pressing the Enter key to select the second value
 			            inputField.sendKeys(Keys.ENTER);
@@ -505,7 +490,7 @@ import cuesz.utils.reporting.AllureUtils;
 			            // Locate the input field
 			            WebElement inputField = driver.findElement(By.xpath("//div[@class='FuelOptionFirst_2-" + dayName2 + " react-select__input']/input"));
 			            // Enter values into the input field
-			            inputField.sendKeys("peanuts");
+			            inputField.sendKeys(webTestdata.fuel17);
 			            Thread.sleep(3500);
 			            // Simulate pressing the Enter key
 			            inputField.sendKeys(Keys.ENTER);
@@ -525,7 +510,7 @@ import cuesz.utils.reporting.AllureUtils;
 			            // Locate the input field
 			            WebElement inputField = driver.findElement(By.xpath("//div[@class='FuelOptionFirst_3-" + dayName3 + " react-select__input']/input"));
 			            // Enter values into the input field
-			            inputField.sendKeys("garden of Life");
+			            inputField.sendKeys(webTestdata.fuel18);
 			            Thread.sleep(3500);
 			            // Simulate pressing the Enter key
 			            inputField.sendKeys(Keys.ENTER);
@@ -590,7 +575,7 @@ import cuesz.utils.reporting.AllureUtils;
 			            
 			            Thread.sleep(1000);   	            
 			         // Enter the second value "Curd" into the input field
-			            inputField.sendKeys("Meat");
+			            inputField.sendKeys(webTestdata.fuel19);
 			            Thread.sleep(3500);
 			            // Simulate pressing the Enter key to select the second value
 			            inputField.sendKeys(Keys.ENTER);
@@ -612,7 +597,7 @@ import cuesz.utils.reporting.AllureUtils;
 			            // Locate the input field
 			            WebElement inputField = driver.findElement(By.xpath("//div[@class='FuelOptionFirst_2-" + dayName2 + " react-select__input']/input"));
 			            // Enter values into the input field
-			            inputField.sendKeys("avocado");
+			            inputField.sendKeys(webTestdata.fuel12);
 			            Thread.sleep(3500);
 			            // Simulate pressing the Enter key
 			            inputField.sendKeys(Keys.ENTER);
@@ -633,7 +618,7 @@ import cuesz.utils.reporting.AllureUtils;
 			            // Locate the input field
 			            WebElement inputField = driver.findElement(By.xpath("//div[@class='FuelOptionFirst_3-" + dayName3 + " react-select__input']/input"));
 			            // Enter values into the input field
-			            inputField.sendKeys("rice");
+			            inputField.sendKeys(webTestdata.fuel13);
 			            Thread.sleep(3500);
 			            // Simulate pressing the Enter key
 			            inputField.sendKeys(Keys.ENTER);
@@ -656,7 +641,7 @@ import cuesz.utils.reporting.AllureUtils;
 			            // Locate the input field
 			            WebElement inputField = driver.findElement(By.xpath("//div[@class='FuelOptionSecond_3-" + dayName4 + " react-select__input']/input"));
 			            // Enter values into the input field
-			            inputField.sendKeys("fish");
+			            inputField.sendKeys(webTestdata.fuel14);
 			            Thread.sleep(3500);
 			            // Simulate pressing the Enter key
 			            inputField.sendKeys(Keys.ENTER);
@@ -666,7 +651,7 @@ import cuesz.utils.reporting.AllureUtils;
 			            
 			            Thread.sleep(1000);  	            
 			         // Enter the second value "Curd" into the input field
-			            inputField.sendKeys("Goetta");
+			            inputField.sendKeys(webTestdata.fuel15);
 			            Thread.sleep(3500);
 			            // Simulate pressing the Enter key to select the second value
 			            inputField.sendKeys(Keys.ENTER);
@@ -680,10 +665,9 @@ import cuesz.utils.reporting.AllureUtils;
 					}
 				   
 				   Thread.sleep(2000);
-				     
-//				   
+				     			   
 				   AllureUtils.captureScreenshot(driver, "Dinnerend1");
-//				   
+				   
 				   /*Enter values for HydrationTarget*/
 				    Thread.sleep(2000);
 				    	
@@ -695,7 +679,7 @@ import cuesz.utils.reporting.AllureUtils;
 				    Thread.sleep(2000);
 				    // Now you can interact with the HydrationTarget element
 				    Actions builder7 = new Actions(driver);			    
-				    builder7.moveToElement(HydrationTarget).click().sendKeys("8 Glasses").perform();
+				    builder7.moveToElement(HydrationTarget).click().sendKeys(webTestdata.hydration).perform();
 				    Thread.sleep(2000);
 				    builder7.sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.ENTER).perform();
 
@@ -707,7 +691,7 @@ import cuesz.utils.reporting.AllureUtils;
 		   			String dayName2 = DayofWeek.getDayName(dayOfWeek);
 				    WebElement ElectrolyteTarget =driver.findElement(By.id("Electrolyte_fuel-" + dayName2));
 				    Actions builder8 = new Actions(driver);
-				    builder8.moveToElement(ElectrolyteTarget).click().sendKeys("2").perform();
+				    builder8.moveToElement(ElectrolyteTarget).click().sendKeys(webTestdata.electrolyte).perform();
 				    Thread.sleep(2000);
 				    builder8.sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.ENTER).perform();
 				    Thread.sleep(2000);				   

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Coach program basic">
+
+  <test thread-count="5" name="Coach program">
+    <classes>    
+ 	 
+	  <class name="cuesz.exercisetest.template.Case105_Workout_Templates_createtest"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

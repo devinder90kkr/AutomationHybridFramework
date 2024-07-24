@@ -16,6 +16,7 @@ import org.testng.annotations.Test;
 import cuesz.dashboard.Step12_DB_navlink;
 import cuesz.logintest.AdvocateLogin;
 import cuesz.utils.WebDriverManager;
+import cuesz.utils.reporting.AllureServeRunner;
 import cuesz.utils.reporting.AllureUtils;
 
 import java.io.ByteArrayOutputStream;
@@ -139,6 +140,8 @@ public class Step12_DB_navlinktest {
         Allure.step("All HTTP Status Codes: " + statusCodes);
         WebDriverManager.quitDriver();
        
+        // Run the Allure serve command
+        AllureServeRunner.runAllureServe();
     }
 }
 
