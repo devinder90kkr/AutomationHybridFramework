@@ -8,7 +8,7 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
-import cuesz.exercise.template.Case102_Workout_Templates_create;
+import cuesz.exercise.template.Case106_Workout_Templates_multipleexercise;
 import cuesz.logintest.CoachLogin;
 import cuesz.utils.WebDriverManager;
 import cuesz.utils.reporting.AllureUtils;
@@ -25,10 +25,10 @@ import java.util.Properties;
 
 @Epic ("Exercise Workout templates")
 @Feature ("Workout Creation from coach panel")
-public class Case102_Workout_Templates_createtest {
+public class Case106_Workout_Templates_multipleexercisetest {
     private WebDriver driver;
     private CoachLogin coachLogin;
-    private Case102_Workout_Templates_create WorkouttemplatePage;
+    private Case106_Workout_Templates_multipleexercise WorkouttemplatePage;
     
 
     @BeforeClass
@@ -40,7 +40,7 @@ public class Case102_Workout_Templates_createtest {
         
         driver.manage().window().maximize();
         coachLogin = new CoachLogin(); // Initialise the advocateLogin object
-        WorkouttemplatePage = new Case102_Workout_Templates_create(driver);
+        WorkouttemplatePage = new Case106_Workout_Templates_multipleexercise(driver);
 
     }
     

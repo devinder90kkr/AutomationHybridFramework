@@ -4,13 +4,35 @@ import cuesz.utils.date.DateGenerator;
 
 public class webTestdata {
 	
+	//Case106_Workout_Templates_multipleexercise
+	public static final String templatname = "Heavytraining";
+	public static final String[] exercisenamesmultiple = {
+	        "45 Degree Bycicle Twisting Crunch, Bodyweight, Bil.",
+	        "All Fours Squad Stretch, Bodyweight",
+	        "Arm Curl, Suspension, Bil."
+	    };
+
+	    public static final String[] descriptionsmultiple = {
+	        "hello this is just for testing",
+	        "hello this",
+	        "is just for testing purpose"
+	    };
+
+	    public static final String[] repsdata = {
+	        "3", "2", "8"
+	    };
+
+	    public static final String[] recoverydata = {
+	        "42", "18", "5"
+	    };
+	
 	
 	//	Case102_Workout_Templates_create
 	public static final String templatename = "MassProduction";
-	public static final String exercisename = "Above Head Chest Stretch, Bodyweight";
-	public static final String description = "hello this is just for testing purpose";
-	public static final String repsdata	=	"5";
-	public static final String recoverydata	=	"22";
+	public static final String exercisename1 = "Above Head Chest Stretch, Bodyweight";
+	public static final String description1 = "hello this is just for testing purpose";
+	public static final String repsdata1	=	"5";
+	public static final String recoverydata1	=	"22";
 	
 	//Case01_createvent
 	public static String eventDate = DateGenerator.generateFixedDate(); // Use the generated date

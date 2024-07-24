@@ -5,9 +5,10 @@
   <test thread-count="5" name="Permission cases for coach program">
     <classes>    
  	  <class name="cuesz.exercisetest.template.Case101_Workouttest_Templates_leadcoach"/>
-	 <class name="cuesz.exercisetest.template.Case102_Workouttest_Templates_nonleadcoach"/>
+	  <class name="cuesz.exercisetest.template.Case102_Workouttest_Templates_nonleadcoach"/>
 	  <class name="cuesz.exercisetest.template.Case103_Workouttest_Templates_advocate"/>
-	   <class name="cuesz.exercisetest.template.Case104_Workouttest_Templates_doctor"/>
+	  <class name="cuesz.exercisetest.template.Case104_Workouttest_Templates_doctor"/>
+	  <class name="cuesz.exercisetest.template.Case105_Workout_Templates_createtest"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

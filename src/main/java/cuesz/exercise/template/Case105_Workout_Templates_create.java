@@ -23,11 +23,11 @@ import cuesz.utils.web.ElementActions;
 import cuesz.utils.web.webTestdata;
 import cuesz.utils.web.weblocators;
 
-public class Case102_Workout_Templates_create extends BasePage {
-	private static final Logger LOGGER = LoggerFactory.getLogger(Case102_Workout_Templates_create.class);
+public class Case105_Workout_Templates_create extends BasePage {
+	private static final Logger LOGGER = LoggerFactory.getLogger(Case105_Workout_Templates_create.class);
 	private ElementActions elementActions;
 
-    public Case102_Workout_Templates_create(WebDriver driver) {
+    public Case105_Workout_Templates_create(WebDriver driver) {
         super(driver);
         this.elementActions = new ElementActions(driver);
     }
@@ -109,7 +109,7 @@ public class Case102_Workout_Templates_create extends BasePage {
 			WebElement exericseclick = wait.until(ExpectedConditions.visibilityOfElementLocated(weblocators.exerciseslection));
 			Actions builder1 = new Actions(driver);
 			builder1.moveToElement(exericseclick).click();
-			builder1.sendKeys(webTestdata.exercisename).perform();
+			builder1.sendKeys(webTestdata.exercisename1).perform();
 			Thread.sleep(2500);
 			builder1.sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.TAB).perform();
 			// Log message to console and Allure report
@@ -122,15 +122,15 @@ public class Case102_Workout_Templates_create extends BasePage {
 	        Thread.sleep(9000);
 	        // Send values for description set
             wait.until(ExpectedConditions.visibilityOfElementLocated(weblocators.exercisedescription));
-            elementActions.setRichTextEditorValue(weblocators.exercisedescription, webTestdata.description);
+            elementActions.setRichTextEditorValue(weblocators.exercisedescription, webTestdata.description1);
             elementActions.clickElement(weblocators.exercisedescription);
-            LOGGER.info("Set value for exercise description: " + webTestdata.description);
-            AllureUtils.logStep("Set value for exercise description: " + webTestdata.description);
+            LOGGER.info("Set value for exercise description: " + webTestdata.description1);
+            AllureUtils.logStep("Set value for exercise description: " + webTestdata.description1);
 
             //add reps for exercise
             wait.until(ExpectedConditions.visibilityOfElementLocated(weblocators.repsfield));
             elementActions.clickElement(weblocators.repsfield);
-            elementActions.sendKeysToElement(weblocators.repsfield, webTestdata.repsdata);
+            elementActions.sendKeysToElement(weblocators.repsfield, webTestdata.repsdata1);
             // Log message to console and Allure report
 	        LOGGER.info("Verified and add reps values corresponding to exercise");
 	        AllureUtils.logStep("Verified and add reps values corresponding to exercise");
@@ -141,7 +141,7 @@ public class Case102_Workout_Templates_create extends BasePage {
             
             //add reps for exercise
 	        wait.until(ExpectedConditions.elementToBeClickable(weblocators.recoveryfield));
-            elementActions.sendKeysToElement(weblocators.recoveryfield, webTestdata.recoverydata);
+            elementActions.sendKeysToElement(weblocators.recoveryfield, webTestdata.recoverydata1);
             // Log message to console and Allure report
 	        LOGGER.info("Verified and add recoveryfield values corresponding to exercise");
 	        AllureUtils.logStep("Verified and add recoveryfield values corresponding to exercise");
@@ -159,6 +159,9 @@ public class Case102_Workout_Templates_create extends BasePage {
             // Log message to console and Allure report
 	        LOGGER.info("Click on submitbuttn");
 	        AllureUtils.logStep("Click on submitbuttn");
+	        
+	        
+	        
             
             Thread.sleep(5500);
             
