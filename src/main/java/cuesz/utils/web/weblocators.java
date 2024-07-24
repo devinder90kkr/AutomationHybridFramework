@@ -6,20 +6,27 @@ public class weblocators {
 	
 	
 	//Case101_Workout_Templates
-	public static final By templateicon		 = 	(By.xpath("//a[@href='/templates']//span"));
-	public static final By workoutemplateheading	=	(By.xpath("//h2[normalize-space()='Workout Templates']"));
-	public static final By templateplsicon		 = 	(By.xpath("//div[@class='btn_grey']//em"));
-	public static final By addTemplateHeading	=	(By.xpath("//h2[normalize-space()='Add Template']"));
-	public static final By templatname 		=	(By.xpath("//input[@id='autoWidth']"));
-	public static final By addnewworkout 	=	(By.xpath("//span[contains(text(),'Add New Workout')]"));
-	public static final By exerciseconatiner =	(By.xpath("//div[@class='rightArticle table-container']"));
-	public static final By exerciseslection	= (By.xpath("//div[@id='companyId']"));
-	public static final By exercisedescription = (By.xpath("(//div[@class='jodit-wysiwyg'])[1]"));
+	public static final By templateicon			 = (By.xpath("//a[@href='/templates']//span"));
+	public static final By workoutemplateheading = (By.xpath("//h2[normalize-space()='Workout Templates']"));
+	public static final By templateplsicon		 = (By.xpath("//div[@class='btn_grey']//em"));
+	public static final By addTemplateHeading	 = (By.xpath("//h2[normalize-space()='Add Template']"));
+	public static final By templatname 			 = (By.xpath("//input[@id='autoWidth']"));
+	public static final By addnewworkout 		 = (By.xpath("//span[contains(text(),'Add New Workout')]"));
+	public static final By exerciseconatiner 	 = (By.xpath("//div[@class='rightArticle table-container']"));
+	public static final By exerciseslection	 	 = (By.xpath("//div[@id='companyId']"));
+	public static final By exercisedescription 	 = (By.xpath("(//div[@class='jodit-wysiwyg'])[1]"));
 	
-	public static final By repsfield = (By.xpath("(//input[@type='text'])[4]"));
-	public static final By recoveryfield = (By.xpath("(//input[@type='text'])[5]"));
-	public static final By setsplus	=	(By.xpath("//button[normalize-space()='+']"));
-	public static final By submitbuttn 		=	(By.xpath("//button[normalize-space()='Submit']"));
+	public static final By repsfield 		 	 = (By.xpath("(//input[@type='text'])[4]"));
+	public static final By recoveryfield 		 = (By.xpath("(//input[@type='text'])[5]"));
+	public static final By setsplus				 = (By.xpath("//button[normalize-space()='+']"));
+	public static final By submitbuttn 			 = (By.xpath("//button[normalize-space()='Submit']"));
+	public static final By savebutton			 = (By.xpath("//button[@id='exercise_save_button_template']"));
+	public static final By optional1			 = (By.xpath("(//div[contains(text(),'Optional')])[1]"));
+	public static final By Optionaltextfield 	 = (By.xpath("(//input[contains(@type,'text')])[6]"));
+	public static final By optional2			 = (By.xpath("(//div[contains(text(),'Optional')])[2]"));
+	public static final By optionaltextfield2	 = (By.xpath("(//input[contains(@type,'text')])[7]"));
+	public static final By chain1				 = (By.xpath("(//img[contains(@alt,'l')])[2]"));
+	
 	
 	
 			
