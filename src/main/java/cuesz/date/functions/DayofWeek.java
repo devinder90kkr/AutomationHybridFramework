@@ -1,4 +1,4 @@
-package cuesz.utils.date;
+package cuesz.date.functions;
 import java.util.Calendar;
 
 public class DayofWeek {

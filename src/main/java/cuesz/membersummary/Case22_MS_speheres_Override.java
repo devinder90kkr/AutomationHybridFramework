@@ -9,9 +9,9 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.testng.annotations.Test;
 
+import cuesz.allure.reporting.AllureUtils;
 import cuesz.pages.BasePage;
 import cuesz.utils.SeleniumUtils;
-import cuesz.utils.reporting.AllureUtils;
 
 public class Case22_MS_speheres_Override extends BasePage {
 

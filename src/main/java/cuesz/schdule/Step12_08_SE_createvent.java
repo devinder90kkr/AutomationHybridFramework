@@ -13,9 +13,9 @@ import org.openqa.selenium.JavascriptExecutor;
 
 import org.testng.annotations.Test;
 
+import cuesz.allure.reporting.AllureUtils;
 import cuesz.pages.BasePage;
 import cuesz.utils.SeleniumUtils;
-import cuesz.utils.reporting.AllureUtils;
 
 public class Step12_08_SE_createvent extends BasePage {
 	

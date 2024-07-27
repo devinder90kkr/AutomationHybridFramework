@@ -11,10 +11,10 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
+import cuesz.allure.reporting.AllureUtils;
 import cuesz.dashboard.Step14_DB_MessgNotification;
+import cuesz.factory.WebDriverManager;
 import cuesz.logintest.AdvocateLogin;
-import cuesz.utils.WebDriverManager;
-import cuesz.utils.reporting.AllureUtils;
 import io.qameta.allure.*;
 @Epic ("Advocate dashboard cases")
 @Feature ("Vaerify notififcation for dashbaord.")

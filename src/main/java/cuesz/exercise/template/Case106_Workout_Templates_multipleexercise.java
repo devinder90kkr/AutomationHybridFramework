@@ -18,11 +18,11 @@ import org.testng.annotations.Test;
 import org.testng.Assert;
 import org.testng.SkipException;
 
+import cuesz.allure.reporting.AllureUtils;
 import cuesz.pages.BasePage;
-import cuesz.utils.reporting.AllureUtils;
-import cuesz.utils.web.ElementActions;
-import cuesz.utils.web.webTestdata;
-import cuesz.utils.web.weblocators;
+import cuesz.web.resources.ElementActions;
+import cuesz.web.resources.webTestdata;
+import cuesz.web.resources.weblocators;
 
 public class Case106_Workout_Templates_multipleexercise extends BasePage {
     private static final Logger LOGGER = LoggerFactory.getLogger(Case106_Workout_Templates_multipleexercise.class);

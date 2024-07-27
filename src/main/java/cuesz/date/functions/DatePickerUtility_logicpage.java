@@ -1,4 +1,4 @@
-package cuesz.utils.date;
+package cuesz.date.functions;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;

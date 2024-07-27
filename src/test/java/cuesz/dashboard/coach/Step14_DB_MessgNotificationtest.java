@@ -10,8 +10,8 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 import cuesz.dashboard.Step14_DB_MessgNotification;
+import cuesz.factory.WebDriverManager;
 import cuesz.logintest.CoachLogin;
-import cuesz.utils.WebDriverManager;
 
 public class Step14_DB_MessgNotificationtest {
     private WebDriver driver;

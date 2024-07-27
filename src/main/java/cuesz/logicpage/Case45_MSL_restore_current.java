@@ -14,10 +14,10 @@ import org.openqa.selenium.WebElement;
 	import org.openqa.selenium.support.ui.WebDriverWait;
 	import org.testng.annotations.Test;
 
+import cuesz.date.functions.Currentdategenerator;
+import cuesz.date.functions.DatePickerUtility_logicpage;
 import cuesz.pages.BasePage;
 import cuesz.utils.SeleniumUtils;
-import cuesz.utils.date.Currentdategenerator;
-import cuesz.utils.date.DatePickerUtility_logicpage;
 	
 	public class Case45_MSL_restore_current extends BasePage {
 		

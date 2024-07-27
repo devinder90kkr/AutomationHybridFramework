@@ -1,4 +1,4 @@
-package cuesz.utils.mobile;
+package cuesz.mobile.resources;
 
 import org.openqa.selenium.By;
 import io.appium.java_client.AppiumBy;

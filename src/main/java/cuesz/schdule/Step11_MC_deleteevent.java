@@ -12,11 +12,11 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
 
+import cuesz.allure.reporting.AllureUtils;
+import cuesz.date.functions.DateGenerator;
 import cuesz.pages.BasePage;
-import cuesz.utils.date.DateGenerator;
-import cuesz.utils.reporting.AllureUtils;
-import cuesz.utils.web.webTestdata;
-import cuesz.utils.web.weblocators;
+import cuesz.web.resources.webTestdata;
+import cuesz.web.resources.weblocators;
 
 public class Step11_MC_deleteevent extends BasePage {
 	

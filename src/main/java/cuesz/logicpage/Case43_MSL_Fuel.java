@@ -11,11 +11,12 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 	import org.openqa.selenium.support.ui.WebDriverWait;
 	import org.testng.annotations.Test;
-	import cuesz.pages.BasePage;
+
+import cuesz.allure.reporting.AllureUtils;
+import cuesz.date.functions.DatePickerUtility_logicpage;
+import cuesz.pages.BasePage;
 import cuesz.utils.SeleniumUtils;
-import cuesz.utils.date.DatePickerUtility_logicpage;
-import cuesz.utils.reporting.AllureUtils;
-import cuesz.utils.web.weblocators;
+import cuesz.web.resources.weblocators;
 	
 	public class Case43_MSL_Fuel extends BasePage {
 		

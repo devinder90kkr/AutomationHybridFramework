@@ -12,10 +12,10 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
+import cuesz.allure.reporting.AllureUtils;
+import cuesz.factory.WebDriverManager;
 import cuesz.logicpage.Case43_1_MSL_Fuelperform;
 import cuesz.logintest.AdvocateLogin;
-import cuesz.utils.WebDriverManager;
-import cuesz.utils.reporting.AllureUtils;
 import io.qameta.allure.*;
 
 @Epic ("Cuesz Staff on Logic Page for Fuel Testing")

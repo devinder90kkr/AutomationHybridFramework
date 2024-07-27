@@ -8,9 +8,9 @@ import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
 import cuesz.pages.BasePage;
 import cuesz.utils.SeleniumUtils;
-import cuesz.utils.web.ElementActions;
-import cuesz.utils.web.webTestdata;
-import cuesz.utils.web.weblocators;
+import cuesz.web.resources.ElementActions;
+import cuesz.web.resources.webTestdata;
+import cuesz.web.resources.weblocators;
 
 public class Case34_MSL_MemberBasicinfo extends BasePage {
 	SeleniumUtils utils = new SeleniumUtils(driver);

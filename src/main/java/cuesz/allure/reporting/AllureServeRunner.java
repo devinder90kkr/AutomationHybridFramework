@@ -1,4 +1,4 @@
-package cuesz.utils.reporting;
+package cuesz.allure.reporting;
 
 import java.io.File;
 import java.io.FileInputStream;

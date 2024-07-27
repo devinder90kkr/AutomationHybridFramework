@@ -1,4 +1,4 @@
-package cuesz.utils.web;
+package cuesz.web.resources;
 
 import org.openqa.selenium.By;
 

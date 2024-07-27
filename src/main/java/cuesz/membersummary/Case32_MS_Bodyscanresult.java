@@ -9,9 +9,9 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.testng.annotations.Test;
 
+import cuesz.date.functions.DateGenerator;
 import cuesz.pages.BasePage;
 import cuesz.utils.SeleniumUtils;
-import cuesz.utils.date.DateGenerator;
 
 public class Case32_MS_Bodyscanresult extends BasePage {
 	// public static String eventDate = "26-09-2023"; // Date to be passed nextscandate below

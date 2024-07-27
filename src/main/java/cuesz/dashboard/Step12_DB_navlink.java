@@ -8,11 +8,11 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.testng.annotations.Test;
 
+import cuesz.allure.reporting.AllureUtils;
 import cuesz.pages.BasePage;
 import cuesz.utils.api.NetworkResponse;
-import cuesz.utils.reporting.AllureUtils;
-import cuesz.utils.web.ResponsiveTester;
-import cuesz.utils.web.weblocators;
+import cuesz.web.resources.ResponsiveTester;
+import cuesz.web.resources.weblocators;
 import io.qameta.allure.Step;
 
 public class Step12_DB_navlink extends BasePage {

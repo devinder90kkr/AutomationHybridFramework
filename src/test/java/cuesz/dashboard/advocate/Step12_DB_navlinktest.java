@@ -163,13 +163,14 @@ import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
+
+import cuesz.allure.reporting.AllureServeRunner;
+import cuesz.allure.reporting.AllureUtils;
 import cuesz.dashboard.Step12_DB_navlink;
+import cuesz.factory.WebDriverManager;
 import cuesz.logintest.AdvocateLogin;
-import cuesz.utils.WebDriverManager;
-import cuesz.utils.reporting.AllureServeRunner;
-import cuesz.utils.reporting.AllureUtils;
-import cuesz.utils.web.weblocators;
 import cuesz.utils.api.NetworkResponse;
+import cuesz.web.resources.weblocators;
 
 import java.io.ByteArrayOutputStream;
 import java.io.FileInputStream;

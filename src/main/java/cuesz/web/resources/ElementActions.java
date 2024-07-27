@@ -1,4 +1,4 @@
-package cuesz.utils.web;
+package cuesz.web.resources;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;

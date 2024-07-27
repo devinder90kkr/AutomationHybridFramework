@@ -1,6 +1,6 @@
-package cuesz.utils.web;
+package cuesz.web.resources;
 
-import cuesz.utils.date.DateGenerator;
+import cuesz.date.functions.DateGenerator;
 
 public class webTestdata {
 	

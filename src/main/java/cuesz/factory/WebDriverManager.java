@@ -1,4 +1,4 @@
-package cuesz.utils; 								//Package and Import Statements
+package cuesz.factory; 								//Package and Import Statements
 //import org.openqa.selenium.WebDriver;
 //import org.openqa.selenium.chrome.ChromeDriver;
 //import org.openqa.selenium.chrome.ChromeOptions;
@@ -104,6 +104,8 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.safari.SafariDriver;
 import org.openqa.selenium.safari.SafariOptions;
+
+import cuesz.utils.Configuration;
 
 import java.time.Duration;
 import java.util.HashMap;

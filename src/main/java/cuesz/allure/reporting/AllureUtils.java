@@ -1,4 +1,4 @@
-package cuesz.utils.reporting;
+package cuesz.allure.reporting;
 
 import io.qameta.allure.Allure;
 import org.openqa.selenium.OutputType;

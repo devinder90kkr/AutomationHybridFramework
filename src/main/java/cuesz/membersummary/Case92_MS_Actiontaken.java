@@ -7,13 +7,14 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.testng.Assert;
 import org.testng.annotations.Test;
+
+import cuesz.allure.reporting.AllureUtils;
+import cuesz.date.functions.DateGenerator;
 import cuesz.pages.BasePage;
 import cuesz.utils.SeleniumUtils;
-import cuesz.utils.date.DateGenerator;
-import cuesz.utils.reporting.AllureUtils;
-import cuesz.utils.web.ElementActions;
-import cuesz.utils.web.webTestdata;
-import cuesz.utils.web.weblocators;
+import cuesz.web.resources.ElementActions;
+import cuesz.web.resources.webTestdata;
+import cuesz.web.resources.weblocators;
 import io.qameta.allure.Allure;
 
 public class Case92_MS_Actiontaken extends BasePage {

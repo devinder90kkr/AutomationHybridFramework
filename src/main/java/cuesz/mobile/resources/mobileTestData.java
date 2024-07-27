@@ -1,4 +1,4 @@
-package cuesz.utils.mobile;
+package cuesz.mobile.resources;
 
 public class mobileTestData {
 	
