@@ -1,6 +1,7 @@
 package cuesz.dashboard;
 
 import java.io.IOException;
+import java.util.concurrent.ExecutionException;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -8,14 +9,17 @@ import org.openqa.selenium.interactions.Actions;
 import org.testng.annotations.Test;
 
 import cuesz.pages.BasePage;
+import cuesz.utils.api.NetworkResponse;
 import cuesz.utils.reporting.AllureUtils;
 import cuesz.utils.web.ResponsiveTester;
 import cuesz.utils.web.weblocators;
 import io.qameta.allure.Step;
 
 public class Step12_DB_navlink extends BasePage {
+	 private NetworkResponse networkResponse; // Add this line to declare NetworkResponse
 	
 	weblocators locators = new weblocators();
+	 
 	
 	 public Step12_DB_navlink(WebDriver driver) {
 		super(driver);
@@ -23,14 +27,17 @@ public class Step12_DB_navlink extends BasePage {
 	}
 
 	 @Test 
-		public void Navigationfunctionality() throws InterruptedException, IOException {
-		 
+		public void Navigationfunctionality() throws InterruptedException, IOException, ExecutionException {
+		 networkResponse = new NetworkResponse(driver); // Initialize NetworkResponse
 		
 //		 // Call the utility method to perform responsive testing
 //	        ResponsiveTester.testResponsive(driver);
 		 
 		 Thread.sleep(2000);
 		 driver.findElement(weblocators.schdulemastr).click();
+		 // Start capturing network data
+	        networkResponse.getNetworkTabData(driver.findElement(weblocators.schdulemastr)); // Use appropriate locator
+
 		 
 		 Thread.sleep(2000);
 		 WebElement element = driver.findElement(weblocators.elemnt);
