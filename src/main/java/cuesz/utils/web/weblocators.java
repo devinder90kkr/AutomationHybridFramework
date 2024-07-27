@@ -5,7 +5,24 @@ import org.openqa.selenium.By;
 public class weblocators {
 	
 	
+	//Case101_Workout_Templates
+	public static final By templateicon		 = 	(By.xpath("//a[@href='/templates']//span"));
+	public static final By workoutemplateheading	=	(By.xpath("//h2[normalize-space()='Workout Templates']"));
+	public static final By templateplsicon		 = 	(By.xpath("//div[@class='btn_grey']//em"));
+	public static final By addTemplateHeading	=	(By.xpath("//h2[normalize-space()='Add Template']"));
+	public static final By templatname 		=	(By.xpath("//input[@id='autoWidth']"));
+	public static final By addnewworkout 	=	(By.xpath("//span[contains(text(),'Add New Workout')]"));
+	public static final By exerciseconatiner =	(By.xpath("//div[@class='rightArticle table-container']"));
+	public static final By exerciseslection	= (By.xpath("//div[@id='companyId']"));
+	public static final By exercisedescription = (By.xpath("(//div[@class='jodit-wysiwyg'])[1]"));
 	
+	public static final By repsfield = (By.xpath("(//input[@type='text'])[4]"));
+	public static final By recoveryfield = (By.xpath("(//input[@type='text'])[5]"));
+	public static final By setsplus	=	(By.xpath("//button[normalize-space()='+']"));
+	public static final By submitbuttn 		=	(By.xpath("//button[normalize-space()='Submit']"));
+	
+	
+			
 	//Step12_03_SE_create_staffevent
 	public static final By endtime		 = 	(By.id("eventEndTime"));
 	public static final By eventSelectn		 = (By.id("eventTopics"));
@@ -242,7 +259,7 @@ public class weblocators {
 	public static final By time3 			=	(By.xpath("(//div[@class='rc-time-picker-panel-select'])[3]//li[text()='pm']"));
 //	public static final By recuuring1		= 	(By.xpath("//div[contains(text(),'Select')]"));
 	public static final By recuuring1		=  	(By.id("reminder-recurring-options"));
-//	public static final By submitbttn 		=	(By.xpath("//button[normalize-space()='Submit']"));
+
 	public static final By submitbttn		=	(By.id("submit-reminder"));
 //	public static final By editreminder 	=	(By.xpath("//div[@class='reminder-container']//button[1]"));
 	public static final By editreminder 	=	(By.id("edit-reminder-0"));

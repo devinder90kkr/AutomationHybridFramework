@@ -8,8 +8,8 @@ public class BasePage {							//Class declaration
 
 // Define Constructor 
 	public BasePage(WebDriver driver) {     	// is the constructor of the BasePage class.
-    this.driver = driver; 						// Inside the constructor, this.driver = driver; assigns the driver parameter passed to the BasePage class's driver variable.
-}
+    this.driver = driver; 	
+	}
 
 // Common methods that can be used across different page classes
 public void navigateTo(String url) { 			// public void navigateTo(String url) is a method defined within the BasePage class.
