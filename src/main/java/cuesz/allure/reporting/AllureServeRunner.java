@@ -17,8 +17,12 @@ public class AllureServeRunner {
                 processBuilder = new ProcessBuilder("cmd.exe", "/c", "allure serve " + allureResultsPath);
             } else {
                 // For Unix-based systems (e.g., macOS, Linux)
-                processBuilder = new ProcessBuilder("/bin/sh", "-c", "allure serve " + allureResultsPath);
+                processBuilder = new ProcessBuilder("/bin/sh", "-c", "/usr/local/Cellar/allure/2.29.0/libexec/bin/allure serve " + allureResultsPath);
             }
+
+            // Print the command for debugging purposes
+            System.out.println("Running command: " + String.join(" ", processBuilder.command()));
+
             processBuilder.inheritIO();
             Process process = processBuilder.start();
             process.waitFor();
@@ -41,5 +45,9 @@ public class AllureServeRunner {
 
         // Construct the full path to the allure results directory
         return new File(projectRoot, allureResultsDir).getAbsolutePath();
+    }
+
+    public static void main(String[] args) {
+        runAllureServe();
     }
 }

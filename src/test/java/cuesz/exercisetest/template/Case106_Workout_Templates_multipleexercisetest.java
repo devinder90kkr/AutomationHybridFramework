@@ -8,6 +8,7 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
+import cuesz.allure.reporting.AllureServeRunner;
 import cuesz.allure.reporting.AllureUtils;
 import cuesz.exercise.template.Case106_Workout_Templates_multipleexercise;
 import cuesz.factory.WebDriverManager;
@@ -100,6 +101,8 @@ public class Case106_Workout_Templates_multipleexercisetest {
     	 if (driver != null) {
              driver.quit();
     	WebDriverManager.quitDriver();
+    	 // Run the Allure serve command
+        AllureServeRunner.runAllureServe();
        
     }
 }}

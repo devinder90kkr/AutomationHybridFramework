@@ -10,9 +10,9 @@ import org.testng.annotations.Test;
 
 import cuesz.allure.reporting.AllureServeRunner;
 import cuesz.allure.reporting.AllureUtils;
-import cuesz.exercise.template.Case101_Workout_Templates;
+import cuesz.exercise.template.Case108_Workout_Templates_editmultipleexercise;
 import cuesz.factory.WebDriverManager;
-import cuesz.logintest.NonleadCoachLogin;
+import cuesz.logintest.CoachLogin;
 import io.qameta.allure.Allure;
 import io.qameta.allure.Description;
 import io.qameta.allure.Epic;
@@ -26,10 +26,10 @@ import java.util.Properties;
 
 @Epic ("Exercise Workout templates")
 @Feature ("Workout Creation from coach panel")
-public class Case102_Workouttest_Templates_nonleadcoach {
+public class Case108_Workout_Templates_editmultipleexercisetest {
     private WebDriver driver;
-    private NonleadCoachLogin nonleadCoachLogin;
-    private Case101_Workout_Templates WorkouttemplatePage;
+    private CoachLogin coachLogin;
+    private Case108_Workout_Templates_editmultipleexercise WorkouttemplatePage;
     
 
     @BeforeClass
@@ -40,8 +40,8 @@ public class Case102_Workouttest_Templates_nonleadcoach {
         driver = WebDriverManager.getDriver(browser);
         
         driver.manage().window().maximize();
-        nonleadCoachLogin = new NonleadCoachLogin(); // Initialise the advocateLogin object
-        WorkouttemplatePage = new Case101_Workout_Templates(driver);
+        coachLogin = new CoachLogin(); // Initialise the advocateLogin object
+        WorkouttemplatePage = new Case108_Workout_Templates_editmultipleexercise(driver);
 
     }
     
@@ -52,12 +52,12 @@ public class Case102_Workouttest_Templates_nonleadcoach {
     @Description("Advocate schdules and creates an event")
     @Story("Schdule Events")
     public void workoutemplate() throws InterruptedException {
-    	nonleadCoachLogin.setUp(); // Call the setUp method of AdvocateLogin to initialise loginPage
-    	nonleadCoachLogin.testnonCoachLogin();
+    	coachLogin.setUp(); // Call the setUp method of AdvocateLogin to initialise loginPage
+    	coachLogin.testCoachLogin();
     	
     	
     	try {
-            WorkouttemplatePage.Workouttemplate();
+            WorkouttemplatePage.Editworkout();
         } catch (SkipException e) {
             System.out.println(e.getMessage());
         }
@@ -70,7 +70,7 @@ public class Case102_Workouttest_Templates_nonleadcoach {
         Allure.link("Case01_createventtest", dynamicLink);
     
         // Capture a screenshot and attach it to Allure
-        AllureUtils.captureScreenshot(driver, "Case102_Workouttest_Templates_nonleadcoach");
+        AllureUtils.captureScreenshot(driver, "Case101_Workouttest_Templates_leadcoach");
         Allure.step("Step Details");
         
         // Retrieve OS information
@@ -101,7 +101,7 @@ public class Case102_Workouttest_Templates_nonleadcoach {
     	 if (driver != null) {
              driver.quit();
     	WebDriverManager.quitDriver();
-    	 // Run the Allure serve command
+    	  // Run the Allure serve command
         AllureServeRunner.runAllureServe();
        
     }
