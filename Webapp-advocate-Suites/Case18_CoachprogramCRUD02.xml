@@ -3,9 +3,9 @@
 <suite name="Coach program basic">
 
   <test thread-count="5" name="Coach program">
-    <classes>    
- 	 
+    <classes>
 	  <class name="cuesz.exercisetest.template.Case105_Workout_Templates_createtest"/>
+	  <class name="cuesz.exercisetest.template.Case106_Workout_Templates_multipleexercisetest"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
