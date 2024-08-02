@@ -1,18 +1,17 @@
- package cuesz.exercisetest.template;
+ package cuesz.membersummary.datatonnage.advocate;
 
 import java.io.FileInputStream;
 import java.io.IOException;
 import org.openqa.selenium.WebDriver;
-import org.testng.SkipException;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 import cuesz.allure.reporting.AllureServeRunner;
 import cuesz.allure.reporting.AllureUtils;
-import cuesz.exercise.template.Case108_Workout_Templates_editmultipleexercise;
 import cuesz.factory.WebDriverManager;
-import cuesz.logintest.CoachLogin;
+import cuesz.logintest.AdvocateLogin;
+import cuesz.membersummary.datatonnage.Cases109_dataTonnage;
 import io.qameta.allure.Allure;
 import io.qameta.allure.Description;
 import io.qameta.allure.Epic;
@@ -26,10 +25,10 @@ import java.util.Properties;
 
 @Epic ("Exercise Workout templates")
 @Feature ("Workout Creation from coach panel")
-public class Case108_Workout_Templates_editmultipleexercisetest {
+public class Cases109_dataTonnagetest {
     private WebDriver driver;
-    private CoachLogin coachLogin;
-    private Case108_Workout_Templates_editmultipleexercise WorkouttemplatePage;
+    private AdvocateLogin advocateLogin;
+    private Cases109_dataTonnage datatonnage;
     
 
     @BeforeClass
@@ -40,8 +39,8 @@ public class Case108_Workout_Templates_editmultipleexercisetest {
         driver = WebDriverManager.getDriver(browser);
         
         driver.manage().window().maximize();
-        coachLogin = new CoachLogin(); // Initialise the advocateLogin object
-        WorkouttemplatePage = new Case108_Workout_Templates_editmultipleexercise(driver);
+        advocateLogin = new AdvocateLogin(); // Initialise the advocateLogin object
+        datatonnage = new Cases109_dataTonnage(driver);
 
     }
     
@@ -52,17 +51,11 @@ public class Case108_Workout_Templates_editmultipleexercisetest {
     @Description("Advocate schdules and creates an event")
     @Story("Schdule Events")
     public void workoutemplate() throws InterruptedException {
-    	coachLogin.setUp(); // Call the setUp method of AdvocateLogin to initialise loginPage
-    	coachLogin.testCoachLogin();
+    	advocateLogin.setUp(); // Call the setUp method of AdvocateLogin to initialise loginPage
+        advocateLogin.testAdvocateLogin();
     	
-    	
-    	try {
-            WorkouttemplatePage.EditWorkout();
-        } catch (SkipException e) {
-            System.out.println(e.getMessage());
-        }
-
-        
+    	datatonnage.datatonnage();
+          
         // Generate a dynamic link based on some runtime conditions or data
         String dynamicLink = generateDynamicLink();
 
@@ -70,7 +63,7 @@ public class Case108_Workout_Templates_editmultipleexercisetest {
         Allure.link("Case01_createventtest", dynamicLink);
     
         // Capture a screenshot and attach it to Allure
-        AllureUtils.captureScreenshot(driver, "Case101_Workouttest_Templates_leadcoach");
+        AllureUtils.captureScreenshot(driver, "Cases109_dataTonnagetest");
         Allure.step("Step Details");
         
         // Retrieve OS information
@@ -101,7 +94,7 @@ public class Case108_Workout_Templates_editmultipleexercisetest {
     	 if (driver != null) {
              driver.quit();
     	WebDriverManager.quitDriver();
-    	  // Run the Allure serve command
+    	 // Run the Allure serve command
         AllureServeRunner.runAllureServe();
        
     }

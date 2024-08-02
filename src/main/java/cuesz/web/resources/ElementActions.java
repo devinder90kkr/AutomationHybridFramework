@@ -106,5 +106,15 @@ public class ElementActions {
         js.executeScript("arguments[0].innerHTML = arguments[1];", element, value);
     }
 
+ // In ElementActions class
+    public void assertHeadingText(By locator, String expectedText) {
+        WebElement element = driver.findElement(locator);
+        String actualText = element.getText();
+        if (!actualText.equals(expectedText)) {
+            throw new AssertionError("Expected heading: " + expectedText + " but found: " + actualText);
+        }
+    }
+    
+    
     
 }

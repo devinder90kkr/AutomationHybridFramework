@@ -4,6 +4,10 @@ import org.openqa.selenium.By;
 
 public class weblocators {
 	
+	// Action Steps 
+	public static final By actionstepsheading				= (By.xpath("(//h2[normalize-space()='Action Steps'])[1]"));
+	
+	
 	
 	//Case101_Workout_Templates
 	public static final By templateicon			 = (By.xpath("//a[@href='/templates']//span"));

@@ -1,13 +1,13 @@
 package cuesz.web.resources;
 
 public class TemplateNameStorage {
-    private static String templatename;
+    private static String templateName;
 
     public static void setTemplateName(String name) {
-        templatename = name;
+        templateName = name;
     }
 
     public static String getTemplateName() {
-        return templatename;
+        return templateName;
     }
 }

@@ -4,64 +4,64 @@ import cuesz.date.functions.DateGenerator;
 
 public class webTestdata {
 	
-	//Case106_Workout_Templates_multipleexercise
-	public static final String templatname = "Heavytraining";
-	public static final String[] exercisenamesmultiple = {
-	        "45 Degree Bycicle Twisting Crunch, Bodyweight, Bil.",
-	        "All Fours Squad Stretch, Bodyweight",
-	        "Arm Curl, Suspension, Bil.",
-	        "Finger Extension Stretch, Bodyweight"
-	    };
-
-	    public static final String[] descriptionsmultiple = {
-	        "hello this is just for testing",
-	        "hello this",
-	        "is just for testing purpose", 
-	        "To handle scrolling in Selenium, especially if the element you want to interact with is not in the current view, you can use JavaScript to scroll the page. This approach is often useful when the element is located in a part of the page that's not immediately visible"	        
-	    };
-
-	    public static final String[] repsdata = {
-	        "3", "2", "8", "12"
-	    };
-
-	    public static final String[] recoverydata = {
-	        "42", "18", "5", "10"
-	    };
-	    
-	    public static final String[] optional1 = {
-		        "40", "50", "60", "70"
-		    };
-		public static final String[] optional2 = {
-	         "1234", "252" , "2-3-3-6", "4158"
-	    };
-	
-	
 //	//Case106_Workout_Templates_multipleexercise
-//		public static final String templatname = "Heavytraining";
-//		public static final String[] exercisenamesmultiple = {
-//		        "45 Degree Bycicle Twisting Crunch, Bodyweight, Bil.",
-//		    
-//		    };
+//	public static final String templatname = "Heavytraining";
+//	public static final String[] exercisenamesmultiple = {
+//	        "45 Degree Bycicle Twisting Crunch, Bodyweight, Bil.",
+//	        "All Fours Squad Stretch, Bodyweight",
+//	        "Arm Curl, Suspension, Bil.",
+//	        "Finger Extension Stretch, Bodyweight"
+//	    };
 //
-//		    public static final String[] descriptionsmultiple = {
-//		        "To handle scrolling in Selenium, especially if the element you want to interact with is not in the current view, you can use JavaScript to scroll the page. This approach is often useful when the element is located in a part of the page that's not immediately visible"	        
-//		    };
+//	    public static final String[] descriptionsmultiple = {
+//	        "hello this is just for testing",
+//	        "hello this",
+//	        "is just for testing purpose", 
+//	        "To handle scrolling in Selenium, especially if the element you want to interact with is not in the current view, you can use JavaScript to scroll the page. This approach is often useful when the element is located in a part of the page that's not immediately visible"	        
+//	    };
 //
-//		    public static final String[] repsdata = {
-//		        "12"
-//		    };
+//	    public static final String[] repsdata = {
+//	        "3", "2", "8", "12"
+//	    };
 //
-//		    public static final String[] recoverydata = {
-//		        "10"
+//	    public static final String[] recoverydata = {
+//	        "42", "18", "5", "10"
+//	    };
+//	    
+//	    public static final String[] optional1 = {
+//		        "40", "50", "60", "70"
 //		    };
-//		    
-//		    public static final String[] optional1 = {
-//			         "70"
-//			    };
-//		    public static final String[] optional2 = {
-//			        "4158"
-//			    };
-//	
+//		public static final String[] optional2 = {
+//	         "1234", "252" , "2-3-3-6", "4158"
+//	    };
+	
+	
+	//Case106_Workout_Templates_multipleexercise
+		public static final String templatname = "Heavytraining";
+		public static final String[] exercisenamesmultiple = {
+		        "45 Degree Bycicle Twisting Crunch, Bodyweight, Bil.",
+		    
+		    };
+
+		    public static final String[] descriptionsmultiple = {
+		        "To handle scrolling in Selenium, especially if the element you want to interact with is not in the current view, you can use JavaScript to scroll the page. This approach is often useful when the element is located in a part of the page that's not immediately visible"	        
+		    };
+
+		    public static final String[] repsdata = {
+		        "12"
+		    };
+
+		    public static final String[] recoverydata = {
+		        "10"
+		    };
+		    
+		    public static final String[] optional1 = {
+			         "70"
+			    };
+		    public static final String[] optional2 = {
+			        "4158"
+			    };
+	
 	
 	
 	//	Case102_Workout_Templates_create
