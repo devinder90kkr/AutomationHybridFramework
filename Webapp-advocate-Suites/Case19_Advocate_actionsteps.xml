@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="advocate action steps">
+
+  <test thread-count="5" name="Advcoate actionsteps functionlaity">
+    <classes>
+	  <class name="cuesz.membersummary.actionsteps.advocate.Cases110_Action_Stepstest"/>
+	 <class name="cuesz.membersummary.actionsteps.advocate.Cases111_Action_Steps_editcasetest"/>
+  	<class name="cuesz.membersummary.actionsteps.advocate.Cases112_Action_Steps_editcaseImportancorPrioritytest"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

@@ -13,6 +13,7 @@ import cuesz.factory.WebDriverManager;
 import cuesz.logintest.AdvocateLogin;
 import cuesz.membersummary.actionsteps.Cases110_Action_Steps_delete;
 import cuesz.membersummary.actionsteps.Cases111_Action_Steps_editcase;
+import cuesz.membersummary.actionsteps.Cases112_Action_Steps_editcaseImportancorPriority;
 import io.qameta.allure.Allure;
 import io.qameta.allure.Description;
 import io.qameta.allure.Epic;
@@ -26,10 +27,10 @@ import java.util.Properties;
 
 @Epic ("Action steps advocate themselves")
 @Feature ("Action steps functionality")
-public class Cases111_Action_Steps_editcasetest {
+public class Cases112_Action_Steps_editcaseImportancorPrioritytest {
     private WebDriver driver;
     private AdvocateLogin advocateLogin;
-    private Cases111_Action_Steps_editcase actionstep;
+    private Cases112_Action_Steps_editcaseImportancorPriority actionstep;
     
 
     @BeforeClass
@@ -41,7 +42,7 @@ public class Cases111_Action_Steps_editcasetest {
         
         driver.manage().window().maximize();
         advocateLogin = new AdvocateLogin(); // Initialise the advocateLogin object
-        actionstep = new Cases111_Action_Steps_editcase(driver);
+        actionstep = new Cases112_Action_Steps_editcaseImportancorPriority(driver);
 
     }
     
@@ -61,7 +62,7 @@ public class Cases111_Action_Steps_editcasetest {
         String dynamicLink = generateDynamicLink();
 
         // Add the dynamic link to the Allure report
-        Allure.link("Cases111_Action_Steps_editcasetest", dynamicLink);
+        Allure.link("Cases112_Action_Steps_editcaseImportancorPrioritytest", dynamicLink);
     
         // Capture a screenshot and attach it to Allure
         AllureUtils.captureScreenshot(driver, "Cases110_Action_Stepstest");

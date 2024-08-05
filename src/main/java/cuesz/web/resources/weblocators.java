@@ -15,7 +15,10 @@ public class weblocators {
 	public static final By submitbttnaction		 = (By.xpath("(//button[normalize-space()='Submit'])[1]"));
 	public static final By historyicon			 = (By.xpath("(//button[@id='self-history-action-step'])[1]"));
 	public static final By historySection		 = (By.xpath("(//div[contains(@class,'logic_page_notes')])[4]"));
-	
+	public static final By importancesection	 = (By.xpath("(//button[@class='black-card '])[1]"));
+	public static final By importancedatefield	 = (By.xpath("//input[@id='reminder-date']"));
+	public static final By importancetimefield	 = (By.xpath("//input[@id='IP-time-picker']"));
+	public static final By submtimportance		 = (By.xpath("//button[@id='submit-reminder']"));
 	
 	
 	
