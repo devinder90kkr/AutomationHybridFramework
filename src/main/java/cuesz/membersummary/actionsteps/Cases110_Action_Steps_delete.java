@@ -15,12 +15,12 @@ import cuesz.web.resources.ElementActions;
 import cuesz.web.resources.webTestdata;
 import cuesz.web.resources.weblocators;
 
-public class Cases110_Action_Steps extends BasePage {
+public class Cases110_Action_Steps_delete extends BasePage {
     
-    private static final Logger LOGGER = LoggerFactory.getLogger(Cases110_Action_Steps.class);
+    private static final Logger LOGGER = LoggerFactory.getLogger(Cases110_Action_Steps_delete.class);
     private ElementActions elementActions;
     
-    public Cases110_Action_Steps(WebDriver driver) {
+    public Cases110_Action_Steps_delete(WebDriver driver) {
         super(driver);
         this.elementActions = new ElementActions(driver);
     }

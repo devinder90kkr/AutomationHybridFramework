@@ -11,7 +11,7 @@ import cuesz.allure.reporting.AllureServeRunner;
 import cuesz.allure.reporting.AllureUtils;
 import cuesz.factory.WebDriverManager;
 import cuesz.logintest.AdvocateLogin;
-import cuesz.membersummary.actionsteps.Cases110_Action_Steps;
+import cuesz.membersummary.actionsteps.Cases110_Action_Steps_delete;
 import io.qameta.allure.Allure;
 import io.qameta.allure.Description;
 import io.qameta.allure.Epic;
@@ -28,7 +28,7 @@ import java.util.Properties;
 public class Cases110_Action_Stepstest {
     private WebDriver driver;
     private AdvocateLogin advocateLogin;
-    private Cases110_Action_Steps actionstep;
+    private Cases110_Action_Steps_delete actionstep;
     
 
     @BeforeClass
@@ -40,7 +40,7 @@ public class Cases110_Action_Stepstest {
         
         driver.manage().window().maximize();
         advocateLogin = new AdvocateLogin(); // Initialise the advocateLogin object
-        actionstep = new Cases110_Action_Steps(driver);
+        actionstep = new Cases110_Action_Steps_delete(driver);
 
     }
     
