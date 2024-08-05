@@ -5,7 +5,13 @@ import org.openqa.selenium.By;
 public class weblocators {
 	
 	// Action Steps 
-	public static final By actionstepsheading				= (By.xpath("(//h2[normalize-space()='Action Steps'])[1]"));
+	public static final By actionstepsbutton 	 = (By.id("self-add-edit-action-step"));
+	public static final By editoractions		 = (By.xpath("//div[@class='jodit-wysiwyg']"));
+	public static final By submitactionnotes	 = (By.xpath("(//div[@id='self-add-edit-action-step'])[2]"));
+	public static final By searchnotes			 = (By.xpath("//input[@placeholder='Search Note']"));
+	public static final By deletenotes			 = (By.xpath("//button[@id='self-delete-action-step-0']"));
+	
+	
 	
 	
 	

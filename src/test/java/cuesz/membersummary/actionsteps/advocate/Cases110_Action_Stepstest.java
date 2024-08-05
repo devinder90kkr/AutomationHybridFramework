@@ -7,6 +7,7 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
+import cuesz.allure.reporting.AllureServeRunner;
 import cuesz.allure.reporting.AllureUtils;
 import cuesz.factory.WebDriverManager;
 import cuesz.logintest.AdvocateLogin;
@@ -76,7 +77,7 @@ public class Cases110_Action_Stepstest {
    
  private String generateDynamicLink() {
         
-        return "https://pre-staging.app.cuesz.com/templates"; // Replace with your actual dynamic link
+        return "https://ddzyg3vutpr4b.cloudfront.net/dashboard"; // Replace with your actual dynamic link
     }
  private String getBrowserFromConfigFile() {
      Properties properties = new Properties();
@@ -94,7 +95,7 @@ public class Cases110_Action_Stepstest {
              driver.quit();
     	WebDriverManager.quitDriver();
     	 // Run the Allure serve command
-     //   AllureServeRunner.runAllureServe();
+//        AllureServeRunner.runAllureServe();
        
     }
 }}
