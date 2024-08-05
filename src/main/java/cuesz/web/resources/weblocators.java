@@ -7,10 +7,14 @@ public class weblocators {
 	// Action Steps 
 	public static final By actionstepsbutton 	 = (By.id("self-add-edit-action-step"));
 	public static final By editoractions		 = (By.xpath("//div[@class='jodit-wysiwyg']"));
+	public static final By editactionsteps		 = (By.xpath("(//div[@class='jodit-wysiwyg'])[2]"));
 	public static final By submitactionnotes	 = (By.xpath("(//div[@id='self-add-edit-action-step'])[2]"));
 	public static final By searchnotes			 = (By.xpath("//input[@placeholder='Search Note']"));
 	public static final By deletenotes			 = (By.xpath("//button[@id='self-delete-action-step-0']"));
-	
+	public static final By editiconaction		 = (By.xpath("//button[@id='self-edit-action-step-0']"));
+	public static final By submitbttnaction		 = (By.xpath("(//button[normalize-space()='Submit'])[1]"));
+	public static final By historyicon			 = (By.xpath("(//button[@id='self-history-action-step'])[1]"));
+	public static final By historySection		 = (By.xpath("(//div[contains(@class,'logic_page_notes')])[4]"));
 	
 	
 	

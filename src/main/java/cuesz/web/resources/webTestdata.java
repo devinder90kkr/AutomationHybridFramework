@@ -82,7 +82,7 @@ public class webTestdata {
 	public static final String membername = "Kumar Devinder";
 	public static final String staff1	= "Coach Seakfreight";
 	public static final String staff2	=	"Devinder - Wellness Advocate";
-	public static final String notes	= "We are excited to announce that there will be a live performance event. So please availble";
+	public static final String notes	= "We are excited to announce that there will be a live performance event. So please availble ";
 	public static final String editstartTimeInput	=	"10:00 AM";
 	public static String editstartInput = "10:00";
 	public static final String editendTimeInput	=	"11:00 AM";
