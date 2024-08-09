@@ -7,10 +7,11 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
+import cuesz.allure.reporting.AllureServeRunner;
 import cuesz.allure.reporting.AllureUtils;
 import cuesz.factory.WebDriverManager;
 import cuesz.logintest.AdvocateLogin;
-import cuesz.membersummary.actionsteps.Cases111_Action_Steps_editcase;
+import cuesz.membersummary.actionsteps.Cases109_Action_Steps_tabs;
 import io.qameta.allure.Allure;
 import io.qameta.allure.Description;
 import io.qameta.allure.Epic;
@@ -22,12 +23,12 @@ import io.qameta.allure.Story;
 import java.util.Properties;
 
 
-@Epic ("Action steps advocate themselves")
-@Feature ("Action steps functionality")
-public class Cases111_Action_Steps_editcasetest {
+@Epic ("Action steps tab verifcation functionality")
+@Feature ("Action steps tabs functionlaity")
+public class Cases109_Action_Steps_tabstest {
     private WebDriver driver;
     private AdvocateLogin advocateLogin;
-    private Cases111_Action_Steps_editcase actionstep;
+    private Cases109_Action_Steps_tabs actionstep;
     
 
     @BeforeClass
@@ -39,7 +40,7 @@ public class Cases111_Action_Steps_editcasetest {
         
         driver.manage().window().maximize();
         advocateLogin = new AdvocateLogin(); // Initialise the advocateLogin object
-        actionstep = new Cases111_Action_Steps_editcase(driver);
+        actionstep = new Cases109_Action_Steps_tabs(driver);
 
     }
     
@@ -47,22 +48,22 @@ public class Cases111_Action_Steps_editcasetest {
     
     @Owner("QA") // Add the @Owner annotation to specify the executor
     @Severity(SeverityLevel.NORMAL)     
-    @Description("Advocate verify action steps functionlaity")
-    @Story("Action Steps")
+    @Description("Advocate verify action tabs functionlaity")
+    @Story("Action Steps tabs")
     public void Actionsteps() throws InterruptedException {
     	advocateLogin.setUp(); // Call the setUp method of AdvocateLogin to initialise loginPage
         advocateLogin.testAdvocateLogin();
     	
-        actionstep.editactionsteps();
+        actionstep.actionstepstabs();
           
         // Generate a dynamic link based on some runtime conditions or data
         String dynamicLink = generateDynamicLink();
 
         // Add the dynamic link to the Allure report
-        Allure.link("Cases111_Action_Steps_editcasetest", dynamicLink);
+        Allure.link("Case01_createventtest", dynamicLink);
     
-        // Capture a screenshot and attach it to Allure
-        AllureUtils.captureScreenshot(driver, "Cases110_Action_Stepstest");
+//        // Capture a screenshot and attach it to Allure
+//        AllureUtils.captureScreenshot(driver, "Cases110_Action_Stepstest");
         Allure.step("Step Details");
         
         // Retrieve OS information
@@ -94,7 +95,7 @@ public class Cases111_Action_Steps_editcasetest {
              driver.quit();
     	WebDriverManager.quitDriver();
     	 // Run the Allure serve command
-//        AllureServeRunner.runAllureServe();
+        AllureServeRunner.runAllureServe();
        
     }
 }}

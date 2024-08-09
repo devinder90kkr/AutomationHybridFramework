@@ -19,7 +19,10 @@ public class weblocators {
 	public static final By importancedatefield	 = (By.xpath("//input[@id='reminder-date']"));
 	public static final By importancetimefield	 = (By.xpath("//input[@id='IP-time-picker']"));
 	public static final By submtimportance		 = (By.xpath("//button[@id='submit-reminder']"));
-	
+	public static final By prioritydatefield	 = (By.xpath("(//button[contains(@class,'black-card')])[3]"));	
+	public static final By completetab			 = (By.xpath("//button[@id='self-Completed-action-step']"));
+	public static final By activetab			 = (By.xpath("//button[@id='self-Active-action-step']"));
+	public static final By alltab				 = (By.xpath("//button[@id='self-All-action-step']"));
 	
 	
 	//Case101_Workout_Templates

@@ -71,6 +71,26 @@ public class Cases112_Action_Steps_editcaseImportancorPriority extends BasePage 
         LOGGER.info("Clicked on submtimportance");
         AllureUtils.logStep("Clicked on submtimportance");
         
+        Thread.sleep(3500);
+        //Click on priority icon for action steps
+        wait.until(ExpectedConditions.visibilityOfElementLocated(weblocators.prioritydatefield));
+        elementActions.clickElement(weblocators.prioritydatefield);
+        // Log message to console and Allure report
+        LOGGER.info("Clicked on importancesection");
+        AllureUtils.logStep("Clicked on importancesection");
+        // Capture a screenshot and attach it to Allure
+        AllureUtils.captureScreenshot(driver, "Cases112_Action_Steps_editcaseImportancorPriority1");
+        Thread.sleep(3500);
+       
+        // Click on plus icon for action steps 
+        wait.until(ExpectedConditions.visibilityOfElementLocated(weblocators.submtimportance));
+        elementActions.clickElement(weblocators.submtimportance);
+        // Log message to console and Allure report
+        LOGGER.info("Clicked on submtimportance");
+        AllureUtils.logStep("Clicked on submtimportance");
+        
+        
+        
         Thread.sleep(2500);
        
     }
