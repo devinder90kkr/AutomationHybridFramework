@@ -26,6 +26,7 @@ public class weblocators {
 	public static final By Mynotes				 = (By.xpath("//div[contains(@class, 'react-select-dropdown-prefix__single-value') and text()='My Notes']"));
 	public static final By removeimportant		 = (By.xpath("//span[normalize-space()='Remove Important']"));
 	public static final By importancesection1	 = (By.xpath("(//button[@class='black-card active-card'])[1]"));
+	public static final By editdattimepriority	 = (By.xpath("//span[normalize-space()='Edit Date/Time']"));
 	
 	//Case101_Workout_Templates
 	public static final By templateicon			 = (By.xpath("//a[@href='/templates']//span"));
