@@ -23,7 +23,9 @@ public class weblocators {
 	public static final By completetab			 = (By.xpath("//button[@id='self-Completed-action-step']"));
 	public static final By activetab			 = (By.xpath("//button[@id='self-Active-action-step']"));
 	public static final By alltab				 = (By.xpath("//button[@id='self-All-action-step']"));
-	
+	public static final By Mynotes				 = (By.xpath("//div[contains(@class, 'react-select-dropdown-prefix__single-value') and text()='My Notes']"));
+	public static final By removeimportant		 = (By.xpath("//span[normalize-space()='Remove Important']"));
+	public static final By importancesection1	 = (By.xpath("(//button[@class='black-card active-card'])[1]"));
 	
 	//Case101_Workout_Templates
 	public static final By templateicon			 = (By.xpath("//a[@href='/templates']//span"));
@@ -318,7 +320,7 @@ public class weblocators {
     public static final By deletePopupContent = (By.xpath("//div[@class='MuiDialogContent-root']"));
 //    public static final By cancelbuttn 	=	(By.xpath("//button[@id='DecisionPopupConfirmation']"));
     public static final By cancelbuttn		= 	(By.id("DecisionPopupConfirmation"));
-//    public static final By confirmbttn 	=	(By.xpath("//button[@id='DecisionPopupRejection']"));
+//    public static final By confirmbttn1 	=	(By.xpath("//button[@id='DecisionPopupRejection']"));
     public static final By confirmbttn 		=	(By.id("DecisionPopupRejection"));
 
 	//Case35_MSL_MemberWilingnessLimitationScore

@@ -73,6 +73,7 @@ public class Cases109_Action_Steps_tabs extends BasePage {
 
         
         
+        
        Thread.sleep(2500); 
         
     }

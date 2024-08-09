@@ -3,7 +3,8 @@
 <suite name="advocate action steps">
 
   <test thread-count="5" name="Advcoate actionsteps functionlaity">
-    <classes>
+  	  <classes>
+    	<class name="cuesz.membersummary.actionsteps.advocate.Cases109_Action_Steps_tabstest"/>
 	  <class name="cuesz.membersummary.actionsteps.advocate.Cases110_Action_Stepstest"/>
 	 <class name="cuesz.membersummary.actionsteps.advocate.Cases111_Action_Steps_editcasetest"/>
   	<class name="cuesz.membersummary.actionsteps.advocate.Cases112_Action_Steps_editcaseImportancorPrioritytest"/>
