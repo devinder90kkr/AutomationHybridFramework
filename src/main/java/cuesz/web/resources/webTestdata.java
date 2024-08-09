@@ -83,6 +83,14 @@ public class webTestdata {
 	public static final String staff1	= "Coach Seakfreight";
 	public static final String staff2	=	"Devinder - Wellness Advocate";
 	public static final String notes	= "We are excited to announce that there will be a live performance event. So please availble ";
+	public static final String notes1	= "Verify Basic Functionality of the Text Editor";
+	public static final String notes2	= "Verify Scrolling Functionality in the action notes created";
+	public static final String notes3	= "The note marked as completed by the lead advocate, lead coach, or lead doctor should be visible as completed to both the assigned staff member and the member who created the action step.";
+	public static final String notes4	= "Clicking the Delete button should initiates the delete action.";
+	public static final String notes5	= "Verify that the created action note for a member is visible only on the member summary page of that particular member and not in the action notes of staff members (Lead Advocate, Coach, Doctor, or Non-Lead Advocate).";
+	
+	
+	
 	public static final String editstartTimeInput	=	"10:00 AM";
 	public static String editstartInput = "10:00";
 	public static final String editendTimeInput	=	"11:00 AM";

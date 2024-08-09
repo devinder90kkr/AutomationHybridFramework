@@ -8,6 +8,7 @@
 	  <class name="cuesz.membersummary.actionsteps.advocate.Cases110_Action_Stepstest"/>
 	 <class name="cuesz.membersummary.actionsteps.advocate.Cases111_Action_Steps_editcasetest"/>
   	<class name="cuesz.membersummary.actionsteps.advocate.Cases112_Action_Steps_editcaseImportancorPrioritytest"/>
+  	<class name="cuesz.membersummary.actionsteps.advocate.Cases113_Action_Steps_Mutiplenotestest"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
