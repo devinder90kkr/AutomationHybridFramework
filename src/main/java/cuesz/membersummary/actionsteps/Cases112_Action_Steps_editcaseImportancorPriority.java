@@ -16,7 +16,6 @@ import org.testng.annotations.Test;
 
 import cuesz.allure.reporting.AllureUtils;
 import cuesz.date.functions.DateGenerator;
-import cuesz.date.functions.Nextdategeneratorfunction;
 import cuesz.pages.BasePage;
 import cuesz.schdule.Case01_createvent;
 import cuesz.web.resources.ElementActions;
@@ -28,7 +27,7 @@ public class Cases112_Action_Steps_editcaseImportancorPriority extends BasePage 
     private static final Logger LOGGER = LoggerFactory.getLogger(Cases112_Action_Steps_editcaseImportancorPriority.class);
     private ElementActions elementActions;
     public static String eventDate = DateGenerator.generateFixedDate(); // Use the generated date
-    public static String eventDate1 = Nextdategeneratorfunction.generateTomorrowDate(); // Use the generated date
+    
     
     public Cases112_Action_Steps_editcaseImportancorPriority(WebDriver driver) {
         super(driver);
