@@ -29,6 +29,9 @@ public class weblocators {
 	public static final By editdattimepriority	 = (By.xpath("//span[normalize-space()='Edit Date/Time']"));
 	public static final By important2			 = (By.xpath("(//button[contains(@class,'black-card')])[8]"));
 	public static final By priority2			 = (By.xpath("(//button[contains(@class,'black-card')])[15]"));
+	public static final By sharing1				 = (By.xpath("(//button[@class='black-card '])[3]"));
+	public static final By checkbox2			 = (By.xpath("(//input[contains(@type,'checkbox')])[3]"));
+	public static final By sharingbutton		 = (By.xpath("//button[normalize-space()='Share']"));
 
 	
 	//Case101_Workout_Templates

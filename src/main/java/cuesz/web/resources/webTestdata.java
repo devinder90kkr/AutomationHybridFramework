@@ -88,8 +88,11 @@ public class webTestdata {
 	public static final String notes3	= "The note marked as completed by the lead advocate, lead coach, or lead doctor should be visible as completed to both the assigned staff member and the member who created the action step.";
 	public static final String notes4	= "Clicking the Delete button should initiates the delete action.";
 	public static final String notes5	= "Verify that the created action note for a member is visible only on the member summary page of that particular member and not in the action notes of staff members (Lead Advocate, Coach, Doctor, or Non-Lead Advocate).";
-	
-	
+	public static final String notes6	= "Sample notes 01 for sharing";
+	public static final String notes7	= "Sample notes 02 for sharing";
+	public static final String notes8	= "Sample notes 03 for sharing";
+	public static final String notes9	= "Sample notes 04 for sharing";
+	public static final String notes10	= "Sample notes 05 for sharing";
 	
 	public static final String editstartTimeInput	=	"10:00 AM";
 	public static String editstartInput = "10:00";
