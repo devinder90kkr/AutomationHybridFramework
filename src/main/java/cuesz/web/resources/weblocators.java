@@ -32,7 +32,13 @@ public class weblocators {
 	public static final By sharing1				 = (By.xpath("(//button[@class='black-card '])[3]"));
 	public static final By checkbox2			 = (By.xpath("(//input[contains(@type,'checkbox')])[3]"));
 	public static final By sharingbutton		 = (By.xpath("//button[normalize-space()='Share']"));
+	public static final By stafflist1			 = (By.xpath("//label[contains(text(),'Devinder kumar')]"));
+	public static final By stafflist2			 = (By.xpath("//label[contains(text(),'Coach Seakfreight')]"));
+	public static final By sharebutton			 = (By.xpath("//button[contains(@class,'btn btn-primary btn-lg ms-3')]"));
+	public static final By shareIcon			 = By.xpath("//div[@class='d-flex align-items-center rounded bg-dark px-1 gap-2']");
 
+
+	
 	
 	//Case101_Workout_Templates
 	public static final By templateicon			 = (By.xpath("//a[@href='/templates']//span"));

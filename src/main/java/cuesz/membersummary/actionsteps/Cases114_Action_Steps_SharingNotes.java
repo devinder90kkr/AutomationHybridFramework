@@ -1,6 +1,9 @@
 package cuesz.membersummary.actionsteps;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+
 import java.time.Duration;
 import java.util.Arrays;
 import java.util.List;
@@ -79,14 +82,41 @@ public class Cases114_Action_Steps_SharingNotes extends BasePage {
         elementActions.clickElement(weblocators.checkbox2);
         LOGGER.info("Clicked on checkbox2 button");
         AllureUtils.logStep("Clicked on checkbox2 button");
+        AllureUtils.captureScreenshot(driver, "Cases113_Action_Steps_Mutiplenotes2");
         
-      //Click on checkbox
+        //Click on checkbox
         wait.until(ExpectedConditions.visibilityOfElementLocated(weblocators.sharingbutton));
         elementActions.clickElement(weblocators.sharingbutton);
         LOGGER.info("Clicked on sharingbutton button");
         AllureUtils.logStep("Clicked on sharingbutton button");
     
+        //Click on staff user check list
+        wait.until(ExpectedConditions.visibilityOfElementLocated(weblocators.stafflist1));
+        elementActions.clickElement(weblocators.stafflist1);
+        LOGGER.info("Clicked on memberlist1 checkbox");
+        AllureUtils.logStep("Clicked on memberlist1 checkbox");
     
+        //Click on staff user check list
+        wait.until(ExpectedConditions.visibilityOfElementLocated(weblocators.stafflist2));
+        elementActions.clickElement(weblocators.stafflist2);
+        LOGGER.info("Clicked on memberlist1 checkbox");
+        AllureUtils.logStep("Clicked on memberlist1 checkbox");
+        AllureUtils.captureScreenshot(driver, "Cases113_Action_Steps_Mutiplenotes3");
+           
+        //Click on share button from popup list
+        wait.until(ExpectedConditions.visibilityOfElementLocated(weblocators.sharebutton));
+        elementActions.clickElement(weblocators.sharebutton);
+        LOGGER.info("Clicked on sharebutton button");
+        AllureUtils.logStep("Clicked on sharebutton button");
+        
+     // Extract count from share icon
+        WebElement shareIconElement = wait.until(ExpectedConditions.visibilityOfElementLocated(weblocators.shareIcon));
+        String shareCountText = shareIconElement.findElement(By.tagName("span")).getText();
+        LOGGER.info("Share icon count extracted: " + shareCountText);
+        AllureUtils.logStep("Share icon count extracted: " + shareCountText);
+        
+        AllureUtils.captureScreenshot(driver, "Cases113_Action_Steps_Mutiplenotes4");
+        
     Thread.sleep(5200);
     }
 
