@@ -4,6 +4,19 @@ import org.openqa.selenium.By;
 
 public class weblocators {
 	
+	
+	//Filter
+	public static final By filtericon			 = (By.xpath("//button[contains(@class, 'action_step_filter')]//h2[text()='Filter']"));
+	public static final By filtercross			 = (By.xpath("//div[@class='filtersOuter']//button[2]"));
+	public static final By activetype			 =  (By.id("self-Active-action-step"));
+	public static final By completedtype		 = (By.xpath("//input[@id='self-Completed-action-step']"));
+	public static final By alltype			 	 = (By.id("self-All-action-step"));
+	public static final By personaltype			 = (By.id("self-Personal-action-step"));
+	public static final By shareview			 = (By.id("self-Shared-action-step"));
+	public static final By allviewtype			 = (By.id("self-All-action-step"));
+	public static final By actionbuton			 = (By.xpath("//button[normalize-space()='Apply']"));
+	
+	
 	// Action Steps 
 	public static final By actionstepsbutton 	 = (By.id("self-add-edit-action-step"));
 	public static final By editoractions		 = (By.xpath("//div[@class='jodit-wysiwyg']"));
@@ -36,10 +49,9 @@ public class weblocators {
 	public static final By stafflist2			 = (By.xpath("//label[contains(text(),'Coach Seakfreight')]"));
 	public static final By sharebutton			 = (By.xpath("//button[contains(@class,'btn btn-primary btn-lg ms-3')]"));
 	public static final By shareIcon			 = By.xpath("//div[@class='d-flex align-items-center rounded bg-dark px-1 gap-2']");
+	//
 
 
-	
-	
 	//Case101_Workout_Templates
 	public static final By templateicon			 = (By.xpath("//a[@href='/templates']//span"));
 	public static final By workoutemplateheading = (By.xpath("//h2[normalize-space()='Workout Templates']"));
