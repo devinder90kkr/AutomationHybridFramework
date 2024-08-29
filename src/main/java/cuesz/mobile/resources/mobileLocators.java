@@ -163,7 +163,12 @@ public class mobileLocators {
 	public static final By doneclick1	=	AppiumBy.iOSClassChain("**/XCUIElementTypeButton[`label == \"DONE\"`]");
 	
 	//Dated 9-Jan upload images for all category
-	public static final By uploadclickall	= AppiumBy.accessibilityId("FuelUploadImage");
+	public static final By uploadoptions	= AppiumBy.accessibilityId("FuelUploadImage");
+	public static final By uploadclickallbrakfast	= AppiumBy.name("BreakfastPhotoUpload");
+	public static final By uploadclickallearlysnacks	= AppiumBy.name("Early SnacksPhotoUpload");
+	public static final By uploadclickalllunch	= AppiumBy.name("LunchPhotoUpload");
+	public static final By uploadclickallatesnacks	= AppiumBy.name("Late SnacksPhotoUpload");
+	public static final By uploadclickalldinner	= AppiumBy.name("DinnerPhotoUpload");
 	public static final By breakfastuploadoption	=	AppiumBy.iOSClassChain("**/XCUIElementTypeOther[`name == \"BreakfastPhotoUpload\"`][1]");
 	public static final By galleryimage1	= AppiumBy.xpath("//XCUIElementTypeImage[2]");
 	public static final By addoption 		= AppiumBy.accessibilityId("Add");

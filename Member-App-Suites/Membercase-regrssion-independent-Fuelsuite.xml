@@ -38,6 +38,10 @@
       <class name="cuesz03.Iosapp_member_home_Fuelscreen.Case44_Fuel_Dinner_additionalfueldeletecase"/>
       
       <class name="cuesz03.Iosapp_member_home_Fuelscreen.Case45_Fuel_Pastday1_brekfastactivity"/>
+ 
+ 	 <class name="cuesz03.Iosapp_member_home_Fuelscreen.Case51_Fuel_AdditionalfuelcaseforAll"/>
+ 	 <class name="cuesz03.Iosapp_member_home_Fuelscreen.Case52_Fuel_uploadphotosforfuel"/>
+ 	 <class name="cuesz03.Iosapp_member_home_Fuelscreen.Case53_Fuel_notesbottom"/>
  	 
     </classes>
   </test> <!-- Test -->
