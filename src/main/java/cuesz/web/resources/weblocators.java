@@ -15,6 +15,7 @@ public class weblocators {
 	public static final By shareview			 = (By.id("self-Shared-action-step"));
 	public static final By allviewtype			 = (By.id("self-All-action-step"));
 	public static final By actionbuton			 = (By.xpath("//button[normalize-space()='Apply']"));
+	public static final By datefilter			 = (By.xpath("//div[@class='react-select-dropdown-prefix__value-container css-1hwfws3']"));
 	
 	
 	// Action Steps 

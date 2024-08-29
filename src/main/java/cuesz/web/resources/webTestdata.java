@@ -4,6 +4,12 @@ import cuesz.date.functions.DateGenerator;
 
 public class webTestdata {
 	
+	
+	//testdata for filter
+	
+	public static final String dateoption1 = "past 30 days";
+	public static final String dateoption2 = "past 90 days";
+	
 //	//Case106_Workout_Templates_multipleexercise
 //	public static final String templatname = "Heavytraining";
 //	public static final String[] exercisenamesmultiple = {
