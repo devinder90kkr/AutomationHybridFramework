@@ -14,11 +14,11 @@ import java.time.Duration;
 	import org.openqa.selenium.support.ui.WebDriverWait;
 	import org.testng.annotations.Test;
 
-	import cuesz.pages.BasePage;
+import cuesz.date.functions.DayofWeek;
+import cuesz.pages.BasePage;
 //import cuesz.utils.AllureUtils;
 import cuesz.utils.SeleniumUtils;
-import cuesz.utils.date.DayofWeek;
-import cuesz.utils.web.weblocators;	
+import cuesz.web.resources.weblocators;	
 
 	public class Case44_01_MSL_Mindful_currentday extends BasePage {
 		

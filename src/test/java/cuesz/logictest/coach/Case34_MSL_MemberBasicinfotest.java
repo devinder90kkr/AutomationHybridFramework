@@ -14,10 +14,11 @@ import java.util.Properties;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
+
+import cuesz.allure.reporting.AllureUtils;
+import cuesz.factory.WebDriverManager;
 import cuesz.logicpage.Case34_MSL_MemberBasicinfo;
 import cuesz.logintest.CoachLogin;
-import cuesz.utils.WebDriverManager;
-import cuesz.utils.reporting.AllureUtils;
 import io.qameta.allure.*;
 
 @Epic ("Cuesz Staff logic page testing for member basic details")

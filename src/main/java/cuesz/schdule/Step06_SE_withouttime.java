@@ -6,10 +6,10 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.testng.annotations.Test;
 
+import cuesz.allure.reporting.AllureUtils;
 import cuesz.pages.BasePage;
-import cuesz.utils.reporting.AllureUtils;
-import cuesz.utils.web.webTestdata;
-import cuesz.utils.web.weblocators;
+import cuesz.web.resources.webTestdata;
+import cuesz.web.resources.weblocators;
 
 public class Step06_SE_withouttime extends BasePage {
 

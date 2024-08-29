@@ -10,11 +10,12 @@ import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
+
+import cuesz.allure.reporting.AllureUtils;
+import cuesz.factory.WebDriverManager;
 import cuesz.logintest.CoachLogin;
 import cuesz.schdule.Step12_08_SE_createvent;
 import cuesz.schdule.Step12_09_SE_createeventforpast;
-import cuesz.utils.WebDriverManager;
-import cuesz.utils.reporting.AllureUtils;
 import io.qameta.allure.*;
 
 @Epic ("Coach Scheduling")

@@ -10,10 +10,10 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
 
+import cuesz.date.functions.DateGenerator;
 import cuesz.pages.BasePage;
-import cuesz.utils.date.DateGenerator;
-import cuesz.utils.web.webTestdata;
-import cuesz.utils.web.weblocators;
+import cuesz.web.resources.webTestdata;
+import cuesz.web.resources.weblocators;
 
 public class Step09_MC_viewevent extends BasePage {
 	

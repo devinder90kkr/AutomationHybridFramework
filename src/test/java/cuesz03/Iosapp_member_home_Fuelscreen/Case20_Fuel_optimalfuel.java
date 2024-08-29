@@ -12,11 +12,11 @@ import org.slf4j.LoggerFactory;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import cuesz.allure.reporting.AllureUtils;
+import cuesz.mobile.resources.mobileLocators;
+import cuesz.mobile.resources.mobileTestData;
 import cuesz.pages.AppiummobileBase;
 import cuesz.utils.AppiumappUtils;
-import cuesz.utils.mobile.mobileLocators;
-import cuesz.utils.mobile.mobileTestData;
-import cuesz.utils.reporting.AllureUtils;
 import cuesz02.Iosapp_member_home_PerformScreen.Case19_Perform_nextweekactivitywithLP;
 import io.appium.java_client.AppiumBy;
 import io.qameta.allure.Description;

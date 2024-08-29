@@ -12,10 +12,10 @@ import org.slf4j.LoggerFactory;
 import org.testng.annotations.Test;
 import org.testng.SkipException;
 
+import cuesz.allure.reporting.AllureUtils;
 import cuesz.pages.BasePage;
-import cuesz.utils.reporting.AllureUtils;
-import cuesz.utils.web.ElementActions;
-import cuesz.utils.web.weblocators;
+import cuesz.web.resources.ElementActions;
+import cuesz.web.resources.weblocators;
 
 public class Case101_Workout_Templates extends BasePage {
 	private static final Logger LOGGER = LoggerFactory.getLogger(Case101_Workout_Templates.class);

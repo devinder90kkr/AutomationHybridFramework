@@ -9,10 +9,10 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.testng.annotations.Test;
 
+import cuesz.allure.reporting.AllureUtils;
+import cuesz.date.functions.DateGenerator;
 import cuesz.pages.BasePage;
 import cuesz.utils.SeleniumUtils;
-import cuesz.utils.date.DateGenerator;
-import cuesz.utils.reporting.AllureUtils;
 
 public class Case34_MS_VO2Result extends BasePage {
 	 //public static String eventDate = "26-10-2023"; // Date to be passed nextscandate below

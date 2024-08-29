@@ -18,11 +18,11 @@ import org.testng.annotations.Test;
 import org.testng.Assert;
 import org.testng.SkipException;
 
+import cuesz.allure.reporting.AllureUtils;
 import cuesz.pages.BasePage;
-import cuesz.utils.reporting.AllureUtils;
-import cuesz.utils.web.ElementActions;
-import cuesz.utils.web.webTestdata;
-import cuesz.utils.web.weblocators;
+import cuesz.web.resources.ElementActions;
+import cuesz.web.resources.webTestdata;
+import cuesz.web.resources.weblocators;
 
 public class Case106_Workout_Templates_multipleexercise extends BasePage {
     private static final Logger LOGGER = LoggerFactory.getLogger(Case106_Workout_Templates_multipleexercise.class);
@@ -77,20 +77,59 @@ public class Case106_Workout_Templates_multipleexercise extends BasePage {
             LOGGER.info("Verified Add Template heading is displayed: " + headingText1);
             AllureUtils.logStep("Verified Add Template heading is displayed: " + headingText1);
 
+            Thread.sleep(3500);
+            
             // Verify Add Template heading is displayed
             wait.until(ExpectedConditions.visibilityOfElementLocated(weblocators.templatname));
+            // Generate a unique template name
+            String uniqueTemplateName = elementActions.generateUniqueTemplateName1(webTestdata.templatname);
             // Clear and insert values in templatname field
-            elementActions.sendKeysToElement(weblocators.templatname, webTestdata.templatname);
+            elementActions.sendKeysToElement(weblocators.templatname, uniqueTemplateName);
             // Log the generated template name
-            LOGGER.info("Generated template name: " + webTestdata.templatname);
-            AllureUtils.logStep("Generated template name: " + webTestdata.templatname);
-            Thread.sleep(2500);
-
+            LOGGER.info("Generated unique template name: " + uniqueTemplateName);
+            AllureUtils.logStep("Generated unique template name: " + uniqueTemplateName);
+            Thread.sleep(2000);
             
             // Iterate over the test data sets
             for (int i = 0; i < webTestdata.exercisenamesmultiple.length; i++) {
-                repeatWorkoutSteps(wait, webTestdata.exercisenamesmultiple[i], webTestdata.descriptionsmultiple[i], webTestdata.repsdata[i], webTestdata.recoverydata[i]);
+                repeatWorkoutSteps(wait, webTestdata.exercisenamesmultiple[i], webTestdata.descriptionsmultiple[i], webTestdata.repsdata[i], webTestdata.recoverydata[i], webTestdata.optional1[i], webTestdata.optional2[i]);
             }
+            
+
+            // Click on chain set
+            WebElement chainset =wait.until(ExpectedConditions.elementToBeClickable(weblocators.chain1));
+            // Scroll to the "Staff Notes" element using JavaScriptExecutor
+            ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView();", chainset);
+            Thread.sleep(3500);
+            elementActions.clickElement(weblocators.chain1);
+            // Log message to console and Allure report
+            LOGGER.info("Click on chain1");
+            AllureUtils.logStep("Click on chain1");
+            Thread.sleep(3500);
+
+            // Click on submit button
+            WebElement exercisesave =wait.until(ExpectedConditions.elementToBeClickable(weblocators.savebutton));
+            // Scroll to the "Staff Notes" element using JavaScriptExecutor
+            ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView();", exercisesave);
+            Thread.sleep(3500);
+            elementActions.clickElement(weblocators.savebutton);
+            // Log message to console and Allure report
+            LOGGER.info("Click on savebutton");
+            AllureUtils.logStep("Click on savebutton");
+            
+            Thread.sleep(3500);
+            
+            // Click on submit button
+            WebElement confirmsave =wait.until(ExpectedConditions.elementToBeClickable(weblocators.confirmbttn));
+            // Scroll to the "Staff Notes" element using JavaScriptExecutor
+            ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView();", confirmsave);
+            Thread.sleep(3500);
+            elementActions.clickElement(weblocators.confirmbttn);
+            // Log message to console and Allure report
+            LOGGER.info("Click on confirmbttn");
+            AllureUtils.logStep("Click on confirmbttn");
+            Thread.sleep(3500);
+            
 
         } catch (TimeoutException e) {
             System.out.println("Element not found within the timeout period. Skipping the test case.");
@@ -107,7 +146,7 @@ public class Case106_Workout_Templates_multipleexercise extends BasePage {
         }
     }
 
-    private void repeatWorkoutSteps(WebDriverWait wait, String exercisename, String description, String repsdata, String recoverydata) throws InterruptedException {
+    private void repeatWorkoutSteps(WebDriverWait wait, String exercisename, String description, String repsdata, String recoverydata, String optional1, String optional2) throws InterruptedException {
         // Click on Add new workout button
         Thread.sleep(2500);
         WebElement addexercisworkout = wait.until(ExpectedConditions.elementToBeClickable(weblocators.addnewworkout));
@@ -158,8 +197,6 @@ public class Case106_Workout_Templates_multipleexercise extends BasePage {
         WebElement addexercisereps = wait.until(ExpectedConditions.elementToBeClickable(weblocators.repsfield));
         // Scroll to the "Staff Notes" element using JavaScriptExecutor
         ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView();", addexercisereps);
-     
-//        elementActions.clickElement(weblocators.repsfield);
         elementActions.sendKeysToElement(weblocators.repsfield, repsdata);
         Thread.sleep(3500);
         // Log message to console and Allure report
@@ -183,6 +220,38 @@ public class Case106_Workout_Templates_multipleexercise extends BasePage {
         elementActions.sendKeysToElement(weblocators.recoveryfield, recoverydata);
         Thread.sleep(9000);
 
+        // Add optional values for exercise
+        WebElement addoptional1 = wait.until(ExpectedConditions.elementToBeClickable(weblocators.optional1));
+        // Scroll to the "Staff Notes" element using JavaScriptExecutor
+        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView();", addoptional1);
+        Thread.sleep(3500);
+        elementActions.performActionsOnElement(weblocators.optional1, webTestdata.optional1value);
+        // Log message to console and Allure report
+        LOGGER.info("Verified and added reps values corresponding to exercise: " + webTestdata.optional1value);
+        AllureUtils.logStep("Verified and added reps values corresponding to exercise: " + webTestdata.optional1value);
+        Thread.sleep(3500);
+        elementActions.sendKeysToElement(weblocators.Optionaltextfield, optional1);
+        // Log message to console and Allure report
+        LOGGER.info("Verified and added reps values corresponding to exercise: " + optional1);
+        AllureUtils.logStep("Verified and added reps values corresponding to exercise: " + optional1);
+        
+        
+        // Add optional values for exercise
+        WebElement addoptional2 = wait.until(ExpectedConditions.elementToBeClickable(weblocators.optional1));
+        // Scroll to the "Staff Notes" element using JavaScriptExecutor
+        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView();", addoptional2);
+        Thread.sleep(3500);
+        elementActions.performActionsOnElement(weblocators.optional1, webTestdata.optionalvalue2);
+        // Log message to console and Allure report
+        LOGGER.info("Verified and added reps values corresponding to exercise: " + webTestdata.optionalvalue2);
+        AllureUtils.logStep("Verified and added reps values corresponding to exercise: " + webTestdata.optionalvalue2);
+        Thread.sleep(3500);
+        elementActions.sendKeysToElement(weblocators.optionaltextfield2, optional2);
+        // Log message to console and Allure report
+        LOGGER.info("Verified and added reps values corresponding to exercise: " + optional2);
+        AllureUtils.logStep("Verified and added reps values corresponding to exercise: " + optional2);
+        
+        
         // Click on setsplus button
         wait.until(ExpectedConditions.elementToBeClickable(weblocators.setsplus));
         elementActions.clickElement(weblocators.setsplus);
@@ -200,5 +269,7 @@ public class Case106_Workout_Templates_multipleexercise extends BasePage {
         // Log message to console and Allure report
         LOGGER.info("Click on submitbuttn");
         Thread.sleep(3500);
+        
+        
     }
 }

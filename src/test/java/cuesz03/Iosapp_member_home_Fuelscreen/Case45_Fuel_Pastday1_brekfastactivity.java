@@ -9,11 +9,11 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.testng.annotations.Test;
 
+import cuesz.allure.reporting.AllureUtils;
+import cuesz.appium.date.functions.DateUtilsAppium;
+import cuesz.mobile.resources.mobileLocators;
 import cuesz.pages.AppiummobileBase;
 import cuesz.utils.AppiumappUtils;
-import cuesz.utils.appium.date.DateUtilsAppium;
-import cuesz.utils.mobile.mobileLocators;
-import cuesz.utils.reporting.AllureUtils;
 import io.appium.java_client.AppiumBy;
 import io.qameta.allure.Description;
 import io.qameta.allure.Epic;

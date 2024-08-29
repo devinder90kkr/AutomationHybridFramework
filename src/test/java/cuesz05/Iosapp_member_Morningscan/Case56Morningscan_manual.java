@@ -8,12 +8,13 @@ import org.openqa.selenium.WebElement;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.testng.annotations.Test;
+
+import cuesz.allure.reporting.AllureUtils;
+import cuesz.mobile.resources.mobileLocators;
+import cuesz.mobile.resources.mobileTestData;
+import cuesz.mobile.resources.mobilelement;
 import cuesz.pages.AppiummobileBase;
 import cuesz.utils.AppiumappUtils;
-import cuesz.utils.mobile.mobileLocators;
-import cuesz.utils.mobile.mobileTestData;
-import cuesz.utils.mobile.mobilelement;
-import cuesz.utils.reporting.AllureUtils;
 import io.qameta.allure.Description;
 import io.qameta.allure.Epic;
 import io.qameta.allure.Feature;

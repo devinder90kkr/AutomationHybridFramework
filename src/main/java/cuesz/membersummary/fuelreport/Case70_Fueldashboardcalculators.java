@@ -9,9 +9,9 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
 
+import cuesz.allure.reporting.AllureUtils;
 import cuesz.pages.BasePage;
 import cuesz.utils.SeleniumUtils;
-import cuesz.utils.reporting.AllureUtils;
 
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;

@@ -8,8 +8,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.testng.annotations.Test;
 
+import cuesz.date.functions.DateGenerator;
 import cuesz.pages.BasePage;
-import cuesz.utils.date.DateGenerator;
 
 public class Step12_07_SE_create_eventwithoutopic extends BasePage {
 	public static String eventDate = DateGenerator.generateFixedDate(); // Use the generated date

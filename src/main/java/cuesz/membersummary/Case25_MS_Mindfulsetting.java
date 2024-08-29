@@ -14,10 +14,10 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
 
+import cuesz.allure.reporting.AllureUtils;
+import cuesz.date.functions.Currentdategenerator;
 import cuesz.pages.BasePage;
 import cuesz.utils.SeleniumUtils;
-import cuesz.utils.date.Currentdategenerator;
-import cuesz.utils.reporting.AllureUtils;
 
 public class Case25_MS_Mindfulsetting extends BasePage {
 	

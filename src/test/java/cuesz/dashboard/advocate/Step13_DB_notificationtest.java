@@ -11,10 +11,11 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 //import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
+
+import cuesz.allure.reporting.AllureUtils;
 import cuesz.dashboard.Step13_DB_notification;
+import cuesz.factory.WebDriverManager;
 import cuesz.logintest.AdvocateLogin;
-import cuesz.utils.WebDriverManager;
-import cuesz.utils.reporting.AllureUtils;
 import io.qameta.allure.*;
 
 @Epic ("Advocate dashboard cases")

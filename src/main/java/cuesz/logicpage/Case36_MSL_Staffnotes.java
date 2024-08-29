@@ -9,10 +9,10 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
 
+import cuesz.date.functions.DatePickerUtility_logicpage;
 import cuesz.pages.BasePage;
 import cuesz.utils.SeleniumUtils;
-import cuesz.utils.date.DatePickerUtility_logicpage;
-import cuesz.utils.web.weblocators;
+import cuesz.web.resources.weblocators;
 
 public class Case36_MSL_Staffnotes extends BasePage {
 	

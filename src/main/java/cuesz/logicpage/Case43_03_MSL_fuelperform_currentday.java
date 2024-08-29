@@ -14,10 +14,10 @@ import java.time.Duration;
 	import org.openqa.selenium.support.ui.WebDriverWait;
 	import org.testng.annotations.Test;
 
-	import cuesz.pages.BasePage;
-import cuesz.utils.SeleniumUtils;
-import cuesz.utils.date.DayofWeek;
-import cuesz.utils.reporting.AllureUtils;	
+import cuesz.allure.reporting.AllureUtils;
+import cuesz.date.functions.DayofWeek;
+import cuesz.pages.BasePage;
+import cuesz.utils.SeleniumUtils;	
 
 	public class Case43_03_MSL_fuelperform_currentday extends BasePage {
 		

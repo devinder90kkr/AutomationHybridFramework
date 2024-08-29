@@ -7,7 +7,7 @@ import org.openqa.selenium.WebDriver;
 import org.testng.annotations.Test;
 
 import cuesz.pages.BasePage;
-import cuesz.utils.web.weblocators;
+import cuesz.web.resources.weblocators;
 
 public class Step05_SM_daymonthweek extends BasePage {
 	

@@ -129,10 +129,10 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.testng.annotations.Test;
 
+import cuesz.allure.reporting.AllureUtils;
+import cuesz.date.functions.Currentdategenerator;
 import cuesz.pages.BasePage;
 import cuesz.utils.SeleniumUtils;
-import cuesz.utils.date.Currentdategenerator;
-import cuesz.utils.reporting.AllureUtils;
 
 public class Case72_creatLiveperform extends BasePage {
 	

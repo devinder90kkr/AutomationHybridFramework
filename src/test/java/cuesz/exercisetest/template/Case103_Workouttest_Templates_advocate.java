@@ -8,10 +8,11 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
+import cuesz.allure.reporting.AllureServeRunner;
+import cuesz.allure.reporting.AllureUtils;
 import cuesz.exercise.template.Case101_Workout_Templates;
+import cuesz.factory.WebDriverManager;
 import cuesz.logintest.AdvocateLogin;
-import cuesz.utils.WebDriverManager;
-import cuesz.utils.reporting.AllureUtils;
 import io.qameta.allure.Allure;
 import io.qameta.allure.Description;
 import io.qameta.allure.Epic;
@@ -101,6 +102,7 @@ public class Case103_Workouttest_Templates_advocate {
     	 if (driver != null) {
              driver.quit();
     	WebDriverManager.quitDriver();
-       
+    	 // Run the Allure serve command
+        AllureServeRunner.runAllureServe();
     }
 }}

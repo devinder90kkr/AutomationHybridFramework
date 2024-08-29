@@ -8,9 +8,9 @@ import org.openqa.selenium.WebDriver;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
+import cuesz.factory.WebDriverManager;
 import cuesz.pages.Loginpage;
 import cuesz.utils.Config;
-import cuesz.utils.WebDriverManager;
 import io.qameta.allure.Allure;
 
 public class NonleadCoachLogin {

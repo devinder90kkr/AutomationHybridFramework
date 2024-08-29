@@ -11,11 +11,12 @@
 	import org.openqa.selenium.support.ui.ExpectedConditions;
 	import org.openqa.selenium.support.ui.WebDriverWait;
 	import org.testng.annotations.Test;
-	import cuesz.pages.BasePage;
+
+import cuesz.date.functions.DatePickerUtility_logicpage;
+import cuesz.pages.BasePage;
 	import cuesz.utils.SeleniumUtils;
-	import cuesz.utils.date.DatePickerUtility_logicpage;
-	import cuesz.utils.web.webTestdata;
-	import cuesz.utils.web.weblocators;
+import cuesz.web.resources.webTestdata;
+import cuesz.web.resources.weblocators;
 	
 	public class Case42_MSL_Perform extends BasePage {
 		

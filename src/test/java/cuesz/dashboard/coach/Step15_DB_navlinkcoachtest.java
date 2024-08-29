@@ -10,8 +10,8 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 import cuesz.dashboard.Step15_DB_navlinkcoach;
+import cuesz.factory.WebDriverManager;
 import cuesz.logintest.CoachLogin;
-import cuesz.utils.WebDriverManager;
 
 public class Step15_DB_navlinkcoachtest {
     private WebDriver driver;
