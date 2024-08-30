@@ -103,6 +103,6 @@ public class Case103_Workouttest_Templates_advocate {
              driver.quit();
     	WebDriverManager.quitDriver();
     	 // Run the Allure serve command
-        AllureServeRunner.runAllureServe();
+//        AllureServeRunner.runAllureServe();
     }
 }}
