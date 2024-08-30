@@ -73,7 +73,7 @@ public class mobileLocators {
 	public static final By ChatClick	=	AppiumBy.iOSClassChain("**/XCUIElementTypeOther[`name == \"Advocate\"`][2]");
 	public static final By entermessage	=	AppiumBy.accessibilityId("EnterMessage");
 	public static final By sendmessage	=	AppiumBy.accessibilityId("SendMessage");
-	//public static final By medialinks	=	AppiumBy.accessibilityId("Media/Links");
+	public static final By medialinks	=	AppiumBy.accessibilityId("Media/Links");
 	public static final By media		=	AppiumBy.accessibilityId("Media");
 	public static final By documents	=	AppiumBy.accessibilityId("Documents");
 	public static final By links		=	AppiumBy.accessibilityId("Links");
@@ -92,10 +92,18 @@ public class mobileLocators {
 	public static final By searchtext	=	AppiumBy.accessibilityId("Search");	
 	public static final By Attahment	=	AppiumBy.accessibilityId("Attach");
 	public static final By urgenticon	=	AppiumBy.accessibilityId("Urgent");
-	
-	
-	
-	
+	public static final By takephoto	=	AppiumBy.accessibilityId("Take Photo");
+	public static final By photocapture	=	AppiumBy.accessibilityId("PhotoCapture");
+	public static final By useohoto		=	AppiumBy.accessibilityId("Use Photo");
+	public static final By askforcall	=	AppiumBy.accessibilityId("Ask For A Call");
+	public static final By askforcallheading	=	AppiumBy.accessibilityId("ASK FOR A CALL");
+	public static final By convientdate	=	AppiumBy.accessibilityId("ConvenientDate");
+	public static final By convienttime	=	AppiumBy.accessibilityId("ConvenientTime");
+	public static final By min1			=	AppiumBy.accessibilityId("15 Minutes");
+	public static final By min2			=	AppiumBy.accessibilityId("30 Minutes");
+	public static final By urgentoption	=	AppiumBy.accessibilityId("UrgentCall");
+	public static final By schdulebttn	=	AppiumBy.accessibilityId("Schedule Call");
+
 	//Locators for morning scan
 	public static final By Morningscanclick	= AppiumBy.iOSClassChain("**/XCUIElementTypeOther[`name == \"Morning Scan\"`][2]");
 	public static final By manualinput	=	AppiumBy.accessibilityId("ManualDataMorningScan");

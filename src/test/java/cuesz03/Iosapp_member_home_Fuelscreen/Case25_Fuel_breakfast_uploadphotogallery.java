@@ -35,9 +35,7 @@ public class Case25_Fuel_breakfast_uploadphotogallery extends AppiummobileBase {
 	private By pickerelement			= 		AppiumBy.xpath("//XCUIElementTypePickerWheel");
 	private By Doneclick				= 		AppiumBy.accessibilityId("AlcohalTime");
 	private By submittap				= 		AppiumBy.accessibilityId("SubmitImage");
-	private By photoupload					= 		AppiumBy.accessibilityId("PhotoUpload");
-	private By arrowclick				= 		AppiumBy.accessibilityId("RightArrow");
-	private By Icondelete				= 		AppiumBy.accessibilityId("DeletePhoto");
+	
 
 	@Test
 	@Owner("QA") // Add the @Owner annotation to specify the executor
@@ -147,107 +145,6 @@ public class Case25_Fuel_breakfast_uploadphotogallery extends AppiummobileBase {
          
 		Thread.sleep(4500);
 		
-		
-//		WebElement uploadicon1	= driver.findElement(uploadbreakfastimage);
-//	    uploadicon1.click();
-//	    // Log console message to Allure
-//	    LOGGER.info("click on uploadicon1");
-//        AllureUtils.logStep("click on uploadicon1");    
-//        
-//        
-//        
-//        
-//        WebElement Photoupload	= driver.findElement(photoupload);
-//        Photoupload.click();
-//	    // Log console message to Allure
-//	    LOGGER.info("click on Photoupload");
-//        AllureUtils.logStep("click on Photoupload");    
-//          
-//        // Capture a screenshot and attach it to Allure
-//        AllureUtils.captureScreenshot(driver, "uploadicon8");
-//        
-//        
-//      
-//	   
-//	    WebElement galleryclick2	= driver.findElement(gallery);
-//        galleryclick2.click();
-//        // Log console message to Allure
-//        LOGGER.info("click on galleryclick2");
-//        AllureUtils.logStep("click on galleryclick2");    
-//        // Capture a screenshot and attach it to Allure
-//        AllureUtils.captureScreenshot(driver, "uploadicon9");
-//	    
-//        WebElement firstPhoto2 = driver.findElement(AppiumBy.xpath("//XCUIElementTypeImage[3]"));
-//        firstPhoto2.click();
-//       
-//        WebElement addclick2 = driver.findElement(AppiumBy.accessibilityId("Add"));
-//        addclick2.click();
-//        
-//        
-//        // Click on timer 
-//        WebElement Timerclick2 	= driver.findElement(Time);
-//        Timerclick2.click();
-//        
-//        
-//        List<WebElement>values1 = driver.findElements(pickerelement);
-//
-//		for (int i=0; i<values1.size();i++)
-//		{		
-//		System.out.println(values1.get(i).getText());
-//		}
-//		
-//		values1.get(0).sendKeys("9");
-//		values1.get(0).sendKeys(Keys.TAB);
-//
-//		Thread.sleep(3500);
-//		values1.get(1).sendKeys("13");
-//		values1.get(1).sendKeys(Keys.TAB);
-//		
-//		Thread.sleep(3500);
-//		values1.get(2).sendKeys("AM");
-//		// Log console message to Allure
-//		LOGGER.info("enter time ");
-//		AllureUtils.logStep("Enter time");    
-//		// Capture a screenshot and attach it to Allure
-//		AllureUtils.captureScreenshot(driver, "uploadicon10");
-//
-//		driver.findElement(Doneclick).click();
-//        
-//		WebElement Submittap1 = driver.findElement(submittap);
-//		Submittap1.click();
-//		// Log console message to Allure
-//        LOGGER.info("click on Submittap1");
-//        AllureUtils.logStep("click on Submittap1");    
-//        // Capture a screenshot and attach it to Allure
-//        AllureUtils.captureScreenshot(driver, "uploadicon11");
-//		Thread.sleep(4500);
-//	
-//		WebElement uploadicon2	= driver.findElement(uploadbreakfastimage);
-//	    uploadicon2.click();
-//	    // Log console message to Allure
-//        LOGGER.info("click on uploadicon2");
-//        AllureUtils.logStep("click on uploadicon2");    
-//        // Capture a screenshot and attach it to Allure
-//        AllureUtils.captureScreenshot(driver, "uploadicon12");
-//        
-//	    //locate and click on toggel arrow 
-//	    WebElement arrowright	= driver.findElement(arrowclick);
-//	    arrowright.click();
-//	    // Log console message to Allure
-//        LOGGER.info("click on arrowright");
-//        AllureUtils.logStep("click on arrowright");    
-//        // Capture a screenshot and attach it to Allure
-//        AllureUtils.captureScreenshot(driver, "uploadicon13");
-//	    
-//	    //Locate and click on delete icon
-//	    WebElement deleticon	= driver.findElement(Icondelete);
-//	    deleticon.click();
-//	    // Log console message to Allure
-//        LOGGER.info("click on deleticon");
-//        AllureUtils.logStep("click on deleticon");    
-//        // Capture a screenshot and attach it to Allure
-//        AllureUtils.captureScreenshot(driver, "uploadicon14");
-//	    Thread.sleep(4500);
 
 	  //scroll to image upload
   		By imageuplaodedLocator = AppiumBy.xpath("//XCUIElementTypeStaticText[@name=\"Image uploaded\"]");
