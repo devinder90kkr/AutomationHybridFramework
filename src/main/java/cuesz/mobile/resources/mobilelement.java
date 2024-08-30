@@ -33,7 +33,7 @@ public class mobilelement {
 	    }
 		}
 	
-	// Method to get text from an element
+		// Method to get text from an element
 		public static String getElementText(AppiumDriver driver, By elementLocator) {
 	    WebElement element = driver.findElement(elementLocator);
 	    return element.getText();

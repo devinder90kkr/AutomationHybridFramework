@@ -8,7 +8,6 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
-import cuesz.allure.reporting.AllureServeRunner;
 import cuesz.allure.reporting.AllureUtils;
 import cuesz.exercise.template.Case101_Workout_Templates;
 import cuesz.factory.WebDriverManager;
@@ -102,7 +101,7 @@ public class Case101_Workouttest_Templates_leadcoach {
              driver.quit();
     	WebDriverManager.quitDriver();
     	 // Run the Allure serve command
-        AllureServeRunner.runAllureServe();
+//        AllureServeRunner.runAllureServe();
        
     }
 }}

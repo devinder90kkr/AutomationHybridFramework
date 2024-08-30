@@ -102,7 +102,7 @@ public class Case102_Workouttest_Templates_nonleadcoach {
              driver.quit();
     	WebDriverManager.quitDriver();
     	 // Run the Allure serve command
-        AllureServeRunner.runAllureServe();
+//        AllureServeRunner.runAllureServe();
        
     }
 }}

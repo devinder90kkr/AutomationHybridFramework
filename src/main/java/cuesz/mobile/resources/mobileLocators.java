@@ -67,6 +67,8 @@ public class mobileLocators {
 	public static final By startmindful		= AppiumBy.accessibilityId("Start");
 	public static final By submitmindful	= AppiumBy.accessibilityId("Submit");
 	public static final By savebttn			= AppiumBy.accessibilityId("Save");
+	public static final By resonantfrequency = AppiumBy.accessibilityId("Resonant Frequency Assessment Start");
+	
 
 	
 	//locators for chat screen
