@@ -34,10 +34,7 @@ public class Case42_Fuel_Dinner_uploadphoto extends AppiummobileBase {
 	private By pickerelement			= 		AppiumBy.xpath("//XCUIElementTypePickerWheel");
 	private By Doneclick				= 		AppiumBy.accessibilityId("AlcohalTime");
 	private By submittap				= 		AppiumBy.accessibilityId("SubmitImage");
-	private By arrowclick				= 		AppiumBy.accessibilityId("RightArrow");
-	private By Icondelete				= 		AppiumBy.accessibilityId("DeletePhoto");
-
-
+	
 	@Test
 	@Owner("QA") // Add the @Owner annotation to specify the executor
     @Severity(SeverityLevel.NORMAL)      
@@ -143,105 +140,6 @@ public class Case42_Fuel_Dinner_uploadphoto extends AppiummobileBase {
         
         
 		Thread.sleep(4500);
-		
-		
-//		WebElement uploadicon1	= driver.findElement(uploadlunchimage);
-//	    uploadicon1.click();
-//	    // Log console message to Allure
-//        LOGGER.info("Click on uploadicon1");
-//        AllureUtils.logStep("Click on uploadicon1");
-//        AllureUtils.captureScreenshot(driver,"42_6");
-//        
-//        
-////	    WebElement photoicon	= driver.findElement(uploadphoto);
-////	    photoicon.click();
-//	   
-//	    WebElement galleryclick2	= driver.findElement(gallery);
-//        galleryclick2.click();
-//        // Log console message to Allure
-//        LOGGER.info("Click on galleryclick2");
-//        AllureUtils.logStep("Click on galleryclick2");
-//        AllureUtils.captureScreenshot(driver,"42_7");
-//        
-//        
-//        WebElement firstPhoto2 = driver.findElement(AppiumBy.xpath("//XCUIElementTypeImage[3]"));
-//        firstPhoto2.click();
-//        
-//        WebElement addclick2 = driver.findElement(AppiumBy.accessibilityId("Add"));
-//        addclick2.click();
-//        
-//        
-//        // Click on timer 
-//        WebElement Timerclick2 	= driver.findElement(Time);
-//        Timerclick2.click();
-//        
-//        List<WebElement>values1 = driver.findElements(pickerelement);
-//
-//		for (int i=0; i<values1.size();i++)
-//		{		
-//		System.out.println(values1.get(i).getText());
-//		}
-//		
-//		values1.get(0).sendKeys("9");
-//		values1.get(0).sendKeys(Keys.TAB);
-//
-//		Thread.sleep(3500);
-//		values1.get(1).sendKeys("43");
-//		values1.get(1).sendKeys(Keys.TAB);
-//		
-//		Thread.sleep(3500);
-//		values1.get(2).sendKeys("PM");
-//
-//		driver.findElement(Doneclick).click();
-//        
-//		WebElement Submittap1 = driver.findElement(submittap);
-//		Submittap1.click();
-//		// Log console message to Allure
-//        LOGGER.info("Click on Submittap1");
-//        AllureUtils.logStep("Click on Submittap1");
-//        AllureUtils.captureScreenshot(driver,"42_8");
-//        
-//		
-//		Thread.sleep(4500);
-//	
-//		WebElement uploadicon2	= driver.findElement(uploadlunchimage);
-//	    uploadicon2.click();
-//	    // Log console message to Allure
-//        LOGGER.info("Click on uploadicon2");
-//        AllureUtils.logStep("Click on uploadicon2");
-//        AllureUtils.captureScreenshot(driver,"42_9");
-//        
-//	    // Capture a screenshot and attach it to Allure
-//	    AllureUtils.captureScreenshot(driver, "Dinner10");
-//        
-//	    //locate and click on toggel arrow 
-//	    WebElement arrowright	= driver.findElement(arrowclick);
-//	    arrowright.click();
-//	    // Log console message to Allure
-//        LOGGER.info("Click on arrowright");
-//        AllureUtils.logStep("Click on arrowright");
-//        AllureUtils.captureScreenshot(driver,"42_10");
-//        
-//	    //Locate and click on delete icon
-//	    WebElement deleticon	= driver.findElement(Icondelete);
-//	    deleticon.click();
-//	    // Log console message to Allure
-//        LOGGER.info("Click on deleticon");
-//        AllureUtils.logStep("Click on deleticon");
-//        AllureUtils.captureScreenshot(driver,"42_11");
-//        
-//	    Thread.sleep(4500);
-//	    
-//	    Thread.sleep(3000);
-//		// Method to scroll to perform screen
-//		HashMap<String,Object>scrollObject1 =new HashMap<>();
-//		scrollObject1.put("direction", "down");
-//		scrollObject1.put("Image uploaded", "Image uploaded");
-//		driver.executeScript("mobile:scroll", scrollObject1);
-//		Thread.sleep(2000);
-	    
-	    
-        
 		 Thread.sleep(3500);
 		 } catch (Exception e) {
 	            LOGGER.error("An error occurred during the cases ", e);

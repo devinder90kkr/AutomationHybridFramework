@@ -1,9 +1,12 @@
 package cuesz.mobile.resources;
 
+import java.text.SimpleDateFormat;
 import java.time.Duration;
 import java.util.Arrays;
+import java.util.Calendar;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Locale;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
@@ -30,7 +33,7 @@ public class mobilelement {
 	    }
 		}
 	
-	// Method to get text from an element
+		// Method to get text from an element
 		public static String getElementText(AppiumDriver driver, By elementLocator) {
 	    WebElement element = driver.findElement(elementLocator);
 	    return element.getText();
@@ -129,6 +132,50 @@ public class mobilelement {
 	        }
 	    }
 
+	    
+	    
+/**this is one function for Case57Advocate_chat where we select future date for ask for call*/
+	    /*start function*/
+	    // Method to calculate next date
+	    private static String[] getNextDateValues() {
+	        Calendar calendar = Calendar.getInstance();
+	        calendar.add(Calendar.DAY_OF_MONTH, 1); // Add one day to the current date
+	        
+	        SimpleDateFormat dayFormat = new SimpleDateFormat("dd", Locale.ENGLISH);
+	        SimpleDateFormat monthFormat = new SimpleDateFormat("MMMM", Locale.ENGLISH);
+	        SimpleDateFormat yearFormat = new SimpleDateFormat("yyyy", Locale.ENGLISH);
+	        
+	        String day = dayFormat.format(calendar.getTime());
+	        String month = monthFormat.format(calendar.getTime());
+	        String year = yearFormat.format(calendar.getTime());
+	        
+	        return new String[]{day, month, year};
+	    }
+
+	    // Method for Date selection in mobile
+	    public static void setDatePickerValues(AppiumDriver driver, By pickerLocator) throws InterruptedException {
+	        String[] nextDateValues = getNextDateValues();
+	        
+	        // Click to open the picker
+	        WebElement datePicker = driver.findElement(pickerLocator);
+	        datePicker.click();
+
+	        // Find picker elements
+	        List<WebElement> pickers = driver.findElements(pickerLocator);
+
+	        // Iterate through values and set each one
+	        for (int i = 0; i < nextDateValues.length; i++) {
+	            pickers.get(i).sendKeys(nextDateValues[i]);
+	            pickers.get(i).sendKeys(Keys.TAB);
+	            Thread.sleep(3500); // Adjust the sleep duration as needed
+	        }
+	    }
+	    
+	    /*end this function*/
+	
+	    
+	    
+	 
 }
 	
 

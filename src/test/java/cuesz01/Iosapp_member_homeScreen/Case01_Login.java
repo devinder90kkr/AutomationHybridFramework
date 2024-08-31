@@ -267,7 +267,7 @@ public class Case01_Login extends AppiummobileBase {
             LOGGER.info("User is not logged in, proceeding with login steps.");
             AllureUtils.logStep("User is not logged in, proceeding with login steps.");
         }
-
+    
         // Proceed with the login steps if the user is not already logged in
         WebElement allowClick = null;
         try {

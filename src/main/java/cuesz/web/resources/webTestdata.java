@@ -1,8 +1,53 @@
 package cuesz.web.resources;
 
+import com.github.javafaker.Faker;
+
 import cuesz.date.functions.DateGenerator;
 
 public class webTestdata {
+	
+//	private static Faker faker = new Faker();
+//	 // Method to get a dynamic description
+//    public static String getDescription() {
+//        return faker.lorem().sentence(); // Generates a random sentence
+//    }
+	 // Define a Faker instance
+    private static final Faker faker = new Faker();
+
+    // Define your fitness-related messages
+    public static String[] getFitnessMessages() {
+        String[] messages = new String[4];
+        for (int i = 0; i < messages.length; i++) {
+            // Generate a fitness-related paragraph using Faker's sentence and custom text
+            messages[i] = generateFitnessParagraph();
+        }
+        return messages;
+    }
+
+    // Method to generate a fitness-related paragraph
+    private static String generateFitnessParagraph() {
+        // Create a base paragraph with a few fitness-related terms
+//        String baseParagraph = faker.lorem().paragraph(2); // Generates a paragraph with 2 sentences
+ 
+        String baseParagraph = faker.shakespeare().hamletQuote();
+        
+        // Add fitness-related content to the base paragraph
+        String fitnessContent = " Remember to stay hydrated and take breaks. Incorporate a variety of exercises including cardio and strength training for balanced fitness. Track your progress regularly to achieve your goals.";
+        
+        return baseParagraph + fitnessContent;
+    }
+
+    // Method to get a random fitness description from the generated messages
+    public static String getRandomFitnessMessage() {
+        String[] messages = getFitnessMessages();
+        return messages[faker.number().numberBetween(0, messages.length)];
+    }
+
+	
+	//testdata for filter
+	
+	public static final String dateoption1 = "past 30 days";
+	public static final String dateoption2 = "past 90 days";
 	
 //	//Case106_Workout_Templates_multipleexercise
 //	public static final String templatname = "Heavytraining";

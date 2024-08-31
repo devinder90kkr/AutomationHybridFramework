@@ -7,11 +7,9 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
-import cuesz.allure.reporting.AllureServeRunner;
-import cuesz.allure.reporting.AllureUtils;
 import cuesz.factory.WebDriverManager;
 import cuesz.logintest.AdvocateLogin;
-import cuesz.membersummary.actionsteps.Cases109_Action_Steps_tabs;
+import cuesz.membersummary.actionsteps.Cases115_Action_Steps_Filter;
 import io.qameta.allure.Allure;
 import io.qameta.allure.Description;
 import io.qameta.allure.Epic;
@@ -23,12 +21,12 @@ import io.qameta.allure.Story;
 import java.util.Properties;
 
 
-@Epic ("Action steps tab verifcation functionality")
-@Feature ("Action steps tabs functionlaity")
-public class Cases109_Action_Steps_tabstest {
+@Epic ("Action steps advocate themselves for multiple notes")
+@Feature ("Action steps multiple notes functionality")
+public class Cases115_Action_Steps_Filtertest {
     private WebDriver driver;
     private AdvocateLogin advocateLogin;
-    private Cases109_Action_Steps_tabs actionstep;
+    private Cases115_Action_Steps_Filter actionstep;
     
 
     @BeforeClass
@@ -40,7 +38,7 @@ public class Cases109_Action_Steps_tabstest {
         
         driver.manage().window().maximize();
         advocateLogin = new AdvocateLogin(); // Initialise the advocateLogin object
-        actionstep = new Cases109_Action_Steps_tabs(driver);
+        actionstep = new Cases115_Action_Steps_Filter(driver);
 
     }
     
@@ -48,22 +46,20 @@ public class Cases109_Action_Steps_tabstest {
     
     @Owner("QA") // Add the @Owner annotation to specify the executor
     @Severity(SeverityLevel.NORMAL)     
-    @Description("Advocate verify action tabs functionlaity")
-    @Story("Action Steps tabs")
+    @Description("Advocate verify action steps functionlaity for multiple notes")
+    @Story("Action Steps with multiple notes")
     public void Actionsteps() throws InterruptedException {
     	advocateLogin.setUp(); // Call the setUp method of AdvocateLogin to initialise loginPage
         advocateLogin.testAdvocateLogin();
     	
-        actionstep.actionstepstabs();
+        actionstep.filternotes();
           
         // Generate a dynamic link based on some runtime conditions or data
         String dynamicLink = generateDynamicLink();
 
         // Add the dynamic link to the Allure report
-        Allure.link("Case01_createventtest", dynamicLink);
-    
-//        // Capture a screenshot and attach it to Allure
-//        AllureUtils.captureScreenshot(driver, "Cases110_Action_Stepstest");
+        Allure.link("Cases112_Action_Steps_editcaseImportancorPrioritytest", dynamicLink);
+   
         Allure.step("Step Details");
         
         // Retrieve OS information

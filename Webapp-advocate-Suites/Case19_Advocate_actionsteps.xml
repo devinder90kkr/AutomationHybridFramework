@@ -4,11 +4,13 @@
 
   <test thread-count="5" name="Advcoate actionsteps functionlaity">
   	  <classes>
-    	<class name="cuesz.membersummary.actionsteps.advocate.Cases109_Action_Steps_tabstest"/>
+    
 	  <class name="cuesz.membersummary.actionsteps.advocate.Cases110_Action_Stepstest"/>
+	  	<class name="cuesz.membersummary.actionsteps.advocate.Cases113_Action_Steps_Mutiplenotestest"/>
+    <class name="cuesz.membersummary.actionsteps.advocate.Cases114_Action_Steps_SharingNotestest"/>
 	 <class name="cuesz.membersummary.actionsteps.advocate.Cases111_Action_Steps_editcasetest"/>
   	<class name="cuesz.membersummary.actionsteps.advocate.Cases112_Action_Steps_editcaseImportancorPrioritytest"/>
-  	<class name="cuesz.membersummary.actionsteps.advocate.Cases113_Action_Steps_Mutiplenotestest"/>
+  
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
