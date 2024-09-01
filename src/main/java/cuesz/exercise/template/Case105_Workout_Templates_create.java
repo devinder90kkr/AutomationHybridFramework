@@ -118,39 +118,29 @@ public class Case105_Workout_Templates_create extends BasePage {
 	        // Capture a screenshot and attach it to Allure
 	        AllureUtils.captureScreenshot(driver, "Case102_Workout_Exercise_Container_Displayed");
 	        
-			
-//	        Thread.sleep(9000);
-//	        // Send values for description set
-//            wait.until(ExpectedConditions.visibilityOfElementLocated(weblocators.exercisedescription));
-//            elementActions.setRichTextEditorValue(weblocators.exercisedescription, webTestdata.description1);
-//            elementActions.clickElement(weblocators.exercisedescription);
-//            LOGGER.info("Set value for exercise description: " + webTestdata.description1);
-//            AllureUtils.logStep("Set value for exercise description: " + webTestdata.description1);
 	        Thread.sleep(9000);
-	     // Send values for description set
-	     wait.until(ExpectedConditions.visibilityOfElementLocated(weblocators.exercisedescription));
-	     elementActions.setRichTextEditorValue(weblocators.exercisedescription, webTestdata.getRandomFitnessMessage());
-	     elementActions.clickElement(weblocators.exercisedescription);
-	     LOGGER.info("Set value for exercise description: " + webTestdata.getRandomFitnessMessage());
-	     AllureUtils.logStep("Set value for exercise description: " + webTestdata.getRandomFitnessMessage());
+		     // Send values for description set
+		     wait.until(ExpectedConditions.visibilityOfElementLocated(weblocators.exercisedescription));
+		     elementActions.setRichTextEditorValue(weblocators.exercisedescription, webTestdata.getRandomFitnessMessage());
+		     elementActions.clickElement(weblocators.exercisedescription);
+		     LOGGER.info("Set value for exercise description: " + webTestdata.getRandomFitnessMessage());
+		     AllureUtils.logStep("Set value for exercise description: " + webTestdata.getRandomFitnessMessage());
 
-
-
-	        
+		     Thread.sleep(2500);
             //add reps for exercise
-            wait.until(ExpectedConditions.visibilityOfElementLocated(weblocators.repsfield));
-            elementActions.clickElement(weblocators.repsfield);
+            wait.until(ExpectedConditions.elementToBeClickable(weblocators.repsfield));
+            Thread.sleep(2500);
             elementActions.sendKeysToElement(weblocators.repsfield, webTestdata.repsdata1);
             // Log message to console and Allure report
 	        LOGGER.info("Verified and add reps values corresponding to exercise");
 	        AllureUtils.logStep("Verified and add reps values corresponding to exercise");
 	        // Capture a screenshot and attach it to Allure
 	        AllureUtils.captureScreenshot(driver, "Case102_Workout_Exercise_Container_Displayed1");
-	        
-	        
-            
+	       
+	        Thread.sleep(2500);
             //add reps for exercise
 	        wait.until(ExpectedConditions.elementToBeClickable(weblocators.recoveryfield));
+	        Thread.sleep(2500);
             elementActions.sendKeysToElement(weblocators.recoveryfield, webTestdata.recoverydata1);
             // Log message to console and Allure report
 	        LOGGER.info("Verified and add recoveryfield values corresponding to exercise");
@@ -169,10 +159,7 @@ public class Case105_Workout_Templates_create extends BasePage {
             // Log message to console and Allure report
 	        LOGGER.info("Click on submitbuttn");
 	        AllureUtils.logStep("Click on submitbuttn");
-	        
-	        
-	        
-            
+
             Thread.sleep(5500);
             
         } catch (TimeoutException e) {

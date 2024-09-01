@@ -74,7 +74,7 @@ public class weblocators {
 	public static final By optional2			 = (By.xpath("(//div[contains(text(),'Optional')])[2]"));
 	public static final By optionaltextfield2	 = (By.xpath("(//input[contains(@type,'text')])[7]"));
 	public static final By chain1				 = (By.xpath("(//img[contains(@alt,'l')])[2]"));
-	
+	public static final By editworkouticon				 = (By.xpath("(//span[@class='btn btn_grey'])[1]"));	
 	
 	
 			

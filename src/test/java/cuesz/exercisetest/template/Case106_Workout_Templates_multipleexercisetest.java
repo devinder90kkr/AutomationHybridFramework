@@ -102,7 +102,7 @@ public class Case106_Workout_Templates_multipleexercisetest {
              driver.quit();
     	WebDriverManager.quitDriver();
     	 // Run the Allure serve command
-        AllureServeRunner.runAllureServe();
+//        AllureServeRunner.runAllureServe();
        
     }
 }}

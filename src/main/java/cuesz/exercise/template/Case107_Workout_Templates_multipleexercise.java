@@ -125,6 +125,45 @@ public class Case107_Workout_Templates_multipleexercise extends BasePage {
             AllureUtils.logStep("Click on confirmbttn");
             Thread.sleep(3500);
             
+            // Click on edit button
+            WebElement editicon =wait.until(ExpectedConditions.elementToBeClickable(weblocators.editworkouticon));
+            // Scroll to the "Staff Notes" element using JavaScriptExecutor
+            ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView();", editicon);
+            Thread.sleep(3500);
+            elementActions.clickElement(weblocators.editworkouticon);
+            // Log message to console and Allure report
+            LOGGER.info("Click on editworkouticon");
+            AllureUtils.logStep("Click on editworkouticon");
+            Thread.sleep(3500);
+            
+         // Iterate over the test data sets
+            for (int i = 0; i < webTestdata.exercisenameeditsmultiple.length; i++) {
+                workoutStepsHelper.repeatWorkoutSteps(wait, webTestdata.exercisenameeditsmultiple[i], webTestdata.descriptioneditsmultiple[i], webTestdata.repseditdata[i], webTestdata.recoveryeditdata[i], webTestdata.optional1edit[i], webTestdata.optional2edit[i]);
+            }
+            
+            // Click on submit button
+            WebElement exercisesave1 =wait.until(ExpectedConditions.elementToBeClickable(weblocators.savebutton));
+            // Scroll to the "Staff Notes" element using JavaScriptExecutor
+            ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView();", exercisesave1);
+            Thread.sleep(3500);
+            elementActions.clickElement(weblocators.savebutton);
+            // Log message to console and Allure report
+            LOGGER.info("Click on savebutton");
+            AllureUtils.logStep("Click on savebutton");
+            
+            Thread.sleep(3500);
+            
+            // Click on submit button
+            WebElement confirmsave1 =wait.until(ExpectedConditions.elementToBeClickable(weblocators.confirmbttn));
+            // Scroll to the "Staff Notes" element using JavaScriptExecutor
+            ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView();", confirmsave1);
+            Thread.sleep(3500);
+            elementActions.clickElement(weblocators.confirmbttn);
+            // Log message to console and Allure report
+            LOGGER.info("Click on confirmbttn");
+            AllureUtils.logStep("Click on confirmbttn");
+            Thread.sleep(3500);
+            
 
         } catch (TimeoutException e) {
             System.out.println("Element not found within the timeout period. Skipping the test case.");

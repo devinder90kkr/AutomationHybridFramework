@@ -49,66 +49,153 @@ public class webTestdata {
 	public static final String dateoption1 = "past 30 days";
 	public static final String dateoption2 = "past 90 days";
 	
-//	//Case106_Workout_Templates_multipleexercise
-//	public static final String templatname = "Heavytraining";
-//	public static final String[] exercisenamesmultiple = {
-//	        "45 Degree Bycicle Twisting Crunch, Bodyweight, Bil.",
-//	        "All Fours Squad Stretch, Bodyweight",
-//	        "Arm Curl, Suspension, Bil.",
-//	        "Finger Extension Stretch, Bodyweight"
-//	    };
-//
-//	    public static final String[] descriptionsmultiple = {
-//	        "hello this is just for testing",
-//	        "hello this",
-//	        "is just for testing purpose", 
-//	        "To handle scrolling in Selenium, especially if the element you want to interact with is not in the current view, you can use JavaScript to scroll the page. This approach is often useful when the element is located in a part of the page that's not immediately visible"	        
-//	    };
-//
-//	    public static final String[] repsdata = {
-//	        "3", "2", "8", "12"
-//	    };
-//
-//	    public static final String[] recoverydata = {
-//	        "42", "18", "5", "10"
-//	    };
-//	    
-//	    public static final String[] optional1 = {
-//		        "40", "50", "60", "70"
-//		    };
-//		public static final String[] optional2 = {
-//	         "1234", "252" , "2-3-3-6", "4158"
-//	    };
-	
-	
 	//Case106_Workout_Templates_multipleexercise
-		public static final String templatname = "Heavytraining";
-		public static final String[] exercisenamesmultiple = {
-		        "45 Degree Bycicle Twisting Crunch, Bodyweight, Bil.",
-		    
-		    };
+	public static final String templatname = "Heavytraining";
+	public static final String[] exercisenamesmultiple = {
+	        "45 Degree Bycicle Twisting Crunch, Bodyweight, Bil.",
+	        "All Fours Squad Stretch, Bodyweight",
+	        "Arm Curl, Suspension, Bil.",
+	        "Finger Extension Stretch, Bodyweight"
+	    };
 
-		    public static final String[] descriptionsmultiple = {
-		        "To handle scrolling in Selenium, especially if the element you want to interact with is not in the current view, you can use JavaScript to scroll the page. This approach is often useful when the element is located in a part of the page that's not immediately visible"	        
-		    };
+	    public static final String[] descriptionsmultiple = {
+	        "hello this is just for testing",
+	        "hello this",
+	        "is just for testing purpose", 
+	        "To handle scrolling in Selenium, especially if the element you want to interact with is not in the current view, you can use JavaScript to scroll the page. This approach is often useful when the element is located in a part of the page that's not immediately visible"	        
+	    };
 
-		    public static final String[] repsdata = {
-		        "12"
-		    };
+	    public static final String[] repsdata = {
+	        "3", "2", "8", "12"
+	    };
 
-		    public static final String[] recoverydata = {
-		        "10"
+	    public static final String[] recoverydata = {
+	        "42", "18", "5", "10"
+	    };
+	    
+	    public static final String[] optional1 = {
+		        "40", "50", "60", "70"
 		    };
-		    
-		    public static final String[] optional1 = {
-			         "70"
-			    };
-		    public static final String[] optional2 = {
-			        "4158"
-			    };
+		public static final String[] optional2 = {
+	         "1234", "252" , "2-3-3-6", "4158"
+	    };
 	
-	
-	
+//	//testdata for Case107_Workout_Templates_multipleexercise edit process
+//		public static final String[] exercisenameeditsmultiple = {
+//		        "Bench Press With 1 Board, Barbell, 1 Board, Pronated, Bil.",
+//		        "Finger Extension Stretch, Bodyweight",
+//		        "Quickly Trot In Place, Bodyweight",
+//		        "Back Extension (Female), Leverage Machine, Bil."
+//		    };
+//
+//		    public static final String[] descriptioneditsmultiple = {
+//		        "hello this is just for testing",
+//		        "hello this",
+//		        "is just for testing purpose", 
+//		        "To handle scrolling in Selenium, especially if the element you want to interact with is not in the current view, you can use JavaScript to scroll the page. This approach is often useful when the element is located in a part of the page that's not immediately visible"	        
+//		    };
+//
+//		    public static final String[] repseditdata = {
+//		        "3", "2", "8", "12"
+//		    };
+//
+//		    public static final String[] recoveryeditdata = {
+//		        "42", "18", "5", "10"
+//		    };
+//		    
+//		    public static final String[] optional1edit = {
+//			        "40", "50", "60", "70"
+//			    };
+//			public static final String[] optional2edit = {
+//		         "1234", "252" , "2-3-3-6", "4158"
+//		    };
+		
+//		// Define a Faker instance
+//	    private static final Faker faker = new Faker();
+
+	    // Test data for Case107_Workout_Templates_multipleexercise edit process
+	    public static final String[] exercisenameeditsmultiple = {
+	        "Bench Press With 1 Board, Barbell, 1 Board, Pronated, Bil.",
+	        "Finger Extension Stretch, Bodyweight",
+	        "Quickly Trot In Place, Bodyweight",
+	        "Back Extension (Female), Leverage Machine, Bil."
+	    };
+
+	    // Reusing the same fitness-related messages for description
+	    public static final String[] descriptioneditsmultiple = getFitnessMessages();
+
+	    // Generating numerical data
+	    public static final String[] repseditdata = generateNumericData(4, 0, 10, 2);
+	    public static final String[] recoveryeditdata = generateNumericData(4, 0, 60, 2);
+	    public static final String[] optional1edit = generateNumericData(4, 0, 100, 2);
+
+	    // Generating data for optional2edit in specific format
+	    public static final String[] optional2edit = generateFormattedData(4);
+
+	    // Define your fitness-related messages
+	    public static String[] getFitnessMessages1() {
+	        String[] messages = new String[4];
+	        for (int i = 0; i < messages.length; i++) {
+	            // Generate a fitness-related paragraph using Faker's sentence and custom text
+	            messages[i] = generateFitnessParagraph();
+	        }
+	        return messages;
+	    }
+
+	    // Method to generate a fitness-related paragraph
+	    private static String generateFitnessParagraph1() {
+	        // Create a base paragraph with a few fitness-related terms
+	        String baseParagraph = faker.shakespeare().hamletQuote();
+	        
+	        // Add fitness-related content to the base paragraph
+	        String fitnessContent = " Remember to stay hydrated and take breaks. Incorporate a variety of exercises including cardio and strength training for balanced fitness. Track your progress regularly to achieve your goals.";
+	        
+	        return baseParagraph + fitnessContent;
+	    }
+
+	    // Method to generate numeric data
+	    private static String[] generateNumericData(int size, int min, int max, int decimalPlaces) {
+	        String[] data = new String[size];
+	        for (int i = 0; i < size; i++) {
+	            data[i] = String.format("%." + decimalPlaces + "f", faker.number().randomDouble(decimalPlaces, min, max));
+	        }
+	        return data;
+	    }
+
+	    // Method to generate formatted data for optional2edit
+	    private static String[] generateFormattedData(int size) {
+	        String[] data = new String[size];
+	        for (int i = 0; i < size; i++) {
+	            if (faker.bool().bool()) {
+	                // Generate a four-digit number
+	                data[i] = String.valueOf(faker.number().numberBetween(1000, 9999));
+	            } else {
+	                // Generate a combination like x-2-x-0
+	                data[i] = faker.number().digit() + "-2-" + faker.number().digit() + "-0";
+	            }
+	        }
+	        return data;
+	    }
+
+	    public static void main(String[] args) {
+	        // Test the description generation
+	        for (String message : descriptioneditsmultiple) {
+	            System.out.println("Description: " + message);
+	        }
+	        for (String rep : repseditdata) {
+	            System.out.println("Reps: " + rep);
+	        }
+	        for (String recovery : recoveryeditdata) {
+	            System.out.println("Recovery: " + recovery);
+	        }
+	        for (String optional1 : optional1edit) {
+	            System.out.println("Optional1: " + optional1);
+	        }
+	        for (String optional2 : optional2edit) {
+	            System.out.println("Optional2: " + optional2);
+	        }
+	    }
+		
 	//	Case102_Workout_Templates_create
 	public static final String templatename = "MassProduction";
 	public static final String exercisename1 = "Above Head Chest Stretch, Bodyweight";
