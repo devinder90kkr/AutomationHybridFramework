@@ -136,12 +136,32 @@ public class Case107_Workout_Templates_multipleexercise extends BasePage {
             AllureUtils.logStep("Click on editworkouticon");
             Thread.sleep(3500);
             
+            
+            WebElement addexercisworkout = wait.until(ExpectedConditions.elementToBeClickable(weblocators.addnewworkout));
+            // Scroll to the "Staff Notes" element using JavaScriptExecutor
+    		 ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView();", addexercisworkout);
+            AllureUtils.logStep("Click on addnewworkout");
+           
+            Thread.sleep(4500);
          // Iterate over the test data sets
             for (int i = 0; i < webTestdata.exercisenameeditsmultiple.length; i++) {
                 workoutStepsHelper.repeatWorkoutSteps(wait, webTestdata.exercisenameeditsmultiple[i], webTestdata.descriptioneditsmultiple[i], webTestdata.repseditdata[i], webTestdata.recoveryeditdata[i], webTestdata.optional1edit[i], webTestdata.optional2edit[i]);
             }
+          
+            // Click on chain set
+            WebElement chainset2 =wait.until(ExpectedConditions.elementToBeClickable(weblocators.chain2));
+            // Scroll to the "Staff Notes" element using JavaScriptExecutor
+            ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView();", chainset2);
+            Thread.sleep(3500);
+            elementActions.clickElement(weblocators.chain2);
+            // Log message to console and Allure report
+            LOGGER.info("Click on chain2");
+            AllureUtils.logStep("Click on chain2");
+            Thread.sleep(3500);
             
-            // Click on submit button
+            
+            
+            Thread.sleep(2500);            // Click on submit button
             WebElement exercisesave1 =wait.until(ExpectedConditions.elementToBeClickable(weblocators.savebutton));
             // Scroll to the "Staff Notes" element using JavaScriptExecutor
             ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView();", exercisesave1);

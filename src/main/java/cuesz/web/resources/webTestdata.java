@@ -58,13 +58,30 @@ public class webTestdata {
 	        "Finger Extension Stretch, Bodyweight"
 	    };
 
-	    public static final String[] descriptionsmultiple = {
-	        "hello this is just for testing",
-	        "hello this",
-	        "is just for testing purpose", 
-	        "To handle scrolling in Selenium, especially if the element you want to interact with is not in the current view, you can use JavaScript to scroll the page. This approach is often useful when the element is located in a part of the page that's not immediately visible"	        
-	    };
+	 // Reusing the same fitness-related messages for description
+    public static final String[] descriptionsmultiple = getFitnessMessage();
+    
+    // Define your fitness-related messages
+    public static String[] getFitnessMessage() {
+        String[] messages = new String[4];
+        for (int i = 0; i < messages.length; i++) {
+            // Generate a fitness-related paragraph using Faker's sentence and custom text
+            messages[i] = generateFitnessParagrap();
+        }
+        return messages;
+    }
 
+    // Method to generate a fitness-related paragraph
+    private static String generateFitnessParagrap() {
+        // Create a base paragraph with a few fitness-related terms
+        String baseParagraph = faker.shakespeare().hamletQuote();
+        
+        // Add fitness-related content to the base paragraph
+        String fitnessContent = " Remember to stay hydrated and take breaks. Incorporate a variety of exercises including cardio and strength training for balanced fitness. Track your progress regularly to achieve your goals.";
+        
+        return baseParagraph + fitnessContent;
+    }
+	
 	    public static final String[] repsdata = {
 	        "3", "2", "8", "12"
 	    };
@@ -79,54 +96,32 @@ public class webTestdata {
 		public static final String[] optional2 = {
 	         "1234", "252" , "2-3-3-6", "4158"
 	    };
-	
-//	//testdata for Case107_Workout_Templates_multipleexercise edit process
-//		public static final String[] exercisenameeditsmultiple = {
-//		        "Bench Press With 1 Board, Barbell, 1 Board, Pronated, Bil.",
-//		        "Finger Extension Stretch, Bodyweight",
-//		        "Quickly Trot In Place, Bodyweight",
-//		        "Back Extension (Female), Leverage Machine, Bil."
-//		    };
-//
-//		    public static final String[] descriptioneditsmultiple = {
-//		        "hello this is just for testing",
-//		        "hello this",
-//		        "is just for testing purpose", 
-//		        "To handle scrolling in Selenium, especially if the element you want to interact with is not in the current view, you can use JavaScript to scroll the page. This approach is often useful when the element is located in a part of the page that's not immediately visible"	        
-//		    };
-//
-//		    public static final String[] repseditdata = {
-//		        "3", "2", "8", "12"
-//		    };
-//
-//		    public static final String[] recoveryeditdata = {
-//		        "42", "18", "5", "10"
-//		    };
-//		    
-//		    public static final String[] optional1edit = {
-//			        "40", "50", "60", "70"
-//			    };
-//			public static final String[] optional2edit = {
-//		         "1234", "252" , "2-3-3-6", "4158"
-//		    };
 		
-//		// Define a Faker instance
-//	    private static final Faker faker = new Faker();
+		
+	    public static void main1(String[] args) {
+	        // Test the description generation
+	        for (String message : descriptionsmultiple) {
+	            System.out.println("Description: " + message);
+	        }
+	      
+	    }
+	
 
-	    // Test data for Case107_Workout_Templates_multipleexercise edit process
+	    
+		// Test data for Case107_Workout_Templates_multipleexercise edit process
 	    public static final String[] exercisenameeditsmultiple = {
 	        "Bench Press With 1 Board, Barbell, 1 Board, Pronated, Bil.",
-	        "Finger Extension Stretch, Bodyweight",
+	        "Back Relaxation, Stability Ball",
 	        "Quickly Trot In Place, Bodyweight",
 	        "Back Extension (Female), Leverage Machine, Bil."
 	    };
 
 	    // Reusing the same fitness-related messages for description
-	    public static final String[] descriptioneditsmultiple = getFitnessMessages();
+	    public static final String[] descriptioneditsmultiple = getFitnessMessages1();
 
 	    // Generating numerical data
-	    public static final String[] repseditdata = generateNumericData(4, 0, 10, 2);
-	    public static final String[] recoveryeditdata = generateNumericData(4, 0, 60, 2);
+	    public static final String[] repseditdata = generateNumericData(4, 1, 20, 2);
+	    public static final String[] recoveryeditdata = generateNumericData(4, 10, 90, 3);
 	    public static final String[] optional1edit = generateNumericData(4, 0, 100, 2);
 
 	    // Generating data for optional2edit in specific format
@@ -137,7 +132,7 @@ public class webTestdata {
 	        String[] messages = new String[4];
 	        for (int i = 0; i < messages.length; i++) {
 	            // Generate a fitness-related paragraph using Faker's sentence and custom text
-	            messages[i] = generateFitnessParagraph();
+	            messages[i] = generateFitnessParagraph1();
 	        }
 	        return messages;
 	    }
@@ -157,7 +152,8 @@ public class webTestdata {
 	    private static String[] generateNumericData(int size, int min, int max, int decimalPlaces) {
 	        String[] data = new String[size];
 	        for (int i = 0; i < size; i++) {
-	            data[i] = String.format("%." + decimalPlaces + "f", faker.number().randomDouble(decimalPlaces, min, max));
+	            double value = faker.number().randomDouble(decimalPlaces, min, max);
+	            data[i] = String.format("%." + decimalPlaces + "f", value);
 	        }
 	        return data;
 	    }
