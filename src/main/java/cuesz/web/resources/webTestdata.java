@@ -5,12 +5,9 @@ import com.github.javafaker.Faker;
 import cuesz.date.functions.DateGenerator;
 
 public class webTestdata {
-	
-//	private static Faker faker = new Faker();
-//	 // Method to get a dynamic description
-//    public static String getDescription() {
-//        return faker.lorem().sentence(); // Generates a random sentence
-//    }
+		
+
+	// test data for	Case107_Workout_Templates_multipleexercise	
 	 // Define a Faker instance
     private static final Faker faker = new Faker();
 
@@ -106,9 +103,63 @@ public class webTestdata {
 	      
 	    }
 	
-
 	    
-		// Test data for Case107_Workout_Templates_multipleexercise edit process
+	    //case105_woorkout_Templates
+	    public static final String[] exercisenamesmultipl = {
+		        "Chair Pose I Utkatasana I, Bodyweight"
+		    };
+
+		 // Reusing the same fitness-related messages for description
+	    public static final String[] descriptionsmultipl = getFitnessMessage();
+	    
+	    // Define your fitness-related messages
+	    public static String[] getFitnessMessage3() {
+	        String[] messages = new String[4];
+	        for (int i = 0; i < messages.length; i++) {
+	            // Generate a fitness-related paragraph using Faker's sentence and custom text
+	            messages[i] = generateFitnessParagrap3();
+	        }
+	        return messages;
+	    }
+
+	    // Method to generate a fitness-related paragraph
+	    private static String generateFitnessParagrap3() {
+	        // Create a base paragraph with a few fitness-related terms
+	        String baseParagraph = faker.shakespeare().hamletQuote();
+	        
+	        // Add fitness-related content to the base paragraph
+	        String fitnessContent = " Remember to stay hydrated and take breaks. Incorporate a variety of exercises including cardio and strength training for balanced fitness. Track your progress regularly to achieve your goals.";
+	        
+	        return baseParagraph + fitnessContent;
+	    }
+		
+		    public static final String[] repsdata3 = {
+		        "3", "2", "8", "12"
+		    };
+
+		    public static final String[] recoverydata3 = {
+		        "42", "18", "5", "10"
+		    };
+		    
+		    public static final String[] optional13 = {
+			        "40", "50", "60", "70"
+			    };
+			public static final String[] optional23 = {
+		         "1234", "252" , "2-3-3-6", "4158"
+		    };
+			
+			
+		    public static void main3(String[] args) {
+		        // Test the description generation
+		        for (String message : descriptionsmultipl) {
+		            System.out.println("Description: " + message);
+		        }
+		      
+		    }
+	    
+
+	
+		// edit case :Test data for Case107_Workout_Templates_multipleexercise edit process
 	    public static final String[] exercisenameeditsmultiple = {
 	        "Bench Press With 1 Board, Barbell, 1 Board, Pronated, Bil.",
 	        "Back Relaxation, Stability Ball",

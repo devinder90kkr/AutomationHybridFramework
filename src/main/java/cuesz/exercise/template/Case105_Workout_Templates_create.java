@@ -2,11 +2,9 @@ package cuesz.exercise.template;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Actions;
-
 import java.time.Duration;
 
-import org.openqa.selenium.Keys;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -20,16 +18,19 @@ import org.testng.SkipException;
 import cuesz.allure.reporting.AllureUtils;
 import cuesz.pages.BasePage;
 import cuesz.web.resources.ElementActions;
+import cuesz.web.resources.WorkoutStepsHelper;
 import cuesz.web.resources.webTestdata;
 import cuesz.web.resources.weblocators;
 
 public class Case105_Workout_Templates_create extends BasePage {
 	private static final Logger LOGGER = LoggerFactory.getLogger(Case105_Workout_Templates_create.class);
 	private ElementActions elementActions;
+	private WorkoutStepsHelper workoutStepsHelper;
 
     public Case105_Workout_Templates_create(WebDriver driver) {
         super(driver);
         this.elementActions = new ElementActions(driver);
+        this.workoutStepsHelper = new WorkoutStepsHelper(driver);
     }
 
     @Test
@@ -89,77 +90,37 @@ public class Case105_Workout_Templates_create extends BasePage {
             LOGGER.info("Generated unique template name: " + uniqueTemplateName);
             AllureUtils.logStep("Generated unique template name: " + uniqueTemplateName);
             
-            //Click on Add new workout button 
-            wait.until(ExpectedConditions.visibilityOfElementLocated(weblocators.addnewworkout));
-            elementActions.clickElement(weblocators.addnewworkout);
-            // Log message to console and Allure report
-	        LOGGER.info("Click on addnewworkout");
-	        AllureUtils.logStep("Click on addnewworkout");
-	        
-	        // Verify exerciseconatiner is displayed
-	        wait.until(ExpectedConditions.visibilityOfElementLocated(weblocators.exerciseconatiner));
-	        boolean isExerciseContainerDisplayed = elementActions.isElementDisplayed(weblocators.exerciseconatiner);
-	        Assert.assertTrue(isExerciseContainerDisplayed, "Exercise container is not displayed");
-	        // Log message to console and Allure report
-	        LOGGER.info("Verified exercise container is displayed");
-	        AllureUtils.logStep("Verified exercise container is displayed");
-	        
-	        
-	        /*Enter date values*/
-			WebElement exericseclick = wait.until(ExpectedConditions.visibilityOfElementLocated(weblocators.exerciseslection));
-			Actions builder1 = new Actions(driver);
-			builder1.moveToElement(exericseclick).click();
-			builder1.sendKeys(webTestdata.exercisename1).perform();
-			Thread.sleep(2500);
-			builder1.sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.TAB).perform();
-			// Log message to console and Allure report
-	        LOGGER.info("Verified and add exercise in list");
-	        AllureUtils.logStep("Verified and add exercise in list");
-	        // Capture a screenshot and attach it to Allure
-	        AllureUtils.captureScreenshot(driver, "Case102_Workout_Exercise_Container_Displayed");
-	        
-	        Thread.sleep(9000);
-		     // Send values for description set
-		     wait.until(ExpectedConditions.visibilityOfElementLocated(weblocators.exercisedescription));
-		     elementActions.setRichTextEditorValue(weblocators.exercisedescription, webTestdata.getRandomFitnessMessage());
-		     elementActions.clickElement(weblocators.exercisedescription);
-		     LOGGER.info("Set value for exercise description: " + webTestdata.getRandomFitnessMessage());
-		     AllureUtils.logStep("Set value for exercise description: " + webTestdata.getRandomFitnessMessage());
 
-		     Thread.sleep(2500);
-            //add reps for exercise
-            wait.until(ExpectedConditions.elementToBeClickable(weblocators.repsfield));
-            Thread.sleep(2500);
-            elementActions.sendKeysToElement(weblocators.repsfield, webTestdata.repsdata1);
+            // Iterate over the test data sets
+            for (int i = 0; i < webTestdata.exercisenamesmultipl.length; i++) {
+                workoutStepsHelper.repeatWorkoutSteps(wait, webTestdata.exercisenamesmultipl[i], webTestdata.descriptionsmultipl[i], webTestdata.repsdata3[i], webTestdata.recoverydata3[i], webTestdata.optional13[i], webTestdata.optional23[i]);
+            }
+
+
+            // Click on submit button
+            WebElement exercisesave =wait.until(ExpectedConditions.elementToBeClickable(weblocators.savebutton));
+            // Scroll to the "Staff Notes" element using JavaScriptExecutor
+            ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView();", exercisesave);
+            Thread.sleep(3500);
+            elementActions.clickElement(weblocators.savebutton);
             // Log message to console and Allure report
-	        LOGGER.info("Verified and add reps values corresponding to exercise");
-	        AllureUtils.logStep("Verified and add reps values corresponding to exercise");
-	        // Capture a screenshot and attach it to Allure
-	        AllureUtils.captureScreenshot(driver, "Case102_Workout_Exercise_Container_Displayed1");
-	       
-	        Thread.sleep(2500);
-            //add reps for exercise
-	        wait.until(ExpectedConditions.elementToBeClickable(weblocators.recoveryfield));
-	        Thread.sleep(2500);
-            elementActions.sendKeysToElement(weblocators.recoveryfield, webTestdata.recoverydata1);
-            // Log message to console and Allure report
-	        LOGGER.info("Verified and add recoveryfield values corresponding to exercise");
-	        AllureUtils.logStep("Verified and add recoveryfield values corresponding to exercise");
-	        
-	        //Click on Add new workout button 
-            wait.until(ExpectedConditions.visibilityOfElementLocated(weblocators.setsplus));
-            elementActions.clickElement(weblocators.setsplus);
-            // Log message to console and Allure report
-	        LOGGER.info("Click on setsplus");
-	        AllureUtils.logStep("Click on setsplus");
+            LOGGER.info("Click on savebutton");
+            AllureUtils.logStep("Click on savebutton");
             
-	        //Click on Add new workout button 
-            wait.until(ExpectedConditions.visibilityOfElementLocated(weblocators.submitbuttn));
-            elementActions.clickElement(weblocators.submitbuttn);
+            Thread.sleep(3500);
+            
+            // Click on submit button
+            WebElement confirmsave =wait.until(ExpectedConditions.elementToBeClickable(weblocators.confirmbttn));
+            // Scroll to the "Staff Notes" element using JavaScriptExecutor
+            ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView();", confirmsave);
+            Thread.sleep(3500);
+            elementActions.clickElement(weblocators.confirmbttn);
             // Log message to console and Allure report
-	        LOGGER.info("Click on submitbuttn");
-	        AllureUtils.logStep("Click on submitbuttn");
-
+            LOGGER.info("Click on confirmbttn");
+            AllureUtils.logStep("Click on confirmbttn");
+            Thread.sleep(3500);
+            
+            
             Thread.sleep(5500);
             
         } catch (TimeoutException e) {
