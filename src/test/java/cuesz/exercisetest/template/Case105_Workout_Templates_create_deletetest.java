@@ -9,7 +9,7 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 import cuesz.allure.reporting.AllureUtils;
-import cuesz.exercise.template.Case107_Workout_Templates_multipleexercise;
+import cuesz.exercise.template.Case105_Workout_Templates_create_delete;
 import cuesz.factory.WebDriverManager;
 import cuesz.logintest.CoachLogin;
 import io.qameta.allure.Allure;
@@ -23,12 +23,12 @@ import io.qameta.allure.Story;
 import java.util.Properties;
 
 
-@Epic ("Exercise Workout multiple templates")
-@Feature ("Multiple templates Workout Creation from coach panel")
-public class Case107_Workout_Templates_multipleexercisetest {
+@Epic ("Exercise Workout templates for delete")
+@Feature ("Workout Creation from coach panel")
+public class Case105_Workout_Templates_create_deletetest {
     private WebDriver driver;
     private CoachLogin coachLogin;
-    private Case107_Workout_Templates_multipleexercise WorkouttemplatePage;
+    private Case105_Workout_Templates_create_delete WorkouttemplatePage;
     
 
     @BeforeClass
@@ -40,7 +40,7 @@ public class Case107_Workout_Templates_multipleexercisetest {
         
         driver.manage().window().maximize();
         coachLogin = new CoachLogin(); // Initialise the advocateLogin object
-        WorkouttemplatePage = new Case107_Workout_Templates_multipleexercise(driver);
+        WorkouttemplatePage = new Case105_Workout_Templates_create_delete(driver);
 
     }
     
@@ -48,15 +48,15 @@ public class Case107_Workout_Templates_multipleexercisetest {
     
     @Owner("QA") // Add the @Owner annotation to specify the executor
     @Severity(SeverityLevel.NORMAL)     
-    @Description("Advocate schdules and creates an event")
-    @Story("Schdule Events")
-    public void workoutmutipleemplate() throws InterruptedException {
+    @Description("verifiy workout template deleted by lead coach")
+    @Story("Deleted workout template")
+    public void workoutemplatedelete() throws InterruptedException {
     	coachLogin.setUp(); // Call the setUp method of AdvocateLogin to initialise loginPage
     	coachLogin.testCoachLogin();
     	
     	
     	try {
-            WorkouttemplatePage.Createworkoutmultiple();
+            WorkouttemplatePage.createworkoutdelete();
         } catch (SkipException e) {
             System.out.println(e.getMessage());
         }
@@ -102,5 +102,6 @@ public class Case107_Workout_Templates_multipleexercisetest {
     	WebDriverManager.quitDriver();
     	 // Run the Allure serve command
 //        AllureServeRunner.runAllureServe();
+       
     }
 }}

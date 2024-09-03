@@ -1,6 +1,7 @@
 package cuesz.web.resources;
 
 import java.text.SimpleDateFormat;
+import java.time.Duration;
 import java.util.Date;
 import java.util.Random;
 import java.util.UUID;
@@ -11,6 +12,8 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class ElementActions {
 
@@ -25,7 +28,35 @@ public class ElementActions {
         WebElement element = driver.findElement(locator);
         element.click();
     }
+    
 
+    // click element by using OR method
+    public void clickElementUsingOr(By... locators) {
+        if (locators.length == 0) {
+            throw new IllegalArgumentException("At least one locator must be provided.");
+        }
+
+        // Construct the combined XPath using OR condition
+        StringBuilder combinedXpath = new StringBuilder();
+        for (By locator : locators) {
+            String xpath = locator.toString().replaceFirst("By.xpath: ", "");
+            if (combinedXpath.length() > 0) {
+                combinedXpath.append(" | ");
+            }
+            combinedXpath.append(xpath);
+        }
+
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        try {
+            // Wait for the element to be visible and then click it
+            WebElement element = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(combinedXpath.toString())));
+            element.click();
+        } catch (Exception e) {
+            throw new RuntimeException("None of the provided locators found the element.");
+        }
+    }
+
+    
     // Enter text into a WebElement
     public void sendKeysToElement(By locator, String text) {
         WebElement element = driver.findElement(locator);

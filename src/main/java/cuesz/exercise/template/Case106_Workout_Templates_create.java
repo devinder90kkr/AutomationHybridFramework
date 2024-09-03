@@ -22,12 +22,12 @@ import cuesz.web.resources.WorkoutStepsHelper;
 import cuesz.web.resources.webTestdata;
 import cuesz.web.resources.weblocators;
 
-public class Case105_Workout_Templates_create extends BasePage {
-	private static final Logger LOGGER = LoggerFactory.getLogger(Case105_Workout_Templates_create.class);
+public class Case106_Workout_Templates_create extends BasePage {
+	private static final Logger LOGGER = LoggerFactory.getLogger(Case106_Workout_Templates_create.class);
 	private ElementActions elementActions;
 	private WorkoutStepsHelper workoutStepsHelper;
 
-    public Case105_Workout_Templates_create(WebDriver driver) {
+    public Case106_Workout_Templates_create(WebDriver driver) {
         super(driver);
         this.elementActions = new ElementActions(driver);
         this.workoutStepsHelper = new WorkoutStepsHelper(driver);
@@ -95,7 +95,6 @@ public class Case105_Workout_Templates_create extends BasePage {
             for (int i = 0; i < webTestdata.exercisenamesmultipl.length; i++) {
                 workoutStepsHelper.repeatWorkoutSteps(wait, webTestdata.exercisenamesmultipl[i], webTestdata.descriptionsmultipl[i], webTestdata.repsdata3[i], webTestdata.recoverydata3[i], webTestdata.optional13[i], webTestdata.optional23[i]);
             }
-
 
             // Click on submit button
             WebElement exercisesave =wait.until(ExpectedConditions.elementToBeClickable(weblocators.savebutton));

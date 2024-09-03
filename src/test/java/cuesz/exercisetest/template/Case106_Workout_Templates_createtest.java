@@ -9,7 +9,7 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 import cuesz.allure.reporting.AllureUtils;
-import cuesz.exercise.template.Case105_Workout_Templates_create;
+import cuesz.exercise.template.Case106_Workout_Templates_create;
 import cuesz.factory.WebDriverManager;
 import cuesz.logintest.CoachLogin;
 import io.qameta.allure.Allure;
@@ -25,10 +25,10 @@ import java.util.Properties;
 
 @Epic ("Exercise Workout templates")
 @Feature ("Workout Creation from coach panel")
-public class Case105_Workout_Templates_createtest {
+public class Case106_Workout_Templates_createtest {
     private WebDriver driver;
     private CoachLogin coachLogin;
-    private Case105_Workout_Templates_create WorkouttemplatePage;
+    private Case106_Workout_Templates_create WorkouttemplatePage;
     
 
     @BeforeClass
@@ -40,7 +40,7 @@ public class Case105_Workout_Templates_createtest {
         
         driver.manage().window().maximize();
         coachLogin = new CoachLogin(); // Initialise the advocateLogin object
-        WorkouttemplatePage = new Case105_Workout_Templates_create(driver);
+        WorkouttemplatePage = new Case106_Workout_Templates_create(driver);
 
     }
     
@@ -48,8 +48,8 @@ public class Case105_Workout_Templates_createtest {
     
     @Owner("QA") // Add the @Owner annotation to specify the executor
     @Severity(SeverityLevel.NORMAL)     
-    @Description("Advocate schdules and creates an event")
-    @Story("Schdule Events")
+    @Description("lead coach's able to create workout template")
+    @Story("workout templates")
     public void workoutemplate() throws InterruptedException {
     	coachLogin.setUp(); // Call the setUp method of AdvocateLogin to initialise loginPage
     	coachLogin.testCoachLogin();

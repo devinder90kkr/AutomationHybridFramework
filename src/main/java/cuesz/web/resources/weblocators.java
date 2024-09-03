@@ -4,6 +4,17 @@ import org.openqa.selenium.By;
 
 public class weblocators {
 	
+	//	Case108_Workout_Templates_assigntomember
+	public static final By assignlp1			 = (By.xpath("//span[normalize-space()='Assign LP1']"));
+	public static final By editassignlp1		 = (By.xpath("//span[normalize-space()='Edit LP1']"));
+	public static final By editassignlp1draft	 = (By.xpath("//button[@id='LP1']//span[1]"));
+	public static final By primaryobjective		 = (By.xpath("(//div[@class='jodit-wysiwyg'])[1]"));
+	public static final By editprogram			 = (By.xpath("//span[contains(@class,'text-white')]"));
+	public static final By primarynotes			 = (By.xpath("(//div[contains(@class,'jodit-wysiwyg')])[4]"));
+	public static final By secondaryobjective	 = (By.xpath("(//div[contains(@class,'jodit-wysiwyg')])[6]"));
+	public static final By secondarynotes		 = (By.xpath("(//div[contains(@class,'jodit-wysiwyg')])[8]")); 
+	
+	
 	
 	//Filter
 	public static final By filtericon			 = (By.xpath("//button[contains(@class, 'action_step_filter')]//h2[text()='Filter']"));
@@ -75,7 +86,10 @@ public class weblocators {
 	public static final By optionaltextfield2	 = (By.xpath("(//input[contains(@type,'text')])[7]"));
 	public static final By chain1				 = (By.xpath("(//img[contains(@alt,'l')])[2]"));
 	public static final By chain2				 = (By.xpath("(//img[contains(@alt,'l')])[7]"));
-	public static final By editworkouticon				 = (By.xpath("(//span[@class='btn btn_grey'])[1]"));	
+	public static final By editworkouticon		 = (By.xpath("(//span[@class='btn btn_grey'])[1]"));	
+	public static final By exercisedeleteicon	 = (By.xpath("(//span[contains(@class,'btn btn_grey')])[2]"));
+	public static final By editorbold			 = (By.xpath("(//button[@role='button'])[1]"));
+	public static final By editoritalic			 = (By.xpath("(//button[@role='button'])[2]"));
 	
 	
 			

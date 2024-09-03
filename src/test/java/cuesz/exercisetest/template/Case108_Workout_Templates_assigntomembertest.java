@@ -8,9 +8,8 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
-import cuesz.allure.reporting.AllureServeRunner;
 import cuesz.allure.reporting.AllureUtils;
-import cuesz.exercise.template.Case106_Workout_Templates_multipleexercise;
+import cuesz.exercise.template.Case108_Workout_Templates_assigntomember;
 import cuesz.factory.WebDriverManager;
 import cuesz.logintest.CoachLogin;
 import io.qameta.allure.Allure;
@@ -24,12 +23,12 @@ import io.qameta.allure.Story;
 import java.util.Properties;
 
 
-@Epic ("Exercise Workout templates")
-@Feature ("Workout Creation from coach panel")
-public class Case106_Workout_Templates_multipleexercisetest {
+@Epic ("Exercise Workout assign to member")
+@Feature ("Coach assign templates to member from memer summary page")
+public class Case108_Workout_Templates_assigntomembertest {
     private WebDriver driver;
     private CoachLogin coachLogin;
-    private Case106_Workout_Templates_multipleexercise WorkouttemplatePage;
+    private Case108_Workout_Templates_assigntomember WorkouttemplatePage;
     
 
     @BeforeClass
@@ -41,7 +40,7 @@ public class Case106_Workout_Templates_multipleexercisetest {
         
         driver.manage().window().maximize();
         coachLogin = new CoachLogin(); // Initialise the advocateLogin object
-        WorkouttemplatePage = new Case106_Workout_Templates_multipleexercise(driver);
+        WorkouttemplatePage = new Case108_Workout_Templates_assigntomember(driver);
 
     }
     
@@ -49,15 +48,15 @@ public class Case106_Workout_Templates_multipleexercisetest {
     
     @Owner("QA") // Add the @Owner annotation to specify the executor
     @Severity(SeverityLevel.NORMAL)     
-    @Description("Advocate schdules and creates an event")
-    @Story("Schdule Events")
-    public void workoutemplate() throws InterruptedException {
+    @Description("Assign LP1 or edit Lp1 to member via member summary page")
+    @Story("Assigning workout template by staff to member")
+    public void asignworkouttemplate() throws InterruptedException {
     	coachLogin.setUp(); // Call the setUp method of AdvocateLogin to initialise loginPage
     	coachLogin.testCoachLogin();
     	
     	
     	try {
-            WorkouttemplatePage.Createworkout();
+            WorkouttemplatePage.asignlp1();
         } catch (SkipException e) {
             System.out.println(e.getMessage());
         }
@@ -70,7 +69,7 @@ public class Case106_Workout_Templates_multipleexercisetest {
         Allure.link("Case01_createventtest", dynamicLink);
     
         // Capture a screenshot and attach it to Allure
-        AllureUtils.captureScreenshot(driver, "Case101_Workouttest_Templates_leadcoach");
+        AllureUtils.captureScreenshot(driver, "Case108_Workout_Templates_assigntomember");
         Allure.step("Step Details");
         
         // Retrieve OS information
@@ -103,6 +102,5 @@ public class Case106_Workout_Templates_multipleexercisetest {
     	WebDriverManager.quitDriver();
     	 // Run the Allure serve command
 //        AllureServeRunner.runAllureServe();
-       
     }
 }}

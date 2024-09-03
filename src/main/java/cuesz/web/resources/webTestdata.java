@@ -5,7 +5,8 @@ import com.github.javafaker.Faker;
 import cuesz.date.functions.DateGenerator;
 
 public class webTestdata {
-		
+	
+
 
 	// test data for	Case107_Workout_Templates_multipleexercise	
 	 // Define a Faker instance
@@ -246,11 +247,69 @@ public class webTestdata {
 	//	Case102_Workout_Templates_create
 	public static final String templatename = "MassProduction";
 	public static final String exercisename1 = "Above Head Chest Stretch, Bodyweight";
+	public static final String exercisename2 = "Hyperextension, Bodyweight, Weighted, Bil.";
+	public static final String exercisename3 = "Row, Bodyweight, Landmine, Uni";
+	public static final String exercisename4 = "Above Head Chest Stretch, Bodyweight";
+	public static final String exercisename5 = "Above Head Chest Stretch, Bodyweight";
+	public static final String exercisename6 = "Above Head Chest Stretch, Bodyweight";
+	public static final String exercisename7 = "Above Head Chest Stretch, Bodyweight";
+	public static final String exercisename8 = "Above Head Chest Stretch, Bodyweight";
+	public static final String exercisename9 = "Above Head Chest Stretch, Bodyweight";
+	public static final String exercisename10 = "Above Head Chest Stretch, Bodyweight";
+	public static final String exercisename11 = "Above Head Chest Stretch, Bodyweight";
+	public static final String exercisename12 = "Above Head Chest Stretch, Bodyweight";
+	public static final String exercisename13 = "Above Head Chest Stretch, Bodyweight";
+	public static final String exercisename14 = "Above Head Chest Stretch, Bodyweight";
+	
 	public static final String description1 = "hello this is just for testing purpose";
+	
+	// Generate different fitness-related descriptions
+    public static final String descriptionForPrimaryObjective = generateFitnessObjective("primary objective");
+    public static final String descriptionForPrimaryNotes = generateFitnessObjective("primary notes");
+    public static final String descriptionForSecondaryObjective = generateFitnessObjective("secondary objective");
+    public static final String descriptionForSecondaryNotes = generateFitnessObjective("secondary notes");
+
+    private static String generateFitnessObjective(String fieldType) {
+        // Get a Shakespeare quote to use as part of the description
+        String shakespeareQuote = faker.shakespeare().hamletQuote();
+
+        // Create a fitness-related objective incorporating the quote and fieldType
+        StringBuilder fitnessObjective = new StringBuilder();
+        
+        fitnessObjective.append("For the ").append(fieldType).append(", our goal is inspired by the words of Shakespeare: '")
+                        .append(shakespeareQuote)
+                        .append("'. To achieve this, we aim to integrate a balanced routine of running, strength training, and yoga. ")
+                        .append("Our focus will be on consistency and progressive overload. Track your progress, stay hydrated, and maintain a healthy diet.");
+
+        return fitnessObjective.toString();
+    }
+	
+	
+	
+	
 	public static final String repsdata1	=	"5";
 	public static final String recoverydata1	=	"22";
 	public static final String optional1value	=	"weight (KG)";	
 	public static final String optionalvalue2	=	"Tempo";
+	public static final String repsdataalphabets =	"sdsdsd";
+	public static final String recoveryalphabets =	"sdsd54";
+	
+	public static final String Weightlbs		=	"127";
+	public static final String Weightkgs		=	"58";
+	public static final String Weightpercentage		=	"25";
+	public static final String Weightlwp		=	"";
+	public static final String time		=	"00:52";
+	public static final String duration		=	"78";
+	public static final String durationmin		=	"120";
+	public static final String distancemiles		=	"1";
+	public static final String distanceyd		=	"2";
+	public static final String calorie		=	"125";
+	public static final String rpe		=	"8";
+	public static final String velocity		=	"45";
+	public static final String tempo		=	"7895";
+	public static final String tempo2		=	"X-0-1-X";
+	public static final String heightince		=	"58";
+
 	//Case01_createvent
 	public static String eventDate = DateGenerator.generateFixedDate(); // Use the generated date
 	public static final String startime =	"06:30 Pm";
