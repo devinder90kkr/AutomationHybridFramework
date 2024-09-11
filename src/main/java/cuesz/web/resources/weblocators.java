@@ -37,6 +37,7 @@ public class weblocators {
 	
 	// Action Steps 
 	public static final By actionstepsbutton 	 = (By.id("self-add-edit-action-step"));
+	public static final By actionmember 	 = (By.id("member-add-edit-action-step"));
 	public static final By editoractions		 = (By.xpath("//div[@class='jodit-wysiwyg']"));
 	public static final By editactionsteps		 = (By.xpath("(//div[@class='jodit-wysiwyg'])[2]"));
 	public static final By submitactionnotes	 = (By.xpath("(//div[@id='self-add-edit-action-step'])[2]"));
@@ -67,7 +68,8 @@ public class weblocators {
 	public static final By stafflist2			 = (By.xpath("//label[contains(text(),'Coach Seakfreight')]"));
 	public static final By sharebutton			 = (By.xpath("//button[contains(@class,'btn btn-primary btn-lg ms-3')]"));
 	public static final By shareIcon			 = By.xpath("//div[@class='d-flex align-items-center rounded bg-dark px-1 gap-2']");
-	//
+	public static final By submitactionmembernotes	= (By.xpath("(//div[@id='member-add-edit-action-step'])[2]"));
+	public static final By deletemembernotes	= (By.xpath("//button[@id='member-delete-action-step-0']"));	
 
 
 	//Case101_Workout_Templates
