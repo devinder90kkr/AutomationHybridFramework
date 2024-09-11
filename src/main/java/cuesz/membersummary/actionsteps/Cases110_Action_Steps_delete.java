@@ -40,10 +40,10 @@ public class Cases110_Action_Steps_delete extends BasePage {
         
         // Send values in editor for action steps 
         wait.until(ExpectedConditions.visibilityOfElementLocated(weblocators.editoractions));
-        elementActions.sendKeysToElement(weblocators.editoractions, webTestdata.notes);
+        elementActions.sendKeysToElement(weblocators.editoractions, webTestdata.descriptionForactionnotes);
         // Log message to console and Allure report
-        LOGGER.info("Enter values in editoractions field :" + webTestdata.notes );
-        AllureUtils.logStep("Enter values in editoractions field :" + webTestdata.notes);
+        LOGGER.info("Enter values in editoractions field :" + webTestdata.descriptionForactionnotes );
+        AllureUtils.logStep("Enter values in editoractions field :" + webTestdata.descriptionForactionnotes);
         
         // Click on submit button from  acion steps 
         wait.until(ExpectedConditions.visibilityOfElementLocated(weblocators.submitactionnotes));
@@ -55,10 +55,10 @@ public class Cases110_Action_Steps_delete extends BasePage {
         
         //search for action steps
         wait.until(ExpectedConditions.visibilityOfElementLocated(weblocators.searchnotes));
-        elementActions.sendKeysToElement(weblocators.searchnotes, webTestdata.notes);
+        elementActions.sendKeysToElement(weblocators.searchnotes, webTestdata.descriptionForactionnotes);
         // Log message to console and Allure report
-        LOGGER.info("Enter values in searchnotes field :" + webTestdata.notes );
-        AllureUtils.logStep("Enter values in searchnotes field :" + webTestdata.notes);
+        LOGGER.info("Enter values in searchnotes field :" + webTestdata.descriptionForactionnotes );
+        AllureUtils.logStep("Enter values in searchnotes field :" + webTestdata.descriptionForactionnotes);
         // Capture a screenshot and attach it to Allure
         AllureUtils.captureScreenshot(driver, "Cases110_Action_Steps2");
         

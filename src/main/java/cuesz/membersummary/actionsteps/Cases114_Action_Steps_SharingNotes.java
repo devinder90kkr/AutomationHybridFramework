@@ -1,7 +1,8 @@
 	package cuesz.membersummary.actionsteps;
 	
 	import org.openqa.selenium.By;
-	import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebDriver;
 	import org.openqa.selenium.WebElement;
 	
 	import java.time.Duration;
@@ -91,13 +92,17 @@
 	        AllureUtils.logStep("Clicked on sharingbutton button");
 	    
 	        //Click on staff user check list
-	        wait.until(ExpectedConditions.visibilityOfElementLocated(weblocators.stafflist1));
+	        WebElement staff1 = wait.until(ExpectedConditions.visibilityOfElementLocated(weblocators.stafflist1));
+	        // Scroll to the "Staff Notes" element using JavaScriptExecutor
+	        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView();", staff1);
 	        elementActions.clickElement(weblocators.stafflist1);
 	        LOGGER.info("Clicked on memberlist1 checkbox");
 	        AllureUtils.logStep("Clicked on memberlist1 checkbox");
 	    
 	        //Click on staff user check list
-	        wait.until(ExpectedConditions.visibilityOfElementLocated(weblocators.stafflist2));
+	        WebElement staff2 = wait.until(ExpectedConditions.visibilityOfElementLocated(weblocators.stafflist2));
+	        // Scroll to the "Staff Notes" element using JavaScriptExecutor
+		       ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView();", staff2);
 	        elementActions.clickElement(weblocators.stafflist2);
 	        LOGGER.info("Clicked on memberlist1 checkbox");
 	        AllureUtils.logStep("Clicked on memberlist1 checkbox");
@@ -118,7 +123,26 @@
 	        AllureUtils.captureScreenshot(driver, "Cases113_Action_Steps_Mutiplenotes4");
 	        
 	    Thread.sleep(5200);
-	    }
-	
+	    
+	 // Loop through each note in the list to delete them
+        for (int i = 0; i < notesList.size(); i++) {
+            // Click on deletenotes button
+            wait.until(ExpectedConditions.visibilityOfElementLocated(weblocators.deletenotes));
+            elementActions.clickElement(weblocators.deletenotes);
+            LOGGER.info("Clicked on deletenotes");
+            AllureUtils.logStep("Clicked on deletenotes");
+            AllureUtils.captureScreenshot(driver, "Cases113_Action_Steps_Deletenotes_" + (i + 1));
+            
+            // Click on confirm button
+            wait.until(ExpectedConditions.visibilityOfElementLocated(weblocators.confirmbttn)); 
+            elementActions.clickElement(weblocators.confirmbttn);
+            LOGGER.info("Clicked on confirmbttn");
+            AllureUtils.logStep("Clicked on confirmbttn");
+            AllureUtils.captureScreenshot(driver, "Cases113_Action_Steps_Confirmbttn_" + (i + 1));
+
+            // Optionally, you can add a small delay between deletions
+            Thread.sleep(1000); // Adjust the sleep time as needed
+        }
+    }
 	}        
 	

@@ -249,17 +249,7 @@ public class webTestdata {
 	public static final String exercisename1 = "Above Head Chest Stretch, Bodyweight";
 	public static final String exercisename2 = "Hyperextension, Bodyweight, Weighted, Bil.";
 	public static final String exercisename3 = "Row, Bodyweight, Landmine, Uni";
-	public static final String exercisename4 = "Above Head Chest Stretch, Bodyweight";
-	public static final String exercisename5 = "Above Head Chest Stretch, Bodyweight";
-	public static final String exercisename6 = "Above Head Chest Stretch, Bodyweight";
-	public static final String exercisename7 = "Above Head Chest Stretch, Bodyweight";
-	public static final String exercisename8 = "Above Head Chest Stretch, Bodyweight";
-	public static final String exercisename9 = "Above Head Chest Stretch, Bodyweight";
-	public static final String exercisename10 = "Above Head Chest Stretch, Bodyweight";
-	public static final String exercisename11 = "Above Head Chest Stretch, Bodyweight";
-	public static final String exercisename12 = "Above Head Chest Stretch, Bodyweight";
-	public static final String exercisename13 = "Above Head Chest Stretch, Bodyweight";
-	public static final String exercisename14 = "Above Head Chest Stretch, Bodyweight";
+
 	
 	public static final String description1 = "hello this is just for testing purpose";
 	
@@ -268,6 +258,13 @@ public class webTestdata {
     public static final String descriptionForPrimaryNotes = generateFitnessObjective("primary notes");
     public static final String descriptionForSecondaryObjective = generateFitnessObjective("secondary objective");
     public static final String descriptionForSecondaryNotes = generateFitnessObjective("secondary notes");
+    public static final String descriptionForInjuries = generateFitnessObjective("Injuries notes");
+    public static final String descriptionForPerfectlikes = generateFitnessObjective("Perfect likes dislike");
+    public static final String descriptionForMotionAssessmentGraph = generateFitnessObjective("Motion Assessment Graph");
+    public static final String descriptionForInablitiesGraph = generateFitnessObjective("Inablities Graph");
+    public static final String descriptionForGymEquipment = generateFitnessObjective("Gym Equipment");
+    public static final String descriptionForNewProgram = generateFitnessObjective("New program");
+    public static final String descriptionForactionnotes = generateFitnessObjective("Action steps");
 
     private static String generateFitnessObjective(String fieldType) {
         // Get a Shakespeare quote to use as part of the description
@@ -279,7 +276,8 @@ public class webTestdata {
         fitnessObjective.append("For the ").append(fieldType).append(", our goal is inspired by the words of Shakespeare: '")
                         .append(shakespeareQuote)
                         .append("'. To achieve this, we aim to integrate a balanced routine of running, strength training, and yoga. ")
-                        .append("Our focus will be on consistency and progressive overload. Track your progress, stay hydrated, and maintain a healthy diet.");
+                        .append(shakespeareQuote);
+//                        .append("Our focus will be on consistency and progressive overload. Track your progress, stay hydrated, and maintain a healthy diet.");
 
         return fitnessObjective.toString();
     }

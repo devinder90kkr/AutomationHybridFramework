@@ -57,11 +57,35 @@ public class ElementActions {
     }
 
     
-    // Enter text into a WebElement
-    public void sendKeysToElement(By locator, String text) {
+//    // Enter text into a WebElement
+//    public void sendKeysToElement(By locator, String text) {
+//        WebElement element = driver.findElement(locator);
+//        element.clear();
+//        element.sendKeys(text);
+//    }
+    
+
+ // Modified method to handle both String and String[] inputs
+    public void sendKeysToElement(By locator, Object text) {
         WebElement element = driver.findElement(locator);
         element.clear();
-        element.sendKeys(text);
+
+        if (text instanceof String) {
+            element.sendKeys((String) text);
+        } else if (text instanceof String[]) {
+            for (String t : (String[]) text) {
+                element.clear();
+                element.sendKeys(t);
+                // Optional: Add a small pause to simulate user typing
+                try {
+                    Thread.sleep(500); // 500ms pause
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+            }
+        } else {
+            throw new IllegalArgumentException("Unsupported data type. Only String and String[] are supported.");
+        }
     }
     
     // Get text from popup
@@ -145,7 +169,6 @@ public class ElementActions {
             throw new AssertionError("Expected heading: " + expectedText + " but found: " + actualText);
         }
     }
-    
     
     
 }

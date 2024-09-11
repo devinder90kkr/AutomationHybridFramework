@@ -305,6 +305,25 @@ public class Cases112_Action_Steps_editcaseImportancorPriority extends BasePage 
 		        String label2 = driver.findElement(By.xpath("(//div[contains(@class,'priority_seg active_note_step')])[1]")).getText();
 		        LOGGER.info("Text from label: " + label2);
 		        AllureUtils.logStep("Text from label: " + label2);
+		        
+		        
+		        // Click on plus icon for action steps 
+		        wait.until(ExpectedConditions.visibilityOfElementLocated(weblocators.deletenotes));
+		        elementActions.clickElement(weblocators.deletenotes);
+		        // Log message to console and Allure report
+		        LOGGER.info("Clicked on deletenotes");
+		        AllureUtils.logStep("Clicked on deletenotes");
+		        // Capture a screenshot and attach it to Allure
+		        AllureUtils.captureScreenshot(driver, "Cases110_Action_Steps3");
+		        
+		        elementActions.clickElement(weblocators.confirmbttn); 
+		     // Log message to console and Allure report
+		        LOGGER.info("Clicked on confirmbttn");
+		        AllureUtils.logStep("Clicked on confirmbttn");
+		        // Capture a screenshot and attach it to Allure
+		        AllureUtils.captureScreenshot(driver, "Cases110_Action_Steps4");
+		        
+		        
 		        Thread.sleep(2500);
     }}
 

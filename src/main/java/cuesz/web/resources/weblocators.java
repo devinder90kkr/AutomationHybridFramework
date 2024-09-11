@@ -13,6 +13,12 @@ public class weblocators {
 	public static final By primarynotes			 = (By.xpath("(//div[contains(@class,'jodit-wysiwyg')])[4]"));
 	public static final By secondaryobjective	 = (By.xpath("(//div[contains(@class,'jodit-wysiwyg')])[6]"));
 	public static final By secondarynotes		 = (By.xpath("(//div[contains(@class,'jodit-wysiwyg')])[8]")); 
+	public static final By injuries				 = (By.xpath("(//div[@class='jodit-wysiwyg'])[5]"));
+	public static final By perfectlikedislike	 = (By.xpath("(//div[@class='jodit-wysiwyg'])[6]"));
+	public static final By motiongraph			 = (By.xpath("(//div[@class='jodit-wysiwyg'])[7]"));
+	public static final By Inablities			 = (By.xpath("(//div[@class='jodit-wysiwyg'])[8]"));
+	public static final By gymequipment			 = (By.xpath("(//div[@class='jodit-wysiwyg'])[9]"));
+	public static final By newprogram			 = (By.xpath("(//div[@class='jodit-wysiwyg'])[10]")); 
 	
 	
 	
@@ -57,7 +63,7 @@ public class weblocators {
 	public static final By sharing1				 = (By.xpath("(//button[@class='black-card '])[3]"));
 	public static final By checkbox2			 = (By.xpath("(//input[contains(@type,'checkbox')])[3]"));
 	public static final By sharingbutton		 = (By.xpath("//button[normalize-space()='Share']"));
-	public static final By stafflist1			 = (By.xpath("//label[contains(text(),'Devinder kumar')]"));
+	public static final By stafflist1			 = (By.xpath("//label[contains(text(),'Jordan - Wellness Advocate')]"));
 	public static final By stafflist2			 = (By.xpath("//label[contains(text(),'Coach Seakfreight')]"));
 	public static final By sharebutton			 = (By.xpath("//button[contains(@class,'btn btn-primary btn-lg ms-3')]"));
 	public static final By shareIcon			 = By.xpath("//div[@class='d-flex align-items-center rounded bg-dark px-1 gap-2']");
@@ -70,9 +76,10 @@ public class weblocators {
 	public static final By templateplsicon		 = (By.xpath("//div[@class='btn_grey']//em"));
 	public static final By addTemplateHeading	 = (By.xpath("//h2[normalize-space()='Add Template']"));
 	public static final By templatname 			 = (By.xpath("//input[@id='autoWidth']"));
-	public static final By addnewworkout 		 = (By.xpath("//span[contains(text(),'Add New Workout')]"));
+	public static final By addnewworkout 		 = (By.xpath("(//span[contains(text(),'Add New Exercise')])[1]"));
 	public static final By exerciseconatiner 	 = (By.xpath("//div[@class='rightArticle table-container']"));
-	public static final By exerciseslection	 	 = (By.xpath("//div[@id='companyId']"));
+//	public static final By exerciseslection	 	 = (By.xpath("//div[@id='companyId']"));
+	public static final By exerciseslection	 	 = (By.xpath("//div[contains(text(),'Select an Exercise')]"));
 	public static final By exercisedescription 	 = (By.xpath("(//div[@class='jodit-wysiwyg'])[1]"));
 	
 	public static final By repsfield 		 	 = (By.xpath("(//input[@type='text'])[4]"));
@@ -90,6 +97,8 @@ public class weblocators {
 	public static final By exercisedeleteicon	 = (By.xpath("(//span[contains(@class,'btn btn_grey')])[2]"));
 	public static final By editorbold			 = (By.xpath("(//button[@role='button'])[1]"));
 	public static final By editoritalic			 = (By.xpath("(//button[@role='button'])[2]"));
+	public static final By draftoption			 = (By.xpath("(//div[@class='customDiv'])[2]"));
+	public static final By publishoption		 = (By.xpath("//button[@class='btn-primary btn-lg btn']")); 
 	
 	
 			
