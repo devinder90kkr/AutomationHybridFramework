@@ -12,6 +12,7 @@ import org.testng.annotations.Test;
 import cuesz.allure.reporting.AllureUtils;
 import cuesz.appium.date.functions.DateUtilsAppium;
 import cuesz.mobile.resources.mobileLocators;
+import cuesz.mobile.resources.mobileTestData;
 import cuesz.pages.AppiummobileBase;
 import cuesz.utils.AppiumappUtils;
 import io.appium.java_client.AppiumBy;
@@ -40,7 +41,8 @@ public class Case45_Fuel_Pastday1_brekfastactivity extends AppiummobileBase {
 		// Create an instance of AppiumUtils and pass the driver
 		AppiumappUtils appiumUtils = new AppiumappUtils(driver);
         // Launch the app using the utility method
-        appiumUtils.launchAppWithPackageId("com.cuesz.mobile");	
+//        appiumUtils.launchAppWithPackageId("com.cuesz.mobile");	
+		 appiumUtils.launchAppWithPackageId(mobileTestData.bundelID);
 		
 		WebElement Homeicon = driver.findElement(mobileLocators.Homeclick);
 		Homeicon.click();
@@ -359,7 +361,8 @@ public class Case45_Fuel_Pastday1_brekfastactivity extends AppiummobileBase {
 	                LOGGER.error("Thread interrupted during final sleep", e);
 	                Thread.currentThread().interrupt();
 	            }
-	            driver.terminateApp("com.cuesz.mobile");
+//	            driver.terminateApp("com.cuesz.mobile");
+	            driver.terminateApp(mobileTestData.bundelID);
 	        }
 	    }
 }

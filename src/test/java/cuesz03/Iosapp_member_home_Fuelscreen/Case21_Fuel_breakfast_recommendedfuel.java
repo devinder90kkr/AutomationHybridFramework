@@ -14,6 +14,7 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import cuesz.allure.reporting.AllureUtils;
+import cuesz.mobile.resources.mobileTestData;
 import cuesz.pages.AppiummobileBase;
 import cuesz.utils.AppiumappUtils;
 import io.appium.java_client.AppiumBy;
@@ -53,7 +54,8 @@ public class Case21_Fuel_breakfast_recommendedfuel extends AppiummobileBase {
     @Story("Scroll to Fuel card and verify breakfast assigned by staff ")
     public void Homescreen() throws InterruptedException {
         AppiumappUtils appiumUtils = new AppiumappUtils(driver);
-        appiumUtils.launchAppWithPackageId("com.cuesz.mobile");
+//        appiumUtils.launchAppWithPackageId("com.cuesz.mobile");
+        appiumUtils.launchAppWithPackageId(mobileTestData.bundelID);
 
         WebElement Homeicon = driver.findElement(Homeclick);
         Homeicon.click();
@@ -213,6 +215,7 @@ public class Case21_Fuel_breakfast_recommendedfuel extends AppiummobileBase {
 
 
         Thread.sleep(2500);
-        driver.terminateApp("com.cuesz.mobile");
+//        driver.terminateApp("com.cuesz.mobile");
+        driver.terminateApp(mobileTestData.bundelID);
     }
 }

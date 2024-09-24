@@ -9,6 +9,7 @@ import org.testng.annotations.Test;
 
 import cuesz.allure.reporting.AllureUtils;
 import cuesz.mobile.resources.mobileLocators;
+import cuesz.mobile.resources.mobileTestData;
 import cuesz.pages.AppiummobileBase;
 import cuesz.utils.AppiumappUtils;
 import io.appium.java_client.AppiumBy;
@@ -37,7 +38,8 @@ public class Case48_Fuel_Addandevent_Duringperformance_additionalcase extends Ap
 		// Create an instance of AppiumUtils and pass the driver
 		AppiumappUtils appiumUtils = new AppiumappUtils(driver);
         // Launch the app using the utility method
-        appiumUtils.launchAppWithPackageId("com.cuesz.mobile");	
+//        appiumUtils.launchAppWithPackageId("com.cuesz.mobile");	
+		 appiumUtils.launchAppWithPackageId(mobileTestData.bundelID);
 		
 		WebElement Homeicon = driver.findElement(mobileLocators.Homeclick);
 		Homeicon.click();
@@ -191,7 +193,9 @@ public class Case48_Fuel_Addandevent_Duringperformance_additionalcase extends Ap
         AllureUtils.captureScreenshot(driver, "addduringevent4");
         
        	Thread.sleep(2500);
-        driver.terminateApp("com.cuesz.mobile");
+//        driver.terminateApp("com.cuesz.mobile");
+        driver.terminateApp(mobileTestData.bundelID);
+        
 	}
 	// Function to check if an element is present on the screen
 			public boolean isElementPresent(AppiumDriver driver, By by){

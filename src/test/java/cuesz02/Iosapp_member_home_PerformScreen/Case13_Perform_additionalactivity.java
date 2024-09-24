@@ -47,7 +47,8 @@ public class Case13_Perform_additionalactivity extends AppiummobileBase {
 		// Create an instance of AppiumUtils and pass the driver
 		AppiumappUtils appiumUtils = new AppiumappUtils(driver);
         // Launch the app using the utility method
-        appiumUtils.launchAppWithPackageId("com.cuesz.mobile");
+//        appiumUtils.launchAppWithPackageId("com.cuesz.mobile");
+		 appiumUtils.launchAppWithPackageId(mobileTestData.bundelID);
 		
 		// CLick on home menu from bottom
 		WebElement Homeicon = driver.findElement(mobileLocators.Homeclick);
@@ -535,7 +536,8 @@ public class Case13_Perform_additionalactivity extends AppiummobileBase {
 		
 		
 		Thread.sleep(2500);
-        driver.terminateApp("com.cuesz.mobile");
+//        driver.terminateApp("com.cuesz.mobile");
+        driver.terminateApp(mobileTestData.bundelID);
 	
 	
 	

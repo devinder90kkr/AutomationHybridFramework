@@ -43,7 +43,8 @@ public class Case36_Fuel_Lunch_customfood extends AppiummobileBase {
 			// Create an instance of AppiumUtils and pass the driver
 			AppiumappUtils appiumUtils = new AppiumappUtils(driver);
 	        // Launch the app using the utility method
-	        appiumUtils.launchAppWithPackageId("com.cuesz.mobile");	
+//	        appiumUtils.launchAppWithPackageId("com.cuesz.mobile");	
+			 appiumUtils.launchAppWithPackageId(mobileTestData.bundelID);
 			
 			WebElement Homeicon = driver.findElement(mobileLocators.Homeclick);
 			Homeicon.click();
@@ -125,6 +126,7 @@ public class Case36_Fuel_Lunch_customfood extends AppiummobileBase {
 	                Thread.currentThread().interrupt();
 	            }
 	            driver.terminateApp("com.cuesz.mobile");
+	            driver.terminateApp(mobileTestData.bundelID);
 	        }
 	    }
 

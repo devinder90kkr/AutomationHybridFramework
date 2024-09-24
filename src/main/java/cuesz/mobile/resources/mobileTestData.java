@@ -2,6 +2,11 @@ package cuesz.mobile.resources;
 
 public class mobileTestData {
 	
+	//dev server
+	public static final String bundelID	= "com.cuesz.mobile";
+	//cuesz production and prestgaig build
+//	public static final String bundelID	= "com.cuesz.mobile.dev";
+	
 	/****Example for test data ****/	
 //	public static final String EVENT_DATE = "Your Event Date";
 	// 	how we invoke in method 

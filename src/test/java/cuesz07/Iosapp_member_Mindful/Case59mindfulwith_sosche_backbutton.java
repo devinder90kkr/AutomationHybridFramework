@@ -10,6 +10,7 @@ import org.testng.annotations.Test;
 
 import cuesz.allure.reporting.AllureUtils;
 import cuesz.mobile.resources.mobileLocators;
+import cuesz.mobile.resources.mobileTestData;
 import cuesz.mobile.resources.mobilelement;
 import cuesz.pages.AppiummobileBase;
 import cuesz.utils.AppiumappUtils;
@@ -39,7 +40,8 @@ public class Case59mindfulwith_sosche_backbutton extends AppiummobileBase {
 		// Create an instance of AppiumUtils and pass the driver
             AppiumappUtils appiumUtils = new AppiumappUtils(driver);
             // Launch the app using the utility method
-            appiumUtils.launchAppWithPackageId("com.cuesz.mobile");
+//            appiumUtils.launchAppWithPackageId("com.cuesz.mobile");
+            appiumUtils.launchAppWithPackageId(mobileTestData.bundelID);
 
             // Click on Home-icon
             mobilelement.clickElement(driver, mobileLocators.Homeclick);
@@ -215,6 +217,7 @@ public class Case59mindfulwith_sosche_backbutton extends AppiummobileBase {
                 LOGGER.error("Thread interrupted during final sleep", e);
                 Thread.currentThread().interrupt();
             }
-            driver.terminateApp("com.cuesz.mobile");
+//            driver.terminateApp("com.cuesz.mobile");
+            driver.terminateApp(mobileTestData.bundelID);
         }
     }}

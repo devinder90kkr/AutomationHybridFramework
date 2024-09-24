@@ -11,6 +11,7 @@ import org.slf4j.LoggerFactory;
 import org.testng.annotations.Test;
 
 import cuesz.allure.reporting.AllureUtils;
+import cuesz.mobile.resources.mobileTestData;
 import cuesz.pages.AppiummobileBase;
 import cuesz.utils.AppiumappUtils;
 import io.appium.java_client.AppiumBy;
@@ -45,7 +46,8 @@ public class Case42_Fuel_Dinner_uploadphoto extends AppiummobileBase {
 		// Create an instance of AppiumUtils and pass the driver
 		AppiumappUtils appiumUtils = new AppiumappUtils(driver);
         // Launch the app using the utility method
-        appiumUtils.launchAppWithPackageId("com.cuesz.mobile");	
+//        appiumUtils.launchAppWithPackageId("com.cuesz.mobile");	
+		 appiumUtils.launchAppWithPackageId(mobileTestData.bundelID);
 		
 		WebElement Homeicon = driver.findElement(Homeclick);
 		Homeicon.click();
@@ -152,7 +154,8 @@ public class Case42_Fuel_Dinner_uploadphoto extends AppiummobileBase {
 	                LOGGER.error("Thread interrupted during final sleep", e);
 	                Thread.currentThread().interrupt();
 	            }
-	            driver.terminateApp("com.cuesz.mobile");
+//	            driver.terminateApp("com.cuesz.mobile");
+	            driver.terminateApp(mobileTestData.bundelID);
 	        }
 	    }
 }

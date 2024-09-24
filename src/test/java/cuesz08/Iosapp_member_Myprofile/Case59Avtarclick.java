@@ -7,6 +7,7 @@ import org.testng.annotations.Test;
 
 import cuesz.allure.reporting.AllureUtils;
 import cuesz.mobile.resources.mobileLocators;
+import cuesz.mobile.resources.mobileTestData;
 import cuesz.mobile.resources.mobilelement;
 import cuesz.pages.AppiummobileBase;
 import cuesz.utils.AppiumappUtils;
@@ -36,7 +37,8 @@ public class Case59Avtarclick extends AppiummobileBase {
 		// Create an instance of AppiumUtils and pass the driver
             AppiumappUtils appiumUtils = new AppiumappUtils(driver);
             // Launch the app using the utility method
-            appiumUtils.launchAppWithPackageId("com.cuesz.mobile");
+//            appiumUtils.launchAppWithPackageId("com.cuesz.mobile");
+            appiumUtils.launchAppWithPackageId(mobileTestData.bundelID);
 
             // Click on Home-icon
             mobilelement.clickElement(driver, mobileLocators.profilclick);
@@ -183,7 +185,8 @@ public class Case59Avtarclick extends AppiummobileBase {
             
            
                 Thread.sleep(8500);
-                driver.terminateApp("com.cuesz.mobile");
+//                driver.terminateApp("com.cuesz.mobile");
+                driver.terminateApp(mobileTestData.bundelID);
             }else {
                 // Log message and handle if restorelabel is not present
                 LOGGER.warn("Profile avtar values not availble, so skipping test steps related to body scan.");

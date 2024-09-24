@@ -33,7 +33,8 @@ public class Case53_Fuel_notesbottom extends AppiummobileBase {
 		// Create an instance of AppiumUtils and pass the driver
 		AppiumappUtils appiumUtils = new AppiumappUtils(driver);
         // Launch the app using the utility method
-        appiumUtils.launchAppWithPackageId("com.cuesz.mobile");	
+//        appiumUtils.launchAppWithPackageId("com.cuesz.mobile");	
+		 appiumUtils.launchAppWithPackageId(mobileTestData.bundelID);
 				
         // Click on Home-icon
         mobilelement.clickElement(driver, mobileLocators.Homeclick);
@@ -90,7 +91,8 @@ public class Case53_Fuel_notesbottom extends AppiummobileBase {
         
         
         Thread.sleep(8500);
-        driver.terminateApp("com.cuesz.mobile");
+//        driver.terminateApp("com.cuesz.mobile");
+        driver.terminateApp(mobileTestData.bundelID);
         
 	}
 }

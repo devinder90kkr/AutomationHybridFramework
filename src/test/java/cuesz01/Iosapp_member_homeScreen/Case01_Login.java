@@ -222,6 +222,7 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 import cuesz.allure.reporting.AllureUtils;
+import cuesz.mobile.resources.mobileTestData;
 import cuesz.pages.AppiummobileBase;
 import cuesz.utils.AppiumappUtils;
 import io.appium.java_client.AppiumBy;
@@ -252,7 +253,8 @@ public class Case01_Login extends AppiummobileBase {
         // Create an instance of AppiumUtils and pass the driver
         AppiumappUtils appiumUtils = new AppiumappUtils(driver);
         // Launch the app using the utility method
-        appiumUtils.launchAppWithPackageId("com.cuesz.mobile");
+//       appiumUtils.launchAppWithPackageId("com.cuesz.mobile");
+        appiumUtils.launchAppWithPackageId(mobileTestData.bundelID);
 
         // Check if user is already logged in
         try {
@@ -373,7 +375,9 @@ public class Case01_Login extends AppiummobileBase {
             AllureUtils.captureScreenshot(driver, "Landed on home screen");
 
             Thread.sleep(3500);
-            driver.terminateApp("com.cuesz.mobile");
+//            driver.terminateApp("com.cuesz.mobile");
+
+            driver.terminateApp(mobileTestData.bundelID);
         } catch (NoSuchElementException e) {
             LOGGER.error("An element could not be located on the page using the given search parameters.", e);
             AllureUtils.logStep("An element could not be located on the page using the given search parameters: " + e.getMessage());

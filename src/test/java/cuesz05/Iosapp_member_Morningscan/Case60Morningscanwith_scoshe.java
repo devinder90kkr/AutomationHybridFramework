@@ -14,6 +14,7 @@ import org.testng.annotations.Test;
 
 import cuesz.allure.reporting.AllureUtils;
 import cuesz.mobile.resources.mobileLocators;
+import cuesz.mobile.resources.mobileTestData;
 import cuesz.mobile.resources.mobilelement;
 import cuesz.pages.AppiummobileBase;
 import cuesz.utils.AppiumappUtils;
@@ -43,7 +44,8 @@ public class Case60Morningscanwith_scoshe extends AppiummobileBase {
 		// Create an instance of AppiumUtils and pass the driver
 		AppiumappUtils appiumUtils = new AppiumappUtils(driver);
         // Launch the app using the utility method
-        appiumUtils.launchAppWithPackageId("com.cuesz.mobile");	
+//        appiumUtils.launchAppWithPackageId("com.cuesz.mobile");	
+		 appiumUtils.launchAppWithPackageId(mobileTestData.bundelID);
 				
         // Click on Home-icon
         mobilelement.clickElement(driver, mobileLocators.Morningscanclick);
@@ -332,7 +334,8 @@ public class Case60Morningscanwith_scoshe extends AppiummobileBase {
             AllureUtils.logStep("An error occurred: " + e.getMessage());
         } finally {
             // Terminate the app whether the test passed or failed
-            driver.terminateApp("com.cuesz.mobile");
+//            driver.terminateApp("com.cuesz.mobile");
+        	driver.terminateApp(mobileTestData.bundelID);
         }
     }
 }

@@ -2,6 +2,7 @@ package cuesz.utils;
 import io.appium.java_client.AppiumDriver;
 import java.util.HashMap;
 import java.util.Map;
+import cuesz.mobile.resources.mobileTestData;
 
 public class AppiumappUtils {
     private AppiumDriver driver;
@@ -18,7 +19,8 @@ public class AppiumappUtils {
         
         Map<String,String> params =new  HashMap<String,String>();
         //package name =	"package_name": "com.cuesz.mobile"
-		params.put("bundleId", "com.cuesz.mobile");
+//		params.put("bundleId", "com.cuesz.mobile");
+        params.put("bundleId", mobileTestData.bundelID);
 		driver.executeScript("mobile:launchApp", params);
     }
 }

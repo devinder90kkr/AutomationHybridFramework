@@ -8,6 +8,7 @@ import org.testng.annotations.Test;
 
 import cuesz.allure.reporting.AllureUtils;
 import cuesz.mobile.resources.mobileLocators;
+import cuesz.mobile.resources.mobileTestData;
 import cuesz.mobile.resources.mobilelement;
 import cuesz.pages.AppiummobileBase;
 import cuesz.utils.AppiumappUtils;
@@ -44,6 +45,7 @@ public class Case15_Perform_movetocurrent extends AppiummobileBase {
 		AppiumappUtils appiumUtils = new AppiumappUtils(driver);
         // Launch the app using the utility method
         appiumUtils.launchAppWithPackageId("com.cuesz.mobile");
+        appiumUtils.launchAppWithPackageId(mobileTestData.bundelID);
 		
 		// CLick on home menu from bottom
 		WebElement Homeicon = driver.findElement(mobileLocators.Homeclick);
@@ -131,7 +133,8 @@ public class Case15_Perform_movetocurrent extends AppiummobileBase {
         AllureUtils.captureScreenshot(driver, "movetocurrent5");
 		
 		Thread.sleep(3500);
-        driver.terminateApp("com.cuesz.mobile");
+//        driver.terminateApp("com.cuesz.mobile");
+		 driver.terminateApp(mobileTestData.bundelID);
 	
 	
 	

@@ -44,7 +44,8 @@ public class Case20_Fuel_optimalfuel extends AppiummobileBase {
 		// Create an instance of AppiumUtils and pass the driver
 		AppiumappUtils appiumUtils = new AppiumappUtils(driver);
         // Launch the app using the utility method
-        appiumUtils.launchAppWithPackageId("com.cuesz.mobile");	
+//        appiumUtils.launchAppWithPackageId("com.cuesz.mobile");	
+		 appiumUtils.launchAppWithPackageId(mobileTestData.bundelID);
 		
         
         // Home button click
@@ -564,7 +565,8 @@ public class Case20_Fuel_optimalfuel extends AppiummobileBase {
             LOGGER.error("Exception occurred: " + e.getMessage());
         } finally {
             // Always terminate the app after test execution
-            driver.terminateApp("com.cuesz.mobile");
+//            driver.terminateApp("com.cuesz.mobile");
+        	 driver.terminateApp(mobileTestData.bundelID);
         }
     }
 }
