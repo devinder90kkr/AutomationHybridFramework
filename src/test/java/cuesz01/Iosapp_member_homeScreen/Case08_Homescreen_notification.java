@@ -1,6 +1,7 @@
 package cuesz01.Iosapp_member_homeScreen;
 
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.PointerInput;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.testng.annotations.Test;
@@ -11,9 +12,10 @@ import cuesz.mobile.resources.mobileTestData;
 import cuesz.pages.AppiummobileBase;
 import cuesz.utils.AppiumappUtils;
 import io.appium.java_client.AppiumBy;
-import io.appium.java_client.TouchAction;
-import io.appium.java_client.touch.LongPressOptions;
-import io.appium.java_client.touch.offset.ElementOption;
+import org.openqa.selenium.interactions.Sequence;
+import org.openqa.selenium.remote.RemoteWebElement;
+
+import java.time.Duration;
 import io.qameta.allure.Description;
 import io.qameta.allure.Epic;
 import io.qameta.allure.Feature;
@@ -21,6 +23,9 @@ import io.qameta.allure.Owner;
 import io.qameta.allure.Severity;
 import io.qameta.allure.SeverityLevel;
 import io.qameta.allure.Story;
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.Map;
 
 @Epic ("Home screen detail for notification")
 @Feature ("Verify spheres separtors detail for Perform, Fuel, Mindful & Restore.")
@@ -66,22 +71,34 @@ try {
         LOGGER.info("Clicked on Notification icon on top right corner");
         AllureUtils.logStep("Clicked on notification icon");
 		
-		// Perform the pull-down action
-        WebElement element = driver.findElement(AppiumBy.xpath("(//XCUIElementTypeOther[@name=\"ShowAllNotification\"])[1]"));        int startX = element.getLocation().getX() + element.getSize().getWidth() / 2;
-        int startY = element.getLocation().getY() + element.getSize().getHeight() / 2;
-        int endY = startY + 200; // Adjust the endY coordinate according to the swipe length
+//		// Perform the pull-down action
+//        WebElement element = driver.findElement(AppiumBy.xpath("(//XCUIElementTypeOther[@name=\"ShowAllNotification\"])[1]"));       
+//        int startX = element.getLocation().getX() + element.getSize().getWidth() / 2;
+//        int startY = element.getLocation().getY() + element.getSize().getHeight() / 2;
+//        int endY = startY + 200; // Adjust the endY coordinate according to the swipe length
+//
+//        new TouchAction<>(driver)
+//                .longPress(LongPressOptions.longPressOptions().withElement(ElementOption.element(element)))
+//                .moveTo(ElementOption.point(startX, endY))
+//                .release()
+//                .perform();
+//
+//		
+//		Thread.sleep(2500);
+//	    // Capture a screenshot and attach it to Allure
+//	    AllureUtils.captureScreenshot(driver, "Case07_Homescreen_scroller");
+     // Find the element to interact with
+     // Locate the element you want to scroll on
+        WebElement element = driver.findElement(AppiumBy.xpath("(//XCUIElementTypeOther[@name=\"ShowAllNotification\"])[1]"));
 
-        new TouchAction<>(driver)
-                .longPress(LongPressOptions.longPressOptions().withElement(ElementOption.element(element)))
-                .moveTo(ElementOption.point(startX, endY))
-                .release()
-                .perform();
+        // Use the mobile gesture to scroll down
+        Map<String, Object> args = new HashMap<>();
+        args.put("direction", "down");
+        args.put("element", ((RemoteWebElement) element).getId()); // cast WebElement to RemoteWebElement to get element ID
+        driver.executeScript("mobile:scroll", args);
 
-		
-		Thread.sleep(2500);
-	    // Capture a screenshot and attach it to Allure
-	    AllureUtils.captureScreenshot(driver, "Case07_Homescreen_scroller");
-	
+        // Capture screenshot after the scroll
+        AllureUtils.captureScreenshot(driver, "Case07_Homescreen_scroller");
 } catch (Exception e) {
     LOGGER.error("An error occurred during the mindful screen test", e);
     AllureUtils.logStep("An error occurred: " + e.getMessage());

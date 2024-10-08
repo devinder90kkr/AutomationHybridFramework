@@ -42,17 +42,8 @@ public class AppiummobileBase {
       options.setAutomationName("XCUITest");
       options.setUdid("00008110-00142D610A79801E");
       options.setWdaLaunchTimeout(Duration.ofSeconds(30));
+      options.setCapability("newCommandTimeout", 300);
 		
-		
-//		   //  for real device
-//	      options.setPlatformName("iOS");
-//	      options.setDeviceName("iPhone6s");
-//	      options.setPlatformVersion("15.8.2");
-//	      options.setAutomationName("XCUITest");
-//	      options.setUdid("1bb4ffd260df80b3fe006051d0400477af936161");
-//	      options.setWdaLaunchTimeout(Duration.ofSeconds(30));
-		
-
 		//Appium- webdriver Agent ---->IOS Apps.
 		options.setWdaLaunchTimeout(Duration.ofSeconds(30));
 					

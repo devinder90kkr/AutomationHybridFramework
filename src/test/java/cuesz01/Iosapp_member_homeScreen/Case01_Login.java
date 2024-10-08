@@ -313,16 +313,18 @@ public class Case01_Login extends AppiummobileBase {
             AllureUtils.logStep("Click on phone number field");
 
             Thread.sleep(5000);
-            driver.findElement(AppiumBy.xpath("//XCUIElementTypeKey[@name=\"7\"]")).click();
-            driver.findElement(AppiumBy.xpath("//XCUIElementTypeKey[@name=\"9\"]")).click();
-            driver.findElement(AppiumBy.xpath("//XCUIElementTypeKey[@name=\"8\"]")).click();
-            driver.findElement(AppiumBy.xpath("//XCUIElementTypeKey[@name=\"8\"]")).click();
-            driver.findElement(AppiumBy.xpath("//XCUIElementTypeKey[@name=\"5\"]")).click();
-            driver.findElement(AppiumBy.xpath("//XCUIElementTypeKey[@name=\"5\"]")).click();
-            driver.findElement(AppiumBy.xpath("//XCUIElementTypeKey[@name=\"0\"]")).click();
-            driver.findElement(AppiumBy.xpath("//XCUIElementTypeKey[@name=\"1\"]")).click();
-            driver.findElement(AppiumBy.xpath("//XCUIElementTypeKey[@name=\"3\"]")).click();
-            driver.findElement(AppiumBy.xpath("//XCUIElementTypeKey[@name=\"0\"]")).click();
+//            driver.findElement(AppiumBy.xpath("//XCUIElementTypeKey[@name=\"7\"]")).click();
+//            driver.findElement(AppiumBy.xpath("//XCUIElementTypeKey[@name=\"9\"]")).click();
+//            driver.findElement(AppiumBy.xpath("//XCUIElementTypeKey[@name=\"8\"]")).click();
+//            driver.findElement(AppiumBy.xpath("//XCUIElementTypeKey[@name=\"8\"]")).click();
+//            driver.findElement(AppiumBy.xpath("//XCUIElementTypeKey[@name=\"5\"]")).click();
+//            driver.findElement(AppiumBy.xpath("//XCUIElementTypeKey[@name=\"5\"]")).click();
+//            driver.findElement(AppiumBy.xpath("//XCUIElementTypeKey[@name=\"0\"]")).click();
+//            driver.findElement(AppiumBy.xpath("//XCUIElementTypeKey[@name=\"1\"]")).click();
+//            driver.findElement(AppiumBy.xpath("//XCUIElementTypeKey[@name=\"3\"]")).click();
+//            driver.findElement(AppiumBy.xpath("//XCUIElementTypeKey[@name=\"0\"]")).click();
+            
+            driver.findElement(AppiumBy.accessibilityId("SignInTextInput")).sendKeys("7988550130");
 
             LOGGER.info("Member phone number input in app");
             AllureUtils.logStep("Phone number input in phone number field");

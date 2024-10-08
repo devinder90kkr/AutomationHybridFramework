@@ -17,7 +17,6 @@ import cuesz.mobile.resources.mobileLocators;
 import cuesz.mobile.resources.mobileTestData;
 import cuesz.pages.AppiummobileBase;
 import cuesz.utils.AppiumappUtils;
-import cuesz02.Iosapp_member_home_PerformScreen.Case19_Perform_nextweekactivitywithLP;
 import io.appium.java_client.AppiumBy;
 import io.qameta.allure.Description;
 import io.qameta.allure.Epic;
