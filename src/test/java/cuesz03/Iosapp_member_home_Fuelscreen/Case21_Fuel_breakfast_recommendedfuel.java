@@ -3,17 +3,15 @@ package cuesz03.Iosapp_member_home_Fuelscreen;
 import java.util.HashMap;
 import java.util.List;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.remote.RemoteWebElement;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.openqa.selenium.NoSuchElementException;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import cuesz.allure.reporting.AllureUtils;
+import cuesz.mobile.resources.mobileLocators;
 import cuesz.mobile.resources.mobileTestData;
 import cuesz.pages.AppiummobileBase;
 import cuesz.utils.AppiumappUtils;
@@ -32,21 +30,6 @@ import io.qameta.allure.Story;
 public class Case21_Fuel_breakfast_recommendedfuel extends AppiummobileBase {
 	private static final Logger LOGGER = LoggerFactory.getLogger(Case21_Fuel_breakfast_recommendedfuel.class);
 
-    private By Homeclick = AppiumBy.iOSClassChain("**/XCUIElementTypeOther[`label == \"Home\"`][2]");
-    private By breakfastlabel = AppiumBy.iOSNsPredicateString("name == 'Breakfast'");
-    private By iconbreakfast = AppiumBy.accessibilityId("BreakfastInfoIcon");
-    private By backicon = AppiumBy.accessibilityId("BackPress");
-    private By plusadd = AppiumBy.accessibilityId("BreakfastAddIcon");
-    private By doneclick = AppiumBy.accessibilityId("Done");
-    private By recommendedclick = AppiumBy.accessibilityId("AddRecommendedFuel");
-    private By backicon1 = AppiumBy.accessibilityId("RecommendBackPress");
-    private By rightarrow = AppiumBy.accessibilityId("FuelCaloriesArrowRight");
-    private By Time = AppiumBy.accessibilityId("RecommendedFuelTime");
-    private By pickerelement = AppiumBy.xpath("//XCUIElementTypePickerWheel");
-    private By Doneclick = AppiumBy.accessibilityId("AlcohalTime");
-    private By tickbreakfast = AppiumBy.accessibilityId("RecommendedFuelSubmit");
-    private By brekdone = AppiumBy.accessibilityId("Done");
-
     @Test
     @Owner("QA")
     @Severity(SeverityLevel.NORMAL)
@@ -57,7 +40,7 @@ public class Case21_Fuel_breakfast_recommendedfuel extends AppiummobileBase {
 //        appiumUtils.launchAppWithPackageId("com.cuesz.mobile");
         appiumUtils.launchAppWithPackageId(mobileTestData.bundelID);
 
-        WebElement Homeicon = driver.findElement(Homeclick);
+        WebElement Homeicon = driver.findElement(mobileLocators.Homeclick);
         Homeicon.click();
         LOGGER.info("Click on home menu from bottom");
         AllureUtils.logStep("Click on home menu from bottom");
@@ -81,7 +64,7 @@ public class Case21_Fuel_breakfast_recommendedfuel extends AppiummobileBase {
         AllureUtils.logStep("Click on fuel screenc");
         AllureUtils.captureScreenshot(driver, "Case21_Fuel_breakfast_recommendedfuel2");
 
-        WebElement breakfast = driver.findElement(breakfastlabel);
+        WebElement breakfast = driver.findElement(mobileLocators.breakfastlabel);
         String actualText = breakfast.getText();
         String expectedText = "Breakfast";
 
@@ -89,16 +72,16 @@ public class Case21_Fuel_breakfast_recommendedfuel extends AppiummobileBase {
         System.out.println("Expected Text: " + expectedText);
         Assert.assertEquals(actualText, expectedText);
 
-        WebElement breakfasticon = driver.findElement(iconbreakfast);
+        WebElement breakfasticon = driver.findElement(mobileLocators.iconbreakfast);
         breakfasticon.click();
-        WebElement backclick = driver.findElement(backicon);
+        WebElement backclick = driver.findElement(mobileLocators.backicon);
         backclick.click();
         LOGGER.info("Click on backicon");
         AllureUtils.logStep("Click on backicon");
         Thread.sleep(2500);
         AllureUtils.captureScreenshot(driver, "Case21_backicon");
 
-        WebElement breakfastplus = driver.findElement(plusadd);
+        WebElement breakfastplus = driver.findElement(mobileLocators.plusadd);
         breakfastplus.click();
         // Log console message to Allure
         LOGGER.info("Click on fuel plus icon");
@@ -107,14 +90,14 @@ public class Case21_Fuel_breakfast_recommendedfuel extends AppiummobileBase {
         AllureUtils.captureScreenshot(driver, "Case21_Fuel_breakfast_recommendedfuel3");
         
         
-        WebElement keypaddone = driver.findElement(doneclick);
+        WebElement keypaddone = driver.findElement(mobileLocators.doneclick);
         keypaddone.click();
         // Log console message to Allure
         LOGGER.info("Click on Done");
         AllureUtils.logStep("Click on done");
        
 
-        WebElement Recommendedfuel = driver.findElement(recommendedclick);
+        WebElement Recommendedfuel = driver.findElement(mobileLocators.recommendedclick);
         Recommendedfuel.click();
         // Log console message to Allure
         LOGGER.info("Click on Recommended fuel");
@@ -123,20 +106,20 @@ public class Case21_Fuel_breakfast_recommendedfuel extends AppiummobileBase {
         AllureUtils.captureScreenshot(driver, "Case21_Fuel_breakfast_recommendedfuel4");
         
         
-        WebElement recommendebackclick = driver.findElement(backicon1);
+        WebElement recommendebackclick = driver.findElement(mobileLocators.backicon1);
         recommendebackclick.click();
         // Log console message to Allure
         LOGGER.info("Click on Recommended back button");
         AllureUtils.logStep("Click on Recommended back button");       
 
-        WebElement keypaddone1 = driver.findElement(doneclick);
+        WebElement keypaddone1 = driver.findElement(mobileLocators.doneclick);
         keypaddone1.click();
         // Log console message to Allure
         LOGGER.info("Click on Done ");
         AllureUtils.logStep("Click on done");       
 
         
-        WebElement Recommendedfuel1 = driver.findElement(recommendedclick);
+        WebElement Recommendedfuel1 = driver.findElement(mobileLocators.recommendedclick);
         Recommendedfuel1.click();
         LOGGER.info("Click on Recommended fuel again ");
         AllureUtils.logStep("Click on Recommended fuel again");
@@ -146,19 +129,19 @@ public class Case21_Fuel_breakfast_recommendedfuel extends AppiummobileBase {
 
         try {
             // Try to locate and click on the arrowright element
-            WebElement arrowright = driver.findElement(rightarrow);
+            WebElement arrowright = driver.findElement(mobileLocators.rightarrow);
             arrowright.click();
            
             LOGGER.info("Click on arrowright ");
             AllureUtils.logStep("Click on arrowright");     
             
             // If the arrowright element is clicked successfully, continue with the rest of the steps
-            WebElement Timerclick = driver.findElement(Time);
+            WebElement Timerclick = driver.findElement(mobileLocators.Time);
             Timerclick.click();
             LOGGER.info("Click on Timerclick ");
             AllureUtils.logStep("Click on Timerclick");    
             
-            List<WebElement> values = driver.findElements(pickerelement);
+            List<WebElement> values = driver.findElements(mobileLocators.pickerelement);
             
             for (int i = 0; i < values.size(); i++) {
                 System.out.println(values.get(i).getText());
@@ -181,12 +164,12 @@ public class Case21_Fuel_breakfast_recommendedfuel extends AppiummobileBase {
             // Capture a screenshot and attach it to Allure
             AllureUtils.captureScreenshot(driver, "Fuel13");
             
-            driver.findElement(Doneclick).click();
+            driver.findElement(mobileLocators.Doneclick).click();
             LOGGER.info("Click on Doneclick ");
             AllureUtils.logStep("Click on Doneclick");    
             
             // Click on breakfast-tick
-            WebElement breakfasttick = driver.findElement(tickbreakfast);
+            WebElement breakfasttick = driver.findElement(mobileLocators.tickbreakfast);
             breakfasttick.click();
             LOGGER.info("click on Tick");
             AllureUtils.logStep("click on tick");    
@@ -196,7 +179,7 @@ public class Case21_Fuel_breakfast_recommendedfuel extends AppiummobileBase {
             
 
             // Click on Done-breakfast button
-            WebElement brekfastdone = driver.findElement(brekdone);
+            WebElement brekfastdone = driver.findElement(mobileLocators.brekdone);
             brekfastdone.click();  
          // Log console message to Allure
             LOGGER.info("Click on Done ");

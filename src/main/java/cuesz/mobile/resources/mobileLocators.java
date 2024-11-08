@@ -4,7 +4,28 @@ import org.openqa.selenium.By;
 import io.appium.java_client.AppiumBy;
 
 public class mobileLocators {
-		
+	
+	
+	public static final By uploadbreakfastimage		=		AppiumBy.accessibilityId("BreakfastUploadIcon");
+//	public static final By gallery					=		AppiumBy.accessibilityId("GalleryClicked");
+	public static final By galerycollection	=	AppiumBy.accessibilityId("Collections");	
+	public static final By albumselection	=	AppiumBy.iOSClassChain("**/XCUIElementTypeStaticText[`name == \"Skype\"`][1]");
+	public static final By imagselection1	=	AppiumBy.iOSClassChain("**/XCUIElementTypeImage[`name == \"PXGGridLayout-Info\"`][2]");
+	
+	public static final By breakfastlabel = AppiumBy.iOSNsPredicateString("name == 'Breakfast'");
+	public static final By iconbreakfast = AppiumBy.accessibilityId("BreakfastInfoIcon");
+	public static final By backicon = AppiumBy.accessibilityId("BackPress");
+	public static final By backicon1 = AppiumBy.accessibilityId("RecommendBackPress");
+	public static final By tickbreakfast = AppiumBy.accessibilityId("RecommendedFuelSubmit");
+	public static final By editbeetroot		= 		AppiumBy.accessibilityId("Beetroot");
+	public static final By editclick1		= 		AppiumBy.accessibilityId("BeetrootPlus");
+	public static final By earlyclick		= 		AppiumBy.xpath("(//XCUIElementTypeOther[@name=\"Early Snacks\"])[2]");
+	public static final By breakfastclick	=		AppiumBy.xpath("(//XCUIElementTypeOther[@name=\"Breakfast\"])[2]");
+	public static final By noteclick		= 		AppiumBy.accessibilityId("Notes");
+	public static final By submittick		= 		AppiumBy.accessibilityId("Submit");
+	public static final By meatfuel			= 		AppiumBy.accessibilityId("Meat");
+	public static final By editbreakfastime	= 		AppiumBy.accessibilityId("BreakfastTimeEdit");
+	
 	//Tutrial screen locators
 	public static final By tutorialbttn	 	=	AppiumBy.accessibilityId("Tutorial");
 	public static final By motionsession 	=	AppiumBy.iOSClassChain("**/XCUIElementTypeOther[`name == \"Motion Explore Session\"`][2]");
@@ -361,7 +382,8 @@ public class mobileLocators {
 	public static final By recommendedclick	= 		AppiumBy.accessibilityId("AddRecommendedFuel");
 	public static final By headingpre		=		AppiumBy.accessibilityId("Pre");
 	public static final By tickaction		= 		AppiumBy.accessibilityId("RecommendedFuelSubmit");
-	public static final By Time				= 		AppiumBy.accessibilityId("RecommendedFuelTime");
+//	public static final By Time				= 		AppiumBy.accessibilityId("RecommendedFuelTime");
+	public static final By Time				= 		AppiumBy.accessibilityId("AdditionalItemTime");
 	public static final By pickerelement	= 		AppiumBy.xpath("//XCUIElementTypePickerWheel");
 	public static final By Doneclick		= 		AppiumBy.accessibilityId("AlcohalTime");
 	public static final By brekdone			= 		AppiumBy.accessibilityId("Done");
@@ -384,8 +406,11 @@ public class mobileLocators {
 	public static final By fagoticon		= 		AppiumBy.accessibilityId("FaggotFuelItemInfo");
 	public static final By backtap			= 		AppiumBy.accessibilityId("BackPress");
 	public static final By fagotplus		= 		AppiumBy.accessibilityId("FaggotPlus");
-	public static final By submitick		= 		AppiumBy.accessibilityId("ItemSubmit");	
-
+//	public static final By submitick		= 		AppiumBy.accessibilityId("ItemSubmit");	
+	public static final By submitick		= 		AppiumBy.iOSClassChain("**/XCUIElementTypeOther[`name == \"Breakfast\"`][1]/XCUIElementTypeOther[3]");
+	public static final By categoryselection=		AppiumBy.iOSClassChain("**/XCUIElementTypeOther[`name == \"Breakfast\"`][3]");
+	public static final By breakfastoption  =		AppiumBy.iOSNsPredicateString("name == \"ItemPressed\" AND label == \"Breakfast\"");
+	
 	public static final By postplusicon		=		AppiumBy.accessibilityId("Post PerformancePlueIcon");
 	public static final By SanXian			= 		AppiumBy.iOSNsPredicateString("name == \"Di San Xian\"");
 	public static final By fernfuel			= 		AppiumBy.accessibilityId("Fern");

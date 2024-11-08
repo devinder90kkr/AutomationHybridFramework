@@ -12,6 +12,7 @@ import org.slf4j.LoggerFactory;
 import org.testng.annotations.Test;
 
 import cuesz.allure.reporting.AllureUtils;
+import cuesz.mobile.resources.mobileLocators;
 import cuesz.mobile.resources.mobileTestData;
 import cuesz.pages.AppiummobileBase;
 import cuesz.utils.AppiumappUtils;
@@ -29,13 +30,12 @@ import io.qameta.allure.Story;
 @Feature ("Verify Upload detail functionlaity for breakfast.")
 public class Case25_Fuel_breakfast_uploadphotogallery extends AppiummobileBase {
 	private static final Logger LOGGER = LoggerFactory.getLogger(Case25_Fuel_breakfast_uploadphotogallery.class);
-	private By Homeclick 				= 		AppiumBy.iOSClassChain("**/XCUIElementTypeOther[`label == \"Home\"`][2]");
-	private By uploadbreakfastimage		=		AppiumBy.accessibilityId("BreakfastUploadIcon");
-	private By gallery					=		AppiumBy.accessibilityId("GalleryClicked");
-	private By Time						= 		AppiumBy.accessibilityId("SelectTime");
-	private By pickerelement			= 		AppiumBy.xpath("//XCUIElementTypePickerWheel");
-	private By Doneclick				= 		AppiumBy.accessibilityId("AlcohalTime");
-	private By submittap				= 		AppiumBy.accessibilityId("SubmitImage");
+	
+	
+//	private By Time						= 		AppiumBy.accessibilityId("SelectTime");
+//	private By pickerelement			= 		AppiumBy.xpath("//XCUIElementTypePickerWheel");
+//	private By Doneclick				= 		AppiumBy.accessibilityId("AlcohalTime");
+//	private By submittap				= 		AppiumBy.accessibilityId("SubmitImage");
 	
 
 	@Test
@@ -51,7 +51,7 @@ public class Case25_Fuel_breakfast_uploadphotogallery extends AppiummobileBase {
 //        appiumUtils.launchAppWithPackageId("com.cuesz.mobile");	
 		 appiumUtils.launchAppWithPackageId(mobileTestData.bundelID);
 		
-		WebElement Homeicon = driver.findElement(Homeclick);
+		WebElement Homeicon = driver.findElement(mobileLocators.Homeclick);
 		Homeicon.click();
 		// Log console message to Allure
 		LOGGER.info("Click on home menu from bottom");
@@ -74,91 +74,103 @@ public class Case25_Fuel_breakfast_uploadphotogallery extends AppiummobileBase {
         AllureUtils.logStep("Click on fuel screenc");
         AllureUtils.captureScreenshot(driver, "Case21_Fuel_breakfast_recommendedfuel2");
         
-        WebElement uploadicon	= driver.findElement(uploadbreakfastimage);
+        WebElement uploadicon	= driver.findElement(mobileLocators.uploadbreakfastimage);
         uploadicon.click();
         // Log console message to Allure
         LOGGER.info("Click on uploadicon");
         AllureUtils.logStep("Click on uploadicon");
         AllureUtils.captureScreenshot(driver, "uploadicon1");
         
-        WebElement galleryclick	= driver.findElement(gallery);
+        WebElement galleryclick	= driver.findElement(mobileLocators.gallery);
         galleryclick.click();
         // Log console message to Allure
         LOGGER.info("Click on galleryclick");
         AllureUtils.logStep("Click on galleryclick");
         AllureUtils.captureScreenshot(driver, "uploadicon2");
         
-        WebElement firstPhoto = driver.findElement(AppiumBy.xpath("//XCUIElementTypeImage[2]"));
-        firstPhoto.click();
-        // Log console message to Allure
-        LOGGER.info("Click on firstPhoto");
-        AllureUtils.logStep("Click on firstPhoto");
-        AllureUtils.captureScreenshot(driver, "uploadicon3");
         
-        WebElement addclick = driver.findElement(AppiumBy.accessibilityId("Add"));
-        addclick.click();
+        WebElement galleryclickcollection	= driver.findElement(mobileLocators.galerycollection);
+        galleryclickcollection.click();
         // Log console message to Allure
-        LOGGER.info("Click on addclick");
-        AllureUtils.logStep("Click on addclick");
-        AllureUtils.captureScreenshot(driver, "uploadicon4");
+        LOGGER.info("Click on galleryclickcollection");
+        AllureUtils.logStep("Click on galleryclickcollection");
+        AllureUtils.captureScreenshot(driver, "uploadicon28");
         
+        
+        WebElement albumselection	= driver.findElement(mobileLocators.albumselection);
+        albumselection.click();
+        // Log console message to Allure
+        LOGGER.info("Click on albumselection");
+        AllureUtils.logStep("Click on albumselection");
+        AllureUtils.captureScreenshot(driver, "uploadicon25");
+        
+        WebElement firstPhoto = driver.findElement(mobileLocators.imagselection1);
+		firstPhoto.click();
+		// Log console message to Allure
+		LOGGER.info("Click on firstPhoto");
+		AllureUtils.logStep("Click on firstPhoto");
+		AllureUtils.captureScreenshot(driver, "uploadicon3");
+		
+		
+		// Wait for the mindful session to complete (timer to reach 00:00)
+        for (int i = 0; i < 50; i++) { // Adjust the maximum wait time as needed
+            Thread.sleep(1000);
+            try {
+                WebElement timerElement = driver.findElement(mobileLocators.categoryselection);
+                if (timerElement != null) {
+                    break;
+                }
+            } catch (NoSuchElementException e) {
+                // If the element is not found, continue waiting
+                System.out.println("Waiting for mindful session to complete: " + (i + 1) + " seconds");
+            }
+        }
+        
+        
+        //selection of category list 
         // Click on timer 
-        WebElement Timerclick 	= driver.findElement(Time);
-        Timerclick.click();
-        // Log console message to Allure
-        LOGGER.info("Click on Timerclick");
-        AllureUtils.logStep("Click on Timerclick");
-        AllureUtils.captureScreenshot(driver, "uploadicon5");
+        WebElement categoryselection = driver.findElement(mobileLocators.categoryselection);
+        categoryselection.click();
         
-        List<WebElement>values = driver.findElements(pickerelement);
-
-		for (int i=0; i<values.size();i++)
-		{		
-		System.out.println(values.get(i).getText());
-		}
-		
-		values.get(0).sendKeys("8");
-		values.get(0).sendKeys(Keys.TAB);
-
-		Thread.sleep(3500);
-		values.get(1).sendKeys("13");
-		values.get(1).sendKeys(Keys.TAB);
-		
-		Thread.sleep(3500);
-		values.get(2).sendKeys("AM");
-		// Log console message to Allure
-		LOGGER.info("enter time ");
-        AllureUtils.logStep("Enter time");    
-        // Capture a screenshot and attach it to Allure
-        AllureUtils.captureScreenshot(driver, "uploadicon6");
-
-		driver.findElement(Doneclick).click();
-		// Log console message to Allure
-		LOGGER.info("Click on Doneclick ");
-        AllureUtils.logStep("Click on Doneclick");  
         
-		WebElement Submittap = driver.findElement(submittap);
-		Submittap.click();
-		// Log console message to Allure
-		LOGGER.info("click on Submittap");
-        AllureUtils.logStep("click on Submittap");    
-        // Capture a screenshot and attach it to Allure
-        AllureUtils.captureScreenshot(driver, "uploadicon7");
-         
-		Thread.sleep(4500);
-		
+        WebElement breakfastcategoryselection = driver.findElement(mobileLocators.breakfastoption);
+        breakfastcategoryselection.click();
+        
+        
+        Thread.sleep(2500);
+        WebElement submit1 = driver.findElement(mobileLocators.submitick);
+		submit1.click();
+		  // Log console message to Allure
+		LOGGER.info("Click on submit");
+        AllureUtils.logStep("Click on submit");
+        AllureUtils.captureScreenshot(driver, "submit");
+        
+        
+     // Wait for the mindful session to complete (timer to reach 00:00)
+        for (int i = 0; i < 50; i++) { // Adjust the maximum wait time as needed
+            Thread.sleep(1000);
+            try {
+                WebElement timerElement = driver.findElement(mobileLocators.gallery);
+                if (timerElement != null) {
+                    break;
+                }
+            } catch (NoSuchElementException e) {
+                // If the element is not found, continue waiting
+                System.out.println("Waiting for mindful session to complete: " + (i + 1) + " seconds");
+            }
+        }
+        
+     // Scroll to the element using iOS class chain
+        HashMap<String, Object> scrollObject1 = new HashMap<>();
+        scrollObject1.put("direction", "down");
+        scrollObject1.put("uploaded Images", "uploaded Images");
+        driver.executeScript("mobile:scroll", scrollObject1);
 
-	  //scroll to image upload
-  		By imageuplaodedLocator = AppiumBy.xpath("//XCUIElementTypeStaticText[@name=\"Image uploaded\"]");
-  	        if(!isElementPresent(driver, imageuplaodedLocator)){
-  	            // Scroll to "Basketball" if it's not present
-  	            HashMap<String,Object> scrollObject1 = new HashMap<>();
-  	            scrollObject1.put("direction", "down");
-  	            scrollObject1.put("Image uploaded", "Image uploaded");
-  	            driver.executeScript("mobile:scroll", scrollObject1);
-  	            Thread.sleep(2000);
-  	        }
-	      
+        // Log scroll event to Allure
+        LOGGER.info("Scrolled to the 'uploaded Images' section");
+        AllureUtils.logStep("Scrolled to the 'uploaded Images' section");
+        AllureUtils.captureScreenshot(driver, "uploadedImagesScroll");
+        
 
 		 } catch (Exception e) {
 	            LOGGER.error("An error occurred during the breakfast screen test", e);

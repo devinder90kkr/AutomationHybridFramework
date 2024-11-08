@@ -346,8 +346,8 @@ Here's a step-by-step guide on setting up TestNG with a project:
 
 
 
-Desired capabilities for appium : 
- ```
+**Desired capabilities for appium : 
+   ```
 {
   "platformName": "iOS",
   "appium:platformVersion": "16.6.1",
@@ -358,7 +358,22 @@ Desired capabilities for appium :
   "appium:xcodeSigningId": "iPhone Developer",
   "appium:udid": "00008101-000A58221104001E"
 }
- ```
+  ```
+**IN CASE APPIUM THROUGH ERROR THAN WE NEED TO USE BELOW DESIRED CAPABILITIES 
+  ```
+{
+  "platformName": "iOS",
+  "appium:platformVersion": "18.0.1",
+  "appium:automationName": "XCUITest",
+  "appium:deviceName": "Quality",
+  "appium:bundleId": "com.cuesz.mobile",
+  "appium:xcodeOrgId": "U9B8L2V4FL",
+  "appium:xcodeSigningId": "iPhone Developer",
+  "appium:udid": "00008140-000C158A0E13001C",
+  "appium:waitForQuiescence": "false",
+  "appium:useJSONSource": "true"
+} 
+   ```
 
 Command run for jenkins on mac
 

@@ -37,10 +37,10 @@ public class AppiummobileBase {
 		
 		   //  for real device
       options.setPlatformName("iOS");
-      options.setDeviceName("Iphone13");
-      options.setPlatformVersion("17.4.1");
+      options.setDeviceName("Quality");
+      options.setPlatformVersion("18.0.1");
       options.setAutomationName("XCUITest");
-      options.setUdid("00008110-00142D610A79801E");
+      options.setUdid("00008140-000C158A0E13001C");
       options.setWdaLaunchTimeout(Duration.ofSeconds(30));
       options.setCapability("newCommandTimeout", 300);
 		

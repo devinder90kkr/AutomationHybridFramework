@@ -10,6 +10,7 @@ import org.slf4j.LoggerFactory;
 import org.testng.annotations.Test;
 
 import cuesz.allure.reporting.AllureUtils;
+import cuesz.mobile.resources.mobileLocators;
 import cuesz.mobile.resources.mobileTestData;
 import cuesz.pages.AppiummobileBase;
 import cuesz.utils.AppiumappUtils;
@@ -38,7 +39,7 @@ public class Case23_02_Fuel_breakfast_additionalfueldeletecase extends Appiummob
 	private By Showclick		= 		AppiumBy.iOSNsPredicateString("name == \"Show More\"");
 	private By Cheesegoat		= 		AppiumBy.accessibilityId("Goat Cheese");
 	private By submitick		= 		AppiumBy.accessibilityId("ItemSubmit");
-	
+
 
 
 	@Test
@@ -197,12 +198,24 @@ public class Case23_02_Fuel_breakfast_additionalfueldeletecase extends Appiummob
         AllureUtils.logStep("Click on fuelselection1");
         AllureUtils.captureScreenshot(driver, "Case223_034");
         
-        WebElement submit1 = driver.findElement(submitick);
+        
+        //selection of category list 
+        // Click on timer 
+        WebElement categoryselection = driver.findElement(mobileLocators.categoryselection);
+        categoryselection.click();
+        
+        
+        WebElement breakfastcategoryselection = driver.findElement(mobileLocators.breakfastoption);
+        breakfastcategoryselection.click();
+        
+        
+        Thread.sleep(2500);
+        WebElement submit1 = driver.findElement(mobileLocators.submitick);
 		submit1.click();
-		 // Log console message to Allure
-        LOGGER.info("Click on submit1");
-        AllureUtils.logStep("Click on submit1");
-        AllureUtils.captureScreenshot(driver, "Case223_035");
+		  // Log console message to Allure
+		LOGGER.info("Click on submit");
+        AllureUtils.logStep("Click on submit");
+        AllureUtils.captureScreenshot(driver, "submit");
         
 		
 		
