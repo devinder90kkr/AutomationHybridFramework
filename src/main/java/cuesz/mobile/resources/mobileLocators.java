@@ -4,8 +4,14 @@ import org.openqa.selenium.By;
 import io.appium.java_client.AppiumBy;
 
 public class mobileLocators {
-	
-	
+	public static final By favoriteclick	= 		AppiumBy.accessibilityId("BreakfastFavoriteFuel");
+	public static final By favoriteinput	= 		AppiumBy.iOSNsPredicateString("value == \"Enter Fuel name\"");
+	public static final By submitfavoriteclick	= 	AppiumBy.accessibilityId("Submit");
+	public static final By bicolexpress		=		AppiumBy.accessibilityId("Bicol Express");
+	public static final By favoritefoodclick	=	AppiumBy.iOSNsPredicateString("name == \"Rogger-breakfast\"");
+	public static final By Fueladded	=		AppiumBy.accessibilityId("EditFuel");
+	public static final By melonpan		=		AppiumBy.accessibilityId("Melonpan");
+	public static final By melonpanplus	=		AppiumBy.accessibilityId("MelonpanPlus");
 	public static final By uploadbreakfastimage		=		AppiumBy.accessibilityId("BreakfastUploadIcon");
 //	public static final By gallery					=		AppiumBy.accessibilityId("GalleryClicked");
 	public static final By galerycollection	=	AppiumBy.accessibilityId("Collections");	
@@ -525,7 +531,8 @@ public class mobileLocators {
 	//Case26_Fuel_breakfast_customfood
 	public static final By foodname			= 		AppiumBy.xpath("//XCUIElementTypeTextField[@name=\"Food Name\"]");
 	public static final By servingsize		= 		AppiumBy.xpath("//XCUIElementTypeTextField[@name=\"Serving Size*\"]");
-	public static final By servingunit		= 		AppiumBy.xpath("//XCUIElementTypeTextField[@name=\"Serving Unit*\"]");
+//	public static final By servingunit		= 		AppiumBy.xpath("//XCUIElementTypeTextField[@name=\"Serving Unit*\"]");
+	public static final By servingunit		= 		AppiumBy.xpath("(//XCUIElementTypeOther[@name=\"ArrowDown\"])[1]");
 	public static final By calories			=		AppiumBy.xpath("//XCUIElementTypeTextField[@name=\"Calories(Kcal)*\"]");
 	public static final By proteins			= 		AppiumBy.xpath("//XCUIElementTypeTextField[@name=\"Protein(g)\"]");
 	public static final By carbohydrates	=		AppiumBy.xpath("//XCUIElementTypeTextField[@name=\"Carbohydrates(g)\"]");
@@ -543,7 +550,7 @@ public class mobileLocators {
 	public static final By customfoodimage	=		AppiumBy.accessibilityId("CustomFoodImage");
 //	public static final By gallery			=		AppiumBy.accessibilityId("GalleryClicked");
 //	public static final By submittap		= 		AppiumBy.accessibilityId("SubmitImage");
-	public static final By Customtick		=		AppiumBy.accessibilityId("CustomFoodSubmit");
+	public static final By Customtick		=		AppiumBy.iOSNsPredicateString("name == \"CustomFoodSubmit\"");
 	
 	
 	

@@ -1,4 +1,4 @@
-package cuesz03.Iosapp_member_home_Fuelscreen;
+package cuesz03.Iosapp_member_home_Fuelscreen.copy;
 
 import java.util.HashMap;
 import java.util.List;
@@ -115,20 +115,14 @@ public class Case27_Fuel_breakfast_customfoodaddtobrekfast extends AppiummobileB
 		    LOGGER.info("Click on done icon");
 		    AllureUtils.logStep("Click on done icon");
 		    
-//		    Thread.sleep(3500);        
-//			WebElement submit = driver.findElement(submitick);
-//			submit.click();
-//			// Log console message to Allure
-//	        LOGGER.info("Click on submit");
-//	        AllureUtils.logStep("Click on submit");
-//	        AllureUtils.captureScreenshot(driver, "Case27_23");
-		    Thread.sleep(2500);
-	        WebElement submit1 = driver.findElement(mobileLocators.submitick);
-	        submit1.click();
-	          // Log console message to Allure
+		    Thread.sleep(3500);        
+			WebElement submit = driver.findElement(submitick);
+			submit.click();
+			// Log console message to Allure
 	        LOGGER.info("Click on submit");
 	        AllureUtils.logStep("Click on submit");
-	        AllureUtils.captureScreenshot(driver, "submit");
+	        AllureUtils.captureScreenshot(driver, "Case27_23");
+        
         
 			Thread.sleep(8500);
 	 

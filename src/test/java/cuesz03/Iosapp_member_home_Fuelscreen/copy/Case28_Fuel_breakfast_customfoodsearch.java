@@ -1,4 +1,4 @@
-package cuesz03.Iosapp_member_home_Fuelscreen;
+package cuesz03.Iosapp_member_home_Fuelscreen.copy;
 
 import java.util.HashMap;
 import java.util.List;
@@ -27,14 +27,14 @@ import io.qameta.allure.Story;
 
 @Epic ("Fuel custom screen detail ")
 @Feature ("Verify Fuel detail functionlaity related to Custom fuel and add to breakfast list.")
-public class Case27_Fuel_breakfast_customfoodaddtobrekfast extends AppiummobileBase {
-	private static final Logger LOGGER = LoggerFactory.getLogger(Case27_Fuel_breakfast_customfoodaddtobrekfast.class);
-	
+public class Case28_Fuel_breakfast_customfoodsearch extends AppiummobileBase {
+	private static final Logger LOGGER = LoggerFactory.getLogger(Case28_Fuel_breakfast_customfoodsearch.class);
+
 	private By submitick		= 		AppiumBy.accessibilityId("ItemSubmit");
 	private By Time				= 		AppiumBy.accessibilityId("AdditionalItemTime");
 	private By pickerelement	= 		AppiumBy.xpath("//XCUIElementTypePickerWheel");
 	private By Doneclick		= 		AppiumBy.accessibilityId("AlcohalTime");
-
+	
 	@Test
 	@Owner("QA") // Add the @Owner annotation to specify the executor
     @Severity(SeverityLevel.NORMAL)      
@@ -42,6 +42,7 @@ public class Case27_Fuel_breakfast_customfoodaddtobrekfast extends AppiummobileB
     @Story("Scroll to Fuel card and verify custom food to  breakfast.")	
 	public void Homescreen() throws InterruptedException{
 		try {
+			
 			 // Initialize utility class
 	        CustomFoodScreenUtils utils = new CustomFoodScreenUtils(driver);	
 			// Create an instance of AppiumUtils and pass the driver
@@ -90,61 +91,61 @@ public class Case27_Fuel_breakfast_customfoodaddtobrekfast extends AppiummobileB
 	        LOGGER.info("Click on keypaddone icon");
 	        AllureUtils.logStep("Click on keypaddone icon");
 	        AllureUtils.captureScreenshot(driver, "Case26_4");
-	        
+	        	        
 	        // Call the utility method
 	        String searchText = mobileTestData.searchText;
 	        utils.addCustomFood(searchText);
-	         
-	        // Click on timer 
-	        WebElement Timerclick 	= driver.findElement(Time);
-	        Timerclick.click();
-	        List<WebElement>values = driver.findElements(pickerelement);
-			for (int i=0; i<values.size();i++)
-			{		
-			System.out.println(values.get(i).getText());
-			}
-			values.get(0).sendKeys("8");
-			values.get(0).sendKeys(Keys.TAB);
-			Thread.sleep(3500);
-			values.get(1).sendKeys("08");
-			values.get(1).sendKeys(Keys.TAB);
-			Thread.sleep(3500);
-			values.get(2).sendKeys("AM");
-			driver.findElement(Doneclick).click();
-		// Log console message to Allure
-		    LOGGER.info("Click on done icon");
-		    AllureUtils.logStep("Click on done icon");
-		    
-//		    Thread.sleep(3500);        
-//			WebElement submit = driver.findElement(submitick);
-//			submit.click();
-//			// Log console message to Allure
-//	        LOGGER.info("Click on submit");
-//	        AllureUtils.logStep("Click on submit");
-//	        AllureUtils.captureScreenshot(driver, "Case27_23");
-		    Thread.sleep(2500);
-	        WebElement submit1 = driver.findElement(mobileLocators.submitick);
-	        submit1.click();
-	          // Log console message to Allure
-	        LOGGER.info("Click on submit");
-	        AllureUtils.logStep("Click on submit");
-	        AllureUtils.captureScreenshot(driver, "submit");
+		
+	     // Click on timer 
+        WebElement Timerclick 	= driver.findElement(Time);
+        Timerclick.click();
+        List<WebElement>values = driver.findElements(pickerelement);
+		for (int i=0; i<values.size();i++)
+		{		
+		System.out.println(values.get(i).getText());
+		}
+		values.get(0).sendKeys("8");
+		values.get(0).sendKeys(Keys.TAB);
+		Thread.sleep(3500);
+		values.get(1).sendKeys("08");
+		values.get(1).sendKeys(Keys.TAB);
+		Thread.sleep(3500);
+		values.get(2).sendKeys("AM");
+		driver.findElement(Doneclick).click();
         
-			Thread.sleep(8500);
-	 
-			 } catch (Exception e) {
-		            LOGGER.error("An error occurred during the mindful screen test", e);
-		            AllureUtils.logStep("An error occurred: " + e.getMessage());
-		        } finally {
-		            // Terminate the app whether the test passed or failed
-		            try {
-		                Thread.sleep(8500);
-		            } catch (InterruptedException e) {
-		                LOGGER.error("Thread interrupted during final sleep", e);
-		                Thread.currentThread().interrupt();
-		            }
-//		            driver.terminateApp("com.cuesz.mobile");
-		            driver.terminateApp(mobileTestData.bundelID);
-		        }
-		    }
-	}
+		WebElement submit = driver.findElement(submitick);
+		submit.click();
+		// Log console message to Allure
+        LOGGER.info("Click on submit");
+        AllureUtils.logStep("Click on submit");
+        AllureUtils.captureScreenshot(driver, "Case28_22");
+        
+		Thread.sleep(8500);
+ 
+		
+		// Method to scroll to perform screen
+				HashMap<String,Object>scrollObject1 =new HashMap<>();
+				scrollObject1.put("direction", "down");
+				scrollObject1.put("Protein Powder", "Protein Powder");
+				driver.executeScript("mobile:scroll", scrollObject1);
+				Thread.sleep(2000);
+		
+		
+		
+			    Thread.sleep(3500);
+					 } catch (Exception e) {
+				            LOGGER.error("An error occurred during the mindful screen test", e);
+				            AllureUtils.logStep("An error occurred: " + e.getMessage());
+				        } finally {
+				            // Terminate the app whether the test passed or failed
+				            try {
+				                Thread.sleep(8500);
+				            } catch (InterruptedException e) {
+				                LOGGER.error("Thread interrupted during final sleep", e);
+				                Thread.currentThread().interrupt();
+				            }
+//				            driver.terminateApp("com.cuesz.mobile");
+				            driver.terminateApp(mobileTestData.bundelID);
+				        }
+				    }
+			}

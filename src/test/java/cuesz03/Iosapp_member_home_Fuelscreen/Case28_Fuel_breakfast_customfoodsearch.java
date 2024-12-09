@@ -113,8 +113,9 @@ public class Case28_Fuel_breakfast_customfoodsearch extends AppiummobileBase {
 		values.get(2).sendKeys("AM");
 		driver.findElement(Doneclick).click();
         
-		WebElement submit = driver.findElement(submitick);
-		submit.click();
+		 Thread.sleep(2500);
+	        WebElement submit1 = driver.findElement(mobileLocators.submitick);
+	        submit1.click();
 		// Log console message to Allure
         LOGGER.info("Click on submit");
         AllureUtils.logStep("Click on submit");

@@ -1,8 +1,7 @@
-package cuesz03.Iosapp_member_home_Fuelscreen;
+package cuesz03.Iosapp_member_home_Fuelscreen.copy;
 
 import java.util.HashMap;
 import java.util.List;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
@@ -25,24 +24,26 @@ import io.qameta.allure.Severity;
 import io.qameta.allure.SeverityLevel;
 import io.qameta.allure.Story;
 
-@Epic ("Fuel custom screen detail ")
-@Feature ("Verify Fuel detail functionlaity related to Custom fuel and add to breakfast list.")
-public class Case27_Fuel_breakfast_customfoodaddtobrekfast extends AppiummobileBase {
-	private static final Logger LOGGER = LoggerFactory.getLogger(Case27_Fuel_breakfast_customfoodaddtobrekfast.class);
+@Epic ("Fuel screen detail ")
+@Feature ("Verify Fuel detail functionlaity related to early snacks fuel.")
+public class Case30_01_Fuel_Earlysnacks_customfood extends AppiummobileBase {
+	private static final Logger LOGGER = LoggerFactory.getLogger(Case30_01_Fuel_Earlysnacks_customfood.class);
 	
 	private By submitick		= 		AppiumBy.accessibilityId("ItemSubmit");
 	private By Time				= 		AppiumBy.accessibilityId("AdditionalItemTime");
 	private By pickerelement	= 		AppiumBy.xpath("//XCUIElementTypePickerWheel");
 	private By Doneclick		= 		AppiumBy.accessibilityId("AlcohalTime");
-
+	
+	
+	
 	@Test
 	@Owner("QA") // Add the @Owner annotation to specify the executor
     @Severity(SeverityLevel.NORMAL)      
-    @Description("Custom Fuel screen detail verification")
-    @Story("Scroll to Fuel card and verify custom food to  breakfast.")	
-	public void Homescreen() throws InterruptedException{
+    @Description("Member Fuel screen detail verification")
+    @Story("Scroll to Fuel card and verify early snacks ")	
+	public void Fuel_Earlysnacks_additionalfuel() throws InterruptedException{
 		try {
-			 // Initialize utility class
+			// Initialize utility class
 	        CustomFoodScreenUtils utils = new CustomFoodScreenUtils(driver);	
 			// Create an instance of AppiumUtils and pass the driver
 			AppiumappUtils appiumUtils = new AppiumappUtils(driver);
@@ -91,47 +92,53 @@ public class Case27_Fuel_breakfast_customfoodaddtobrekfast extends AppiummobileB
 	        AllureUtils.logStep("Click on keypaddone icon");
 	        AllureUtils.captureScreenshot(driver, "Case26_4");
 	        
-	        // Call the utility method
+	        
+	     // Call the utility method
 	        String searchText = mobileTestData.searchText;
 	        utils.addCustomFood(searchText);
-	         
-	        // Click on timer 
-	        WebElement Timerclick 	= driver.findElement(Time);
-	        Timerclick.click();
-	        List<WebElement>values = driver.findElements(pickerelement);
-			for (int i=0; i<values.size();i++)
-			{		
-			System.out.println(values.get(i).getText());
-			}
-			values.get(0).sendKeys("8");
-			values.get(0).sendKeys(Keys.TAB);
-			Thread.sleep(3500);
-			values.get(1).sendKeys("08");
-			values.get(1).sendKeys(Keys.TAB);
-			Thread.sleep(3500);
-			values.get(2).sendKeys("AM");
-			driver.findElement(Doneclick).click();
-		// Log console message to Allure
-		    LOGGER.info("Click on done icon");
-		    AllureUtils.logStep("Click on done icon");
-		    
-//		    Thread.sleep(3500);        
-//			WebElement submit = driver.findElement(submitick);
-//			submit.click();
-//			// Log console message to Allure
-//	        LOGGER.info("Click on submit");
-//	        AllureUtils.logStep("Click on submit");
-//	        AllureUtils.captureScreenshot(driver, "Case27_23");
-		    Thread.sleep(2500);
-	        WebElement submit1 = driver.findElement(mobileLocators.submitick);
-	        submit1.click();
-	          // Log console message to Allure
-	        LOGGER.info("Click on submit");
-	        AllureUtils.logStep("Click on submit");
-	        AllureUtils.captureScreenshot(driver, "submit");
+			
+	        Thread.sleep(3500);
+	        
+	     // Click on timer 
+        WebElement Timerclick 	= driver.findElement(Time);
+        Timerclick.click();
+        List<WebElement>values = driver.findElements(pickerelement);
+		for (int i=0; i<values.size();i++)
+		{		
+		System.out.println(values.get(i).getText());
+		}
+		values.get(0).sendKeys("8");
+		values.get(0).sendKeys(Keys.TAB);
+		Thread.sleep(3500);
+		values.get(1).sendKeys("08");
+		values.get(1).sendKeys(Keys.TAB);
+		Thread.sleep(3500);
+		values.get(2).sendKeys("AM");
+		driver.findElement(Doneclick).click();
+	// Log console message to Allure
+	    LOGGER.info("Click on done icon");
+	    AllureUtils.logStep("Click on done icon");
+
         
-			Thread.sleep(8500);
-	 
+        driver.findElement(AppiumBy.iOSNsPredicateString("name == 'Early Snacks'")).click();
+  
+        WebElement submit2 = driver.findElement(submitick);
+		submit2.click();
+		// Log console message to Allure
+        LOGGER.info("Click on submit2");
+        AllureUtils.logStep("Click on submit2");
+        AllureUtils.captureScreenshot(driver, "submit2_30");
+		Thread.sleep(4500);
+		
+		// Method to scroll to early snack
+		HashMap<String,Object>scrollObject3 =new HashMap<>();
+		scrollObject3.put("direction", "down");
+		scrollObject3.put("ginfuelselectionc", "ginfuelselectionc");
+		driver.executeScript("mobile:scroll", scrollObject3);
+		Thread.sleep(2000);
+		
+		
+	    Thread.sleep(3500);
 			 } catch (Exception e) {
 		            LOGGER.error("An error occurred during the mindful screen test", e);
 		            AllureUtils.logStep("An error occurred: " + e.getMessage());

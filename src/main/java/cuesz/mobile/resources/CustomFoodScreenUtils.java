@@ -86,7 +86,17 @@ public class CustomFoodScreenUtils {
         LOGGER.info("Enter values for Food name" );
         AllureUtils.logStep("Enter values for Food name");
         Thread.sleep(2000);
-       // Locate the Serving size  element 
+
+        //Locate urgent radio for view all fields
+        WebElement urgentoption	= driver.findElement(mobileLocators.urgenticon);
+        urgentoption.click();
+        urgentoption.click();
+     // Log console message to Allure
+        LOGGER.info("Click on urgentoption for custom food" );
+        AllureUtils.logStep("Click on urgentoption for custom food");
+        Thread.sleep(2000);
+        
+        // Locate the Serving size  element 
        WebElement Servingsize	= driver.findElement(mobileLocators.servingsize);
        Servingsize.click();
        // Log console message to Allure
@@ -107,25 +117,25 @@ public class CustomFoodScreenUtils {
        AllureUtils.captureScreenshot(driver, "Case26_5");
  
        
-       Thread.sleep(2000);
-       // Locate the Serving unit  element 
-       WebElement Servingunit	= driver.findElement(mobileLocators.servingunit);
-       Servingunit.click();
-       // Log console message to Allure
-       LOGGER.info("enter value for Servingunit ");
-       AllureUtils.logStep("enter value for Servingunit");    
-       // Capture a screenshot and attach it to Allure
-       AllureUtils.captureScreenshot(driver, "Case266");
-       Thread.sleep(2000);
-       Servingunit.sendKeys(mobileTestData.Servingunit);
-       //click on keypad Done button to hide keypad
-       WebElement keypaddone3	= driver.findElement(mobileLocators.doneclick);       
-       keypaddone3.click();
-       // Log console message to Allure
-       LOGGER.info("Click on done icon");
-       AllureUtils.logStep("Click on done icon");
-       AllureUtils.captureScreenshot(driver, "Case26_6");
-       Thread.sleep(2000);
+//       Thread.sleep(2000);
+//       // Locate the Serving unit  element 
+//       WebElement Servingunit	= driver.findElement(mobileLocators.servingunit);
+//       Servingunit.click();
+//       // Log console message to Allure
+//       LOGGER.info("enter value for Servingunit ");
+//       AllureUtils.logStep("enter value for Servingunit");    
+//       // Capture a screenshot and attach it to Allure
+//       AllureUtils.captureScreenshot(driver, "Case266");
+//       Thread.sleep(2000);
+//       Servingunit.sendKeys(mobileTestData.Servingunit);
+//       //click on keypad Done button to hide keypad
+//       WebElement keypaddone3	= driver.findElement(mobileLocators.doneclick);       
+//       keypaddone3.click();
+//       // Log console message to Allure
+//       LOGGER.info("Click on done icon");
+//       AllureUtils.logStep("Click on done icon");
+//       AllureUtils.captureScreenshot(driver, "Case26_6");
+//       Thread.sleep(2000);
        // Locate the calories element  
        WebElement Calories	= driver.findElement(mobileLocators.calories);
        Calories.click();
@@ -322,32 +332,32 @@ public class CustomFoodScreenUtils {
        LOGGER.info("Click on done icon");
        AllureUtils.logStep("Click on done icon");
        Thread.sleep(2000);
-       // Locate and click on Foodimage 
-       WebElement Customfoodimage	= driver.findElement(mobileLocators.customfoodimage);
-       Customfoodimage.click();
-       // Log console message to Allure
-       LOGGER.info("Click on Customfoodimage");
-       AllureUtils.logStep("Click on Customfoodimage");
-       AllureUtils.captureScreenshot(driver, "Case26_21");
-       Thread.sleep(2000);
-       WebElement galleryclick	= driver.findElement(mobileLocators.gallery);
-       galleryclick.click();
-       // Log console message to Allure
-       LOGGER.info("Click on galleryclick");
-       AllureUtils.logStep("Click on galleryclick");
-       AllureUtils.captureScreenshot(driver, "Case26_22");
-       Thread.sleep(2000);
-       WebElement firstPhoto = driver.findElement(AppiumBy.xpath("//XCUIElementTypeImage[2]"));
-       firstPhoto.click();
-       Thread.sleep(2000);
-       Thread.sleep(3500);
-       WebElement Submittap = driver.findElement(mobileLocators.submittap);
-       Submittap.click();
-       // Log console message to Allure
-       LOGGER.info("Click on Submittap");
-       AllureUtils.logStep("Click on Submittap");
-       AllureUtils.captureScreenshot(driver, "Case26_23");
-       Thread.sleep(3500);
+//       // Locate and click on Foodimage 
+//       WebElement Customfoodimage	= driver.findElement(mobileLocators.customfoodimage);
+//       Customfoodimage.click();
+//       // Log console message to Allure
+//       LOGGER.info("Click on Customfoodimage");
+//       AllureUtils.logStep("Click on Customfoodimage");
+//       AllureUtils.captureScreenshot(driver, "Case26_21");
+//       Thread.sleep(2000);
+//       WebElement galleryclick	= driver.findElement(mobileLocators.gallery);
+//       galleryclick.click();
+//       // Log console message to Allure
+//       LOGGER.info("Click on galleryclick");
+//       AllureUtils.logStep("Click on galleryclick");
+//       AllureUtils.captureScreenshot(driver, "Case26_22");
+//       Thread.sleep(2000);
+//       WebElement firstPhoto = driver.findElement(AppiumBy.xpath("//XCUIElementTypeImage[2]"));
+//       firstPhoto.click();
+//       Thread.sleep(2000);
+//       Thread.sleep(3500);
+//       WebElement Submittap = driver.findElement(mobileLocators.submittap);
+//       Submittap.click();
+//       // Log console message to Allure
+//       LOGGER.info("Click on Submittap");
+//       AllureUtils.logStep("Click on Submittap");
+//       AllureUtils.captureScreenshot(driver, "Case26_23");
+//       Thread.sleep(3500);
        Thread.sleep(2000);
        
         WebElement Customfoodtick	= driver.findElement(mobileLocators.Customtick);
