@@ -60,6 +60,9 @@ public class mobileTestData {
 	public static final String VitaminA =  "36";
 	public static final String VitaminB = "36" ;
 	
-
-	
+	public static final String food1 = "Faggot" ;
+	public static final String food2 = "Meat" ;
+	public static final String food3 = "Beetroot" ;
+	public static final String food4 = "Fish" ;
+	public static final String food5 = "Goa" ;	
 }

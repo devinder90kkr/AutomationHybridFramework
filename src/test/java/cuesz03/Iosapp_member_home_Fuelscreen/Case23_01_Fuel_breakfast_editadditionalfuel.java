@@ -71,12 +71,12 @@ public class Case23_01_Fuel_breakfast_editadditionalfuel extends AppiummobileBas
         AllureUtils.logStep("Click on fuel screen");
         AllureUtils.captureScreenshot(driver, "Case23_Fuel_screen1");
 
-        // **New Scroll Action to Ensure the Edit Beetroot Element is Visible**
-        HashMap<String, Object> scrollToEditBeetroot = new HashMap<>();
-        scrollToEditBeetroot.put("direction", "down");
-        scrollToEditBeetroot.put("element", driver.findElement(mobileLocators.editbeetroot)); // Scroll until the element is visible
-        driver.executeScript("mobile:scroll", scrollToEditBeetroot);
-        Thread.sleep(2000);
+//        // **New Scroll Action to Ensure the Edit Beetroot Element is Visible**
+//        HashMap<String, Object> scrollToEditBeetroot = new HashMap<>();
+//        scrollToEditBeetroot.put("direction", "down");
+//        scrollToEditBeetroot.put("element", driver.findElement(mobileLocators.editbeetroot)); // Scroll until the element is visible
+//        driver.executeScript("mobile:scroll", scrollToEditBeetroot);
+//        Thread.sleep(2000);
         
         // Edit feature testing
         WebElement Editbeetroot		= driver.findElement(mobileLocators.editbeetroot);

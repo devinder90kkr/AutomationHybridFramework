@@ -401,10 +401,11 @@ public class mobileLocators {
 
 	public static final By meatplus			= 		AppiumBy.accessibilityId("MeatPlus");
 	public static final By serchclick		= 		AppiumBy.accessibilityId("AdditionalFuelSearch");
-	public static final By Beetroot			=		AppiumBy.iOSNsPredicateString("name == \"Beetroot\"");
+	public static final By Beetroot			=		AppiumBy.iOSNsPredicateString("name == \"Beetroot\" AND label == \"Beetroot 22 kcal\"");
 	
 	
 	public static final By additionalsearch	= 		AppiumBy.accessibilityId("AdditionalFuelSearch");
+	public static final By additionalsearcheditbreakfast = 	AppiumBy.iOSClassChain("**/XCUIElementTypeTextField[`name == \"AdditionalFuelSearch\"`]");
 	public static final By faggot			=		AppiumBy.iOSNsPredicateString("name == \"Faggot\"");
 	public static final By fagoticon		= 		AppiumBy.accessibilityId("FaggotFuelItemInfo");
 	public static final By backtap			= 		AppiumBy.accessibilityId("BackPress");
@@ -422,7 +423,7 @@ public class mobileLocators {
 	public static final By backbttn			=		AppiumBy.accessibilityId("BackPress");
 	public static final By showclikc		=		AppiumBy.accessibilityId("Show More");
 	public static final By vodkafuel		=		AppiumBy.accessibilityId("Vodka");
-	public static final By additionalsearch1=		AppiumBy.iOSNsPredicateString("label == \"Search Fuel to log\" AND name == \"AdditionalFuelSearch\"");
+	public static final By additionalsearch1=		AppiumBy.iOSNsPredicateString("name == \"AdditionalFuelSearch\"");
 	public static final By Uploadimage		=		AppiumBy.accessibilityId("Post PerformanceUploadIcon");
 	public static final By gallery			=		AppiumBy.accessibilityId("GalleryClicked");
 	public static final By submittap		= 		AppiumBy.accessibilityId("SubmitImage");
@@ -430,6 +431,7 @@ public class mobileLocators {
 	public static final By duringplusicon	=		AppiumBy.accessibilityId("During PerformancePlueIcon");
 	public static final By jimmie			= 		AppiumBy.iOSNsPredicateString("name == \"Jimmies\"");
 	public static final By Showclick		= 		AppiumBy.iOSNsPredicateString("name == \"Show More\"");
+	public static final By Showclick1		= 		AppiumBy.iOSClassChain("**/XCUIElementTypeStaticText[`name == \"Show More\"`][2]");
 	public static final By cognpate			= 		AppiumBy.accessibilityId("Cognac Pate");
 		
 	public static final By addeventlabel	= 		AppiumBy.iOSNsPredicateString("label == \"Add An Event\"");
@@ -450,7 +452,7 @@ public class mobileLocators {
 	public static final By hydrationplus	=		AppiumBy.accessibilityId("PlusHydrationGlass");
 	public static final By submithydration	=		AppiumBy.accessibilityId("Submit");
 	public static final By preplusicon		=		AppiumBy.accessibilityId("Pre PerformancePlueIcon");
-	public static final By fish				= 		AppiumBy.iOSNsPredicateString("name == \"Fish\"");
+	public static final By fish				= 		AppiumBy.iOSNsPredicateString("name == \"Fish\" AND label == \"Fish 218 kcal\"");
 	public static final By fishRemove		=		AppiumBy.accessibilityId("FishFuelItemDelete");
 	public static final By Cheesegoat		= 		AppiumBy.accessibilityId("Goat Cheese");
 	public static final By performancetime	=		AppiumBy.accessibilityId("Pre PerformanceTimeEdit");
