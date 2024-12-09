@@ -29,16 +29,16 @@ public class AppiummobileBase {
 	@BeforeClass
 	public void Cueszbase() throws MalformedURLException {
 		
-		service = new AppiumServiceBuilder().withAppiumJS(new File ("/Users/inderjeetsingh/node_modules/appium/build/lib/main.js"))
+		service = new AppiumServiceBuilder().withAppiumJS(new File ("/usr/local/lib/node_modules/appium/build/lib/main.js"))
 				.withIPAddress("127.0.0.1").usingPort(4723).build();
 		service.start();
 		
 		XCUITestOptions options = new XCUITestOptions();
 		
-		   //  for real device
+	   //  for real device
       options.setPlatformName("iOS");
-      options.setDeviceName("Quality");
-      options.setPlatformVersion("18.0.1");
+      options.setDeviceName("iPhone 16");
+      options.setPlatformVersion("18.1");
       options.setAutomationName("XCUITest");
       options.setUdid("00008140-000C158A0E13001C");
       options.setWdaLaunchTimeout(Duration.ofSeconds(30));

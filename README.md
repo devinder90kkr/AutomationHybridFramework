@@ -574,3 +574,114 @@ Given its architecture and the tools it incorporates, a suitable name for this f
 #git useful command
 git remote rm origin
 git remote add origin  https://devinder90chicmic@github.com/Cuesz-limited/Cuesz_AutomationTests.git 
+
+
+####  How to find main.js file in mac and window
+To find the path to `main.js` for your Appium installation on your system, follow these steps:
+
+### On macOS or Linux:
+1. **Open Terminal**: You can use Spotlight (Cmd + Space) and type "Terminal" or find it in your applications.
+2. **Navigate to the Appium Directory**:
+   - If you installed Appium globally using npm, you can use the following command to find where Appium is installed:
+     ```sh
+     npm root -g
+     ```
+     This will give you the global node modules path. Navigate to this directory:
+     ```sh
+     cd $(npm root -g)/appium
+     ```
+   - If you installed Appium locally in a project, navigate to your project's directory and then into the `node_modules` directory:
+     ```sh
+     cd /path/to/your/project/node_modules/appium
+     ```
+
+3. **Find the `main.js` File**:
+   - Once you are in the `appium` directory, you can list the contents to find the `main.js` file:
+     ```sh
+     ls -l build/lib
+     ```
+
+   - The `main.js` file should be located inside the `build/lib` directory. You can confirm its presence with:
+     ```sh
+     ls build/lib/main.js
+     ```
+
+4. **Get the Full Path**:
+   - Use the `pwd` command to print the current working directory and append the path to `main.js`:
+     ```sh
+     pwd
+     ```
+   - Combine the output with `/build/lib/main.js` to get the full path.
+
+### Example:
+
+Assuming `npm root -g` returns `/usr/local/lib/node_modules`, the full path would be:
+```
+/usr/local/lib/node_modules/appium/build/lib/main.js
+```
+
+If Appium is installed locally in your project at `/Users/inderjeetsingh/projects/myapp`, the path would be:
+```
+/Users/inderjeetsingh/projects/myapp/node_modules/appium/build/lib/main.js
+```
+
+### On Windows:
+1. **Open Command Prompt**: You can use the search bar next to the Start menu and type "cmd" or "Command Prompt."
+2. **Navigate to the Appium Directory**:
+   - For a global installation, you can find the global node modules path with:
+     ```cmd
+     npm root -g
+     ```
+     This will give you the global node modules path. Navigate to this directory:
+     ```cmd
+     cd %appdata%\npm\node_modules\appium
+     ```
+   - For a local installation in a project, navigate to your project's directory and then into the `node_modules` directory:
+     ```cmd
+     cd \path\to\your\project\node_modules\appium
+     ```
+
+3. **Find the `main.js` File**:
+   - Once you are in the `appium` directory, you can list the contents to find the `main.js` file:
+     ```cmd
+     dir build\lib
+     ```
+
+   - The `main.js` file should be located inside the `build\lib` directory. You can confirm its presence with:
+     ```cmd
+     dir build\lib\main.js
+     ```
+
+4. **Get the Full Path**:
+   - Use the `cd` command to navigate to the directory containing `main.js` and then use `cd` again to print the current directory:
+     ```cmd
+     cd build\lib
+     cd
+     ```
+   - Combine the output with `main.js` to get the full path.
+
+### Example:
+
+Assuming `%appdata%\npm\node_modules` is `C:\Users\Inderjeet\AppData\Roaming\npm\node_modules`, the full path would be:
+```
+C:\Users\Inderjeet\AppData\Roaming\npm\node_modules\appium\build\lib\main.js
+```
+
+If Appium is installed locally in your project at `C:\Users\Inderjeet\projects\myapp`, the path would be:
+```
+C:\Users\Inderjeet\projects\myapp\node_modules\appium\build\lib\main.js
+```
+
+### Verifying the Path:
+Once you have the path, you can verify it by checking if the file exists:
+```sh
+ls /path/to/appium/build/lib/main.js
+```
+
+Or on Windows:
+```cmd
+dir \path\to\appium\build\lib\main.js
+```
+
+If the file exists, you can use this path in your `AppiumServiceBuilder`.
+

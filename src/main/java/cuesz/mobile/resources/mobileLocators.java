@@ -58,6 +58,7 @@ public class mobileLocators {
 	public static final By hipcircumference	=	AppiumBy.accessibilityId("Hip Circumference");
 	public static final By infobodyscan		=	AppiumBy.accessibilityId("BodyScanInfoScreen");
 	public static final By rightarrow		=	AppiumBy.accessibilityId("BodyScanRight");
+	public static final By recommendedrightarrow		=	AppiumBy.accessibilityId("FuelCaloriesArrowLeft");
 	public static final By leftarrow		=	AppiumBy.accessibilityId("BodyScanLeft");
 	
 	
@@ -384,6 +385,7 @@ public class mobileLocators {
 	public static final By tickaction		= 		AppiumBy.accessibilityId("RecommendedFuelSubmit");
 //	public static final By Time				= 		AppiumBy.accessibilityId("RecommendedFuelTime");
 	public static final By Time				= 		AppiumBy.accessibilityId("AdditionalItemTime");
+	public static final By Time11				= 		AppiumBy.accessibilityId("RecommendedFuelTime");
 	public static final By pickerelement	= 		AppiumBy.xpath("//XCUIElementTypePickerWheel");
 	public static final By Doneclick		= 		AppiumBy.accessibilityId("AlcohalTime");
 	public static final By brekdone			= 		AppiumBy.accessibilityId("Done");
@@ -395,6 +397,7 @@ public class mobileLocators {
 	public static final By meat1			=		AppiumBy.iOSNsPredicateString("name == \"Meat\"");
 	public static final By meatfuelselect	=		AppiumBy.accessibilityId("Meat");	
 	public static final By performanceeditsubmit =	AppiumBy.accessibilityId("Submit");
+	
 
 	public static final By meatplus			= 		AppiumBy.accessibilityId("MeatPlus");
 	public static final By serchclick		= 		AppiumBy.accessibilityId("AdditionalFuelSearch");
@@ -407,7 +410,7 @@ public class mobileLocators {
 	public static final By backtap			= 		AppiumBy.accessibilityId("BackPress");
 	public static final By fagotplus		= 		AppiumBy.accessibilityId("FaggotPlus");
 //	public static final By submitick		= 		AppiumBy.accessibilityId("ItemSubmit");	
-	public static final By submitick		= 		AppiumBy.iOSClassChain("**/XCUIElementTypeOther[`name == \"Breakfast\"`][1]/XCUIElementTypeOther[3]");
+	public static final By submitick		= 		AppiumBy.iOSClassChain("**/XCUIElementTypeOther[`name == \"Breakfast\"`][2]/XCUIElementTypeOther[3]");
 	public static final By categoryselection=		AppiumBy.iOSClassChain("**/XCUIElementTypeOther[`name == \"Breakfast\"`][3]");
 	public static final By breakfastoption  =		AppiumBy.iOSNsPredicateString("name == \"ItemPressed\" AND label == \"Breakfast\"");
 	

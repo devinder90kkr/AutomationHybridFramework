@@ -123,20 +123,20 @@ public class Case21_Fuel_breakfast_recommendedfuel extends AppiummobileBase {
         Recommendedfuel1.click();
         LOGGER.info("Click on Recommended fuel again ");
         AllureUtils.logStep("Click on Recommended fuel again");
-        Thread.sleep(2500);
+        Thread.sleep(3500);
         AllureUtils.captureScreenshot(driver, "Case21_Fuel_breakfast_recommendedfuel5");
         
 
         try {
             // Try to locate and click on the arrowright element
-            WebElement arrowright = driver.findElement(mobileLocators.rightarrow);
+            WebElement arrowright = driver.findElement(mobileLocators.recommendedrightarrow);
             arrowright.click();
            
             LOGGER.info("Click on arrowright ");
             AllureUtils.logStep("Click on arrowright");     
             
             // If the arrowright element is clicked successfully, continue with the rest of the steps
-            WebElement Timerclick = driver.findElement(mobileLocators.Time);
+            WebElement Timerclick = driver.findElement(mobileLocators.Time11);
             Timerclick.click();
             LOGGER.info("Click on Timerclick ");
             AllureUtils.logStep("Click on Timerclick");    
@@ -181,9 +181,21 @@ public class Case21_Fuel_breakfast_recommendedfuel extends AppiummobileBase {
             // Click on Done-breakfast button
             WebElement brekfastdone = driver.findElement(mobileLocators.brekdone);
             brekfastdone.click();  
-         // Log console message to Allure
+            // Log console message to Allure
             LOGGER.info("Click on Done ");
             AllureUtils.logStep("Click on done");    
+            
+            Thread.sleep(3500);
+            WebElement breakfast1 = driver.findElement(mobileLocators.breakfastlabel);
+            String actualText1 = breakfast1.getText();
+            String expectedText1 = "Breakfast";
+
+            System.out.println("Actual Text: " + actualText1);
+            System.out.println("Expected Text: " + expectedText1);
+            Assert.assertEquals(actualText1, expectedText1);
+            
+            
+            
             
         } catch (Exception e) {
         	// If the arrowright element is not found, log an error message and terminate the app
