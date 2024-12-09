@@ -269,6 +269,7 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import cuesz.allure.reporting.AllureUtils;
+import cuesz.mobile.resources.mobileLocators;
 import cuesz.mobile.resources.mobileTestData;
 import cuesz.pages.AppiummobileBase;
 import cuesz.utils.AppiumappUtils;
@@ -302,10 +303,10 @@ public class Case29_Fuel_EarlySnacks_recommendedfuel extends AppiummobileBase {
     private By Doneclick = AppiumBy.accessibilityId("AlcohalTime");
     private By tickbreakfast = AppiumBy.accessibilityId("RecommendedFuelSubmit");
     private By brekdone = AppiumBy.accessibilityId("Done");
-    private By Protcard = AppiumBy.accessibilityId("Protein");
-    private By crossicon1 = AppiumBy.accessibilityId("FuelMacroNutrientCross");
-    private By carbcard = AppiumBy.accessibilityId("Carbs");
-    private By fatcard = AppiumBy.accessibilityId("Fat");
+//    private By Protcard = AppiumBy.accessibilityId("Protein");
+//    private By crossicon1 = AppiumBy.accessibilityId("FuelMacroNutrientCross");
+//    private By carbcard = AppiumBy.accessibilityId("Carbs");
+//    private By fatcard = AppiumBy.accessibilityId("Fat");
 
     @Test
     @Owner("QA")
@@ -321,7 +322,7 @@ public class Case29_Fuel_EarlySnacks_recommendedfuel extends AppiummobileBase {
 //        appiumUtils.launchAppWithPackageId("com.cuesz.mobile");
         appiumUtils.launchAppWithPackageId(mobileTestData.bundelID);
 
-        WebElement Homeicon = driver.findElement(Homeclick);
+        WebElement Homeicon = driver.findElement(mobileLocators.Homeclick);
         Homeicon.click();
         // Log console message to Allure
  		LOGGER.info("Click on Homeicon");
@@ -490,97 +491,97 @@ public class Case29_Fuel_EarlySnacks_recommendedfuel extends AppiummobileBase {
 
                 Thread.sleep(4500);
 
-                // Scroll to "Protein" element if it's not present on the screen
-                By proteinLocator = AppiumBy.accessibilityId("Protein");
-                if (!isElementPresent(driver, proteinLocator)) {
-                    // Scroll to "Protein" if it's not present
-                    HashMap<String, Object> scrollObject1 = new HashMap<>();
-                    scrollObject1.put("direction", "up");
-                    scrollObject1.put("Early Snacks", "Early Snacks");
-                    driver.executeScript("mobile:scroll", scrollObject1);
-                    Thread.sleep(2000);
-                }
-
-                // Click on protein card
-                WebElement protein = driver.findElement(Protcard);
-                protein.click();
-                // Log console message to Allure
-        		LOGGER.info("Click on protein ");
-        		AllureUtils.logStep("Click on protein");    
-                // Capture a screenshot and attach it to Allure
-                AllureUtils.captureScreenshot(driver, "protein");
-
-                // Scroll to element Early Snacks
-                HashMap<String, Object> scrollObject6 = new HashMap<>();
-                scrollObject6.put("direction", "down");
-                scrollObject6.put("Early Snacks", "Early Snacks");
-                driver.executeScript("mobile:scroll", scrollObject6);
-                Thread.sleep(2000);
-                // Capture a screenshot and attach it to Allure
-                AllureUtils.captureScreenshot(driver, "earlysnack5");
-                // Click on protein cross icon
-                WebElement proteincross = driver.findElement(crossicon1);
-                proteincross.click();
-                // Log console message to Allure
-        		LOGGER.info("Click on proteincross ");
-        		AllureUtils.logStep("Click on proteincross");    
-                // Capture a screenshot and attach it to Allure
-                AllureUtils.captureScreenshot(driver, "proteincross");
-                
-                // Click on carbs card
-                WebElement carbs = driver.findElement(carbcard);
-                carbs.click();
-                // Log console message to Allure
-        		LOGGER.info("Click on carbs ");
-        		AllureUtils.logStep("Click on carbs");    
-                // Capture a screenshot and attach it to Allure
-                AllureUtils.captureScreenshot(driver, "carbs");
-                
-                // Scroll to element Early Snacks
-                HashMap<String, Object> scrollObject7 = new HashMap<>();
-                scrollObject7.put("direction", "down");
-                scrollObject7.put("Early Snacks", "Early Snacks");
-                driver.executeScript("mobile:scroll", scrollObject7);
-                Thread.sleep(2000);
-                // Capture a screenshot and attach it to Allure
-                AllureUtils.captureScreenshot(driver, "earlysnack6");
-                
-                // Click on protein cross icon
-                WebElement carbscross = driver.findElement(crossicon1);
-                carbscross.click();
-                // Log console message to Allure
-        		LOGGER.info("Click on carbscross ");
-        		AllureUtils.logStep("Click on carbscross");    
-                // Capture a screenshot and attach it to Allure
-                AllureUtils.captureScreenshot(driver, "29_carbscross");
-                
-                
-                // Click on fats card
-                WebElement fats = driver.findElement(fatcard);
-                fats.click();
-                // Log console message to Allure
-        		LOGGER.info("Click on fats ");
-        		AllureUtils.logStep("Click on fats");    
-                // Capture a screenshot and attach it to Allure
-                AllureUtils.captureScreenshot(driver, "29_fats");
-                
-                
-                // Scroll to element Early Snacks
-                HashMap<String, Object> scrollObject8 = new HashMap<>();
-                scrollObject8.put("direction", "down");
-                scrollObject8.put("Early Snacks", "Early Snacks");
-                driver.executeScript("mobile:scroll", scrollObject8);
-                Thread.sleep(2000);
-                // Capture a screenshot and attach it to Allure
-                AllureUtils.captureScreenshot(driver, "earlysnack7");
-                // Click on protein cross icon
-                WebElement fatscross = driver.findElement(crossicon1);
-                fatscross.click();
-                // Log console message to Allure
-        		LOGGER.info("Click on fatscross");
-        		AllureUtils.logStep("Click on fatscross");    
-                // Capture a screenshot and attach it to Allure
-                AllureUtils.captureScreenshot(driver, "29_fatscross");
+//                // Scroll to "Protein" element if it's not present on the screen
+//                By proteinLocator = AppiumBy.accessibilityId("Protein");
+//                if (!isElementPresent(driver, proteinLocator)) {
+//                    // Scroll to "Protein" if it's not present
+//                    HashMap<String, Object> scrollObject1 = new HashMap<>();
+//                    scrollObject1.put("direction", "up");
+//                    scrollObject1.put("Early Snacks", "Early Snacks");
+//                    driver.executeScript("mobile:scroll", scrollObject1);
+//                    Thread.sleep(2000);
+//                }
+//
+//                // Click on protein card
+//                WebElement protein = driver.findElement(Protcard);
+//                protein.click();
+//                // Log console message to Allure
+//        		LOGGER.info("Click on protein ");
+//        		AllureUtils.logStep("Click on protein");    
+//                // Capture a screenshot and attach it to Allure
+//                AllureUtils.captureScreenshot(driver, "protein");
+//
+//                // Scroll to element Early Snacks
+//                HashMap<String, Object> scrollObject6 = new HashMap<>();
+//                scrollObject6.put("direction", "down");
+//                scrollObject6.put("Early Snacks", "Early Snacks");
+//                driver.executeScript("mobile:scroll", scrollObject6);
+//                Thread.sleep(2000);
+//                // Capture a screenshot and attach it to Allure
+//                AllureUtils.captureScreenshot(driver, "earlysnack5");
+//                // Click on protein cross icon
+//                WebElement proteincross = driver.findElement(crossicon1);
+//                proteincross.click();
+//                // Log console message to Allure
+//        		LOGGER.info("Click on proteincross ");
+//        		AllureUtils.logStep("Click on proteincross");    
+//                // Capture a screenshot and attach it to Allure
+//                AllureUtils.captureScreenshot(driver, "proteincross");
+//                
+//                // Click on carbs card
+//                WebElement carbs = driver.findElement(carbcard);
+//                carbs.click();
+//                // Log console message to Allure
+//        		LOGGER.info("Click on carbs ");
+//        		AllureUtils.logStep("Click on carbs");    
+//                // Capture a screenshot and attach it to Allure
+//                AllureUtils.captureScreenshot(driver, "carbs");
+//                
+//                // Scroll to element Early Snacks
+//                HashMap<String, Object> scrollObject7 = new HashMap<>();
+//                scrollObject7.put("direction", "down");
+//                scrollObject7.put("Early Snacks", "Early Snacks");
+//                driver.executeScript("mobile:scroll", scrollObject7);
+//                Thread.sleep(2000);
+//                // Capture a screenshot and attach it to Allure
+//                AllureUtils.captureScreenshot(driver, "earlysnack6");
+//                
+//                // Click on protein cross icon
+//                WebElement carbscross = driver.findElement(crossicon1);
+//                carbscross.click();
+//                // Log console message to Allure
+//        		LOGGER.info("Click on carbscross ");
+//        		AllureUtils.logStep("Click on carbscross");    
+//                // Capture a screenshot and attach it to Allure
+//                AllureUtils.captureScreenshot(driver, "29_carbscross");
+//                
+//                
+//                // Click on fats card
+//                WebElement fats = driver.findElement(fatcard);
+//                fats.click();
+//                // Log console message to Allure
+//        		LOGGER.info("Click on fats ");
+//        		AllureUtils.logStep("Click on fats");    
+//                // Capture a screenshot and attach it to Allure
+//                AllureUtils.captureScreenshot(driver, "29_fats");
+//                
+//                
+//                // Scroll to element Early Snacks
+//                HashMap<String, Object> scrollObject8 = new HashMap<>();
+//                scrollObject8.put("direction", "down");
+//                scrollObject8.put("Early Snacks", "Early Snacks");
+//                driver.executeScript("mobile:scroll", scrollObject8);
+//                Thread.sleep(2000);
+//                // Capture a screenshot and attach it to Allure
+//                AllureUtils.captureScreenshot(driver, "earlysnack7");
+//                // Click on protein cross icon
+//                WebElement fatscross = driver.findElement(crossicon1);
+//                fatscross.click();
+//                // Log console message to Allure
+//        		LOGGER.info("Click on fatscross");
+//        		AllureUtils.logStep("Click on fatscross");    
+//                // Capture a screenshot and attach it to Allure
+//                AllureUtils.captureScreenshot(driver, "29_fatscross");
 
             } catch (Exception e) {
             	// If the arrowright element is not found, log an error message and terminate the app
