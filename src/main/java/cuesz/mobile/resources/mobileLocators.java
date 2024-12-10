@@ -5,10 +5,13 @@ import io.appium.java_client.AppiumBy;
 
 public class mobileLocators {
 	
-
-	public static final By cinamonfuelselection	=	AppiumBy.accessibilityId("Spiced Cider With Cinamon & Clove, Cold Pressed Fuji Apple, Organic");
-	public static final By ginfuelselectionc	=	AppiumBy.accessibilityId("Organic Ginger Spread");
+	public static final By Lunchlabel	= 		AppiumBy.iOSNsPredicateString("name == 'Lunch'");
+	public static final By iconforlunch	= 		AppiumBy.accessibilityId("LunchInfoIcon");
+	public static final By lunchplusicon =		AppiumBy.accessibilityId("LunchAddIcon");
 	
+	public static final By cinamonfuelselection	=	AppiumBy.accessibilityId("Spiced cider with cinamon & clove, cold pressed fuji apple, organic");
+	public static final By ginfuelselectionc	=	AppiumBy.accessibilityId("Organic Ginger Spread");	
+	public static final By cinamonfuelselectionplus	=	AppiumBy.accessibilityId("Spiced cider with cinamon & clove, cold pressed fuji apple, organicPlus");
 	
 	
 	public static final By favoriteclick	= 		AppiumBy.accessibilityId("BreakfastFavoriteFuel");

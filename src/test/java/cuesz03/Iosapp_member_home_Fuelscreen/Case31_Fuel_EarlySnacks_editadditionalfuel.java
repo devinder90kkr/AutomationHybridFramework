@@ -8,6 +8,7 @@ import org.slf4j.LoggerFactory;
 import org.testng.annotations.Test;
 
 import cuesz.allure.reporting.AllureUtils;
+import cuesz.mobile.resources.mobileLocators;
 import cuesz.mobile.resources.mobileTestData;
 import cuesz.pages.AppiummobileBase;
 import cuesz.utils.AppiumappUtils;
@@ -24,13 +25,13 @@ import io.qameta.allure.Story;
 @Feature ("Verify Fuel detail functionlaity related to early snacks edit additional fuel.")
 public class Case31_Fuel_EarlySnacks_editadditionalfuel extends AppiummobileBase {
 	private static final Logger LOGGER = LoggerFactory.getLogger(Case31_Fuel_EarlySnacks_editadditionalfuel.class);
-	private By Homeclick 		= 		AppiumBy.iOSClassChain("**/XCUIElementTypeOther[`label == \"Home\"`][2]");
-	private By editbeetroot		= 		AppiumBy.accessibilityId("Organic ginger spread");
-	private By editclick1		= 		AppiumBy.accessibilityId("Organic ginger spreadPlus");
-	private By earlyclick		= 		AppiumBy.xpath("(//XCUIElementTypeOther[@name=\"Early Snacks\"])[2]");
-	private By breakfastclick	=		AppiumBy.xpath("(//XCUIElementTypeOther[@name=\"Breakfast\"])[2]");
+//	private By Homeclick 		= 		AppiumBy.iOSClassChain("**/XCUIElementTypeOther[`label == \"Home\"`][2]");
+//	private By editbeetroot		= 		AppiumBy.accessibilityId("Organic ginger spread");
+//	private By editclick1		= 		AppiumBy.accessibilityId("Organic ginger spreadPlus");
+//	private By earlyclick		= 		AppiumBy.xpath("(//XCUIElementTypeOther[@name=\"Early Snacks\"])[2]");
+//	private By breakfastclick	=		AppiumBy.xpath("(//XCUIElementTypeOther[@name=\"Breakfast\"])[2]");
 	private By noteclick		= 		AppiumBy.accessibilityId("Notes");
-	private By submittick		= 		AppiumBy.accessibilityId("Submit");
+//	private By submittick		= 		AppiumBy.accessibilityId("Submit");
 	
 	
 
@@ -48,7 +49,7 @@ public class Case31_Fuel_EarlySnacks_editadditionalfuel extends AppiummobileBase
 //        appiumUtils.launchAppWithPackageId("com.cuesz.mobile");
 		 appiumUtils.launchAppWithPackageId(mobileTestData.bundelID);
 		
-		WebElement Homeicon = driver.findElement(Homeclick);
+		WebElement Homeicon = driver.findElement(mobileLocators.Homeclick);
 		Homeicon.click();
 		// Log console message to Allure
  		LOGGER.info("Click on Homeicon");
@@ -104,7 +105,7 @@ public class Case31_Fuel_EarlySnacks_editadditionalfuel extends AppiummobileBase
 
         
         // Edit feature testing
-        WebElement Editbeetroot		= driver.findElement(editbeetroot);
+        WebElement Editbeetroot		= driver.findElement(mobileLocators.cinamonfuelselection);
         Editbeetroot.click();
      // Log console message to Allure
 		LOGGER.info("Click on Editbeetroot");
@@ -113,7 +114,7 @@ public class Case31_Fuel_EarlySnacks_editadditionalfuel extends AppiummobileBase
 		AllureUtils.captureScreenshot(driver, "Case31_3");	
         
         
-        WebElement plusclick	= driver.findElement(editclick1);
+        WebElement plusclick	= driver.findElement(mobileLocators.cinamonfuelselectionplus);
         int numberOfClicks = 2;
         for (int i = 0; i < numberOfClicks; i++) {   
         	plusclick.click();
@@ -128,7 +129,7 @@ public class Case31_Fuel_EarlySnacks_editadditionalfuel extends AppiummobileBase
         AllureUtils.captureScreenshot(driver, "earlysnack5");
         
       //Click on breakfast snacks 
-        WebElement whenclick1	= driver.findElement(breakfastclick);
+        WebElement whenclick1	= driver.findElement(mobileLocators.breakfastclick);
         whenclick1.click();
         // Log console message to Allure
         LOGGER.info("Click on breakfastclick");
@@ -136,7 +137,7 @@ public class Case31_Fuel_EarlySnacks_editadditionalfuel extends AppiummobileBase
         AllureUtils.captureScreenshot(driver, "breakfastclick_31");
         
         //Click on early snacks 
-        WebElement whenclick	= driver.findElement(earlyclick);
+        WebElement whenclick	= driver.findElement(mobileLocators.earlyclick);
         whenclick.click();
         // Log console message to Allure
         LOGGER.info("Click on whenclick");
@@ -144,8 +145,8 @@ public class Case31_Fuel_EarlySnacks_editadditionalfuel extends AppiummobileBase
         AllureUtils.captureScreenshot(driver, "whenclick_31");
             
         //Click on notes and enter values in field. 
-        WebElement noteedit1 = driver.findElement(noteclick);
-        noteedit1.sendKeys("hello this notes is add for early snack additional fuel");
+        WebElement noteedit1 = driver.findElement(mobileLocators.noteclick);
+        noteedit1.sendKeys(mobileTestData.message2);
         
         driver.findElement(AppiumBy.xpath("//XCUIElementTypeButton[@name=\"DONE\"]")).click();
 
@@ -157,13 +158,13 @@ public class Case31_Fuel_EarlySnacks_editadditionalfuel extends AppiummobileBase
 //		driver.executeScript("mobile:scroll", scrollObject111);
 //		Thread.sleep(2000);
         
-     // Scroll down to find Source section
-        scrollToElementWithText("Source");
-        Thread.sleep(2500);
-        
+//     // Scroll down to find Source section
+//        scrollToElementWithText("Source");
+//        Thread.sleep(2500);
+//        
         
 		
-		WebElement editsubmit 	= driver.findElement(submittick);
+		WebElement editsubmit 	= driver.findElement(mobileLocators.submitfavoriteclick);
 		editsubmit.click();
 		// Log console message to Allure
         LOGGER.info("Click on editsubmit");
