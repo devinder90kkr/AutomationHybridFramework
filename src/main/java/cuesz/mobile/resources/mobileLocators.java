@@ -4,6 +4,22 @@ import org.openqa.selenium.By;
 import io.appium.java_client.AppiumBy;
 
 public class mobileLocators {
+
+	
+	public static final By lateSnackplus	=	AppiumBy.accessibilityId("Late SnacksAddIcon");
+	public static final By showmorebranded = AppiumBy.xpath("(//XCUIElementTypeStaticText[@name=\"Show More\"])[2]");
+	public static final By Venisonfuelselection	=	AppiumBy.accessibilityId("Venison Strip");
+	public static final By koftafuelselectionc	=	AppiumBy.accessibilityId("Kofta Kebab");
+	public static final By mustardfuelselection	=	AppiumBy.iOSClassChain("**/XCUIElementTypeOther[`name == \"Mustard\"`][1]");
+	public static final By latesnack		= 		AppiumBy.iOSClassChain("**/XCUIElementTypeOther[`name == \"Late Snacks\"`][2]");
+	public static final By lunchclick		=		AppiumBy.iOSClassChain("**/XCUIElementTypeOther[`name == \"Lunch\"`][2]");
+	public static final By latesncaktick	=	AppiumBy.iOSClassChain("**/XCUIElementTypeOther[`name == \"Late Snacks\"`][2]/XCUIElementTypeOther[3]");
+	
+	public static final By lunchsubmittick	=	AppiumBy.iOSClassChain("**/XCUIElementTypeOther[`name == \"Lunch\"`][2]/XCUIElementTypeOther[3]");
+	public static final By showmorebutton	=		AppiumBy.iOSClassChain("**/XCUIElementTypeStaticText[`label == \"Show More\"`][2]");
+	public static final By stewmeat			=		AppiumBy.accessibilityId("Stew Meat");
+	public static final By kiwifuelselection	=	AppiumBy.accessibilityId("Delicious Kiwifruit");
+	public static final By editstewmeat		=		AppiumBy.accessibilityId("Stew meat");
 	
 	public static final By Lunchlabel	= 		AppiumBy.iOSNsPredicateString("name == 'Lunch'");
 	public static final By iconforlunch	= 		AppiumBy.accessibilityId("LunchInfoIcon");
@@ -439,7 +455,7 @@ public class mobileLocators {
 	public static final By backbttn			=		AppiumBy.accessibilityId("BackPress");
 	public static final By showclikc		=		AppiumBy.accessibilityId("Show More");
 	public static final By vodkafuel		=		AppiumBy.accessibilityId("Vodka");
-	public static final By additionalsearch1=		AppiumBy.iOSNsPredicateString("name == \"AdditionalFuelSearch\"");
+	public static final By additionalsearch1=		AppiumBy.iOSNsPredicateString("name == \"AdditionalFuelSearch\" AND value == \"Search Fuel to log\"");
 	public static final By Uploadimage		=		AppiumBy.accessibilityId("Post PerformanceUploadIcon");
 	public static final By gallery			=		AppiumBy.accessibilityId("GalleryClicked");
 	public static final By submittap		= 		AppiumBy.accessibilityId("SubmitImage");

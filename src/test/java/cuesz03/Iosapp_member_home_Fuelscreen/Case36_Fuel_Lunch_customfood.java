@@ -27,8 +27,7 @@ import io.qameta.allure.Story;
 public class Case36_Fuel_Lunch_customfood extends AppiummobileBase {
 	private static final Logger LOGGER = LoggerFactory.getLogger(Case36_Fuel_Lunch_customfood .class);
 	
-	private By submittick		=		AppiumBy.accessibilityId("ItemSubmit");
-	private By lunchclick		=		AppiumBy.iOSClassChain("**/XCUIElementTypeOther[`name == \"Lunch\"`][2]");
+	
 
 	@Test
 	@Owner("QA") // Add the @Owner annotation to specify the executor
@@ -71,7 +70,7 @@ public class Case36_Fuel_Lunch_customfood extends AppiummobileBase {
 	        
 	        
 	        // Locate the element related to breakfast + icon 
-	        WebElement breakfastplus 	= driver.findElement(mobileLocators.plusadd);
+	        WebElement breakfastplus 	= driver.findElement(mobileLocators.lunchplusicon);
 	        breakfastplus.click();
 	        // Log console message to Allure
 	        LOGGER.info("Click on breakfastplus icon");
@@ -92,19 +91,26 @@ public class Case36_Fuel_Lunch_customfood extends AppiummobileBase {
 	        String searchText = mobileTestData.searchText;
 	        utils.addCustomFood(searchText);
         
-        WebElement Lunchclick	= driver.findElement(lunchclick);
-        Lunchclick.click();
+//        WebElement Lunchclick	= driver.findElement(mobileLocators.lunchclick);
+//        Lunchclick.click();
         
-        // Capture a screenshot and attach it to Allure
-        AllureUtils.captureScreenshot(driver, "lunchadd13");
-        
-        WebElement editsubmit 	= driver.findElement(submittick);
-		editsubmit.click();
-		// Log console message to Allure
-	   LOGGER.info("Click on editsubmit");
-	   AllureUtils.logStep("Click on editsubmit");
-	   AllureUtils.captureScreenshot(driver, "Case36_14");
+  
+//        WebElement editsubmit 	= driver.findElement(mobileLocators.lunchsubmittick);
+//		editsubmit.click();
+//		// Log console message to Allure
+//	   LOGGER.info("Click on editsubmit");
+//	   AllureUtils.logStep("Click on editsubmit");
+//	   AllureUtils.captureScreenshot(driver, "Case36_14");
 		
+        Thread.sleep(3500);
+        WebElement submit2 = driver.findElement(mobileLocators.lunchsubmittick);
+		submit2.click();
+		// Log console message to Allure
+        LOGGER.info("Click on submit2");
+        AllureUtils.logStep("Click on submit2");
+        AllureUtils.captureScreenshot(driver, "Case34_16");
+        
+        
 	   Thread.sleep(2500);
 		 scroll("down", "Lunch");
 
