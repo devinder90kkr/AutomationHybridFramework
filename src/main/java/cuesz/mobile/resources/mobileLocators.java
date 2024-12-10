@@ -4,6 +4,13 @@ import org.openqa.selenium.By;
 import io.appium.java_client.AppiumBy;
 
 public class mobileLocators {
+	
+
+	public static final By cinamonfuelselection	=	AppiumBy.accessibilityId("Spiced Cider With Cinamon & Clove, Cold Pressed Fuji Apple, Organic");
+	public static final By ginfuelselectionc	=	AppiumBy.accessibilityId("Organic Ginger Spread");
+	
+	
+	
 	public static final By favoriteclick	= 		AppiumBy.accessibilityId("BreakfastFavoriteFuel");
 	public static final By favoriteinput	= 		AppiumBy.iOSNsPredicateString("value == \"Enter Fuel name\"");
 	public static final By submitfavoriteclick	= 	AppiumBy.accessibilityId("Submit");
@@ -469,6 +476,8 @@ public class mobileLocators {
 	public static final By plusadd			= 		AppiumBy.accessibilityId("BreakfastAddIcon");	
 	public static final By meat				=		AppiumBy.iOSNsPredicateString("name == \"Meat\"");
 	public static final By backpress		= 		AppiumBy.accessibilityId("FuelBackPress");
+	public static final By earlysnacksplusadd			= 		AppiumBy.accessibilityId("Early SnacksAddIcon");
+	public static final By earlysnacksubmitick	=	AppiumBy.iOSClassChain("**/XCUIElementTypeOther[`name == \"Early Snacks\"`][2]/XCUIElementTypeOther[3]");
 	
 	
 	// Case20_Fuel_optimalfuel 

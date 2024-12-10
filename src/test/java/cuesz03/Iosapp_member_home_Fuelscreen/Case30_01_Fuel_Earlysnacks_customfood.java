@@ -76,7 +76,7 @@ public class Case30_01_Fuel_Earlysnacks_customfood extends AppiummobileBase {
 	        
 	        
 	        // Locate the element related to breakfast + icon 
-	        WebElement breakfastplus 	= driver.findElement(mobileLocators.plusadd);
+	        WebElement breakfastplus 	= driver.findElement(mobileLocators.earlysnacksplusadd);
 	        breakfastplus.click();
 	        // Log console message to Allure
 	        LOGGER.info("Click on breakfastplus icon");
@@ -120,10 +120,10 @@ public class Case30_01_Fuel_Earlysnacks_customfood extends AppiummobileBase {
 	    AllureUtils.logStep("Click on done icon");
 
         
-        driver.findElement(AppiumBy.iOSNsPredicateString("name == 'Early Snacks'")).click();
+//        driver.findElement(AppiumBy.iOSNsPredicateString("name == 'Early Snacks'")).click();
   
-        WebElement submit2 = driver.findElement(submitick);
-		submit2.click();
+        WebElement submit1 = driver.findElement(mobileLocators.earlysnacksubmitick);
+        submit1.click(); 
 		// Log console message to Allure
         LOGGER.info("Click on submit2");
         AllureUtils.logStep("Click on submit2");
