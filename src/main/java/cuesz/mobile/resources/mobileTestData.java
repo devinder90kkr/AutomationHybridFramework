@@ -79,6 +79,9 @@ public class mobileTestData {
 	public static final String food17 =	"Boi";
 	public static final String food18 =	"Fish";
 	public static final String food19 =	"Goa";
-
-	
+	public static final String activtyname = "Walking";
+	public static final String food20 =	"Macrobar";
+	public static final String food21 =	"Yumm";
+	public static final String food22 =	"Ham";
+	public static final String food23= "cioppino";
 }

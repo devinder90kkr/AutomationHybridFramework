@@ -6,9 +6,17 @@ import io.appium.java_client.AppiumBy;
 public class mobileLocators {
 
 	
-	
+	public static final By macrofuelselection	= AppiumBy.accessibilityId("Macrobar, Peanut Butter Chocolate Chip");
+	public static final By macrofuelselectionplus	= AppiumBy.accessibilityId("Macrobar, Peanut Butter Chocolate ChipPlus");
 	public static final By	juicefuelselection = AppiumBy.iOSNsPredicateString("name == \"Juice\" AND label == \"Juice 128 kcal\"");
+	public static final By yummfoodselection	=	AppiumBy.accessibilityId("Tofu Yumm! Bento");
+	public static final By pretickoption		= AppiumBy.iOSClassChain("**/XCUIElementTypeOther[`name == \"Pre Performance\"`][2]/XCUIElementTypeOther[3]");
+	public static final By hamselectionfood		= AppiumBy.accessibilityId("Boneless Ham");
+	public static final By duringtickoption		= AppiumBy.iOSClassChain("**/XCUIElementTypeOther[`name == \"During Performance\"`][2]/XCUIElementTypeOther[3]");
+	public static final By food1selectiobn		= AppiumBy.accessibilityId("Seafood Cioppino Soup");
+	public static final By postticoption		= AppiumBy.iOSClassChain("**/XCUIElementTypeOther[`name == \"Post Performance\"`][2]/XCUIElementTypeOther[3]");
 			
+	
 	public static final By lentifuelselectionc	=	AppiumBy.accessibilityId("Rotini, Red Lentil");
 	public static final By bopfuelselection	=	AppiumBy.accessibilityId("Boiled Egg");
 	public static final By dinnerlabel	= 		AppiumBy.iOSNsPredicateString("name == 'Dinner'");
@@ -491,6 +499,8 @@ public class mobileLocators {
 	public static final By notesevent		= 		AppiumBy.accessibilityId("EventNotes");
 	public static final By tickbttn			= 		AppiumBy.iOSNsPredicateString("name == \"EventSubmit\"");
 	public static final By Skipclick		= 		AppiumBy.accessibilityId("Skip");
+	public static final By continueclick	= 		AppiumBy.accessibilityId("Continue");
+	
 	public static final By hydration1click	=		AppiumBy.accessibilityId("Walking-Hydration");
 	public static final By hydrationplus	=		AppiumBy.accessibilityId("PlusHydrationGlass");
 	public static final By submithydration	=		AppiumBy.accessibilityId("Submit");
