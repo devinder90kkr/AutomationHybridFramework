@@ -1,13 +1,17 @@
 package cuesz03.Iosapp_member_home_Fuelscreen;
 
 import java.util.HashMap;
+import java.util.List;
+
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.testng.annotations.Test;
 
 import cuesz.allure.reporting.AllureUtils;
+import cuesz.mobile.resources.mobileLocators;
 import cuesz.mobile.resources.mobileTestData;
 import cuesz.pages.AppiummobileBase;
 import cuesz.utils.AppiumappUtils;
@@ -25,15 +29,15 @@ import io.qameta.allure.Story;
 public class Case44_Fuel_Dinner_additionalfueldeletecase extends AppiummobileBase {
 	private static final Logger LOGGER = LoggerFactory.getLogger(Case44_Fuel_Dinner_additionalfueldeletecase.class);
 	
-	private By Homeclick 		= 		AppiumBy.iOSClassChain("**/XCUIElementTypeOther[`label == \"Home\"`][2]");
-	private By plusadd			= 		AppiumBy.accessibilityId("DinnerAddIcon");
-	private By doneclick		= 		AppiumBy.accessibilityId("Done");
-	private By additionalsearch	= 		AppiumBy.accessibilityId("AdditionalFuelSearch");
-	private By fish				= 		AppiumBy.iOSNsPredicateString("name == \"Fish\"");
-	private By fishRemove		=		AppiumBy.accessibilityId("FishFuelItemDelete");
-	private By Showclick		= 		AppiumBy.iOSNsPredicateString("name == \"Show More\"");
-	private By Cheesegoat		= 		AppiumBy.accessibilityId("Goat Cheese");
-	private By submitick		= 		AppiumBy.accessibilityId("ItemSubmit");
+//	private By Homeclick 		= 		AppiumBy.iOSClassChain("**/XCUIElementTypeOther[`label == \"Home\"`][2]");
+//	private By plusadd			= 		AppiumBy.accessibilityId("DinnerAddIcon");
+//	private By doneclick		= 		AppiumBy.accessibilityId("Done");
+//	private By additionalsearch	= 		AppiumBy.accessibilityId("AdditionalFuelSearch");
+//	private By fish				= 		AppiumBy.iOSNsPredicateString("name == \"Fish\"");
+//	private By fishRemove		=		AppiumBy.accessibilityId("FishFuelItemDelete");
+//	private By Showclick		= 		AppiumBy.iOSNsPredicateString("name == \"Show More\"");
+//	private By Cheesegoat		= 		AppiumBy.accessibilityId("Goat Cheese");
+//	private By submitick		= 		AppiumBy.accessibilityId("ItemSubmit");
 	
 	@Test
 	@Owner("QA") // Add the @Owner annotation to specify the executor
@@ -48,7 +52,7 @@ public class Case44_Fuel_Dinner_additionalfueldeletecase extends AppiummobileBas
 //        appiumUtils.launchAppWithPackageId("com.cuesz.mobile");	
 		 appiumUtils.launchAppWithPackageId(mobileTestData.bundelID);
 		
-		WebElement Homeicon = driver.findElement(Homeclick);
+		WebElement Homeicon = driver.findElement(mobileLocators.Homeclick);
 		Homeicon.click();
 		// Log console message to Allure
 		LOGGER.info("Click on home menu from bottom");
@@ -72,7 +76,7 @@ public class Case44_Fuel_Dinner_additionalfueldeletecase extends AppiummobileBas
         AllureUtils.captureScreenshot(driver,"44_2");
         
         // Locate the element related to breakfast + icon 
-        WebElement breakfastplus 	= driver.findElement(plusadd);
+        WebElement breakfastplus 	= driver.findElement(mobileLocators.dinnerplusicon);
         breakfastplus.click();
         // Log console message to Allure
         LOGGER.info("Click on breakfastplus");
@@ -80,7 +84,7 @@ public class Case44_Fuel_Dinner_additionalfueldeletecase extends AppiummobileBas
         AllureUtils.captureScreenshot(driver,"44_3");
         
        //click on keypad Done button to hide keypad
-        WebElement keypaddone	= driver.findElement(doneclick);
+        WebElement keypaddone	= driver.findElement(mobileLocators.doneclick);
         keypaddone.click();
         // Log console message to Allure
         LOGGER.info("Click on keypaddone");
@@ -88,28 +92,29 @@ public class Case44_Fuel_Dinner_additionalfueldeletecase extends AppiummobileBas
         AllureUtils.captureScreenshot(driver,"44_4");
         
         // Click on fuel search field 
-        WebElement additionalfuel = driver.findElement(additionalsearch);
+        WebElement additionalfuel = driver.findElement(mobileLocators.additionalsearch);
         additionalfuel.click();
         // Log console message to Allure
         LOGGER.info("Click on additionalfuel");
         AllureUtils.logStep("Click on additionalfuel");
         AllureUtils.captureScreenshot(driver,"44_5");
         
-        WebElement searchtext1	= driver.findElement(AppiumBy.iOSNsPredicateString("label == \"F\""));
-        searchtext1.click();
+//        WebElement searchtext1	= driver.findElement(AppiumBy.iOSNsPredicateString("label == \"F\""));
+//        searchtext1.click();
+//        
+//        WebElement searchtext2	= driver.findElement(AppiumBy.iOSNsPredicateString("label == \"i\""));
+//        searchtext2.click();
+//        
+//        WebElement searchtext3	= driver.findElement(AppiumBy.iOSNsPredicateString("label == \"s\""));
+//        searchtext3.click();
+//
+//        WebElement searchtext4	= driver.findElement(AppiumBy.iOSNsPredicateString("label == \"h\""));
+//        searchtext4.click();
+//
+//        WebElement Keypaddone	= driver.findElement(doneclick);
+//        Keypaddone.click();
         
-        WebElement searchtext2	= driver.findElement(AppiumBy.iOSNsPredicateString("label == \"i\""));
-        searchtext2.click();
-        
-        WebElement searchtext3	= driver.findElement(AppiumBy.iOSNsPredicateString("label == \"s\""));
-        searchtext3.click();
-
-        WebElement searchtext4	= driver.findElement(AppiumBy.iOSNsPredicateString("label == \"h\""));
-        searchtext4.click();
-
-        WebElement Keypaddone	= driver.findElement(doneclick);
-        Keypaddone.click();
-        
+        additionalfuel.sendKeys(mobileTestData.food18);
         // Log console message to Allure
         LOGGER.info("Enter values for search, Click on Done");
         AllureUtils.logStep("Enter values for search, Click on done");
@@ -120,7 +125,7 @@ public class Case44_Fuel_Dinner_additionalfueldeletecase extends AppiummobileBas
 	    AllureUtils.captureScreenshot(driver, "Dinner14");
         
         
-        WebElement fuelselection	= driver.findElement(fish);
+        WebElement fuelselection	= driver.findElement(mobileLocators.fish);
         fuelselection.click();
         // Log console message to Allure
         LOGGER.info("Click on fuelselection");
@@ -128,7 +133,7 @@ public class Case44_Fuel_Dinner_additionalfueldeletecase extends AppiummobileBas
 		// Capture a screenshot and attach it to Allure
         AllureUtils.captureScreenshot(driver, "Case44_7");
         
-        WebElement fueldelete	= driver.findElement(fishRemove);
+        WebElement fueldelete	= driver.findElement(mobileLocators.fishRemove);
         fueldelete.click();
         // Log console message to Allure
         LOGGER.info("Click on fueldelete");
@@ -137,7 +142,7 @@ public class Case44_Fuel_Dinner_additionalfueldeletecase extends AppiummobileBas
         AllureUtils.captureScreenshot(driver, "Case44_8");
         
         // Click on fuel search field 
-        WebElement additionalfuel2 = driver.findElement(additionalsearch);
+        WebElement additionalfuel2 = driver.findElement(mobileLocators.additionalsearch);
         additionalfuel2.click();
         // Log console message to Allure
         LOGGER.info("Click on additionalfuel2");
@@ -145,25 +150,28 @@ public class Case44_Fuel_Dinner_additionalfueldeletecase extends AppiummobileBas
 		// Capture a screenshot and attach it to Allure
         AllureUtils.captureScreenshot(driver, "Case44_9");
         
-        WebElement searchtext11	= driver.findElement(AppiumBy.iOSNsPredicateString("label == \"G\""));
-        searchtext11.click();
-        
-        WebElement searchtext21	= driver.findElement(AppiumBy.iOSNsPredicateString("label == \"o\""));
-        searchtext21.click();
-        
-        WebElement searchtext31	= driver.findElement(AppiumBy.iOSNsPredicateString("label == \"a\""));
-        searchtext31.click();
-        
-        WebElement Keypaddone1	= driver.findElement(doneclick);
-        Keypaddone1.click();
-        
+//        WebElement searchtext11	= driver.findElement(AppiumBy.iOSNsPredicateString("label == \"G\""));
+//        searchtext11.click();
+//        
+//        WebElement searchtext21	= driver.findElement(AppiumBy.iOSNsPredicateString("label == \"o\""));
+//        searchtext21.click();
+//        
+//        WebElement searchtext31	= driver.findElement(AppiumBy.iOSNsPredicateString("label == \"a\""));
+//        searchtext31.click();
+//        
+//        WebElement Keypaddone1	= driver.findElement(doneclick);
+//        Keypaddone1.click();
+        additionalfuel.sendKeys(mobileTestData.food19);
+      
+        //click on keypad Done button to hide keypad
+        WebElement keypaddone1	= driver.findElement(mobileLocators.doneclick);
+        keypaddone1.click();
         // Log console message to Allure
-        LOGGER.info("Enter values for search, Click on Done");
-        AllureUtils.logStep("Enter values for search, Click on done");
-		// Capture a screenshot and attach it to Allure
-        AllureUtils.captureScreenshot(driver, "Case44_10");
+        LOGGER.info("Click on keypaddone icon");
+        AllureUtils.logStep("Click on keypaddone icon");
+        AllureUtils.captureScreenshot(driver, "Case26_4");
         		
-        WebElement brandedShowmore	= driver.findElement(Showclick);
+        WebElement brandedShowmore	= driver.findElement(mobileLocators.Showclick);
         brandedShowmore.click();        
         // Log console message to Allure
         LOGGER.info("Click on brandedShowmore");
@@ -182,7 +190,7 @@ public class Case44_Fuel_Dinner_additionalfueldeletecase extends AppiummobileBas
 		scrollObject1.put("Goat Cheese", "Goat Cheese");
 		driver.executeScript("mobile:scroll", scrollObject1);
 		
-		WebElement fuelselection1	= driver.findElement(Cheesegoat);
+		WebElement fuelselection1	= driver.findElement(mobileLocators.Cheesegoat);
         fuelselection1.click();
         // Log console message to Allure
         LOGGER.info("Click on fuelselection1");
@@ -192,15 +200,34 @@ public class Case44_Fuel_Dinner_additionalfueldeletecase extends AppiummobileBas
         
         
         
-        //Click on dinner  
-	     WebElement dinnerClick = driver.findElement(AppiumBy.iOSClassChain("**/XCUIElementTypeOther[`name == \"Dinner\"`][2]"));
-	     dinnerClick.click();
-	     // Log console message to Allure
-       LOGGER.info("Click on dinnerClick");
-       AllureUtils.logStep("Click on dinnerClick");
+//        //Click on dinner  
+//	     WebElement dinnerClick = driver.findElement(AppiumBy.iOSClassChain("**/XCUIElementTypeOther[`name == \"Dinner\"`][2]"));
+//	     dinnerClick.click();
+//	     // Log console message to Allure
+//       LOGGER.info("Click on dinnerClick");
+//       AllureUtils.logStep("Click on dinnerClick");
+//        //        // Click on timer 
+        WebElement Timerclick 	= driver.findElement(mobileLocators.Time);
+        Timerclick.click();
+        List<WebElement>values = driver.findElements(mobileLocators.pickerelement);
+		for (int i=0; i<values.size();i++)
+		{		
+		System.out.println(values.get(i).getText());
+		}
+		values.get(0).sendKeys("8");
+		values.get(0).sendKeys(Keys.TAB);
+		Thread.sleep(3500);
+		values.get(1).sendKeys("08");
+		values.get(1).sendKeys(Keys.TAB);
+		Thread.sleep(3500);
+		values.get(2).sendKeys("AM");
+		driver.findElement(mobileLocators.Doneclick).click();
+	// Log console message to Allure
+	    LOGGER.info("Click on done icon");
+	    AllureUtils.logStep("Click on done icon");
+
         
-        
-        WebElement submit1 = driver.findElement(submitick);
+        WebElement submit1 = driver.findElement(mobileLocators.dinnerTickoption);
 		submit1.click();
 		// Log console message to Allure
         LOGGER.info("Click on submit1");

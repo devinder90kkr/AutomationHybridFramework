@@ -1,7 +1,10 @@
 package cuesz03.Iosapp_member_home_Fuelscreen;
 
 import java.util.HashMap;
+import java.util.List;
+
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -27,8 +30,8 @@ import io.qameta.allure.Story;
 public class Case39_Fuel_Latesnacks_customfood extends AppiummobileBase {
 	private static final Logger LOGGER = LoggerFactory.getLogger(Case39_Fuel_Latesnacks_customfood .class);
 	
-	private By submittick		=		AppiumBy.accessibilityId("ItemSubmit");
-	private By latesnack		= 		AppiumBy.iOSClassChain("**/XCUIElementTypeOther[`name == \"Late Snacks\"`][2]");
+//	private By submittick		=		AppiumBy.accessibilityId("ItemSubmit");
+//	private By latesnack		= 		AppiumBy.iOSClassChain("**/XCUIElementTypeOther[`name == \"Late Snacks\"`][2]");
 
 	@Test
 	@Owner("QA") // Add the @Owner annotation to specify the executor
@@ -70,7 +73,7 @@ public class Case39_Fuel_Latesnacks_customfood extends AppiummobileBase {
 	        
 	        
 	        // Locate the element related to breakfast + icon 
-	        WebElement breakfastplus 	= driver.findElement(mobileLocators.plusadd);
+	        WebElement breakfastplus 	= driver.findElement(mobileLocators.lateSnackplus);
 	        breakfastplus.click();
 	        // Log console message to Allure
 	        LOGGER.info("Click on breakfastplus icon");
@@ -90,14 +93,34 @@ public class Case39_Fuel_Latesnacks_customfood extends AppiummobileBase {
 	    // Call the utility method
 	    String searchText = mobileTestData.searchText;
 	    utils.addCustomFood(searchText);    
-        
-        WebElement Latesnack	= driver.findElement(latesnack);
-        Latesnack.click();
-        // Log console message to Allure
-        LOGGER.info(" Click on Latesnack");
-        AllureUtils.logStep("Click on fuelLatesnackselection3");
-        
-        WebElement editsubmit 	= driver.findElement(submittick);
+//        
+//        WebElement Latesnack	= driver.findElement(mobileLocators.latesnack);
+//        Latesnack.click();
+//        // Log console message to Allure
+//        LOGGER.info(" Click on Latesnack");
+//        AllureUtils.logStep("Click on fuelLatesnackselection3");
+	    // Click on timer 
+        WebElement Timerclick 	= driver.findElement(mobileLocators.Time);
+        Timerclick.click();
+        List<WebElement>values = driver.findElements(mobileLocators.pickerelement);
+		for (int i=0; i<values.size();i++)
+		{		
+		System.out.println(values.get(i).getText());
+		}
+		values.get(0).sendKeys("8");
+		values.get(0).sendKeys(Keys.TAB);
+		Thread.sleep(3500);
+		values.get(1).sendKeys("08");
+		values.get(1).sendKeys(Keys.TAB);
+		Thread.sleep(3500);
+		values.get(2).sendKeys("AM");
+		driver.findElement(mobileLocators.Doneclick).click();
+	// Log console message to Allure
+	    LOGGER.info("Click on done icon");
+	    AllureUtils.logStep("Click on done icon");
+
+	    
+        WebElement editsubmit 	= driver.findElement(mobileLocators.latesncaktick);
 		editsubmit.click();
 		// Log console message to Allure
         LOGGER.info("Click on editsubmit");

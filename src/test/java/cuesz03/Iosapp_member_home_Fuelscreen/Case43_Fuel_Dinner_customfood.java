@@ -1,7 +1,9 @@
 package cuesz03.Iosapp_member_home_Fuelscreen;
 
 import java.util.HashMap;
-import org.openqa.selenium.By;
+import java.util.List;
+
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -26,8 +28,7 @@ import io.qameta.allure.Story;
 @Feature ("Verify Fuel detail functionlaity related to Custom fuel.")
 public class Case43_Fuel_Dinner_customfood extends AppiummobileBase {
 	private static final Logger LOGGER = LoggerFactory.getLogger(Case43_Fuel_Dinner_customfood.class);
-	private By submittick		=		AppiumBy.accessibilityId("ItemSubmit");
-
+	
 	@Test
 	@Owner("QA") // Add the @Owner annotation to specify the executor
     @Severity(SeverityLevel.NORMAL)      
@@ -68,7 +69,7 @@ public class Case43_Fuel_Dinner_customfood extends AppiummobileBase {
 	        
 	        
 	        // Locate the element related to breakfast + icon 
-	        WebElement breakfastplus 	= driver.findElement(mobileLocators.plusadd);
+	        WebElement breakfastplus 	= driver.findElement(mobileLocators.dinnerplusicon);
 	        breakfastplus.click();
 	        // Log console message to Allure
 	        LOGGER.info("Click on breakfastplus icon");
@@ -88,15 +89,28 @@ public class Case43_Fuel_Dinner_customfood extends AppiummobileBase {
 		    String searchText = mobileTestData.searchText;
 		    utils.addCustomFood(searchText);  
 	        
-        //Click on dinner  
-	     WebElement dinnerClick = driver.findElement(AppiumBy.iOSClassChain("**/XCUIElementTypeOther[`name == \"Dinner\"`][2]"));
-	     dinnerClick.click();
-	     // Log console message to Allure
-	     LOGGER.info("Click on dinnerClick");
-	     AllureUtils.logStep("Click on dinnerClick");
+//        // Click on timer 
+	        WebElement Timerclick 	= driver.findElement(mobileLocators.Time);
+	        Timerclick.click();
+	        List<WebElement>values = driver.findElements(mobileLocators.pickerelement);
+			for (int i=0; i<values.size();i++)
+			{		
+			System.out.println(values.get(i).getText());
+			}
+			values.get(0).sendKeys("8");
+			values.get(0).sendKeys(Keys.TAB);
+			Thread.sleep(3500);
+			values.get(1).sendKeys("08");
+			values.get(1).sendKeys(Keys.TAB);
+			Thread.sleep(3500);
+			values.get(2).sendKeys("AM");
+			driver.findElement(mobileLocators.Doneclick).click();
+		// Log console message to Allure
+		    LOGGER.info("Click on done icon");
+		    AllureUtils.logStep("Click on done icon");
+
         
-        
-	     WebElement editsubmit 	= driver.findElement(submittick);
+	     WebElement editsubmit 	= driver.findElement(mobileLocators.dinnerTickoption);
 	     editsubmit.click();
 			// Log console message to Allure
 	       LOGGER.info("click on editsubmit");

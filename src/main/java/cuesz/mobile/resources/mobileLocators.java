@@ -6,6 +6,17 @@ import io.appium.java_client.AppiumBy;
 public class mobileLocators {
 
 	
+	
+	public static final By	juicefuelselection = AppiumBy.iOSNsPredicateString("name == \"Juice\" AND label == \"Juice 128 kcal\"");
+			
+	public static final By lentifuelselectionc	=	AppiumBy.accessibilityId("Rotini, Red Lentil");
+	public static final By bopfuelselection	=	AppiumBy.accessibilityId("Boiled Egg");
+	public static final By dinnerlabel	= 		AppiumBy.iOSNsPredicateString("name == 'Dinner'");
+	public static final By icondinner	= 		AppiumBy.accessibilityId("DinnerInfoIcon");
+	public static final By tickdinner	= 		AppiumBy.accessibilityId("RecommendedFuelSubmit");
+	public static final By dinnerplusicon	= 	AppiumBy.accessibilityId("DinnerAddIcon");
+	public static final By dinnerTickoption	= AppiumBy.iOSClassChain("**/XCUIElementTypeOther[`name == \"Dinner\"`][2]/XCUIElementTypeOther[3]");
+	
 	public static final By lateSnackplus	=	AppiumBy.accessibilityId("Late SnacksAddIcon");
 	public static final By showmorebranded = AppiumBy.xpath("(//XCUIElementTypeStaticText[@name=\"Show More\"])[2]");
 	public static final By Venisonfuelselection	=	AppiumBy.accessibilityId("Venison Strip");
