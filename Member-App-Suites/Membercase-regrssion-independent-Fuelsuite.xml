@@ -27,6 +27,20 @@
       
       <class name="cuesz03.Iosapp_member_home_Fuelscreen.Case37_Fuel_Latesnacks_additionalfuel"/>
       
+      <class name="cuesz03.Iosapp_member_home_Fuelscreen.Case39_Fuel_Latesnacks_customfood"/>
+      
+      <class name="cuesz03.Iosapp_member_home_Fuelscreen.Case40_Fuel_Dinner_recommendedfuel"/>
+      <class name="cuesz03.Iosapp_member_home_Fuelscreen.Case41_Fuel_Dinner_additionalfuel"/>
+      <class name="cuesz03.Iosapp_member_home_Fuelscreen.Case43_Fuel_Dinner_customfood"/>
+      <class name="cuesz03.Iosapp_member_home_Fuelscreen.Case44_Fuel_Dinner_additionalfueldeletecase"/>
+      
+      <class name="cuesz03.Iosapp_member_home_Fuelscreen.Case45_Fuel_Pastday1_brekfastactivity"/>
+ 
+      <class name="cuesz03.Iosapp_member_home_Fuelscreen.Case51_Fuel_AdditionalfuelcaseforAll"/>
+ 
+      <class name="cuesz03.Iosapp_member_home_Fuelscreen.Case53_Fuel_notesbottom"/>
+      
+      
  	 
     </classes>
   </test> <!-- Test -->

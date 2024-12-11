@@ -102,20 +102,6 @@ public class Case41_Fuel_Dinner_additionalfuel extends AppiummobileBase {
         // Capture a screenshot and attach it to Allure
         AllureUtils.captureScreenshot(driver, "Dinner5");
         
-//        WebElement searchtext1	= driver.findElement(AppiumBy.iOSNsPredicateString("label == \"J\""));
-//        searchtext1.click();
-//        
-//        WebElement searchtext2	= driver.findElement(AppiumBy.iOSNsPredicateString("label == \"u\""));
-//        searchtext2.click();
-//        
-//        WebElement searchtext3	= driver.findElement(AppiumBy.iOSNsPredicateString("label == \"i\""));
-//        searchtext3.click();
-//        
-//        WebElement searchtext4	= driver.findElement(AppiumBy.iOSNsPredicateString("label == \"c\""));
-//        searchtext4.click();
-//        
-//        WebElement searchtext5	= driver.findElement(AppiumBy.iOSNsPredicateString("label == \"e\""));
-//        searchtext5.click();
         additionalfuel.sendKeys(mobileTestData.food15);
  
         WebElement Keypaddone	= driver.findElement(mobileLocators.doneclick);

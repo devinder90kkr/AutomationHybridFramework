@@ -29,24 +29,6 @@ import io.qameta.allure.Story;
 public class Case37_Fuel_Latesnacks_additionalfuel extends AppiummobileBase {
 	private static final Logger LOGGER = LoggerFactory.getLogger(Case37_Fuel_Latesnacks_additionalfuel .class);
 	
-//	private By Homeclick 		= 		AppiumBy.iOSClassChain("**/XCUIElementTypeOther[`label == \"Home\"`][2]");
-//	private By plusadd			= 		AppiumBy.accessibilityId("Late SnacksAddIcon");
-//	private By doneclick		= 		AppiumBy.accessibilityId("Done");
-//	private By additionalsearch	= 		AppiumBy.accessibilityId("AdditionalFuelSearch");
-//	private By Venisonfuelselection	=	AppiumBy.accessibilityId("Venison");
-//	private By submitick		= 		AppiumBy.accessibilityId("ItemSubmit");
-//	private By Time				= 		AppiumBy.accessibilityId("AdditionalItemTime");
-//	private By pickerelement	= 		AppiumBy.xpath("//XCUIElementTypePickerWheel");
-//	private By Doneclick		= 		AppiumBy.accessibilityId("AlcohalTime");
-//	private By koftafuelselectionc	=	AppiumBy.accessibilityId("Kofta Kebab");
-//	private By additionalsearch1	=	AppiumBy.iOSNsPredicateString("label == \"Search Fuel to log\" AND name == \"AdditionalFuelSearch\"");
-//	private By mustardfuelselection	=	AppiumBy.iOSClassChain("**/XCUIElementTypeOther[`name == \"Mustard\"`][1]");
-//	private By Protcard			= 		AppiumBy.accessibilityId("Protein");
-//	private By crossicon1		= 		AppiumBy.accessibilityId("FuelMacroNutrientCross");
-//	private By carbcard			= 		AppiumBy.accessibilityId("Carbs");
-//	private By fatcard			= 		AppiumBy.accessibilityId("Fat");
-//	private By latesnack		= 		AppiumBy.iOSClassChain("**/XCUIElementTypeOther[`name == \"Late Snacks\"`][2]");
-	
 	@Test
 	@Owner("QA") // Add the @Owner annotation to specify the executor
     @Severity(SeverityLevel.NORMAL)      
@@ -110,29 +92,7 @@ public class Case37_Fuel_Latesnacks_additionalfuel extends AppiummobileBase {
         LOGGER.info("Click on additionalfuel");
         AllureUtils.logStep("Click on additionalfuel");
         AllureUtils.captureScreenshot(driver, "Case37_5");
-        
-        
-//        WebElement searchtext1	= driver.findElement(AppiumBy.iOSNsPredicateString("label == \"V\""));
-//        searchtext1.click();
-//        
-//        WebElement searchtext2	= driver.findElement(AppiumBy.iOSNsPredicateString("label == \"e\""));
-//        searchtext2.click();
-//        
-//        WebElement searchtext3	= driver.findElement(AppiumBy.iOSNsPredicateString("label == \"n\""));
-//        searchtext3.click();
-//        
-//        WebElement searchtext4	= driver.findElement(AppiumBy.iOSNsPredicateString("label == \"s\""));
-//        searchtext4.click();
-//        
-//        WebElement searchtext5	= driver.findElement(AppiumBy.iOSNsPredicateString("label == \"i\""));
-//        searchtext5.click();
-//        
-//        WebElement searchtext6	= driver.findElement(AppiumBy.iOSNsPredicateString("label == \"o\""));
-//        searchtext6.click();
-//        
-//        WebElement searchtext7	= driver.findElement(AppiumBy.iOSNsPredicateString("label == \"n\""));
-//        searchtext7.click();
-        
+         
         additionalfuel.sendKeys(mobileTestData.food12);
  
         WebElement Keypaddone	= driver.findElement(mobileLocators.doneclick);

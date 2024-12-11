@@ -120,28 +120,6 @@ public class Case30_Fuel_Earlysnacks_additionalfuel extends AppiummobileBase {
         // Capture a screenshot and attach it to Allure
         AllureUtils.captureScreenshot(driver, "earlysnack5");
         
-//        
-//        WebElement searchtext1	= driver.findElement(AppiumBy.iOSNsPredicateString("label == \"C\""));
-//        searchtext1.click();
-//        
-//        WebElement searchtext2	= driver.findElement(AppiumBy.iOSNsPredicateString("label == \"i\""));
-//        searchtext2.click();
-//        
-//        WebElement searchtext3	= driver.findElement(AppiumBy.iOSNsPredicateString("label == \"n\""));
-//        searchtext3.click();
-//        
-//        WebElement searchtext4	= driver.findElement(AppiumBy.iOSNsPredicateString("label == \"a\""));
-//        searchtext4.click();
-//        
-//        WebElement searchtext5	= driver.findElement(AppiumBy.iOSNsPredicateString("label == \"m\""));
-//        searchtext5.click();
-//        
-//        WebElement searchtext6	= driver.findElement(AppiumBy.iOSNsPredicateString("label == \"o\""));
-//        searchtext6.click();
-//        
-//        WebElement searchtext7	= driver.findElement(AppiumBy.iOSNsPredicateString("label == \"n\""));
-//        searchtext7.click();
-        
         additionalfuel.sendKeys(mobileTestData.food8);
         
         WebElement Keypaddone	= driver.findElement(mobileLocators.doneclick);
@@ -160,20 +138,6 @@ public class Case30_Fuel_Earlysnacks_additionalfuel extends AppiummobileBase {
         AllureUtils.logStep("Click on fuelselection");
         AllureUtils.captureScreenshot(driver, "fuelselection_30");
 
-//        Thread.sleep(3000);
-//		// Method to scroll to perform screen
-//		HashMap<String,Object>scrollObject15 =new HashMap<>();
-//		scrollObject15.put("direction", "down");
-//		scrollObject15.put("cinamonfuelselection", "cinamonfuelselection");
-//		driver.executeScript("mobile:scroll", scrollObject15);
-//        
-//        
-//        Thread.sleep(4500);
-//       
-        
-//        driver.findElement(AppiumBy.iOSNsPredicateString("name == 'Early Snacks'")).click();
-//        Thread.sleep(4500);
-          
         // Click on timer 
         WebElement Timerclick 	= driver.findElement(mobileLocators.Time);
         Timerclick.click();
