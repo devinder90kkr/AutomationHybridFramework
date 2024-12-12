@@ -12,6 +12,7 @@ import cuesz.mobile.resources.mobileLocators;
 import cuesz.mobile.resources.mobileTestData;
 import cuesz.pages.AppiummobileBase;
 import cuesz.utils.AppiumappUtils;
+import cuesz.utils.RetryUtils;
 import io.appium.java_client.AppiumBy;
 import io.qameta.allure.Description;
 import io.qameta.allure.Epic;
@@ -75,44 +76,24 @@ public class Case31_Fuel_EarlySnacks_editadditionalfuel extends AppiummobileBase
         
         Thread.sleep(4500);        
         
-//		// Method to scroll to perform screen
-//		HashMap<String,Object>scrollObject1 =new HashMap<>();
-//		scrollObject1.put("direction", "down");
-//		scrollObject1.put("Breakfast", "Breakfast");
-//		driver.executeScript("mobile:scroll", scrollObject1);
-//		Thread.sleep(2000);
-        
      // Scroll down to find Breakfast section
         scrollToElementWithText("Early Snacks");
-    
-//        // Method to scroll to perform screen
-// 		HashMap<String,Object>scrollObject12 =new HashMap<>();
-// 		scrollObject12.put("direction", "down");
-// 		scrollObject12.put("Early Snacks", "Early Snacks");
-// 		driver.executeScript("mobile:scroll", scrollObject12);
-// 		Thread.sleep(2000);
-        
-        Thread.sleep(5500);
+        // Log console message to Allure
+        LOGGER.info("Click on fuelclick");
+        AllureUtils.logStep("scroll to early snack");
+        AllureUtils.captureScreenshot(driver, "scroll to early snack");
+            
+        Thread.sleep(1500);
          
-//     // Replace "com.example.app:id/targetElementId" with the actual ID or accessibility ID of your target element
-//        String targetElementId = "com.cuesz.mobile:ios class chain /**/XCUIElementTypeStaticText[`label == \"Early Snacks\"`][1]";
-//        HashMap<String, Object> scrollObject11 = new HashMap<>();
-//        scrollObject11.put("direction", "down");
-//        scrollObject11.put("element", targetElementId);
-//
-//        driver.executeScript("mobile:scroll", scrollObject11);
-//        Thread.sleep(2000);
-
-        
         // Edit feature testing
         WebElement Editbeetroot		= driver.findElement(mobileLocators.cinamonfuelselection);
         Editbeetroot.click();
-     // Log console message to Allure
-		LOGGER.info("Click on Editbeetroot");
-		AllureUtils.logStep("Click on Editbeetroot");
-		// Capture a screenshot and attach it to Allure
-		AllureUtils.captureScreenshot(driver, "Case31_3");	
+        // Log console message to Allure
+        LOGGER.info("Click on Editbeetroot");
+        AllureUtils.logStep("Click on Editbeetroot");
+        AllureUtils.captureScreenshot(driver, "Case23_Editbeetroot");
         
+     Thread.sleep(1500);
         
         WebElement plusclick	= driver.findElement(mobileLocators.cinamonfuelselectionplus);
         int numberOfClicks = 2;

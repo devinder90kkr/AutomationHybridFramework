@@ -44,10 +44,11 @@ public class mobileLocators {
 	public static final By iconforlunch	= 		AppiumBy.accessibilityId("LunchInfoIcon");
 	public static final By lunchplusicon =		AppiumBy.accessibilityId("LunchAddIcon");
 	
-	public static final By cinamonfuelselection	=	AppiumBy.accessibilityId("Spiced cider with cinamon & clove, cold pressed fuji apple, organic");
+	public static final By cinamonfuelselection	=	AppiumBy.accessibilityId("Blueberry timbit");
 	public static final By ginfuelselectionc	=	AppiumBy.accessibilityId("Organic Ginger Spread");	
-	public static final By cinamonfuelselectionplus	=	AppiumBy.accessibilityId("Spiced cider with cinamon & clove, cold pressed fuji apple, organicPlus");
-	
+	public static final By cinamonfuelselectionplus	=	AppiumBy.accessibilityId("Blueberry timbitPlus");
+	public static final By siopaofuel		=	AppiumBy.accessibilityId("Siopao");	
+	public static final By siopaofuelplus		=	AppiumBy.accessibilityId("SiopaoPlus");	
 	
 	public static final By favoriteclick	= 		AppiumBy.accessibilityId("BreakfastFavoriteFuel");
 	public static final By favoriteinput	= 		AppiumBy.iOSNsPredicateString("value == \"Enter Fuel name\"");

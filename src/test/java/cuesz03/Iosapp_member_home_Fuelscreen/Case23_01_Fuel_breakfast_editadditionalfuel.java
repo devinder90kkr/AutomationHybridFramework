@@ -230,48 +230,48 @@ public class Case23_01_Fuel_breakfast_editadditionalfuel extends AppiummobileBas
 		Thread.sleep(2500);
 		
 		
-		//scroll to image upload
-		By breakfastLocator = AppiumBy.iOSClassChain("**/XCUIElementTypeStaticText[`label == \"Breakfast\"`][1]");
-	        if(!isElementPresent(driver, breakfastLocator)){
-	            // Scroll to "Basketball" if it's not present
-	            HashMap<String,Object> scrollObject1 = new HashMap<>();
-	            scrollObject1.put("direction", "up");
-	            scrollObject1.put("Breakfast", "Breakfast");
-	            driver.executeScript("mobile:scroll", scrollObject1);
-	            Thread.sleep(2000);
-	        }
-		
-//		// Method to scroll to perform screen
-//		HashMap<String,Object>scrollObject3 =new HashMap<>();
-//		scrollObject3.put("direction", "up");
-//		scrollObject3.put("Breakfast", "Breakfast");
-//		driver.executeScript("mobile:scroll", scrollObject3);
-
-		 // Click on timer 
-        WebElement breakfastedittime 	= driver.findElement(mobileLocators.editbreakfastime);
-        breakfastedittime.click();
-     // Log console message to Allure
-        LOGGER.info("Click on breakfastedittime");
-        AllureUtils.logStep("Click on breakfastedittime");
-        AllureUtils.captureScreenshot(driver, "Case23_Fuel_breakfastedittime");
-        
-        List<WebElement>values = driver.findElements(mobileLocators.pickerelement);
-		for (int i=0; i<values.size();i++)
-		{		
-		System.out.println(values.get(i).getText());
-		}
-		values.get(0).sendKeys("9");
-		values.get(0).sendKeys(Keys.TAB);
-		Thread.sleep(3500);
-		values.get(1).sendKeys("08");
-		values.get(1).sendKeys(Keys.TAB);
-		Thread.sleep(3500);
-		values.get(2).sendKeys("AM");
-		driver.findElement(mobileLocators.Doneclick).click();
-		// Log console message to Allure
-        LOGGER.info("Click on Done");
-        AllureUtils.logStep("Click on done");
-       
+//		//scroll to image upload
+//		By breakfastLocator = AppiumBy.iOSClassChain("**/XCUIElementTypeStaticText[`label == \"Breakfast\"`][1]");
+//	        if(!isElementPresent(driver, breakfastLocator)){
+//	            // Scroll to "Basketball" if it's not present
+//	            HashMap<String,Object> scrollObject1 = new HashMap<>();
+//	            scrollObject1.put("direction", "up");
+//	            scrollObject1.put("Breakfast", "Breakfast");
+//	            driver.executeScript("mobile:scroll", scrollObject1);
+//	            Thread.sleep(2000);
+//	        }
+//		
+////		// Method to scroll to perform screen
+////		HashMap<String,Object>scrollObject3 =new HashMap<>();
+////		scrollObject3.put("direction", "up");
+////		scrollObject3.put("Breakfast", "Breakfast");
+////		driver.executeScript("mobile:scroll", scrollObject3);
+//
+//		 // Click on timer 
+//        WebElement breakfastedittime 	= driver.findElement(mobileLocators.editbreakfastime);
+//        breakfastedittime.click();
+//     // Log console message to Allure
+//        LOGGER.info("Click on breakfastedittime");
+//        AllureUtils.logStep("Click on breakfastedittime");
+//        AllureUtils.captureScreenshot(driver, "Case23_Fuel_breakfastedittime");
+//        
+//        List<WebElement>values = driver.findElements(mobileLocators.pickerelement);
+//		for (int i=0; i<values.size();i++)
+//		{		
+//		System.out.println(values.get(i).getText());
+//		}
+//		values.get(0).sendKeys("9");
+//		values.get(0).sendKeys(Keys.TAB);
+//		Thread.sleep(3500);
+//		values.get(1).sendKeys("08");
+//		values.get(1).sendKeys(Keys.TAB);
+//		Thread.sleep(3500);
+//		values.get(2).sendKeys("AM");
+//		driver.findElement(mobileLocators.Doneclick).click();
+//		// Log console message to Allure
+//        LOGGER.info("Click on Done");
+//        AllureUtils.logStep("Click on done");
+//       
 		
 		 } catch (Exception e) {
 	            LOGGER.error("An error occurred during the mindful screen test", e);

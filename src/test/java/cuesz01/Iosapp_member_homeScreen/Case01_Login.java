@@ -207,8 +207,6 @@
 //	}
 //}
 //
-
-
 package cuesz01.Iosapp_member_homeScreen;
 
 import java.time.Duration;
