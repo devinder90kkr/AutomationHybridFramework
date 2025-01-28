@@ -69,8 +69,8 @@ public class mobileLocators {
 	public static final By backicon = AppiumBy.accessibilityId("BackPress");
 	public static final By backicon1 = AppiumBy.accessibilityId("RecommendBackPress");
 	public static final By tickbreakfast = AppiumBy.accessibilityId("RecommendedFuelSubmit");
-	public static final By editbeetroot		= 		AppiumBy.accessibilityId("Beetroot");
-	public static final By editclick1		= 		AppiumBy.accessibilityId("BeetrootPlus");
+	public static final By editfood		= 		AppiumBy.accessibilityId("Brown bread");
+	public static final By editclick1		= 		AppiumBy.accessibilityId("Brown breadPlus");
 	public static final By earlyclick		= 		AppiumBy.xpath("(//XCUIElementTypeOther[@name=\"Early Snacks\"])[2]");
 	public static final By breakfastclick	=		AppiumBy.xpath("(//XCUIElementTypeOther[@name=\"Breakfast\"])[2]");
 	public static final By noteclick		= 		AppiumBy.accessibilityId("Notes");
@@ -453,16 +453,24 @@ public class mobileLocators {
 
 	public static final By meatplus			= 		AppiumBy.accessibilityId("MeatPlus");
 	public static final By serchclick		= 		AppiumBy.accessibilityId("AdditionalFuelSearch");
-	public static final By Beetroot			=		AppiumBy.iOSNsPredicateString("name == \"Beetroot\" AND label == \"Beetroot 22 kcal\"");
+	public static final By Beetroot			=		AppiumBy.iOSClassChain("**/XCUIElementTypeOther[`name == \"Protein Shake\"`][1]");
+	public static final By beetrootplusicon	=		AppiumBy.accessibilityId("undefinedPlus");
 	
 	
 	public static final By additionalsearch	= 		AppiumBy.accessibilityId("AdditionalFuelSearch");
 	public static final By additionalsearcheditbreakfast = 	AppiumBy.iOSClassChain("**/XCUIElementTypeTextField[`name == \"AdditionalFuelSearch\"`]");
 	public static final By faggot			=		AppiumBy.iOSNsPredicateString("name == \"Faggot\"");
+	
 	public static final By fagoticon		= 		AppiumBy.accessibilityId("FaggotFuelItemInfo");
 	public static final By backtap			= 		AppiumBy.accessibilityId("BackPress");
 	public static final By fagotplus		= 		AppiumBy.accessibilityId("FaggotPlus");
 //	public static final By submitick		= 		AppiumBy.accessibilityId("ItemSubmit");	
+	public static final By food1			=		AppiumBy.accessibilityId("Brown Bread");
+	public static final By foodinfoicon		=		AppiumBy.accessibilityId("Brown BreadFuelItemInfo");
+	public static final By foodplusicon		=		AppiumBy.accessibilityId("Brown BreadPlus");
+	
+	
+	
 	public static final By submitick		= 		AppiumBy.iOSClassChain("**/XCUIElementTypeOther[`name == \"Breakfast\"`][2]/XCUIElementTypeOther[3]");
 	public static final By categoryselection=		AppiumBy.iOSClassChain("**/XCUIElementTypeOther[`name == \"Breakfast\"`][3]");
 	public static final By breakfastoption  =		AppiumBy.iOSNsPredicateString("name == \"ItemPressed\" AND label == \"Breakfast\"");
@@ -506,9 +514,12 @@ public class mobileLocators {
 	public static final By hydrationplus	=		AppiumBy.accessibilityId("PlusHydrationGlass");
 	public static final By submithydration	=		AppiumBy.accessibilityId("Submit");
 	public static final By preplusicon		=		AppiumBy.accessibilityId("Pre PerformancePlueIcon");
-	public static final By fish				= 		AppiumBy.iOSNsPredicateString("name == \"Fish\" AND label == \"Fish 218 kcal\"");
-	public static final By fishRemove		=		AppiumBy.accessibilityId("FishFuelItemDelete");
-	public static final By Cheesegoat		= 		AppiumBy.accessibilityId("Goat Cheese");
+//	public static final By fish				= 		AppiumBy.iOSNsPredicateString("name == \"Fish\" AND label == \"Fish 218 kcal\"");
+	public static final By fish				= 		AppiumBy.accessibilityId("Ham Omelette");
+	
+	public static final By fishRemove		=		AppiumBy.accessibilityId("Ham OmeletteFuelItemDelete");
+	public static final By chevrecheese		= 		AppiumBy.accessibilityId("Chevre Goat Cheese");	
+	public static final By Cheesegoat		= 		AppiumBy.accessibilityId("Chevre Goat CheesePlus");
 	public static final By performancetime	=		AppiumBy.accessibilityId("Pre PerformanceTimeEdit");
 	public static final By deleticon		=		AppiumBy.accessibilityId("Walking-Delete");
 	public static final By yesdeleticon		=		AppiumBy.accessibilityId("Yes");

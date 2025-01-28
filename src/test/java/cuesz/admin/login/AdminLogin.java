@@ -38,7 +38,7 @@
 //        
 //    }
 //}
-package cuesz.logintest;
+package cuesz.admin.login;
 
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -51,9 +51,10 @@ import org.testng.annotations.Test;
 import cuesz.factory.WebDriverManager;
 import cuesz.pages.Loginpage;
 import cuesz.utils.Config;
+import cuesz.utils.Configuration;
 import io.qameta.allure.Allure;
 
-public class AdvocateLogin {
+public class AdminLogin {
     private WebDriver driver;
     private Loginpage loginPage; 
     private String advocateEmail;
@@ -68,11 +69,11 @@ public class AdvocateLogin {
         driver = WebDriverManager.getDriver(browser);
         driver.manage().window().maximize();
        // driver.get(Configuration.BASE_URL);
-        driver.get(Config.getProperty("BASE_URL"));
+        driver.get(Config.getProperty("ADMIN_URL"));
         loginPage = new Loginpage(driver);
         // Read advocate email and password from config file
-        advocateEmail = Config.getProperty("advocatemail");
-        advocatePassword = Config.getProperty("advocatepassword");
+        advocateEmail = Config.getProperty("adminemail");
+        advocatePassword = Config.getProperty("adminpassword");
     }
 
     @Test
@@ -80,9 +81,10 @@ public class AdvocateLogin {
       //  loginPage.login("markcuesz90@yopmail.com", "User!234");
     	  loginPage.login(advocateEmail, advocatePassword);
         // Capture and add login details to Allure report
-        String username = "markcuesz90@yopmail.com";
-        String password = "User!234";
-        Allure.attachment("Login Details", "Username: " + username + "\nPassword: " + password);
+//        String username = "markcuesz90@yopmail.com";
+//        String password = "User!234";
+//        Allure.attachment("Login Details", "Username: " + username + "\nPassword: " + password);
+    
     }
 
     private String getBrowserFromConfigFile() {
@@ -94,6 +96,4 @@ public class AdvocateLogin {
         }
         return properties.getProperty("browser", "chrome");
     }
-
-
 }

@@ -4,6 +4,10 @@ import org.openqa.selenium.By;
 
 public class weblocators {
 	
+	//Case01_create_advocate
+	public static final By advocateclick		= (By.xpath("//img[@title='Advocate']"));
+	
+	
 	//	Case108_Workout_Templates_assigntomember
 	public static final By assignlp1			 = (By.xpath("//span[normalize-space()='Assign LP1']"));
 	public static final By editassignlp1		 = (By.xpath("//span[normalize-space()='Edit LP1']"));
