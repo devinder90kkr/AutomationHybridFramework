@@ -49,6 +49,7 @@ public class mobileLocators {
 	public static final By cinamonfuelselectionplus	=	AppiumBy.accessibilityId("BlueberriesPlus");
 	public static final By siopaofuel		=	AppiumBy.accessibilityId("Siopao");	
 	public static final By siopaofuelplus		=	AppiumBy.accessibilityId("SiopaoPlus");	
+	public static final By editearly		=	AppiumBy.accessibilityId("Blueberries");
 	
 	public static final By favoriteclick	= 		AppiumBy.accessibilityId("BreakfastFavoriteFuel");
 	public static final By favoriteinput	= 		AppiumBy.iOSNsPredicateString("value == \"Enter Fuel name\"");
