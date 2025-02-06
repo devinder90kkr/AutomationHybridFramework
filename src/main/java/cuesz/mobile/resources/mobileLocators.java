@@ -39,10 +39,13 @@ public class mobileLocators {
 	public static final By stewmeat			=		AppiumBy.accessibilityId("Stew Meat");
 	public static final By kiwifuelselection	=	AppiumBy.accessibilityId("Delicious Kiwifruit");
 	public static final By editstewmeat		=		AppiumBy.accessibilityId("Stew meat");
+	public static final By venisonfuelselection	=	AppiumBy.accessibilityId("Venison Strip");
 	
 	public static final By Lunchlabel	= 		AppiumBy.iOSNsPredicateString("name == 'Lunch'");
 	public static final By iconforlunch	= 		AppiumBy.accessibilityId("LunchInfoIcon");
 	public static final By lunchplusicon =		AppiumBy.accessibilityId("LunchAddIcon");
+	
+	public static final By stewmeatplus	=	AppiumBy.accessibilityId("Stew meatPlus");
 	
 	public static final By cinamonfuelselection	=	AppiumBy.accessibilityId("Blueberry");
 	public static final By ginfuelselectionc	=	AppiumBy.accessibilityId("Organic Ginger Spread");	
