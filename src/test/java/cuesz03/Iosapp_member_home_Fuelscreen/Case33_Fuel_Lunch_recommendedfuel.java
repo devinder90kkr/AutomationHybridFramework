@@ -43,7 +43,7 @@ public class Case33_Fuel_Lunch_recommendedfuel extends AppiummobileBase {
 		// Create an instance of AppiumUtils and pass the driver
 		AppiumappUtils appiumUtils = new AppiumappUtils(driver);
         // Launch the app using the utility method
-//        appiumUtils.launchAppWithPackageId("com.cuesz.mobile");	
+		//        appiumUtils.launchAppWithPackageId("com.cuesz.mobile");	
 		 appiumUtils.launchAppWithPackageId(mobileTestData.bundelID);
 		
 		WebElement Homeicon = driver.findElement(mobileLocators.Homeclick);
@@ -137,29 +137,7 @@ public class Case33_Fuel_Lunch_recommendedfuel extends AppiummobileBase {
         AllureUtils.logStep("Click on Recommendedfuel");
         AllureUtils.captureScreenshot(driver, "Case33_7");
         
-//        WebElement recommendebackclick	= driver.findElement(mobileLocators.backicon1);
-//        recommendebackclick.click();
-//        // Log console message to Allure
-//        LOGGER.info("Click on recommendebackclick");
-//        AllureUtils.logStep("Click on recommendebackclick");
-//        AllureUtils.captureScreenshot(driver, "Case33_8");
-//        
-//        //click on keypad Done button to hide keypad
-//        WebElement keypaddone1	= driver.findElement(mobileLocators.doneclick);
-//        keypaddone1.click();
-//        // Log console message to Allure
-//        LOGGER.info("Click on keypaddone1");
-//        AllureUtils.logStep("Click on keypaddone1");
-//        AllureUtils.captureScreenshot(driver, "Case33_9");
-        
-        
-//        // Locate and click on recommended Fuel button
-//        WebElement Recommendedfuel1 	= driver.findElement(mobileLocators.recommendedclick);
-//        Recommendedfuel1.click();
-//     // Log console message to Allure
-//        LOGGER.info("Click on Recommendedfuel1");
-//        AllureUtils.logStep("Click on Recommendedfuel1");
-//        AllureUtils.captureScreenshot(driver, "Case33_10");
+
         Thread.sleep(5000);
         
         try {
@@ -224,88 +202,6 @@ public class Case33_Fuel_Lunch_recommendedfuel extends AppiummobileBase {
         AllureUtils.captureScreenshot(driver, "Lunch4");
         
         Thread.sleep(4500);
-        
-       
-        scroll("down", "Lunch");	
-  		scroll("up", "Early Snacks");
-  		Thread.sleep(2000);
-  		
-  		scroll("up", "Breakfast");
-  		Thread.sleep(2000);
-  
-        
-  		scroll("up", "DRINK MORE WATER");
-  		Thread.sleep(2000);
-        
-  		
-  		scroll("up", "Carbs");
-  		Thread.sleep(2000);
-    
-  		//click on protein card
-  		WebElement protein = driver.findElement(mobileLocators.Protcard);
-  		protein.click();	
-  		// Log console message to Allure
-        LOGGER.info("Click on protein");
-        AllureUtils.logStep("Click on protein");
-        AllureUtils.captureScreenshot(driver, "Case33_14");
-  		
-  		scroll("down", "Early Snacks");
-  		scroll("down", "Lunch");
-  		Thread.sleep(2000);
-  		// Capture a screenshot and attach it to Allure
-          AllureUtils.captureScreenshot(driver, "Lunch5");	
-  		//Click on protein cross icon
-  		WebElement proteincross = driver.findElement(mobileLocators.crossicon1);
-  		proteincross.click();
-  		// Log console message to Allure
-        LOGGER.info("Click on proteincross");
-        AllureUtils.logStep("Click on proteincross");
-        AllureUtils.captureScreenshot(driver, "Case33_15");
-        
-  		//click on carbs card
-  		WebElement carbs = driver.findElement(mobileLocators.carbcard);
-  		carbs.click();	
-  	// Log console message to Allure
-        LOGGER.info("Click on carbs");
-        AllureUtils.logStep("Click on carbs");
-        AllureUtils.captureScreenshot(driver, "Case33_16");
-  		
-  		scroll("down", "Early Snacks");  		
-  		scroll("down", "Lunch");
-  		Thread.sleep(2000); 		
-  		// Capture a screenshot and attach it to Allure
-          AllureUtils.captureScreenshot(driver, "Lunch6");
-  		//Click on protein cross icon
-          
-  		WebElement carbscross = driver.findElement(mobileLocators.crossicon1);
-  		carbscross.click();
-  		// Log console message to Allure
-        LOGGER.info("Click on carbscross");
-        AllureUtils.logStep("Click on carbscross");
-        AllureUtils.captureScreenshot(driver, "carbscross");
-        
-  		//click on fats card
-  		WebElement fats = driver.findElement(mobileLocators.fatcard);
-  		fats.click();	
-  		// Log console message to Allure
-        LOGGER.info("Click on fats");
-        AllureUtils.logStep("Click on fats");
-        AllureUtils.captureScreenshot(driver, "fats");
-        
-  		scroll("down", "Early Snacks");
-  		scroll("down", "Lunch");
-  		Thread.sleep(2000); 
-  		// Capture a screenshot and attach it to Allure
-          AllureUtils.captureScreenshot(driver, "Lunch7");
-  		//Click on protein cross icon
-          
-  		WebElement fatscross = driver.findElement(mobileLocators.crossicon1);
-  		fatscross.click();
-  		// Log console message to Allure
-        LOGGER.info("Click on fatscross");
-        AllureUtils.logStep("Click on fatscross");
-        AllureUtils.captureScreenshot(driver, "33_fatscross");
-        
         
         } catch (Exception e) {
         	// If the arrowright element is not found, log an error message and terminate the app
