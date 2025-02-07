@@ -1,5 +1,5 @@
 //https://chat.openai.com/share/f592ab35-529c-4434-a989-5fac7039696c
-package cuesz03.Iosapp_member_home_Fuelscreen;
+package cuesz04.Iosapp_member_home_Fuelscreen.Uploadphotocases.perform.pending;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -11,6 +11,7 @@ import cuesz.mobile.resources.mobileTestData;
 import cuesz.mobile.resources.mobilelement;
 import cuesz.pages.AppiummobileBase;
 import cuesz.utils.AppiumappUtils;
+import cuesz03.Iosapp_member_home_Fuelscreen.Case20_Fuel_optimalfuel;
 import io.qameta.allure.Description;
 import io.qameta.allure.Epic;
 import io.qameta.allure.Feature;

@@ -1,6 +1,8 @@
 //https://chat.openai.com/share/f592ab35-529c-4434-a989-5fac7039696c
 package cuesz03.Iosapp_member_home_Fuelscreen;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.testng.annotations.Test;
 
 import cuesz.allure.reporting.AllureUtils;
@@ -9,6 +11,7 @@ import cuesz.mobile.resources.mobileTestData;
 import cuesz.mobile.resources.mobilelement;
 import cuesz.pages.AppiummobileBase;
 import cuesz.utils.AppiumappUtils;
+import cuesz04.Iosapp_member_home_Fuelscreen.Uploadphotocases.perform.pending.Case45_Fuel_Pastday1_brekfastactivity;
 import io.qameta.allure.Description;
 import io.qameta.allure.Epic;
 import io.qameta.allure.Feature;
@@ -20,6 +23,7 @@ import io.qameta.allure.Story;
 @Epic ("Member add additional Upload images for at bottom for categories")
 @Feature ("Verify member able to Uplaod fuel images for brekafat to dinner")
 public class Case53_Fuel_notesbottom extends AppiummobileBase {
+	private static final Logger LOGGER = LoggerFactory.getLogger(Case45_Fuel_Pastday1_brekfastactivity.class);
 	
 	mobileLocators locators = new mobileLocators();	
 
@@ -38,14 +42,22 @@ public class Case53_Fuel_notesbottom extends AppiummobileBase {
 				
         // Click on Home-icon
         mobilelement.clickElement(driver, mobileLocators.Homeclick);
+        // Log console message to Allure
+     	LOGGER.info("Click on home menu from bottom");
+        AllureUtils.logStep("Click on home menu from bottom");
+        // Capture a screenshot and attach it to Allure
+        AllureUtils.captureScreenshot(driver, "Case53_Fuel_notesbottom1");
   
 		// scroll-down to perform fuel mind-full restore label
 		mobilelement.scrollDownToElement(driver, "Perform Fuel Mindful Restore");
+		// Log console message to Allure
+     	LOGGER.info("scroll down to perform fuel mind-full restore label");
+        AllureUtils.logStep("scroll down to perform fuel mind-full restore label");
 	
 		// Click on Fuel screen
         mobilelement.clickElement(driver, mobileLocators.Fuelhomeclick);
-		
-		
+        
+
 		Thread.sleep(3000);
 		// Scroll to "Early-Snacks"
 		mobilelement.scrollDownToElement(driver, "Early Snacks");
