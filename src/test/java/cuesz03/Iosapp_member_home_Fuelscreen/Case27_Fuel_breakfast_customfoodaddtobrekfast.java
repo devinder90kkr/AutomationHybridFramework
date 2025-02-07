@@ -47,7 +47,6 @@ public class Case27_Fuel_breakfast_customfoodaddtobrekfast extends AppiummobileB
 			// Create an instance of AppiumUtils and pass the driver
 			AppiumappUtils appiumUtils = new AppiumappUtils(driver);
 	        // Launch the app using the utility method
-//	        appiumUtils.launchAppWithPackageId("com.cuesz.mobile");	
 			 appiumUtils.launchAppWithPackageId(mobileTestData.bundelID);
 			
 			WebElement Homeicon = driver.findElement(mobileLocators.Homeclick);
@@ -111,17 +110,10 @@ public class Case27_Fuel_breakfast_customfoodaddtobrekfast extends AppiummobileB
 			Thread.sleep(3500);
 			values.get(2).sendKeys("AM");
 			driver.findElement(Doneclick).click();
-		// Log console message to Allure
+			// Log console message to Allure
 		    LOGGER.info("Click on done icon");
 		    AllureUtils.logStep("Click on done icon");
 		    
-//		    Thread.sleep(3500);        
-//			WebElement submit = driver.findElement(submitick);
-//			submit.click();
-//			// Log console message to Allure
-//	        LOGGER.info("Click on submit");
-//	        AllureUtils.logStep("Click on submit");
-//	        AllureUtils.captureScreenshot(driver, "Case27_23");
 		    Thread.sleep(2500);
 	        WebElement submit1 = driver.findElement(mobileLocators.submitick);
 	        submit1.click();

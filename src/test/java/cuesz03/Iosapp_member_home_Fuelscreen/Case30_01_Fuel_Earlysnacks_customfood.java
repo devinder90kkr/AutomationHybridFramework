@@ -28,8 +28,6 @@ import io.qameta.allure.Story;
 @Feature ("Verify Fuel detail functionlaity related to early snacks fuel.")
 public class Case30_01_Fuel_Earlysnacks_customfood extends AppiummobileBase {
 	private static final Logger LOGGER = LoggerFactory.getLogger(Case30_01_Fuel_Earlysnacks_customfood.class);
-	
-	private By submitick		= 		AppiumBy.accessibilityId("ItemSubmit");
 	private By Time				= 		AppiumBy.accessibilityId("AdditionalItemTime");
 	private By pickerelement	= 		AppiumBy.xpath("//XCUIElementTypePickerWheel");
 	private By Doneclick		= 		AppiumBy.accessibilityId("AlcohalTime");

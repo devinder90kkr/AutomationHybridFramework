@@ -481,14 +481,13 @@ public class mobileLocators {
 	public static final By fagoticon		= 		AppiumBy.accessibilityId("FaggotFuelItemInfo");
 	public static final By backtap			= 		AppiumBy.accessibilityId("BackPress");
 	public static final By fagotplus		= 		AppiumBy.accessibilityId("FaggotPlus");
-//	public static final By submitick		= 		AppiumBy.accessibilityId("ItemSubmit");	
 	public static final By food1			=		AppiumBy.accessibilityId("Brown Bread");
 	public static final By foodinfoicon		=		AppiumBy.accessibilityId("Brown BreadFuelItemInfo");
 	public static final By foodplusicon		=		AppiumBy.accessibilityId("Brown BreadPlus");
 	
 	
 	
-	public static final By submitick		= 		AppiumBy.iOSClassChain("**/XCUIElementTypeOther[`name == \"Breakfast\"`][1]/XCUIElementTypeOther[3]");
+	public static final By submitick		= 		AppiumBy.iOSClassChain("**/XCUIElementTypeOther[`name == \"Breakfast\"`][2]/XCUIElementTypeOther[3]");
 	public static final By categoryselection=		AppiumBy.iOSClassChain("**/XCUIElementTypeOther[`name == \"Breakfast\"`][2]");
 	public static final By breakfastoption  =		AppiumBy.iOSNsPredicateString("name == \"ItemPressed\" AND label == \"Breakfast\"");
 	

@@ -2,6 +2,7 @@ package cuesz04.Iosapp_member_home_Fuelscreen.Uploadphotocases.perform.pending;
 
 import java.util.HashMap;
 import java.util.List;
+import java.util.NoSuchElementException;
 
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
@@ -79,8 +80,8 @@ public class Case45_Fuel_Pastday1_brekfastactivity extends AppiummobileBase {
         AllureUtils.logStep("Click on breakfastplus icon");
         AllureUtils.captureScreenshot(driver, "Case22_Fuel_breakfast_additionalfuel3");
         
-        
-       //click on keypad Done button to hide keypad
+       
+        //click on keypad Done button to hide keypad
         WebElement keypaddone    = driver.findElement(mobileLocators.doneclick);
         keypaddone.click();
         // Log console message to Allure
@@ -95,22 +96,57 @@ public class Case45_Fuel_Pastday1_brekfastactivity extends AppiummobileBase {
         AllureUtils.logStep("Click on additionalfuel");
         AllureUtils.captureScreenshot(driver, "Case22_Fuel_breakfast_additionalfuel4");
         
-        additionalfuel.sendKeys(mobileTestData.food1);
+        // Enter food name in search field
+        LOGGER.info("Entering food name into the search field: " + mobileTestData.food24);
+        additionalfuel.sendKeys(mobileTestData.food24);
+        AllureUtils.logStep("Entering food name into the search field: " + mobileTestData.food24);
         
-        WebElement fuelselection    = driver.findElement(mobileLocators.faggot);
-        fuelselection.click();
-        LOGGER.info("Click on  fuelselection ");
-        AllureUtils.logStep("Click on  fuelselection ");
+        //click on keypad Done button to hide keypad
+        WebElement keypaddone1    = driver.findElement(mobileLocators.doneclick);
+        keypaddone1.click();
+        // Log console message to Allure
+        LOGGER.info("Click on Done");
+        AllureUtils.logStep("Click on done");
+        
+
+        try {
+            // Check if the food item exists in the history
+            WebElement foodHistoryItem = driver.findElement(AppiumBy.accessibilityId("Brown Bread"));
+            LOGGER.info("Food item 'Brown bread' found in the history.");
+
+            // Click on the existing food item if clickable
+            if (foodHistoryItem.isDisplayed() && foodHistoryItem.isEnabled()) {
+                foodHistoryItem.click();
+                AllureUtils.logStep("Clicked on 'Brown bread' from the history.");
+            } else {
+                LOGGER.warn("'Brown bread' is found but not clickable.");
+            }
+
+            // Click on 'fuelselection' after clicking on the foodHistoryItem
+            WebElement fuelselection = driver.findElement(mobileLocators.food1);
+            fuelselection.click();
+            AllureUtils.logStep("Clicked on 'fuelselection' after 'Brown bread'.");
+        } catch (NoSuchElementException e) {
+            LOGGER.info("Food item 'Brown bread' not found in the history. Selecting fuel option instead.");
+
+            // Click on 'fuelselection' as the food item doesn't exist in the history
+            WebElement fuelselection = driver.findElement(mobileLocators.food1);
+            fuelselection.click();
+            AllureUtils.logStep("Clicked on 'fuelselection' to add a new food item.");
+        }
+
+        // Capture a screenshot for verification
         AllureUtils.captureScreenshot(driver, "Case22_Fuel_breakfast_additionalfuel5");
+
         
-        Thread.sleep(2500);        
-        WebElement faggoticon        = driver.findElement(mobileLocators.fagoticon);
-        faggoticon.click();
-        LOGGER.info("Click on  faggoticon ");
-        AllureUtils.logStep("Click on  faggoticon ");
+        //Click on food info icon
+        WebElement fooditemicon        = driver.findElement(mobileLocators.foodinfoicon);
+        fooditemicon.click();
+        LOGGER.info("Click on  fooditemicon ");
+        AllureUtils.logStep("Click on  fooditemicon ");
         AllureUtils.captureScreenshot(driver, "Case22_Fuel_breakfast_additionalfuel6");
         
-        
+        //Click on backbutton
         WebElement backicon         = driver.findElement(mobileLocators.backtap);
         backicon.click();      
         LOGGER.info("click on backicon");
@@ -122,358 +158,121 @@ public class Case45_Fuel_Pastday1_brekfastactivity extends AppiummobileBase {
         // Method to scroll to perform screen
         HashMap<String,Object>scrollObject56 =new HashMap<>();
         scrollObject56.put("direction", "down");
-        scrollObject56.put("fagotplus", "fagotplus");
+        scrollObject56.put("Brown BreadPlus", "Brown BreadPlus");
         driver.executeScript("mobile:scroll", scrollObject56);
         Thread.sleep(2000);
          LOGGER.info("Scroll object");
          AllureUtils.logStep("Scroll object");  
         
-        WebElement faggotplus        = driver.findElement(mobileLocators.fagotplus);
+        WebElement foodplus  = driver.findElement(mobileLocators.foodplusicon);
         int numberOfClicks = 3;
         for (int i = 0; i < numberOfClicks; i++) {   
-        faggotplus.click();
-        LOGGER.info("Click on  faggotplus icon");
-        AllureUtils.logStep("Click on faggotplus icon");    
+        	foodplus.click();
+        LOGGER.info("Click on  foodplus icon");
+        AllureUtils.logStep("Click on foodplus icon");    
         }
         
         // Capture a screenshot and attach it to Allure
         AllureUtils.captureScreenshot(driver, "additional2");
         
-
+        
+      WebElement categoryselection = driver.findElement(mobileLocators.categoryselection);
+      categoryselection.click();
+      
+      
+      WebElement breakfastcategoryselection = driver.findElement(mobileLocators.breakfastoption);
+      breakfastcategoryselection.click();
+      
+      // Click on timer 
+      WebElement Timerclick     = driver.findElement(mobileLocators.Time);
+      Timerclick.click();
+      LOGGER.info("Click on Timerclick ");
+      AllureUtils.logStep("Click on Timerclick");    
+     
+      List<WebElement>values = driver.findElements(mobileLocators.pickerelement);
+      for (int i=0; i<values.size();i++)
+      {        
+      System.out.println(values.get(i).getText());
+      }
+      values.get(0).sendKeys("8");
+      values.get(0).sendKeys(Keys.TAB);
+      Thread.sleep(3500);
+      values.get(1).sendKeys("08");
+      values.get(1).sendKeys(Keys.TAB);
+      Thread.sleep(3500);
+      values.get(2).sendKeys("AM");
+      driver.findElement(mobileLocators.Doneclick).click();
+      LOGGER.info("Click on Doneclick ");
+      AllureUtils.logStep("Click on Doneclick");
+        
+       //Click on submit tick button
         WebElement submit = driver.findElement(mobileLocators.submitick);
         submit.click();
           // Log console message to Allure
         LOGGER.info("Click on submit");
         AllureUtils.logStep("Click on submit");
         AllureUtils.captureScreenshot(driver, "submit");
+              
+      
         
-        /*****************************/
-        
-        // Locate the element related to breakfast + icon 
-        WebElement breakfastplus2 	= driver.findElement(mobileLocators.earlysnacksplusadd);
-        breakfastplus2.click();
+/******************* During edit food*******************/ 
+        // Edit feature testing
+        WebElement Editfood		= driver.findElement(mobileLocators.editfood);
+        Editfood.click();
         // Log console message to Allure
-        LOGGER.info("Click on breakfastplus2");
-        AllureUtils.logStep("Click on breakfastplus2");
-        AllureUtils.captureScreenshot(driver, "breakfastplus_30");
-        
-        //click on keypad Done button to hide keypad
-        WebElement keypaddone2	= driver.findElement(mobileLocators.doneclick);
-        keypaddone2.click();
-        // Log console message to Allure
-        LOGGER.info("Click on Doneclick ");
-        AllureUtils.logStep("Click on Doneclick"); 
-        
-        // Click on fuel search field 
-        WebElement additionalfuel2 = driver.findElement(mobileLocators.additionalsearch);
-        additionalfuel2.click();
-        // Log console message to Allure
-        LOGGER.info("Click on additionalfuel2");
-        AllureUtils.logStep("Click on additionalfuel2");
-        AllureUtils.captureScreenshot(driver, "additionalfuel_30");
-        
-        additionalfuel2.sendKeys(mobileTestData.food9);
-        // Log console message to Allure
-        LOGGER.info("Click on earlysnackplus");
-        AllureUtils.logStep("Click on earlysnackplus");
-        AllureUtils.captureScreenshot(driver, "earlysnackplus_29");
-        
-        WebElement Keypaddone2	= driver.findElement(mobileLocators.doneclick);
-        Keypaddone2.click();
-        // Log console message to Allure
-        LOGGER.info("Click on Doneclick ");
-        AllureUtils.logStep("Click on Doneclick"); 
-        
-        
-        WebElement showmorebranded	= driver.findElement(AppiumBy.iOSClassChain("**/XCUIElementTypeStaticText[`name == \"Show More\"`][2]"));
-        showmorebranded.click();
-        // Log console message to Allure
-        LOGGER.info("Click on brandedshow more button ");
-        AllureUtils.logStep("Click on branded show more button"); 
-        
-Thread.sleep(2500);
-        WebElement fuelselection2	= driver.findElement(mobileLocators.ginfuelselectionc);
-        fuelselection2.click();
-        // Log console message to Allure
-        LOGGER.info("Click on fuelselection2");
-        AllureUtils.logStep("Click on fuelselection2");
-        AllureUtils.captureScreenshot(driver, "fuelselection2_30");
-        
-        Thread.sleep(3000);
-		// Method to scroll to perform screen
-		HashMap<String,Object>scrollObject16 =new HashMap<>();
-		scrollObject16.put("direction", "down");
-		scrollObject16.put("ginfuelselectionc", "ginfuelselectionc");
-		driver.executeScript("mobile:scroll", scrollObject16);
-        
-        
-        
-//        driver.findElement(AppiumBy.iOSNsPredicateString("name == 'Early Snacks'")).click();
-  
-        WebElement submit2 = driver.findElement(mobileLocators.earlysnacksubmitick);
-		submit2.click();
-		// Log console message to Allure
-        LOGGER.info("Click on submit2");
-        AllureUtils.logStep("Click on submit2");
-        AllureUtils.captureScreenshot(driver, "submit2_30");
-		Thread.sleep(4500);
-		
-		
-		
-		
-		 // Locate the element related to breakfast + icon 
-        WebElement lunchplus 	= driver.findElement(mobileLocators.lunchplusicon);
-        lunchplus.click();
-        // Log console message to Allure
-        LOGGER.info("Click on lunchplus");
-        AllureUtils.logStep("Click on lunchplus");
-        AllureUtils.captureScreenshot(driver, "Case34_3");
-        
-        //click on keypad Done button to hide keypad
-        WebElement keypaddone11	= driver.findElement(mobileLocators.doneclick);
-        keypaddone11.click();
-        // Log console message to Allure
-        LOGGER.info("Click on keypaddone");
-        AllureUtils.logStep("Click on keypaddone");
-        AllureUtils.captureScreenshot(driver, "Case34_4");
-        
-        // Click on fuel search field 
-        WebElement additionalfuel11 = driver.findElement(mobileLocators.additionalsearch);
-        additionalfuel11.click();
-        // Log console message to Allure
-        LOGGER.info("Click on additionalfuel");
-        AllureUtils.logStep("Click on additionalfuel");
-        AllureUtils.captureScreenshot(driver, "Case34_5");
-        
-        // Capture a screenshot and attach it to Allure
-        AllureUtils.captureScreenshot(driver, "lunchadd1");
-          
-        additionalfuel11.sendKeys(mobileTestData.food10);
-        
- 
-        WebElement Keypaddone1	= driver.findElement(mobileLocators.doneclick);
-        Keypaddone1.click();
-        // Log console message to Allure
-        LOGGER.info("Enter values for search, Click on Done");
-        AllureUtils.logStep("Enter values for search, Click on done");
-		// Capture a screenshot and attach it to Allure
-        AllureUtils.captureScreenshot(driver, "Case34_7");
-        
-        Thread.sleep(2500);
-        WebElement brandedshowmore	= driver.findElement(mobileLocators.showmorebutton);
-        brandedshowmore.click();
-        // Log console message to Allure
-        LOGGER.info("Click on brandedshowmore");
-        AllureUtils.logStep("Click on brandedshowmore");
-        AllureUtils.captureScreenshot(driver, "Case34_8");
-        Thread.sleep(2500);
-        
-        WebElement fuelselection11	= driver.findElement(mobileLocators.stewmeat);
-        fuelselection11.click();
-        // Log console message to Allure
-        LOGGER.info("Click on fuelselection");
-        AllureUtils.logStep("Click on fuelselection");
-        AllureUtils.captureScreenshot(driver, "Case34_9");
-        
-        Thread.sleep(4500);
-        
-        // Click on timer 
-        WebElement Timerclick1 	= driver.findElement(mobileLocators.Time);
-        Timerclick1.click();
-        List<WebElement>values1 = driver.findElements(mobileLocators.pickerelement);
-		for (int i=0; i<values1.size();i++)
-		{		
-		System.out.println(values1.get(i).getText());
-		}
-		values1.get(0).sendKeys("01");
-		values1.get(0).sendKeys(Keys.TAB);
-		Thread.sleep(3500);
-		values1.get(1).sendKeys("03");
-		values1.get(1).sendKeys(Keys.TAB);
-		Thread.sleep(3500);
-		values1.get(2).sendKeys("PM");
-		driver.findElement(mobileLocators.Doneclick).click();
-		// Log console message to Allure
-		LOGGER.info("enter time ");
-		AllureUtils.logStep("Enter time");    
-		// Capture a screenshot and attach it to Allure
-		AllureUtils.captureScreenshot(driver, "Case34_10");
-        
-    	WebElement submit11 = driver.findElement(mobileLocators.lunchsubmittick);
-		submit11.click();
-		// Log console message to Allure
-        LOGGER.info("Click on submit");
-        AllureUtils.logStep("Click on submit");
-        AllureUtils.captureScreenshot(driver, "Case34_11");
-		
-    
-        Thread.sleep(2500);
-        // Capture a screenshot and attach it to Allure
-        AllureUtils.captureScreenshot(driver, "additional6");
-        // Locate the element related to breakfast + icon 
-        WebElement latesnacksplus 	= driver.findElement(mobileLocators.lateSnackplus);
-        latesnacksplus.click();
-        // Log console message to Allure
-        LOGGER.info("Click on latesnacksplus");
-        AllureUtils.logStep("Click on latesnacksplus");
-        AllureUtils.captureScreenshot(driver, "Case37_3");
-        	
-        //click on keypad Done button to hide keypad
-        WebElement keypaddone111	= driver.findElement(mobileLocators.doneclick);
-        keypaddone111.click();
-        // Log console message to Allure
-        LOGGER.info("Click on keypaddone");
-        AllureUtils.logStep("Click on keypaddone");
-        AllureUtils.captureScreenshot(driver, "Case37_4");
-        
-        // Click on fuel search field 
-        WebElement additionalfuel111 = driver.findElement(mobileLocators.additionalsearch);
-        additionalfuel111.click();
-        // Log console message to Allure
-        LOGGER.info("Click on additionalfuel");
-        AllureUtils.logStep("Click on additionalfuel");
-        AllureUtils.captureScreenshot(driver, "Case37_5");
-         
-        
-        additionalfuel111.sendKeys(mobileTestData.food12);
-        Thread.sleep(2500);
- 
-        WebElement Keypaddone11	= driver.findElement(mobileLocators.doneclick);
-        Keypaddone11.click();
-        // Log console message to Allure
-        LOGGER.info("Enter values for search, Click on Done");
-        AllureUtils.logStep("Enter values for search, Click on done");
-		// Capture a screenshot and attach it to Allure
-        AllureUtils.captureScreenshot(driver, "Case37_6");
-        Thread.sleep(2500);
-        WebElement fuelselection111	= driver.findElement(mobileLocators.Venisonfuelselection);
-        fuelselection111.click();
-        // Log console message to Allure
-        LOGGER.info(" Click on fuelselection");
-        AllureUtils.logStep("Click on fuelselection");
-		// Capture a screenshot and attach it to Allure
-        AllureUtils.captureScreenshot(driver, "Case36_7");
-        
-        
-        // Capture a screenshot and attach it to Allure
-	    AllureUtils.captureScreenshot(driver, "latesnacks1");
-        Thread.sleep(4500);
-        
-        
-        // Click on timer 
-        WebElement Timerclick11 	= driver.findElement(mobileLocators.Time);
-        Timerclick11.click();
-        List<WebElement>values11 = driver.findElements(mobileLocators.pickerelement);
-		for (int i=0; i<values11.size();i++)
-		{		
-		System.out.println(values11.get(i).getText());
-		}
-		values11.get(0).sendKeys("5");
-		values11.get(0).sendKeys(Keys.TAB);
-		Thread.sleep(3500);
-		values11.get(1).sendKeys("18");
-		values11.get(1).sendKeys(Keys.TAB);
-		Thread.sleep(3500);
-		values11.get(2).sendKeys("PM");
-		driver.findElement(mobileLocators.Doneclick).click();
-		// Log console message to Allure
-        LOGGER.info(" Click on done");
-        AllureUtils.logStep("Click on done");
-		
-		 // Capture a screenshot and attach it to Allure
-	    AllureUtils.captureScreenshot(driver, "latesnacks2");
-	    Thread.sleep(2500);
-    	WebElement submit111 = driver.findElement(mobileLocators.latesncaktick);
-		submit111.click();
-		// Log console message to Allure
-        LOGGER.info(" Click on submit");
-        AllureUtils.logStep("Click on submit");
-		// Capture a screenshot and attach it to Allure
-        AllureUtils.captureScreenshot(driver, "Case37_8");
-        Thread.sleep(3500);
-        
-        // Locate the element related to dinner + icon 
-        WebElement latesnacksplus1 	= driver.findElement(mobileLocators.dinnerplusicon);
-        latesnacksplus1.click();
-        // Log console message to Allure
-        LOGGER.info("Click on latesnacksplus");
-        AllureUtils.logStep("Click on latesnacksplus");
-        AllureUtils.captureScreenshot(driver,"41_3");
-        
-        //click on keypad Done button to hide keypad
-        WebElement keypaddone1111	= driver.findElement(mobileLocators.doneclick);
-        keypaddone1111.click();
-        // Log console message to Allure
-        LOGGER.info("Click on keypaddone");
-        AllureUtils.logStep("Click on keypaddone");
-        AllureUtils.captureScreenshot(driver,"41_4");
-        
-        // Click on fuel search field 
-        WebElement additionalfuel1111 = driver.findElement(mobileLocators.additionalsearch);
-        additionalfuel1111.click();
-        // Log console message to Allure
-        LOGGER.info("Click on additionalfuel");
-        AllureUtils.logStep("Click on additionalfuel");
-        AllureUtils.captureScreenshot(driver,"41_5");
-        
-        // Capture a screenshot and attach it to Allure
-        AllureUtils.captureScreenshot(driver, "Dinner5");
-        
-        additionalfuel1111.sendKeys(mobileTestData.food15);
-        Thread.sleep(2500);
- 
-        WebElement Keypaddone111	= driver.findElement(mobileLocators.doneclick);
-        Keypaddone111.click();
-        // Log console message to Allure
-        LOGGER.info("Enter values for search, Click on Done");
-        AllureUtils.logStep("Enter values for search, Click on done");
-		// Capture a screenshot and attach it to Allure
-        AllureUtils.captureScreenshot(driver, "Case41_6");
-        
-        WebElement fuelselection1111	= driver.findElement(mobileLocators.juicefuelselection);
-        fuelselection1111.click();
-        // Log console message to Allure
-        LOGGER.info("Click on fuelselection");
-        AllureUtils.logStep("Click on fuelselection");
-		// Capture a screenshot and attach it to Allure
-        AllureUtils.captureScreenshot(driver, "Case41_7");
-        
-        Thread.sleep(4500);
-        
-        // Click on timer 
-        WebElement Timerclick111 	= driver.findElement(mobileLocators.Time);
-        Timerclick111.click();
-        List<WebElement>values111 = driver.findElements(mobileLocators.pickerelement);
-		for (int i=0; i<values111.size();i++)
-		{		
-		System.out.println(values111.get(i).getText());
-		}
-		values111.get(0).sendKeys("9");
-		values111.get(0).sendKeys(Keys.TAB);
-		Thread.sleep(3500);
-		values111.get(1).sendKeys("18");
-		values111.get(1).sendKeys(Keys.TAB);
-		Thread.sleep(3500);
-		values111.get(2).sendKeys("PM");
-		driver.findElement(mobileLocators.Doneclick).click();
-		// Log console message to Allure
-		LOGGER.info("enter time ");
-		AllureUtils.logStep("Enter time");    
-		// Capture a screenshot and attach it to Allure
-		AllureUtils.captureScreenshot(driver, "Case41_8");
-		
-		
-		// Capture a screenshot and attach it to Allure
-        AllureUtils.captureScreenshot(driver, "Dinner6");
-        
-    	WebElement submit1111 = driver.findElement(mobileLocators.dinnerTickoption);
-		submit1111.click();
-		// Log console message to Allure
-		LOGGER.info("click on submit ");
-		AllureUtils.logStep("click on submit");    
-		// Capture a screenshot and attach it to Allure
-		AllureUtils.captureScreenshot(driver, "Case41_9");
+        LOGGER.info("Click on Editfood");
+        AllureUtils.logStep("Click on Editfood");
+        AllureUtils.captureScreenshot(driver, "Case23_Editbeetroot");
 
+        
+        WebElement plusclick	= driver.findElement(mobileLocators.editclick1);
+        int numberOfClicks1 = 1;
+        for (int i = 0; i < numberOfClicks1; i++) {   
+        	plusclick.click();
+        	 LOGGER.info("Click on plusicon");
+             AllureUtils.logStep("Click on plusicon");
+             // Capture a screenshot and attach it to Allure
+             AllureUtils.captureScreenshot(driver, "Case21_plusicon");
+        }
+        Thread.sleep(2500);
+        //Click on early snacks 
+        WebElement whenclick	= driver.findElement(mobileLocators.earlyclick);
+        whenclick.click();
+        // Log console message to Allure
+        LOGGER.info("Click on earlyclick");
+        AllureUtils.logStep("Click on earlyclick");
+        AllureUtils.captureScreenshot(driver, "Case23_earlyclick");
+
+        
+        //Click on breakfast snacks 
+        WebElement whenclick1	= driver.findElement(mobileLocators.breakfastclick);
+        whenclick1.click();
+        // Log console message to Allure
+        LOGGER.info("Click on breakfastclick");
+        AllureUtils.logStep("Click on breakfastclick");
+        AllureUtils.captureScreenshot(driver, "Case23_breakfastclick");
+
+        
+        //Click on notes and enter values in field. 
+        WebElement noteedit1 = driver.findElement(mobileLocators.noteclick);
+        noteedit1.sendKeys("hello this notes is update by automation to verifiy edit field values");
+        LOGGER.info("Enter value for note field");
+        AllureUtils.logStep("Enter value for note field");
+       
+        Thread.sleep(1000);
+        driver.findElement(AppiumBy.xpath("//XCUIElementTypeButton[@name=\"DONE\"]")).click();
+        
+		WebElement editsubmit 	= driver.findElement(mobileLocators.submittick);
+		editsubmit.click();
+		// Log console message to Allure
+        LOGGER.info("Click on editsubmit");
+        AllureUtils.logStep("Click on editsubmit");
+        AllureUtils.captureScreenshot(driver, "Case23_editsubmit");
+        
+        
+        
+        
+       
          } catch (Exception e) {
                 LOGGER.error("An error occurred during the mindful screen test", e);
                 AllureUtils.logStep("An error occurred: " + e.getMessage());

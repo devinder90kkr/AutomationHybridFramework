@@ -28,17 +28,7 @@ import io.qameta.allure.Story;
 @Feature ("Verify Fuel detail functionlaity related to additional fuel.")
 public class Case44_Fuel_Dinner_additionalfueldeletecase extends AppiummobileBase {
 	private static final Logger LOGGER = LoggerFactory.getLogger(Case44_Fuel_Dinner_additionalfueldeletecase.class);
-	
-//	private By Homeclick 		= 		AppiumBy.iOSClassChain("**/XCUIElementTypeOther[`label == \"Home\"`][2]");
-//	private By plusadd			= 		AppiumBy.accessibilityId("DinnerAddIcon");
-//	private By doneclick		= 		AppiumBy.accessibilityId("Done");
-//	private By additionalsearch	= 		AppiumBy.accessibilityId("AdditionalFuelSearch");
-//	private By fish				= 		AppiumBy.iOSNsPredicateString("name == \"Fish\"");
-//	private By fishRemove		=		AppiumBy.accessibilityId("FishFuelItemDelete");
-//	private By Showclick		= 		AppiumBy.iOSNsPredicateString("name == \"Show More\"");
-//	private By Cheesegoat		= 		AppiumBy.accessibilityId("Goat Cheese");
-//	private By submitick		= 		AppiumBy.accessibilityId("ItemSubmit");
-	
+		
 	@Test
 	@Owner("QA") // Add the @Owner annotation to specify the executor
     @Severity(SeverityLevel.NORMAL)      
