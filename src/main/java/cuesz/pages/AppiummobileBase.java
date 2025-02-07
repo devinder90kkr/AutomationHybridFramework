@@ -35,14 +35,14 @@ public class AppiummobileBase {
 		
 		XCUITestOptions options = new XCUITestOptions();
 		
-	   //  for real device
-      options.setPlatformName("iOS");
-      options.setDeviceName("iPhone 16");
-      options.setPlatformVersion("18.1");
-      options.setAutomationName("XCUITest");
-      options.setUdid("00008140-000C158A0E13001C");
-      options.setWdaLaunchTimeout(Duration.ofSeconds(30));
-      options.setCapability("newCommandTimeout", 300);
+//	   //  for real device
+//      options.setPlatformName("iOS");
+//      options.setDeviceName("iPhone 16");
+//      options.setPlatformVersion("18.1");
+//      options.setAutomationName("XCUITest");
+//      options.setUdid("00008140-000C158A0E13001C");
+//      options.setWdaLaunchTimeout(Duration.ofSeconds(30));
+//      options.setCapability("newCommandTimeout", 300);
 		
 //		 //  for real device
 //	      options.setPlatformName("iOS");
@@ -52,8 +52,17 @@ public class AppiummobileBase {
 //	      options.setUdid("00008110-00142D610A79801E");
 //	      options.setWdaLaunchTimeout(Duration.ofSeconds(30));
 //	      options.setCapability("newCommandTimeout", 300);
-//		
 		
+	      
+	      
+			 //  for real device
+	      options.setPlatformName("iOS");
+	      options.setDeviceName("iPhone 13 pro");
+	      options.setPlatformVersion("18.1.1");
+	      options.setAutomationName("XCUITest");
+	      options.setUdid("00008110-000E58443E9A801E");
+	      options.setWdaLaunchTimeout(Duration.ofSeconds(30));
+	      options.setCapability("newCommandTimeout", 300);
 		//Appium- webdriver Agent ---->IOS Apps.
 		options.setWdaLaunchTimeout(Duration.ofSeconds(30));
 					

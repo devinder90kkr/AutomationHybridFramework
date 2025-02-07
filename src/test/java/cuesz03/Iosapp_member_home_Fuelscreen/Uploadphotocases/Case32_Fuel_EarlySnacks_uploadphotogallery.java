@@ -1,16 +1,16 @@
-package cuesz03.Iosapp_member_home_Fuelscreen.copy;
+package cuesz03.Iosapp_member_home_Fuelscreen.Uploadphotocases;
 
+import java.time.Duration;
 import java.util.HashMap;
-import java.util.List;
-
-import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.testng.annotations.Test;
 
 import cuesz.allure.reporting.AllureUtils;
+import cuesz.mobile.resources.mobileLocators;
 import cuesz.mobile.resources.mobileTestData;
 import cuesz.pages.AppiummobileBase;
 import cuesz.utils.AppiumappUtils;
@@ -27,14 +27,6 @@ import io.qameta.allure.Story;
 @Feature ("Verify Upload detail functionlaity for breakfast.")
 public class Case32_Fuel_EarlySnacks_uploadphotogallery extends AppiummobileBase {
 	private static final Logger LOGGER = LoggerFactory.getLogger(Case32_Fuel_EarlySnacks_uploadphotogallery.class);
-	
-	private By Homeclick 				= 		AppiumBy.iOSClassChain("**/XCUIElementTypeOther[`label == \"Home\"`][2]");
-	private By uploadbreakfastimage		=		AppiumBy.accessibilityId("Early SnacksUploadIcon");
-	private By gallery					=		AppiumBy.accessibilityId("GalleryClicked");
-	private By Time						= 		AppiumBy.accessibilityId("SelectTime");
-	private By pickerelement			= 		AppiumBy.xpath("//XCUIElementTypePickerWheel");
-	private By Doneclick				= 		AppiumBy.accessibilityId("AlcohalTime");
-	private By submittap				= 		AppiumBy.accessibilityId("SubmitImage");
 
 	@Test
 	@Owner("QA") // Add the @Owner annotation to specify the executor
@@ -49,13 +41,14 @@ public class Case32_Fuel_EarlySnacks_uploadphotogallery extends AppiummobileBase
 //        appiumUtils.launchAppWithPackageId("com.cuesz.mobile");	
 		 appiumUtils.launchAppWithPackageId(mobileTestData.bundelID);
 		
-		WebElement Homeicon = driver.findElement(Homeclick);
+		WebElement Homeicon = driver.findElement(mobileLocators.Homeclick);
 		Homeicon.click();
 		// Log console message to Allure
- 		LOGGER.info("Click on Homeicon");
- 		AllureUtils.logStep("Click on Homeicon");
- 		// Capture a screenshot and attach it to Allure
- 		AllureUtils.captureScreenshot(driver, "Case32_1");
+		LOGGER.info("Click on home menu from bottom");
+		AllureUtils.logStep("Click on home menu from bottom");
+		// Capture a screenshot and attach it to Allure
+		AllureUtils.captureScreenshot(driver, "Case21_Fuel_breakfast_recommendedfuel1");
+		       
 		
 		Thread.sleep(3000);
 		// Method to scroll to perform screen
@@ -73,7 +66,7 @@ public class Case32_Fuel_EarlySnacks_uploadphotogallery extends AppiummobileBase
         AllureUtils.captureScreenshot(driver, "Case32_2");
         
         
-        WebElement uploadicon	= driver.findElement(uploadbreakfastimage);
+        WebElement uploadicon	= driver.findElement(mobileLocators.uploadearlysnack);
         uploadicon.click();
      // Log console message to Allure
   		LOGGER.info("Click on uploadicon");
@@ -81,74 +74,48 @@ public class Case32_Fuel_EarlySnacks_uploadphotogallery extends AppiummobileBase
   		// Capture a screenshot and attach it to Allure
   		AllureUtils.captureScreenshot(driver, "uploadicon_32");
   		
-        WebElement galleryclick	= driver.findElement(gallery);
+        
+  		WebElement galleryclick	= driver.findElement(mobileLocators.gallery);
         galleryclick.click();
-     // Log console message to Allure
-  		LOGGER.info("Click on galleryclick");
-  		AllureUtils.logStep("Click on galleryclick");
-  		// Capture a screenshot and attach it to Allure
-  		AllureUtils.captureScreenshot(driver, "galleryclick_32");
+        // Log console message to Allure
+        LOGGER.info("Click on galleryclick");
+        AllureUtils.logStep("Click on galleryclick");
+        AllureUtils.captureScreenshot(driver, "uploadicon2");
         
-        WebElement firstPhoto = driver.findElement(AppiumBy.xpath("//XCUIElementTypeImage[2]"));
-        firstPhoto.click();
         
-        WebElement addclick = driver.findElement(AppiumBy.accessibilityId("Add"));
-        addclick.click();
+        WebElement galleryclickcollection	= driver.findElement(mobileLocators.galerycollection);
+        galleryclickcollection.click();
+        // Log console message to Allure
+        LOGGER.info("Click on galleryclickcollection");
+        AllureUtils.logStep("Click on galleryclickcollection");
+        AllureUtils.captureScreenshot(driver, "uploadicon28");
         
-     // Capture a screenshot and attach it to Allure
-        AllureUtils.captureScreenshot(driver, "earlysnack6");
-        // Click on timer 
-        WebElement Timerclick 	= driver.findElement(Time);
-        Timerclick.click();
         
-        List<WebElement>values = driver.findElements(pickerelement);
-
-		for (int i=0; i<values.size();i++)
-		{		
-		System.out.println(values.get(i).getText());
-		}
-		
-		values.get(0).sendKeys("8");
-		values.get(0).sendKeys(Keys.TAB);
-
-		Thread.sleep(3500);
-		values.get(1).sendKeys("13");
-		values.get(1).sendKeys(Keys.TAB);
-		
-		Thread.sleep(3500);
-		values.get(2).sendKeys("AM");
+        WebElement albumselection	= driver.findElement(mobileLocators.albumselection);
+        albumselection.click();
+        // Log console message to Allure
+        LOGGER.info("Click on albumselection");
+        AllureUtils.logStep("Click on albumselection");
+        AllureUtils.captureScreenshot(driver, "uploadicon25");
+        
+        WebElement firstPhoto = driver.findElement(mobileLocators.imagselection2);
+		firstPhoto.click();
 		// Log console message to Allure
-		LOGGER.info("enter time ");
-		AllureUtils.logStep("Enter time");    
-		// Capture a screenshot and attach it to Allure
-		AllureUtils.captureScreenshot(driver, "CASE232");
-
-		driver.findElement(Doneclick).click();
-		// Log console message to Allure
-        LOGGER.info("Click on Doneclick ");
-        AllureUtils.logStep("Click on Doneclick"); 
-		
-		// Capture a screenshot and attach it to Allure
-        AllureUtils.captureScreenshot(driver, "earlysnack7");
-		
-		WebElement Submittap = driver.findElement(submittap);
-		Submittap.click();
-		// Log console message to Allure
-		LOGGER.info("enter time ");
-		AllureUtils.logStep("Enter time");    
+		LOGGER.info("Click on firstPhoto");
+		AllureUtils.logStep("Click on firstPhoto");
+		AllureUtils.captureScreenshot(driver, "uploadicon3");
+  		
+		// Wait for category selection to be visible
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofMinutes(5));
+        WebElement Submittap = wait.until(ExpectedConditions.visibilityOfElementLocated(mobileLocators.earlysubmittap));
+        Submittap.click();
+        
+        // Log console message to Allure
+		LOGGER.info("Click on submit ");
+		AllureUtils.logStep("Click on submit");    
 		// Capture a screenshot and attach it to Allure
 		AllureUtils.captureScreenshot(driver, "CASE132");
-				
-		Thread.sleep(4500);
-		
-	    
-//		// Method to scroll to perform screen
-//		HashMap<String,Object>scrollObject2 =new HashMap<>();
-//		scrollObject2.put("direction", "down");
-//		scrollObject2.put("Early Snacks", "Early Snacks");
-//		driver.executeScript("mobile:scroll", scrollObject2);
-
-		
+	
 	    Thread.sleep(3000);
 		// Method to scroll to perform screen
 		HashMap<String,Object>scrollObject1 =new HashMap<>();

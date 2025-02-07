@@ -1,12 +1,13 @@
-package cuesz03.Iosapp_member_home_Fuelscreen.copy;
+package cuesz03.Iosapp_member_home_Fuelscreen.Uploadphotocases;
 
+import java.time.Duration;
 import java.util.HashMap;
-import java.util.List;
 import java.util.NoSuchElementException;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.testng.annotations.Test;
@@ -31,13 +32,6 @@ import io.qameta.allure.Story;
 public class Case25_Fuel_breakfast_uploadphotogallery extends AppiummobileBase {
 	private static final Logger LOGGER = LoggerFactory.getLogger(Case25_Fuel_breakfast_uploadphotogallery.class);
 	
-	
-//	private By Time						= 		AppiumBy.accessibilityId("SelectTime");
-//	private By pickerelement			= 		AppiumBy.xpath("//XCUIElementTypePickerWheel");
-//	private By Doneclick				= 		AppiumBy.accessibilityId("AlcohalTime");
-//	private By submittap				= 		AppiumBy.accessibilityId("SubmitImage");
-	
-
 	@Test
 	@Owner("QA") // Add the @Owner annotation to specify the executor
     @Severity(SeverityLevel.NORMAL)      
@@ -111,27 +105,11 @@ public class Case25_Fuel_breakfast_uploadphotogallery extends AppiummobileBase {
 		AllureUtils.logStep("Click on firstPhoto");
 		AllureUtils.captureScreenshot(driver, "uploadicon3");
 		
-		
-		// Wait for the mindful session to complete (timer to reach 00:00)
-        for (int i = 0; i < 50; i++) { // Adjust the maximum wait time as needed
-            Thread.sleep(1000);
-            try {
-                WebElement timerElement = driver.findElement(mobileLocators.categoryselection);
-                if (timerElement != null) {
-                    break;
-                }
-            } catch (NoSuchElementException e) {
-                // If the element is not found, continue waiting
-                System.out.println("Waiting for mindful session to complete: " + (i + 1) + " seconds");
-            }
-        }
-        
-        
-        //selection of category list 
-        // Click on timer 
-        WebElement categoryselection = driver.findElement(mobileLocators.categoryselection);
+		// Wait for category selection to be visible
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofMinutes(5));
+        WebElement categoryselection = wait.until(ExpectedConditions.visibilityOfElementLocated(mobileLocators.categoryselection));
         categoryselection.click();
-        
+	     
         
         WebElement breakfastcategoryselection = driver.findElement(mobileLocators.breakfastoption);
         breakfastcategoryselection.click();
@@ -145,20 +123,6 @@ public class Case25_Fuel_breakfast_uploadphotogallery extends AppiummobileBase {
         AllureUtils.logStep("Click on submit");
         AllureUtils.captureScreenshot(driver, "submit");
         
-        
-     // Wait for the mindful session to complete (timer to reach 00:00)
-        for (int i = 0; i < 50; i++) { // Adjust the maximum wait time as needed
-            Thread.sleep(1000);
-            try {
-                WebElement timerElement = driver.findElement(mobileLocators.gallery);
-                if (timerElement != null) {
-                    break;
-                }
-            } catch (NoSuchElementException e) {
-                // If the element is not found, continue waiting
-                System.out.println("Waiting for mindful session to complete: " + (i + 1) + " seconds");
-            }
-        }
         
      // Scroll to the element using iOS class chain
         HashMap<String, Object> scrollObject1 = new HashMap<>();

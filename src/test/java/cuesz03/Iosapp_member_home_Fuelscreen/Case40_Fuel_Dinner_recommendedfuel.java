@@ -3,7 +3,6 @@ package cuesz03.Iosapp_member_home_Fuelscreen;
 import java.util.HashMap;
 import java.util.List;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.slf4j.Logger;

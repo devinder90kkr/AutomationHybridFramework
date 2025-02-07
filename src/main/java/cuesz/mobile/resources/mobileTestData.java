@@ -75,11 +75,11 @@ public class mobileTestData {
 	public static final String food12 = "Venison" ; 
 	public static final String food13= "kofta";
 	public static final String food14 = "Mustard";
-	public static final String food15 = "Juice";
-	public static final String food16 = "Lenti";
-	public static final String food17 =	"Boi";
-	public static final String food18 =	"Fish";
-	public static final String food19 =	"Goa";
+	public static final String food15 = "Pineapple juice";
+	public static final String food16 = "Protein bar";
+	public static final String food17 =	"Boiled egg";
+	public static final String food18 =	"Fish stick";
+	public static final String food19 =	"Organic butter";
 	public static final String activtyname = "Walking";
 	public static final String food20 =	"Macrobar";
 	public static final String food21 =	"Yumm";

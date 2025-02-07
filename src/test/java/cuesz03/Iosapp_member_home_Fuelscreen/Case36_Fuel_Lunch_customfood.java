@@ -1,7 +1,6 @@
 package cuesz03.Iosapp_member_home_Fuelscreen;
 
 import java.util.HashMap;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -90,18 +89,7 @@ public class Case36_Fuel_Lunch_customfood extends AppiummobileBase {
 	     // Call the utility method
 	        String searchText = mobileTestData.searchText;
 	        utils.addCustomFood(searchText);
-        
-//        WebElement Lunchclick	= driver.findElement(mobileLocators.lunchclick);
-//        Lunchclick.click();
-        
-  
-//        WebElement editsubmit 	= driver.findElement(mobileLocators.lunchsubmittick);
-//		editsubmit.click();
-//		// Log console message to Allure
-//	   LOGGER.info("Click on editsubmit");
-//	   AllureUtils.logStep("Click on editsubmit");
-//	   AllureUtils.captureScreenshot(driver, "Case36_14");
-		
+        		
         Thread.sleep(3500);
         WebElement submit2 = driver.findElement(mobileLocators.lunchsubmittick);
 		submit2.click();
@@ -110,15 +98,7 @@ public class Case36_Fuel_Lunch_customfood extends AppiummobileBase {
         AllureUtils.logStep("Click on submit2");
         AllureUtils.captureScreenshot(driver, "Case34_16");
         
-        
-	   Thread.sleep(2500);
-		 scroll("down", "Lunch");
-
-		 Thread.sleep(2500);
-	 		
-	 		 // Capture a screenshot and attach it to Allure
-	        AllureUtils.captureScreenshot(driver, "lunchadd14");
-        
+       
 	        Thread.sleep(3500);
 		 } catch (Exception e) {
 	            LOGGER.error("An error occurred during the cases ", e);
@@ -136,12 +116,6 @@ public class Case36_Fuel_Lunch_customfood extends AppiummobileBase {
 	        }
 	    }
 
-	 private void scroll(String direction, String elementName) {
-	        HashMap<String, Object> scrollObject = new HashMap<>();
-	        scrollObject.put("direction", direction);
-	        scrollObject.put(elementName, elementName);
-	        driver.executeScript("mobile:scroll", scrollObject);
-	    }
-
+	 
 }
 	
