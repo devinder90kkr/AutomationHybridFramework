@@ -2,8 +2,8 @@ package cuesz03.Iosapp_member_home_Fuelscreen;
 
 import java.util.HashMap;
 import java.util.List;
+import java.util.NoSuchElementException;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.slf4j.Logger;
@@ -38,8 +38,7 @@ public class Case37_Fuel_Latesnacks_additionalfuel extends AppiummobileBase {
 		try {
 		// Create an instance of AppiumUtils and pass the driver
 		AppiumappUtils appiumUtils = new AppiumappUtils(driver);
-        // Launch the app using the utility method
-//        appiumUtils.launchAppWithPackageId("com.cuesz.mobile");	
+        // Launch the app using the utility method	
 		 appiumUtils.launchAppWithPackageId(mobileTestData.bundelID);
 		
 		WebElement Homeicon = driver.findElement(mobileLocators.Homeclick);
@@ -103,20 +102,37 @@ public class Case37_Fuel_Latesnacks_additionalfuel extends AppiummobileBase {
 		// Capture a screenshot and attach it to Allure
         AllureUtils.captureScreenshot(driver, "Case37_6");
         
-        WebElement fuelselection	= driver.findElement(mobileLocators.Venisonfuelselection);
-        fuelselection.click();
-        // Log console message to Allure
-        LOGGER.info(" Click on fuelselection");
-        AllureUtils.logStep("Click on fuelselection");
-		// Capture a screenshot and attach it to Allure
-        AllureUtils.captureScreenshot(driver, "Case36_7");
-        
-        
-        // Capture a screenshot and attach it to Allure
-	    AllureUtils.captureScreenshot(driver, "latesnacks1");
+        Thread.sleep(3500);
+        try {
+            // Check if the food item exists in the history
+            WebElement foodHistoryItem = driver.findElement(mobileLocators.Venisonfuelselection);
+            
+            
+            LOGGER.info("Food item 'Blueberry Timbit' found in the history.");
+
+            // Click on the existing food item if clickable
+            if (foodHistoryItem.isDisplayed() && foodHistoryItem.isEnabled()) {
+                foodHistoryItem.click();
+                AllureUtils.logStep("Clicked on 'Blueberry Timbit' from the history.");
+            } else {
+                LOGGER.warn("'Blueberry Timbit' is found but not clickable.");
+            }
+
+            // Click on 'fuelselection' after clicking on the foodHistoryItem
+            WebElement fuelselection = driver.findElement(mobileLocators.Venisonfuelselection);
+            fuelselection.click();
+            AllureUtils.logStep("Clicked on 'fuelselection' after 'Blueberry Timbit'.");
+        } catch (NoSuchElementException e) {
+            LOGGER.info("Food item 'Blueberry Timbit' not found in the history. Selecting fuel option instead.");
+
+            // Click on 'fuelselection' as the food item doesn't exist in the history
+            WebElement fuelselection = driver.findElement(mobileLocators.Venisonfuelselection);
+            fuelselection.click();
+            AllureUtils.logStep("Clicked on 'fuelselection' to add a new food item.");
+        }
+       
         Thread.sleep(4500);
-        
-        
+
         // Click on timer 
         WebElement Timerclick 	= driver.findElement(mobileLocators.Time);
         Timerclick.click();
@@ -147,15 +163,8 @@ public class Case37_Fuel_Latesnacks_additionalfuel extends AppiummobileBase {
         AllureUtils.logStep("Click on submit");
 		// Capture a screenshot and attach it to Allure
         AllureUtils.captureScreenshot(driver, "Case37_8");
-        
-		// Method to scroll to early snack
-		HashMap<String,Object>scrollObject2 =new HashMap<>();
-		scrollObject2.put("direction", "down");
-		scrollObject2.put("Early Snacks", "Early Snacks");
-		driver.executeScript("mobile:scroll", scrollObject2);
-		Thread.sleep(2000);
-		
-		  // Locate the element related to breakfast + icon 
+        	
+		// Locate the element related to breakfast + icon 
         WebElement breakfastplus2 	= driver.findElement(mobileLocators.lateSnackplus);
         breakfastplus2.click();
         // Log console message to Allure
@@ -173,84 +182,55 @@ public class Case37_Fuel_Latesnacks_additionalfuel extends AppiummobileBase {
 		// Capture a screenshot and attach it to Allure
         AllureUtils.captureScreenshot(driver, "Case37_10");
         
-        // Click on fuel search field 
-        WebElement additionalfuel2 = driver.findElement(mobileLocators.additionalsearch);
-        additionalfuel2.click();
-        // Log console message to Allure
-        LOGGER.info(" Click on additionalfuel2");
-        AllureUtils.logStep("Click on additionalfuel2");
-		// Capture a screenshot and attach it to Allure
-        AllureUtils.captureScreenshot(driver, "Case37_11");
-        
-//        WebElement searchtext11	= driver.findElement(AppiumBy.iOSNsPredicateString("label == \"K\""));
-//        searchtext11.click();
-//        
-//        WebElement searchtext12	= driver.findElement(AppiumBy.iOSNsPredicateString("label == \"o\""));
-//        searchtext12.click();
-//        
-//        WebElement searchtext13	= driver.findElement(AppiumBy.iOSNsPredicateString("label == \"f\""));
-//        searchtext13.click();
-//        
-//        WebElement searchtext14	= driver.findElement(AppiumBy.iOSNsPredicateString("label == \"t\""));
-//        searchtext14.click();
-//        
-//        WebElement searchtext15	= driver.findElement(AppiumBy.iOSNsPredicateString("label == \"a\""));
-//        searchtext15.click();
-        
-        additionalfuel2.sendKeys(mobileTestData.food13);
-        WebElement Keypaddone2	= driver.findElement(mobileLocators.doneclick);
-        Keypaddone2.click();
-        // Log console message to Allure
-        LOGGER.info("Enter values for search, Click on Done");
-        AllureUtils.logStep("Enter values for search, Click on done");
-		// Capture a screenshot and attach it to Allure
-        AllureUtils.captureScreenshot(driver, "Case37_12");
+																	//        // Click on fuel search field 
+																	//        WebElement additionalfuel2 = driver.findElement(mobileLocators.additionalsearch);
+																	//        additionalfuel2.click();
+																	//        // Log console message to Allure
+																	//        LOGGER.info(" Click on additionalfuel2");
+																	//        AllureUtils.logStep("Click on additionalfuel2");
+																	//		// Capture a screenshot and attach it to Allure
+																	//        AllureUtils.captureScreenshot(driver, "Case37_11");
+																	//        
+																	//        
+																	//        additionalfuel2.sendKeys(mobileTestData.food13);
+																	//        WebElement Keypaddone2	= driver.findElement(mobileLocators.doneclick);
+																	//        Keypaddone2.click();
+																	//        // Log console message to Allure
+																	//        LOGGER.info("Enter values for search, Click on Done");
+																	//        AllureUtils.logStep("Enter values for search, Click on done");
+																	//		// Capture a screenshot and attach it to Allure
+																	//        AllureUtils.captureScreenshot(driver, "Case37_12");
+																	//            
+																	//        Thread.sleep(3500);
+																	//        try {
+																	//            // Check if the food item exists in the history
+																	//            WebElement foodHistoryItem = driver.findElement(mobileLocators.koftafuelselectionc);
+																	//            
+																	//            
+																	//            LOGGER.info("Food item 'Blueberry Timbit' found in the history.");
+																	//
+																	//            // Click on the existing food item if clickable
+																	//            if (foodHistoryItem.isDisplayed() && foodHistoryItem.isEnabled()) {
+																	//                foodHistoryItem.click();
+																	//                AllureUtils.logStep("Clicked on 'Blueberry Timbit' from the history.");
+																	//            } else {
+																	//                LOGGER.warn("'Blueberry Timbit' is found but not clickable.");
+																	//            }
+																	//
+																	//            // Click on 'fuelselection' after clicking on the foodHistoryItem
+																	//            WebElement fuelselection = driver.findElement(mobileLocators.koftafuelselectionc);
+																	//            fuelselection.click();
+																	//            AllureUtils.logStep("Clicked on 'fuelselection' after 'Blueberry Timbit'.");
+																	//        } catch (NoSuchElementException e) {
+																	//            LOGGER.info("Food item 'Blueberry Timbit' not found in the history. Selecting fuel option instead.");
+																	//
+																	//            // Click on 'fuelselection' as the food item doesn't exist in the history
+																	//            WebElement fuelselection = driver.findElement(mobileLocators.koftafuelselectionc);
+																	//            fuelselection.click();
+																	//            AllureUtils.logStep("Clicked on 'fuelselection' to add a new food item.");
+																	//        }
 
-
-        WebElement showmorebranded	= driver.findElement(mobileLocators.showmorebranded);
-        showmorebranded.click();
-        
-        
-        WebElement fuelselection2	= driver.findElement(mobileLocators.koftafuelselectionc);
-        fuelselection2.click();
-        // Log console message to Allure
-        LOGGER.info(" Click on fuelselection2");
-        AllureUtils.logStep("Click on fuelselection2");
-		// Capture a screenshot and attach it to Allure
-        AllureUtils.captureScreenshot(driver, "Case37_13");
-        
-        // Capture a screenshot and attach it to Allure
-	    AllureUtils.captureScreenshot(driver, "latesnacks3");
-        
-        Thread.sleep(4500);
         // Click on fuel search field 
-        WebElement additionalfuel3 = driver.findElement(mobileLocators.serchclick);
-        additionalfuel3.click();
-        // Log console message to Allure
-        LOGGER.info(" Click on additionalfuel3");
-        AllureUtils.logStep("Click on additionalfuel3");
-        Thread.sleep(4500);
-        
-//        WebElement searchtext21	= driver.findElement(AppiumBy.iOSNsPredicateString("label == \"M\""));
-//        searchtext21.click();
-//        
-//        WebElement searchtext22	= driver.findElement(AppiumBy.iOSNsPredicateString("label == \"u\""));
-//        searchtext22.click();
-//        
-//        WebElement searchtext23	= driver.findElement(AppiumBy.iOSNsPredicateString("label == \"s\""));
-//        searchtext23.click();
-//        
-//        WebElement searchtext24	= driver.findElement(AppiumBy.iOSNsPredicateString("label == \"t\""));
-//        searchtext24.click();
-//        
-//        WebElement searchtext25	= driver.findElement(AppiumBy.iOSNsPredicateString("label == \"a\""));
-//        searchtext25.click();
-//        
-//        WebElement searchtext26	= driver.findElement(AppiumBy.iOSNsPredicateString("label == \"r\""));
-//        searchtext26.click();
-//
-//        WebElement searchtext27	= driver.findElement(AppiumBy.iOSNsPredicateString("label == \"d\""));
-//        searchtext27.click();
         WebElement additionalfuel31 = driver.findElement(mobileLocators.additionalsearch1);
         additionalfuel31.sendKeys(mobileTestData.food14);
         
@@ -262,25 +242,42 @@ public class Case37_Fuel_Latesnacks_additionalfuel extends AppiummobileBase {
         AllureUtils.logStep("Enter values for search, Click on done");
 		// Capture a screenshot and attach it to Allure
         AllureUtils.captureScreenshot(driver, "Case37_15");
+
+        Thread.sleep(3500);
+        try {
+            // Check if the food item exists in the history
+//            WebElement foodHistoryItem = driver.findElement(AppiumBy.accessibilityId("Blueberry Timbit"));
+            WebElement foodHistoryItem = driver.findElement(mobileLocators.mustardfuelselection);
+            
+            
+            LOGGER.info("Food item 'Blueberry Timbit' found in the history.");
+
+            // Click on the existing food item if clickable
+            if (foodHistoryItem.isDisplayed() && foodHistoryItem.isEnabled()) {
+                foodHistoryItem.click();
+                AllureUtils.logStep("Clicked on 'Blueberry Timbit' from the history.");
+            } else {
+                LOGGER.warn("'Blueberry Timbit' is found but not clickable.");
+            }
+
+            // Click on 'fuelselection' after clicking on the foodHistoryItem
+            WebElement fuelselection = driver.findElement(mobileLocators.mustardfuelselection);
+            fuelselection.click();
+            AllureUtils.logStep("Clicked on 'fuelselection' after 'Blueberry Timbit'.");
+        } catch (NoSuchElementException e) {
+            LOGGER.info("Food item 'Blueberry Timbit' not found in the history. Selecting fuel option instead.");
+
+            // Click on 'fuelselection' as the food item doesn't exist in the history
+            WebElement fuelselection = driver.findElement(mobileLocators.mustardfuelselection);
+            fuelselection.click();
+            AllureUtils.logStep("Clicked on 'fuelselection' to add a new food item.");
+        }
         
-        WebElement fuelselection3	= driver.findElement(mobileLocators.mustardfuelselection);
-        fuelselection3.click();
-        // Log console message to Allure
-        LOGGER.info(" Click on fuelselection3");
-        AllureUtils.logStep("Click on fuelselection3");
-		// Capture a screenshot and attach it to Allure
-        AllureUtils.captureScreenshot(driver, "Case37_144");
-        
+       
         // Capture a screenshot and attach it to Allure
 	    AllureUtils.captureScreenshot(driver, "latesnacks4");
         Thread.sleep(4500);
-                
-//        WebElement Latesnack	= driver.findElement(mobileLocators.latesnack);
-//        Latesnack.click();
-//        // Log console message to Allure
-//        LOGGER.info(" Click on Latesnack");
-//        AllureUtils.logStep("Click on fuelLatesnackselection3");
-        
+
         WebElement submit2 = driver.findElement(mobileLocators.latesncaktick);
 		submit2.click();
 		// Log console message to Allure
@@ -291,130 +288,6 @@ public class Case37_Fuel_Latesnacks_additionalfuel extends AppiummobileBase {
 		
 		
 		Thread.sleep(4500);
-		
-		// Method to scroll to early snack
-		HashMap<String,Object>scrollObject3 =new HashMap<>();
-		scrollObject3.put("direction", "up");
-		scrollObject3.put("Lunch", "Lunch");
-		driver.executeScript("mobile:scroll", scrollObject3);
-		Thread.sleep(2000);
-		
-		// Method to scroll to early snack
-		HashMap<String,Object>scrollObject31 =new HashMap<>();
-		scrollObject31.put("direction", "up");
-		scrollObject31.put("Early Snacks", "Early Snacks");
-		driver.executeScript("mobile:scroll", scrollObject31);
-		Thread.sleep(2000);
-		
-		HashMap<String,Object>scrollObject311 =new HashMap<>();
-		scrollObject311.put("direction", "up");
-		scrollObject311.put("Breakfast", "Breakfast");
-		driver.executeScript("mobile:scroll", scrollObject311);
-		Thread.sleep(2000);
-		
-
-		 // Method to scroll to perform screen
-  		HashMap<String,Object>scrollObject5 =new HashMap<>();
-  		scrollObject5.put("direction", "up");
-  		scrollObject5.put("DRINK MORE WATER", "DRINK MORE WATER");
-  		driver.executeScript("mobile:scroll", scrollObject5);
-  		Thread.sleep(2000);
-        
-    	// Method to scroll to perform screen
-  		HashMap<String,Object>scrollObject3111 =new HashMap<>();
-  		scrollObject3111.put("direction", "up");
-  		scrollObject3111.put("OPTIMAL FUEL TARGET ACHIEVED", "OPTIMAL FUEL TARGET ACHIEVED");
-  		driver.executeScript("mobile:scroll", scrollObject3111);
-  		Thread.sleep(2000);
-  		
-  		
-//  		HashMap<String,Object>scrollObject4 =new HashMap<>();
-//  		scrollObject4.put("direction", "up");
-//  		scrollObject4.put("Carbs", "Carbs");
-//  		driver.executeScript("mobile:scroll", scrollObject4);
-//  		Thread.sleep(2000);
-    
-  		//click on protein card
-  		WebElement protein = driver.findElement(mobileLocators.Protcard);
-  		protein.click();	
-  		// Log console message to Allure
-        LOGGER.info(" Click on protein");
-        AllureUtils.logStep("Click on protein");
-		// Capture a screenshot and attach it to Allure
-        AllureUtils.captureScreenshot(driver, "Case37_161");
-        
-  		// Scroll to element Early Snacks
-  		HashMap<String,Object>scrollObject6 =new HashMap<>();
-  		scrollObject6.put("direction", "down");
-  		scrollObject6.put("Late Snacks", "Late Snacks");
-  		driver.executeScript("mobile:scroll", scrollObject6);
-  		Thread.sleep(2000);
-  		// Capture a screenshot and attach it to Allure
-          AllureUtils.captureScreenshot(driver, "earlysnack5");	
-  		//Click on protein cross icon
-  		WebElement proteincross = driver.findElement(mobileLocators.crossicon1);
-  		proteincross.click();
-  		// Log console message to Allure
-        LOGGER.info(" Click on proteincross");
-        AllureUtils.logStep("Click on proteincross");
-		// Capture a screenshot and attach it to Allure
-        AllureUtils.captureScreenshot(driver, "Case37_162");
-        
-  		//click on carbs card
-  		WebElement carbs = driver.findElement(mobileLocators.carbcard);
-  		carbs.click();	
-  		// Log console message to Allure
-        LOGGER.info(" Click on carbs");
-        AllureUtils.logStep("Click on carbs");
-		// Capture a screenshot and attach it to Allure
-        AllureUtils.captureScreenshot(driver, "Case37_14");
-        
-  		// Scroll to element Early Snacks
-  		HashMap<String,Object>scrollObject7 =new HashMap<>();
-  		scrollObject7.put("direction", "down");
-  		scrollObject7.put("Late Snacks", "Late Snacks");
-  		driver.executeScript("mobile:scroll", scrollObject7);
-  		Thread.sleep(2000); 		
-  		// Capture a screenshot and attach it to Allure
-          AllureUtils.captureScreenshot(driver, "earlysnack6");
-  		//Click on protein cross icon
-  		WebElement carbscross = driver.findElement(mobileLocators.crossicon1);
-  		carbscross.click();
-  		// Log console message to Allure
-  		LOGGER.info(" Click on carbscross");
-        AllureUtils.logStep("Click on carbscross");
-		// Capture a screenshot and attach it to Allure
-        AllureUtils.captureScreenshot(driver, "Case37_carbscross");
-        
-  		//click on fats card
-  		WebElement fats = driver.findElement(mobileLocators.fatcard);
-  		fats.click();	
-  		// Log console message to Allure
-  		LOGGER.info(" Click on fats");
-        AllureUtils.logStep("Click on fats");
-		// Capture a screenshot and attach it to Allure
-        AllureUtils.captureScreenshot(driver, "Case37_fats");
-        
-  		// Scroll to element Early Snacks
-  		HashMap<String,Object>scrollObject8 =new HashMap<>();
-  		scrollObject8.put("direction", "down");
-  		scrollObject8.put("Late Snacks", "Late Snacks");
-  		driver.executeScript("mobile:scroll", scrollObject8);
-  		Thread.sleep(2000); 
-  		// Capture a screenshot and attach it to Allure
-          AllureUtils.captureScreenshot(driver, "earlysnack7");
-  		//Click on protein cross icon
-  		WebElement fatscross = driver.findElement(mobileLocators.crossicon1);
-  		fatscross.click();
-  		// Log console message to Allure
-        LOGGER.info(" Click on fatscross");
-        AllureUtils.logStep("Click on fatscross");
-		// Capture a screenshot and attach it to Allure
-        AllureUtils.captureScreenshot(driver, "Case37_fatscross");
-		
-		
-		
-        Thread.sleep(2500);
 		 } catch (Exception e) {
 	            LOGGER.error("An error occurred during the cases ", e);
 	            AllureUtils.logStep("An error occurred: " + e.getMessage());

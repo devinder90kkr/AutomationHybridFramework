@@ -31,7 +31,7 @@ public class mobileLocators {
 	public static final By showmorebranded = AppiumBy.xpath("(//XCUIElementTypeStaticText[@name=\"Show More\"])[2]");
 	public static final By Venisonfuelselection	=	AppiumBy.accessibilityId("Venison Strip");
 	public static final By koftafuelselectionc	=	AppiumBy.accessibilityId("Kofta Kebab");
-	public static final By mustardfuelselection	=	AppiumBy.iOSClassChain("**/XCUIElementTypeOther[`name == \"Mustard\"`][1]");
+	public static final By mustardfuelselection	=	AppiumBy.accessibilityId("Mustard yellow");
 	public static final By latesnack		= 		AppiumBy.iOSClassChain("**/XCUIElementTypeOther[`name == \"Late Snacks\"`][2]");
 	public static final By lunchclick		=		AppiumBy.iOSClassChain("**/XCUIElementTypeOther[`name == \"Lunch\"`][2]");
 	public static final By latesncaktick	=	AppiumBy.iOSClassChain("**/XCUIElementTypeOther[`name == \"Late Snacks\"`][2]/XCUIElementTypeOther[3]");
