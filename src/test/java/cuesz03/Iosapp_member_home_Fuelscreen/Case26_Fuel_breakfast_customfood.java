@@ -85,8 +85,7 @@ public class Case26_Fuel_breakfast_customfood extends AppiummobileBase {
         AllureUtils.logStep("Click on keypaddone icon");
         AllureUtils.captureScreenshot(driver, "Case26_4");
         
-        
-        // Call the utility method
+        Thread.sleep(3000);        // Call the utility method
         String searchText = mobileTestData.searchText;
         utils.addCustomFood(searchText);
         

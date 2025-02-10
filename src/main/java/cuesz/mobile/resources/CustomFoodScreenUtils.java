@@ -38,15 +38,12 @@ public class CustomFoodScreenUtils {
            
             AllureUtils.logStep("Enter additonals fuel values");
             
-            Thread.sleep(2000);
+            Thread.sleep(3000);
             // Check if the element has the desired text
             if (additionalfuel.getAttribute("value").equals(modifiedSearchText)) {
                 // Click on hybridselect
                 WebElement hybridselect = driver.findElement(AppiumBy.accessibilityId(modifiedSearchText));
                 hybridselect.click();
-//            	Thread.sleep(2000);
-//            	WebElement hybridselect = driver.findElement(AppiumBy.xpath("//XCUIElementTypeOther[@name='" + modifiedSearchText + "']"));
-//            	hybridselect.click();
                 // Log console message to Allure
                 LOGGER.info("Click on hybrid select" );
                 AllureUtils.logStep("Click on hybrid select	");
@@ -54,7 +51,7 @@ public class CustomFoodScreenUtils {
                 try {
                     // Check if additempopup is visible
                     WebElement additempopup = driver.findElement(AppiumBy.accessibilityId("Add Item"));
-                    Thread.sleep(2000);
+                    Thread.sleep(3000);
                     additempopup.click();
                     // Log console message to Allure
                     LOGGER.info("Click on additempopup" );
