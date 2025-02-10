@@ -65,14 +65,7 @@ public class Case30_Fuel_Earlysnacks_additionalfuel extends AppiummobileBase {
         AllureUtils.logStep("Click on fuel screen");
         AllureUtils.captureScreenshot(driver, "Case30_2");
         Thread.sleep(3500);
-                 
-	    // Method to scroll to perform screen
-		HashMap<String,Object>scrollObject12 =new HashMap<>();
-		scrollObject12.put("direction", "down");
-		scrollObject12.put("Early Snacks", "Early Snacks");
-		driver.executeScript("mobile:scroll", scrollObject12);
-		Thread.sleep(2000);
-              
+         
         // Locate the element related to breakfast + icon 
         WebElement earlysnackplus 	= driver.findElement(mobileLocators.earlysnacksplusadd);
         earlysnackplus.click();
@@ -104,6 +97,7 @@ public class Case30_Fuel_Earlysnacks_additionalfuel extends AppiummobileBase {
         WebElement Keypaddone	= driver.findElement(mobileLocators.doneclick);
         Keypaddone.click();
         
+        Thread.sleep(3500);
         try {
             // Check if the food item exists in the history
 //            WebElement foodHistoryItem = driver.findElement(AppiumBy.accessibilityId("Blueberry Timbit"));
@@ -157,6 +151,68 @@ public class Case30_Fuel_Earlysnacks_additionalfuel extends AppiummobileBase {
         LOGGER.info("Click on submit");
         AllureUtils.logStep("Click on submit");
         AllureUtils.captureScreenshot(driver, "submit_30");
+        
+        
+        
+        /*going to edit fuel list for early snack for blueberry food*/
+        
+        // Scroll to Editbeetroot
+        scrollToElementWithText("Editbeetroot");
+
+        // Edit feature testing
+        WebElement Editbeetroot = driver.findElement(mobileLocators.editearly);
+        Editbeetroot.click();
+        // Log console message to Allure
+        LOGGER.info("Click on Editbeetroot");
+        AllureUtils.logStep("Click on Editbeetroot");
+        AllureUtils.captureScreenshot(driver, "Case23_Editbeetroot");
+        
+        // Click on plusclick icon 
+        WebElement plusclick	= driver.findElement(mobileLocators.cinamonfuelselectionplus);
+        int numberOfClicks = 2;
+        for (int i = 0; i < numberOfClicks; i++) {   
+        	plusclick.click();
+        	// Log console message to Allure
+            LOGGER.info("Click on plusclick");
+            AllureUtils.logStep("Click on plusclick");
+            AllureUtils.captureScreenshot(driver, "plusclick_31");
+        }      
+        
+        
+        // Capture a screenshot and attach it to Allure
+        AllureUtils.captureScreenshot(driver, "earlysnack5");
+        
+        //Click on breakfast snacks 
+        WebElement whenclick1	= driver.findElement(mobileLocators.breakfastclick);
+        whenclick1.click();
+        // Log console message to Allure
+        LOGGER.info("Click on breakfastclick");
+        AllureUtils.logStep("Click on breakfastclick");
+        AllureUtils.captureScreenshot(driver, "breakfastclick_31");
+        
+        //Click on early snacks 
+        WebElement whenclick	= driver.findElement(mobileLocators.earlyclick);
+        whenclick.click();
+        // Log console message to Allure
+        LOGGER.info("Click on whenclick");
+        AllureUtils.logStep("Click on whenclick");
+        AllureUtils.captureScreenshot(driver, "whenclick_31");
+            
+        //Click on notes and enter values in field. 
+        WebElement noteedit1 = driver.findElement(mobileLocators.noteclick);
+        noteedit1.sendKeys(mobileTestData.message2);
+        
+        driver.findElement(AppiumBy.xpath("//XCUIElementTypeButton[@name=\"DONE\"]")).click();
+
+        Thread.sleep(3000);
+
+		WebElement editsubmit 	= driver.findElement(mobileLocators.submitfavoriteclick);
+		editsubmit.click();
+		// Log console message to Allure
+        LOGGER.info("Click on editsubmit");
+        AllureUtils.logStep("Click on editsubmit");
+        AllureUtils.captureScreenshot(driver, "editsubmit_31");
+            
 		
 	    Thread.sleep(3500);
 			 } catch (Exception e) {
@@ -170,8 +226,18 @@ public class Case30_Fuel_Earlysnacks_additionalfuel extends AppiummobileBase {
 		                LOGGER.error("Thread interrupted during final sleep", e);
 		                Thread.currentThread().interrupt();
 		            }
+		            
+		            
+		            
+		            
 //		            driver.terminateApp("com.cuesz.mobile");
 		            driver.terminateApp(mobileTestData.bundelID);
 		        }
-		    }
+		    } // Utility method to scroll to element with specific text
+    private void scrollToElementWithText(String text) {
+        HashMap<String, Object> scrollObject = new HashMap<>();
+        scrollObject.put("direction", "down");
+        scrollObject.put("predicateString", "label CONTAINS '" + text + "'");
+        driver.executeScript("mobile:scroll", scrollObject);
+    }
 	}
