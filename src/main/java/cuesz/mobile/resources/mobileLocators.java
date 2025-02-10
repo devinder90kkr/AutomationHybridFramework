@@ -288,6 +288,9 @@ public class mobileLocators {
 	//Dated 4-jan additional fuelcase 
 	public static final By Fuelhomeclick	= AppiumBy.accessibilityId("FUEL_SCREEN"); 
 	public static final By addtionafuelbttn	= AppiumBy.accessibilityId("FuelAddDeviation");
+	public static final By selectfuel	= AppiumBy.iOSClassChain("**/XCUIElementTypeOther[`name == \"Select Fuel\"`][2]");
+	public static final By earlycategoryoption = AppiumBy.iOSNsPredicateString("name == \"ItemPressed\" AND label == \"Early Snacks\"");
+	public static final By grilledsnacks	= AppiumBy.accessibilityId("Grilled pizza");
 	public static final By timepicker		= AppiumBy.accessibilityId("AdditionalItemTime");
 	public static final By grapefuel		= AppiumBy.accessibilityId("Grapeseed");
 	public static final By eventcategory	= AppiumBy.iOSClassChain("**/XCUIElementTypeOther[`label == \"Early Snacks\"`][2]");
