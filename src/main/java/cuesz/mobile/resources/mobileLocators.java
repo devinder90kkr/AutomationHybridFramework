@@ -466,8 +466,12 @@ public class mobileLocators {
 	public static final By meat1			=		AppiumBy.iOSNsPredicateString("name == \"Meat\"");
 	public static final By meatfuelselect	=		AppiumBy.accessibilityId("Meat");	
 	public static final By performanceeditsubmit =	AppiumBy.accessibilityId("Submit");
+	public static final By preperformancetick	=	AppiumBy.iOSClassChain("**/XCUIElementTypeOther[`name == \"Pre Performance\"`][2]/XCUIElementTypeOther[3]");
+	public static final By duringplusiconclick		=	AppiumBy.accessibilityId("During PerformancePlueIcon");
+	public static final By duringtickclickicon =	AppiumBy.iOSClassChain("**/XCUIElementTypeOther[`name == \"During Performance\"`][2]/XCUIElementTypeOther[3]");
+	public static final By postplusiconclick	 =	AppiumBy.accessibilityId("Post PerformancePlueIcon");
+	public static final By posttickoption	= AppiumBy.iOSClassChain("**/XCUIElementTypeOther[`name == \"Post Performance\"`][2]/XCUIElementTypeOther[3]");
 	
-
 	public static final By meatplus			= 		AppiumBy.accessibilityId("MeatPlus");
 	public static final By serchclick		= 		AppiumBy.accessibilityId("AdditionalFuelSearch");
 	public static final By Beetroot			=		AppiumBy.iOSClassChain("**/XCUIElementTypeOther[`name == \"Protein Shake\"`][1]");
@@ -526,6 +530,7 @@ public class mobileLocators {
 	public static final By tickbttn			= 		AppiumBy.iOSNsPredicateString("name == \"EventSubmit\"");
 	public static final By Skipclick		= 		AppiumBy.accessibilityId("Skip");
 	public static final By continueclick	= 		AppiumBy.accessibilityId("Continue");
+	public static final By preperformanceplus =		AppiumBy.accessibilityId("Pre PerformancePlueIcon");
 	
 	public static final By hydration1click	=		AppiumBy.accessibilityId("Walking-Hydration");
 	public static final By hydrationplus	=		AppiumBy.accessibilityId("PlusHydrationGlass");
