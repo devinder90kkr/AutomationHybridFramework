@@ -64,17 +64,8 @@ public class Case41_Fuel_Dinner_additionalfuel extends AppiummobileBase {
         LOGGER.info("Click on fuel screen");
         AllureUtils.logStep("Click on fuel screen");
         AllureUtils.captureScreenshot(driver,"41_2");
-        
+                
        
-        Thread.sleep(3000);
-		// Method to scroll to perform screen
-		HashMap<String,Object>scrollObject1 =new HashMap<>();
-		scrollObject1.put("direction", "down");
-		scrollObject1.put("Dinner", "Dinner");
-		driver.executeScript("mobile:scroll", scrollObject1);
-		Thread.sleep(2000);
-        
-        
         // Locate the element related to dinner + icon 
         WebElement latesnacksplus 	= driver.findElement(mobileLocators.dinnerplusicon);
         latesnacksplus.click();
@@ -112,6 +103,7 @@ public class Case41_Fuel_Dinner_additionalfuel extends AppiummobileBase {
 		// Capture a screenshot and attach it to Allure
         AllureUtils.captureScreenshot(driver, "Case41_6");
      
+        Thread.sleep(2500);
         try {
             // Check if the food item exists in the history
 //            WebElement foodHistoryItem = driver.findElement(AppiumBy.accessibilityId("Blueberry Timbit"));
@@ -177,14 +169,9 @@ public class Case41_Fuel_Dinner_additionalfuel extends AppiummobileBase {
 		// Capture a screenshot and attach it to Allure
 		AllureUtils.captureScreenshot(driver, "Case41_9");
 				
-		// Method to scroll to early snack
-		HashMap<String,Object>scrollObject2 =new HashMap<>();
-		scrollObject2.put("direction", "down");
-		scrollObject2.put("Dinner", "Dinner");
-		driver.executeScript("mobile:scroll", scrollObject2);
-		Thread.sleep(2000);
 		
-		  // Locate the element related to dinner + icon 
+		Thread.sleep(3500);
+		// Locate the element related to dinner + icon 
         WebElement dinnerplus2 	= driver.findElement(mobileLocators.dinnerplusicon);
         dinnerplus2.click();
         // Log console message to Allure
