@@ -5,7 +5,7 @@
     <classes>    
 		
 	 <class name="cuesz01.Iosapp_member_homeScreen.Case01_Login"/> 
-	 
+	 	
 	  <class name="cuesz03.Iosapp_member_home_Fuelscreen.Case20_Fuel_optimalfuel"/>
 	  <class name="cuesz03.Iosapp_member_home_Fuelscreen.Case21_Fuel_breakfast_recommendedfuel"/>
       <class name="cuesz03.Iosapp_member_home_Fuelscreen.Case22_2Fuel_breakfast_additionalfuel"/>

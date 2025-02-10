@@ -535,7 +535,7 @@ public class mobileLocators {
 	public static final By fish				= 		AppiumBy.accessibilityId("Ham Omelette");
 	public static final By fishnew			= 		AppiumBy.accessibilityId("Fish stick");
 	
-	public static final By fishRemove		=		AppiumBy.accessibilityId("Fish StickFuelItemDelete");
+	public static final By fishRemove		=		AppiumBy.accessibilityId("Ham OmeletteFuelItemDelete");
 	public static final By chevrecheese		= 		AppiumBy.accessibilityId("Chevre Goat Cheese");	
 	public static final By Cheesegoat		= 		AppiumBy.accessibilityId("Chevre Goat CheesePlus");
 	public static final By performancetime	=		AppiumBy.accessibilityId("Pre PerformanceTimeEdit");

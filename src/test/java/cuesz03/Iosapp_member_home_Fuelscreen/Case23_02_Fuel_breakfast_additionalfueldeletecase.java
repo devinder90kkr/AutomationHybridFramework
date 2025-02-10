@@ -74,24 +74,14 @@ public class Case23_02_Fuel_breakfast_additionalfueldeletecase extends Appiummob
 	        AllureUtils.logStep("Click on additionalfuel");
 	        AllureUtils.captureScreenshot(driver, "Case223_022");
 
-	        RetryUtils.retryingSendKeys(driver, mobileLocators.additionalsearch, mobileTestData.food4, 3);
+	        RetryUtils.retryingSendKeys(driver, mobileLocators.additionalsearch, mobileTestData.food4, 5);
 	        RetryUtils.retryingFindClick(driver, mobileLocators.doneclick, 3);
 	        LOGGER.info("Enter values for search, Click on Done");
 	        AllureUtils.logStep("Enter values for search, Click on Done");
 
 	        Thread.sleep(3000);
-
-//	        // Scroll to fish
-//	        HashMap<String, Object> scrollObject57 = new HashMap<>();
-//	        scrollObject57.put("direction", "down");
-//	        scrollObject57.put("fish", "fish");
-//	        driver.executeScript("mobile:scroll", scrollObject57);
-//	        Thread.sleep(2000);
-//
-//	        
-	        
-	        
-	        RetryUtils.retryingFindClick(driver, mobileLocators.fish, 3);
+       
+	        RetryUtils.retryingFindClick(driver, mobileLocators.fish, 5);
 	        LOGGER.info("Click on fuelselection");
 	        AllureUtils.logStep("Click on fuelselection");
 	        Thread.sleep(2500);
@@ -108,8 +98,8 @@ public class Case23_02_Fuel_breakfast_additionalfueldeletecase extends Appiummob
 	        AllureUtils.logStep("Click on additionalfuel2");
 	        AllureUtils.captureScreenshot(driver, "Case223_029");
 
-	        RetryUtils.retryingSendKeys(driver, mobileLocators.additionalsearch, mobileTestData.food5, 3);
-	        RetryUtils.retryingFindClick(driver, mobileLocators.doneclick, 3);
+	        RetryUtils.retryingSendKeys(driver, mobileLocators.additionalsearch, mobileTestData.food5, 5);
+	        RetryUtils.retryingFindClick(driver, mobileLocators.doneclick, 5);
 	        LOGGER.info("Enter values for search, Click on Done");
 	        AllureUtils.logStep("Enter values for search, Click on Done");
 
@@ -142,13 +132,6 @@ public class Case23_02_Fuel_breakfast_additionalfueldeletecase extends Appiummob
 	            AllureUtils.logStep("Clicked on 'fuelselection' to add a new food item.");
 	        }
 
-	        Thread.sleep(2500);
-	        WebElement categoryselection = driver.findElement(mobileLocators.categoryselection);
-	        categoryselection.click();
-	        
-	        
-	        WebElement breakfastcategoryselection = driver.findElement(mobileLocators.breakfastoption);
-	        breakfastcategoryselection.click();
 	                
 	         //Click on submit tick button
 	          WebElement submit = driver.findElement(mobileLocators.submitick);
@@ -158,7 +141,7 @@ public class Case23_02_Fuel_breakfast_additionalfueldeletecase extends Appiummob
 	          AllureUtils.logStep("Click on submit");
 	          AllureUtils.captureScreenshot(driver, "submit");
 	          
-	        Thread.sleep(3500);
+	        Thread.sleep(4500);
 
 	    } catch (Exception e) {
 	        LOGGER.error("An error occurred during the mindful screen test", e);
