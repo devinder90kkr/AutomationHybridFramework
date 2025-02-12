@@ -14,7 +14,7 @@ import org.testng.annotations.Test;
 import cuesz.allure.reporting.AllureUtils;
 import cuesz.factory.WebDriverManager;
 import cuesz.logintest.AdvocateLogin;
-import cuesz.membersummary.Case80_MS_Sessionoutcome;
+import cuesz.membersummary.basic.Case80_MS_Sessionoutcome;
 import io.qameta.allure.*;
 
 @Epic ("Cuesz Staff on member Summary page for session outcomes ")

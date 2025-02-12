@@ -1,4 +1,4 @@
-package cuesz.membersummarytest.advocate;
+package cuesz.membersummary.activity.test;
 
 import java.io.ByteArrayOutputStream;
 import java.io.FileInputStream;
@@ -14,19 +14,20 @@ import org.testng.annotations.Test;
 import cuesz.allure.reporting.AllureUtils;
 import cuesz.factory.WebDriverManager;
 import cuesz.logintest.AdvocateLogin;
-import cuesz.membersummary.basic.Case34_01_MS_VO2assigntomember;
+import cuesz.membersummary.activity.Case27_MS_Restoreactivity;
 import io.qameta.allure.*;
 
-@Epic ("Cuesz Staff on member Summary page for Body Scan Result ")
-@Feature ("Verify on member summary page staff able to select date for Body Scan Result.")
+@Epic ("Cuesz Staff on member Summary page for restore activity")
+@Feature ("Verify on member summary page staff  able to view restore data by selecting dropdown values.")
 
-public class Case34_01_MS_VO2assigntomembertest {
+
+public class Case27_MS_Restoreactivitytest {
     private WebDriver driver;
     private AdvocateLogin advocateLogin;
-    private Case34_01_MS_VO2assigntomember membersummaryPage;
+    private Case27_MS_Restoreactivity membersummaryPage;
    
     private ByteArrayOutputStream consoleOutput; // To capture console output
-
+    
     @BeforeClass
     public void setUp() {
     	// Read the browser information from the configuration file
@@ -36,9 +37,9 @@ public class Case34_01_MS_VO2assigntomembertest {
         
         driver.manage().window().maximize();
         advocateLogin = new AdvocateLogin(); // Initialise the advocateLogin object
-        membersummaryPage = new Case34_01_MS_VO2assigntomember(driver);
+        membersummaryPage = new Case27_MS_Restoreactivity(driver);
         
-        // Redirect console output to capture it
+     // Redirect console output to capture it
         consoleOutput = new ByteArrayOutputStream();
         PrintStream printStream = new PrintStream(consoleOutput);
         System.setOut(printStream); 
@@ -48,21 +49,21 @@ public class Case34_01_MS_VO2assigntomembertest {
     
     @Owner("QA") // Add the @Owner annotation to specify the executor
     @Severity(SeverityLevel.NORMAL)    
-    @Description("Verify the click on Vo2 Result functionlaity .")
-    @Story("Successfuly able to click on Vo2 Result features")
+    @Description("Verify the restore dropdown features functionlaity .")
+    @Story("Successfuly able to select values from restore dropdown features")
     
-    public void advocatebodyscanresultTest() throws InterruptedException {
+    public void advocaterestoractivityTest() throws InterruptedException {
         advocateLogin.setUp(); // Call the setUp method of AdvocateLogin to initialise loginPage
         advocateLogin.testAdvocateLogin();
 
         // Access the Schedule Event page
-        membersummaryPage.bodyscan();
+        membersummaryPage.restoreactivity();
     
         // Generate a dynamic link based on some runtime conditions or data
         String dynamicLink = generateDynamicLink();
 
         // Add the dynamic link to the Allure report
-        Allure.link("Case34_MS_VO2Resulttest", dynamicLink);
+        Allure.link("Case27_MS_Restoreactivitytest", dynamicLink);
     
         // Capture console logs
         String consoleLogs = consoleOutput.toString();
@@ -72,7 +73,7 @@ public class Case34_01_MS_VO2assigntomembertest {
         Allure.addAttachment("Console Output", "text/plain", consoleLogs);
         
         // Capture a screenshot and attach it to Allure
-        AllureUtils.captureScreenshot(driver, "Case34_MS_VO2Resulttest");
+        AllureUtils.captureScreenshot(driver, "Case27_MS_Restoreactivitytest");
         Allure.step("Step Details");
         
         // Retrieve OS information

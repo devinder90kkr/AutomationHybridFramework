@@ -14,7 +14,7 @@
 import cuesz.allure.reporting.AllureUtils;
 import cuesz.factory.WebDriverManager;
 import cuesz.logintest.AdvocateLogin;
-	import cuesz.membersummary.Case16_MS_searchclick;
+import cuesz.membersummary.basic.Case16_MS_searchclick;
 import io.qameta.allure.*;
 	
 	@Epic ("Cuesz Staff on member Summary page")

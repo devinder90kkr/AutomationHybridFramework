@@ -4,12 +4,11 @@
   <test thread-count="5" name="Execute-all-Regressionsuites">
     <classes>    
 		
-	 <class name="cuesz01.Iosapp_member_homeScreen.Case01_Login"/> 
-	 	
-	  <class name="cuesz03.Iosapp_member_home_Fuelscreen.Case20_Fuel_optimalfuel"/>
-	  <class name="cuesz03.Iosapp_member_home_Fuelscreen.Case21_Fuel_breakfast_recommendedfuel"/>
+  <class name="cuesz01.Iosapp_member_homeScreen.Case01_Login"/> 
+    <class name="cuesz03.Iosapp_member_home_Fuelscreen.Case20_Fuel_optimalfuel"/>
+	 <class name="cuesz03.Iosapp_member_home_Fuelscreen.Case21_Fuel_breakfast_recommendedfuel"/>
       <class name="cuesz03.Iosapp_member_home_Fuelscreen.Case22_2Fuel_breakfast_additionalfuel"/>
-  	 <class name="cuesz03.Iosapp_member_home_Fuelscreen.Case22_3Fuel_breakfast_additionalNewfuel"/>
+  	   <class name="cuesz03.Iosapp_member_home_Fuelscreen.Case22_3Fuel_breakfast_additionalNewfuel"/>
 	   <class name="cuesz03.Iosapp_member_home_Fuelscreen.Case23_02_Fuel_breakfast_additionalfueldeletecase"/>
 	    <class name="cuesz03.Iosapp_member_home_Fuelscreen.Case26_Fuel_breakfast_customfood"/>
 	     <class name="cuesz03.Iosapp_member_home_Fuelscreen.Case27_Fuel_breakfast_customfoodaddtobrekfast"/>

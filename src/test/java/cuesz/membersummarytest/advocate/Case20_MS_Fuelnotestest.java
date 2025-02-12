@@ -14,7 +14,7 @@ import org.testng.annotations.Test;
 import cuesz.allure.reporting.AllureUtils;
 import cuesz.factory.WebDriverManager;
 import cuesz.logintest.AdvocateLogin;
-import cuesz.membersummary.Case20_MS_Fuelnotes;
+import cuesz.membersummary.basic.Case20_MS_Fuelnotes;
 import io.qameta.allure.*;
 
 @Epic ("Cuesz Staff on member Summary page")

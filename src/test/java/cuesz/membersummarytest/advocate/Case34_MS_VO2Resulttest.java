@@ -14,7 +14,7 @@ import org.testng.annotations.Test;
 import cuesz.allure.reporting.AllureUtils;
 import cuesz.factory.WebDriverManager;
 import cuesz.logintest.AdvocateLogin;
-import cuesz.membersummary.Case34_MS_VO2Result;
+import cuesz.membersummary.basic.Case34_MS_VO2Result;
 import io.qameta.allure.*;
 
 @Epic ("Cuesz Staff on member Summary page for Body Scan Result ")
