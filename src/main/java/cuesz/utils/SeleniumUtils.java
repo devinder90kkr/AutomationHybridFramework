@@ -61,7 +61,8 @@ public class SeleniumUtils {
  // Click on member call 
     public void clickMembersummary() {
 //        By memberSummaryLocator = By.xpath("//img[@alt='Member Summary']");
-    	 By memberSummaryLocator = By.xpath("//img[@alt='Member Summary'] | //img[@alt='Member Specs']");
+//    	 By memberSummaryLocator = By.xpath("//img[@alt='Member Summary'] | //img[@alt='Member Specs']");
+    	 By memberSummaryLocator = By.id("Dashboard-MemberSummary");
         clickElement(memberSummaryLocator);
 //        driver.navigate().refresh();
 //        clickElement(memberSummaryLocator);
@@ -78,7 +79,9 @@ public class SeleniumUtils {
     
   // Click on member call 
         public void clickMembername() throws InterruptedException {
-            By memberdetail = (By.xpath("//div[@class='member-items']"));
+//            By memberdetail = (By.xpath("//div[@class='member-items']"));
+            By memberdetail = (By.xpath("//div[@class='user_inf']"));
+            
             Thread.sleep(5500);
             clickElement(memberdetail);
     

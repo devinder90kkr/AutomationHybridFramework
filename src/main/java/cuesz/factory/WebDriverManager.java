@@ -125,8 +125,8 @@ public class WebDriverManager {
                     ChromeDriverManager.chromedriver().setup();
                     ChromeOptions options = new ChromeOptions();
      
-                    // Need to add --headless=new because if chrome version more than v109+
-                    // If chrome version v91-108 thne need to use --headless=chrome              
+//                    // Need to add --headless=new because if chrome version more than v109+
+//                    // If chrome version v91-108 thne need to use --headless=chrome              
 //                    options.addArguments("--headless=new");                    
                     
                     // Set Chrome options as needed

@@ -4,6 +4,23 @@ import org.openqa.selenium.By;
 
 public class weblocators {
 	
+	
+	//locator for memberstats
+	public static final By memberstats = (By.xpath("//div[@aria-label='Member Statistics']//em"));
+	public static final By bodyscancard = By.xpath("//div[contains(@class, 'card_right') and h5[normalize-space()='Last Body Scan']]");
+	public static final By cardheadingText1 = By.xpath(".//h5[contains(@class, 'head_grey')]");
+	public static final By carddateText1 = By.xpath(".//h5[not(contains(@class, 'head_grey'))]");
+	
+	public static final By vo2Card =  By.xpath("//h5[normalize-space()='Last VO2 Scan']/parent::div");
+	public static final By cardheadingText2 = By.xpath(".//h5[contains(@class, 'head_grey')]");
+	public static final By carddateText2 = By.xpath(".//h5[not(contains(@class, 'head_grey'))]");
+	
+	public static final By resonantcard =  By.xpath("//h5[normalize-space()='Last Resonant Scan']/parent::div");
+	public static final By resonantheading = By.xpath(".//h5[contains(@class, 'head_grey')]");
+	public static final By resonantdatetext = By.xpath(".//h5[not(contains(@class, 'head_grey'))]");
+	
+	
+	
 	//Case01_create_advocate
 	public static final By advocateclick		= (By.xpath("//img[@title='Advocate']"));
 	
