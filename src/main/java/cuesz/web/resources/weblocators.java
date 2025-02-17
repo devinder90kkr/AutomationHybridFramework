@@ -19,7 +19,11 @@ public class weblocators {
 	public static final By resonantheading = By.xpath(".//h5[contains(@class, 'head_grey')]");
 	public static final By resonantdatetext = By.xpath(".//h5[not(contains(@class, 'head_grey'))]");
 	
-	
+	public static final By MEMBERS_SPHERES_HEADING = By.xpath("//h2[normalize-space()='Members Spheres']");
+	public static final By dropdownmemberstats	= (By.cssSelector(".react-select-dropdown-prefix__control.css-13cymwt-control"));
+	public static final By caloriesheading = By.xpath("//h2[normalize-space()='Calories']");
+	public static final By weeklycalories = By.xpath("//h3[normalize-space()='Weekly Calories']");
+	public static final By caloriesdropdownmemberstats	= (By.xpath("//div[@id='calories_graph']//div[@class='react-select-dropdown-prefix__control css-13cymwt-control']"));
 	
 	//Case01_create_advocate
 	public static final By advocateclick		= (By.xpath("//img[@title='Advocate']"));
