@@ -128,12 +128,12 @@ public class Case30_01_Fuel_Earlysnacks_customfood extends AppiummobileBase {
         AllureUtils.captureScreenshot(driver, "submit2_30");
 		Thread.sleep(4500);
 		
-		// Method to scroll to early snack
-		HashMap<String,Object>scrollObject3 =new HashMap<>();
-		scrollObject3.put("direction", "down");
-		scrollObject3.put("ginfuelselectionc", "ginfuelselectionc");
-		driver.executeScript("mobile:scroll", scrollObject3);
-		Thread.sleep(2000);
+//		// Method to scroll to early snack
+//		HashMap<String,Object>scrollObject3 =new HashMap<>();
+//		scrollObject3.put("direction", "down");
+//		scrollObject3.put("ginfuelselectionc", "ginfuelselectionc");
+//		driver.executeScript("mobile:scroll", scrollObject3);
+//		Thread.sleep(2000);
 		
 		
 	    Thread.sleep(3500);

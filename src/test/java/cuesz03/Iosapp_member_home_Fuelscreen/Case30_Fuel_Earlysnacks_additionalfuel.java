@@ -156,8 +156,8 @@ public class Case30_Fuel_Earlysnacks_additionalfuel extends AppiummobileBase {
         
         /*going to edit fuel list for early snack for blueberry food*/
         
-        // Scroll to Editbeetroot
-        scrollToElementWithText("Editbeetroot");
+//        // Scroll to Editbeetroot
+//        scrollToElementWithText("Editbeetroot");
 
         // Edit feature testing
         WebElement Editbeetroot = driver.findElement(mobileLocators.editearly);

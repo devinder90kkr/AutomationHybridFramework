@@ -58,19 +58,19 @@ public class Case53_Fuel_notesbottom extends AppiummobileBase {
         mobilelement.clickElement(driver, mobileLocators.Fuelhomeclick);
         
 
-		Thread.sleep(3000);
-		// Scroll to "Early-Snacks"
-		mobilelement.scrollDownToElement(driver, "Early Snacks");
-
-		// Scroll to "Dinner"
-		mobilelement.scrollDownToElement(driver, "Dinner");
-
-		// Scroll to "TODAY'S FUEL SUMMARY"
-		mobilelement.scrollDownToElement(driver, "TODAY'S FUEL SUMMARY");
-		Thread.sleep(2000);
-		
-		// Capture a screenshot and attach it to Allure
-        AllureUtils.captureScreenshot(driver, "Case53_Fuel_notesbottom1");
+//		Thread.sleep(3000);
+//		// Scroll to "Early-Snacks"
+//		mobilelement.scrollDownToElement(driver, "Early Snacks");
+//
+//		// Scroll to "Dinner"
+//		mobilelement.scrollDownToElement(driver, "Dinner");
+//
+//		// Scroll to "TODAY'S FUEL SUMMARY"
+//		mobilelement.scrollDownToElement(driver, "TODAY'S FUEL SUMMARY");
+//		Thread.sleep(2000);
+//		
+//		// Capture a screenshot and attach it to Allure
+//        AllureUtils.captureScreenshot(driver, "Case53_Fuel_notesbottom1");
 		 
         /*************** Add  upload fuel images for breakfast***************/
         

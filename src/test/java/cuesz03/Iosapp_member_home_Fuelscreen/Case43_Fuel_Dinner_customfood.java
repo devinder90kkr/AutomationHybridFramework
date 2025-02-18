@@ -118,9 +118,9 @@ public class Case43_Fuel_Dinner_customfood extends AppiummobileBase {
 		   // Capture a screenshot and attach it to Allure
 		   AllureUtils.captureScreenshot(driver, "43_14");
 		   
-		 scroll("down", "Lunch");
-	 		Thread.sleep(2000);
-        
+//		 scroll("down", "Lunch");
+//	 		Thread.sleep(2000);
+//        
 	 		 Thread.sleep(3500);
 		 } catch (Exception e) {
 	            LOGGER.error("An error occurred during the cases ", e);

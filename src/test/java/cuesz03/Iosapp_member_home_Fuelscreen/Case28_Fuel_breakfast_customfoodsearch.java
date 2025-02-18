@@ -124,12 +124,12 @@ public class Case28_Fuel_breakfast_customfoodsearch extends AppiummobileBase {
 		Thread.sleep(8500);
  
 		
-		// Method to scroll to perform screen
-				HashMap<String,Object>scrollObject1 =new HashMap<>();
-				scrollObject1.put("direction", "down");
-				scrollObject1.put("Protein Powder", "Protein Powder");
-				driver.executeScript("mobile:scroll", scrollObject1);
-				Thread.sleep(2000);
+//		// Method to scroll to perform screen
+//				HashMap<String,Object>scrollObject1 =new HashMap<>();
+//				scrollObject1.put("direction", "down");
+//				scrollObject1.put("Protein Powder", "Protein Powder");
+//				driver.executeScript("mobile:scroll", scrollObject1);
+//				Thread.sleep(2000);
 		
 		
 		

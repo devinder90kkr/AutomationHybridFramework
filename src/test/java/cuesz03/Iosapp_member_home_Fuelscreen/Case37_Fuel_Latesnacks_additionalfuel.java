@@ -93,6 +93,7 @@ public class Case37_Fuel_Latesnacks_additionalfuel extends AppiummobileBase {
         AllureUtils.captureScreenshot(driver, "Case37_5");
          
         additionalfuel.sendKeys(mobileTestData.food12);
+Thread.sleep(3500);
  
         WebElement Keypaddone	= driver.findElement(mobileLocators.doneclick);
         Keypaddone.click();
@@ -173,14 +174,14 @@ public class Case37_Fuel_Latesnacks_additionalfuel extends AppiummobileBase {
 		// Capture a screenshot and attach it to Allure
         AllureUtils.captureScreenshot(driver, "Case37_9");
         
-        //click on keypad Done button to hide keypad
-        WebElement keypaddone2	= driver.findElement(mobileLocators.doneclick);
-        keypaddone2.click();
-        // Log console message to Allure
-        LOGGER.info(" Click on keypaddone2");
-        AllureUtils.logStep("Click on keypaddone2");
-		// Capture a screenshot and attach it to Allure
-        AllureUtils.captureScreenshot(driver, "Case37_10");
+//        //click on keypad Done button to hide keypad
+//        WebElement keypaddone2	= driver.findElement(mobileLocators.doneclick);
+//        keypaddone2.click();
+//        // Log console message to Allure
+//        LOGGER.info(" Click on keypaddone2");
+//        AllureUtils.logStep("Click on keypaddone2");
+//		// Capture a screenshot and attach it to Allure
+//        AllureUtils.captureScreenshot(driver, "Case37_10");
         
 																	//        // Click on fuel search field 
 																	//        WebElement additionalfuel2 = driver.findElement(mobileLocators.additionalsearch);
@@ -230,62 +231,63 @@ public class Case37_Fuel_Latesnacks_additionalfuel extends AppiummobileBase {
 																	//            AllureUtils.logStep("Clicked on 'fuelselection' to add a new food item.");
 																	//        }
 
-        // Click on fuel search field 
-        WebElement additionalfuel31 = driver.findElement(mobileLocators.additionalsearch1);
-        additionalfuel31.sendKeys(mobileTestData.food14);
-        
-        WebElement Keypaddone3	= driver.findElement(mobileLocators.doneclick);
-        Keypaddone3.click();
-
-        // Log console message to Allure
-        LOGGER.info("Enter values for search, Click on Done");
-        AllureUtils.logStep("Enter values for search, Click on done");
-		// Capture a screenshot and attach it to Allure
-        AllureUtils.captureScreenshot(driver, "Case37_15");
-
-        Thread.sleep(3500);
-        try {
-            // Check if the food item exists in the history
-//            WebElement foodHistoryItem = driver.findElement(AppiumBy.accessibilityId("Blueberry Timbit"));
-            WebElement foodHistoryItem = driver.findElement(mobileLocators.mustardfuelselection);
-            
-            
-            LOGGER.info("Food item 'Blueberry Timbit' found in the history.");
-
-            // Click on the existing food item if clickable
-            if (foodHistoryItem.isDisplayed() && foodHistoryItem.isEnabled()) {
-                foodHistoryItem.click();
-                AllureUtils.logStep("Clicked on 'Blueberry Timbit' from the history.");
-            } else {
-                LOGGER.warn("'Blueberry Timbit' is found but not clickable.");
-            }
-
-            // Click on 'fuelselection' after clicking on the foodHistoryItem
-            WebElement fuelselection = driver.findElement(mobileLocators.mustardfuelselection);
-            fuelselection.click();
-            AllureUtils.logStep("Clicked on 'fuelselection' after 'Blueberry Timbit'.");
-        } catch (NoSuchElementException e) {
-            LOGGER.info("Food item 'Blueberry Timbit' not found in the history. Selecting fuel option instead.");
-
-            // Click on 'fuelselection' as the food item doesn't exist in the history
-            WebElement fuelselection = driver.findElement(mobileLocators.mustardfuelselection);
-            fuelselection.click();
-            AllureUtils.logStep("Clicked on 'fuelselection' to add a new food item.");
-        }
-        
-       
-        // Capture a screenshot and attach it to Allure
-	    AllureUtils.captureScreenshot(driver, "latesnacks4");
-        Thread.sleep(4500);
-
-        WebElement submit2 = driver.findElement(mobileLocators.latesncaktick);
-		submit2.click();
-		// Log console message to Allure
-        LOGGER.info(" Click on submit2");
-        AllureUtils.logStep("Click on submit2");
-		// Capture a screenshot and attach it to Allure
-        AllureUtils.captureScreenshot(driver, "Case37_16");
-		
+//        // Click on fuel search field 
+//        WebElement additionalfuel31 = driver.findElement(mobileLocators.additionalsearch1);
+//        additionalfuel31.sendKeys(mobileTestData.food14);
+//
+//        Thread.sleep(3500);
+//        WebElement Keypaddone3	= driver.findElement(mobileLocators.doneclick);
+//        Keypaddone3.click();
+//
+//        // Log console message to Allure
+//        LOGGER.info("Enter values for search, Click on Done");
+//        AllureUtils.logStep("Enter values for search, Click on done");
+//		// Capture a screenshot and attach it to Allure
+//        AllureUtils.captureScreenshot(driver, "Case37_15");
+//
+//        Thread.sleep(3500);
+//        try {
+//            // Check if the food item exists in the history
+////            WebElement foodHistoryItem = driver.findElement(AppiumBy.accessibilityId("Blueberry Timbit"));
+//            WebElement foodHistoryItem = driver.findElement(mobileLocators.mustardfuelselection);
+//            
+//            
+//            LOGGER.info("Food item 'Blueberry Timbit' found in the history.");
+//
+//            // Click on the existing food item if clickable
+//            if (foodHistoryItem.isDisplayed() && foodHistoryItem.isEnabled()) {
+//                foodHistoryItem.click();
+//                AllureUtils.logStep("Clicked on 'Blueberry Timbit' from the history.");
+//            } else {
+//                LOGGER.warn("'Blueberry Timbit' is found but not clickable.");
+//            }
+//
+//            // Click on 'fuelselection' after clicking on the foodHistoryItem
+//            WebElement fuelselection = driver.findElement(mobileLocators.mustardfuelselection);
+//            fuelselection.click();
+//            AllureUtils.logStep("Clicked on 'fuelselection' after 'Blueberry Timbit'.");
+//        } catch (NoSuchElementException e) {
+//            LOGGER.info("Food item 'Blueberry Timbit' not found in the history. Selecting fuel option instead.");
+//
+//            // Click on 'fuelselection' as the food item doesn't exist in the history
+//            WebElement fuelselection = driver.findElement(mobileLocators.mustardfuelselection);
+//            fuelselection.click();
+//            AllureUtils.logStep("Clicked on 'fuelselection' to add a new food item.");
+//        }
+//        
+//       
+//        // Capture a screenshot and attach it to Allure
+//	    AllureUtils.captureScreenshot(driver, "latesnacks4");
+//        Thread.sleep(4500);
+//
+//        WebElement submit2 = driver.findElement(mobileLocators.latesncaktick);
+//		submit2.click();
+//		// Log console message to Allure
+//        LOGGER.info(" Click on submit2");
+//        AllureUtils.logStep("Click on submit2");
+//		// Capture a screenshot and attach it to Allure
+//        AllureUtils.captureScreenshot(driver, "Case37_16");
+//		
 		
 		Thread.sleep(4500);
 		 } catch (Exception e) {

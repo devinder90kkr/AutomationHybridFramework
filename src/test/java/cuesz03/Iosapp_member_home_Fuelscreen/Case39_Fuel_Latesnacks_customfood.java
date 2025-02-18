@@ -126,8 +126,8 @@ public class Case39_Fuel_Latesnacks_customfood extends AppiummobileBase {
         AllureUtils.logStep("Click on editsubmit");
         AllureUtils.captureScreenshot(driver,"39_17");
         
-		 scroll("down", "Lunch");
-	 		Thread.sleep(2000);
+//		 scroll("down", "Lunch");
+//	 		Thread.sleep(2000);
         
 	 		 Thread.sleep(3500);
 		 } catch (Exception e) {
@@ -146,12 +146,12 @@ public class Case39_Fuel_Latesnacks_customfood extends AppiummobileBase {
 	        }
 	    }
 	
-	 private void scroll(String direction, String elementName) {
-	        HashMap<String, Object> scrollObject = new HashMap<>();
-	        scrollObject.put("direction", direction);
-	        scrollObject.put(elementName, elementName);
-	        driver.executeScript("mobile:scroll", scrollObject);
-	    }
+//	 private void scroll(String direction, String elementName) {
+//	        HashMap<String, Object> scrollObject = new HashMap<>();
+//	        scrollObject.put("direction", direction);
+//	        scrollObject.put(elementName, elementName);
+//	        driver.executeScript("mobile:scroll", scrollObject);
+//	    }
 
 }
 	

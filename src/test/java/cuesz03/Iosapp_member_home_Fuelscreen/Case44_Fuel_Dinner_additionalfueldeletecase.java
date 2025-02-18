@@ -159,13 +159,13 @@ public class Case44_Fuel_Dinner_additionalfueldeletecase extends AppiummobileBas
 		// Capture a screenshot and attach it to Allure
         AllureUtils.captureScreenshot(driver, "Case44_13");
 
-		Thread.sleep(3500);
-		// Method to scroll to early snack
-		HashMap<String,Object>scrollObject53 =new HashMap<>();
-		scrollObject53.put("direction", "down");
-		scrollObject53.put("Dinner", "Dinner");
-		driver.executeScript("mobile:scroll", scrollObject53);
-		Thread.sleep(2000);
+//		Thread.sleep(3500);
+//		// Method to scroll to early snack
+//		HashMap<String,Object>scrollObject53 =new HashMap<>();
+//		scrollObject53.put("direction", "down");
+//		scrollObject53.put("Dinner", "Dinner");
+//		driver.executeScript("mobile:scroll", scrollObject53);
+//		Thread.sleep(2000);
 
 		
 		 Thread.sleep(3500);

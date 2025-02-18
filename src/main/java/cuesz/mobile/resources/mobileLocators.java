@@ -549,7 +549,7 @@ public class mobileLocators {
 	public static final By performancetime	=		AppiumBy.accessibilityId("Pre PerformanceTimeEdit");
 	public static final By deleticon		=		AppiumBy.accessibilityId("Walking-Delete");
 	public static final By yesdeleticon		=		AppiumBy.accessibilityId("Yes");
-	public static final By butterclik		=		AppiumBy.accessibilityId("Organic butter");
+	public static final By butterclik		=		AppiumBy.accessibilityId("Protein bar");
 	
 	
 	public static final By plusadd			= 		AppiumBy.accessibilityId("BreakfastAddIcon");	
