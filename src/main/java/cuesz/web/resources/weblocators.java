@@ -24,6 +24,31 @@ public class weblocators {
 	public static final By caloriesheading = By.xpath("//h2[normalize-space()='Calories']");
 	public static final By weeklycalories = By.xpath("//h3[normalize-space()='Weekly Calories']");
 	public static final By caloriesdropdownmemberstats	= (By.xpath("//div[@id='calories_graph']//div[@class='react-select-dropdown-prefix__control css-13cymwt-control']"));
+	public static final By nutritionalheading	= (By.xpath("//h2[normalize-space()='Nutritional Information']"));
+	public static final By nutrinonaldropdown= By.xpath("//div[@id='nutritional_information_graph']//div[@class='react-select-dropdown-prefix__input-container css-19bb58m']");
+	public static final By fridayweek	= By.xpath("//button[normalize-space()='Friday']");
+	public static final By mondayweek	= By.xpath("//button[normalize-space()='Monday']");
+	
+	public static final By performheading 	= By.xpath("//h2[normalize-space()='Perform Activities']");
+	public static final By performdropwdown	= By.xpath("//div[@id='perform_activities_graph']//div[@class='react-select-dropdown-prefix__input-container css-19bb58m']");
+	public static final By performgraph 	= By.xpath("//div[@id='perform_activities_graph']//canvas[@role='img']");
+	
+	public static final By topmissedactivity = By.xpath("//h2[normalize-space()='Top Missed Activities']");
+	public static final By missedactivitydropdown = By.xpath("//div[@class='activity-section-container']//div[@class='react-select-dropdown-prefix__single-value css-1dimb5e-singleValue'][normalize-space()='Last 7 Days']");
+	public static final By performacitiydayLP	= By.xpath("//h2[normalize-space()='Perform Activities Day After LP']");
+	
+	public static final By timelineheading	= By.xpath("//h2[normalize-space()='Timeline']");
+	public static final By timelinedropdown = By.xpath("//div[@id='timeline_graph']//div[@class='react-select-dropdown-prefix__input-container css-19bb58m']");
+	
+	public static final By tonnageheading	= By.xpath("//h2[normalize-space()='Tonnage']");
+	public static final By tonnagedropdown	= By.xpath("//div[@id='tonnage_graph']//div[@class='react-select-dropdown-prefix__input-container css-19bb58m']");
+	public static final By tonnagetoggel	= By.xpath("//input[@id='Tonnage-toggle']");
+	
+	public static final By mostscreenheading	= By.xpath("//h2[normalize-space()='Most Used Screens']");
+	public static final By mostscreendropdown	= By.xpath("//div[@id='most_used_screens_graph']//div[@class='react-select-dropdown-prefix__input-container css-19bb58m']");
+	
+	public static final By frequencyheading	= By.xpath("//h2[normalize-space()='Frequency Of Checking Future Activities']");
+	public static final By frequencydropdown	= By.xpath("//div[@id='frequency_of_checking_futures_activities_graph']//div[@class='react-select-dropdown-prefix__input-container css-19bb58m']");
 	
 	//Case01_create_advocate
 	public static final By advocateclick		= (By.xpath("//img[@title='Advocate']"));
