@@ -164,7 +164,7 @@ try {
 		values.get(2).sendKeys("AM");
 		
 		driver.findElement(mobileLocators.Doneclick).click();
-        
+		Thread.sleep(3000);        
     	WebElement submit = driver.findElement(mobileLocators.earlysnacksubmitick);
 		submit.click();
 		// Log console message to Allure

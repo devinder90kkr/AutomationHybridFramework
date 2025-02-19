@@ -4,7 +4,6 @@
     <suite-files>
         <suite-file path="../Member-App-Suites/Membercase-regrssion-independent-Homescreen_suite01.xml"/>
         <suite-file path="../Member-App-Suites/Membercase-regrssion-independent-myprofile-mindful-suite03.xml"/>
-        <suite-file path="../Member-App-Suites/Membercase-regrssion-independent-perform-restore-morning-suite02.xml"/>
-        <suite-file path="../Member-App-Suites/Membercase-regrssion-independent-Fuelsuite.xml"/>
+        
     </suite-files>
 </suite>

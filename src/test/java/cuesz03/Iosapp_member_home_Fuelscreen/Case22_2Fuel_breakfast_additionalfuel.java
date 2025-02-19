@@ -98,7 +98,7 @@ public class Case22_2Fuel_breakfast_additionalfuel extends AppiummobileBase {
         LOGGER.info("Entering food name into the search field: " + mobileTestData.food24);
         additionalfuel.sendKeys(mobileTestData.food24);
         AllureUtils.logStep("Entering food name into the search field: " + mobileTestData.food24);
-        
+        Thread.sleep(2500);
         //click on keypad Done button to hide keypad
         WebElement keypaddone1    = driver.findElement(mobileLocators.doneclick);
         keypaddone1.click();
@@ -111,7 +111,7 @@ public class Case22_2Fuel_breakfast_additionalfuel extends AppiummobileBase {
             // Check if the food item exists in the history
             WebElement foodHistoryItem = driver.findElement(AppiumBy.accessibilityId("Brown Bread"));
             LOGGER.info("Food item 'Brown bread' found in the history.");
-
+            Thread.sleep(2500);
             // Click on the existing food item if clickable
             if (foodHistoryItem.isDisplayed() && foodHistoryItem.isEnabled()) {
                 foodHistoryItem.click();
@@ -119,7 +119,7 @@ public class Case22_2Fuel_breakfast_additionalfuel extends AppiummobileBase {
             } else {
                 LOGGER.warn("'Brown bread' is found but not clickable.");
             }
-
+            Thread.sleep(2500);
             // Click on 'fuelselection' after clicking on the foodHistoryItem
             WebElement fuelselection = driver.findElement(mobileLocators.food1);
             fuelselection.click();
@@ -135,7 +135,7 @@ public class Case22_2Fuel_breakfast_additionalfuel extends AppiummobileBase {
 
         // Capture a screenshot for verification
         AllureUtils.captureScreenshot(driver, "Case22_Fuel_breakfast_additionalfuel5");
-
+        Thread.sleep(2500);
         
         //Click on food info icon
         WebElement fooditemicon        = driver.findElement(mobileLocators.foodinfoicon);
