@@ -4,6 +4,12 @@ import org.openqa.selenium.By;
 
 public class weblocators {
 	
+	public static final By graphIcon = By.id("MemberSummary-/insights");
+	public static final By dropdown = By.id("GraphDropdown");
+	public static final By option = By.xpath("//div[@id='GraphDropdown']//div[contains(text(), 'Resting Physiology')]");
+	public static final By restingHeading = By.xpath("//h2[normalize-space()='Resting Physiology']");
+	
+	
 	
 	//locator for memberstats
 	public static final By memberstats = (By.xpath("//div[@aria-label='Member Statistics']//em"));
