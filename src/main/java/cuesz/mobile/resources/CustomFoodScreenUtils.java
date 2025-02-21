@@ -61,11 +61,12 @@ public class CustomFoodScreenUtils {
                     break;
                 } catch (org.openqa.selenium.NoSuchElementException e) {
                     // Handle the absence of additempopup, navigate back to additionalfuel and continue the loop
-                    System.out.println("Add Item popup not found. Navigating back to Additional Fuel.");
+                	Thread.sleep(3000);
+                	System.out.println("Add Item popup not found. Navigating back to Additional Fuel.");
                     WebElement backbutton = driver.findElement(AppiumBy.accessibilityId("SelectedFuelBackPress"));
-                    Thread.sleep(3000);
+                   
                     backbutton.click();
-                    
+                    Thread.sleep(3000);
                     // Log console message to Allure
                     LOGGER.info("Click on backbutton" );
                     AllureUtils.logStep("Click on backbutton");
