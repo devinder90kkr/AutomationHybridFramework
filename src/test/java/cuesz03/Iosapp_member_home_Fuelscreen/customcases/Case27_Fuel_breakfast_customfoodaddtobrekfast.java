@@ -1,8 +1,9 @@
-package cuesz03.Iosapp_member_home_Fuelscreen;
+package cuesz03.Iosapp_member_home_Fuelscreen.customcases;
 
 import java.util.HashMap;
 import java.util.List;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.slf4j.Logger;
@@ -25,23 +26,27 @@ import io.qameta.allure.SeverityLevel;
 import io.qameta.allure.Story;
 
 @Epic ("Fuel custom screen detail ")
-@Feature ("Verify Fuel detail functionlaity related to Custom fuel.")
-public class Case43_Fuel_Dinner_customfood extends AppiummobileBase {
-	private static final Logger LOGGER = LoggerFactory.getLogger(Case43_Fuel_Dinner_customfood.class);
+@Feature ("Verify Fuel detail functionlaity related to Custom fuel and add to breakfast list.")
+public class Case27_Fuel_breakfast_customfoodaddtobrekfast extends AppiummobileBase {
+	private static final Logger LOGGER = LoggerFactory.getLogger(Case27_Fuel_breakfast_customfoodaddtobrekfast.class);
 	
+	private By submitick		= 		AppiumBy.accessibilityId("ItemSubmit");
+	private By Time				= 		AppiumBy.accessibilityId("AdditionalItemTime");
+	private By pickerelement	= 		AppiumBy.xpath("//XCUIElementTypePickerWheel");
+	private By Doneclick		= 		AppiumBy.accessibilityId("AlcohalTime");
+
 	@Test
 	@Owner("QA") // Add the @Owner annotation to specify the executor
     @Severity(SeverityLevel.NORMAL)      
-	@Description("Custom Fuel screen detail verification")
-    @Story("Scroll to Fuel card and verify custom food breakfast.")
-	public void Fuel_Dinner_customfood() throws InterruptedException{
+    @Description("Custom Fuel screen detail verification")
+    @Story("Scroll to Fuel card and verify custom food to  breakfast.")	
+	public void Homescreen() throws InterruptedException{
 		try {
 			 // Initialize utility class
-	        CustomFoodScreenUtils utils = new CustomFoodScreenUtils(driver);
+	        CustomFoodScreenUtils utils = new CustomFoodScreenUtils(driver);	
 			// Create an instance of AppiumUtils and pass the driver
 			AppiumappUtils appiumUtils = new AppiumappUtils(driver);
 	        // Launch the app using the utility method
-//	        appiumUtils.launchAppWithPackageId("com.cuesz.mobile");
 			 appiumUtils.launchAppWithPackageId(mobileTestData.bundelID);
 			
 			WebElement Homeicon = driver.findElement(mobileLocators.Homeclick);
@@ -69,7 +74,7 @@ public class Case43_Fuel_Dinner_customfood extends AppiummobileBase {
 	        
 	        
 	        // Locate the element related to breakfast + icon 
-	        WebElement breakfastplus 	= driver.findElement(mobileLocators.dinnerplusicon);
+	        WebElement breakfastplus 	= driver.findElement(mobileLocators.plusadd);
 	        breakfastplus.click();
 	        // Log console message to Allure
 	        LOGGER.info("Click on breakfastplus icon");
@@ -86,13 +91,13 @@ public class Case43_Fuel_Dinner_customfood extends AppiummobileBase {
 	        AllureUtils.captureScreenshot(driver, "Case26_4");
 	        
 	        // Call the utility method
-		    String searchText = mobileTestData.searchText;
-		    utils.addCustomFood(searchText);  
-	        
-//        // Click on timer 
-	        WebElement Timerclick 	= driver.findElement(mobileLocators.Time);
+	        String searchText = mobileTestData.searchText;
+	        utils.addCustomFood(searchText);
+	         
+	        // Click on timer 
+	        WebElement Timerclick 	= driver.findElement(Time);
 	        Timerclick.click();
-	        List<WebElement>values = driver.findElements(mobileLocators.pickerelement);
+	        List<WebElement>values = driver.findElements(pickerelement);
 			for (int i=0; i<values.size();i++)
 			{		
 			System.out.println(values.get(i).getText());
@@ -104,45 +109,34 @@ public class Case43_Fuel_Dinner_customfood extends AppiummobileBase {
 			values.get(1).sendKeys(Keys.TAB);
 			Thread.sleep(3500);
 			values.get(2).sendKeys("AM");
-			driver.findElement(mobileLocators.Doneclick).click();
-		// Log console message to Allure
+			driver.findElement(Doneclick).click();
+			// Log console message to Allure
 		    LOGGER.info("Click on done icon");
 		    AllureUtils.logStep("Click on done icon");
-
+		    
+		    Thread.sleep(2500);
+	        WebElement submit1 = driver.findElement(mobileLocators.submitick);
+	        submit1.click();
+	          // Log console message to Allure
+	        LOGGER.info("Click on submit");
+	        AllureUtils.logStep("Click on submit");
+	        AllureUtils.captureScreenshot(driver, "submit");
         
-	     WebElement editsubmit 	= driver.findElement(mobileLocators.dinnerTickoption);
-	     editsubmit.click();
-			// Log console message to Allure
-	       LOGGER.info("click on editsubmit");
-		   AllureUtils.logStep("click on editsubmit");
-		   // Capture a screenshot and attach it to Allure
-		   AllureUtils.captureScreenshot(driver, "43_14");
-		   
-//		 scroll("down", "Lunch");
-//	 		Thread.sleep(2000);
-//        
-	 		 Thread.sleep(3500);
-		 } catch (Exception e) {
-	            LOGGER.error("An error occurred during the cases ", e);
-	            AllureUtils.logStep("An error occurred: " + e.getMessage());
-	        } finally {
-	            // Terminate the app whether the test passed or failed
-	            try {
-	                Thread.sleep(8500);
-	            } catch (InterruptedException e) {
-	                LOGGER.error("Thread interrupted during final sleep", e);
-	                Thread.currentThread().interrupt();
-	            }
-//	            driver.terminateApp("com.cuesz.mobile");
-	            driver.terminateApp(mobileTestData.bundelID);
-	        }
-	    }
-	 private void scroll(String direction, String elementName) {
-	        HashMap<String, Object> scrollObject = new HashMap<>();
-	        scrollObject.put("direction", direction);
-	        scrollObject.put(elementName, elementName);
-	        driver.executeScript("mobile:scroll", scrollObject);
-	    }
-
-}
-	
+			Thread.sleep(8500);
+	 
+			 } catch (Exception e) {
+		            LOGGER.error("An error occurred during the mindful screen test", e);
+		            AllureUtils.logStep("An error occurred: " + e.getMessage());
+		        } finally {
+		            // Terminate the app whether the test passed or failed
+		            try {
+		                Thread.sleep(8500);
+		            } catch (InterruptedException e) {
+		                LOGGER.error("Thread interrupted during final sleep", e);
+		                Thread.currentThread().interrupt();
+		            }
+//		            driver.terminateApp("com.cuesz.mobile");
+		            driver.terminateApp(mobileTestData.bundelID);
+		        }
+		    }
+	}

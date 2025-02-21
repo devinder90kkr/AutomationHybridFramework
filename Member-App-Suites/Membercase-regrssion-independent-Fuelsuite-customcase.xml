@@ -5,14 +5,14 @@
     <classes>    
 		
   <class name="cuesz01.Iosapp_member_homeScreen.Case01_Login"/> 
-    <class name="cuesz03.Iosapp_member_home_Fuelscreen.Case20_Fuel_optimalfuel"/>
-	     <class name="cuesz03.Iosapp_member_home_Fuelscreen.Case27_Fuel_breakfast_customfoodaddtobrekfast"/>
-	      <class name="cuesz03.Iosapp_member_home_Fuelscreen.Case28_Fuel_breakfast_customfoodsearch"/>
-	        <class name="cuesz03.Iosapp_member_home_Fuelscreen.Case30_01_Fuel_Earlysnacks_customfood"/>
-	             <class name="cuesz03.Iosapp_member_home_Fuelscreen.Case36_Fuel_Lunch_customfood"/>         
-	               <class name="cuesz03.Iosapp_member_home_Fuelscreen.Case39_Fuel_Latesnacks_customfood"/>
-	                  <class name="cuesz03.Iosapp_member_home_Fuelscreen.Case43_Fuel_Dinner_customfood"/>
-	                      <class name="cuesz03.Iosapp_member_home_Fuelscreen.Case20_Fuel_optimalfuel"/>
+    <class name="cuesz03.Iosapp_member_home_Fuelscreen.recommendedcase.Case20_Fuel_optimalfuel"/>
+	     <class name="cuesz03.Iosapp_member_home_Fuelscreen.customcases.Case27_Fuel_breakfast_customfoodaddtobrekfast"/>
+	      <class name="cuesz03.Iosapp_member_home_Fuelscreen.customcases.Case28_Fuel_breakfast_customfoodsearch"/>
+	        <class name="cuesz03.Iosapp_member_home_Fuelscreen.customcases.Case30_01_Fuel_Earlysnacks_customfood"/>
+	             <class name="cuesz03.Iosapp_member_home_Fuelscreen.customcases.Case36_Fuel_Lunch_customfood"/>         
+	               <class name="cuesz03.Iosapp_member_home_Fuelscreen.customcases.Case39_Fuel_Latesnacks_customfood"/>
+	                  <class name="cuesz03.Iosapp_member_home_Fuelscreen.customcases.Case43_Fuel_Dinner_customfood"/>
+	                    <class name="cuesz03.Iosapp_member_home_Fuelscreen.recommendedcase.Case20_Fuel_optimalfuel"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

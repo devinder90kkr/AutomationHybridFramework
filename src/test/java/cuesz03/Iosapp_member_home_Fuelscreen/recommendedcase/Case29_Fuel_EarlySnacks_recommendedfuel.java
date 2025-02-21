@@ -254,7 +254,7 @@
 //	
 //
 
-package cuesz03.Iosapp_member_home_Fuelscreen;
+package cuesz03.Iosapp_member_home_Fuelscreen.recommendedcase;
 
 import java.util.HashMap;
 import java.util.List;

@@ -16,7 +16,7 @@ import cuesz.mobile.resources.mobileTestData;
 import cuesz.mobile.resources.mobilelement;
 import cuesz.pages.AppiummobileBase;
 import cuesz.utils.AppiumappUtils;
-import cuesz03.Iosapp_member_home_Fuelscreen.Case20_Fuel_optimalfuel;
+import cuesz03.Iosapp_member_home_Fuelscreen.recommendedcase.Case20_Fuel_optimalfuel;
 import io.appium.java_client.AppiumBy;
 import io.qameta.allure.Description;
 import io.qameta.allure.Epic;

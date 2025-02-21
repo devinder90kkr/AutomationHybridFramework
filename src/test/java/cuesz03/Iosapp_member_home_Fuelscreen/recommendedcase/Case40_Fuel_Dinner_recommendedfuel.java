@@ -1,10 +1,8 @@
-package cuesz03.Iosapp_member_home_Fuelscreen;
+package cuesz03.Iosapp_member_home_Fuelscreen.recommendedcase;
 
 import java.util.HashMap;
 import java.util.List;
-import java.util.NoSuchElementException;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.slf4j.Logger;
@@ -18,7 +16,6 @@ import cuesz.mobile.resources.mobileTestData;
 import cuesz.pages.AppiummobileBase;
 import cuesz.utils.AppiumappUtils;
 import io.appium.java_client.AppiumBy;
-import io.appium.java_client.AppiumDriver;
 import io.qameta.allure.Allure;
 import io.qameta.allure.Description;
 import io.qameta.allure.Epic;
@@ -28,64 +25,55 @@ import io.qameta.allure.Severity;
 import io.qameta.allure.SeverityLevel;
 import io.qameta.allure.Story;
 
-@Epic ("Fuel screen detail")
-@Feature ("Verify Fuel detail functionlaity related to Lunch functionlaity.")
-public class Case33_Fuel_Lunch_recommendedfuel extends AppiummobileBase {
-	private static final Logger LOGGER = LoggerFactory.getLogger(Case33_Fuel_Lunch_recommendedfuel.class);
+@Epic ("Member fuel screen detail ")
+@Feature ("Verify Fuel detail functionlaity related to dinner functionlaity.")
+public class Case40_Fuel_Dinner_recommendedfuel extends AppiummobileBase {
+	private static final Logger LOGGER = LoggerFactory.getLogger(Case40_Fuel_Dinner_recommendedfuel.class);
+	
+
 
 	@Test
 	@Owner("QA") // Add the @Owner annotation to specify the executor
     @Severity(SeverityLevel.NORMAL)      
     @Description("Member Fuel screen detail verification")
-    @Story("Scroll to Fuel card and verify Lunch assigned by staff ")	
-	public void Fuel_Lunch_recommendedfuel() throws InterruptedException{
+    @Story("Scroll to Fuel card and verify Dinner assigned by staff ")	
+	public void Fuel_Dinner_recommendedfuel() throws InterruptedException{
 		try {
 		// Create an instance of AppiumUtils and pass the driver
 		AppiumappUtils appiumUtils = new AppiumappUtils(driver);
         // Launch the app using the utility method
-		//        appiumUtils.launchAppWithPackageId("com.cuesz.mobile");	
 		 appiumUtils.launchAppWithPackageId(mobileTestData.bundelID);
-		
+		 
 		WebElement Homeicon = driver.findElement(mobileLocators.Homeclick);
 		Homeicon.click();
 		// Log console message to Allure
- 		LOGGER.info("Click on Homeicon");
- 		AllureUtils.logStep("Click on Homeicon");
- 		// Capture a screenshot and attach it to Allure
- 		AllureUtils.captureScreenshot(driver, "Case33_1");
-		 		
+		LOGGER.info("Click on home menu from bottom");
+        AllureUtils.logStep("Click on home menu from bottom");
+        // Capture a screenshot and attach it to Allure
+        AllureUtils.captureScreenshot(driver, "40_1");
+		        
 		Thread.sleep(3000);
-		scroll("down", "Perform Fuel Mindful Restore");
-		
+		// Method to scroll to perform screen
+		HashMap<String,Object>scrollObject =new HashMap<>();
+		scrollObject.put("direction", "down");
+		scrollObject.put("Perform Fuel Mindful Restore", "Perform");
+		driver.executeScript("mobile:scroll", scrollObject);
 		Thread.sleep(2000);
+
         //Click on Fuel tab 
         driver.findElement(AppiumBy.accessibilityId("FUEL_SCREEN")).click();
         // Log console message to Allure
         LOGGER.info("Click on fuel screen");
         AllureUtils.logStep("Click on fuel screen");
-        AllureUtils.captureScreenshot(driver, "Case33_2");
-        
- 		
-     // Scroll to "Early Snacks" element if it's not present on the screen
-        By lunchLocator = AppiumBy.iOSClassChain("**/XCUIElementTypeStaticText[`label == \"Lunch\"`][1]");
-        if (!isElementPresent(driver, lunchLocator)) {
-            // Scroll to "Early Snacks" if it's not present
-            HashMap<String, Object> scrollObject1 = new HashMap<>();
-            scrollObject1.put("direction", "down");
-            scrollObject1.put("Lunch", "Lunch");
-            driver.executeScript("mobile:scroll", scrollObject1);
-            Thread.sleep(2000);
-        }
-        
-        Thread.sleep(2000);
+        AllureUtils.captureScreenshot(driver,"40_2");
         
 		
         // Locate the element containing the perform
-        WebElement lunchlabel	= driver.findElement(mobileLocators.Lunchlabel);
+        WebElement dinner = driver.findElement(mobileLocators.dinnerlabel);
         // Extract text from the element
-        String actualText = lunchlabel.getText();
+        String actualText = dinner.getText();
         // Define the expected text
-        String expectedText = "Lunch";
+        String expectedText = "Dinner";
         
         // Print the actual and expected text to the console
         System.out.println("Actual Text: " + actualText);
@@ -94,40 +82,39 @@ public class Case33_Fuel_Lunch_recommendedfuel extends AppiummobileBase {
         Assert.assertEquals(actualText, expectedText);
 		
         
-        // Locate and click on breakfasticon for cal related info
-        WebElement earlysnackicon	= driver.findElement(mobileLocators.iconforlunch);
-        earlysnackicon.click();
+        // Locate and click on dinnericon for cal related info
+        WebElement dinnericon	= driver.findElement(mobileLocators.icondinner);
+        dinnericon.click();
         // Log console message to Allure
-        LOGGER.info("Click on earlysnackicon");
-        AllureUtils.logStep("Click on earlysnackicon");
-        AllureUtils.captureScreenshot(driver, "Case33_3");
+        LOGGER.info("Click on fuel screen");
+        AllureUtils.logStep("Click on fuel screen");
+        AllureUtils.captureScreenshot(driver,"40_3");
         
         WebElement backclick	= driver.findElement(mobileLocators.backicon);
         backclick.click();
         // Log console message to Allure
-        LOGGER.info("Click on backicon");
-        AllureUtils.logStep("Click on backicon");
-        AllureUtils.captureScreenshot(driver, "Case33_4");
+        LOGGER.info("Click on backclick");
+        AllureUtils.logStep("Click on backclick");
+        AllureUtils.captureScreenshot(driver,"40_4");
         
 		// Capture a screenshot and attach it to Allure
-        AllureUtils.captureScreenshot(driver, "lunch1");
+        AllureUtils.captureScreenshot(driver, "Dinner1");
         
-        // Locate the element related to breakfast + icon 
-        WebElement earlysnackplus 	= driver.findElement(mobileLocators.lunchplusicon);
-        earlysnackplus.click();
+        // Locate the element related to dinner + icon 
+        WebElement dinnerplus 	= driver.findElement(mobileLocators.dinnerplusicon);
+        dinnerplus.click();
         // Log console message to Allure
-        LOGGER.info("Click on earlysnackplus");
-        AllureUtils.logStep("Click on earlysnackplus");
-        AllureUtils.captureScreenshot(driver, "Case33_5");
+        LOGGER.info("Click on dinnerplus");
+        AllureUtils.logStep("Click on dinnerplus");
+        AllureUtils.captureScreenshot(driver,"40_5");
         
        //click on keypad Done button to hide keypad
         WebElement keypaddone	= driver.findElement(mobileLocators.doneclick);
         keypaddone.click();
         // Log console message to Allure
-        LOGGER.info("Click on keypaddone");
-        AllureUtils.logStep("Click on keypaddone");
-        AllureUtils.captureScreenshot(driver, "Case33_6");
-        
+        LOGGER.info("Click on done");
+        AllureUtils.logStep("Click on done");
+        AllureUtils.captureScreenshot(driver,"40_6");
         
         // Locate and click on recommended Fuel button
         WebElement Recommendedfuel 	= driver.findElement(mobileLocators.recommendedclick);
@@ -135,11 +122,31 @@ public class Case33_Fuel_Lunch_recommendedfuel extends AppiummobileBase {
         // Log console message to Allure
         LOGGER.info("Click on Recommendedfuel");
         AllureUtils.logStep("Click on Recommendedfuel");
-        AllureUtils.captureScreenshot(driver, "Case33_7");
+        AllureUtils.captureScreenshot(driver,"40_7");
         
-
-        Thread.sleep(5000);
+        WebElement recommendebackclick	= driver.findElement(mobileLocators.backicon1);
+        recommendebackclick.click();
+        // Log console message to Allure
+        LOGGER.info("Click on recommendebackclick");
+        AllureUtils.logStep("Click on recommendebackclick");
+        AllureUtils.captureScreenshot(driver,"40_8");
         
+      //click on keypad Done button to hide keypad
+        WebElement keypaddone1	= driver.findElement(mobileLocators.doneclick);
+        keypaddone1.click();
+        // Log console message to Allure
+        LOGGER.info("Click on recommendebackclick");
+        AllureUtils.logStep("Click on recommendebackclick");
+        AllureUtils.captureScreenshot(driver,"40_9");
+        
+        // Locate and click on recommended Fuel button
+        WebElement Recommendedfuel1 	= driver.findElement(mobileLocators.recommendedclick);
+        Recommendedfuel1.click();
+        // Log console message to Allure
+        LOGGER.info("Click on recommendebackclick");
+        AllureUtils.logStep("Click on recommendebackclick");
+        AllureUtils.captureScreenshot(driver,"40_10");
+		
         try {
         	WebElement arrowright = driver.findElement(mobileLocators.arrowclick2);
         	arrowright.click();
@@ -183,25 +190,36 @@ public class Case33_Fuel_Lunch_recommendedfuel extends AppiummobileBase {
         LOGGER.info("Click on Doneclick ");
         AllureUtils.logStep("Click on Doneclick"); 
         
-		// Click on breakfast-tick 
-        WebElement breakfasttick	= driver.findElement(mobileLocators.tickbreakfast);
-        breakfasttick.click();
-        // Log console message to Allure
-        LOGGER.info("Click on breakfasttick");
-        AllureUtils.logStep("Click on breakfasttick");
-        AllureUtils.captureScreenshot(driver, "Case33_12");
         
-        // Click on Done-breakfast button
+		// Click on dinner-tick 
+        WebElement dinnertick	= driver.findElement(mobileLocators.tickdinner);
+        dinnertick.click();
+        // Log console message to Allure
+        LOGGER.info("Select dinnertick of your choice");
+        AllureUtils.logStep("Select dinnertick of your choice");
+        AllureUtils.captureScreenshot(driver,"40_11");
+        
+        // Click on Done-dinner button
         WebElement brekfastdone 	= driver.findElement(mobileLocators.brekdone);
         brekfastdone.click();
+    	// Log console message to Allure
+        LOGGER.info("Click on brekfastdone");
+        AllureUtils.logStep("Click on brekfastdone");
+        AllureUtils.captureScreenshot(driver,"40_12");
+         
+        // Locate and click on dinnericon for cal related info
+        WebElement dinnericon1	= driver.findElement(mobileLocators.icondinner);
+        dinnericon1.click();
+        Thread.sleep(2000);
+        WebElement backclick1	= driver.findElement(mobileLocators.backicon);
+        backclick1.click();
         // Log console message to Allure
-        LOGGER.info("Click on brekdone");
-        AllureUtils.logStep("Click on brekdone");
-       
-        // Capture a screenshot and attach it to Allure
-        AllureUtils.captureScreenshot(driver, "Lunch4");
+        LOGGER.info("Click on backclick1");
+        AllureUtils.logStep("Click on backclick1");
+        AllureUtils.captureScreenshot(driver,"40_13");
         
-        Thread.sleep(4500);
+     // Log a message to Allure
+        Allure.addAttachment("Info", "Clicked dinnericon and backclick1 successfully.");
         
         } catch (Exception e) {
         	// If the arrowright element is not found, log an error message and terminate the app
@@ -209,7 +227,8 @@ public class Case33_Fuel_Lunch_recommendedfuel extends AppiummobileBase {
             System.out.println(errorMessage);
             Allure.addAttachment("Error", errorMessage);
             AllureUtils.captureScreenshot(driver, "ArrowRightNotFound");
-            driver.terminateApp("com.cuesz.mobile");
+//            driver.terminateApp("com.cuesz.mobile");
+            driver.terminateApp(mobileTestData.bundelID);
         }
 
 
@@ -225,30 +244,7 @@ public class Case33_Fuel_Lunch_recommendedfuel extends AppiummobileBase {
 	                LOGGER.error("Thread interrupted during final sleep", e);
 	                Thread.currentThread().interrupt();
 	            }
-//	            driver.terminateApp("com.cuesz.mobile");
-	            driver.terminateApp(mobileTestData.bundelID);
+	            driver.terminateApp("com.cuesz.mobile");
 	        }
 	    }
-
-	
-	 private void scroll(String direction, String elementName) {
-	        HashMap<String, Object> scrollObject = new HashMap<>();
-	        scrollObject.put("direction", direction);
-	        scrollObject.put(elementName, elementName);
-	        driver.executeScript("mobile:scroll", scrollObject);
-	    }
-	 
-	 // Function to check if an element is present on the screen
-	    public boolean isElementPresent(AppiumDriver driver, By by) {
-	        try {
-	            driver.findElement(by);
-	            return true;
-	        } catch (NoSuchElementException e) {
-	            return false;
-	        }
-	    }
-	}
-	 
-
-
-	
+}
