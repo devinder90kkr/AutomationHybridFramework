@@ -10,13 +10,13 @@ import org.testng.annotations.Test;
 
 import cuesz.allure.reporting.AllureUtils;
 import cuesz.pages.BasePage;
-import cuesz.utils.api.NetworkResponse;
+//import cuesz.utils.api.NetworkResponse;
 import cuesz.web.resources.ResponsiveTester;
 import cuesz.web.resources.weblocators;
 import io.qameta.allure.Step;
 
 public class Step12_DB_navlink extends BasePage {
-	 private NetworkResponse networkResponse; // Add this line to declare NetworkResponse
+//	 private NetworkResponse networkResponse; // Add this line to declare NetworkResponse
 	
 	weblocators locators = new weblocators();
 	 
@@ -28,7 +28,7 @@ public class Step12_DB_navlink extends BasePage {
 
 	 @Test 
 		public void Navigationfunctionality() throws InterruptedException, IOException, ExecutionException {
-		 networkResponse = new NetworkResponse(driver); // Initialize NetworkResponse
+//		 networkResponse = new NetworkResponse(driver); // Initialize NetworkResponse
 		
 //		 // Call the utility method to perform responsive testing
 //	        ResponsiveTester.testResponsive(driver);
@@ -36,7 +36,7 @@ public class Step12_DB_navlink extends BasePage {
 		 Thread.sleep(2000);
 		 driver.findElement(weblocators.schdulemastr).click();
 		 // Start capturing network data
-	        networkResponse.getNetworkTabData(driver.findElement(weblocators.schdulemastr)); // Use appropriate locator
+//	        networkResponse.getNetworkTabData(driver.findElement(weblocators.schdulemastr)); // Use appropriate locator
 
 		 
 		 Thread.sleep(2000);

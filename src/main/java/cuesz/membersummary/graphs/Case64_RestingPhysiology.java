@@ -29,6 +29,7 @@ public class Case64_RestingPhysiology extends BasePage {
     public void RestingPhysiology() throws InterruptedException {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 
+        Thread.sleep(2500);
         LOGGER.info("Navigating to Member Summary");
         AllureUtils.logStep("Navigating to Member Summary");
         utils.clickMembersummary();

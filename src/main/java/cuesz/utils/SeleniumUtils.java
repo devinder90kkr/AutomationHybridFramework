@@ -62,8 +62,9 @@ public class SeleniumUtils {
     public void clickMembersummary() {
 //        By memberSummaryLocator = By.xpath("//img[@alt='Member Summary']");
 //    	 By memberSummaryLocator = By.xpath("//img[@alt='Member Summary'] | //img[@alt='Member Specs']");
-    	 By memberSummaryLocator = By.id("Dashboard-MemberSummary");
-        clickElement(memberSummaryLocator);
+//    	 By memberSummaryLocator = By.id("Dashboard-MemberSummary");
+    	 By memberSummaryLocator = By.xpath("//h6[normalize-space()='Member Summary']");
+    	clickElement(memberSummaryLocator);
 //        driver.navigate().refresh();
 //        clickElement(memberSummaryLocator);
     }
@@ -95,5 +96,4 @@ public class SeleniumUtils {
    
     }
     
-
 

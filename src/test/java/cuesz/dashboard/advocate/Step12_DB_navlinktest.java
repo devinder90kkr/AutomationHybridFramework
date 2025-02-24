@@ -169,7 +169,7 @@ import cuesz.allure.reporting.AllureUtils;
 import cuesz.dashboard.Step12_DB_navlink;
 import cuesz.factory.WebDriverManager;
 import cuesz.logintest.AdvocateLogin;
-import cuesz.utils.api.NetworkResponse;
+//import cuesz.utils.api.NetworkResponse;
 import cuesz.web.resources.weblocators;
 
 import java.io.ByteArrayOutputStream;
@@ -187,7 +187,7 @@ public class Step12_DB_navlinktest {
     private WebDriver driver;
     private AdvocateLogin advocateLogin;
     private Step12_DB_navlink dashboardPage;
-    private NetworkResponse networkResponse; // Add this line to declare NetworkResponse
+//    private NetworkResponse networkResponse; // Add this line to declare NetworkResponse
     private ByteArrayOutputStream consoleOutput; // To capture console output
     private List<Integer> statusCodes; // To store HTTP status codes
 
@@ -201,7 +201,7 @@ public class Step12_DB_navlinktest {
         driver.manage().window().maximize();
         advocateLogin = new AdvocateLogin(); // Initialise the advocateLogin object
         dashboardPage = new Step12_DB_navlink(driver);
-        networkResponse = new NetworkResponse(driver); // Initialize NetworkResponse
+//        networkResponse = new NetworkResponse(driver); // Initialize NetworkResponse
         
         // Redirect console output to capture it
         consoleOutput = new ByteArrayOutputStream();
