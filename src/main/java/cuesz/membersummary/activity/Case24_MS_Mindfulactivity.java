@@ -27,12 +27,12 @@ public class Case24_MS_Mindfulactivity extends BasePage {
 	private By mindflHeadng = (By.xpath("//h2[contains(text(), 'Mindful')]"));
 	//private By drpdwnThWek = (By.xpath("//div[@id='MindFulData']//div[contains(@class, 'react-select-dropdown-prefix__value-container')]"));
 	private By drpdwnThWek = (By.id("MemberSummary-Mindfull-Activity"));
-	private By optnthWek	= (By.xpath("//div[@id='MindFulData']//div[contains(@class, 'react-select-dropdown-prefix__value-container')]"));
-	private By slectOptnThsWek = (By.xpath("//div[@id='MindFulData']//div[contains(@class, 'react-select-dropdown-prefix__value-container')]"));
-	private By drpdon1 = (By.xpath("//div[@class='cstm_row d-flex']//*[normalize-space()='Last Week']"));
+	// private By optnthWek	= (By.xpath("//div[@id='MindFulData']//div[contains(@class, 'react-select-dropdown-prefix__value-container')]"));
+	// private By slectOptnThsWek = (By.xpath("//div[@id='MindFulData']//div[contains(@class, 'react-select-dropdown-prefix__value-container')]"));
+	// private By drpdon1 = (By.xpath("//div[@class='cstm_row d-flex']//*[normalize-space()='Last Week']"));
 	private By elment2	= (By.xpath("//div[@class='DayPicker']"));
-	private By currtDate 	= (By.xpath("//div[contains(@class, 'DayPicker-Day--today')]"));
-	private By drpdwn3	= (By.xpath("//div[contains(text(),'7 - 13 Aug, 2023')]"));
+	// private By currtDate 	= (By.xpath("//div[contains(@class, 'DayPicker-Day--today')]"));
+	// private By drpdwn3	= (By.xpath("//div[contains(text(),'7 - 13 Aug, 2023')]"));
 	private By lftarrwbttn	= (By.xpath("//button[@class='btn btn-grey pre']//span"));
 	private By rgtarrwbttn= (By.xpath("//button[@class='btn btn-grey next']"));
 

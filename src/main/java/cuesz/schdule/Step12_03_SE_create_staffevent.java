@@ -21,7 +21,7 @@ public class Step12_03_SE_create_staffevent extends BasePage {
 	
 	 public Step12_03_SE_create_staffevent(WebDriver driver) {
 		super(driver);
-		// TODO Auto-generated constructor stub
+		
 	}
 
 	@Test

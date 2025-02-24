@@ -29,7 +29,7 @@ public class Case28_MS_Addnewgoal extends BasePage {
 	
     public Case28_MS_Addnewgoal(WebDriver driver) {
 		super(driver);
-		// TODO Auto-generated constructor stub
+		
 	}
 
     @Test
@@ -149,7 +149,7 @@ public class Case28_MS_Addnewgoal extends BasePage {
 //	
 //    public Case28_MS_Addnewgoal(WebDriver driver) {
 //		super(driver);
-//		// TODO Auto-generated constructor stub
+//		
 //	}
 //
 //    @Test

@@ -24,7 +24,7 @@ public class Step11_MC_deleteevent extends BasePage {
 	
 	 public Step11_MC_deleteevent(WebDriver driver) {
 		super(driver);
-		// TODO Auto-generated constructor stub
+		
 	}
 	
 	 @Test

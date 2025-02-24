@@ -4,12 +4,12 @@ import java.time.Duration;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.Keys;
+// import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.interactions.MoveTargetOutOfBoundsException;
-import org.openqa.selenium.support.ui.ExpectedConditions;
+// import org.openqa.selenium.interactions.MoveTargetOutOfBoundsException;
+// import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
 
@@ -25,7 +25,7 @@ public class Case84_FuelRecommendationRecoveryProtocol extends BasePage{
 	private By fuelicon = (By.id("MemberSummary-FuelReport"));
 	
 	private By inputField1	= (By.id("FuelReportProtocol-OptionFirst_1-Breakfast"));
-	private By inputFeld1	= (By.xpath("(//div[@class='react-select__value-container react-select__value-container--is-multi css-1hwfws3'])[2]"));
+	// private By inputFeld1	= (By.xpath("(//div[@class='react-select__value-container react-select__value-container--is-multi css-1hwfws3'])[2]"));
 	private By inputFeld2	= (By.id("FuelReportProtocol-OptionFirst_2-Breakfast"));
 	private By inputFeld3	= (By.id("FuelReportProtocol-OptionFirst_1-Dinner"));
 	private By inputFeld4	= (By.id("FuelReportProtocol-OptionFirst_2-Dinner"));

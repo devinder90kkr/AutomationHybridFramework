@@ -11,9 +11,9 @@ import org.testng.annotations.Test;
 import cuesz.allure.reporting.AllureUtils;
 import cuesz.pages.BasePage;
 //import cuesz.utils.api.NetworkResponse;
-import cuesz.web.resources.ResponsiveTester;
+// import cuesz.web.resources.ResponsiveTester;
 import cuesz.web.resources.weblocators;
-import io.qameta.allure.Step;
+// import io.qameta.allure.Step;
 
 public class Step12_DB_navlink extends BasePage {
 //	 private NetworkResponse networkResponse; // Add this line to declare NetworkResponse
@@ -23,7 +23,6 @@ public class Step12_DB_navlink extends BasePage {
 	
 	 public Step12_DB_navlink(WebDriver driver) {
 		super(driver);
-		// TODO Auto-generated constructor stub
 	}
 
 	 @Test 

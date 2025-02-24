@@ -20,7 +20,7 @@ public class Case36_MSL_Staffnotes extends BasePage {
 
 		public Case36_MSL_Staffnotes(WebDriver driver) {
 		super(driver);
-		// TODO Auto-generated constructor stub
+		
 	}
 	
 	 @Test

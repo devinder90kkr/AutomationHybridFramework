@@ -156,6 +156,12 @@
     <version>7.15.0</version>
 </dependency>
 
+
+  <dependency>
+    <groupId>org.testng</groupId>
+    <artifactId>testng</artifactId>
+    <version>7.0.0</version>
+  </dependency>
 </dependencies>
  
 <!-- Create multiple profile suites for testsuites -->
@@ -388,6 +394,29 @@
 		        <configuration>
 		          <suiteXmlFiles>
 		            <suiteXmlFile>Webapp-advocate-Suites/Case09_Membersummary-part02(performmindfulfuelandrestoredropdown)-advocate2.xml</suiteXmlFile>
+		          </suiteXmlFiles>
+		        </configuration>
+		      </plugin>
+</plugins>  
+</pluginManagement>
+</build>
+</profile>
+
+
+
+<!-- Suites 11 for Schdule Othercases advocate -->
+<profile>
+<id>Graphcase</id>
+<build>
+    <pluginManagement><!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->
+      <plugins>  
+		<plugin>
+		        <groupId>org.apache.maven.plugins</groupId>
+		        <artifactId>maven-surefire-plugin</artifactId>
+		        <version>3.2.3</version>
+		        <configuration>
+		          <suiteXmlFiles>
+		            <suiteXmlFile>Webapp-advocate-Suites/Case142_Membersummary-restinggraphs-advocate.xml</suiteXmlFile>
 		          </suiteXmlFiles>
 		        </configuration>
 		      </plugin>

@@ -8,7 +8,7 @@ public class WeekNavigationUtils {
 
     public static void navigateToLastAndNextWeek(WebDriver driver) throws InterruptedException {
         // Find the current week element
-        WebElement currentWeekElement = driver.findElement(By.xpath("//h4[@class='orange' and text()='Current Week']"));
+        WebElement currentWeekElement = driver.findElement(currentWeek);
 
         // Get the week name from the current week element
         String weekName = currentWeekElement.getText();
@@ -43,5 +43,4 @@ public class WeekNavigationUtils {
 
     // Define your locators here
     private static By currentWeek = By.id("currentWeekId");
-    private static By lastWeek = By.id("lastWeekButtonId");
 }

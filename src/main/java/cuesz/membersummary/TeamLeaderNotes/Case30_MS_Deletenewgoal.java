@@ -26,7 +26,7 @@ public class Case30_MS_Deletenewgoal extends BasePage {
 
     public Case30_MS_Deletenewgoal(WebDriver driver) {
 		super(driver);
-		// TODO Auto-generated constructor stub
+		
 	}
 
 	@Test
@@ -117,7 +117,7 @@ public class Case30_MS_Deletenewgoal extends BasePage {
 //
 //    public Case30_MS_Deletenewgoal(WebDriver driver) {
 //		super(driver);
-//		// TODO Auto-generated constructor stub
+//		
 //	}
 //
 //	@Test

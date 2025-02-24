@@ -5,14 +5,14 @@ import java.io.IOException;
 import java.util.Properties;
 
 import org.openqa.selenium.WebDriver;
-import org.testng.annotations.AfterClass;
+// import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 import cuesz.factory.WebDriverManager;
 import cuesz.pages.Loginpage;
 import cuesz.utils.Config;
-import cuesz.utils.Configuration;
+// import cuesz.utils.Configuration;
 import io.qameta.allure.Allure;
 
 public class DoctorLogin {

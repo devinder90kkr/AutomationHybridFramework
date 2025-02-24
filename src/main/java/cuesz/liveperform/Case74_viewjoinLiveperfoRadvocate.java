@@ -40,7 +40,7 @@ public class Case74_viewjoinLiveperfoRadvocate extends BasePage {
 	
 	public Case74_viewjoinLiveperfoRadvocate(WebDriver driver) {
 		super(driver);
-		// TODO Auto-generated constructor stub
+		
 	}
 	@Test
 	 public void Viewevent() throws InterruptedException {

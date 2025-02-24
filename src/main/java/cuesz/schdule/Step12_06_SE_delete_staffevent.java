@@ -29,7 +29,6 @@ public class Step12_06_SE_delete_staffevent extends BasePage {
 	
 	 public Step12_06_SE_delete_staffevent(WebDriver driver) {
 		super(driver);
-		// TODO Auto-generated constructor stub
 	}
 	
 	 @Test

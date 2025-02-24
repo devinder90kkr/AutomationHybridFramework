@@ -28,7 +28,7 @@ import cuesz.web.resources.weblocators;
 		
 		 public Case44_01_MSL_Mindful_currentday(WebDriver driver) {
 			super(driver);
-			// TODO Auto-generated constructor stub
+			
 		}
 
 		@Test

@@ -12,7 +12,7 @@ public class Case16_MS_searchclick extends BasePage {
 
     public Case16_MS_searchclick(WebDriver driver) {
 		super(driver);
-		// TODO Auto-generated constructor stub
+		
 	}
     @Test
     public void MemberSummary() throws InterruptedException {

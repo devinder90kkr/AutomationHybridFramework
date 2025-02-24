@@ -21,10 +21,10 @@ public class Case32_MS_Bodyscanresult extends BasePage {
 	private By elementScrollTo 	=	(By.xpath("//h4[contains(text(), 'Body Scan Result')]"));
 	//private By selectype	= 	(By.xpath("//div[text()='11-08-2023']"));
 		private By selectype	= 	(By.id("MemberSummary-BodyScanResult-Duration-Dropdown"));
-	private By selctype2	=	(By.xpath("(//div[contains(text(),'01-08-2023 IST')])[1]"));
-	private By selctype3	= (By.xpath("(//div[contains(text(),'24-07-2023 IST')])[1]"));	
-	private By selectype4	= (By.xpath("(//div[contains(text(),'21-07-2023 IST')])[1]"));
-	private By selectype5	=	(By.xpath("(//input[@value='01-09-2023'])[1]"));
+	// private By selctype2	=	(By.xpath("(//div[contains(text(),'01-08-2023 IST')])[1]"));
+	// private By selctype3	= (By.xpath("(//div[contains(text(),'24-07-2023 IST')])[1]"));	
+	// private By selectype4	= (By.xpath("(//div[contains(text(),'21-07-2023 IST')])[1]"));
+	// private By selectype5	=	(By.xpath("(//input[@value='01-09-2023'])[1]"));
 	private By Selectnext = (By.id("MemberSummary-BodyScanResult-NextScan"));
 
 	

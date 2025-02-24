@@ -23,7 +23,7 @@ public class Case02_viewevent extends BasePage {
 	
 	public Case02_viewevent(WebDriver driver) {
 		super(driver);
-		// TODO Auto-generated constructor stub
+	
 	}
 	@Test
 	 public void Viewevent() throws InterruptedException {

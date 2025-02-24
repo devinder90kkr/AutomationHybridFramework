@@ -25,18 +25,18 @@ public class Case26_MS_Fuelactivity extends BasePage {
 	private By Fuelhadng	= (By.xpath("//div[@class='title_h2']//h2[contains(text(), 'Fuel')]"));
 	//private By dropThisWeek = (By.xpath("//div[@id='FuelData']//div[normalize-space()='This Week']"));
 	private By drpdwnThWek = (By.id("MemberSummary-Fuel-Activity"));
-	private By slectOptnThWek = (By.xpath("//div[@id='FuelData']//div[normalize-space()='This Week']"));
-	private By drpdwn	= 	(By.xpath("//div[@id='FuelData']//div[normalize-space()='This Week']"));
-	private By drpdwn2	= 	(By.xpath("//div[@id='FuelData']//div[normalize-space()='Last Week']"));
+	// private By slectOptnThWek = (By.xpath("//div[@id='FuelData']//div[normalize-space()='This Week']"));
+	// private By drpdwn	= 	(By.xpath("//div[@id='FuelData']//div[normalize-space()='This Week']"));
+	// private By drpdwn2	= 	(By.xpath("//div[@id='FuelData']//div[normalize-space()='Last Week']"));
 	private By elemnt	= 	(By.xpath("//div[@class='DayPicker']"));
-	private By currntime	=	(By.xpath("//div[contains(@class, 'DayPicker-Day--today')]"));
-	private By drpdwn3	=	(By.xpath("//div[contains(text(),'7 - 13 Aug, 2023')]"));
+	// private By currntime	=	(By.xpath("//div[contains(@class, 'DayPicker-Day--today')]"));
+	// private By drpdwn3	=	(By.xpath("//div[contains(text(),'7 - 13 Aug, 2023')]"));
 	private By leftArowBttn	=	(By.xpath("//button[@class='btn btn-grey pre']//span"));
 	private By rightArowBttn	= (By.xpath("//button[@class='btn btn-grey next']"));
 
     public Case26_MS_Fuelactivity(WebDriver driver) {
 		super(driver);
-		// TODO Auto-generated constructor stub
+	
 	}
 
     @Test

@@ -30,7 +30,7 @@ public class Case85memberstats extends BasePage {
 
 	public Case85memberstats(WebDriver driver) {
 		super(driver);
-		// TODO Auto-generated constructor stub
+
 	}
 
     @Test

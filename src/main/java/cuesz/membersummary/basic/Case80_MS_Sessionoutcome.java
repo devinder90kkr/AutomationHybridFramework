@@ -2,7 +2,7 @@
 package cuesz.membersummary.basic;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
+// import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -25,7 +25,7 @@ public class Case80_MS_Sessionoutcome extends BasePage {
 
     public Case80_MS_Sessionoutcome(WebDriver driver) {
 		super(driver);
-		// TODO Auto-generated constructor stub
+		
 	}
 
 	@Test

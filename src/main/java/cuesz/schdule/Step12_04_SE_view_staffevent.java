@@ -19,7 +19,7 @@ public class Step12_04_SE_view_staffevent extends BasePage {
 	public static String eventDate = DateGenerator.generateFixedDate(); // Use the generated date 
 	public Step12_04_SE_view_staffevent(WebDriver driver) {
 		super(driver);
-		// TODO Auto-generated constructor stub
+	
 	}
 	
 	 @Test 

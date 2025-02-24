@@ -28,12 +28,12 @@ import cuesz.utils.SeleniumUtils;
 		private By drpdwnThWek = (By.id("MemberSummary-Perform-Activity"));
 		private By optnthWek	= (By.xpath("//div[contains(text(), 'This Week')]/parent::div"));
 		private By slectOptnThsWek = (By.xpath("//div[contains(text(), 'This Week')]"));
-		private By drpdon1 = (By.xpath("//div[contains(text(), 'This Week')]/parent::div"));
+		// private By drpdon1 = (By.xpath("//div[contains(text(), 'This Week')]/parent::div"));
 		private By selctOptnLatWek = (By.xpath("//div[contains(text(), 'Last Week')]"));
-		private By drpdwn2 = (By.xpath("//div[contains(text(), 'Last Week')]/parent::div"));
+		// private By drpdwn2 = (By.xpath("//div[contains(text(), 'Last Week')]/parent::div"));
 		private By elment2	= (By.xpath("//div[@class='DayPicker']"));
-		private By currtDate 	= (By.xpath("//div[contains(@class, 'DayPicker-Day--today')]"));
-		private By drpdwn3	= (By.xpath("//div[contains(text(),'7 - 13 Aug, 2023')]"));
+		// private By currtDate 	= (By.xpath("//div[contains(@class, 'DayPicker-Day--today')]"));
+		// private By drpdwn3	= (By.xpath("//div[contains(text(),'7 - 13 Aug, 2023')]"));
 		private By lftarrwbttn	= (By.xpath("//button[@class='btn btn-grey pre']//span"));
 		private By rgtarrwbttn= 	(By.xpath("//button[@class='btn btn-grey next']"));
 	

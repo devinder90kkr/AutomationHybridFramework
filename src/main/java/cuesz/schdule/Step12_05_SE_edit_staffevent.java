@@ -30,7 +30,6 @@ public class Step12_05_SE_edit_staffevent extends BasePage {
 	
     public Step12_05_SE_edit_staffevent(WebDriver driver) {
 		super(driver);
-		// TODO Auto-generated constructor stub
 	}
 	
 	@Test

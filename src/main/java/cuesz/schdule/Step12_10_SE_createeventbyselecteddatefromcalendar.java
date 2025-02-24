@@ -21,7 +21,6 @@ public class Step12_10_SE_createeventbyselecteddatefromcalendar extends BasePage
 
 	public Step12_10_SE_createeventbyselecteddatefromcalendar(WebDriver driver) {
 		super(driver);
-		// TODO Auto-generated constructor stub
 	}
 	@Test
 	 public void Schdulevent() throws InterruptedException {

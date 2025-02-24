@@ -32,7 +32,7 @@ public class Case33_MS_Uploadposture extends BasePage {
 
     public Case33_MS_Uploadposture(WebDriver driver) {
 		super(driver);
-		// TODO Auto-generated constructor stub
+		
 	}
 
 	@Test

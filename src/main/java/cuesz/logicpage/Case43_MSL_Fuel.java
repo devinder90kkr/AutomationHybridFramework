@@ -24,10 +24,11 @@ import cuesz.web.resources.weblocators;
 
 		public Case43_MSL_Fuel(WebDriver driver) {
 			super(driver);
-			// TODO Auto-generated constructor stub
+			
 		}
 		
-		 @Test
+		 @SuppressWarnings("deprecation")
+		@Test
 		    public void Fuel() throws InterruptedException, ParseException {
 		        Thread.sleep(2000);
 	

@@ -21,7 +21,7 @@ public class Case35_MSL_MemberWilingnessLimitationScore extends BasePage {
 	 public Case35_MSL_MemberWilingnessLimitationScore(WebDriver driver) {
 		super(driver);
 		this.elementActions = new ElementActions(driver); // Initialize elementActions
-		// TODO Auto-generated constructor stub
+	
 	}
 	@Test
 	    public void Basicinfo2() throws InterruptedException {
@@ -61,7 +61,7 @@ public class Case35_MSL_MemberWilingnessLimitationScore extends BasePage {
 	        WebElement imageElement = labelElement.findElement(By.tagName("img"));
 
 	        // Get the image source
-	        String imageSrc = imageElement.getAttribute("src");
+			String imageSrc = imageElement.getDomAttribute("src");
 
 	        // Check if the image link is valid (not a broken link)
 	        boolean isBrokenImage = false;
@@ -97,7 +97,7 @@ public class Case35_MSL_MemberWilingnessLimitationScore extends BasePage {
 	            dot.click();
 
 	            // Extract the color of the clicked dot
-	            String color = dot.getAttribute("class");
+				String color = dot.getDomAttribute("class");
 
 	            // Print the color of the dot
 	            System.out.println("Dot Color: " + color);
@@ -156,7 +156,7 @@ public class Case35_MSL_MemberWilingnessLimitationScore extends BasePage {
 	        // Find the image element inside the label
 	        WebElement imageElement2 = LimitationlabelElement.findElement(weblocators.ttimag);
 	        // Get the image source
-	        String imageSrc2 = imageElement2.getAttribute("src");
+			String imageSrc2 = imageElement2.getDomAttribute("src");
 	        // Check if the image link is valid (not a broken link)
 	        boolean isBrokenImage2 = false;
 	        try {
@@ -185,7 +185,7 @@ public class Case35_MSL_MemberWilingnessLimitationScore extends BasePage {
 	            dot1.click();
 
 	            // Extract the color of the clicked dot
-	            String color = dot1.getAttribute("class");
+				String color = dot1.getDomAttribute("class");
 	            if (color.contains("green")) {
 	                System.out.println("Dot color is green.");
 	            } else if (color.contains("default")) {

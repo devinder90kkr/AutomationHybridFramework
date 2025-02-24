@@ -22,7 +22,7 @@ public class Step09_MC_viewevent extends BasePage {
 
 	public Step09_MC_viewevent(WebDriver driver) {
 		super(driver);
-		// TODO Auto-generated constructor stub
+		
 	}
 	
 	@Test

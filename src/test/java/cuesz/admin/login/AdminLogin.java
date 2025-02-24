@@ -51,8 +51,8 @@ import org.testng.annotations.Test;
 import cuesz.factory.WebDriverManager;
 import cuesz.pages.Loginpage;
 import cuesz.utils.Config;
-import cuesz.utils.Configuration;
-import io.qameta.allure.Allure;
+// import cuesz.utils.Configuration;
+// import io.qameta.allure.Allure;
 
 public class AdminLogin {
     private WebDriver driver;

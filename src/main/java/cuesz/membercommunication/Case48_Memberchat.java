@@ -141,10 +141,10 @@ package cuesz.membercommunication;
 import java.time.Duration;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
+// import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Actions;
+// import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
 
@@ -157,9 +157,9 @@ public class Case48_Memberchat extends BasePage {
 	private By serchInput =	(By.id("MemberCommunication-SearchMembers"));
 	private By	membclck = (By.id("MemberCommunication-KumarDevinder"));
 	private By serhbox = (By.id("message"));
-	private By stafElment = (By.id("MemberCommunication-StaffList"));
+	// private By stafElment = (By.id("MemberCommunication-StaffList"));
 	private By senbttn = (By.id("MemberCommunication-SendMessage"));
-	private By emozi = (By.id("MemberCommunication-ChatEmoji"));
+	// private By emozi = (By.id("MemberCommunication-ChatEmoji"));
 
 	
 	public Case48_Memberchat(WebDriver driver) {

@@ -157,7 +157,7 @@ import io.qameta.allure.Feature;
 import io.qameta.allure.Owner;
 import io.qameta.allure.Severity;
 import io.qameta.allure.SeverityLevel;
-import io.qameta.allure.Step;
+// import io.qameta.allure.Step;
 import io.qameta.allure.Story;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterClass;
@@ -170,7 +170,7 @@ import cuesz.dashboard.Step12_DB_navlink;
 import cuesz.factory.WebDriverManager;
 import cuesz.logintest.AdvocateLogin;
 //import cuesz.utils.api.NetworkResponse;
-import cuesz.web.resources.weblocators;
+// import cuesz.web.resources.weblocators;
 
 import java.io.ByteArrayOutputStream;
 import java.io.FileInputStream;

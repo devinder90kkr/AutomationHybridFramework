@@ -4,7 +4,7 @@ import cuesz.allure.reporting.AllureUtils;
 import cuesz.factory.WebDriverManager;
 import cuesz.pages.Loginpage;
 import cuesz.utils.Config;
-import cuesz.utils.Configuration;
+// import cuesz.utils.Configuration;
 import io.qameta.allure.Allure;
 import io.qameta.allure.Description;
 import io.qameta.allure.Epic;
@@ -16,7 +16,7 @@ import io.qameta.allure.Story;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert.ThrowingRunnable;
-import org.testng.annotations.AfterClass;
+// import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 

@@ -15,7 +15,7 @@ public class Case38_MSL_Notification extends BasePage {
 	
 	public Case38_MSL_Notification(WebDriver driver) {
 		super(driver);
-		// TODO Auto-generated constructor stub
+		
 	}
 
 	 @Test

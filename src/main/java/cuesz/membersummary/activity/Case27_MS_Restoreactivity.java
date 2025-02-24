@@ -27,17 +27,17 @@ public class Case27_MS_Restoreactivity extends BasePage {
 	//private By dropThisWeek = (By.xpath("(//div[contains(text(),'This Week')])[4]"));
 	private By drpdwnThWek = (By.id("MemberSummary-Restore-Activity"));
 	private By slectOptnThWek = (By.xpath("(//div[contains(text(),'This Week')])[4]"));
-	private By drpdwn	= 	(By.xpath("(//div[contains(text(),'This Week')])[4]"));
-	private By drpdwn2	= 	(By.xpath("//div[contains(text(),'Last Week')]"));
+	// private By drpdwn	= 	(By.xpath("(//div[contains(text(),'This Week')])[4]"));
+	// private By drpdwn2	= 	(By.xpath("//div[contains(text(),'Last Week')]"));
 	private By elemnt	= 	(By.xpath("//div[@class='DayPicker']"));
-	private By currntime	=	(By.xpath("//div[contains(@class, 'DayPicker-Day--today')]"));
-	private By drpdwn3	=	(By.xpath("//div[contains(text(),'7 - 13 Aug, 2023')]"));
+	// private By currntime	=	(By.xpath("//div[contains(@class, 'DayPicker-Day--today')]"));
+	// private By drpdwn3	=	(By.xpath("//div[contains(text(),'7 - 13 Aug, 2023')]"));
 	private By leftArowBttn	=	(By.xpath("//button[@class='btn btn-grey pre']//span"));
 	private By rightArowBttn	= (By.xpath("//button[@class='btn btn-grey next']"));
 
     public Case27_MS_Restoreactivity(WebDriver driver) {
 		super(driver);
-		// TODO Auto-generated constructor stub
+		
 	}
 
     @Test

@@ -14,7 +14,7 @@ import org.testng.annotations.Test;
 import cuesz.allure.reporting.AllureUtils;
 import cuesz.factory.WebDriverManager;
 import cuesz.logintest.CoachLogin;
-import cuesz.schdule.Step12_05_SE_edit_staffevent;
+// import cuesz.schdule.Step12_05_SE_edit_staffevent;
 import cuesz.schdule.Step12_06_SE_delete_staffevent;
 import io.qameta.allure.*;
 

@@ -23,7 +23,7 @@ public class Step13_DB_notification extends BasePage {
 
 	public Step13_DB_notification(WebDriver driver) {
 		super(driver);
-		// TODO Auto-generated constructor stub
+		
 	}
 
 	@Test

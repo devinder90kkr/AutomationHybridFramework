@@ -41,7 +41,7 @@ private By setingmindfu		=	(By.id("MemberSummary-Mindfull-Settings"));
 
     public Case25_MS_Mindfulsetting(WebDriver driver) {
 		super(driver);
-		// TODO Auto-generated constructor stub
+	
 	}
 
     @Test
@@ -160,7 +160,8 @@ private By setingmindfu		=	(By.id("MemberSummary-Mindfull-Settings"));
       	// Locate the input field by its class name
       	WebElement inputField = driver.findElement(inptFild);
       	// Get the value attribute of the input field
-      	String value = inputField.getAttribute("value");
+      	@SuppressWarnings("deprecation")
+		String value = inputField.getAttribute("value");
       	// Print the value of the input field
       	System.out.println("Input field value: " + value);
      

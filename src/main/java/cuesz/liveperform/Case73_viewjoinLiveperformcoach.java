@@ -33,7 +33,7 @@ public class Case73_viewjoinLiveperformcoach extends BasePage {
 	
 	public Case73_viewjoinLiveperformcoach(WebDriver driver) {
 		super(driver);
-		// TODO Auto-generated constructor stub
+		
 	}
 	@Test
 	 public void Viewevent() throws InterruptedException {

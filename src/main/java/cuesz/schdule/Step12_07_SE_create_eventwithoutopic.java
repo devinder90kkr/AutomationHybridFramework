@@ -33,7 +33,6 @@ public class Step12_07_SE_create_eventwithoutopic extends BasePage {
 
 	 public Step12_07_SE_create_eventwithoutopic(WebDriver driver) {
 		super(driver);
-		// TODO Auto-generated constructor stub
 	}
 
 	@Test

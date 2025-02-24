@@ -22,7 +22,7 @@ public class Step15_DB_navlinkcoach extends BasePage {
 	
 	 public Step15_DB_navlinkcoach(WebDriver driver) {
 		super(driver);
-		// TODO Auto-generated constructor stub
+		
 	}
 
 	 @Test 

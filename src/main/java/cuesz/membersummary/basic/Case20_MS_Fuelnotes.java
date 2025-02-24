@@ -25,7 +25,7 @@ public class Case20_MS_Fuelnotes extends BasePage {
 
     public Case20_MS_Fuelnotes(WebDriver driver) {
 		super(driver);
-		// TODO Auto-generated constructor stub
+		
 	}
 
     @Test

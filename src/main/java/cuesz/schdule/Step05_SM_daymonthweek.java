@@ -1,7 +1,7 @@
 
 package cuesz.schdule;
 
-import org.openqa.selenium.By;
+// import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.Test;
@@ -13,7 +13,7 @@ public class Step05_SM_daymonthweek extends BasePage {
 	
 	public Step05_SM_daymonthweek(WebDriver driver) {
 		super(driver);
-		// TODO Auto-generated constructor stub
+		
 	}
 	@Test
 	public void Viewevent() throws InterruptedException {

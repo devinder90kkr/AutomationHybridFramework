@@ -16,7 +16,7 @@ public class Step12_01_SE_createvent_withouttime extends BasePage {
 	public static String eventDate = "27-09-2023"; // Date to be passed to script two
 	public Step12_01_SE_createvent_withouttime(WebDriver driver) {
 		super(driver);
-		// TODO Auto-generated constructor stub
+		
 	}
 
 	@Test

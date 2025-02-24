@@ -24,7 +24,7 @@ public class Step07_MC_createevent extends BasePage {
 
  public Step07_MC_createevent(WebDriver driver) {
 	super(driver);
-	// TODO Auto-generated constructor stub
+	
 
 }
 @Test

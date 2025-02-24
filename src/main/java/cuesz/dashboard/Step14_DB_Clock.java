@@ -18,7 +18,7 @@
 //
 //	public Step14_DB_Clock(WebDriver driver) {
 //		super(driver);
-//		// TODO Auto-generated constructor stub
+//		
 //	}
 //
 //	@Test
@@ -78,7 +78,7 @@ public class Step14_DB_Clock extends BasePage {
 	public Step14_DB_Clock(WebDriver driver) {
 		super(driver);
 		this.elementActions = new ElementActions(driver); // Initialize elementActions
-		// TODO Auto-generated constructor stub
+		
 	}
 
 	@Test

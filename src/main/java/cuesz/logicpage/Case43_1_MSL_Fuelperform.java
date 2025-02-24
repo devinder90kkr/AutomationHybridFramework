@@ -37,7 +37,7 @@ import cuesz.web.resources.weblocators;
 		
 		public Case43_1_MSL_Fuelperform(WebDriver driver) {
 			super(driver);
-			// TODO Auto-generated constructor stub
+			
 		}
 		
 		 @Test
@@ -123,45 +123,45 @@ import cuesz.web.resources.weblocators;
 			  
 		   Thread.sleep(3500);
 		   AllureUtils.captureScreenshot(driver, "Optimal");
-		   try {
-		       // Enter values for fat fields
-		       WebElement fatsfield = driver.findElement(weblocators.fatfild);
+		//    try {
+		//        // Enter values for fat fields
+		//        WebElement fatsfield = driver.findElement(weblocators.fatfild);
 
-		       // Check if values exist, and if so, clear them
-		       if (!fatsfield.getAttribute("value").isEmpty()) {
-		    	   fatsfield.clear();		           
-		       }
+		//        // Check if values exist, and if so, clear them
+		// 	   if (!fatsfield.getDomAttribute("value").isEmpty()) {
+		//     	   fatsfield.clear();		           
+		//        }
 
-		       // Ensure the input field has focus
-		       fatsfield.click();  // Click to focus
-		       // Enter the new value
-		       fatsfield.sendKeys("45");
+		//        // Ensure the input field has focus
+		//        fatsfield.click();  // Click to focus
+		//        // Enter the new value
+		//        fatsfield.sendKeys("45");
 
 		       
-		       Thread.sleep(3500);
-		       // Repeat the same process for carbs and protein fields
-		       WebElement carbsfield = driver.findElement(weblocators.carbfild);
-		       if (!carbsfield.getAttribute("value").isEmpty()) {
-		    	   carbsfield.clear();		    	  
-		       }
-		       // Ensure the input field has focus
-		       carbsfield.click();  // Click to focus
-		       carbsfield.sendKeys("210");
+		    //    Thread.sleep(3500);
+		    //    // Repeat the same process for carbs and protein fields
+		    //    WebElement carbsfield = driver.findElement(weblocators.carbfild);
+		    //    if (!carbsfield.getAttribute("value").isEmpty()) {
+		    // 	   carbsfield.clear();		    	  
+		    //    }
+		    //    // Ensure the input field has focus
+		    //    carbsfield.click();  // Click to focus
+		    //    carbsfield.sendKeys("210");
 		     
-		       Thread.sleep(3500);
-		       WebElement Proteinfield = driver.findElement(weblocators.Prteinfeld);
-		       if (!Proteinfield.getAttribute("value").isEmpty()) {
-		    	   Proteinfield.clear();
-		       }
-		       // Ensure the input field has focus
-		       Proteinfield.click();  // Click to focus
-		       Proteinfield.sendKeys("175");
+		    //    Thread.sleep(3500);
+		    //    WebElement Proteinfield = driver.findElement(weblocators.Prteinfeld);
+		    //    if (!Proteinfield.getAttribute("value").isEmpty()) {
+		    // 	   Proteinfield.clear();
+		    //    }
+		    //    // Ensure the input field has focus
+		    //    Proteinfield.click();  // Click to focus
+		    //    Proteinfield.sendKeys("175");
 			       	       
-			   } catch (Exception e) {
-			       e.printStackTrace();
-			   } finally {
-			       // Your finally block code here (optional)
-			   }
+			//    } catch (Exception e) {
+			//        e.printStackTrace();
+			//    } finally {
+			//        // Your finally block code here (optional)
+			//    }
 		   
 			   AllureUtils.captureScreenshot(driver, "Optimal1");
 		       
@@ -218,21 +218,21 @@ import cuesz.web.resources.weblocators;
    /********************************************Now move to Note/duration field*************************************************/		   
 			  
    
-			   WebElement notes = driver.findElement(weblocators.notesfield);   
-			   if (!notes.getAttribute("value").isEmpty()) {
-				   notes.clear();
-		       }
-			   notes.click();
-			   notes.sendKeys("hi this is just for testing pupose. \n Are you availble for yesterday for LP. ");
+			//    WebElement notes = driver.findElement(weblocators.notesfield);   
+			//    if (!notes.getAttribute("value").isEmpty()) {
+			// 	   notes.clear();
+		    //    }
+			//    notes.click();
+			//    notes.sendKeys("hi this is just for testing pupose. \n Are you availble for yesterday for LP. ");
  
 			   
-			   Thread.sleep(1500);
-			   WebElement duration = driver.findElement(weblocators.Durationfield);
-			   if (!duration.getAttribute("value").isEmpty()) {
-				   duration.clear();
-		       }
-			   notes.click();
-			   duration.sendKeys("45");
+			//    Thread.sleep(1500);
+			//    WebElement duration = driver.findElement(weblocators.Durationfield);
+			//    if (!duration.getAttribute("value").isEmpty()) {
+			// 	   duration.clear();
+		    //    }
+			//    notes.click();
+			//    duration.sendKeys("45");
 		
 /******************************Input values for option 1 Pre-Perform primary field*****************************************/		   
 			   

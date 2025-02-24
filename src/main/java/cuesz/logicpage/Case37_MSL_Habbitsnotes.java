@@ -19,7 +19,7 @@ public class Case37_MSL_Habbitsnotes extends BasePage {
 	SeleniumUtils utils = new SeleniumUtils(driver);    
     public Case37_MSL_Habbitsnotes(WebDriver driver) {
 		super(driver);
-		// TODO Auto-generated constructor stub
+		
 	}
 	
 	 @Test

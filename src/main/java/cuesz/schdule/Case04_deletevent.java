@@ -27,7 +27,6 @@ public class Case04_deletevent extends BasePage {
 
 	public Case04_deletevent(WebDriver driver) {
 		super(driver);
-		// TODO Auto-generated constructor stub
 	}
 	@Test
 	 public void Deletevent() throws InterruptedException {

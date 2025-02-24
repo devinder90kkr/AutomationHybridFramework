@@ -27,7 +27,7 @@ import cuesz.web.resources.weblocators;
 
 		 public Case43_02_MSL_fuel_currentday(WebDriver driver) {
 			super(driver);
-			// TODO Auto-generated constructor stub
+			
 		}
 
 		@Test

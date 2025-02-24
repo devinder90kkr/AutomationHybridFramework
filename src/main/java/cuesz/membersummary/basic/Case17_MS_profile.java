@@ -31,7 +31,7 @@ public class Case17_MS_profile extends BasePage {
 
     public Case17_MS_profile(WebDriver driver) {
 		super(driver);
-		// TODO Auto-generated constructor stub
+		
 	}
     @Test
     public void MemberProfile() throws InterruptedException {

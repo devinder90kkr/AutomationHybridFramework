@@ -1,15 +1,11 @@
 package cuesz.logicpage;
 
-import java.io.IOException;
-import java.net.HttpURLConnection;
-import java.net.URL;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
 import cuesz.pages.BasePage;
 import cuesz.utils.SeleniumUtils;
 import cuesz.web.resources.ElementActions;
-import cuesz.web.resources.webTestdata;
 import cuesz.web.resources.weblocators;
 
 public class Case34_MSL_MemberBasicinfo extends BasePage {
@@ -18,7 +14,7 @@ public class Case34_MSL_MemberBasicinfo extends BasePage {
 	public Case34_MSL_MemberBasicinfo(WebDriver driver) {
 		super(driver);
 		this.elementActions = new ElementActions(driver); // Initialize elementActions
-		// TODO Auto-generated constructor stub
+		
 	}
 	
 	 @Test
@@ -51,29 +47,29 @@ public class Case34_MSL_MemberBasicinfo extends BasePage {
 	            System.out.println("Title 'Basic Information' is not displayed.");
 	        }
 
-	        // Extract the image path
-	        WebElement imageElement = driver.findElement(weblocators.imgelment);
-	        String imagePath = imageElement.getAttribute("src");
-
-	        // Check if the image path is valid (not a broken link)
-	        boolean isBrokenImage = false;
-	        try {
-	            URL url = new URL(imagePath);
-	            HttpURLConnection httpURLConnection = (HttpURLConnection) url.openConnection();
-	            httpURLConnection.setRequestMethod("HEAD");
-	            int statusCode = httpURLConnection.getResponseCode();
-	            if (statusCode != HttpURLConnection.HTTP_OK) {
-	                isBrokenImage = true;
-	                System.out.println("The image link is broken.");
-	            }
-	        } catch (IOException e) {
-	            isBrokenImage = true;
-	            System.out.println("The image link is broken.");
-	        }
-
-	        if (!isBrokenImage) {
-	            System.out.println("The image link is valid.");
-	        }
+//	        // Extract the image path
+//	        WebElement imageElement = driver.findElement(weblocators.imgelment);
+//	        String imagePath = imageElement.getAttribute("src");
+//
+//	        // Check if the image path is valid (not a broken link)
+//	        boolean isBrokenImage = false;
+//	        try {
+//	            URL url = new URL(imagePath);
+//	            HttpURLConnection httpURLConnection = (HttpURLConnection) url.openConnection();
+//	            httpURLConnection.setRequestMethod("HEAD");
+//	            int statusCode = httpURLConnection.getResponseCode();
+//	            if (statusCode != HttpURLConnection.HTTP_OK) {
+//	                isBrokenImage = true;
+//	                System.out.println("The image link is broken.");
+//	            }
+//	        } catch (IOException e) {
+//	            isBrokenImage = true;
+//	            System.out.println("The image link is broken.");
+//	        }
+//
+//	        if (!isBrokenImage) {
+//	            System.out.println("The image link is valid.");
+//	        }
 	        
 	        // Find the element containing the member info
 	        WebElement memberInfoElement = driver.findElement(weblocators.membrInfElmnt);
@@ -101,17 +97,17 @@ public class Case34_MSL_MemberBasicinfo extends BasePage {
 	            System.out.println("Popup with heading 'Gym' is not open.");
 	        }
 
-	        // Find the text area inside the popup
-	        WebElement textArea = driver.findElement(weblocators.txtara);
-	        // Check if the field already has a value
-	        String existingValue = textArea.getAttribute("value");
-	        if (!existingValue.isEmpty()) {
-	            // The field has a value, so you may choose to clear it
-	        	textArea.clear();
-	        }
-	        // Fill in new details for Gym
-	        String newDetails = webTestdata.notefield1;
-	        textArea.sendKeys(newDetails);
+//	        // Find the text area inside the popup
+//	        WebElement textArea = driver.findElement(weblocators.txtara);
+//	        // Check if the field already has a value
+//	        String existingValue = textArea.getAttribute("value");
+//	        if (!existingValue.isEmpty()) {
+//	            // The field has a value, so you may choose to clear it
+//	        	textArea.clear();
+//	        }
+//	        // Fill in new details for Gym
+//	        String newDetails = webTestdata.notefield1;
+//	        textArea.sendKeys(newDetails);
 
 	        Thread.sleep(1000);
 	        
@@ -137,19 +133,19 @@ public class Case34_MSL_MemberBasicinfo extends BasePage {
 		            System.out.println("Popup with heading 'Gym Partner' is not open.");
 		        }
 
-		        // Find the text area inside the popup
-		        WebElement PartnertextArea = driver.findElement(weblocators.partnrtxtara);
+//		        // Find the text area inside the popup
+//		        WebElement PartnertextArea = driver.findElement(weblocators.partnrtxtara);
 
-		        // Clear existing details
-		     //   PartnertextArea.clear();
-		        if (!PartnertextArea.getAttribute("value").isEmpty()) {
-					 // Clear existing details
-		        	PartnertextArea.clear();
-		        }
-
-		        // Fill in new details for Gym
-		        String newDetails1 = webTestdata.notefield2;
-		        PartnertextArea.sendKeys(newDetails1);
+//		        // Clear existing details
+//		     //   PartnertextArea.clear();
+//		        if (!PartnertextArea.getAttribute("value").isEmpty()) {
+//					 // Clear existing details
+//		        	PartnertextArea.clear();
+//		        }
+//
+//		        // Fill in new details for Gym
+//		        String newDetails1 = webTestdata.notefield2;
+//		        PartnertextArea.sendKeys(newDetails1);
 
 		        Thread.sleep(1000);
 		        
@@ -176,15 +172,15 @@ public class Case34_MSL_MemberBasicinfo extends BasePage {
 			            System.out.println("Popup with heading 'Why join?' is not open.");
 			        }
 
-			        // Find the text area inside the popup
-			        WebElement whyjointextArea = driver.findElement(weblocators.whyjintxtAra);
-			        if (!whyjointextArea.getAttribute("value").isEmpty()) {
-						 // Clear existing details
-			        	whyjointextArea.clear(); 
-			        	}
-			        // Fill in new details for Gym
-			        String newDetails2 = webTestdata.notefield3;
-			        whyjointextArea.sendKeys(newDetails2);
+//			        // Find the text area inside the popup
+//			        WebElement whyjointextArea = driver.findElement(weblocators.whyjintxtAra);
+//			        if (!whyjointextArea.getAttribute("value").isEmpty()) {
+//						 // Clear existing details
+//			        	whyjointextArea.clear(); 
+//			        	}
+//			        // Fill in new details for Gym
+//			        String newDetails2 = webTestdata.notefield3;
+//			        whyjointextArea.sendKeys(newDetails2);
 
 			        Thread.sleep(1000);
 			        

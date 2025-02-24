@@ -1,7 +1,7 @@
 package cuesz.membersummary.graphs;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
+// import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -22,10 +22,10 @@ public class Case62_Mastercorelation3months extends BasePage {
     private By noCorrelationMessage = By.xpath("//div[@class='d-flex justify-content-center align-items-center correction_status']");
     private By drpdwn1 = (By.id("MasterCorrelationAnalysisHrvListOption"));
     private By drpdwn2 = (By.id("MasterCorrelationAnalysisHrvListOption"));
-    private By corelatinBlock = (By.xpath("//h4[text()='Daily and Weekly Correlations']/following-sibling::div[@class='row justify-content-center dwc_sec']"));
-    private By dayToDayElement = (By.xpath(".//div[contains(span,'Day to Day Corelation')]/h5"));
-    private By baseLineElement = (By.xpath(".//div[contains(span,'BaseLine Corelation')]/h5"));
-    private By grapCntainer = (By.xpath("//div[@class='dw_block']//div[@class='graphContainer']"));
+    // private By corelatinBlock = (By.xpath("//h4[text()='Daily and Weekly Correlations']/following-sibling::div[@class='row justify-content-center dwc_sec']"));
+    // private By dayToDayElement = (By.xpath(".//div[contains(span,'Day to Day Corelation')]/h5"));
+    // private By baseLineElement = (By.xpath(".//div[contains(span,'BaseLine Corelation')]/h5"));
+    // private By grapCntainer = (By.xpath("//div[@class='dw_block']//div[@class='graphContainer']"));
    
 
     public Case62_Mastercorelation3months(WebDriver driver) {
