@@ -40,7 +40,6 @@ public class Case85memberstats extends BasePage {
 		
 	 	/**********************Click on Schedule master*********************************/	
     	
-    	
     	utils.clickMembersummary();
         utils.waitForMilliseconds(2000);
         utils.enterSearchText();
@@ -181,7 +180,8 @@ public class Case85memberstats extends BasePage {
           
           // Capture a screenshot and attach it to Allure
           AllureUtils.captureScreenshot(driver, "caloriesheading");
-													          // Scroll to the element before waiting
+													          
+		  													// Scroll to the element before waiting
 													          JavascriptExecutor js1 = (JavascriptExecutor) driver;
 													          js1.executeScript("arguments[0].scrollIntoView({block: 'center', inline: 'nearest'});", driver.findElement(weblocators.nutritionalheading));
 												
@@ -472,49 +472,89 @@ public class Case85memberstats extends BasePage {
 															            AllureUtils.captureScreenshot(driver, "mostScreensheading");
 														              
 														              
+						//Wait for the card containing "Timeline"
+						WebElement screentime = wait.until(ExpectedConditions.visibilityOfElementLocated(weblocators.screentime));
+						// Scroll to the "Staff Notes" element using JavaScriptExecutor
+						((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);;", screentime);
+						
+						// Verify the heading is displayed
+						Assert.assertTrue(screentime.isDisplayed(), "Tonnage heading is not displayed");
+						// Verify the text content
+						String screenactualText = screentime.getText().trim();
+						String screenexpectedText = "Screen Time";
+						Assert.assertEquals(screenactualText, screenexpectedText, "Heading text mismatch!");
+						LOGGER.info("Verified Screen Time heading successfully.");
+						AllureUtils.logStep("Verified Screen Time heading successfully.");
+						
+						
+						// Define the items to select from the dropdown, including "Select Week"
+						//      String[] options = {"This Week", "Last Week", "Select Week"};
+						String[] options9 = {"This Week", "Last Week"};
+						// Find the dropdown element outside the loop, so it stays focused
+						WebElement dropdown9 = wait.until(ExpectedConditions.visibilityOfElementLocated(weblocators.screendropdowntime));
+		  
+						// Loop through the options
+						for (String option5 : options9) {
+						  // Initialize the Actions class
+						  Actions builder1 = new Actions(driver);
+						  
+						  // Open the dropdown and send the option text
+						  builder1.moveToElement(dropdown9).click().sendKeys(option5).perform();
+						  
+						  // Wait for a short time to ensure the dropdown updates
+						  Thread.sleep(2000);
+						  
+						  // Navigate down and select the option
+						  builder1.sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.ENTER).perform();
+						  
+						  // Wait for the next step before repeating the loop
+						  Thread.sleep(3000);
+					  }
+						
+						// Capture a screenshot and attach it to Allure
+						  AllureUtils.captureScreenshot(driver, "screentime");								              
 														              
-														              
-				            //Wait for the card containing "Timeline"
-					          WebElement Frequencyheading = wait.until(ExpectedConditions.visibilityOfElementLocated(weblocators.frequencyheading));
-					          // Scroll to the "Staff Notes" element using JavaScriptExecutor
-							  ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);;", Frequencyheading);
-				              
-				              // Verify the heading is displayed
-				              Assert.assertTrue(Frequencyheading.isDisplayed(), "Frequency heading is not displayed");
-				              // Verify the text content
-				              String frequencyactualText = Frequencyheading.getText().trim();
-				              String frequencyexpectedText = "Frequency Of Checking Future Activities";
-				              Assert.assertEquals(frequencyactualText, frequencyexpectedText, "Heading text mismatch!");
-				              LOGGER.info("Verified Frequency Of Checking Future Activities heading successfully.");
-				              AllureUtils.logStep("Verified Frequency Of Checking Future Activities heading successfully.");
-				              
-				              
-				              // Define the items to select from the dropdown, including "Select Week"
-				              //      String[] options = {"This Week", "Last Week", "Select Week"};
-				              String[] options9 = {"This Week", "Last Week"};
-					          // Find the dropdown element outside the loop, so it stays focused
-					          WebElement dropdown9 = wait.until(ExpectedConditions.visibilityOfElementLocated(weblocators.frequencydropdown));
-				
-				              // Loop through the options
-				              for (String option4 : options9) {
-				                // Initialize the Actions class
-				                Actions builder1 = new Actions(driver);
-				                
-				                // Open the dropdown and send the option text
-				                builder1.moveToElement(dropdown9).click().sendKeys(option4).perform();
-				                
-				                // Wait for a short time to ensure the dropdown updates
-				                Thread.sleep(2000);
-				                
-				                // Navigate down and select the option
-				                builder1.sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.ENTER).perform();
-				                
-				                // Wait for the next step before repeating the loop
-				                Thread.sleep(3000);
-				            }
-														              
-				           // Capture a screenshot and attach it to Allure
-					            AllureUtils.captureScreenshot(driver, "Frequencyheading");
+																		//Wait for the card containing "Timeline"
+																		WebElement Frequencyheading = wait.until(ExpectedConditions.visibilityOfElementLocated(weblocators.frequencyheading));
+																		// Scroll to the "Staff Notes" element using JavaScriptExecutor
+																		//   ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);;", Frequencyheading);
+																		((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView({behavior: 'smooth', block: 'center', inline: 'center'});", Frequencyheading);
+																		// Verify the heading is displayed
+																		Assert.assertTrue(Frequencyheading.isDisplayed(), "Frequency heading is not displayed");
+																		// Verify the text content
+																		String frequencyactualText = Frequencyheading.getText().trim();
+																		String frequencyexpectedText = "Frequency Of Checking Future Activities";
+																		Assert.assertEquals(frequencyactualText, frequencyexpectedText, "Heading text mismatch!");
+																		LOGGER.info("Verified Frequency Of Checking Future Activities heading successfully.");
+																		AllureUtils.logStep("Verified Frequency Of Checking Future Activities heading successfully.");
+																		
+																		
+																		// Define the items to select from the dropdown, including "Select Week"
+																		//      String[] options = {"This Week", "Last Week", "Select Week"};
+																		String[] options10 = {"This Week", "Last Week"};
+																		// Find the dropdown element outside the loop, so it stays focused
+																		WebElement dropdown10 = wait.until(ExpectedConditions.visibilityOfElementLocated(weblocators.frequencydropdown));
+															
+																		// Loop through the options
+																		for (String option6 : options10) {
+																			// Initialize the Actions class
+																			Actions builder1 = new Actions(driver);
+																			
+																			// Open the dropdown and send the option text
+																			builder1.moveToElement(dropdown10).click().sendKeys(option6).perform();
+																			
+																			// Wait for a short time to ensure the dropdown updates
+																			Thread.sleep(2000);
+																			
+																			// Navigate down and select the option
+																			builder1.sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.ENTER).perform();
+																			
+																			// Wait for the next step before repeating the loop
+																			Thread.sleep(3000);
+																		}
+																												
+																		// Capture a screenshot and attach it to Allure
+																			AllureUtils.captureScreenshot(driver, "Frequencyheading");
             
             
         }

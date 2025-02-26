@@ -26,6 +26,9 @@ public class weblocators {
 	public static final By resonantcard =  By.xpath("//h5[normalize-space()='Last Resonant Scan']/parent::div");
 	public static final By resonantheading = By.xpath(".//h5[contains(@class, 'head_grey')]");
 	public static final By resonantdatetext = By.xpath(".//h5[not(contains(@class, 'head_grey'))]");
+	public static final By screentime = By.xpath("//h2[normalize-space()='Screen Time']");
+	public static final By screendropdowntime = By.xpath("//div[@id='screen_time_graph']//div[contains(@class,'react-select-dropdown-prefix__input-container css-19bb58m')]");
+
 	
 	public static final By MEMBERS_SPHERES_HEADING = By.xpath("//h2[normalize-space()='Members Spheres']");
 	public static final By dropdownmemberstats	= (By.cssSelector(".react-select-dropdown-prefix__control.css-13cymwt-control"));
