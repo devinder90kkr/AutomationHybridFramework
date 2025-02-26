@@ -8,9 +8,11 @@ public class weblocators {
 	public static final By dropdown = By.id("GraphDropdown");
 	public static final By option = By.xpath("//div[@id='GraphDropdown']//div[contains(text(), 'Resting Physiology')]");
 	public static final By restingHeading = By.xpath("//h2[normalize-space()='Resting Physiology']");
-	
-	
-	
+	public static final By resrtingedit = By.xpath("//button[normalize-space()='Edit Mode']");
+	public static final By restingphyiologypop = By.xpath("//div[@class='text-center mt-5 p-4']/h4");
+	public static final By continueButton	= By.xpath("//button[normalize-space()='Continue']");
+	public static final By canvasclick = By.xpath("//div[contains(@class,'cursor-pointer')]//canvas[contains(@role,'img')]");
+
 	//locator for memberstats
 	public static final By memberstats = (By.xpath("//div[@aria-label='Member Statistics']//em"));
 	public static final By bodyscancard = By.xpath("//div[contains(@class, 'card_right') and h5[normalize-space()='Last Body Scan']]");
