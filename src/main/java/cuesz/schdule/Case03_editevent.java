@@ -147,7 +147,7 @@ public class Case03_editevent extends BasePage {
 	    // Find the input element
 	    WebElement notesElement = driver.findElement(weblocators.Notes);
 	    // Check if the input field has some text
-	    if (!notesElement.getAttribute("value").isEmpty()) {
+        if (!notesElement.getDomProperty("value").isEmpty()) {
 	        // Clear the input field
 	        notesElement.clear();
 	    }

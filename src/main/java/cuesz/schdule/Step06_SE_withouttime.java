@@ -64,10 +64,10 @@ public class Step06_SE_withouttime extends BasePage {
 
 		/* Click on submit button */
 		WebElement submitButton = driver.findElement(weblocators.Submitbutton);
-		String isDisabled = submitButton.getAttribute("disabled");
+		boolean isDisabled = !submitButton.isEnabled();
 
 		// Verify the button state
-		if (isDisabled != null && isDisabled.equals("true")) {
+		if (isDisabled) {
 			System.out.println("Submit button is disabled");
 		} else {
 			System.out.println("Submit button is active");

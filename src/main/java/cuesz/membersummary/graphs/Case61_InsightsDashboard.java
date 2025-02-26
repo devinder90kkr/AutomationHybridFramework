@@ -106,8 +106,8 @@ public class Case61_InsightsDashboard extends BasePage{
 	        WebElement canvasElement = graphContainer.findElement(By.tagName("canvas"));
 
 	        // Get the height and width attributes of the canvas element
-	        int canvasHeight = Integer.parseInt(canvasElement.getAttribute("height"));
-	        int canvasWidth = Integer.parseInt(canvasElement.getAttribute("width"));
+			int canvasHeight = Integer.parseInt(canvasElement.getDomProperty("height"));
+			int canvasWidth = Integer.parseInt(canvasElement.getDomProperty("width"));
 
 	        // Check if the canvas has a valid size (height and width > 0)
 	        if (canvasHeight > 0 && canvasWidth > 0) {

@@ -117,8 +117,8 @@ public class Invalidmockcase_LoginPagetest {
         assert driver.findElement(By.xpath("//button[normalize-space()='Login']")).isDisplayed();
 
         // Verify that the email and password fields were not interacted with more than once.
-        assert driver.findElement(By.name("email")).getAttribute("value").equals("markcuesz90@gmail.com");
-        assert driver.findElement(By.name("password")).getAttribute("value").equals("User!234");
+        assert driver.findElement(By.name("email")).getDomAttribute("value").equals("markcuesz90@gmail.com");
+        assert driver.findElement(By.name("password")).getDomProperty("value").equals("User!234");
         Thread.sleep(7000);
         // Click on the "Dashboard - Notification Settings" link.
         driver.findElement(By.id("Dashboard-Notification-Settings")).click();

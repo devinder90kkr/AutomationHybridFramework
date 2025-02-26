@@ -97,7 +97,7 @@ public class Step11_MC_deleteevent extends BasePage {
 
 		// Verify that the event is deleted
 		WebElement deletedEvent = driver.findElement(By.xpath("//div[@data-date='" + nextDayDate + "']"));
-		if (deletedEvent.getAttribute("class").contains("event_dot")) {
+		if (deletedEvent.getDomAttribute("class").contains("event_dot")) {
 			System.out.println("Event deletion verification failed!");
 		} else {
 			System.out.println("Event deletion verification passed!");
