@@ -1,6 +1,9 @@
 package cuesz.membersummary.userstats;
 
 import java.time.Duration;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+import java.util.Locale;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
@@ -110,9 +113,8 @@ public class Case85memberstats extends BasePage {
         LOGGER.info("Verified Members Spheres heading successfully.");
         AllureUtils.logStep("Verified Members Spheres heading successfully.");
         
-        
-        // Define the items to select from the dropdown
-        String[] options = {"This Week", "Last Week"};
+	    // Define the items to select from the dropdown
+        String[] options = {"This Week", "Last Week", "Select Week"};
 
         // Find the dropdown element outside the loop, so it stays focused
         WebElement dropdown = wait.until(ExpectedConditions.visibilityOfElementLocated(weblocators.dropdownmemberstats));
@@ -121,22 +123,27 @@ public class Case85memberstats extends BasePage {
         for (String option : options) {
             // Initialize the Actions class
             Actions builder = new Actions(driver);
-            
+
             // Open the dropdown and send the option text
             builder.moveToElement(dropdown).click().sendKeys(option).perform();
-            
+
             // Wait for a short time to ensure the dropdown updates
             Thread.sleep(2000);
-            
+
             // Navigate down and select the option
             builder.sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.ENTER).perform();
+      	
+			// Capture a screenshot and attach it to Allure
+     	 	 AllureUtils.captureScreenshot(driver, "heading");		
             
-            // Wait before the loop repeats
+			 // Wait before the loop repeats
             Thread.sleep(3000);
-        }
 
-        // Capture a screenshot and attach it to Allure
-        AllureUtils.captureScreenshot(driver, "heading");
+            // If the option is "Select Week", execute the function to select the previous week's start date
+            if ("Select Week".equals(option)) {
+                selectPreviousWeekStartDate();
+            }
+        }
         
         // Scroll to the element before waiting
         JavascriptExecutor js = (JavascriptExecutor) driver;
@@ -156,7 +163,7 @@ public class Case85memberstats extends BasePage {
             
             // Define the items to select from the dropdown, including "Select Week"
             //      String[] options = {"This Week", "Last Week", "Select Week"};
-          String[] options2 = {"This Week", "Last Week"};
+          String[] options2 = {"This Week", "Last Week","Select Week"};
           // Find the dropdown element outside the loop, so it stays focused
           WebElement dropdown2 = wait.until(ExpectedConditions.visibilityOfElementLocated(weblocators.caloriesdropdownmemberstats));
 
@@ -176,6 +183,10 @@ public class Case85memberstats extends BasePage {
               
               // Wait for the next step before repeating the loop
               Thread.sleep(3000);
+            // If the option is "Select Week", execute the function to select the previous week's start date
+            if ("Select Week".equals(option1)) {
+                selectPreviousWeekStartDate();
+            }
           }
           
           // Capture a screenshot and attach it to Allure
@@ -560,6 +571,28 @@ public class Case85memberstats extends BasePage {
         }
 
             
+	private void selectPreviousWeekStartDate() throws InterruptedException {
+        LocalDate currentDate = LocalDate.now();
+        int daysToSubtract = currentDate.getDayOfWeek().getValue() + 7; // Ensure we go back to the start of the previous week
+        LocalDate previousWeekStartDate = currentDate.minusDays(daysToSubtract);
+
+        // Check if previous week's start date is in the previous month
+        if (previousWeekStartDate.getMonthValue() < currentDate.getMonthValue()) {
+            // Click on the 'Previous Month' button
+            WebElement previousMonthButton = driver.findElement(By.xpath("//span[@aria-label='Previous Month']"));
+            previousMonthButton.click();
+        }
+
+        // Format the date to match the format used in the calendar
+        DateTimeFormatter dateFormatter = DateTimeFormatter.ofPattern("d", Locale.ENGLISH);
+        String formattedDate = previousWeekStartDate.format(dateFormatter);
+
+        // Locate and click on the previous week's start date
+        WebElement previousWeekDateElement = driver.findElement(By.xpath("//button[normalize-space()='" + formattedDate + "']"));
+        // Scroll to the previous week's start date element
+    	((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", previousWeekDateElement);
+		
+		Thread.sleep(2500);
+		previousWeekDateElement.click();
     }
-    
-    
+}
