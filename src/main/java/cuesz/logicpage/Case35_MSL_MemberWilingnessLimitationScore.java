@@ -17,7 +17,7 @@ import cuesz.web.resources.weblocators;
 public class Case35_MSL_MemberWilingnessLimitationScore extends BasePage {
 	
 	SeleniumUtils utils = new SeleniumUtils(driver);
-	private ElementActions elementActions;
+	private final ElementActions elementActions;
 	 public Case35_MSL_MemberWilingnessLimitationScore(WebDriver driver) {
 		super(driver);
 		this.elementActions = new ElementActions(driver); // Initialize elementActions
@@ -66,8 +66,7 @@ public class Case35_MSL_MemberWilingnessLimitationScore extends BasePage {
 	        // Check if the image link is valid (not a broken link)
 	        boolean isBrokenImage = false;
 	        try {
-	            @SuppressWarnings("deprecation")
-				URL url = new URL(imageSrc);
+	            URL url = new URL(imageSrc);
 	            HttpURLConnection httpURLConnection = (HttpURLConnection) url.openConnection();
 	            httpURLConnection.setRequestMethod("HEAD");
 	            int statusCode = httpURLConnection.getResponseCode();
@@ -140,7 +139,7 @@ public class Case35_MSL_MemberWilingnessLimitationScore extends BasePage {
 	        try {
 	            Thread.sleep(2000); // Wait for 2 seconds (you may need to adjust this time)
 	        } catch (InterruptedException e) {
-	            e.printStackTrace();
+	            System.err.println("Thread interrupted while waiting: " + e.getMessage());
 	        }
 	        
 	        Thread.sleep(500);
@@ -161,8 +160,7 @@ public class Case35_MSL_MemberWilingnessLimitationScore extends BasePage {
 	        // Check if the image link is valid (not a broken link)
 	        boolean isBrokenImage2 = false;
 	        try {
-	            @SuppressWarnings("deprecation")
-				URL url = new URL(imageSrc2);
+	            URL url = new URL(imageSrc2);
 	            HttpURLConnection httpURLConnection = (HttpURLConnection) url.openConnection();
 	            httpURLConnection.setRequestMethod("HEAD");
 	            int statusCode = httpURLConnection.getResponseCode();
@@ -224,7 +222,7 @@ public class Case35_MSL_MemberWilingnessLimitationScore extends BasePage {
 	        try {
 	            Thread.sleep(2000); // Wait for 2 seconds (you may need to adjust this time)
 	        } catch (InterruptedException e) {
-	            e.printStackTrace();
+	            System.err.println("Thread interrupted while waiting: " + e.getMessage());
 	        }
 	        Thread.sleep(1000);	        
 	 }

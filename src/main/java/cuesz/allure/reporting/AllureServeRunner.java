@@ -94,7 +94,7 @@ public class AllureServeRunner implements IExecutionListener {
             Process process = processBuilder.start();
             process.waitFor();
         } catch (IOException | InterruptedException e) {
-            e.printStackTrace();
+            System.err.println("Error running Allure serve command: " + e.getMessage());
         }
     }
 
@@ -103,7 +103,7 @@ public class AllureServeRunner implements IExecutionListener {
         try (FileInputStream fis = new FileInputStream("config.properties")) {
             properties.load(fis);
         } catch (IOException e) {
-            e.printStackTrace();
+            System.err.println("Error reading config file: " + e.getMessage());
         }
         String allureResultsDir = properties.getProperty("allure.results.path", "allure-results");
 
