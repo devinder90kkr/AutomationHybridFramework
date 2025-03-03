@@ -66,7 +66,8 @@ public class Case35_MSL_MemberWilingnessLimitationScore extends BasePage {
 	        // Check if the image link is valid (not a broken link)
 	        boolean isBrokenImage = false;
 	        try {
-	            URL url = new URL(imageSrc);
+	            @SuppressWarnings("deprecation")
+				URL url = new URL(imageSrc);
 	            HttpURLConnection httpURLConnection = (HttpURLConnection) url.openConnection();
 	            httpURLConnection.setRequestMethod("HEAD");
 	            int statusCode = httpURLConnection.getResponseCode();
@@ -160,7 +161,8 @@ public class Case35_MSL_MemberWilingnessLimitationScore extends BasePage {
 	        // Check if the image link is valid (not a broken link)
 	        boolean isBrokenImage2 = false;
 	        try {
-	            URL url = new URL(imageSrc2);
+	            @SuppressWarnings("deprecation")
+				URL url = new URL(imageSrc2);
 	            HttpURLConnection httpURLConnection = (HttpURLConnection) url.openConnection();
 	            httpURLConnection.setRequestMethod("HEAD");
 	            int statusCode = httpURLConnection.getResponseCode();

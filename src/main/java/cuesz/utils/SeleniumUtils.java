@@ -69,7 +69,7 @@ public class SeleniumUtils {
     // Click on member call 
     public void clickMemberCalendar() {
         try {
-            Thread.sleep(2500);
+            Thread.sleep(2000);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
@@ -81,7 +81,7 @@ public class SeleniumUtils {
  // Click on member call 
     public void clickMembersummary() {
         try {
-            Thread.sleep(2500);
+            Thread.sleep(200);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
