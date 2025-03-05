@@ -4,6 +4,19 @@ import org.openqa.selenium.By;
 
 public class weblocators {
 
+	public static final By usricn	= (By.xpath("(//div[@class='user_action flag_icon'])[1]"));
+	public static final By Dot1 = (By.xpath("(//span[@data-label='1'])[1]"));
+	public static final By Dot2 = (By.xpath("(//span[@data-label='2'])[1]"));
+	public static final By Dot3 = (By.xpath("(//span[@data-label='3'])[1]"));
+	public static final By Addbutton = (By.xpath("//body[1]/div[16]/div[1]/div[1]/div[1]/div[1]/div[2]/div[2]/button[1]"));
+	public static final By Title =	(By.xpath("//div[@class='d-flex align-items-center mb-3']//input[@type='text']"));
+	public static final By Notes23	= (By.xpath("//textarea[@class='form-control']"));
+	public static final By dotfield2 = (By.cssSelector("//div[@class='col-md-4']//span[@data-label='2']"));
+	public static final By submit23	= (By.xpath("//span[normalize-space()='Submit']"));
+	public static final By deleteButton = (By.xpath("//div[@class='edit_remove_group']//button"));
+	public static final By confirm 	= (By.xpath("//button[@id='DecisionPopupRejection']"));
+
+
 
 	public static final By usrname	= (By.xpath("//div[@class='user_inf staff_profile']"));
 	public static final By age		= (By.xpath("(//div[@class='grid_half member_info_items'])[1]"));

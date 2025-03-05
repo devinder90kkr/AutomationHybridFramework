@@ -1,119 +1,140 @@
+package cuesz.membersummary.basic;
 
-	package cuesz.membersummary.basic;
-	import java.time.Duration;
-
+import java.time.Duration;
 import org.openqa.selenium.By;
-	import org.openqa.selenium.WebDriver;
-	import org.openqa.selenium.WebElement;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import cuesz.allure.reporting.AllureUtils;
 import cuesz.pages.BasePage;
 import cuesz.utils.SeleniumUtils;
-	
-	public class Case18_MS_DotAbiltyPM extends BasePage {
-	
-		SeleniumUtils utils = new SeleniumUtils(driver);
-			
-			private By usricn	= (By.xpath("//div[@class='user_action']"));
-		    private By Dot1 = (By.xpath("//span[@data-label='3']"));
-		    private By Dot2 = (By.xpath("//span[@data-label='2']"));
-		    private By Dot3 = (By.xpath("//span[@data-label='1']"));
-		    private By Addbutton = (By.xpath("//div[@class='ReactModalPortal']//div[2]//div[2]//button[1]"));
-		    private By Title =	(By.xpath("//div[@class='d-flex align-items-center mb-3']//input[@type='text']"));
-		    private By Notes	= (By.xpath("//textarea[@class='form-control']"));
-		    private By dotfield2 = (By.cssSelector("div[class='col-md-4'] span[data-label='3']"));
-		    private By submit	= (By.xpath("//button[@class='btn btn-md btn-primary']"));
-		    //private By deleteButton	= (By.cssSelector("div[class='edit_remove_group'] img[alt='delete']"));
-	//	    private By deleteButton = (By.xpath("(//button)[16]"));
-	private By deleteButton = (By.xpath("(//img[@alt='delete'])[2]"));
-		    
-		    private By confirm 	= (By.xpath("//button[@id='DecisionPopupRejection']"));
-	
-		    public Case18_MS_DotAbiltyPM(WebDriver driver) {
-			super(driver);
-		}
-	
-		@Test
-		public void Dotstatus_Abilityperform() throws InterruptedException {
-	  	Thread.sleep(2000);
-	
-	      utils.clickMembersummary();
-	      utils.waitForMilliseconds(2000);
-	      utils.enterSearchText();
-	      utils.clickMembername();
-	      
-	      // Capture a screenshot and attach it to Allure
-	        AllureUtils.captureScreenshot(driver, "Case18_MS_DotAbiltyPM1");
-	      
-	      
-	      // Click on user icon to open ability to perform popup
-	      WebElement userIcon = driver.findElement(usricn);
-	      userIcon.click();
-	      
-	      Thread.sleep(3500);
-	      // click on dots
-	      WebElement dot1 = driver.findElement(Dot1);
-	      dot1.click();
-	      WebElement dot2 = driver.findElement(Dot2);
-	      dot2.click();
-	      WebElement dot3 = driver.findElement(Dot3);
-	      dot3.click();
-	   
-	      Thread.sleep(3500);
-	
-	      // Click on add button
-		    WebElement addButton = driver.findElement(Addbutton);
-		    addButton.click();      
-	
-	    	// Click on dots for first values
-	    	WebElement dots2 = driver.findElement(dotfield2);
-	    	dots2.click();
-	    	Thread.sleep(1500);
-	    	
-	        // Capture a screenshot and attach it to Allure
-	        AllureUtils.captureScreenshot(driver, "Case18_MS_DotAbiltyPM2");
-	
-	    	// Click and enter value for title and notes 
-	    	WebElement titleinput = driver.findElement(Title);
-	    	titleinput.sendKeys("this is just for testing purpose");
-	
-	    	WebElement notes = driver.findElement(Notes);
-	    	notes.sendKeys("Hello, we have set ability to perform values one in input text field");
-	    	Thread.sleep(2500);
-	    	
-	    	 // Capture a screenshot and attach it to Allure
-	        AllureUtils.captureScreenshot(driver, "Case18_MS_DotAbiltyPM3.1");
-	
-	    	// Click on submit button
-	    	WebElement submitbutton = driver.findElement(submit);
-	    	submitbutton.click();
-	    	Thread.sleep(3500);
-	    	
-	        // Capture a screenshot and attach it to Allure
-	        AllureUtils.captureScreenshot(driver, "Case18_MS_DotAbiltyPM3");
-	
-	    	// Perform any other actions you need to after submission
-	    	userIcon.click();
-	    	Thread.sleep(3500);
-	    	// Locate delete button using explicit wait
-	        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(100));
-	        WebElement deleteBtn = wait.until(ExpectedConditions.elementToBeClickable(deleteButton));
-	        deleteBtn.click(); // Click the delete button if present
-	        
-	        // Capture a screenshot and attach it to Allure
-	        AllureUtils.captureScreenshot(driver, "Case18_MS_DotAbiltyPM4");
+import cuesz.web.resources.weblocators;
+import io.qameta.allure.Description;
+import io.qameta.allure.Epic;
+import io.qameta.allure.Feature;
+import io.qameta.allure.Story;
 
-	        // Add logic here if needed after clicking delete
-	        WebElement confirmButton = driver.findElement(confirm);
-	        confirmButton.click();
+@Epic("Member Summary Management")
+@Feature("Ability to Perform Dots Status")
+public class Case18_MS_DotAbiltyPM extends BasePage {
 
-	        Thread.sleep(4500);
-	     // Click on submit button
-	    	WebElement submitbutton2 = driver.findElement(submit);
-	    	submitbutton2.click(); 	
-		}}
+    private static final Logger LOGGER = LoggerFactory.getLogger(Case18_MS_DotAbiltyPM.class);
+    SeleniumUtils utils = new SeleniumUtils(driver);
+
+    public Case18_MS_DotAbiltyPM(WebDriver driver) {
+        super(driver);
+    }
+
+    @Test
+    @Description("Test ability to perform dots status functionality")
+    @Story("Dots Status Management")
+    public void Dotstatus_Abilityperform() throws InterruptedException {
+        LOGGER.info("Starting Dots Status Ability to Perform test");
+        Thread.sleep(2000);
+
+        LOGGER.info("Navigating to Member Summary page");
+        utils.clickMembersummary();
+        utils.enterSearchText();
+        utils.clickMembername();
+        
+        AllureUtils.captureScreenshot(driver, "member_summary_initial");
+        LOGGER.info("Accessed member summary page");
+        
+        // Click on user icon to open ability to perform popup
+        LOGGER.info("Opening ability to perform popup");
+        WebElement userIcon = driver.findElement(weblocators.usricn);
+        userIcon.click();
+        AllureUtils.logStep("Opened ability to perform popup");
+        
+        Thread.sleep(3500);
+        
+        // Click on dots
+        LOGGER.info("Setting dots status");
+        WebElement dot1 = driver.findElement(weblocators.Dot1);
+        dot1.click();
+        WebElement dot2 = driver.findElement(weblocators.Dot2);
+        dot2.click();
+        WebElement dot3 = driver.findElement(weblocators.Dot3);
+        dot3.click();
+        AllureUtils.logStep("Set dots status successfully");
+        
+        Thread.sleep(3500);
+
+        // Click on add button
+        LOGGER.info("Clicking add button");
+        WebElement addButton = driver.findElement(weblocators.Addbutton);
+        addButton.click();
+        AllureUtils.logStep("Clicked add button");
+        
+        // Click and enter value for title and notes
+        LOGGER.info("Entering title and notes");
+        WebElement titleinput = driver.findElement(weblocators.Title);
+        titleinput.sendKeys("this is just for testing purpose");
+
+        WebElement notes = driver.findElement(weblocators.Notes23);
+        notes.sendKeys("Hello, we have set ability to perform values one in input text field");
+        Thread.sleep(2500);
+        AllureUtils.logStep("Entered title and notes");
+        
+
+        // Click on dots
+        LOGGER.info("Setting dots status");
+        WebElement dot12Element = driver.findElement(weblocators.dotfield2);
+        JavascriptExecutor js = (JavascriptExecutor)driver;
+        js.executeScript("arguments[0].scrollIntoView();", dot12Element);
+        dot12Element.click();
+
+
+        Thread.sleep(2500);
+        // Click on submit button
+        LOGGER.info("Submitting the form");
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(100));
+        WebElement submitbutton = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[contains(@class, 'btn-primary')]//span[text()='Submit']/..")));
+        JavascriptExecutor js2Executor = (JavascriptExecutor)driver;
+        js2Executor.executeScript("arguments[0].scrollIntoView();", submitbutton);
+
+        submitbutton.click();
+        Thread.sleep(3500);
+        AllureUtils.logStep("Form submitted successfully"); 
+        
+        AllureUtils.captureScreenshot(driver, "form_submitted");
+
+        // Perform any other actions you need to after submission
+        LOGGER.info("Opening user profile for deletion");
+        userIcon.click();
+        Thread.sleep(3500); 
+        
+        // Locate delete button using explicit wait
+        LOGGER.info("Waiting for delete button to be clickable");
+        WebElement deleteBtn = wait.until(ExpectedConditions.elementToBeClickable(weblocators.deleteButton));
+        deleteBtn.click();
+        AllureUtils.logStep("Clicked delete button");
+        
+        AllureUtils.captureScreenshot(driver, "delete_confirmation");
+
+        // Add logic here if needed after clicking delete
+        LOGGER.info("Confirming deletion");
+        WebElement confirmButton = driver.findElement(weblocators.confirm);
+        confirmButton.click();
+        AllureUtils.logStep("Confirmed deletion");
+
+        Thread.sleep(4500);
+        
+        // Click on submit button
+        LOGGER.info("Submitting final changes");
+        WebElement submitbutton2 = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[contains(@class, 'btn-primary')]//span[text()='Submit']/..")));
+        submitbutton2.click();
+        AllureUtils.logStep("Final changes submitted successfully");
+        
+        AllureUtils.captureScreenshot(driver, "test_completion");
+        LOGGER.info("Dots Status Ability to Perform test completed successfully");
+    }
+}
 
 	
