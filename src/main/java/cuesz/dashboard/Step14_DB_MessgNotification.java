@@ -1,7 +1,7 @@
 package cuesz.dashboard;
 
 import java.time.Duration;
-import java.util.List;
+// import java.util.List;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.StaleElementReferenceException;
@@ -15,96 +15,111 @@ import cuesz.pages.BasePage;
 
 public class Step14_DB_MessgNotification extends BasePage {
 	
-	private By cuontlement = (By.xpath("//body/div[@id='root']/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]"));
-	private By notifnElement =	(By.xpath("//body[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/em[1]"));
-	private By notifinElements = (By.xpath("(//div[contains(@class,'notification-list')])[1]"));
-	private By notielments = (By.xpath("//body/div[@id='root']/div[1]/div[1]/div[1]/div[1]/div[2]"));
-	private By updatCountlement = (By.xpath("//body[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/em[1]"));
+	private By cuontlement = By.xpath("//div[@class='noti_badge']");
+	private By notifnElement = By.xpath("//div[@id='Dashboard-Notification-Chat']//em");
+	private By updatCountlement = By.xpath("//div[@class='noti_badge']");
 	
 
 	public Step14_DB_MessgNotification(WebDriver driver) {
 		super(driver);
-		
 	}
 
 	@Test
 	public void MessageNotification() throws InterruptedException {
-		// Find the notification count element
-		WebElement countElement = driver
-				.findElement(cuontlement);
+		try {
+			// Find the notification count element
+			WebElement countElement = driver.findElement(cuontlement);
+			int initialCount = Integer.parseInt(countElement.getText());
+			System.out.println("Initial count: " + initialCount);
 
-		// Get the initial count value
-		int initialCount = Integer.parseInt(countElement.getText());
+			// Click on notification icon to open panel
+			WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
+			System.out.println("Waiting for notification icon to be clickable...");
+			wait.until(ExpectedConditions.elementToBeClickable(notifnElement));
+			WebElement notificationElement = driver.findElement(notifnElement);
+			notificationElement.click();
+			System.out.println("Clicked notification icon");
 
-		// Verify the initial count value
-		System.out.println("Initial count: " + initialCount);
+			// Process at least 2 notifications
+			int notificationsToProcess = Math.min(2, initialCount);
+			System.out.println("Will process " + notificationsToProcess + " notifications");
 
-		Thread.sleep(2000);
-
-		// Find the notification element and click on it
-		
-		WebDriverWait wait = new WebDriverWait(driver,  Duration.ofSeconds(30));
-		wait.until(ExpectedConditions.elementToBeClickable(notifnElement));
-		WebElement notificationElement = driver.findElement(notifnElement);
-		notificationElement.click();
-
-		// Find the notification elements
-		List<WebElement> notificationElements = driver
-				.findElements(notifinElements);
-		
-		// Read only the first 5 notifications
-		int notificationCount = Math.min(1, notificationElements.size());
-
-		// Iterate over the notification elements and click on each
-		for (int i = 0; i < notificationCount; i++) {
+			// Process first notification
 			try {
-				// Re-locate the notification elements within the loop
-				notificationElements = driver.findElements(notielments);
-				WebElement notificationElement1 = notificationElements.get(i);
-
-				// Click on the current notification element
-				notificationElement1.click();
+				// Click first notification
+				String firstNotificationXPath = "//div[@id='Dashboard-Notification-1']";
+				By firstNotification = By.xpath(firstNotificationXPath);
+				System.out.println("Waiting for first notification to be clickable...");
+				WebElement notification = wait.until(ExpectedConditions.elementToBeClickable(firstNotification));
+				notification.click();
+				System.out.println("Clicked notification 1");
 				Thread.sleep(2000);
 
-
-				Thread.sleep(2000);
-				// Go back to the previous page
+				// Go back
+				System.out.println("Navigating back...");
 				driver.navigate().back();
 				Thread.sleep(2000);
+
+				// Reopen notification panel for second notification
+				System.out.println("Waiting to reopen notification panel...");
+				wait.until(ExpectedConditions.elementToBeClickable(notifnElement));
+				driver.findElement(notifnElement).click();
+				System.out.println("Reopened notification panel");
+				Thread.sleep(2000);
+
+				// Click second notification
+				String secondNotificationXPath = "//div[@id='Dashboard-Notification-2']";
+				By secondNotification = By.xpath(secondNotificationXPath);
+				System.out.println("Waiting for second notification to be clickable...");
+				wait.until(ExpectedConditions.visibilityOfElementLocated(secondNotification));
+				notification = wait.until(ExpectedConditions.elementToBeClickable(secondNotification));
+				notification.click();
+				System.out.println("Clicked notification 2");
+				Thread.sleep(2000);
+
+				// Go back
+				System.out.println("Navigating back after second notification...");
+				driver.navigate().back();
+				Thread.sleep(2000);
+
 			} catch (StaleElementReferenceException e) {
-				// Handle the StaleElementReferenceException and continue with the loop
-				System.out.println("StaleElementReferenceException occurred. Skipping current notification.");
+				System.out.println("StaleElementReferenceException occurred. Retrying...");
+				
+				// Re-open notification panel
+				wait.until(ExpectedConditions.elementToBeClickable(notifnElement));
+				driver.findElement(notifnElement).click();
+				Thread.sleep(2000);
+			} catch (Exception e) {
+				System.out.println("Error processing notifications: " + e.getMessage());
+				e.printStackTrace(); // This will print the full stack trace
 			}
-		}
-		driver.navigate().back();
-		// Find the updated count element
-		WebElement updatedCountElement = driver
-				.findElement(updatCountlement);
-Thread.sleep(5000);
-		
-		// Get the updated count value
-		String updatedCountText = updatedCountElement.getText();
-		// Get the updated count value
-//		int updatedCount = Integer.parseInt(updatedCountElement.getText());
-		int updatedCount = 0;
-		if (!updatedCountText.isEmpty()) {
-		    updatedCount = Integer.parseInt(updatedCountText);
-		}
-		
-		// Verify the updated count value
-		System.out.println("Updated count: " + updatedCount);
 
-		// Compare the initial and updated counts
-		if (updatedCount < initialCount) {
-			System.out.println("Notification count reduced.");
-		} else if (updatedCount == initialCount) {
-			System.out.println("Notification count remained the same.");
-		} else {
-			System.out.println("Notification count increased. Unexpected behavior.");
+			// Find the updated count element
+			System.out.println("Checking updated count...");
+			WebElement updatedCountElement = wait.until(ExpectedConditions.presenceOfElementLocated(updatCountlement));
+			
+			// Get the updated count value
+			String updatedCountText = updatedCountElement.getText();
+			int updatedCount = 0;
+			if (!updatedCountText.isEmpty()) {
+				updatedCount = Integer.parseInt(updatedCountText);
+			}
+			
+			// Verify the updated count value
+			System.out.println("Updated count: " + updatedCount);
+
+			// Compare the initial and updated counts
+			if (updatedCount < initialCount) {
+				System.out.println("Notification count reduced.");
+			} else if (updatedCount == initialCount) {
+				System.out.println("Notification count remained the same.");
+			} else {
+				System.out.println("Notification count increased. Unexpected behavior.");
+			}
+
+		} catch (Exception e) {
+			System.out.println("Error in main test method: " + e.getMessage());
+			e.printStackTrace(); // This will print the full stack trace
 		}
-
-		Thread.sleep(2000);
-
-		
 	}
 }
