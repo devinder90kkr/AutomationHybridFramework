@@ -315,9 +315,9 @@ public class webTestdata {
 	public static final String endtime	=	"07:30 PM";
 	public static final String topic 	=	"Live perform session";
 	public static final String topic2 	=	"Staff Meeting";
-	public static final String membername = "Kumar Devinder";
+	public static final String membername = "Agusta";
 	public static final String staff1	= "Coach Seakfreight";
-	public static final String staff2	=	"Devinder - Wellness Advocate";
+	public static final String staff2	=	"Jordan - Wellness Advocate";
 	public static final String notes	= "We are excited to announce that there will be a live performance event. So please availble ";
 	public static final String notes1	= "Verify Basic Functionality of the Text Editor";
 	public static final String notes2	= "Verify Scrolling Functionality in the action notes created";

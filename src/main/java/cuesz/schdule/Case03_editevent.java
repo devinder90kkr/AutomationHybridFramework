@@ -65,7 +65,7 @@ public class Case03_editevent extends BasePage {
             userTexts.add(userLabel.getText());
         }
         // Verify the texts
-        if (userTexts.contains("Kumar Devinder") && userTexts.contains("Coach Seakfreight") && userTexts.contains("Devinder - Wellness Advocate")) {
+        if (userTexts.contains("Agusta porche") && userTexts.contains("Coach Seakfreight") && userTexts.contains("Jordan - Wellness Advocate")) {
             System.out.println("User text verification passed!");
         } else {
             System.out.println("User text verification failed!");

@@ -11,22 +11,12 @@ import org.testng.annotations.Test;
 import cuesz.allure.reporting.AllureUtils;
 import cuesz.pages.BasePage;
 import cuesz.utils.SeleniumUtils;
+import cuesz.web.resources.weblocators;
 
 public class Case17_MS_profile extends BasePage {
 	
 	SeleniumUtils utils = new SeleniumUtils(driver);
-	private By usrname	= (By.xpath("//div[@class='user_inf']/h4"));
-	private By age		= (By.xpath("//div[@class='member_info_items'][1]/p"));
-	private By editbttn	= (By.xpath("//button[@class='btn_icon btn-transparent']//img[@alt='edit']"));
-	private By Wilingnes = (By.xpath("//div[@class='member_info_items']//div[@class='react-select__control css-yk16xz-control']"));
-	private By Gol		= (By.xpath("(//textarea[@placeholder='Enter here'])[1]"));
-	private By PrevMilestone		= (By.xpath("(//input[@placeholder='Enter here'])[1]"));
-	private By Limitions	= (By.xpath("(//textarea[@placeholder='Enter here'])[2]"));
-	private By Tendncy = (By.xpath("(//input[@placeholder='Enter here'])[2]"));
-	private By likse		= (By.xpath("(//textarea[@placeholder='Enter here'])[3]"));
-	private By Dislikse		= (By.xpath("(//textarea[@placeholder='Enter here'])[4]"));
-	private By selment	= (By.xpath("//img[@alt='save']"));
-	private By Savebttn	= (By.xpath("//img[@alt='save']"));
+	
 	
 
     public Case17_MS_profile(WebDriver driver) {
@@ -44,19 +34,19 @@ public class Case17_MS_profile extends BasePage {
         
  
      // Find the name element
-        WebElement nameElement = driver.findElement(usrname);
+        WebElement nameElement = driver.findElement(weblocators.usrname);
 
         // Get the current name value
         String currentName = nameElement.getText();
         // Verify the current name value
-        if (currentName.equals("Kumar Devinder")) {
+        if (currentName.equals("Agusta porche")) {
             System.out.println("Name verification passed.");
         } else {
             System.out.println("Name verification failed.");
         }
 
         // Find the age element
-        WebElement ageElement = driver.findElement(age);
+        WebElement ageElement = driver.findElement(weblocators.age);
         // Get the current age value
         String currentAge = ageElement.getText();
 
@@ -68,43 +58,49 @@ public class Case17_MS_profile extends BasePage {
         }
 
         // Find the edit button
-        WebElement editButton = driver.findElement(editbttn);
+        WebElement editButton = driver.findElement(weblocators.editbttn);
         // Click on the edit button to edit the profile
         editButton.click();
         
         Thread.sleep(3000);
-        WebElement Willingness = driver.findElement(Wilingnes);
+        WebElement Willingness = driver.findElement(weblocators.Wilingnes);
         Actions builder = new Actions(driver);
 	    builder.moveToElement(Willingness).click().sendKeys("Not Willing").perform();
 	    Thread.sleep(2000);
 	    builder.sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.ENTER).perform();
 
-	    WebElement Goal = driver.findElement(Gol);
+	    WebElement Goal = driver.findElement(weblocators.Gol);
+	    Goal.clear();
 	    Goal.sendKeys("Make your goal clear and detailed. For example, instead of saying \"I want to eat healthier\", say \"I want to eat five servings of fruits and vegetables every day\".");
 	    
-	    WebElement PreviousMilestone = driver.findElement(PrevMilestone);
+	    WebElement PreviousMilestone = driver.findElement(weblocators.PrevMilestone);
+	    PreviousMilestone.clear();
 	    PreviousMilestone.sendKeys(" think about why you want to eat more fruits and vegetables. Is it because you want to lower your risk of chronic diseases, boost your immune system");
 	    
-	    WebElement Limitations = driver.findElement(Limitions);
+	    WebElement Limitations = driver.findElement(weblocators.Limitions);
+	    Limitations.clear();
 	    Limitations.sendKeys(" will meditate for 10 minutes every morning for the next four weeks to reduce my stress levels and improve my mental clarity.");
 	    
-	    WebElement Tendancy = driver.findElement(Tendncy);
+	    WebElement Tendancy = driver.findElement(weblocators.Tendncy);
+	    Tendancy.clear();
 	    Tendancy.sendKeys("tendancy need to update as per automation field");
 
-	    WebElement Likes = driver.findElement(likse);
+	    WebElement Likes = driver.findElement(weblocators.likse);
+	    Likes.clear();
 	    Likes.sendKeys("Travelling, internetsurfring like include in this field");
 	    
-	    WebElement Dislikes = driver.findElement(Dislikse);
+	    WebElement Dislikes = driver.findElement(weblocators.Dislikse);
+	    Dislikes.clear();
 	    Dislikes.sendKeys("reading, Smoking dislike in this field");
-	   
-	    WebElement selement = driver.findElement(selment);
+		
+	    WebElement selement = driver.findElement(weblocators.selment);
 	    JavascriptExecutor js = (JavascriptExecutor)driver;
 	    js.executeScript("arguments[0].scrollIntoView();",selement);
 	 // Capture a screenshot and attach it to Allure
         AllureUtils.captureScreenshot(driver, "fuel_report_screenshot");
 	    
 	    Thread.sleep(2000);
-	    WebElement Save= driver.findElement(Savebttn);
+	    WebElement Save= driver.findElement(weblocators.Savebttn);
 	    Actions builder25 = new Actions(driver);
 	    builder25.moveToElement(Save).click().perform();;
 

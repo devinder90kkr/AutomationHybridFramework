@@ -3,6 +3,20 @@ package cuesz.web.resources;
 import org.openqa.selenium.By;
 
 public class weblocators {
+
+
+	public static final By usrname	= (By.xpath("//div[@class='user_inf staff_profile']"));
+	public static final By age		= (By.xpath("(//div[@class='grid_half member_info_items'])[1]"));
+	public static final By editbttn	= (By.xpath("//button[@id='MemberSummary-Userinfo-Edit']"));
+	public static final By Wilingnes = (By.xpath("//div[@id='MemberSummary-Userinfo-Willingness']//div[@class='react-select__control css-13cymwt-control']"));
+	public static final By Gol		= (By.xpath("//textarea[@id='MemberSummary-Userinfo-Goals']"));
+	public static final By PrevMilestone		= (By.xpath("//input[@id='MemberSummary-Userinfo-PreviousMilestone']"));
+	public static final By Limitions	= (By.xpath("//textarea[@id='MemberSummary-Userinfo-Limitations']"));
+	public static final By Tendncy = (By.xpath("//input[@id='MemberSummary-Userinfo-TendancyType']"));
+	public static final By likse		= (By.xpath("//textarea[@id='MemberSummary-Userinfo-Likes']"));
+	public static final By Dislikse		= (By.xpath("//textarea[@id='MemberSummary-Userinfo-Dislikes']"));
+	public static final By selment	= (By.xpath("//img[@alt='save']"));
+	public static final By Savebttn	= (By.xpath("//img[@alt='save']"));
 	
 	public static final By graphIcon = By.id("MemberSummary-/insights");
 	public static final By dropdown = By.id("GraphDropdown");
