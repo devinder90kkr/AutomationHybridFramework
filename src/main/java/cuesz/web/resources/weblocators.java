@@ -4,6 +4,17 @@ import org.openqa.selenium.By;
 
 public class weblocators {
 
+
+
+	//public static final  By membritms	=  (By.xpath("//div[@class='member-items']"));
+	public static final  By plsicn		=  (By.xpath("//div[@id='MemberSummary-PreferencesAdd']"));
+	public static final  By prefnceInpt =(By.xpath("//div[@class='content']//div//div//div[@class='jodit-wysiwyg']"));
+	//public static final  By savbttn	 = (By.cssSelector("button.btn_edit"));
+	public static final  By savbttn = (By.xpath("//button[@id='MemberSummary-Preferences-Save']"));
+	//public static final  By editbttn	= (By.xpath("//button[@class='btn_edit btn-transparent']"));
+	public static final  By editbttnprefernce = (By.xpath("//div[@class='edit_btn_text text-end']//button[@class='black-card']"));
+	public static final  By deletbttnprefernce		= (By.xpath("//i[@class='rem_icon']"));
+
 	public static final By usricn	= (By.xpath("(//div[@class='user_action flag_icon'])[1]"));
 	public static final By Dot1 = (By.xpath("(//span[@data-label='1'])[1]"));
 	public static final By Dot2 = (By.xpath("(//span[@data-label='2'])[1]"));
