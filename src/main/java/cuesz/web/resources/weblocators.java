@@ -6,6 +6,20 @@ public class weblocators {
 
 
 
+	//  public static final  By pluicn = (By.id("MemberSummary-FuelNotesAdd"));
+   //  public static final  By prefTexAre = (By.id("MemberSummary-FuelNotes-AddNotes"));
+   //  public static final  By savbttn = (By.xpath("//img[@id=\"MemberSummary-FuelNotes-Save\"]"));
+   //  public static final  By editbttn = (By.xpath("//img[@id=\"MemberSummary-FuelNotes-Edit\"]"));
+   //  public static final  By deltbttn = (By.xpath("//i[@class='rem_icon']//img[@alt='delete']"));
+
+   public static final  By pluicn = (By.xpath("//div[@id='add-fuel-notes']//em"));
+   public static final  By prefTexAre = (By.xpath("//div[@class='content']//div//div//div[@class='jodit-wysiwyg']"));
+   public static final  By savbttnfuenotes = (By.xpath("//button[@id='submit-fuel-notes']"));
+   public static final  By editbttnfuenotes = (By.xpath("//div[@class='progress_card p-3 mt-4']//button[@class='black-card']"));
+   public static final  By deltbttnfuenotes = (By.xpath("//img[@id='delete-fuel-notes']"));
+
+
+
 	//public static final  By membritms	=  (By.xpath("//div[@class='member-items']"));
 	public static final  By plsicn		=  (By.xpath("//div[@id='MemberSummary-PreferencesAdd']"));
 	public static final  By prefnceInpt =(By.xpath("//div[@class='content']//div//div//div[@class='jodit-wysiwyg']"));
