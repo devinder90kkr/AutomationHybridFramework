@@ -1,14 +1,11 @@
- /*https://chat.openai.com/share/fb99a8d3-9b88-4b49-8555-3f5eab0b24e5 */
 package cuesz.membersummary.basic;
 
 import java.time.Duration;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
-// import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-// import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.slf4j.Logger;
@@ -23,15 +20,15 @@ import io.qameta.allure.Step;
 
 public class Case34_01_MS_VO2assigntomember extends BasePage {
     private static final Logger logger = LoggerFactory.getLogger(Case34_01_MS_VO2assigntomember.class);
-    public static String eventDate = Currentdategenerator.generateCurrentDate(); // Use the generated date
-	 
-	SeleniumUtils utils = new SeleniumUtils(driver);
-	private final By elementScrollTo = By.xpath("//h4[normalize-space()='VO2 Result']");
-	private final By selectype5 = By.id("MemberSummary-Vo2Result-NextScan-DatePicker");
+    public static String eventDate = Currentdategenerator.generateCurrentDate();
+    
+    SeleniumUtils utils = new SeleniumUtils(driver);
+    private final By elementScrollTo = By.xpath("//h4[normalize-space()='VO2 Result']");
+    private final By selectype5 = By.id("MemberSummary-Vo2Result-NextScan-DatePicker");
 
-	 public Case34_01_MS_VO2assigntomember(WebDriver driver) {
-		super(driver);	
-	}
+    public Case34_01_MS_VO2assigntomember(WebDriver driver) {
+        super(driver);
+    }
 
     @Test
     @Step("Navigate to VO2 Result section and set next scan date")
@@ -70,6 +67,5 @@ public class Case34_01_MS_VO2assigntomember extends BasePage {
 
         AllureUtils.captureScreenshot(driver, "vo2_result_scan");
         logger.info("VO2 Result scan process completed successfully");
-    }      
     }
-  
+} 

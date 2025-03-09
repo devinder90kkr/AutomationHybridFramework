@@ -16,6 +16,8 @@ import cuesz.factory.WebDriverManager;
 import cuesz.logintest.AdvocateLogin;
 import cuesz.membersummary.basic.Case34_01_MS_VO2assigntomember;
 import io.qameta.allure.*;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 @Epic ("Cuesz Staff on member Summary page for Body Scan Result ")
 @Feature ("Verify on member summary page staff able to select date for Body Scan Result.")
@@ -26,6 +28,7 @@ public class Case34_01_MS_VO2assigntomembertest {
     private Case34_01_MS_VO2assigntomember membersummaryPage;
    
     private ByteArrayOutputStream consoleOutput; // To capture console output
+    private static final Logger logger = LoggerFactory.getLogger(Case34_01_MS_VO2assigntomembertest.class);
 
     @BeforeClass
     public void setUp() {
@@ -56,7 +59,7 @@ public class Case34_01_MS_VO2assigntomembertest {
         advocateLogin.testAdvocateLogin();
 
         // Access the Schedule Event page
-        membersummaryPage.bodyscan();
+        membersummaryPage.vo2scan();
     
         // Generate a dynamic link based on some runtime conditions or data
         String dynamicLink = generateDynamicLink();
@@ -94,7 +97,7 @@ public class Case34_01_MS_VO2assigntomembertest {
      try (FileInputStream fis = new FileInputStream("config.properties")) {
          properties.load(fis);
      } catch (IOException e) {
-         e.printStackTrace();
+         logger.error("Error reading config file: {}", e.getMessage());
      }
      return properties.getProperty("browser", "chrome");
  }
