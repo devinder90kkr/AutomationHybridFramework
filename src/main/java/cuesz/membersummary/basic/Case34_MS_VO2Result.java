@@ -6,9 +6,13 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import java.time.Duration;
+import java.util.List;
 
 import cuesz.allure.reporting.AllureUtils;
 import cuesz.date.functions.DateGenerator;
@@ -18,7 +22,6 @@ import cuesz.web.resources.weblocators;
 import io.qameta.allure.Description;
 import io.qameta.allure.Epic;
 import io.qameta.allure.Feature;
-
 import io.qameta.allure.Story;
 
 @Epic("Member Summary Management")
@@ -28,9 +31,50 @@ public class Case34_MS_VO2Result extends BasePage {
     //public static String eventDate = "26-10-2023"; // Date to be passed nextscandate below
     public static String eventDate = DateGenerator.generateFixedDate(); // Use the generated date
     SeleniumUtils utils = new SeleniumUtils(driver);
+    private WebDriverWait wait;
+    private static final int MAX_SELECTIONS = 5; // Maximum number of selections to make
     
     public Case34_MS_VO2Result(WebDriver driver) {
         super(driver);
+        this.wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+    }
+
+    private void selectFromDropdown(WebElement dropdown) throws InterruptedException {
+        Actions actions = new Actions(driver);
+        
+        // Click to open dropdown
+        actions.moveToElement(dropdown).click().perform();
+        Thread.sleep(1000);
+
+        // Wait for dropdown options to be visible
+        List<WebElement> options = wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(
+            weblocators.dropdownOptions));
+        
+        if (options.isEmpty()) {
+            LOGGER.warn("No options found in dropdown");
+            return;
+        }
+
+        // Get the number of options to select (minimum of available options or MAX_SELECTIONS)
+        int selectionsToMake = Math.min(options.size(), MAX_SELECTIONS);
+        
+        for (int i = 0; i < selectionsToMake; i++) {
+            // Click to open dropdown for each selection
+            if (i > 0) {
+                actions.moveToElement(dropdown).click().perform();
+                Thread.sleep(1000);
+                // Refresh the options list for each selection
+                options = wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(
+                    weblocators.dropdownOptions));
+            }
+            
+            WebElement option = options.get(i);
+            String optionText = option.getText();
+            actions.moveToElement(option).click().perform();
+            LOGGER.info("Selected option {}: {}", i + 1, optionText);
+            AllureUtils.logStep("Selected dropdown option: " + optionText);
+            Thread.sleep(1000);
+        }
     }
 
     @Test
@@ -52,57 +96,31 @@ public class Case34_MS_VO2Result extends BasePage {
         LOGGER.info("Selected member from search results");
         AllureUtils.logStep("Selected member profile");
 
-
         Thread.sleep(3000);
         WebElement elementToScrolTO4spherElement = driver.findElement(weblocators.elementScrollTo4sphere);
         ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", elementToScrolTO4spherElement);
         LOGGER.info("Scrolled to 4 Spheres section");
         AllureUtils.logStep("Scrolled to 4 Spheres section");
 
-        Thread.sleep(3000);
+        Thread.sleep(5000);
         WebElement elementToScrollTo = driver.findElement(weblocators.elementScrollTo);
         ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", elementToScrollTo);
         LOGGER.info("Scrolled to VO2 Result section");
         AllureUtils.logStep("Scrolled to VO2 Result section");
 
-        Thread.sleep(3000);
+        Thread.sleep(5000);
         AllureUtils.captureScreenshot(driver, "vo2_result_initial_view");
 
-        // Configure Duration settings  
-        WebElement selecttype = driver.findElement(weblocators.selectype);
-        Actions builder1 = new Actions(driver);
-        builder1.moveToElement(selecttype).click().sendKeys("24").perform();
-        Thread.sleep(2000);
-        builder1.sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.ENTER).perform();
-        LOGGER.info("Set first duration value to 24");
-        AllureUtils.logStep("Configured first duration setting");
-        AllureUtils.captureScreenshot(driver, "vo2_result_duration_1");
-
-        Thread.sleep(2500);
-        WebElement selecttype1 = driver.findElement(weblocators.selectype);
-        Actions builder2 = new Actions(driver);
-        builder2.moveToElement(selecttype1).click().sendKeys("12").perform();
-        Thread.sleep(2000);
-        builder2.sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.ENTER).perform();
-        LOGGER.info("Set second duration value to 12");
-        AllureUtils.logStep("Configured second duration setting");
-        AllureUtils.captureScreenshot(driver, "vo2_result_duration_2");
-
-        Thread.sleep(2500);
-        WebElement selecttype3 = driver.findElement(weblocators.selectype);
-        Actions builder3 = new Actions(driver);
-        builder3.moveToElement(selecttype3).click().sendKeys("06").perform();
-        Thread.sleep(2000);
-        builder3.sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.ENTER).perform();
-        LOGGER.info("Set third duration value to 06");
-        AllureUtils.logStep("Configured third duration setting");
-        AllureUtils.captureScreenshot(driver, "vo2_result_duration_3");
+        // Configure Duration settings
+        WebElement durationDropdown = wait.until(ExpectedConditions.elementToBeClickable(weblocators.selectype));
+        selectFromDropdown(durationDropdown);
+        AllureUtils.captureScreenshot(driver, "vo2_result_duration_selections");
 
         // Set next scan date
         Thread.sleep(2000);
         WebElement nextscandate = driver.findElement(weblocators.selectype5);
-        Actions builder112 = new Actions(driver);
-        builder112.moveToElement(nextscandate).click().sendKeys(eventDate).sendKeys(Keys.ENTER).perform();
+        Actions builder = new Actions(driver);
+        builder.moveToElement(nextscandate).click().sendKeys(eventDate).sendKeys(Keys.ENTER).perform();
         LOGGER.info("Set next scan date to: {}", eventDate);
         AllureUtils.logStep("Set next scan date");
         AllureUtils.captureScreenshot(driver, "vo2_result_next_scan_date");

@@ -10,6 +10,7 @@ public class weblocators {
 	public static final By elementScrollTo = By.xpath("//h4[normalize-space()='VO2 Result']");
 	public static final By selectype5 = By.id("MemberSummary-Vo2Result-NextScan-DatePicker");
     public static final By elementScrollTo4sphere = By.xpath("//h2[normalize-space()='Action Taken']");
+    public static final By dropdownOptions = By.cssSelector(".react-select-dropdown-prefix__option");
 
 	//  public static final  By pluicn = (By.id("MemberSummary-FuelNotesAdd"));
    //  public static final  By prefTexAre = (By.id("MemberSummary-FuelNotes-AddNotes"));
