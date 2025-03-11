@@ -55,7 +55,7 @@ public class Case80_MS_Sessionoutcometest {
         advocateLogin.testAdvocateLogin();
 
         // Access the Schedule Event page
-        membersummaryPage.Sessionoutcomes();
+        membersummaryPage.sessionOutcomes();
     
      // Generate a dynamic link based on some runtime conditions or data
         String dynamicLink = generateDynamicLink();
