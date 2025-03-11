@@ -28,10 +28,6 @@ public class Case81_MS_Sleeptime extends BasePage {
     private static final Logger LOGGER = LoggerFactory.getLogger(Case81_MS_Sleeptime.class);
     SeleniumUtils utils = new SeleniumUtils(driver);
     private WebDriverWait wait;
-    private static final int MAX_SELECTIONS = 4; // Maximum number of selections to make (7, 14, 30, 60 days)
-    
-   
-    
     public Case81_MS_Sleeptime(WebDriver driver) {
         super(driver);
         this.wait = new WebDriverWait(driver, Duration.ofSeconds(10));

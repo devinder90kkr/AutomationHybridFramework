@@ -55,7 +55,7 @@ public class Case90_MS_Actionstepstest {
         advocateLogin.testAdvocateLogin();
 
         // Access the Schedule Event page
-        membersummaryPage.actionsteps();
+        membersummaryPage.actionSteps();
     
      // Generate a dynamic link based on some runtime conditions or data
         String dynamicLink = generateDynamicLink();
