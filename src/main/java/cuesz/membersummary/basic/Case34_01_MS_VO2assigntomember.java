@@ -19,6 +19,7 @@ import cuesz.allure.reporting.AllureUtils;
 import cuesz.date.functions.Currentdategenerator;
 import cuesz.pages.BasePage;
 import cuesz.utils.SeleniumUtils;
+import cuesz.web.resources.weblocators;
 import io.qameta.allure.Step;
 
 public class Case34_01_MS_VO2assigntomember extends BasePage {
@@ -26,8 +27,7 @@ public class Case34_01_MS_VO2assigntomember extends BasePage {
     public static String eventDate = Currentdategenerator.generateCurrentDate(); // Use the generated date
 	 
 	SeleniumUtils utils = new SeleniumUtils(driver);
-	private final By elementScrollTo = By.xpath("//h4[normalize-space()='VO2 Result']");
-	private final By selectype5 = By.id("MemberSummary-Vo2Result-NextScan-DatePicker");
+	
 
 	 public Case34_01_MS_VO2assigntomember(WebDriver driver) {
 		super(driver);	
@@ -49,7 +49,14 @@ public class Case34_01_MS_VO2assigntomember extends BasePage {
         logger.info("Selected member from search results");
 
         Thread.sleep(3000);
-        WebElement elementToScrollTo = driver.findElement(elementScrollTo);
+        WebElement elementToScrolTO4spherElement = driver.findElement(weblocators.elementScrollTo4sphere);
+        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", elementToScrolTO4spherElement);
+        logger.info("Scrolled to 4 Spheres section");
+
+
+
+        Thread.sleep(5000);
+        WebElement elementToScrollTo = driver.findElement(weblocators.elementScrollTo);
         ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", elementToScrollTo);
         logger.info("Scrolled to VO2 Result section");
 
@@ -58,7 +65,7 @@ public class Case34_01_MS_VO2assigntomember extends BasePage {
         multiwsitch.click();
         logger.info("Clicked on VO2 Result switch");
 
-        WebElement nextscandate = driver.findElement(selectype5);
+        WebElement nextscandate = driver.findElement(weblocators.selectype5);
         nextscandate.click();
         logger.info("Opened date picker for next scan");
 
