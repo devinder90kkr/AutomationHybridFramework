@@ -12,7 +12,6 @@ import org.testng.annotations.Test;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import java.time.Duration;
-import java.util.List;
 
 import cuesz.allure.reporting.AllureUtils;
 import cuesz.pages.BasePage;
@@ -98,13 +97,3 @@ public class Case80_MS_Sessionoutcome extends BasePage {
         Thread.sleep(2000);
     }
 }
-  
-    
-        
-       
-	    
-      
-    
-    
-  
-

@@ -55,7 +55,7 @@ public class Case81_MS_Sleeptimetest {
         advocateLogin.testAdvocateLogin();
 
         // Access the Schedule Event page
-        membersummaryPage.Sleeptime();
+        membersummaryPage.sleepTime();
     
      // Generate a dynamic link based on some runtime conditions or data
         String dynamicLink = generateDynamicLink();

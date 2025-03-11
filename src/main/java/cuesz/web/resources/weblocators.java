@@ -4,9 +4,13 @@ import org.openqa.selenium.By;
 
 public class weblocators {
 
-	// private By elementScrollTo = By.xpath("//h4[contains(text(), 'VO2 Result')]");
+
+	public static By sleeptime = By.xpath("//h4[normalize-space()='Sleep Time']");
+    public static By durationDropdown = By.id("MemberSummary-SleepData-Duration");
+
+	// public static By elementScrollTo = By.xpath("//h4[contains(text(), 'VO2 Result')]");
     public static By selectype = By.id("MemberSummary-Vo2Result-Duration");
-    // private By selectype5 = By.id("MemberSummary-Vo2Result-NextScan-DatePicker");
+    // public static By selectype5 = By.id("MemberSummary-Vo2Result-NextScan-DatePicker");
 	public static final By elementScrollTo = By.xpath("//h4[normalize-space()='VO2 Result']");
 	public static final By selectype5 = By.id("MemberSummary-Vo2Result-NextScan-DatePicker");
     public static final By elementScrollTo4sphere = By.xpath("//h2[normalize-space()='Action Taken']");
