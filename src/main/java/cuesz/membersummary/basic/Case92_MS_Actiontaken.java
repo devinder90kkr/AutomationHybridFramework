@@ -83,18 +83,6 @@ public class Case92_MS_Actiontaken extends BasePage {
 	    LOGGER.info("Click on Submit button");
 	    AllureUtils.logStep("Click on Submit button");
 	    AllureUtils.captureScreenshot(driver, "actiontaken5");
-
-//	    Thread.sleep(2500);
-//	    elementActions.clickElement(weblocators.showmoreaction);
-//	    LOGGER.info("Click on show more button");
-//        AllureUtils.logStep("Click on showmore button");
-//        AllureUtils.captureScreenshot(driver, "actiontaken6");
-//        
-//        Thread.sleep(2500);
-//        elementActions.clickElement(weblocators.crossicon1);
-//        LOGGER.info("Click on cross icon");
-//	    AllureUtils.logStep("Click on cross icon");
-//	    AllureUtils.captureScreenshot(driver, "actiontaken13");
         
         Thread.sleep(2500);
         elementActions.clickElement(weblocators.actionedit);

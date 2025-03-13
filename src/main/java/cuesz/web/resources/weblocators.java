@@ -429,7 +429,7 @@ public class weblocators {
 	//Case92_MS_actiontaken
 	public static final By actiontakenheading	= (By.xpath("//h2[normalize-space()='Action Taken']"));
 	public static final By actionplusicon		= (By.id("add-action-taken")); 
-	public static final By actiontextarea		= (By.id("action-taken-input-field"));
+	public static final By actiontextarea		= (By.xpath("//div[@class='form-group d-flex flex-column']//div//div[@class='jodit-wysiwyg']"));
 	public static final By actiondatefield		= (By.id("action-taken-date"));
 	public static final By submitaction			= (By.id("submit-action-taken"));
 	public static final By showmoreaction		= (By.id("show-more"));
