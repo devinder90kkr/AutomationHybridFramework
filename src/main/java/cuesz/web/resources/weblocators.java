@@ -5,6 +5,22 @@ import org.openqa.selenium.By;
 public class weblocators {
 
 
+	public static final By spheHeadng =	(By.cssSelector(".title_h4 h4"));
+	public static final By perfmSwch = (By.xpath("//input[@id='MemberSummary-SphereSwitch-Perform']/parent::span/parent::span"));
+	public static final By prfrmIput = (By.xpath("//input[@id='MemberSummary-SphereInput-Perform']"));
+	public static final By fuelSwch	= (By.xpath("//input[@id='MemberSummary-SphereSwitch-Fuel']/parent::span/parent::span"));
+	public static final By fuelInpt = (By.xpath("//input[@id='MemberSummary-SphereInput-Fuel']"));
+	public static final By rsttSwtch	= (By.xpath("//input[@id='MemberSummary-SphereSwitch-Restore']/parent::span/parent::span"));
+	public static final By rstorInput	= (By.xpath("//input[@id='MemberSummary-SphereInput-Restore']"));
+	public static final By minflSwich	= (By.xpath("//input[@id='MemberSummary-SphereSwitch-Mindful']/parent::span/parent::span"));
+	public static final By mindflinpt	= (By.xpath("//input[@id='MemberSummary-SphereInput-Mindful']"));
+	
+
+	public static final By sphreHding	=  (By.xpath("//h4[normalize-space()='4 Spheres']"));
+	public static final By todyprgrss	=  (By.xpath("(//div[@class='title_h4'])[2]"));
+	public static final By ovrallprgress 	= (By.xpath("(//em[@class='ml-2'])[3]"));
+	public static final By drpdwn	=	(By.xpath("//div[@id='MemberSummary-Sphere-Duration']"));
+
 	public static By sleeptime = By.xpath("//h4[normalize-space()='Sleep Time']");
     public static By durationDropdown = By.id("MemberSummary-SleepData-Duration");
 

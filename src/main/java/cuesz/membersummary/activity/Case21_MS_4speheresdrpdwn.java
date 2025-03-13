@@ -2,7 +2,6 @@
 
 package cuesz.membersummary.activity;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
@@ -28,12 +27,6 @@ public class Case21_MS_4speheresdrpdwn extends BasePage {
 	private static final Logger LOGGER = LoggerFactory.getLogger(Case21_MS_4speheresdrpdwn.class);
 	SeleniumUtils utils = new SeleniumUtils(driver);
 	
-	private By sphreHding	=  (By.xpath("//h4[normalize-space()='4 Spheres']"));
-	private By todyprgrss	=  (By.xpath("(//div[@class='title_h4'])[2]"));
-	private By ovrallprgress 	= (By.xpath("(//em[@class='ml-2'])[3]"));
-	private By drpdwn	=	(By.xpath("//div[@id='MemberSummary-Sphere-Duration']"));
-	
-
 	public Case21_MS_4speheresdrpdwn(WebDriver driver) {
 		super(driver);
 		
@@ -65,7 +58,7 @@ public class Case21_MS_4speheresdrpdwn extends BasePage {
 
         Thread.sleep(3000);
     	// Find the heading elements for the four spheres
-    	WebElement sphereHeading = driver.findElement(sphreHding);
+    	WebElement sphereHeading = driver.findElement(weblocators.sphreHding);
     	// Scroll to the "4 Spheres" feature
     	Actions actions = new Actions(driver);
     	actions.moveToElement(sphereHeading);
@@ -83,7 +76,7 @@ public class Case21_MS_4speheresdrpdwn extends BasePage {
     	AllureUtils.captureScreenshot(driver, "4_spheres_heading");
     	
     	// Find the Today's Progress element
-    	WebElement todayProgress = driver.findElement(todyprgrss);
+    	WebElement todayProgress = driver.findElement(weblocators.todyprgrss);
 
     	// Verify the Today's Progress value
     	String todayProgressText = todayProgress.getText();
@@ -97,7 +90,7 @@ public class Case21_MS_4speheresdrpdwn extends BasePage {
     	AllureUtils.logStep("Checked Today's Progress value");
 
     	// Find the Overall Progress element
-    	WebElement overallProgress = driver.findElement(ovrallprgress);
+    	WebElement overallProgress = driver.findElement(weblocators.ovrallprgress);
 
     	// Verify the Overall Progress value
     	String overallProgressText = overallProgress.getText();
@@ -116,7 +109,7 @@ public class Case21_MS_4speheresdrpdwn extends BasePage {
     	// Test dropdown selections
     	String[] dropdownOptions = {"This Week", "Last Week", "14 Days", "30 Days"};
     	for (String option : dropdownOptions) {
-    		WebElement dropdown = driver.findElement(drpdwn);
+    		WebElement dropdown = driver.findElement(weblocators.drpdwn);
     		Actions builder = new Actions(driver);
     		builder.moveToElement(dropdown).click().sendKeys(option).perform();
     		Thread.sleep(2000);
