@@ -447,16 +447,17 @@ public class weblocators {
 	public static final By reminderpop 		= (By.xpath("//h4[normalize-space()='Add Reminder']"));
 //	public static final By dateField		= (By.xpath("(//input[@placeholder='DD-MM-YYYY'])[3]"));
 	public static final By dateField		= (By.id("reminder-date"));
+	public static final By	remindersubject = (By.id("reminder-subject"));
 //	public static final By remindernotesfield 	= (By.xpath("//textarea[@placeholder='Enter Notes']"));
-	public static final By remindernotesfield	= (By.id("reminder-note"));
+	public static final By remindernotesfield	= (By.xpath("//div[@class='form-group d-flex flex-column']//div//div[@class='jodit-wysiwyg']"));
 //	public static final By emailtick		= (By.xpath("(//input[contains(@type,'checkbox')])[24]"));
-	public static final By emailtick		=	(By.id("reminder-email-check"));
+	public static final By emailtick		=	(By.xpath("//div[@class='row align-items-center']//div[@class='checkbox_col']"));
 	public static final By emailclick 		= (By.xpath("//input[@class='rc-time-picker-input']"));
 //	public static final By emailclick		=	(By.id("rc-time-picker time-pick"));
 //	public static final By recurring 		= (By.xpath("(//input[contains(@type,'checkbox')])[28]"));
-	public static final By recurring 		= (By.id("reminder-recurring-check"));
+	public static final By recurring 		= (By.xpath("//div[@class='row align-items-center mb-4']//div[@class='checkbox_col']"));
 	public static final By outsideclick		=	(By.id("reminder-modal"));
-	public static final By TimeInput		= (By.xpath("//input[@class='rc-time-picker-panel-input']"));
+	public static final By TimeInput		= (By.xpath("//input[@id='reminder-time-picker']"));
 	//select time values 
 	public static final By time1			=	(By.xpath("(//div[@class='rc-time-picker-panel-select'])[1]//li[text()='08']"));
 	public static final By time2 			=	(By.xpath("(//div[@class='rc-time-picker-panel-select'])[2]//li[text()='18']"));
@@ -492,7 +493,7 @@ public class weblocators {
 //    public static final By submitbutton = (By.xpath("//button[normalize-space()='Submit']"));
     public static final By submitbutton = (By.id("submit-action-step-edit-form"));
 //    public static final By deleteicon = (By.xpath("(//button)[4]"));
-    public static final By deleteicon = (By.xpath("//button[@id='member-delete-action-step-0']"));
+    public static final By deleteicon = (By.xpath("//button[@id='delete-reminder-0']"));
     public static final By deletePopupHeading = (By.xpath("(//h2[normalize-space()='Delete Action Step'])[1]"));
     public static final By deletePopupContent = (By.xpath("//p[@id='alert-dialog-description']"));
 //    public static final By cancelbuttn 	=	(By.xpath("//button[@id='DecisionPopupConfirmation']"));
