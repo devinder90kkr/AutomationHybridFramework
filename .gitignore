@@ -1,0 +1,8 @@
+/target/
+allure-results/
+allure-report/
+.DS_Store
+bin/
+screenshots/
+test-output/
+.qodo
