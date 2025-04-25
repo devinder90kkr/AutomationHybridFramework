@@ -12,7 +12,7 @@ import org.testng.annotations.Test;
 import commonfunction.functions.DatePickerUtility_logicpage;
 import base.BasePage;
 import utils.SeleniumUtils;
-import web.resources.weblocators;
+import constant.weblocators;
 
 public class Case36_MSL_Staffnotes extends BasePage {
 	

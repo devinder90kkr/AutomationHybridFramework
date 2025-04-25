@@ -11,9 +11,9 @@ import org.testng.annotations.Test;
 
 import allureframework.reporting.AllureUtils;
 import base.BasePage;
-import web.resources.ElementActions;
-import web.resources.webTestdata;
-import web.resources.weblocators;
+import constant.ElementActions;
+import constant.webTestdata;
+import constant.weblocators;
 
 public class Cases110_Action_Steps_delete extends BasePage {
     

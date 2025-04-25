@@ -14,8 +14,8 @@ import org.testng.annotations.Test;
 import allureframework.reporting.AllureUtils;
 import commonfunction.functions.DateGenerator;
 import base.BasePage;
-import web.resources.webTestdata;
-import web.resources.weblocators;
+import constant.webTestdata;
+import constant.weblocators;
 
 public class Case02_viewevent extends BasePage {
 	private static final Logger LOGGER = LoggerFactory.getLogger(Case02_viewevent.class);

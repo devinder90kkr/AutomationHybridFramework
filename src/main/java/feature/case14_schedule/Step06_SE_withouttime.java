@@ -8,8 +8,8 @@ import org.testng.annotations.Test;
 
 import allureframework.reporting.AllureUtils;
 import base.BasePage;
-import web.resources.webTestdata;
-import web.resources.weblocators;
+import constant.webTestdata;
+import constant.weblocators;
 
 public class Step06_SE_withouttime extends BasePage {
 

@@ -19,10 +19,10 @@ import org.testng.SkipException;
 import allureframework.reporting.AllureUtils;
 import commonfunction.functions.WorkoutStepsHelper;
 import base.BasePage;
-import web.resources.ElementActions;
+import constant.ElementActions;
 import commonfunction.functions.TemplateNameStorage;
-import web.resources.webTestdata;
-import web.resources.weblocators;
+import constant.webTestdata;
+import constant.weblocators;
 
 public class Case107_Workout_Templates_multipleexercise extends BasePage {
     private static final Logger LOGGER = LoggerFactory.getLogger(Case107_Workout_Templates_multipleexercise.class);

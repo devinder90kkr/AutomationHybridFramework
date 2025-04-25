@@ -13,9 +13,9 @@ import org.testng.annotations.Test;
 import allureframework.reporting.AllureUtils;
 import commonfunction.functions.DateGenerator;
 import base.BasePage;
-import web.resources.ElementActions;
-import web.resources.webTestdata;
-import web.resources.weblocators;
+import constant.ElementActions;
+import constant.webTestdata;
+import constant.weblocators;
 
 public class Cases111_Action_Steps_editcase extends BasePage {
     

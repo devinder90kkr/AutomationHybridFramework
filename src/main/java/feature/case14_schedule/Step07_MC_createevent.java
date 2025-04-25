@@ -15,8 +15,8 @@ import org.testng.annotations.Test;
 import allureframework.reporting.AllureUtils;
 import commonfunction.functions.DateGenerator;
 import base.BasePage;
-import web.resources.webTestdata;
-import web.resources.weblocators;
+import constant.webTestdata;
+import constant.weblocators;
 
 public class Step07_MC_createevent extends BasePage {
 	private static final Logger LOGGER = LoggerFactory.getLogger(Step07_MC_createevent.class);

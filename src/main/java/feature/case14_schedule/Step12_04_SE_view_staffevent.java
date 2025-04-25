@@ -12,7 +12,7 @@ import org.testng.annotations.Test;
 
 import commonfunction.functions.DateGenerator;
 import base.BasePage;
-import web.resources.weblocators;
+import constant.weblocators;
 
 public class Step12_04_SE_view_staffevent extends BasePage {
 	

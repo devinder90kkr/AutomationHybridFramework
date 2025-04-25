@@ -18,7 +18,7 @@ import commonfunction.functions.DayofWeek;
 import base.BasePage;
 //import utils.AllureUtils;
 import utils.SeleniumUtils;
-import web.resources.weblocators;	
+import constant.weblocators;	
 
 	public class Case44_01_MSL_Mindful_currentday extends BasePage {
 		

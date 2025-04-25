@@ -15,8 +15,8 @@
 import commonfunction.functions.DatePickerUtility_logicpage;
 import base.BasePage;
 	import utils.SeleniumUtils;
-import web.resources.webTestdata;
-import web.resources.weblocators;
+import constant.webTestdata;
+import constant.weblocators;
 	
 	public class Case42_MSL_Perform extends BasePage {
 		

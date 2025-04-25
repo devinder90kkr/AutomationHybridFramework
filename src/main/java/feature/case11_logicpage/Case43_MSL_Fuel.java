@@ -16,7 +16,7 @@ import allureframework.reporting.AllureUtils;
 import commonfunction.functions.DatePickerUtility_logicpage;
 import base.BasePage;
 import utils.SeleniumUtils;
-import web.resources.weblocators;
+import constant.weblocators;
 	
 	public class Case43_MSL_Fuel extends BasePage {
 		

@@ -16,7 +16,7 @@ import org.slf4j.LoggerFactory;
 import allureframework.reporting.AllureUtils;
 import base.BasePage;
 import utils.SeleniumUtils;
-import web.resources.weblocators;
+import constant.weblocators;
 
 public class Case23_MS_performactivity extends BasePage {
 

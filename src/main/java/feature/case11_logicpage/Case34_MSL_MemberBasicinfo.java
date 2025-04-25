@@ -5,8 +5,8 @@ import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
 import base.BasePage;
 import utils.SeleniumUtils;
-import web.resources.ElementActions;
-import web.resources.weblocators;
+import constant.ElementActions;
+import constant.weblocators;
 
 public class Case34_MSL_MemberBasicinfo extends BasePage {
 	SeleniumUtils utils = new SeleniumUtils(driver);

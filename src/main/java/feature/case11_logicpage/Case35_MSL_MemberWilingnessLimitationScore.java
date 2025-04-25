@@ -11,8 +11,8 @@ import org.testng.annotations.Test;
 
 import base.BasePage;
 import utils.SeleniumUtils;
-import web.resources.ElementActions;
-import web.resources.weblocators;
+import constant.ElementActions;
+import constant.weblocators;
 
 public class Case35_MSL_MemberWilingnessLimitationScore extends BasePage {
 	

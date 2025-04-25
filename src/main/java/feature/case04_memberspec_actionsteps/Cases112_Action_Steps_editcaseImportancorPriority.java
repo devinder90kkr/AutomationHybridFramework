@@ -18,9 +18,9 @@ import allureframework.reporting.AllureUtils;
 import commonfunction.functions.DateGenerator;
 import base.BasePage;
 import feature.case14_schedule.Case01_createvent;
-import web.resources.ElementActions;
-import web.resources.webTestdata;
-import web.resources.weblocators;
+import constant.ElementActions;
+import constant.webTestdata;
+import constant.weblocators;
 
 public class Cases112_Action_Steps_editcaseImportancorPriority extends BasePage {
     

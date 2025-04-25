@@ -16,8 +16,8 @@ import allureframework.reporting.AllureUtils;
 import commonfunction.functions.DateGenerator;
 import base.BasePage;
 import utils.SeleniumUtils;
-import web.resources.webTestdata;
-import web.resources.weblocators;
+import constant.webTestdata;
+import constant.weblocators;
 
 public class Case01_createvent extends BasePage {
 	

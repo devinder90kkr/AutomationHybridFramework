@@ -27,7 +27,7 @@
 //        }
 //    }
 //}
-package web.resources;
+package constant;
 
 import org.openqa.selenium.Dimension;
 import org.openqa.selenium.WebDriver;

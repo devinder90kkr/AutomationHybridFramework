@@ -19,7 +19,7 @@ import allureframework.reporting.AllureUtils;
 import commonfunction.functions.Currentdategenerator;
 import base.BasePage;
 import utils.SeleniumUtils;
-import web.resources.weblocators;
+import constant.weblocators;
 import io.qameta.allure.Step;
 
 public class Case34_01_MS_VO2assigntomember extends BasePage {

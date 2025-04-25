@@ -12,9 +12,9 @@ import org.slf4j.LoggerFactory;
 import org.testng.Assert;
 
 import allureframework.reporting.AllureUtils;
-import web.resources.ElementActions;
-import web.resources.webTestdata;
-import web.resources.weblocators;
+import constant.ElementActions;
+import constant.webTestdata;
+import constant.weblocators;
 
 public class workoutassignhelper {
 	  private static final Logger LOGGER = LoggerFactory.getLogger(workoutassignhelper.class);

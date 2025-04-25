@@ -1,4 +1,4 @@
-package web.resources;
+package constant;
 
 import java.text.SimpleDateFormat;
 import java.time.Duration;

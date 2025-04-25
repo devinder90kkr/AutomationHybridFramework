@@ -12,8 +12,8 @@ import org.testng.annotations.Test;
 
 import commonfunction.functions.DateGenerator;
 import base.BasePage;
-import web.resources.webTestdata;
-import web.resources.weblocators;
+import constant.webTestdata;
+import constant.weblocators;
 
 public class Step09_MC_viewevent extends BasePage {
 	

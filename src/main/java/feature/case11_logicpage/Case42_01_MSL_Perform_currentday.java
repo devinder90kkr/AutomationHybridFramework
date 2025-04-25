@@ -16,8 +16,8 @@
 import commonfunction.functions.DayofWeek;
 import base.BasePage;
 	import utils.SeleniumUtils;
-import web.resources.webTestdata;
-import web.resources.weblocators;
+import constant.webTestdata;
+import constant.weblocators;
 	
 	public class Case42_01_MSL_Perform_currentday extends BasePage {
 		

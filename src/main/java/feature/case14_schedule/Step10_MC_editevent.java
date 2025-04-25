@@ -18,8 +18,8 @@ import org.testng.annotations.Test;
 import allureframework.reporting.AllureUtils;
 import commonfunction.functions.DateGenerator;
 import base.BasePage;
-import web.resources.webTestdata;
-import web.resources.weblocators;
+import constant.webTestdata;
+import constant.weblocators;
 
 public class Step10_MC_editevent extends BasePage {	
 	public static String eventDate = DateGenerator.generateFixedDate(); // Use the generated date

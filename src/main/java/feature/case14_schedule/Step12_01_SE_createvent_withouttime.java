@@ -9,8 +9,8 @@ import org.openqa.selenium.interactions.Actions;
 import org.testng.annotations.Test;
 
 import base.BasePage;
-import web.resources.webTestdata;
-import web.resources.weblocators;
+import constant.webTestdata;
+import constant.weblocators;
 
 public class Step12_01_SE_createvent_withouttime extends BasePage {
 	public static String eventDate = "27-09-2023"; // Date to be passed to script two

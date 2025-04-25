@@ -12,8 +12,8 @@ import org.testng.annotations.Test;
 import allureframework.reporting.AllureUtils;
 import base.BasePage;
 import utils.SeleniumUtils;
-import web.resources.ElementActions;
-import web.resources.weblocators;
+import constant.ElementActions;
+import constant.weblocators;
 
 public class Cases109_dataTonnage extends BasePage {
 	private static final Logger LOGGER = LoggerFactory.getLogger(Cases109_dataTonnage.class);

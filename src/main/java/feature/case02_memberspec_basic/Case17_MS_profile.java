@@ -13,7 +13,7 @@ import org.slf4j.LoggerFactory;
 import allureframework.reporting.AllureUtils;
 import base.BasePage;
 import utils.SeleniumUtils;
-import web.resources.weblocators;
+import constant.weblocators;
 import io.qameta.allure.Description;
 import io.qameta.allure.Epic;
 import io.qameta.allure.Feature;

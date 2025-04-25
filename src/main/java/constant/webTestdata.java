@@ -1,4 +1,4 @@
-package web.resources;
+package constant;
 
 import com.github.javafaker.Faker;
 

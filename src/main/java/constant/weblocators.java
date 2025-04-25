@@ -1,4 +1,4 @@
-package web.resources;
+package constant;
 
 import org.openqa.selenium.By;
 

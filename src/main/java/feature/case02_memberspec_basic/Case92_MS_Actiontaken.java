@@ -12,9 +12,9 @@ import allureframework.reporting.AllureUtils;
 import commonfunction.functions.DateGenerator;
 import base.BasePage;
 import utils.SeleniumUtils;
-import web.resources.ElementActions;
-import web.resources.webTestdata;
-import web.resources.weblocators;
+import constant.ElementActions;
+import constant.webTestdata;
+import constant.weblocators;
 import io.qameta.allure.Allure;
 
 public class Case92_MS_Actiontaken extends BasePage {

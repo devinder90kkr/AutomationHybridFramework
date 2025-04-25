@@ -12,9 +12,9 @@ import org.slf4j.LoggerFactory;
 import org.testng.Assert;
 
 import allureframework.reporting.AllureUtils;
-import web.resources.ElementActions;
-import web.resources.webTestdata;
-import web.resources.weblocators;
+import constant.ElementActions;
+import constant.webTestdata;
+import constant.weblocators;
 
 public class WorkoutStepsHelper {
 	  private static final Logger LOGGER = LoggerFactory.getLogger(WorkoutStepsHelper.class);
@@ -149,7 +149,7 @@ public class WorkoutStepsHelper {
 }
 
 
-//package web.resources;
+//package constant;
 //
 //import org.openqa.selenium.WebDriver;
 //import org.openqa.selenium.WebElement;

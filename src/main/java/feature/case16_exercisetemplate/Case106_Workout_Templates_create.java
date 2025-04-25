@@ -18,9 +18,9 @@ import org.testng.SkipException;
 import allureframework.reporting.AllureUtils;
 import commonfunction.functions.WorkoutStepsHelper;
 import base.BasePage;
-import web.resources.ElementActions;
-import web.resources.webTestdata;
-import web.resources.weblocators;
+import constant.ElementActions;
+import constant.webTestdata;
+import constant.weblocators;
 
 public class Case106_Workout_Templates_create extends BasePage {
 	private static final Logger LOGGER = LoggerFactory.getLogger(Case106_Workout_Templates_create.class);

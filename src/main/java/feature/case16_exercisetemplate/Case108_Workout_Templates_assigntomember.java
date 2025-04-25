@@ -15,9 +15,9 @@ import allureframework.reporting.AllureUtils;
 import commonfunction.functions.workoutassignhelper;
 import base.BasePage;
 import utils.SeleniumUtils;
-import web.resources.ElementActions;
-import web.resources.webTestdata;
-import web.resources.weblocators;
+import constant.ElementActions;
+import constant.webTestdata;
+import constant.weblocators;
 
 public class Case108_Workout_Templates_assigntomember extends BasePage {
     private static final Logger LOGGER = LoggerFactory.getLogger(Case108_Workout_Templates_assigntomember.class);

@@ -9,8 +9,8 @@ import org.openqa.selenium.interactions.Actions;
 import org.testng.annotations.Test;
 
 import base.BasePage;
-import web.resources.webTestdata;
-import web.resources.weblocators;
+import constant.webTestdata;
+import constant.weblocators;
 
 public class Step12_02_SE_createvent_withpastdate extends BasePage {
 	

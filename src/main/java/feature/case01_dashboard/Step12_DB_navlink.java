@@ -11,8 +11,8 @@ import org.testng.annotations.Test;
 import allureframework.reporting.AllureUtils;
 import base.BasePage;
 //import utils.api.NetworkResponse;
-// import web.resources.ResponsiveTester;
-import web.resources.weblocators;
+// import constant.ResponsiveTester;
+import constant.weblocators;
 // import io.qameta.allure.Step;
 
 public class Step12_DB_navlink extends BasePage {

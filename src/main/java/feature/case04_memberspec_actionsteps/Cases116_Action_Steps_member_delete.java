@@ -12,9 +12,9 @@ import org.testng.annotations.Test;
 import allureframework.reporting.AllureUtils;
 import base.BasePage;
 import utils.SeleniumUtils;
-import web.resources.ElementActions;
-import web.resources.webTestdata;
-import web.resources.weblocators;
+import constant.ElementActions;
+import constant.webTestdata;
+import constant.weblocators;
 
 public class Cases116_Action_Steps_member_delete extends BasePage {
     

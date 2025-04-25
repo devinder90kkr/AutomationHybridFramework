@@ -14,8 +14,8 @@
 //
 //import allureframework.reporting.AllureUtils;
 //import base.BasePage;
-//import web.resources.ElementActions;
-//import web.resources.weblocators;
+//import constant.ElementActions;
+//import constant.weblocators;
 //
 //public class Case101_Workout_Templates extends BasePage {
 //    private static final Logger LOGGER = LoggerFactory.getLogger(Case101_Workout_Templates.class);
@@ -70,8 +70,8 @@ import org.testng.SkipException;
 
 import allureframework.reporting.AllureUtils;
 import base.BasePage;
-import web.resources.ElementActions;
-import web.resources.weblocators;
+import constant.ElementActions;
+import constant.weblocators;
 
 public class Case101_Workout_Templates extends BasePage {
     private static final Logger LOGGER = LoggerFactory.getLogger(Case101_Workout_Templates.class);

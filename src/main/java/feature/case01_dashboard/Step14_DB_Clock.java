@@ -6,7 +6,7 @@ import org.testng.annotations.Test;
 
 import allureframework.reporting.AllureUtils;
 import base.BasePage;
-import web.resources.ElementActions;
+import constant.ElementActions;
 
 public class Step14_DB_Clock extends BasePage {
 	

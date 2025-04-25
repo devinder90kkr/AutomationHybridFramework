@@ -17,8 +17,8 @@ import org.testng.annotations.Test;
 import allureframework.reporting.AllureUtils;
 import commonfunction.functions.DateGenerator;
 import base.BasePage;
-import web.resources.webTestdata;
-import web.resources.weblocators;
+import constant.webTestdata;
+import constant.weblocators;
 
 public class Case04_deletevent extends BasePage {
 	

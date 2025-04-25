@@ -21,7 +21,7 @@ import org.testng.annotations.Test;
 import allureframework.reporting.AllureUtils;
 import base.BasePage;	
 import utils.SeleniumUtils;
-import web.resources.weblocators;
+import constant.weblocators;
 
 public class Case85memberstats extends BasePage {
 	
