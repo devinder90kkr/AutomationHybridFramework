@@ -13,7 +13,7 @@
 	import org.openqa.selenium.support.ui.WebDriverWait;
 	import org.testng.annotations.Test;
 
-import commonfunction.functions.DayofWeek;
+import commonfunction.DayofWeek;
 import base.BasePage;
 	import utils.SeleniumUtils;
 import constant.webTestdata;

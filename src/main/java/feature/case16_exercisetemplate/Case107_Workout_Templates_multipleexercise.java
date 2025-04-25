@@ -17,10 +17,10 @@ import org.testng.Assert;
 import org.testng.SkipException;
 
 import allureframework.reporting.AllureUtils;
-import commonfunction.functions.WorkoutStepsHelper;
+import commonfunction.WorkoutStepsHelper;
 import base.BasePage;
 import constant.ElementActions;
-import commonfunction.functions.TemplateNameStorage;
+import commonfunction.TemplateNameStorage;
 import constant.webTestdata;
 import constant.weblocators;
 

@@ -8,7 +8,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.testng.annotations.Test;
 
-import commonfunction.functions.DateGenerator;
+import commonfunction.DateGenerator;
 import base.BasePage;
 
 public class Step12_07_SE_create_eventwithoutopic extends BasePage {

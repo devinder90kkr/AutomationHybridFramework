@@ -14,7 +14,7 @@
 	import org.testng.annotations.Test;
 
 import allureframework.reporting.AllureUtils;
-import commonfunction.functions.DayofWeek;
+import commonfunction.DayofWeek;
 import base.BasePage;
 	import utils.SeleniumUtils;
 import constant.webTestdata;

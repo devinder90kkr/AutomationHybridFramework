@@ -44,7 +44,7 @@ public class Cases110_Action_Steps_delete extends BasePage {
         // Log message to console and Allure report
         LOGGER.info("Enter values in editoractions field :" + webTestdata.descriptionForactionnotes );
         AllureUtils.logStep("Enter values in editoractions field :" + webTestdata.descriptionForactionnotes);
-        
+    
         // Click on submit button from  acion steps 
         wait.until(ExpectedConditions.visibilityOfElementLocated(weblocators.submitactionnotes));
         elementActions.clickElement(weblocators.submitactionnotes);

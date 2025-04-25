@@ -15,7 +15,7 @@ import java.time.Duration;
 import java.util.List;
 
 import allureframework.reporting.AllureUtils;
-import commonfunction.functions.DateGenerator;
+import commonfunction.DateGenerator;
 import base.BasePage;
 import utils.SeleniumUtils;
 import constant.weblocators;

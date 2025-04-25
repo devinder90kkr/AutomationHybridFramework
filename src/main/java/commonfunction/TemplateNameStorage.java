@@ -1,4 +1,4 @@
-package commonfunction.functions;
+package commonfunction;
 
 public class TemplateNameStorage {
     private static String templateName;

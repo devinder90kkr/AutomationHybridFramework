@@ -1,4 +1,4 @@
-package commonfunction.functions;
+package commonfunction;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;

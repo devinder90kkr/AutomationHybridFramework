@@ -16,7 +16,7 @@ import org.openqa.selenium.WebDriver;
 	import org.testng.annotations.Test;
 	
 	import allureframework.reporting.AllureUtils;
-	import commonfunction.functions.DateGenerator;
+	import commonfunction.DateGenerator;
 	import base.BasePage;
 	import constant.ElementActions;
 	import constant.webTestdata;

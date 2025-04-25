@@ -10,7 +10,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
 
-import commonfunction.functions.DateGenerator;
+import commonfunction.DateGenerator;
 import base.BasePage;
 import constant.weblocators;
 

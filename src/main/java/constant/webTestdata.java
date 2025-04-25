@@ -2,7 +2,7 @@ package constant;
 
 import com.github.javafaker.Faker;
 
-import commonfunction.functions.DateGenerator;
+import commonfunction.DateGenerator;
 
 public class webTestdata {
 	

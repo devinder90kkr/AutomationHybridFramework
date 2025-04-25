@@ -5,7 +5,7 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
-import commonfunction.functions.WeekNavigationUtils;
+import commonfunction.WeekNavigationUtils;
 
 public class SeleniumUtils {
     private WebDriver driver;

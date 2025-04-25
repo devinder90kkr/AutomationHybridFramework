@@ -12,7 +12,7 @@
 	import org.openqa.selenium.support.ui.WebDriverWait;
 	import org.testng.annotations.Test;
 
-import commonfunction.functions.DatePickerUtility_logicpage;
+import commonfunction.DatePickerUtility_logicpage;
 import base.BasePage;
 	import utils.SeleniumUtils;
 import constant.webTestdata;

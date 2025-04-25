@@ -13,7 +13,7 @@ import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
 
 import allureframework.reporting.AllureUtils;
-import commonfunction.functions.DateGenerator;
+import commonfunction.DateGenerator;
 import base.BasePage;
 import constant.webTestdata;
 import constant.weblocators;

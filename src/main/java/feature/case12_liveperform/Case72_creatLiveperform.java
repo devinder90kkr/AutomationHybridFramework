@@ -130,7 +130,7 @@ import org.openqa.selenium.interactions.Actions;
 import org.testng.annotations.Test;
 
 import allureframework.reporting.AllureUtils;
-import commonfunction.functions.Currentdategenerator;
+import commonfunction.Currentdategenerator;
 import base.BasePage;
 import utils.SeleniumUtils;
 

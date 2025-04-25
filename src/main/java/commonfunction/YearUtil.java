@@ -1,4 +1,4 @@
-package commonfunction.functions; 
+package commonfunction; 
 import java.util.Calendar;
 
 @SuppressWarnings("unused")
