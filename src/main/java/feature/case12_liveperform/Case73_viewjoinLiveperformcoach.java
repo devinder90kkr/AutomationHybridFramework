@@ -14,7 +14,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
 
-import allureframework.reporting.AllureUtils;
+import allureframework.AllureUtils;
 import commonfunction.Currentdategenerator;
 import base.BasePage;
 

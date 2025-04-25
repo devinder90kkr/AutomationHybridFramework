@@ -11,7 +11,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.testng.Assert;
 
-import allureframework.reporting.AllureUtils;
+import allureframework.AllureUtils;
 import constant.ElementActions;
 import constant.webTestdata;
 import constant.weblocators;
@@ -162,7 +162,7 @@ public class WorkoutStepsHelper {
 //import org.slf4j.LoggerFactory;
 //import org.testng.Assert;
 //
-//import allureframework.reporting.AllureUtils;
+//import allureframework.AllureUtils;
 //
 //public class WorkoutStepsHelper {
 //    private static final Logger LOGGER = LoggerFactory.getLogger(WorkoutStepsHelper.class);

@@ -10,7 +10,7 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 import java.time.Duration;
 
-import allureframework.reporting.AllureUtils;
+import allureframework.AllureUtils;
 import base.BasePage;
 import utils.SeleniumUtils;
 import constant.webTestdata;

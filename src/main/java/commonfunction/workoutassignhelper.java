@@ -11,7 +11,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.testng.Assert;
 
-import allureframework.reporting.AllureUtils;
+import allureframework.AllureUtils;
 import constant.ElementActions;
 import constant.webTestdata;
 import constant.weblocators;

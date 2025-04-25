@@ -10,7 +10,7 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
-import allureframework.reporting.AllureUtils;
+import allureframework.AllureUtils;
 import factory.WebDriverManager;
 import logintest.AdvocateLogin;
 import feature.case05_memberspecs_avtar.Case31_MS_Avtarclick;

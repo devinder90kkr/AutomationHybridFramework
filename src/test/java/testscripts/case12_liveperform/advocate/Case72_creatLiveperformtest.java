@@ -11,7 +11,7 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
-import allureframework.reporting.AllureUtils;
+import allureframework.AllureUtils;
 import factory.WebDriverManager;
 import feature.case12_liveperform.Case72_creatLiveperform;
 import logintest.AdvocateLogin;

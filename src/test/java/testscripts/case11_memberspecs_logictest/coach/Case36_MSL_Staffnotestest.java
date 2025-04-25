@@ -12,7 +12,7 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
-import allureframework.reporting.AllureUtils;
+import allureframework.AllureUtils;
 import factory.WebDriverManager;
 import feature.case11_logicpage.Case36_MSL_Staffnotes;
 import logintest.CoachLogin;

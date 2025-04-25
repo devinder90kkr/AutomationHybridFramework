@@ -4,7 +4,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.Test;
 
-import allureframework.reporting.AllureUtils;
+import allureframework.AllureUtils;
 import base.BasePage;
 import constant.ElementActions;
 

@@ -12,7 +12,7 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
-import allureframework.reporting.AllureUtils;
+import allureframework.AllureUtils;
 import factory.WebDriverManager;
 import feature.case11_logicpage.Case43_03_MSL_fuelperform_currentday;
 import logintest.AdvocateLogin;

@@ -11,7 +11,7 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
-import allureframework.reporting.AllureUtils;
+import allureframework.AllureUtils;
 import factory.WebDriverManager;
 import logintest.AdvocateLogin;
 import feature.case14_schedule.Step12_10_SE_createeventbyselecteddatefromcalendar;

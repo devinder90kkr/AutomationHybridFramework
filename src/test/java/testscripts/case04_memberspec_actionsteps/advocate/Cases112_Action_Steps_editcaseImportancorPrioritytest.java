@@ -7,7 +7,7 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
-import allureframework.reporting.AllureUtils;
+import allureframework.AllureUtils;
 import factory.WebDriverManager;
 import logintest.AdvocateLogin;
 import feature.case04_memberspec_actionsteps.Cases112_Action_Steps_editcaseImportancorPriority;

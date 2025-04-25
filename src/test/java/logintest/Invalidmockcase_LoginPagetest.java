@@ -1,6 +1,6 @@
 package logintest;
 
-import allureframework.reporting.AllureUtils;
+import allureframework.AllureUtils;
 import factory.WebDriverManager;
 import base.Loginpage;
 import utils.Config;

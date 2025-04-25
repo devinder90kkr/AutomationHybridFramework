@@ -13,7 +13,7 @@ import org.openqa.selenium.JavascriptExecutor;
 
 import org.testng.annotations.Test;
 
-import allureframework.reporting.AllureUtils;	
+import allureframework.AllureUtils;	
 import base.BasePage;
 import utils.SeleniumUtils;
 

@@ -15,7 +15,7 @@ import org.openqa.selenium.WebDriver;
 	import org.slf4j.LoggerFactory;
 	import org.testng.annotations.Test;
 	
-	import allureframework.reporting.AllureUtils;
+	import allureframework.AllureUtils;
 	import commonfunction.DateGenerator;
 	import base.BasePage;
 	import constant.ElementActions;

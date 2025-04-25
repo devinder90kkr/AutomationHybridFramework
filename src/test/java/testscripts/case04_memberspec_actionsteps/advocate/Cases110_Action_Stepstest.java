@@ -8,7 +8,7 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 // import allure.reporting.AllureServeRunner;
-import allureframework.reporting.AllureUtils;
+import allureframework.AllureUtils;
 import factory.WebDriverManager;
 import logintest.AdvocateLogin;
 import feature.case04_memberspec_actionsteps.Cases110_Action_Steps_delete;

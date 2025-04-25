@@ -12,7 +12,7 @@ import org.testng.annotations.BeforeClass;
 //import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
-import allureframework.reporting.AllureUtils;
+import allureframework.AllureUtils;
 import feature.case01_dashboard.Step13_DB_notification;
 import factory.WebDriverManager;
 import logintest.AdvocateLogin;

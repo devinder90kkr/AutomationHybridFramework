@@ -12,7 +12,7 @@
 //import org.testng.annotations.Test;
 //import org.testng.SkipException;
 //
-//import allureframework.reporting.AllureUtils;
+//import allureframework.AllureUtils;
 //import base.BasePage;
 //import constant.ElementActions;
 //import constant.weblocators;
@@ -68,7 +68,7 @@ import org.slf4j.LoggerFactory;
 import org.testng.annotations.Test;
 import org.testng.SkipException;
 
-import allureframework.reporting.AllureUtils;
+import allureframework.AllureUtils;
 import base.BasePage;
 import constant.ElementActions;
 import constant.weblocators;

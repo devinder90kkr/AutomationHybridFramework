@@ -14,7 +14,7 @@ import org.slf4j.LoggerFactory;
 import java.time.Duration;
 import java.util.List;
 
-import allureframework.reporting.AllureUtils;
+import allureframework.AllureUtils;
 import commonfunction.DateGenerator;
 import base.BasePage;
 import utils.SeleniumUtils;

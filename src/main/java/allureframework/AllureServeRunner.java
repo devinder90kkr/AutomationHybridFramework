@@ -1,4 +1,4 @@
-package allureframework.reporting;
+package allureframework;
 
 import org.testng.IExecutionListener;
 import java.io.File;

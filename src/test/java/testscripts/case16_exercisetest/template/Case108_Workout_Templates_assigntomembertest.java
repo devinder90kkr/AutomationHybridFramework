@@ -8,7 +8,7 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
-import allureframework.reporting.AllureUtils;
+import allureframework.AllureUtils;
 import feature.case16_exercisetemplate.Case108_Workout_Templates_assigntomember;
 import factory.WebDriverManager;
 import logintest.CoachLogin;

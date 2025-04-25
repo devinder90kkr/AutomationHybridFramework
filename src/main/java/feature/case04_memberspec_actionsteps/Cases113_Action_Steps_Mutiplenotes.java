@@ -17,7 +17,7 @@
 //import org.slf4j.LoggerFactory;
 //import org.testng.annotations.Test;
 //
-//import allureframework.reporting.AllureUtils;
+//import allureframework.AllureUtils;
 //import date.functions.DateGenerator;
 //import base.BasePage;
 //import constant.ElementActions;
@@ -160,7 +160,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.testng.annotations.Test;
 
-import allureframework.reporting.AllureUtils;
+import allureframework.AllureUtils;
 import commonfunction.DateGenerator;
 import base.BasePage;
 import constant.ElementActions;

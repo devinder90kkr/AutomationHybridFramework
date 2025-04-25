@@ -7,8 +7,8 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
-import allureframework.reporting.AllureServeRunner;
-import allureframework.reporting.AllureUtils;
+import allureframework.AllureServeRunner;
+import allureframework.AllureUtils;
 import factory.WebDriverManager;
 import logintest.AdvocateLogin;
 import feature.case10_memberspecs_datatonnage.Cases109_dataTonnage;

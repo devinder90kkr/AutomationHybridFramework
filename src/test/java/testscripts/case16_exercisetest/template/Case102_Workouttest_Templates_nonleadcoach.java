@@ -8,7 +8,7 @@
 //import org.testng.annotations.BeforeClass;
 //import org.testng.annotations.Test;
 //
-//import allureframework.reporting.AllureUtils;
+//import allureframework.AllureUtils;
 //import exercise.template.Case101_Workout_Templates;
 //import factory.WebDriverManager;
 //import logintest.NonleadCoachLogin;
@@ -116,7 +116,7 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
-import allureframework.reporting.AllureUtils;
+import allureframework.AllureUtils;
 import feature.case16_exercisetemplate.Case101_Workout_Templates;
 import factory.WebDriverManager;
 import logintest.NonleadCoachLogin;

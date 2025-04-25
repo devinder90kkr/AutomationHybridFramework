@@ -13,8 +13,8 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
-import allureframework.reporting.AllureServeRunner;
-import allureframework.reporting.AllureUtils;
+import allureframework.AllureServeRunner;
+import allureframework.AllureUtils;
 import base.BaseTest;
 import feature.case01_dashboard.Step12_DB_navlink;
 import logintest.AdvocateLogin;

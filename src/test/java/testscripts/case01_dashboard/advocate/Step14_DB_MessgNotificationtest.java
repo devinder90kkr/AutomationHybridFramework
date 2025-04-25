@@ -11,7 +11,7 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
-import allureframework.reporting.AllureUtils;
+import allureframework.AllureUtils;
 import feature.case01_dashboard.Step14_DB_MessgNotification;
 import factory.WebDriverManager;
 import logintest.AdvocateLogin;

@@ -13,7 +13,7 @@
 	import org.openqa.selenium.support.ui.WebDriverWait;
 	import org.testng.annotations.Test;
 
-import allureframework.reporting.AllureUtils;
+import allureframework.AllureUtils;
 import commonfunction.DayofWeek;
 import base.BasePage;
 	import utils.SeleniumUtils;

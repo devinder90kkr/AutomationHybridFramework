@@ -1,4 +1,4 @@
-package allureframework.reporting;
+package allureframework;
 
 import io.qameta.allure.Allure;
 import org.openqa.selenium.OutputType;

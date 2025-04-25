@@ -16,7 +16,7 @@ import org.testng.annotations.Test;
 import org.testng.Assert;
 import org.testng.SkipException;
 
-import allureframework.reporting.AllureUtils;
+import allureframework.AllureUtils;
 import commonfunction.WorkoutStepsHelper;
 import base.BasePage;
 import constant.ElementActions;
