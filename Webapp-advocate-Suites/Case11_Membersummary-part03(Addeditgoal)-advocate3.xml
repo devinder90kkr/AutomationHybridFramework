@@ -4,9 +4,9 @@
 
   <test thread-count="5" name="Add-edit-Delete-Goal">
     <classes>    
-       <class name="cuesz.membersummarytest.advocate.Case28_MS_Addnewgoaltest"/>
-	  <class name="cuesz.membersummarytest.advocate.Case29_MS_Editnewgoaltest"/>
-	  <class name="cuesz.membersummarytest.advocate.Case30_MS_Deletenewgoaltest"/>
+       <class name="testscripts.case08_memberspecs_TeamLeaderNotes.Case28_MS_Addnewgoaltest"/>
+	  <class name="testscripts.case08_memberspecs_TeamLeaderNotes.Case29_MS_Editnewgoaltest"/>
+	  <class name="testscripts.case08_memberspecs_TeamLeaderNotes.Case30_MS_Deletenewgoaltest"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

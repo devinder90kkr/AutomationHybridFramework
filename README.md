@@ -353,7 +353,7 @@ Here's a step-by-step guide on setting up TestNG with a project:
   "appium:platformVersion": "16.6.1",
   "appium:automationName": "XCUITest",
   "appium:deviceName": "ChicMic’s iPhone (2)",
-  "appium:bundleId": "com.cuesz.mobile",
+  "appium:bundleId": "com.mobile",
   "appium:xcodeOrgId": "U9B8L2V4FL",
   "appium:xcodeSigningId": "iPhone Developer",
   "appium:udid": "00008101-000A58221104001E"
@@ -366,7 +366,7 @@ Here's a step-by-step guide on setting up TestNG with a project:
   "appium:platformVersion": "18.0.1",
   "appium:automationName": "XCUITest",
   "appium:deviceName": "Quality",
-  "appium:bundleId": "com.cuesz.mobile",
+  "appium:bundleId": "com.mobile",
   "appium:xcodeOrgId": "U9B8L2V4FL",
   "appium:xcodeSigningId": "iPhone Developer",
   "appium:udid": "00008140-000C158A0E13001C",
@@ -436,19 +436,19 @@ cueszframework
 │
 ├─── src
 │    ├─── main
-│    │    ├─── cuesz.dashboard
+│    │    ├─── dashboard
 │    │    │    ├─── Step12_DB_navlink.java
 │    │    │    ├─── Step13_DB_notification.java
 │    │    │    ├─── Step14_DB_Clock.java
 │    │    │    ├─── Step14_DB_MessgNotification.java
 │    │    │    ├─── Step15_DB_navlinkcoach.java
 │    │    │
-│    │    ├─── cuesz.pages
+│    │    ├─── pages
 │    │    │    ├─── AppiummobileBase.java
 │    │    │    ├─── BasePage.java
 │    │    │    ├─── Loginpage.java
 │    │    │
-│    │    ├─── cuesz.utils
+│    │    ├─── utils
 │    │         ├─── AllureUtils.java
 │    │         ├─── ApiConfig.java
 │    │         ├─── ApiUtils.java
@@ -470,19 +470,19 @@ cueszframework
 │    │    ├─── ApiTestScript
 │    │    │    ├─── Case16_MS_searchclickapi.java
 │    │    │
-│    │    ├─── cuesz.dashboard.advocate
+│    │    ├─── dashboard.advocate
 │    │    │    ├─── Step12_DB_navlinktest.java
 │    │    │    ├─── Step13_DB_notificationtest.java
 │    │    │    ├─── Step14_DB_Clocktest.java
 │    │    │    ├─── Step14_DB_MessgNotificationtest.java
 │    │    │
-│    │    ├─── cuesz.dashboard.coach
+│    │    ├─── dashboard.coach
 │    │    │    ├─── Step13_DB_notificationtest.java
 │    │    │    ├─── Step14_DB_Clocktest.java
 │    │    │    ├─── Step14_DB_MessgNotificationtest.java
 │    │    │    ├─── Step15_DB_navlinkcoachtest.java
 │    │    │
-│    │    ├─── cuesz.logintest
+│    │    ├─── logintest
 │    │    │    ├─── AdvocateLogin.java
 │    │    │    ├─── CoachLogin.java
 │    │    │    ├─── DoctorLogin.java
@@ -522,23 +522,23 @@ cueszframework
 ####  Explanation of Components:
 
 1. Main Packages and Classes:
-   - cuesz.dashboard: Contains the main scripts related to the dashboard functionality.
+   - dashboard: Contains the main scripts related to the dashboard functionality.
      - Classes like `Step12_DB_navlink.java`, `Step13_DB_notification.java`, etc. represent various dashboard functionalities.
-   - cuesz.pages: Holds the page classes following the Page Object Model.
+   - pages: Holds the page classes following the Page Object Model.
      - `AppiummobileBase.java`: Base class for Appium-based mobile pages.
      - `BasePage.java`: Base class for web-based pages.
      - `Loginpage.java`: Page class for the login functionality.
-   - cuesz.utils: Utility classes for various support functionalities.
+   - utils: Utility classes for various support functionalities.
      - Classes such as `AllureUtils.java`, `ApiConfig.java`, `ElementActions.java`, etc., provide utility methods and configurations.
 
 2. Test Packages and Classes:
    - ApiTestScript: Contains API testing scripts.
      - Example: `Case16_MS_searchclickapi.java`
-   - cuesz.dashboard.advocate: Test scripts for the advocate role in the dashboard.
+   - dashboard.advocate: Test scripts for the advocate role in the dashboard.
      - Test classes like `Step12_DB_navlinktest.java`, `Step13_DB_notificationtest.java`, etc.
-   - cuesz.dashboard.coach: Test scripts for the coach role in the dashboard.
+   - dashboard.coach: Test scripts for the coach role in the dashboard.
      - Test classes such as `Step13_DB_notificationtest.java`, `Step14_DB_Clocktest.java`, etc.
-   - cuesz.logintest: Test scripts related to the login functionality.
+   - logintest: Test scripts related to the login functionality.
      - Classes like `AdvocateLogin.java`, `CoachLogin.java`, etc.
    - cuesz01.Iosapp_member_homeScreen: Mobile test scripts for the home screen of an iOS app.
      - Test cases such as `Case01_Login.java`, `Case02_Homescreen_sphereclick.java`, etc.

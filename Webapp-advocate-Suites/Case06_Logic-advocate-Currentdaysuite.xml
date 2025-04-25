@@ -4,10 +4,10 @@
 
   <test thread-count="5" name="Test7">
     <classes>    
-       <class name="cuesz.logictest.advocate.Case42_01_MSL_Perform_currentdaytest" />
-       <class name="cuesz.logictest.advocate.Case43_02_MSL_Fuel_currentdaytest" />
-       <class name="cuesz.logictest.advocate.Case44_01_MSL_Mindful_currentdaytest" />
-       <class name="cuesz.logictest.advocate.Case45_MSL_restore_currenttest" />
+       <class name="testscripts.case11_memberspecs_logictest.advocate.Case42_01_MSL_Perform_currentdaytest" />
+       <class name="testscripts.case11_memberspecs_logictest.advocate.Case43_02_MSL_Fuel_currentdaytest" />
+       <class name="testscripts.case11_memberspecs_logictest.advocate.Case44_01_MSL_Mindful_currentdaytest" />
+       <class name="testscripts.case11_memberspecs_logictest.advocate.Case45_MSL_restore_currenttest" />
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

@@ -4,10 +4,10 @@
   <test thread-count="5" name="Createevent-staffmeetingcases">
     <classes>     
     
-      <class name="cuesz.schduletest.advocate.Case12_03_SE_create_staffevent"/>
-      <class name="cuesz.schduletest.advocate.Case12_04_SE_view_staffevent"/>
-      <class name="cuesz.schduletest.advocate.Case12_05_SE_edit_staffevent"/>
-      <class name="cuesz.schduletest.advocate.Case12_06_SE_delete_staffevent"/>
+      <class name="testscripts.case14_schedule.advocate.Case12_03_SE_create_staffevent"/>
+      <class name="testscripts.case14_schedule.advocate.Case12_04_SE_view_staffevent"/>
+      <class name="testscripts.case14_schedule.advocate.Case12_05_SE_edit_staffevent"/>
+      <class name="testscripts.case14_schedule.advocate.Case12_06_SE_delete_staffevent"/>
    </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

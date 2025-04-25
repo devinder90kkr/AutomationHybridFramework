@@ -3,10 +3,10 @@
 <suite name="Suite3">	 
   <test thread-count="4" name="Master-calendar-event-case">
     <classes>      
-      <class name="cuesz.schduletest.advocate.Case07_MC_createevent"/>
-      <class name="cuesz.schduletest.advocate.Case09_MC_viewevent"/>
-      <class name="cuesz.schduletest.advocate.Case10_MC_editevent"/>
-      <class name="cuesz.schduletest.advocate.Case11_MC_deleteevent"/>
+      <class name="testscripts.case14_schedule.advocate.Case07_MC_createevent"/>
+      <class name="testscripts.case14_schedule.advocate.Case09_MC_viewevent"/>
+      <class name="testscripts.case14_schedule.advocate.Case10_MC_editevent"/>
+      <class name="testscripts.case14_schedule.advocate.Case11_MC_deleteevent"/>
       </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

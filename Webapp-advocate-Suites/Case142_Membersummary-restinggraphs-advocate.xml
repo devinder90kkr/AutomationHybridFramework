@@ -5,7 +5,7 @@
   <test thread-count="5" name="Variousgraphcases">
     <classes>    
  	  
-	  <class name="cuesz.membersummarygraph.advocate.Case64_RestingPhysiologytest"/>
+	  <class name="membersummarygraph.advocate.Case64_RestingPhysiologytest"/>
 	 
     </classes>
   </test> <!-- Test -->

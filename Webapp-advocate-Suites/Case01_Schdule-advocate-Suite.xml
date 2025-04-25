@@ -3,12 +3,12 @@
 <suite name="Suite2">	 
   <test thread-count="6" name="Create-event-case">
     <classes>
-      <class name="cuesz.schduletest.advocate.Case01_createventtest"/>
-      <class name="cuesz.schduletest.advocate.Case02_vieweventtest"/>
-      <class name="cuesz.schduletest.advocate.Case03_editeventtest"/>
-      <class name="cuesz.schduletest.advocate.Case04_deleteventtest"/>
-      <class name="cuesz.schduletest.advocate.Case05_daymonthweektest"/>     
-      <class name="cuesz.schduletest.advocate.Step12_08_SE_createventtest"/>
+      <class name="testscripts.case14_schedule.advocate.Case01_createventtest"/>
+      <class name="testscripts.case14_schedule.advocate.Case02_vieweventtest"/>
+      <class name="testscripts.case14_schedule.advocate.Case03_editeventtest"/>
+      <class name="testscripts.case14_schedule.advocate.Case04_deleteventtest"/>
+      <class name="testscripts.case14_schedule.advocate.Case05_daymonthweektest"/>     
+      <class name="testscripts.case14_schedule.advocate.Step12_08_SE_createventtest"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

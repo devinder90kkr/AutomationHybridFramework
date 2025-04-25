@@ -3,11 +3,11 @@
 <suite name="Suite6">
   <test thread-count="5" name="Member communication cases">
     <classes>
-      <class name="cuesz.membercommunication.advocate.Case46_Membercommunictaiontest"/>
-      <class name="cuesz.membercommunication.advocate.Case47_Membersearchtest"/>
-	  <class name="cuesz.membercommunication.advocate.Case48_Memberchattest"/>
-      <class name="cuesz.membercommunication.advocate.Case75_Newchattest"/>
-      <class name="cuesz.membercommunication.advocate.Case76_chattomemberredirectiontest"/>
+      <class name="testscripts.case13membercommunication.advocate.Case46_Membercommunictaiontest"/>
+      <class name="testscripts.case13membercommunication.advocate.Case47_Membersearchtest"/>
+	  <class name="testscripts.case13membercommunication.advocate.Case48_Memberchattest"/>
+      <class name="testscripts.case13membercommunication.advocate.Case75_Newchattest"/>
+      <class name="testscripts.case13membercommunication.advocate.Case76_chattomemberredirectiontest"/>
 
     </classes>
   </test> <!-- Test -->

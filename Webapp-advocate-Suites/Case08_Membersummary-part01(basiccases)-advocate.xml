@@ -4,12 +4,12 @@
 
   <test thread-count="5" name="Membersummary-Basic-cases">
     <classes>    
-	 <class name="cuesz.membersummarytest.advocate.Case15_MS_memberhoverdetail"/>
-	  <class name="cuesz.membersummarytest.advocate.Case16_MS_searchclik"/>
-      <class name="cuesz.membersummarytest.advocate.Case17_MS_profle"/>
-	  <class name="cuesz.membersummarytest.advocate.Case18_MS_DotAbiltest"/>
-	  <class name="cuesz.membersummarytest.advocate.Case19_MS_Preferencestest"/>
-	  <class name="cuesz.membersummarytest.advocate.Case20_MS_Fuelnotestest"/>      
+	 <class name="testscripts.case02_memberspecs_testscripts.case02_memberspecs_membersummarytest.advocate.Case15_MS_memberhoverdetail"/>
+	  <class name="testscripts.case02_memberspecs_membersummarytest.advocate.Case16_MS_searchclik"/>
+      <class name="testscripts.case02_memberspecs_membersummarytest.advocate.Case17_MS_profle"/>
+	  <class name="testscripts.case02_memberspecs_membersummarytest.advocate.Case18_MS_DotAbiltest"/>
+	  <class name="testscripts.case02_memberspecs_membersummarytest.advocate.Case19_MS_Preferencestest"/>
+	  <class name="testscripts.case02_memberspecs_membersummarytest.advocate.Case20_MS_Fuelnotestest"/>      
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

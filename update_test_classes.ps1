@@ -12,7 +12,7 @@ foreach ($file in $testFiles) {
     
     # Add import if not present
     if (-not ($content -match "import\s+cuesz\.base\.NetworkMonitoringBase")) {
-        $content = $content -replace "(package.*?;)", "`$1`n`nimport cuesz.base.NetworkMonitoringBase;"
+        $content = $content -replace "(package.*?;)", "`$1`n`nimport base.NetworkMonitoringBase;"
     }
     
     # Update class declaration to extend NetworkMonitoringBase

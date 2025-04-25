@@ -4,12 +4,12 @@
 
   <test thread-count="5" name="Fueldashboardcases-from-advocatepage">
     <classes>    
- 	  <class name="cuesz.membersummarytest.advocate.Case67_Fueldashboard1test"/>
-	  <class name="cuesz.membersummarytest.advocate.Case68_Fueldashboardconditionnputtest"/>
-      <class name="cuesz.membersummarytest.advocate.Case70_Fueldashboardcalculatorstest"/>
-	  <class name="cuesz.membersummarytest.advocate.Case82_FuelRecommendationtest"/>
-	  <class name="cuesz.membersummarytest.advocate.Case83_FuelRecommendationLPtest"/>
-      <class name="cuesz.membersummarytest.advocate.Case84_FuelRecommendationRecoveryProtocoltest"/>
+ 	  <class name="membersummarytest.advocate.Case67_Fueldashboard1test"/>
+	  <class name="membersummarytest.advocate.Case68_Fueldashboardconditionnputtest"/>
+      <class name="membersummarytest.advocate.Case70_Fueldashboardcalculatorstest"/>
+	  <class name="membersummarytest.advocate.Case82_FuelRecommendationtest"/>
+	  <class name="membersummarytest.advocate.Case83_FuelRecommendationLPtest"/>
+      <class name="membersummarytest.advocate.Case84_FuelRecommendationRecoveryProtocoltest"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

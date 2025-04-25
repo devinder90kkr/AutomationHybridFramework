@@ -5,11 +5,11 @@
   <test thread-count="5" name="Logic-page-actvity-cases-for-next-weeks">
     <classes>    
 
-       <class name="cuesz.logictest.advocate.Case42_MSL_Performtest" />
-	   <class name="cuesz.logictest.advocate.Case43_MSL_Fueltest" />
- 	   <class name="cuesz.logictest.advocate.Case43_1_MSL_Fuelperformtest" />
-       <class name="cuesz.logictest.advocate.Case44_MSL_Mindfultest" />
-	   <class name="cuesz.logictest.advocate.Case45_MSL_restoretest" />    
+       <class name="testscripts.case11_memberspecs_logictest.advocate.Case42_MSL_Performtest" />
+	   <class name="testscripts.case11_memberspecs_logictest.advocate.Case43_MSL_Fueltest" />
+ 	   <class name="testscripts.case11_memberspecs_logictest.advocate.Case43_1_MSL_Fuelperformtest" />
+       <class name="testscripts.case11_memberspecs_logictest.advocate.Case44_MSL_Mindfultest" />
+	   <class name="testscripts.case11_memberspecs_logictest.advocate.Case45_MSL_restoretest" />    
     
 </classes>
   </test> <!-- Test -->

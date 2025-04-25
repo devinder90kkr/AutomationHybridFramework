@@ -4,8 +4,8 @@
 
   <test thread-count="5" name="Coach program">
     <classes>
-	  <class name="cuesz.exercisetest.template.Case105_Workout_Templates_createtest"/>
-	  <class name="cuesz.exercisetest.template.Case106_Workout_Templates_multipleexercisetest"/>
+	  <class name="exercisetest.template.Case105_Workout_Templates_createtest"/>
+	  <class name="exercisetest.template.Case106_Workout_Templates_multipleexercisetest"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

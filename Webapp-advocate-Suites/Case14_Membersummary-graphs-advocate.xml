@@ -4,15 +4,15 @@
 
   <test thread-count="5" name="Variousgraphcases">
     <classes>    
- 	  <class name="cuesz.membersummarygraph.advocate.Case61_InsightsDashboardtest"/>
-	  <class name="cuesz.membersummarygraph.advocate.Case62_Mastercorelation3monthstest"/>
-	  <class name="cuesz.membersummarygraph.advocate.Case62_Mastercorelationtest"/>
-	  <class name="cuesz.membersummarygraph.advocate.Case62_Mastercorelationtest14daystest"/>
-	  <class name="cuesz.membersummarygraph.advocate.Case63_CorrelationAnalysistest"/>
-	  <class name="cuesz.membersummarygraph.advocate.Case64_RestingPhysiologytest"/>
-	  <class name="cuesz.membersummarygraph.advocate.Case65_BiofeedbackAnalysistest"/>
-	 <class name="cuesz.membersummarygraph.advocate.Case66_TrainingLoadAnalysistest"/>
-	<class name="cuesz.membersummarygraph.advocate.Case79_WeeklyAndMonthlySummariestest"/>
+ 	  <class name="membersummarygraph.advocate.Case61_InsightsDashboardtest"/>
+	  <class name="membersummarygraph.advocate.Case62_Mastercorelation3monthstest"/>
+	  <class name="membersummarygraph.advocate.Case62_Mastercorelationtest"/>
+	  <class name="membersummarygraph.advocate.Case62_Mastercorelationtest14daystest"/>
+	  <class name="membersummarygraph.advocate.Case63_CorrelationAnalysistest"/>
+	  <class name="membersummarygraph.advocate.Case64_RestingPhysiologytest"/>
+	  <class name="membersummarygraph.advocate.Case65_BiofeedbackAnalysistest"/>
+	 <class name="membersummarygraph.advocate.Case66_TrainingLoadAnalysistest"/>
+	<class name="membersummarygraph.advocate.Case79_WeeklyAndMonthlySummariestest"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

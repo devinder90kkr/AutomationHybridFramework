@@ -4,9 +4,9 @@
 
   <test thread-count="5" name="Liveperform cases from video call">
     <classes>    
- 	  <class name="cuesz.membersummarytest.advocate.Case72_creatLiveperformtest"/>
-	  <class name="cuesz.membersummarytest.advocate.Case73_viewjoinLiveperformcoachtest"/>
-      <class name="cuesz.membersummarytest.advocate.Case74_viewjoinLiveperfoRadvocatetest"/>
+ 	  <class name="membersummarytest.advocate.Case72_creatLiveperformtest"/>
+	  <class name="membersummarytest.advocate.Case73_viewjoinLiveperformcoachtest"/>
+      <class name="membersummarytest.advocate.Case74_viewjoinLiveperfoRadvocatetest"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

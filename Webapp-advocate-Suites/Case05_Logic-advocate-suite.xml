@@ -3,11 +3,11 @@
 <suite name="Suite7">
   <test thread-count="5" name="Logic-page-basic-cases">
     <classes>    
-       <class name="cuesz.logictest.advocate.Case34_MSL_MemberBasicinfotest" />
-       <class name="cuesz.logictest.advocate.Case35_MSL_MemberWilingnessLimitationScoretest" />
-       <class name="cuesz.logictest.advocate.Case36_MSL_Staffnotestest" />    
-       <class name="cuesz.logictest.advocate.Case37_MSL_Habbitsnotestest" />
-       <class name="cuesz.logictest.advocate.Case38_MSL_Notificationtest" />
+       <class name="testscripts.case11_memberspecs_logictest.advocate.Case34_MSL_MemberBasicinfotest" />
+       <class name="testscripts.case11_memberspecs_logictest.advocate.Case35_MSL_MemberWilingnessLimitationScoretest" />
+       <class name="testscripts.case11_memberspecs_logictest.advocate.Case36_MSL_Staffnotestest" />    
+       <class name="testscripts.case11_memberspecs_logictest.advocate.Case37_MSL_Habbitsnotestest" />
+       <class name="testscripts.case11_memberspecs_logictest.advocate.Case38_MSL_Notificationtest" />
   
     </classes>
   </test> <!-- Test -->

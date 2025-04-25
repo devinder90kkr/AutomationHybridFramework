@@ -4,7 +4,7 @@
 
   <test thread-count="5" name="Execute action steps, reminder and action taken featues">
     <classes>    
- 	  <class name="cuesz.membersummarytest.advocate.Case90_MS_Actionstepstest"/>
+ 	  <class name="membersummarytest.advocate.Case90_MS_Actionstepstest"/>
 	
     </classes>
   </test> <!-- Test -->
