@@ -3,10 +3,10 @@
 <suite name="Suite1">	 
   <test thread-count="4" name="advocate-dashboard-case">
     <classes>
-      <class name="cuesz.dashboard.advocate.Step12_DB_navlinktest"/>
-	  <class name="cuesz.dashboard.advocate.Step13_DB_notificationtest"/>
-	  <class name="cuesz.dashboard.advocate.Step14_DB_Clocktest"/>
-	  <class name="cuesz.dashboard.advocate.Step14_DB_MessgNotificationtest"/>
+      <class name="testscripts.case01_dashboard.advocate.Step12_DB_navlinktest"/>
+	  <class name="testscripts.case01_dashboard.advocate.Step13_DB_notificationtest"/>
+	  <class name="testscripts.case01_dashboard.advocate.Step14_DB_Clocktest"/>
+	  <class name="testscripts.case01_dashboard.advocate.Step14_DB_MessgNotificationtest"/>
 	
     </classes>
   </test> <!-- Test -->

@@ -10,12 +10,11 @@
 
   <name>Cueszframework</name>
   <!-- FIXME change it to the project's website -->
-  <url>https://pre-staging.app.cuesz.com/</url>
+  <url>https://pre-staging.app.com/</url>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <maven.compiler.source>1.8</maven.compiler.source>
-    <maven.compiler.target>1.8</maven.compiler.target>
+    <maven.compiler.release>11</maven.compiler.release>
   </properties>
 
  
@@ -52,12 +51,13 @@
 
 
 
-  <!-- https://mvnrepository.com/artifact/io.appium/java-client -->
+<!-- https://mvnrepository.com/artifact/io.appium/java-client -->
 <dependency>
     <groupId>io.appium</groupId>
     <artifactId>java-client</artifactId>
-    <version>8.5.1</version>
+    <version>9.4.0</version>
 </dependency>
+
 
 
 <!-- https://mvnrepository.com/artifact/io.qameta.allure/allure-testng -->
@@ -73,14 +73,23 @@
 <dependency>
     <groupId>org.seleniumhq.selenium</groupId>
     <artifactId>selenium-java</artifactId>
-    <version>4.13.0</version>
+    <version>4.29.0</version>
 </dependency>
+
 
 <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-safari-driver -->
 <dependency>
     <groupId>org.seleniumhq.selenium</groupId>
     <artifactId>selenium-safari-driver</artifactId>
     <version>4.15.0</version>
+</dependency>
+
+
+<!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-chrome-driver -->
+<dependency>
+    <groupId>org.seleniumhq.selenium</groupId>
+    <artifactId>selenium-chrome-driver</artifactId>
+    <version>4.29.0</version>
 </dependency>
 
 
@@ -92,25 +101,30 @@
 </dependency>
 
 
-<!-- Selenium Support -->
-    <dependency>
-        <groupId>org.seleniumhq.selenium</groupId>
-        <artifactId>selenium-support</artifactId>
-        <version>4.10.0</version>
-    </dependency>
-    
-    
- <dependency>
-        <groupId>org.seleniumhq.selenium</groupId>
-        <artifactId>selenium-remote-driver</artifactId>
-        <version>4.13.0</version>
+<!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-support -->
+<dependency>
+    <groupId>org.seleniumhq.selenium</groupId>
+    <artifactId>selenium-support</artifactId>
+    <version>4.29.0</version>
 </dependency>
 
+    
+    
+<!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-remote-driver -->
+<dependency>
+    <groupId>org.seleniumhq.selenium</groupId>
+    <artifactId>selenium-remote-driver</artifactId>
+    <version>4.29.0</version>
+</dependency>
+
+
+<!-- https://mvnrepository.com/artifact/io.github.bonigarcia/webdrivermanager -->
 <dependency>
     <groupId>io.github.bonigarcia</groupId>
     <artifactId>webdrivermanager</artifactId>
-    <version>5.4.1</version>
+    <version>5.9.3</version>
 </dependency>
+
 
 
 <!-- https://mvnrepository.com/artifact/org.testng/reportng -->
@@ -120,13 +134,6 @@
     <version>1.2.2</version>
 </dependency>
 
-
-<dependency>
-    <groupId>org.testng</groupId>
-    <artifactId>testng</artifactId>
-    <version>7.8.0</version>
-    <scope>test</scope>
-</dependency>
 
 <!--cucumber java file-->
 <dependency>
@@ -141,6 +148,18 @@
     <version>7.15.0</version>
 </dependency>
 
+
+  <dependency>
+    <groupId>org.testng</groupId>
+    <artifactId>testng</artifactId>
+    <version>7.7.0</version>
+  </dependency>
+
+<dependency>
+    <groupId>org.seleniumhq.selenium</groupId>
+    <artifactId>selenium-devtools-v85</artifactId>
+    <version>4.29.0</version>
+</dependency>
 </dependencies>
  
 <!-- Create multiple profile suites for testsuites -->
@@ -383,6 +402,29 @@
 
 
 
+<!-- Suites 11 for Schdule Othercases advocate -->
+<profile>
+<id>Graphcase</id>
+<build>
+    <pluginManagement><!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->
+      <plugins>  
+		<plugin>
+		        <groupId>org.apache.maven.plugins</groupId>
+		        <artifactId>maven-surefire-plugin</artifactId>
+		        <version>3.2.3</version>
+		        <configuration>
+		          <suiteXmlFiles>
+		            <suiteXmlFile>Webapp-advocate-Suites/Case142_Membersummary-restinggraphs-advocate.xml</suiteXmlFile>
+		          </suiteXmlFiles>
+		        </configuration>
+		      </plugin>
+</plugins>  
+</pluginManagement>
+</build>
+</profile>
+
+
+
 </profiles>
 
 
@@ -405,6 +447,9 @@
         <plugin>
           <artifactId>maven-compiler-plugin</artifactId>
           <version>3.12.1</version>
+          <configuration>
+            <release>11</release>
+          </configuration>
         </plugin>
         <plugin>
           <artifactId>maven-surefire-plugin</artifactId>

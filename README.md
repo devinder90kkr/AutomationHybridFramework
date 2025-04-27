@@ -346,19 +346,34 @@ Here's a step-by-step guide on setting up TestNG with a project:
 
 
 
-Desired capabilities for appium : 
- ```
+**Desired capabilities for appium : 
+   ```
 {
   "platformName": "iOS",
   "appium:platformVersion": "16.6.1",
   "appium:automationName": "XCUITest",
   "appium:deviceName": "ChicMic’s iPhone (2)",
-  "appium:bundleId": "com.cuesz.mobile",
+  "appium:bundleId": "com.mobile",
   "appium:xcodeOrgId": "U9B8L2V4FL",
   "appium:xcodeSigningId": "iPhone Developer",
   "appium:udid": "00008101-000A58221104001E"
 }
- ```
+  ```
+**IN CASE APPIUM THROUGH ERROR THAN WE NEED TO USE BELOW DESIRED CAPABILITIES 
+  ```
+{
+  "platformName": "iOS",
+  "appium:platformVersion": "18.0.1",
+  "appium:automationName": "XCUITest",
+  "appium:deviceName": "Quality",
+  "appium:bundleId": "com.mobile",
+  "appium:xcodeOrgId": "U9B8L2V4FL",
+  "appium:xcodeSigningId": "iPhone Developer",
+  "appium:udid": "00008140-000C158A0E13001C",
+  "appium:waitForQuiescence": "false",
+  "appium:useJSONSource": "true"
+} 
+   ```
 
 Command run for jenkins on mac
 
@@ -421,19 +436,19 @@ cueszframework
 │
 ├─── src
 │    ├─── main
-│    │    ├─── cuesz.dashboard
+│    │    ├─── dashboard
 │    │    │    ├─── Step12_DB_navlink.java
 │    │    │    ├─── Step13_DB_notification.java
 │    │    │    ├─── Step14_DB_Clock.java
 │    │    │    ├─── Step14_DB_MessgNotification.java
 │    │    │    ├─── Step15_DB_navlinkcoach.java
 │    │    │
-│    │    ├─── cuesz.pages
+│    │    ├─── pages
 │    │    │    ├─── AppiummobileBase.java
 │    │    │    ├─── BasePage.java
 │    │    │    ├─── Loginpage.java
 │    │    │
-│    │    ├─── cuesz.utils
+│    │    ├─── utils
 │    │         ├─── AllureUtils.java
 │    │         ├─── ApiConfig.java
 │    │         ├─── ApiUtils.java
@@ -455,19 +470,19 @@ cueszframework
 │    │    ├─── ApiTestScript
 │    │    │    ├─── Case16_MS_searchclickapi.java
 │    │    │
-│    │    ├─── cuesz.dashboard.advocate
+│    │    ├─── dashboard.advocate
 │    │    │    ├─── Step12_DB_navlinktest.java
 │    │    │    ├─── Step13_DB_notificationtest.java
 │    │    │    ├─── Step14_DB_Clocktest.java
 │    │    │    ├─── Step14_DB_MessgNotificationtest.java
 │    │    │
-│    │    ├─── cuesz.dashboard.coach
+│    │    ├─── dashboard.coach
 │    │    │    ├─── Step13_DB_notificationtest.java
 │    │    │    ├─── Step14_DB_Clocktest.java
 │    │    │    ├─── Step14_DB_MessgNotificationtest.java
 │    │    │    ├─── Step15_DB_navlinkcoachtest.java
 │    │    │
-│    │    ├─── cuesz.logintest
+│    │    ├─── logintest
 │    │    │    ├─── AdvocateLogin.java
 │    │    │    ├─── CoachLogin.java
 │    │    │    ├─── DoctorLogin.java
@@ -507,23 +522,23 @@ cueszframework
 ####  Explanation of Components:
 
 1. Main Packages and Classes:
-   - cuesz.dashboard: Contains the main scripts related to the dashboard functionality.
+   - dashboard: Contains the main scripts related to the dashboard functionality.
      - Classes like `Step12_DB_navlink.java`, `Step13_DB_notification.java`, etc. represent various dashboard functionalities.
-   - cuesz.pages: Holds the page classes following the Page Object Model.
+   - pages: Holds the page classes following the Page Object Model.
      - `AppiummobileBase.java`: Base class for Appium-based mobile pages.
      - `BasePage.java`: Base class for web-based pages.
      - `Loginpage.java`: Page class for the login functionality.
-   - cuesz.utils: Utility classes for various support functionalities.
+   - utils: Utility classes for various support functionalities.
      - Classes such as `AllureUtils.java`, `ApiConfig.java`, `ElementActions.java`, etc., provide utility methods and configurations.
 
 2. Test Packages and Classes:
    - ApiTestScript: Contains API testing scripts.
      - Example: `Case16_MS_searchclickapi.java`
-   - cuesz.dashboard.advocate: Test scripts for the advocate role in the dashboard.
+   - dashboard.advocate: Test scripts for the advocate role in the dashboard.
      - Test classes like `Step12_DB_navlinktest.java`, `Step13_DB_notificationtest.java`, etc.
-   - cuesz.dashboard.coach: Test scripts for the coach role in the dashboard.
+   - dashboard.coach: Test scripts for the coach role in the dashboard.
      - Test classes such as `Step13_DB_notificationtest.java`, `Step14_DB_Clocktest.java`, etc.
-   - cuesz.logintest: Test scripts related to the login functionality.
+   - logintest: Test scripts related to the login functionality.
      - Classes like `AdvocateLogin.java`, `CoachLogin.java`, etc.
    - cuesz01.Iosapp_member_homeScreen: Mobile test scripts for the home screen of an iOS app.
      - Test cases such as `Case01_Login.java`, `Case02_Homescreen_sphereclick.java`, etc.
@@ -559,3 +574,114 @@ Given its architecture and the tools it incorporates, a suitable name for this f
 #git useful command
 git remote rm origin
 git remote add origin  https://devinder90chicmic@github.com/Cuesz-limited/Cuesz_AutomationTests.git 
+
+
+####  How to find main.js file in mac and window
+To find the path to `main.js` for your Appium installation on your system, follow these steps:
+
+### On macOS or Linux:
+1. **Open Terminal**: You can use Spotlight (Cmd + Space) and type "Terminal" or find it in your applications.
+2. **Navigate to the Appium Directory**:
+   - If you installed Appium globally using npm, you can use the following command to find where Appium is installed:
+     ```sh
+     npm root -g
+     ```
+     This will give you the global node modules path. Navigate to this directory:
+     ```sh
+     cd $(npm root -g)/appium
+     ```
+   - If you installed Appium locally in a project, navigate to your project's directory and then into the `node_modules` directory:
+     ```sh
+     cd /path/to/your/project/node_modules/appium
+     ```
+
+3. **Find the `main.js` File**:
+   - Once you are in the `appium` directory, you can list the contents to find the `main.js` file:
+     ```sh
+     ls -l build/lib
+     ```
+
+   - The `main.js` file should be located inside the `build/lib` directory. You can confirm its presence with:
+     ```sh
+     ls build/lib/main.js
+     ```
+
+4. **Get the Full Path**:
+   - Use the `pwd` command to print the current working directory and append the path to `main.js`:
+     ```sh
+     pwd
+     ```
+   - Combine the output with `/build/lib/main.js` to get the full path.
+
+### Example:
+
+Assuming `npm root -g` returns `/usr/local/lib/node_modules`, the full path would be:
+```
+/usr/local/lib/node_modules/appium/build/lib/main.js
+```
+
+If Appium is installed locally in your project at `/Users/inderjeetsingh/projects/myapp`, the path would be:
+```
+/Users/inderjeetsingh/projects/myapp/node_modules/appium/build/lib/main.js
+```
+
+### On Windows:
+1. **Open Command Prompt**: You can use the search bar next to the Start menu and type "cmd" or "Command Prompt."
+2. **Navigate to the Appium Directory**:
+   - For a global installation, you can find the global node modules path with:
+     ```cmd
+     npm root -g
+     ```
+     This will give you the global node modules path. Navigate to this directory:
+     ```cmd
+     cd %appdata%\npm\node_modules\appium
+     ```
+   - For a local installation in a project, navigate to your project's directory and then into the `node_modules` directory:
+     ```cmd
+     cd \path\to\your\project\node_modules\appium
+     ```
+
+3. **Find the `main.js` File**:
+   - Once you are in the `appium` directory, you can list the contents to find the `main.js` file:
+     ```cmd
+     dir build\lib
+     ```
+
+   - The `main.js` file should be located inside the `build\lib` directory. You can confirm its presence with:
+     ```cmd
+     dir build\lib\main.js
+     ```
+
+4. **Get the Full Path**:
+   - Use the `cd` command to navigate to the directory containing `main.js` and then use `cd` again to print the current directory:
+     ```cmd
+     cd build\lib
+     cd
+     ```
+   - Combine the output with `main.js` to get the full path.
+
+### Example:
+
+Assuming `%appdata%\npm\node_modules` is `C:\Users\Inderjeet\AppData\Roaming\npm\node_modules`, the full path would be:
+```
+C:\Users\Inderjeet\AppData\Roaming\npm\node_modules\appium\build\lib\main.js
+```
+
+If Appium is installed locally in your project at `C:\Users\Inderjeet\projects\myapp`, the path would be:
+```
+C:\Users\Inderjeet\projects\myapp\node_modules\appium\build\lib\main.js
+```
+
+### Verifying the Path:
+Once you have the path, you can verify it by checking if the file exists:
+```sh
+ls /path/to/appium/build/lib/main.js
+```
+
+Or on Windows:
+```cmd
+dir \path\to\appium\build\lib\main.js
+```
+
+If the file exists, you can use this path in your `AppiumServiceBuilder`.
+
