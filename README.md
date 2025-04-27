@@ -425,12 +425,12 @@ For appium we need desired capabilities so please use below :
 use command >> brew install ios-deploy 
 
 
-### Project Name: cueszframework
+### Project Name: framework
 
 #### Project Structure:
 
 ```
-cueszframework
+framework
 │
 ├─── TestNg
 │
@@ -488,14 +488,14 @@ cueszframework
 │    │    │    ├─── DoctorLogin.java
 │    │    │    ├─── Invalidmockcase_LoginPagetest.java
 │    │    │
-│    │    ├─── cuesz01.Iosapp_member_homeScreen
+│    │    ├─── 01.Iosapp_member_homeScreen
 │    │    │    ├─── Case01_Login.java
 │    │    │    ├─── Case02_Homescreen_sphereclick.java
 │    │    │    ├─── Case03_Homescreen_sphere.java
 │    │    │    ├─── Case04_Homescreen_weekdays_past.java
 │    │    │    ├─── Case05_Homescreen_forward_backwardarrows.java
 │    │    │
-│    │    ├─── cuesz02.Iosapp_member_home_PerformScreen
+│    │    ├─── 02.Iosapp_member_home_PerformScreen
 │    │         ├─── Case20_Fuel_optimalfuel.java
 │    │         ├─── Case21_Fuel_breakfast_recommendedfuel.java
 │    │         ├─── Case22_Fuel_breakfast_additionalfuel.java
@@ -511,7 +511,7 @@ cueszframework
 ├─── pom.xml
 │
 ├─── folder for suites for web
-		├── Case0_cuesz-dashboard-Suite.xml
+		├── Case0_-dashboard-Suite.xml
 │   	└── Case01_Schdule-advocate-Suite.xml
 │
 └─── folder for suites for mobile
@@ -540,9 +540,9 @@ cueszframework
      - Test classes such as `Step13_DB_notificationtest.java`, `Step14_DB_Clocktest.java`, etc.
    - logintest: Test scripts related to the login functionality.
      - Classes like `AdvocateLogin.java`, `CoachLogin.java`, etc.
-   - cuesz01.Iosapp_member_homeScreen: Mobile test scripts for the home screen of an iOS app.
+   - 01.Iosapp_member_homeScreen: Mobile test scripts for the home screen of an iOS app.
      - Test cases such as `Case01_Login.java`, `Case02_Homescreen_sphereclick.java`, etc.
-   - cuesz02.Iosapp_member_home_PerformScreen: Mobile test scripts for the performance screen of an iOS app.
+   - 02.Iosapp_member_home_PerformScreen: Mobile test scripts for the performance screen of an iOS app.
      - Test cases like `Case20_Fuel_optimalfuel.java`, `Case21_Fuel_breakfast_recommendedfuel.java`, etc.
 
 3. Configuration and Dependencies:
@@ -568,12 +568,12 @@ This framework can be referred to as a **Hybrid Automation Testing Framework** b
 4. **Maven**: For project and dependency management.
 5. **Allure**: For generating test reports.
 
-Given its architecture and the tools it incorporates, a suitable name for this framework could be **Cuesz Hybrid Automation Framework**. This name reflects its capability to handle both web and mobile test automation in an integrated and structured manner.
+Given its architecture and the tools it incorporates, a suitable name for this framework could be ** Hybrid Automation Framework**. This name reflects its capability to handle both web and mobile test automation in an integrated and structured manner.
 
 
 #git useful command
 git remote rm origin
-git remote add origin  https://devinder90chicmic@github.com/Cuesz-limited/Cuesz_AutomationTests.git 
+git remote add origin  https://devinder90chicmic@github.com/-limited/_AutomationTests.git 
 
 
 ####  How to find main.js file in mac and window

@@ -4,11 +4,11 @@
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>cueszframework</groupId>
-  <artifactId>Cueszframework</artifactId>
+  <groupId>framework</groupId>
+  <artifactId>framework</artifactId>
   <version>0.0.1-SNAPSHOT</version>
 
-  <name>Cueszframework</name>
+  <name>framework</name>
   <!-- FIXME change it to the project's website -->
   <url>https://pre-staging.app.com/</url>
 
@@ -178,7 +178,7 @@
 		        <version>3.2.3</version>
 		        <configuration>
 		          <suiteXmlFiles>
-		            <suiteXmlFile>Webapp-advocate-Suites/Case0_cuesz-dashboard-Suite.xml</suiteXmlFile>
+		            <suiteXmlFile>Webapp-advocate-Suites/Case0_-dashboard-Suite.xml</suiteXmlFile>
 		          </suiteXmlFiles>
 		        </configuration>
 		      </plugin>

@@ -63,11 +63,11 @@ public class Invalidmockcase_LoginPagetest {
     @Test(groups = "invalid")
     @Owner("Devinder Kumar") // Add the @Owner annotation to specify the executor
     @Severity(SeverityLevel.BLOCKER)
-    @Epic ("Cuesz Staff Login page testing")
+    @Epic (" Staff Login page testing")
     @Description("Test Description : Login Test with invalid email and valid password")
     @Story("Unsuccessful Login to Application")
     public void testLoginWhenInvalidEmailProvidedThenThrowsException() throws InterruptedException {
-        driver.findElement(By.name("email")).sendKeys("stevecuesz91@gmail.com");
+        driver.findElement(By.name("email")).sendKeys("steve91@gmail.com");
         driver.findElement(By.name("password")).sendKeys("User!234");
         driver.findElement(By.xpath("//button[normalize-space()='Login']")).submit();
 
@@ -107,7 +107,7 @@ public class Invalidmockcase_LoginPagetest {
     @Description("Test Description : Login Test with valid email & password")
     @Story("Successful Login to Application")
     public void testLoginWhenValidEmailAndPasswordProvidedThenInteractsWithWebDriverCorrectly() throws InterruptedException {
-        driver.findElement(By.name("email")).sendKeys("markcuesz90@gmail.com");
+        driver.findElement(By.name("email")).sendKeys("mark90@gmail.com");
         driver.findElement(By.name("password")).sendKeys("User!234");
         driver.findElement(By.xpath("//button[normalize-space()='Login']")).submit();
 
@@ -117,7 +117,7 @@ public class Invalidmockcase_LoginPagetest {
         assert driver.findElement(By.xpath("//button[normalize-space()='Login']")).isDisplayed();
 
         // Verify that the email and password fields were not interacted with more than once.
-        assert driver.findElement(By.name("email")).getDomAttribute("value").equals("markcuesz90@gmail.com");
+        assert driver.findElement(By.name("email")).getDomAttribute("value").equals("mark90@gmail.com");
         assert driver.findElement(By.name("password")).getDomProperty("value").equals("User!234");
         Thread.sleep(7000);
         // Click on the "Dashboard - Notification Settings" link.
@@ -152,7 +152,7 @@ public class Invalidmockcase_LoginPagetest {
     @Description("Test Description : Login Test with valid email &  Invalid password")
     @Story("Unsuccessful Login to Application")
     public void testLoginWhenInvalidPasswordProvidedThenThrowsException() throws InterruptedException {
-        driver.findElement(By.name("email")).sendKeys("markcuesz90@gmail.com");
+        driver.findElement(By.name("email")).sendKeys("mark90@gmail.com");
         driver.findElement(By.name("password")).sendKeys("Invalid!23");
         driver.findElement(By.xpath("//button[normalize-space()='Login']")).submit();
 

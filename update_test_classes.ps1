@@ -11,7 +11,7 @@ foreach ($file in $testFiles) {
     }
     
     # Add import if not present
-    if (-not ($content -match "import\s+cuesz\.base\.NetworkMonitoringBase")) {
+    if (-not ($content -match "import\s+\.base\.NetworkMonitoringBase")) {
         $content = $content -replace "(package.*?;)", "`$1`n`nimport base.NetworkMonitoringBase;"
     }
     
