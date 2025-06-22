@@ -8,7 +8,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import automation.allure.reporting.AllureUtils;
+import automation.allure.AllureUtils;
 import io.qameta.allure.Step;
 
 public class Loginpage extends BasePage {

@@ -1,4 +1,4 @@
-package automation.web.resources;
+package automation.web;
 
 public class webTestdata {
 	

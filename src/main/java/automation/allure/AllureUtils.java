@@ -1,4 +1,4 @@
-package automation.allure.reporting;
+package automation.allure;
 
 import io.qameta.allure.Allure;
 import org.openqa.selenium.OutputType;
